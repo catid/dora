@@ -22,9 +22,9 @@ python dora.py
 ```bash
 Total Parameters: 11
 Trainable Parameters: 11
-Final Evaluation Loss: 0.17101138830184937
+Final Evaluation Loss: 0.1101187914609909
 Total Parameters: 65
 Trainable Parameters: 54
 Continuing training with DoRA layers...
-Final (DoRA) Evaluation Loss: 0.06373421847820282
+Final (DoRA) Evaluation Loss: 0.02946443296968937
 ```

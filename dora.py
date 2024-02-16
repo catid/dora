@@ -22,7 +22,9 @@ class DoRALayer(nn.Module):
 
         # m = Magnitude column-wise across output dimension
         self.m = nn.Parameter(self.weight.norm(p=2, dim=0, keepdim=True))
-        self.lora_A = nn.Parameter(torch.zeros(d_out, rank))
+        
+        std_dev = 1 / torch.sqrt(torch.tensor(rank).float())
+        self.lora_A = nn.Parameter(torch.randn(d_out, rank)*std_dev)
         self.lora_B = nn.Parameter(torch.zeros(rank, d_in))
 
     def forward(self, x):
