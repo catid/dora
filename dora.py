@@ -43,15 +43,6 @@ class SimpleModel(nn.Module):
         x = self.layer1(x)
         return x
 
-class SimpleModelDora(nn.Module):
-    def __init__(self, output_dim, input_dim):
-        super(SimpleModelDora, self).__init__()
-        self.layer1 = DoRALayer(output_dim, input_dim)
-
-    def forward(self, x):
-        x = self.layer1(x)
-        return x
-
 # Generating synthetic data
 def generate_data(num_samples=100, input_dim=10):
     X = torch.randn(num_samples, input_dim)
