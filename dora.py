@@ -1,12 +1,8 @@
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
 
-import math
-import numpy as np
-
 import torch
 import torch.nn as nn
-import torch.nn.init as init
 import torch.nn.functional as F
 
 # This layer is dropped into your pre-trained PyTorch model where nn.Linear is used
