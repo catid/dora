@@ -20,11 +20,12 @@ python dora.py
 ## Output
 
 ```bash
+(dora) ➜  dora git:(main) python dora.py
 Total Parameters: 11
 Trainable Parameters: 11
-Final Evaluation Loss: 0.1101187914609909
+Final Evaluation Loss: 0.13415579497814178
 Total Parameters: 65
 Trainable Parameters: 54
 Continuing training with DoRA layers...
-Final (DoRA) Evaluation Loss: 0.02946443296968937
+Final (DoRA) Evaluation Loss: 0.06080308556556702
 ```
