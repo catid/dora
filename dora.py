@@ -5,6 +5,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+torch.manual_seed(0)
+
 # This layer is dropped into your pre-trained PyTorch model where nn.Linear is used
 class DoRALayer(nn.Module):
     def __init__(self, d_in, d_out, rank=4, weight=None, bias=None):
