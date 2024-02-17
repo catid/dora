@@ -177,7 +177,7 @@ def copy_model(model):
 
     return cloned_model
 
-def continue_training(model, layer_class, name):
+def continue_training(model, layer_class, name, data_loader):
     model = copy_model(model)
 
     replace_linear_with_dora(model, layer_class)
@@ -221,6 +221,6 @@ if __name__ == "__main__":
         loss = criterion(predictions, targets)
         print(f"Final Evaluation Loss: {loss.item()}")
 
-    continue_training(model, LoRALayer, "LoRA")
-    continue_training(model, DoRALayer, "DoRA")
-    continue_training(model, SKLinearLayer, "SKL")
+    continue_training(model, LoRALayer, "LoRA", data_loader)
+    continue_training(model, DoRALayer, "DoRA", data_loader)
+    continue_training(model, SKLinearLayer, "SKL", data_loader)
