@@ -61,7 +61,7 @@ class MoRALayer(nn.Module):
         self.m_in = d_in // mora_div
         self.m_out = d_out // mora_div
 
-        self.mora = torch.nn.Parameter(torch.zeros(self.m_in, self.m_out))
+        self.mora = torch.nn.Parameter(torch.zeros(self.m_out, self.m_in))
 
         self.dora_mag = nn.Parameter(self.weight.norm(p=2, dim=0, keepdim=True))
 
