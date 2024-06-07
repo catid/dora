@@ -24,7 +24,7 @@ class DoRALayer(nn.Module):
 
         # m = Magnitude column-wise across output dimension
         self.m = nn.Parameter(self.weight.norm(p=2, dim=0, keepdim=True))
-        
+
         std_dev = 1 / torch.sqrt(torch.tensor(rank).float())
         self.lora_A = nn.Parameter(torch.randn(d_out, rank)*std_dev)
         self.lora_B = nn.Parameter(torch.zeros(rank, d_in))
@@ -37,7 +37,6 @@ class DoRALayer(nn.Module):
         norm_adapted = adapted / norm
         calc_weights = self.m * norm_adapted
         return F.linear(x, calc_weights, self.bias)
-
 
 class MoRALayer(nn.Module):
     def __init__(self, d_in, d_out, mora_div=2, weight=None, bias=None):
@@ -62,46 +61,50 @@ class MoRALayer(nn.Module):
         self.m_in = d_in // mora_div
         self.m_out = d_out // mora_div
 
-        #std_dev = 1 / torch.sqrt(torch.tensor(self.m_in).float())
-        #self.m = torch.nn.Parameter(torch.randn(self.m_in, self.m_out)*std_dev)
-        self.m = torch.nn.Parameter(torch.zeros(self.m_in, self.m_out))
+        self.mora = torch.nn.Parameter(torch.zeros(self.m_in, self.m_out))
 
-        self.compress_type = 0
+        self.dora_mag = nn.Parameter(self.weight.norm(p=2, dim=0, keepdim=True))
+
+        self.compress_type = 1
+
+    def merge(self):
+        with torch.no_grad():
+            if self.compress_type == 0:
+                w = self.mora.repeat(self.mora_div, self.mora_div)
+            else:
+                w = self.mora.repeat_interleave(self.mora_div, dim=0).repeat_interleave(self.mora_div, dim=1)
+
+            self.weight += w
+
+            self.mora.zero_()
+
+            self.compress_type ^= 1
 
     def forward(self, x):
-        y = torch.matmul(x, self.weight)
+        w = self.weight
 
-        if self.compress_type % 2 == 0:
-            # Sum neighboring elements.
-            compressed_x = x.view(-1, self.m_in, self.mora_div).sum(dim=2)
+        if self.compress_type == 0:
+            w = w + self.mora.repeat(self.mora_div, self.mora_div)
         else:
-            # Sum interleaved elements.
-            compressed_x = x.view(-1, self.mora_div, self.m_in).sum(dim=1)
+            w = w + self.mora.repeat_interleave(self.mora_div, dim=0).repeat_interleave(self.mora_div, dim=1)
 
-        xm = torch.matmul(compressed_x, self.m)
+        norm_adapted = w / w.norm(p=2, dim=0, keepdim=True)
+        w = self.dora_mag * norm_adapted
 
-        if ((self.compress_type // 2) % 2) == 0:
-            # Repeat each element.
-            repeated_xm = torch.repeat_interleave(xm, repeats=self.mora_div, dim=-1)
-        else:
-            # Repeat each pattern.
-            repeated_xm = torch.cat([xm] * self.mora_div, dim=-1)
-
-        y = y + repeated_xm
-
-        if self.bias is not None:
-            y = y + self.bias
-
-        return y
+        return F.linear(x, w, self.bias)
 
 
 class SimpleModel(nn.Module):
-    def __init__(self, input_dim, output_dim):
+    def __init__(self, input_dim, output_dim, inner_dim):
         super(SimpleModel, self).__init__()
-        self.layer1 = nn.Linear(input_dim, output_dim)
+        self.layer1 = nn.Linear(input_dim, inner_dim)
+        self.activation = nn.GELU()
+        self.layer2 = nn.Linear(inner_dim, output_dim)
 
     def forward(self, x):
         x = self.layer1(x)
+        x = self.activation(x)
+        x = self.layer2(x)
         return x
 
 # Generating synthetic data
@@ -112,7 +115,7 @@ def generate_data(num_samples=100, input_dim=32, output_dim=32):
     return X, y
 
 # Training function
-def train(model, criterion, optimizer, data_loader, epochs=5):
+def train(model, criterion, optimizer, data_loader, epochs=5, enable_merge=False):
     model.train()
     for epoch in range(epochs):
         for inputs, targets in data_loader:
@@ -121,9 +124,11 @@ def train(model, criterion, optimizer, data_loader, epochs=5):
             loss = criterion(outputs, targets)
             loss.backward()
             optimizer.step()
-        #print(f"Epoch {epoch+1}, Loss: {loss.item()}")
 
+        if enable_merge:
+            merge_weights(model)
 
+        print(f"Epoch {epoch+1}, Loss: {loss.item()}")
 
 def replace_linear_with_dora(model):
     for name, module in model.named_children():
@@ -139,6 +144,14 @@ def replace_linear_with_dora(model):
             # Recursively apply this function to submodules
             replace_linear_with_dora(module)
 
+def merge_weights(model):
+    for _, module in model.named_children():
+        if isinstance(module, MoRALayer):
+            module.merge()
+        else:
+            # Recursively apply this function to submodules
+            merge_weights(module)
+
 def print_model_parameters(model):
     total_params = sum(p.numel() for p in model.parameters())
     trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -148,18 +161,18 @@ def print_model_parameters(model):
 
 # Main script
 if __name__ == "__main__":
-    input_dim, output_dim = 32, 32
-    model = SimpleModel(input_dim, output_dim)
+    input_dim, output_dim, inner_dim = 32, 32, 32
+    model = SimpleModel(input_dim, output_dim, inner_dim)
     criterion = nn.MSELoss()
-    optimizer = optim.AdamW(model.parameters(), lr=0.01)
+    optimizer = optim.AdamW(model.parameters(), lr=0.001)
 
     X, y = generate_data(num_samples=1000, input_dim=input_dim, output_dim=output_dim)
     dataset = TensorDataset(X, y)
-    data_loader = DataLoader(dataset, batch_size=64, shuffle=True)
+    data_loader = DataLoader(dataset, batch_size=32, shuffle=True)
 
     print_model_parameters(model)
 
-    train(model, criterion, optimizer, data_loader, epochs=20)
+    train(model, criterion, optimizer, data_loader, epochs=100)
 
     # Evaluate the model
     model.eval()
@@ -174,9 +187,9 @@ if __name__ == "__main__":
     print_model_parameters(model)
 
     # Continue training with the Dora model
-    optimizer = optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=0.01)
+    optimizer = optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=0.001)
     print("Continuing training with DoRA layers...")
-    train(model, criterion, optimizer, data_loader, epochs=20)  # Continue training
+    train(model, criterion, optimizer, data_loader, epochs=20, enable_merge=True)  # Continue training
 
     # Evaluate the model
     model.eval()
