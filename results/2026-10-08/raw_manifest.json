@@ -1,0 +1,2082 @@
+{
+  "files": [
+    {
+      "archive_path": "vision/audit.log",
+      "source": "/var/tmp/dora-bench/runs/vision/audit.log",
+      "bytes": 9368,
+      "sha256": "cc36c77875e87e197ccd32bf17c9ec77596bf28be52a0104397f827e6130cac0"
+    },
+    {
+      "archive_path": "vision/audit.py",
+      "source": "/var/tmp/dora-bench/runs/vision/audit.py",
+      "bytes": 7585,
+      "sha256": "4e190f8d5fa0c396f0e5b96cb0c6058cd7792cf6acc5264bb3e874959b4dc747"
+    },
+    {
+      "archive_path": "vision/paired_bootstrap.json",
+      "source": "/var/tmp/dora-bench/runs/vision/paired_bootstrap.json",
+      "bytes": 1447,
+      "sha256": "b700a232ee20c4aac87639579fb10df6c6afb98c4571ac5f8336fffd7e6eb6cf"
+    },
+    {
+      "archive_path": "vision/pilot_results.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilot_results.json",
+      "bytes": 191164,
+      "sha256": "c07329a38c3685ddc151ba51c58a06f7c1a8d65f66dafd81e5cf8b0c8f902111"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/dora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/dora/config.json",
+      "bytes": 8818,
+      "sha256": "c979e93330b862c16b8a019e4c8f460409abb472fafe2053ce6024c0d6ff13f5"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/dora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/dora/epochs.jsonl",
+      "bytes": 2078,
+      "sha256": "bcd0d1f9ae08cadc471b0ce68547cb07ac418155b446c7e7c8cdf3787c2b1014"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/dora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/dora/result.json",
+      "bytes": 23402,
+      "sha256": "bdccf8280fa1436d1580f888aa4956689db989341d0ce0c79e31cccf8870ac21"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/dora_nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/dora_nora/config.json",
+      "bytes": 8823,
+      "sha256": "f8d96d6c33bdc1f70cd5ff07c84c935785b0de5132a8f5f6ccbc5aebb0ebd37b"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/dora_nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/dora_nora/epochs.jsonl",
+      "bytes": 2097,
+      "sha256": "9776d0d2eb0d765c966c9f5af5bf4af3a1df43035ae1a1b2942003bd2bdf8419"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/dora_nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/dora_nora/result.json",
+      "bytes": 26635,
+      "sha256": "b5960b64d6eaa4c833d1c3c870b3e0773e7c8de4c7b884fd4eaeaa16386b9071"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/lora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/lora/config.json",
+      "bytes": 7526,
+      "sha256": "41b74aea0bfba0679fd14cc98a4f4b36e7035d143a50e8b9a71c6967b883d1e3"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/lora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/lora/epochs.jsonl",
+      "bytes": 2079,
+      "sha256": "55edf80d09ba634336e06237d2df9fced186f4f7d2dcfc332aa1d5fa2631b8b1"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/lora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/lora/result.json",
+      "bytes": 18845,
+      "sha256": "7cea24a314d40881ee2c1caba543ae86056f36119df19aa1675f5dcddde3a40c"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/nora/config.json",
+      "bytes": 7526,
+      "sha256": "a9127533d9b5021b332b2379fabf2c079e806c1963e876032f6f435d5b48c92b"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/nora/epochs.jsonl",
+      "bytes": 2078,
+      "sha256": "f5380fff5b7426719bda307f4b9f1309891712886fdfff0938d72072b1a29192"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.0001/seed_42/nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.0001/seed_42/nora/result.json",
+      "bytes": 22020,
+      "sha256": "ab1cdbbb4277135dc647b648969bdbd5af6cbfd4a932ed8286b1be7686d5356a"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/dora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/dora/config.json",
+      "bytes": 8817,
+      "sha256": "49cea88260b9f1d60da814d883d9a00aa9d28fb06e8e7f1b147448a196021473"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/dora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/dora/epochs.jsonl",
+      "bytes": 2076,
+      "sha256": "ff4eb7c89145745222d5b88f82939d7f8f9279197081b549bc8bf69eddb3235d"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/dora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/dora/result.json",
+      "bytes": 23310,
+      "sha256": "038d380f667645f1f8a68423cc8d976df3de63b56e3ca84680334a20a26f4aab"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/dora_nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/dora_nora/config.json",
+      "bytes": 8822,
+      "sha256": "9a34d35cf87a6e1394b515ed19e3a0147c55225a6b38b9c0b115095fca51dc0c"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/dora_nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/dora_nora/epochs.jsonl",
+      "bytes": 2091,
+      "sha256": "13d1c12adcfa32eee29228ee5dfb12bf1f058eb1567e4f4ec4ccd07c16617801"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/dora_nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/dora_nora/result.json",
+      "bytes": 26548,
+      "sha256": "1008c733ede690af2655e130bb98b6e0239ffc20a7e209bab2abdaee5a1f46fa"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/lora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/lora/config.json",
+      "bytes": 7525,
+      "sha256": "55ca192fcc007431249521b927b57a3868b2a4a15ad1c090d39426158c8e46dc"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/lora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/lora/epochs.jsonl",
+      "bytes": 2064,
+      "sha256": "729717bfd820773b3853d051c733e08c07bdc9fd372e9eec4799fe1dd9e2c707"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/lora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/lora/result.json",
+      "bytes": 18758,
+      "sha256": "6471bf14520568dfc00c5fbbc5e36835fb4fb512b17c67056f342a899da2c23e"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/nora/config.json",
+      "bytes": 7525,
+      "sha256": "04b20e0af14e6bb7273e47f7cc96a9c982d74d8cbb479e00bf61b4d08c74c4c3"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/nora/epochs.jsonl",
+      "bytes": 2095,
+      "sha256": "4499082898d4118ccf547ed01fb90b82cc3491715250d66487c66e4c9fe17e7a"
+    },
+    {
+      "archive_path": "vision/pilots/lr_0.001/seed_42/nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/pilots/lr_0.001/seed_42/nora/result.json",
+      "bytes": 21875,
+      "sha256": "31b84239252c801a9cebf0fd075f09af91487db23ec12753cfe846281ec3997a"
+    },
+    {
+      "archive_path": "vision/provenance.json",
+      "source": "/var/tmp/dora-bench/runs/vision/provenance.json",
+      "bytes": 1926,
+      "sha256": "60980b89cf7cf681b10be3f698b93cb7217c71f7b3d925d97b9d3c1d2f294a7c"
+    },
+    {
+      "archive_path": "vision/results.json",
+      "source": "/var/tmp/dora-bench/runs/vision/results.json",
+      "bytes": 302544,
+      "sha256": "6a7511d832bc52d184476a96028e3bf861b527d45e352dc002bf6d7d0c0963da"
+    },
+    {
+      "archive_path": "vision/run.log",
+      "source": "/var/tmp/dora-bench/runs/vision/run.log",
+      "bytes": 239778,
+      "sha256": "a01c7459959d28385cf489a5698e9f4cd9565a7667d97c2a813b9f04b0472e16"
+    },
+    {
+      "archive_path": "vision/seed_42/baseline/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/baseline/config.json",
+      "bytes": 3246,
+      "sha256": "4a04e31e42ed5333eebaeb659d3b00742d06a8679b0a575336972dcc0effe600"
+    },
+    {
+      "archive_path": "vision/seed_42/baseline/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/baseline/epochs.jsonl",
+      "bytes": 12225,
+      "sha256": "6c943e1f0515c3bdabc16748d8a5da99992fd07bd8e5f0ea3e2e5653ec85b489"
+    },
+    {
+      "archive_path": "vision/seed_42/baseline/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/baseline/result.json",
+      "bytes": 4344,
+      "sha256": "1a4c05005c5200735843e08385b1bfbc40fd33e3697835b9d6adcba135d2b8df"
+    },
+    {
+      "archive_path": "vision/seed_42/baseline/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/baseline/test_predictions.json",
+      "bytes": 97913,
+      "sha256": "6924a8339520966ca488b81d9598355b27053bda78159cac027e496ee7676a02"
+    },
+    {
+      "archive_path": "vision/seed_42/dora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/dora/config.json",
+      "bytes": 8817,
+      "sha256": "76072fa929dfc868170745619249c843e9bf16b5da8f45fb00e9de0cbe3ed348"
+    },
+    {
+      "archive_path": "vision/seed_42/dora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/dora/epochs.jsonl",
+      "bytes": 12841,
+      "sha256": "bd092c37edfa737749aaa994fac2ddaaa85697eaed7b6e38fb06af09f8872612"
+    },
+    {
+      "archive_path": "vision/seed_42/dora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/dora/result.json",
+      "bytes": 23487,
+      "sha256": "0a96dba24590f1358f5bd6ef26a55b97765e9daea3eeb9e3954ba6cdc5e9d32f"
+    },
+    {
+      "archive_path": "vision/seed_42/dora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/dora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "116c8999de1925766a92a6cdd2c0150807a55260ce1eed7dd482ed4a496cbb64"
+    },
+    {
+      "archive_path": "vision/seed_42/dora_nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/dora_nora/config.json",
+      "bytes": 8823,
+      "sha256": "a80effaf03b9debda5b38bf4f79590a8b9a6d7caefaf9b49ae35fc3c84cb1044"
+    },
+    {
+      "archive_path": "vision/seed_42/dora_nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/dora_nora/epochs.jsonl",
+      "bytes": 12865,
+      "sha256": "1f9e1a95184a1651fdb6c1664c1e19cbdb6bb993dce4dd54204e45bd4c464fb7"
+    },
+    {
+      "archive_path": "vision/seed_42/dora_nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/dora_nora/result.json",
+      "bytes": 26789,
+      "sha256": "333d728e7d98c7304b8a41a80a5ff309f7dd12374c51f1276c44b7de73512908"
+    },
+    {
+      "archive_path": "vision/seed_42/dora_nora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/dora_nora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "0dd8310883f89cc992ab054245b5f5a3832d3c1c9a6b1f114ea120be4033fb16"
+    },
+    {
+      "archive_path": "vision/seed_42/lora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/lora/config.json",
+      "bytes": 7525,
+      "sha256": "30789cfbce70be41b0faa002aaf1bbd09edc82b47fd493fdea0a0052bf2cf2d9"
+    },
+    {
+      "archive_path": "vision/seed_42/lora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/lora/epochs.jsonl",
+      "bytes": 12795,
+      "sha256": "ab727f0ab3e7a8e297fc01c18b7fba46f4b99243a1c9fcf81992e09a6dfe29ee"
+    },
+    {
+      "archive_path": "vision/seed_42/lora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/lora/result.json",
+      "bytes": 18923,
+      "sha256": "5778c806a0bd6f17e84b9fb33efa443288bebe56db081079dddb856d15608bc8"
+    },
+    {
+      "archive_path": "vision/seed_42/lora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/lora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "25e22a2a2f3c58c112d1616b6c09064c8fc33393d29bd8032a94eb3255f44262"
+    },
+    {
+      "archive_path": "vision/seed_42/nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/nora/config.json",
+      "bytes": 7526,
+      "sha256": "1cd5a75a35680fb8fbd77bcd971d7b56529751a741848d94aaa16315df568b0a"
+    },
+    {
+      "archive_path": "vision/seed_42/nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/nora/epochs.jsonl",
+      "bytes": 12857,
+      "sha256": "72195f952f3aeb3dc351495e8e40e839b22bc2b56d94d56d1e345327e3dc0451"
+    },
+    {
+      "archive_path": "vision/seed_42/nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/nora/result.json",
+      "bytes": 22141,
+      "sha256": "f29927ffcd863b4eac53fe9864d94a76dcca437bef00b94c80302aa2186aee31"
+    },
+    {
+      "archive_path": "vision/seed_42/nora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_42/nora/test_predictions.json",
+      "bytes": 97914,
+      "sha256": "77f358d5bb6139869c3e61d89dcc619bfb52e08accbcd705c3bb692d258bf37b"
+    },
+    {
+      "archive_path": "vision/seed_43/baseline/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/baseline/config.json",
+      "bytes": 3246,
+      "sha256": "e2fc04412af21da78ae1d51e5a828de5bed4ef6ef15b929460f93d65bcba5e74"
+    },
+    {
+      "archive_path": "vision/seed_43/baseline/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/baseline/epochs.jsonl",
+      "bytes": 12211,
+      "sha256": "3ae8906e56d2cb0276c38eccdb932c53b9231b94434826568d666a3026889470"
+    },
+    {
+      "archive_path": "vision/seed_43/baseline/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/baseline/result.json",
+      "bytes": 4342,
+      "sha256": "ef5b0d1e5658b96ad978174083dc7361038e36bf25949b48b4ebb5ec50e2510d"
+    },
+    {
+      "archive_path": "vision/seed_43/baseline/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/baseline/test_predictions.json",
+      "bytes": 97917,
+      "sha256": "33dabd19835416d8b67d2cf519454033dd82e93a122c2d8cd53e8310d6995645"
+    },
+    {
+      "archive_path": "vision/seed_43/dora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/dora/config.json",
+      "bytes": 8816,
+      "sha256": "43ed02f929d4bd2cebc30d8f9cf3e3159b8c0b658773bfd474a365a91cee632c"
+    },
+    {
+      "archive_path": "vision/seed_43/dora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/dora/epochs.jsonl",
+      "bytes": 12817,
+      "sha256": "824ca056609b25c81e56b7012b60833bd66f37f82abf3a111e951d40e0b225c6"
+    },
+    {
+      "archive_path": "vision/seed_43/dora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/dora/result.json",
+      "bytes": 23485,
+      "sha256": "4b55ca885b6200a9ad328a6cea665d9e124a49d2d92360cecbf24f1f2b2dcc64"
+    },
+    {
+      "archive_path": "vision/seed_43/dora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/dora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "767306aadddee1b2064d6f6c40b0a497568557e56954f46e1a56a22c7f78cffa"
+    },
+    {
+      "archive_path": "vision/seed_43/dora_nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/dora_nora/config.json",
+      "bytes": 8822,
+      "sha256": "37dd87f6d5fdf6fa746922d382624a007caf006cc1e2381f1335512cdfa7d9da"
+    },
+    {
+      "archive_path": "vision/seed_43/dora_nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/dora_nora/epochs.jsonl",
+      "bytes": 12825,
+      "sha256": "0566785b78161597dfe890ca78cd69981a3b5520f89f551fbab42d11271e8c55"
+    },
+    {
+      "archive_path": "vision/seed_43/dora_nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/dora_nora/result.json",
+      "bytes": 26804,
+      "sha256": "39feff8aced9e680180e3471db61ca2da8029a562564c7d071998da93a8abd40"
+    },
+    {
+      "archive_path": "vision/seed_43/dora_nora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/dora_nora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "01d335143eb7a077e41a38a498caa40a4ee631fca42bcd32025eab47f26e9ab1"
+    },
+    {
+      "archive_path": "vision/seed_43/lora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/lora/config.json",
+      "bytes": 7524,
+      "sha256": "142577151b36aff05de78e1ecc89063a375753f71adae8607af663ceea70f498"
+    },
+    {
+      "archive_path": "vision/seed_43/lora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/lora/epochs.jsonl",
+      "bytes": 12838,
+      "sha256": "1114d424eee88e7bab7fd6153b33f3c3bee94a3d5a72a96e4fde3998f4d5d294"
+    },
+    {
+      "archive_path": "vision/seed_43/lora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/lora/result.json",
+      "bytes": 18918,
+      "sha256": "ad401a0bc4c9a2a985586a9936b448856c07e5786e496ebe4ba46e9243a02ea9"
+    },
+    {
+      "archive_path": "vision/seed_43/lora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/lora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "a6ed2b76dd4eb4fff68d1a034b8db9f80c268939fd3072d07063eaeba1eb14e1"
+    },
+    {
+      "archive_path": "vision/seed_43/nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/nora/config.json",
+      "bytes": 7525,
+      "sha256": "d669a3fa53fd156738f5bacfbff59276a98276746274c9799a4f98758daf7dfc"
+    },
+    {
+      "archive_path": "vision/seed_43/nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/nora/epochs.jsonl",
+      "bytes": 12825,
+      "sha256": "b6eab5027077024bbe90cbd7bae2f9fec93dab9211215426821c5d573192d53a"
+    },
+    {
+      "archive_path": "vision/seed_43/nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/nora/result.json",
+      "bytes": 22159,
+      "sha256": "133fe07337e3ab640122f911b13f29762a6c4676c1fdfa3200b538ee76a11574"
+    },
+    {
+      "archive_path": "vision/seed_43/nora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_43/nora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "2cd8380359fa4e004a3656751a61cdc5a1b805a410aba29d8636f15e1d1339d4"
+    },
+    {
+      "archive_path": "vision/seed_44/baseline/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/baseline/config.json",
+      "bytes": 3246,
+      "sha256": "234d160c97201c78d8356d368cc2074609ee19070e80114ce2e4dafd1453781c"
+    },
+    {
+      "archive_path": "vision/seed_44/baseline/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/baseline/epochs.jsonl",
+      "bytes": 12222,
+      "sha256": "b65bd5b643e0a40e7e258df776a1ec13ac4b59feed027dd29417e02c74776fe7"
+    },
+    {
+      "archive_path": "vision/seed_44/baseline/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/baseline/result.json",
+      "bytes": 4343,
+      "sha256": "a84ee5ed2e2dacc2a2613d72153bac78afc7fe9314fe24261a2f0dfb99518a72"
+    },
+    {
+      "archive_path": "vision/seed_44/baseline/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/baseline/test_predictions.json",
+      "bytes": 97913,
+      "sha256": "e1b70ac3c8b2f505e2c0d0385f3f492d2f7a051c3921870b40cd20071153b694"
+    },
+    {
+      "archive_path": "vision/seed_44/dora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/dora/config.json",
+      "bytes": 8817,
+      "sha256": "4fe5113d5f5fc30bdbb6b31db096ba49b68210d3895428b21469d834d761fed0"
+    },
+    {
+      "archive_path": "vision/seed_44/dora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/dora/epochs.jsonl",
+      "bytes": 12805,
+      "sha256": "6b12169ff230e5e22b96e5c210ef22c03fc58524f3027c4e5ffd5283bb95d8d6"
+    },
+    {
+      "archive_path": "vision/seed_44/dora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/dora/result.json",
+      "bytes": 23473,
+      "sha256": "c12b0d37cb1fee7cb4fc75a8455aa20e95a6cd89107b2c04a41a68b3af0b7599"
+    },
+    {
+      "archive_path": "vision/seed_44/dora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/dora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "7b01d99eb94c3a4ede5ad1a7e3954d8e7165d6c5e28bfd9e0f709944ed040c24"
+    },
+    {
+      "archive_path": "vision/seed_44/dora_nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/dora_nora/config.json",
+      "bytes": 8823,
+      "sha256": "313e64efdc4add044c7c4db64a1f6b858aec3a47689fb68b3d9e22ce9e4f1dc3"
+    },
+    {
+      "archive_path": "vision/seed_44/dora_nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/dora_nora/epochs.jsonl",
+      "bytes": 12823,
+      "sha256": "54239913e6ce5070def25fffd51b33a9ed609509f6fd4526a7411b4a2f72dd60"
+    },
+    {
+      "archive_path": "vision/seed_44/dora_nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/dora_nora/result.json",
+      "bytes": 26785,
+      "sha256": "ad975ff17274a465627fd16153ecc7b60d97c0694df31b176bdca2dedb3ca668"
+    },
+    {
+      "archive_path": "vision/seed_44/dora_nora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/dora_nora/test_predictions.json",
+      "bytes": 97917,
+      "sha256": "1eb1737a5b25d82cf5a9c5fc42fd14e39fbf1c120b2ebfd544d20f0b61712133"
+    },
+    {
+      "archive_path": "vision/seed_44/lora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/lora/config.json",
+      "bytes": 7525,
+      "sha256": "1b89ec37fb41568d1b6264268dc57705b95184398a32677472b693c68f3679e5"
+    },
+    {
+      "archive_path": "vision/seed_44/lora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/lora/epochs.jsonl",
+      "bytes": 12846,
+      "sha256": "7aff220af645381619881fe04d27363903cb0ba440b3370750b53a6a4fe98de1"
+    },
+    {
+      "archive_path": "vision/seed_44/lora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/lora/result.json",
+      "bytes": 18930,
+      "sha256": "33933c27849799aae210460cd782be43ffdec176b622aee5d34d8f309ea619ad"
+    },
+    {
+      "archive_path": "vision/seed_44/lora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/lora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "544aef843116d4293aedfe12ca44b4c40cda1a9667a7c4025f10fb1a918ed5e0"
+    },
+    {
+      "archive_path": "vision/seed_44/nora/config.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/nora/config.json",
+      "bytes": 7526,
+      "sha256": "859c298bd60efd018d96c71c001704aa7450ba708b258dc6da9a49d1c72b2f38"
+    },
+    {
+      "archive_path": "vision/seed_44/nora/epochs.jsonl",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/nora/epochs.jsonl",
+      "bytes": 12824,
+      "sha256": "4da46e8909860227ebb56431e373089a29e2ddf4fab30c474fa7941a25a31387"
+    },
+    {
+      "archive_path": "vision/seed_44/nora/result.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/nora/result.json",
+      "bytes": 22159,
+      "sha256": "2c2e2a0c368fd82b8a64fd4216bbd622ed946ce5b49aa8ae2781c7f28ea36a4e"
+    },
+    {
+      "archive_path": "vision/seed_44/nora/test_predictions.json",
+      "source": "/var/tmp/dora-bench/runs/vision/seed_44/nora/test_predictions.json",
+      "bytes": 97915,
+      "sha256": "051b9485aa05c09920b8c4057da35ed46212e989e19b51d4c7ebd67e73764fd0"
+    },
+    {
+      "archive_path": "vision/selected_learning_rates.json",
+      "source": "/var/tmp/dora-bench/runs/vision/selected_learning_rates.json",
+      "bytes": 99,
+      "sha256": "f67979326798a370327bc610c3b1afd5cca6b5d0fc22236354bce036227b02a7"
+    },
+    {
+      "archive_path": "vision/source/dora.py",
+      "source": "/var/tmp/dora-bench/runs/vision/source/dora.py",
+      "bytes": 9421,
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+    },
+    {
+      "archive_path": "vision/source/experiments/adapters.py",
+      "source": "/var/tmp/dora-bench/runs/vision/source/experiments/adapters.py",
+      "bytes": 7446,
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8"
+    },
+    {
+      "archive_path": "vision/source/experiments/vision.py",
+      "source": "/var/tmp/dora-bench/runs/vision/source/experiments/vision.py",
+      "bytes": 23373,
+      "sha256": "f436bed1e2622979c5fb8637fce1c916b23a6cf658e1c29c00de710dd27bb499"
+    },
+    {
+      "archive_path": "vision/source/manifest.json",
+      "source": "/var/tmp/dora-bench/runs/vision/source/manifest.json",
+      "bytes": 532,
+      "sha256": "15d0b11521fa9094a1385b7ee73497df5e570a0ed4281123b87cdc74959f48e7"
+    },
+    {
+      "archive_path": "vision/split_manifest.json",
+      "source": "/var/tmp/dora-bench/runs/vision/split_manifest.json",
+      "bytes": 662944,
+      "sha256": "4e9a8879ea8fe2f434ed4d3ab75089317d04fc27fc9c58518a0b7a5617986e49"
+    },
+    {
+      "archive_path": "vision/summary_audited.json",
+      "source": "/var/tmp/dora-bench/runs/vision/summary_audited.json",
+      "bytes": 9368,
+      "sha256": "cc36c77875e87e197ccd32bf17c9ec77596bf28be52a0104397f827e6130cac0"
+    },
+    {
+      "archive_path": "retrieval/bootstrap_reproduction.log",
+      "source": "/var/tmp/dora-bench/runs/retrieval/bootstrap_reproduction.log",
+      "bytes": 209,
+      "sha256": "426b602b14745bdd4e8eedfc362f0b672c9f7542e3798c7048ae39108bac3694"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed42/result.json",
+      "bytes": 3567,
+      "sha256": "57e9b35642133ade2f6f4d687c72c104fb8f43c09cc50d6875227695560e60af"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed42/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed42/test_per_query.json",
+      "bytes": 176958,
+      "sha256": "cebd0361367d79fd3f9aa4873207d134550e2824f9424c3cb975343b20808b16"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed42/training.jsonl",
+      "bytes": 19444,
+      "sha256": "41b6d8b7aac4585f2d2f82e204b39525065abd87378ea279c4efedd4a49b3cfd"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed42/validation_per_query.json",
+      "bytes": 47626,
+      "sha256": "41a899cfaf365399c5393b9661e268acac9f8fa4cab06dc7b9f96f0fd43135b0"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed43/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed43/result.json",
+      "bytes": 3456,
+      "sha256": "9543e59664bf4916d0c25c4a28789de1e0a3e1f8afaef3556062225838c13ef0"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed43/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed43/test_per_query.json",
+      "bytes": 176850,
+      "sha256": "b1992ff29fbf7b36e8e31d93aad50885c2f9a512da9388fab182507466fc649e"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed43/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed43/training.jsonl",
+      "bytes": 19455,
+      "sha256": "05d988d91251a32ec7bccf3d4a141e31424dab8d2e5a905191021d7ca87944b8"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed43/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed43/validation_per_query.json",
+      "bytes": 47684,
+      "sha256": "9be9d330a753c1d2df8c63c1f94e6041777b3609884d532037eb8ce1376e9f69"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed44/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed44/result.json",
+      "bytes": 3457,
+      "sha256": "50ea580c28b741ddb9742cb71862ab7c4bb93fc26692f25018c0c87089581d1a"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed44/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed44/test_per_query.json",
+      "bytes": 176850,
+      "sha256": "78bd70d006b04c8d2c5d55acab9859893d71164ddc473043dd60c1f263a1eb19"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed44/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed44/training.jsonl",
+      "bytes": 19469,
+      "sha256": "399eb6cb4cd41507aa88daf8c5e9f86fa77ae4f9d261ef0c7a9c03b2ef8a03ed"
+    },
+    {
+      "archive_path": "retrieval/dora_nora_seed44/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_nora_seed44/validation_per_query.json",
+      "bytes": 47582,
+      "sha256": "657a0cdbca67a3e9dbc69230b7fc395128931dbd7fbc1595f6e208ae4d454b0b"
+    },
+    {
+      "archive_path": "retrieval/dora_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed42/result.json",
+      "bytes": 3556,
+      "sha256": "ca6a626363774a950698d402165bb7831651531c85ae4640a4b7018404dcfe7a"
+    },
+    {
+      "archive_path": "retrieval/dora_seed42/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed42/test_per_query.json",
+      "bytes": 176984,
+      "sha256": "dbfb47c87759bec9fc5bd6a9863b802b24225ea3ccf0a334b886cae12469cb7d"
+    },
+    {
+      "archive_path": "retrieval/dora_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed42/training.jsonl",
+      "bytes": 19495,
+      "sha256": "289df5f28204f30518885bb4ecf15402d20674c7e4af1303d6d256333673a15b"
+    },
+    {
+      "archive_path": "retrieval/dora_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed42/validation_per_query.json",
+      "bytes": 47759,
+      "sha256": "78456d98165d3f0b7d06a2c23d35a4641223081d2ef4a21de1d1dad973739cae"
+    },
+    {
+      "archive_path": "retrieval/dora_seed43/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed43/result.json",
+      "bytes": 3450,
+      "sha256": "bf9431ecd8b9013fa8219a34b19345be732b9c5e159e57e5fdb3c49c8aaaf3f3"
+    },
+    {
+      "archive_path": "retrieval/dora_seed43/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed43/test_per_query.json",
+      "bytes": 176874,
+      "sha256": "65ee349240966859373b57163650b66fd7b4700734ad3b71daf46756044bd125"
+    },
+    {
+      "archive_path": "retrieval/dora_seed43/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed43/training.jsonl",
+      "bytes": 19480,
+      "sha256": "038732b5c416aab378b71dec0d065b0cecdff44a2229557c4633779cc646eb48"
+    },
+    {
+      "archive_path": "retrieval/dora_seed43/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed43/validation_per_query.json",
+      "bytes": 47703,
+      "sha256": "3f372d3e4c3cf2609836de2216b118fee557c72d379e1ebf287fdfc1ddfdea00"
+    },
+    {
+      "archive_path": "retrieval/dora_seed44/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed44/result.json",
+      "bytes": 3449,
+      "sha256": "b5fe3d2530664ad01a696848afcadf612e53197711ea31e38a621f8719a83093"
+    },
+    {
+      "archive_path": "retrieval/dora_seed44/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed44/test_per_query.json",
+      "bytes": 176804,
+      "sha256": "38bca23dd7df8489e4762383eddb5aab69020b944b5a241fdd0876c56752bb73"
+    },
+    {
+      "archive_path": "retrieval/dora_seed44/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed44/training.jsonl",
+      "bytes": 19487,
+      "sha256": "9f118818c440d0848c51b2968e510ff2630d5ba1dee1dab1e12ecae6d2cf42e2"
+    },
+    {
+      "archive_path": "retrieval/dora_seed44/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/dora_seed44/validation_per_query.json",
+      "bytes": 47708,
+      "sha256": "9b7cc2592ae0c2df1078140ec153f4f54f88f4a680f4db8ea00a1530c2cc5d94"
+    },
+    {
+      "archive_path": "retrieval/frozen_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/frozen_seed42/result.json",
+      "bytes": 763,
+      "sha256": "10f1baf45b0776606b39c2096c3663ac167ff71cae4678b1cc857c6ffdf33b7f"
+    },
+    {
+      "archive_path": "retrieval/frozen_seed42/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/frozen_seed42/test_per_query.json",
+      "bytes": 176396,
+      "sha256": "1cd076c4934ccfcad65a66b0301152af9d700330f2e2b801d1fe8f2b74bf357c"
+    },
+    {
+      "archive_path": "retrieval/frozen_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/frozen_seed42/validation_per_query.json",
+      "bytes": 47542,
+      "sha256": "440dcff78e658ed453e0a9dc3af0dafe5b270b4c949588b5795f179c86d95ab7"
+    },
+    {
+      "archive_path": "retrieval/lora_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed42/result.json",
+      "bytes": 3005,
+      "sha256": "6b43baab06fbbceb98f826cef7c6eaf681ddb0e5b8df4fd8a32fc0f3d99f89a5"
+    },
+    {
+      "archive_path": "retrieval/lora_seed42/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed42/test_per_query.json",
+      "bytes": 176928,
+      "sha256": "b5f6198ad8395de2e1b584740c1e766f9f422e2ca95f8a8fc672087923446ccc"
+    },
+    {
+      "archive_path": "retrieval/lora_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed42/training.jsonl",
+      "bytes": 19479,
+      "sha256": "eee8425c58383b54afded21f569117608edb3309817815fe39229bc20f831ed5"
+    },
+    {
+      "archive_path": "retrieval/lora_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed42/validation_per_query.json",
+      "bytes": 47767,
+      "sha256": "046298b9e9ba9b85bbd976ddb716da4cf0f263498e8934411f067e561e1f8ce4"
+    },
+    {
+      "archive_path": "retrieval/lora_seed43/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed43/result.json",
+      "bytes": 2899,
+      "sha256": "847c784c7679c9c8222e5663a2c59b60def27c34e4387cde2117451825db75bc"
+    },
+    {
+      "archive_path": "retrieval/lora_seed43/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed43/test_per_query.json",
+      "bytes": 176912,
+      "sha256": "82738570ee5059ac169ba8c64327cc48ce249086f63716254c27c5cc8b6bae5e"
+    },
+    {
+      "archive_path": "retrieval/lora_seed43/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed43/training.jsonl",
+      "bytes": 19505,
+      "sha256": "d0beae379f6fc764926284c5dfec418bbb8b3506fbfcde77d16639151518fabd"
+    },
+    {
+      "archive_path": "retrieval/lora_seed43/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed43/validation_per_query.json",
+      "bytes": 47694,
+      "sha256": "7bcd37ee0840fbcda849646d079fdb8b8477d1ed49ebaae5f728bb4c4bb67621"
+    },
+    {
+      "archive_path": "retrieval/lora_seed44/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed44/result.json",
+      "bytes": 2893,
+      "sha256": "9769a92642b0abb2b8db941043952e5d1e3a481487d5165a3f5e87fc4561bfea"
+    },
+    {
+      "archive_path": "retrieval/lora_seed44/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed44/test_per_query.json",
+      "bytes": 176810,
+      "sha256": "e828e07cbd10994f451887ad80b54a5d63a9f995484ba2f8406f5f5c6b343f8c"
+    },
+    {
+      "archive_path": "retrieval/lora_seed44/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed44/training.jsonl",
+      "bytes": 19502,
+      "sha256": "597560b5c66c571a95272e6c35d3c6e657cbbf885291dd4ed1c667058e5f93cb"
+    },
+    {
+      "archive_path": "retrieval/lora_seed44/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/lora_seed44/validation_per_query.json",
+      "bytes": 47686,
+      "sha256": "6e9b6865d3cd816ceb4d8909a017fac7c3b6a885e0d45d3c38d05c5d22e08f72"
+    },
+    {
+      "archive_path": "retrieval/nora_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed42/result.json",
+      "bytes": 3002,
+      "sha256": "875ec6336e749fbbf711cbdd83220c84a03c5927c13300a2d194e28f5f194b46"
+    },
+    {
+      "archive_path": "retrieval/nora_seed42/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed42/test_per_query.json",
+      "bytes": 176948,
+      "sha256": "3cd02a2c138dc830e1eac22cf6f2b10461574e22a321381bc8aee0738fe792d3"
+    },
+    {
+      "archive_path": "retrieval/nora_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed42/training.jsonl",
+      "bytes": 19459,
+      "sha256": "b8b3710388615f2dfe53702a479d1fba4690bc17b9df849696b2ea4954b9554f"
+    },
+    {
+      "archive_path": "retrieval/nora_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed42/validation_per_query.json",
+      "bytes": 47661,
+      "sha256": "9ed3a9258369575c6383839a71838a92230e547bb1a9cf863b0d23a5b86f10a7"
+    },
+    {
+      "archive_path": "retrieval/nora_seed43/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed43/result.json",
+      "bytes": 2886,
+      "sha256": "5ed74856903a9563a0b5f34b5a881a26bf5411c3b18bdcc11773e87a3e476bc0"
+    },
+    {
+      "archive_path": "retrieval/nora_seed43/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed43/test_per_query.json",
+      "bytes": 176739,
+      "sha256": "cfc9414c91adb81f0574003414ca8a429613251ac02441f48dbba965b5d16206"
+    },
+    {
+      "archive_path": "retrieval/nora_seed43/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed43/training.jsonl",
+      "bytes": 19452,
+      "sha256": "45999cb92db6e64d4f361c1e15461eda80767de4122590577dac835fcec30066"
+    },
+    {
+      "archive_path": "retrieval/nora_seed43/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed43/validation_per_query.json",
+      "bytes": 47655,
+      "sha256": "0fc3b60a5d69c35a8120845a4ce74f50df5961aecf82479bc1d175c39262c477"
+    },
+    {
+      "archive_path": "retrieval/nora_seed44/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed44/result.json",
+      "bytes": 2897,
+      "sha256": "58bd2a5e4958d411daf66119e99ddda197735875dc49748ef78b7cfd24b00b20"
+    },
+    {
+      "archive_path": "retrieval/nora_seed44/test_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed44/test_per_query.json",
+      "bytes": 176807,
+      "sha256": "e6c298ba62ed0172781bf3b4cca31acf9ad25af0d389f9c941daf5f9becc3d0d"
+    },
+    {
+      "archive_path": "retrieval/nora_seed44/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed44/training.jsonl",
+      "bytes": 19459,
+      "sha256": "6ea09547e2ca4b3ba8416ef090385e9691276a1c227390ff142eb760ea1fad5d"
+    },
+    {
+      "archive_path": "retrieval/nora_seed44/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/nora_seed44/validation_per_query.json",
+      "bytes": 47606,
+      "sha256": "4f223b7840cf4c4c442277eeaaf91ce447191a14a1cddfcc1267d8774dabb594"
+    },
+    {
+      "archive_path": "retrieval/paired_bootstrap.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/paired_bootstrap.json",
+      "bytes": 1721,
+      "sha256": "3b43c193dfd4a94fdb9a1a91f6bd18e25fb80cb81ec4a0f0cc2d0403106deed8"
+    },
+    {
+      "archive_path": "retrieval/paired_bootstrap_samples.npz",
+      "source": "/var/tmp/dora-bench/runs/retrieval/paired_bootstrap_samples.npz",
+      "bytes": 456394,
+      "sha256": "62d7196942a0c539ad7cd6914b17e51b1c5b7a8b08667c5aca8574ecb30d190d"
+    },
+    {
+      "archive_path": "retrieval/provenance.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/provenance.json",
+      "bytes": 4303,
+      "sha256": "b665d08c52f99b401b423409602902c7bff9bfa24c3ee80429ffcd21329df1d1"
+    },
+    {
+      "archive_path": "retrieval/results.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/results.json",
+      "bytes": 82922,
+      "sha256": "892dcd7e629bdef2266dbe6e8e9efa11465e9fe0b2a40b38e12972c90ac15b5a"
+    },
+    {
+      "archive_path": "retrieval/run.log",
+      "source": "/var/tmp/dora-bench/runs/retrieval/run.log",
+      "bytes": 50075,
+      "sha256": "12020f23034e6c409f8ed57235b73ad709a4eb1ed97737217aaa1a376e9ec8b0"
+    },
+    {
+      "archive_path": "retrieval/source/dora.py",
+      "source": "/var/tmp/dora-bench/runs/retrieval/source/dora.py",
+      "bytes": 9421,
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+    },
+    {
+      "archive_path": "retrieval/source/experiments/adapters.py",
+      "source": "/var/tmp/dora-bench/runs/retrieval/source/experiments/adapters.py",
+      "bytes": 7446,
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8"
+    },
+    {
+      "archive_path": "retrieval/source/experiments/analyze_retrieval.py",
+      "source": "/var/tmp/dora-bench/runs/retrieval/source/experiments/analyze_retrieval.py",
+      "bytes": 2192,
+      "sha256": "cb99e66a963c79b8fc8aeacc259913108769d1111eb85fba288cc664f86a93b9"
+    },
+    {
+      "archive_path": "retrieval/source/experiments/retrieval.py",
+      "source": "/var/tmp/dora-bench/runs/retrieval/source/experiments/retrieval.py",
+      "bytes": 22713,
+      "sha256": "cf8c02c90a6149054ed7bceb9f583db01eed833106e6105c495adbd5894a4c2d"
+    },
+    {
+      "archive_path": "retrieval/splits.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/splits.json",
+      "bytes": 12460,
+      "sha256": "55ecc867f69e8ebc5746b37d7777cc1f7c68462a09f00de5bce4e99627fa583c"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_lr0.0001_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_lr0.0001_seed42/result.json",
+      "bytes": 3306,
+      "sha256": "aa6f274ca7a95cfc2931baf2812da4677cee19177e64671a8039744dfb5f2ef4"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_lr0.0001_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_lr0.0001_seed42/training.jsonl",
+      "bytes": 19499,
+      "sha256": "d56144f96da4762049217cecbd3608a2ab75cbf34d7c9c1e2e57edb642b72591"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_lr0.0001_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_lr0.0001_seed42/validation_per_query.json",
+      "bytes": 47558,
+      "sha256": "ce070dc9995611e5aadc912a19eb605edb19e9527116440f25d6aecc0f198a80"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_lr0.001_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_lr0.001_seed42/result.json",
+      "bytes": 3306,
+      "sha256": "3b5277321f8f0e2b8699a958f44a4a1e9495673e19798ac84f813393a96bba85"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_lr0.001_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_lr0.001_seed42/training.jsonl",
+      "bytes": 19495,
+      "sha256": "289df5f28204f30518885bb4ecf15402d20674c7e4af1303d6d256333673a15b"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_lr0.001_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_lr0.001_seed42/validation_per_query.json",
+      "bytes": 47759,
+      "sha256": "78456d98165d3f0b7d06a2c23d35a4641223081d2ef4a21de1d1dad973739cae"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_nora_lr0.0001_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_nora_lr0.0001_seed42/result.json",
+      "bytes": 3319,
+      "sha256": "f679afcb652d24d05c240d200ad50ed665b9956e518a58bac29090fca158005f"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_nora_lr0.0001_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_nora_lr0.0001_seed42/training.jsonl",
+      "bytes": 19401,
+      "sha256": "758146006ec88e747c554b6b0e95192e6cd66128d3578f69dd1c21a31c174b3a"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_nora_lr0.0001_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_nora_lr0.0001_seed42/validation_per_query.json",
+      "bytes": 47608,
+      "sha256": "68c2163f7522b88f09811b94c1b456a4a1ae0bd40db1a480ba51035c1b294140"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_nora_lr0.001_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_nora_lr0.001_seed42/result.json",
+      "bytes": 3319,
+      "sha256": "b5d53f49c963a84b31d2fc17733ce8ffa981c4bc714c250c8a46f7896905c7f6"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_nora_lr0.001_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_nora_lr0.001_seed42/training.jsonl",
+      "bytes": 19444,
+      "sha256": "41b6d8b7aac4585f2d2f82e204b39525065abd87378ea279c4efedd4a49b3cfd"
+    },
+    {
+      "archive_path": "retrieval/tuning/dora_nora_lr0.001_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/dora_nora_lr0.001_seed42/validation_per_query.json",
+      "bytes": 47626,
+      "sha256": "41a899cfaf365399c5393b9661e268acac9f8fa4cab06dc7b9f96f0fd43135b0"
+    },
+    {
+      "archive_path": "retrieval/tuning/lora_lr0.0001_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/lora_lr0.0001_seed42/result.json",
+      "bytes": 2749,
+      "sha256": "3f427ec1fd7c0529fdd33d235d532b224bcf2ffa9f1b1d476f4cf38d25e97fcd"
+    },
+    {
+      "archive_path": "retrieval/tuning/lora_lr0.0001_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/lora_lr0.0001_seed42/training.jsonl",
+      "bytes": 19393,
+      "sha256": "f7d2eb5643ba7f0de3992875c2d84d7cd4da05688d286321c46766c42e774323"
+    },
+    {
+      "archive_path": "retrieval/tuning/lora_lr0.0001_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/lora_lr0.0001_seed42/validation_per_query.json",
+      "bytes": 47578,
+      "sha256": "6bb1117afc2c1e64f3715cfd6dcc8a9c164681d1430d8d412d32a1cab8a9b60a"
+    },
+    {
+      "archive_path": "retrieval/tuning/lora_lr0.001_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/lora_lr0.001_seed42/result.json",
+      "bytes": 2754,
+      "sha256": "d46e5ae17c97f1645ee4e5fef7d06e0ab83beb428fa37f20d6924417febbb0c6"
+    },
+    {
+      "archive_path": "retrieval/tuning/lora_lr0.001_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/lora_lr0.001_seed42/training.jsonl",
+      "bytes": 19479,
+      "sha256": "eee8425c58383b54afded21f569117608edb3309817815fe39229bc20f831ed5"
+    },
+    {
+      "archive_path": "retrieval/tuning/lora_lr0.001_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/lora_lr0.001_seed42/validation_per_query.json",
+      "bytes": 47767,
+      "sha256": "046298b9e9ba9b85bbd976ddb716da4cf0f263498e8934411f067e561e1f8ce4"
+    },
+    {
+      "archive_path": "retrieval/tuning/nora_lr0.0001_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/nora_lr0.0001_seed42/result.json",
+      "bytes": 2757,
+      "sha256": "9a1202af5438afebd0722318e0a2c7f14c448b68c54854c53b15482273e424c2"
+    },
+    {
+      "archive_path": "retrieval/tuning/nora_lr0.0001_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/nora_lr0.0001_seed42/training.jsonl",
+      "bytes": 19410,
+      "sha256": "0af2f12d1b0b09ff54b88d730dc9af956a15ba873ed2cfbe740a3a652706ed3c"
+    },
+    {
+      "archive_path": "retrieval/tuning/nora_lr0.0001_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/nora_lr0.0001_seed42/validation_per_query.json",
+      "bytes": 47673,
+      "sha256": "99e005489ec5093e1fe34b53665c4d5c3ad49f632cbc486eae388715de52882b"
+    },
+    {
+      "archive_path": "retrieval/tuning/nora_lr0.001_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/nora_lr0.001_seed42/result.json",
+      "bytes": 2755,
+      "sha256": "31ceef02a6dd40bb95a42764f1406531221073798d08505343190676f93cee2e"
+    },
+    {
+      "archive_path": "retrieval/tuning/nora_lr0.001_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/nora_lr0.001_seed42/training.jsonl",
+      "bytes": 19459,
+      "sha256": "b8b3710388615f2dfe53702a479d1fba4690bc17b9df849696b2ea4954b9554f"
+    },
+    {
+      "archive_path": "retrieval/tuning/nora_lr0.001_seed42/validation_per_query.json",
+      "source": "/var/tmp/dora-bench/runs/retrieval/tuning/nora_lr0.001_seed42/validation_per_query.json",
+      "bytes": 47661,
+      "sha256": "9ed3a9258369575c6383839a71838a92230e547bb1a9cf863b0d23a5b86f10a7"
+    },
+    {
+      "archive_path": "extraction/baseline.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/baseline.json",
+      "bytes": 345,
+      "sha256": "21f92fa7e8de09f180f16759b7277f930bcf3a0f9902928516f452b741018f2f"
+    },
+    {
+      "archive_path": "extraction/baseline_predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/baseline_predictions.jsonl",
+      "bytes": 181633,
+      "sha256": "621492fe657bfe178ec2ac11ae6b2344963e29f6587a9de254a2fea038ad5739"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed42/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed42/predictions.jsonl",
+      "bytes": 167392,
+      "sha256": "d635748f954200d057830ef55bf3a2d90e3386099bca6de78314ea29cf3cbb55"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed42/result.json",
+      "bytes": 733,
+      "sha256": "5101eebc2928e6c68dea435f73196c1a154ba56d60d0bc9e9f7f731d9f1b9262"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed42/training.jsonl",
+      "bytes": 24299,
+      "sha256": "7c27c33199f56c404fc49c22bd4251aa5b574a2e1d93a22f1bce9d34021a2b5a"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed43/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed43/predictions.jsonl",
+      "bytes": 167488,
+      "sha256": "70da62b795ae81d7eca022df9af11cb84a2b8f0837eb298bfec24c8fb6dbee37"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed43/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed43/result.json",
+      "bytes": 724,
+      "sha256": "72bc8c591557c2c9785c79739ca4cace00cb5be846e04cc2ec0af95297ccfa1b"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed43/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed43/training.jsonl",
+      "bytes": 24326,
+      "sha256": "4bf0513b0aea4185da71fffa90ecd260cb59011785f407859d6067109a801b8e"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed44/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed44/predictions.jsonl",
+      "bytes": 168151,
+      "sha256": "8a7839f625f40e592e0ed95d53be939895613a6a5f48bb93855ba6df2b8dc689"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed44/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed44/result.json",
+      "bytes": 724,
+      "sha256": "e65354e012717e68f728bae828702871479c248453763fb9f743c4afcafb2688"
+    },
+    {
+      "archive_path": "extraction/dora_nora_seed44/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_nora_seed44/training.jsonl",
+      "bytes": 24316,
+      "sha256": "aad2a93932e4b00938d81b0f0f77cc9890b74fc40f3869099415aa2f30060260"
+    },
+    {
+      "archive_path": "extraction/dora_seed42/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed42/predictions.jsonl",
+      "bytes": 167547,
+      "sha256": "74678981d636dc84f4103c9defe9d47bc9440cb67b425381f28ccb85ae43ab89"
+    },
+    {
+      "archive_path": "extraction/dora_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed42/result.json",
+      "bytes": 712,
+      "sha256": "6f1d55f3335d5e636be7940274e8dcca932a39b89156c223ba6b638812dfb42b"
+    },
+    {
+      "archive_path": "extraction/dora_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed42/training.jsonl",
+      "bytes": 24325,
+      "sha256": "89a65f42183c70b02f644372849b13eb9a5bb886aafb511cc9e1e7f11cb59b9e"
+    },
+    {
+      "archive_path": "extraction/dora_seed43/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed43/predictions.jsonl",
+      "bytes": 166119,
+      "sha256": "69035161c1f11a0c4fc34ff2e4a2d93010efc38f1377509f4ce84a0ad5a6992b"
+    },
+    {
+      "archive_path": "extraction/dora_seed43/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed43/result.json",
+      "bytes": 720,
+      "sha256": "3957175315dd74a081005391c0b49c7dc44d76b61af80336ce2ea594c5f2c445"
+    },
+    {
+      "archive_path": "extraction/dora_seed43/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed43/training.jsonl",
+      "bytes": 24344,
+      "sha256": "89d7391cdb7fa309b6bfce79736477da7c87c750f22d375f5c02e0f497ce85a2"
+    },
+    {
+      "archive_path": "extraction/dora_seed44/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed44/predictions.jsonl",
+      "bytes": 168684,
+      "sha256": "447b1f83e44040673e6496e3ef27603b748ea6bd1591157519c7ed5339ec9935"
+    },
+    {
+      "archive_path": "extraction/dora_seed44/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed44/result.json",
+      "bytes": 718,
+      "sha256": "2c062c5c9834b3eb643354be273c76dde14adbe334add93ac82e6c859fa232e7"
+    },
+    {
+      "archive_path": "extraction/dora_seed44/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/dora_seed44/training.jsonl",
+      "bytes": 24359,
+      "sha256": "14331de3c9a8be75c274930e93142861df6bba43028ec6698762cfa5d288e662"
+    },
+    {
+      "archive_path": "extraction/lora_seed42/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed42/predictions.jsonl",
+      "bytes": 167345,
+      "sha256": "7164a5e299d6c973a5702c8f8fd00f7e998d03dca8acd5b93205056933bc7c9f"
+    },
+    {
+      "archive_path": "extraction/lora_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed42/result.json",
+      "bytes": 712,
+      "sha256": "97f6891c03b64d879d01487c7d30d986722ab2f45b858ca26cce7d2afabfbd5f"
+    },
+    {
+      "archive_path": "extraction/lora_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed42/training.jsonl",
+      "bytes": 24336,
+      "sha256": "da89eb9c13890e55e3811f5aaf593f09255534934778a2b57e1d536d331bbd5c"
+    },
+    {
+      "archive_path": "extraction/lora_seed43/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed43/predictions.jsonl",
+      "bytes": 166523,
+      "sha256": "9c264f47a63fcd9b0cf158c97aa2e9df3b49ad31b797241bbe50e149b2be8f6e"
+    },
+    {
+      "archive_path": "extraction/lora_seed43/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed43/result.json",
+      "bytes": 719,
+      "sha256": "28eaefbcff364017ee6d996e6a230ff804e91bb7c3fd4bb1f941a0700aec34f7"
+    },
+    {
+      "archive_path": "extraction/lora_seed43/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed43/training.jsonl",
+      "bytes": 24323,
+      "sha256": "b6a272840413ebf9fe054327252a618d06867f57ec60372f822f60bf537579b9"
+    },
+    {
+      "archive_path": "extraction/lora_seed44/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed44/predictions.jsonl",
+      "bytes": 168468,
+      "sha256": "c5a18bfdd5835277e2ca6be5d2b9ad5ae2e19273fb156cb3cebd340b530c4d1c"
+    },
+    {
+      "archive_path": "extraction/lora_seed44/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed44/result.json",
+      "bytes": 718,
+      "sha256": "6b3badc635ab8a2bad8623f3921df545e00fa82317b418dedae7c4ae4756ddd2"
+    },
+    {
+      "archive_path": "extraction/lora_seed44/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/lora_seed44/training.jsonl",
+      "bytes": 24344,
+      "sha256": "79f1f49c2664a793754d4aa4d6aedf92a1619a305502b6f2f95288416b32d9cd"
+    },
+    {
+      "archive_path": "extraction/manifest.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/manifest.json",
+      "bytes": 2178,
+      "sha256": "045b5fd88e558158ca04c9e9dd7490b5fbca8e7260bad22fe44ff2fa9c0c346e"
+    },
+    {
+      "archive_path": "extraction/nora_seed42/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed42/predictions.jsonl",
+      "bytes": 167243,
+      "sha256": "fda2a5c2602b58824c73f4e65d42936a3a8266edcd9d0c29349be0c20e5fb86d"
+    },
+    {
+      "archive_path": "extraction/nora_seed42/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed42/result.json",
+      "bytes": 715,
+      "sha256": "ec897c6ed68c58d5f70bdfc78f7047d96a9e1896b43944b3b038b084c04c77bd"
+    },
+    {
+      "archive_path": "extraction/nora_seed42/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed42/training.jsonl",
+      "bytes": 24298,
+      "sha256": "d23a78732fbc6d103184dbd6eac46366d6ec353f3043c75f8e3e644f69594b61"
+    },
+    {
+      "archive_path": "extraction/nora_seed43/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed43/predictions.jsonl",
+      "bytes": 168828,
+      "sha256": "b209f88c777fb62989fddf96ee70d9156751511d98e751dcaf48cc739024724d"
+    },
+    {
+      "archive_path": "extraction/nora_seed43/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed43/result.json",
+      "bytes": 724,
+      "sha256": "fb7014f46acc1db4409ea374207f94b307444f31c21c625d2d227bd03e4aca41"
+    },
+    {
+      "archive_path": "extraction/nora_seed43/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed43/training.jsonl",
+      "bytes": 24360,
+      "sha256": "a54e310673648e4e3b1e3dac4476f19e9ac43a411a6e12b09681d2cd99316309"
+    },
+    {
+      "archive_path": "extraction/nora_seed44/predictions.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed44/predictions.jsonl",
+      "bytes": 167582,
+      "sha256": "6c93187c44297572121de18c01a6cc90e45a9e370f8d9a70612bb3be2cb4b5ed"
+    },
+    {
+      "archive_path": "extraction/nora_seed44/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed44/result.json",
+      "bytes": 720,
+      "sha256": "c0c3898ca963502af08a4d5085cc2bb82e70a956623f26311d89cd9d2bca464c"
+    },
+    {
+      "archive_path": "extraction/nora_seed44/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/nora_seed44/training.jsonl",
+      "bytes": 24339,
+      "sha256": "e8cb68032d87a7cbbd5734fe8f2c9adaeb40054a55a56570e2073a4379d1133c"
+    },
+    {
+      "archive_path": "extraction/paired_bootstrap.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/paired_bootstrap.json",
+      "bytes": 4159,
+      "sha256": "28c8384bd908fc384a5d1abb38c279720ea27f281362a2afcfad0f2ecbc133fb"
+    },
+    {
+      "archive_path": "extraction/paired_bootstrap.log",
+      "source": "/var/tmp/dora-bench/runs/extraction/paired_bootstrap.log",
+      "bytes": 4159,
+      "sha256": "28c8384bd908fc384a5d1abb38c279720ea27f281362a2afcfad0f2ecbc133fb"
+    },
+    {
+      "archive_path": "extraction/paired_bootstrap_samples.npz",
+      "source": "/var/tmp/dora-bench/runs/extraction/paired_bootstrap_samples.npz",
+      "bytes": 77581,
+      "sha256": "a451efbb9ec3ac2cc0d9f8ee99fe168be1d5c219470de1feacc30b50f9a0c36c"
+    },
+    {
+      "archive_path": "extraction/pilot_dora_0.0001/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_dora_0.0001/result.json",
+      "bytes": 396,
+      "sha256": "f9000b5635ed3613f6fcef54a0d900fdc23e8140ded98b1fb171d85537bdc136"
+    },
+    {
+      "archive_path": "extraction/pilot_dora_0.0001/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_dora_0.0001/training.jsonl",
+      "bytes": 4505,
+      "sha256": "c505de7fed7a003f19f7df4664bae81ffdc8ec7f52a3bc24f22f5449fabe6082"
+    },
+    {
+      "archive_path": "extraction/pilot_dora_0.0003/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_dora_0.0003/result.json",
+      "bytes": 396,
+      "sha256": "49689ebb354f843763c6d04b60f8c97f1e89985c2f341a9f9ceec2a2219a722c"
+    },
+    {
+      "archive_path": "extraction/pilot_dora_0.0003/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_dora_0.0003/training.jsonl",
+      "bytes": 4519,
+      "sha256": "6dfc41bde1684b6ae858d1e1f93d1c82e0516d2063c518afb88e1a98e66c66bc"
+    },
+    {
+      "archive_path": "extraction/pilot_dora_nora_0.0001/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_dora_nora_0.0001/result.json",
+      "bytes": 401,
+      "sha256": "50f226cb0e8551809ede10468650653599d55b63519db64f54b9750a485e2322"
+    },
+    {
+      "archive_path": "extraction/pilot_dora_nora_0.0001/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_dora_nora_0.0001/training.jsonl",
+      "bytes": 4485,
+      "sha256": "7bbf834ca8782e2b5f3e83f6ac9174b57dee36a14f3004730e87322f20c79ec7"
+    },
+    {
+      "archive_path": "extraction/pilot_dora_nora_0.0003/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_dora_nora_0.0003/result.json",
+      "bytes": 401,
+      "sha256": "2519d347bfa98f8b8467edc14774f55f738933609dc7e14d59c0776c66ddea7d"
+    },
+    {
+      "archive_path": "extraction/pilot_dora_nora_0.0003/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_dora_nora_0.0003/training.jsonl",
+      "bytes": 4508,
+      "sha256": "dcfc79648d336bfbeb8e7bb79ba106be008362d7cfca9302e2dae585304b333f"
+    },
+    {
+      "archive_path": "extraction/pilot_lora_0.0001/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_lora_0.0001/result.json",
+      "bytes": 395,
+      "sha256": "9c9e62b3e8093087a76b83e974520ae29a83e6293249f26fffd51d4f0d7d0122"
+    },
+    {
+      "archive_path": "extraction/pilot_lora_0.0001/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_lora_0.0001/training.jsonl",
+      "bytes": 4502,
+      "sha256": "341b9f11da2c07eb0def0931aef117f918b66cf882f5e4bd8dd085b44870c2cb"
+    },
+    {
+      "archive_path": "extraction/pilot_lora_0.0003/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_lora_0.0003/result.json",
+      "bytes": 396,
+      "sha256": "73c060e2679e4176b609d954cf57755814e9c3014cfcdf3a15f3c1a61eef78e0"
+    },
+    {
+      "archive_path": "extraction/pilot_lora_0.0003/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_lora_0.0003/training.jsonl",
+      "bytes": 4519,
+      "sha256": "fb1b55407fef252773adc31ab284694486fc48cc90052c9146e8b08fa098790e"
+    },
+    {
+      "archive_path": "extraction/pilot_nora_0.0001/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_nora_0.0001/result.json",
+      "bytes": 394,
+      "sha256": "850ab7f28247041dca9bb9928ddcbf36ab21cfd4b1e40e7a01f3456047d349a9"
+    },
+    {
+      "archive_path": "extraction/pilot_nora_0.0001/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_nora_0.0001/training.jsonl",
+      "bytes": 4493,
+      "sha256": "54b2da168781e5ea2c53cdabf728c8a5a5c14bd42b2d1e294b41ce785147d730"
+    },
+    {
+      "archive_path": "extraction/pilot_nora_0.0003/result.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_nora_0.0003/result.json",
+      "bytes": 395,
+      "sha256": "a539b54132b585996a176e27e7ba71d865e3e70f30602779e121b6268c124abc"
+    },
+    {
+      "archive_path": "extraction/pilot_nora_0.0003/training.jsonl",
+      "source": "/var/tmp/dora-bench/runs/extraction/pilot_nora_0.0003/training.jsonl",
+      "bytes": 4504,
+      "sha256": "153598727ba76051203633f512a209be3c847de5ab99a35b5c44c2c665fbb7d0"
+    },
+    {
+      "archive_path": "extraction/protocol_audit.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/protocol_audit.json",
+      "bytes": 965,
+      "sha256": "d98b38d1f04ec63001a59a417070e2f46488a473c7cdab72f520175149494d16"
+    },
+    {
+      "archive_path": "extraction/results.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/results.json",
+      "bytes": 16388,
+      "sha256": "67fe7477739bc5a01b6b59ea336e80cc43dfa4a76f13fe3abdbe8c23fd0adbc9"
+    },
+    {
+      "archive_path": "extraction/source/dora.py",
+      "source": "/var/tmp/dora-bench/runs/extraction/source/dora.py",
+      "bytes": 9421,
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+    },
+    {
+      "archive_path": "extraction/source/experiments/adapters.py",
+      "source": "/var/tmp/dora-bench/runs/extraction/source/experiments/adapters.py",
+      "bytes": 7446,
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8"
+    },
+    {
+      "archive_path": "extraction/source/experiments/analyze_extraction.py",
+      "source": "/var/tmp/dora-bench/runs/extraction/source/experiments/analyze_extraction.py",
+      "bytes": 7941,
+      "sha256": "cf6cb8d0cd534ffc6a3e1d88eb36dfd06a26eddaaf21becc4ef5dc571a1aa2d5"
+    },
+    {
+      "archive_path": "extraction/source/experiments/extraction.py",
+      "source": "/var/tmp/dora-bench/runs/extraction/source/experiments/extraction.py",
+      "bytes": 19057,
+      "sha256": "71c3f802fe2512c5246a4f57cfc8a398cfd58106d1f6dafe7fed0b533e7110d2"
+    },
+    {
+      "archive_path": "extraction/split_manifest.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/split_manifest.json",
+      "bytes": 575783,
+      "sha256": "9b88d9696cff839b5d1f471a7d6d575e8b0aee96d964671d72bdc16bd7e7a033"
+    },
+    {
+      "archive_path": "extraction/tuning.json",
+      "source": "/var/tmp/dora-bench/runs/extraction/tuning.json",
+      "bytes": 3771,
+      "sha256": "8c20ffe6dd09be8db382e5f64658bee8294121a31887b93c8636fa65f50c78c5"
+    },
+    {
+      "archive_path": "sdxl/baseline/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/baseline/result.json",
+      "bytes": 6289,
+      "sha256": "8908b00b8ab56e2130fde7f2c745c51817aa6a629937bcc12e68a00c451e57c3"
+    },
+    {
+      "archive_path": "sdxl/class_clip_diagnostic.log",
+      "source": "/var/tmp/dora-bench/sdxl/class_clip_diagnostic.log",
+      "bytes": 814,
+      "sha256": "7b9a78ef24b3396f1f534ad9a8d62175a0523af03b5955a8dfb6476145ccadae"
+    },
+    {
+      "archive_path": "sdxl/class_clip_metrics.json",
+      "source": "/var/tmp/dora-bench/sdxl/class_clip_metrics.json",
+      "bytes": 8716,
+      "sha256": "ecac135b3a97488596e99277936a4c206686873ce16476d5020ad4437b9da6ab"
+    },
+    {
+      "archive_path": "sdxl/conditioning_1024.json",
+      "source": "/var/tmp/dora-bench/sdxl/conditioning_1024.json",
+      "bytes": 1896,
+      "sha256": "7bb80120bd4021c6aed114dee64ca94e1c1c1ee4d77ce6d65642e2b0a90641f5"
+    },
+    {
+      "archive_path": "sdxl/dataset_manifest.json",
+      "source": "/var/tmp/dora-bench/sdxl/dataset_manifest.json",
+      "bytes": 2920,
+      "sha256": "319bb4321cda566df98e6ecf38e3242565d6de87d12e667e3e2ecde7258903ea"
+    },
+    {
+      "archive_path": "sdxl/dependency_provenance.json",
+      "source": "/var/tmp/dora-bench/sdxl/dependency_provenance.json",
+      "bytes": 229,
+      "sha256": "2f9b12057f78aa3a7b441710fc4142493f056779244a8a280bee78bdcd715d4c"
+    },
+    {
+      "archive_path": "sdxl/dora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/dora/result.json",
+      "bytes": 13379,
+      "sha256": "f4a0d0830d65d1996ce20334377bf7ce11ce53d4a8995e96903a27d77d37b24e"
+    },
+    {
+      "archive_path": "sdxl/dora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl/dora/selection.json",
+      "bytes": 6367,
+      "sha256": "2a88509b8c347058f26c96400c0de1433902bf52ff3a1966a7aef56789b9b100"
+    },
+    {
+      "archive_path": "sdxl/dora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/dora/training.jsonl",
+      "bytes": 83824,
+      "sha256": "5a5fec698a91887904a12b53f4602d506e1ebc0d325196b2b54224d73a84981b"
+    },
+    {
+      "archive_path": "sdxl/dora/trial_lr_0.0001/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/dora/trial_lr_0.0001/result.json",
+      "bytes": 2645,
+      "sha256": "a950c74f0a08cc599a5171b39a122a9f542bac193c24a88c49211d34d252f1c2"
+    },
+    {
+      "archive_path": "sdxl/dora/trial_lr_0.0001/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/dora/trial_lr_0.0001/training.jsonl",
+      "bytes": 8366,
+      "sha256": "d66226e00a276666b5c034c381d277d17a8bfd080d5477e6221b2a305d7d414a"
+    },
+    {
+      "archive_path": "sdxl/dora/trial_lr_1e-05/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/dora/trial_lr_1e-05/result.json",
+      "bytes": 2637,
+      "sha256": "5d4f4621a80a2c377b6fb6eb8a4a51f08d468bcb0e6fc96feabc38b690790401"
+    },
+    {
+      "archive_path": "sdxl/dora/trial_lr_1e-05/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/dora/trial_lr_1e-05/training.jsonl",
+      "bytes": 8360,
+      "sha256": "9635fbca4b216ad892a6ee5fb054ad4180aa09674b8c8149cba0d28780ba22fd"
+    },
+    {
+      "archive_path": "sdxl/dora_nora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/dora_nora/result.json",
+      "bytes": 13420,
+      "sha256": "b590554fb974579d40670eb8025edf021fa35db9c96e2fd9346f66088586567a"
+    },
+    {
+      "archive_path": "sdxl/dora_nora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl/dora_nora/selection.json",
+      "bytes": 6369,
+      "sha256": "6ac134b92d4348fd872f78bd958b2f5d30670812c3878234cae450ad998edb79"
+    },
+    {
+      "archive_path": "sdxl/dora_nora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/dora_nora/training.jsonl",
+      "bytes": 83474,
+      "sha256": "f2bab6ec4a84d8a1cc269446ae6543affff1870926492eb307dcbe24ddfe35e9"
+    },
+    {
+      "archive_path": "sdxl/dora_nora/trial_lr_0.0001/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/dora_nora/trial_lr_0.0001/result.json",
+      "bytes": 2644,
+      "sha256": "698d8f0cced8024e5c38578c3422d33e85a598250267214f834eb9fe25596465"
+    },
+    {
+      "archive_path": "sdxl/dora_nora/trial_lr_0.0001/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/dora_nora/trial_lr_0.0001/training.jsonl",
+      "bytes": 8310,
+      "sha256": "58ea215889c00b613834741dca4afbf7b1818092628bae0bba39b780c9504a4d"
+    },
+    {
+      "archive_path": "sdxl/dora_nora/trial_lr_1e-05/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/dora_nora/trial_lr_1e-05/result.json",
+      "bytes": 2640,
+      "sha256": "ec8ac04273d4f75eeffca682de0a9505ce9d348a17693c6cc4bca8447a2ac1e6"
+    },
+    {
+      "archive_path": "sdxl/dora_nora/trial_lr_1e-05/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/dora_nora/trial_lr_1e-05/training.jsonl",
+      "bytes": 8306,
+      "sha256": "cff023bc4931c478b49ae5534ae65f33301b7a46ec326ef559aca4e9a7a1a4e3"
+    },
+    {
+      "archive_path": "sdxl/executed_sources/adapters.py",
+      "source": "/var/tmp/dora-bench/sdxl/executed_sources/adapters.py",
+      "bytes": 7446,
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8"
+    },
+    {
+      "archive_path": "sdxl/executed_sources/dora.py",
+      "source": "/var/tmp/dora-bench/sdxl/executed_sources/dora.py",
+      "bytes": 9421,
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+    },
+    {
+      "archive_path": "sdxl/executed_sources/sdxl.py",
+      "source": "/var/tmp/dora-bench/sdxl/executed_sources/sdxl.py",
+      "bytes": 23724,
+      "sha256": "e13a367bfb922e6992e2112e5545defce7e70db146c6d25dea1b0f6417d81878"
+    },
+    {
+      "archive_path": "sdxl/executed_sources/sdxl_clip_diagnostic.py",
+      "source": "/var/tmp/dora-bench/sdxl/executed_sources/sdxl_clip_diagnostic.py",
+      "bytes": 4095,
+      "sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852"
+    },
+    {
+      "archive_path": "sdxl/lora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/lora/result.json",
+      "bytes": 13357,
+      "sha256": "15a8f88527af50061373c6cba8b949172c2a9fe44d016ede650a20d380cf2574"
+    },
+    {
+      "archive_path": "sdxl/lora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl/lora/selection.json",
+      "bytes": 6364,
+      "sha256": "760cb39bc5d8aa5415def5939e9791bd2bb6ecda579fd483bcc7106f219ee5a2"
+    },
+    {
+      "archive_path": "sdxl/lora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/lora/training.jsonl",
+      "bytes": 83755,
+      "sha256": "85188e4c5d93a731df4966bc045780d2df9120664f77f8e8f766f9c932fa7d7c"
+    },
+    {
+      "archive_path": "sdxl/lora/trial_lr_0.0001/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/lora/trial_lr_0.0001/result.json",
+      "bytes": 2638,
+      "sha256": "2ac26fc7047b1c20d1641ab5ef1e1a32a73055aab04363b0e7937586fc1a8443"
+    },
+    {
+      "archive_path": "sdxl/lora/trial_lr_0.0001/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/lora/trial_lr_0.0001/training.jsonl",
+      "bytes": 8345,
+      "sha256": "43d32040448dc66e552d59952566b206e33319875fe1a9f6576c356671cd9caf"
+    },
+    {
+      "archive_path": "sdxl/lora/trial_lr_1e-05/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/lora/trial_lr_1e-05/result.json",
+      "bytes": 2641,
+      "sha256": "8e070233e92437ac413a41282d79df87106051306cd1fbd20428d0dcc03e7cda"
+    },
+    {
+      "archive_path": "sdxl/lora/trial_lr_1e-05/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/lora/trial_lr_1e-05/training.jsonl",
+      "bytes": 8347,
+      "sha256": "bb43b7a34a9e400cb421ddb14b7cfa7f925fb28b253b6ae9c879be2af1cd4fa7"
+    },
+    {
+      "archive_path": "sdxl/nora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/nora/result.json",
+      "bytes": 13382,
+      "sha256": "4c3309d110aabdeb00acff0cab6f63e25f55d2d9d1b97c7fd62822e6831c201d"
+    },
+    {
+      "archive_path": "sdxl/nora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl/nora/selection.json",
+      "bytes": 6370,
+      "sha256": "da8aeeab3e74527f7ccecffbca9e9ebe16a26447daa1c2a970a77fb680714470"
+    },
+    {
+      "archive_path": "sdxl/nora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/nora/training.jsonl",
+      "bytes": 83445,
+      "sha256": "29e8558f00a793adc6e92817a56504d2f534f003dc41b10677bdd536ecd51886"
+    },
+    {
+      "archive_path": "sdxl/nora/trial_lr_0.0001/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/nora/trial_lr_0.0001/result.json",
+      "bytes": 2642,
+      "sha256": "2fb5dfc96585ff11ffd5e515fb61f3f4b7fa5a082c6717bb533701d44e5de07e"
+    },
+    {
+      "archive_path": "sdxl/nora/trial_lr_0.0001/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/nora/trial_lr_0.0001/training.jsonl",
+      "bytes": 8315,
+      "sha256": "3e9e64a982e2e0e9acfef6a73195f197074d68a2a1188569be823030edc1f1b3"
+    },
+    {
+      "archive_path": "sdxl/nora/trial_lr_1e-05/result.json",
+      "source": "/var/tmp/dora-bench/sdxl/nora/trial_lr_1e-05/result.json",
+      "bytes": 2643,
+      "sha256": "9ed71e0d66a5d4864e5b01fd41d81dc3944e501ea7eb5c546729be9b3e59fbf7"
+    },
+    {
+      "archive_path": "sdxl/nora/trial_lr_1e-05/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl/nora/trial_lr_1e-05/training.jsonl",
+      "bytes": 8302,
+      "sha256": "68251dfffb0ee5b43cea16b0f66f7778de90a9bc6906d2a3a60aa89c1b53686e"
+    },
+    {
+      "archive_path": "sdxl/provenance.json",
+      "source": "/var/tmp/dora-bench/sdxl/provenance.json",
+      "bytes": 2720,
+      "sha256": "58f8cb8b4cb4c3206c493e03ee42f3374b9a47822f84fb7972f88bc6ac07351b"
+    },
+    {
+      "archive_path": "sdxl/provenance_initial.json",
+      "source": "/var/tmp/dora-bench/sdxl/provenance_initial.json",
+      "bytes": 2405,
+      "sha256": "85e997708a74585e6a72cdae168b1445ae08bf594cd58c86efbef4dd40adf4eb"
+    },
+    {
+      "archive_path": "sdxl/results.json",
+      "source": "/var/tmp/dora-bench/sdxl/results.json",
+      "bytes": 72389,
+      "sha256": "1962188cb35101ce3f387582254db887821a912f0866c3935a1c748068c1d654"
+    },
+    {
+      "archive_path": "sdxl/run.log",
+      "source": "/var/tmp/dora-bench/sdxl/run.log",
+      "bytes": 11040,
+      "sha256": "568489950634d623e2c5c46c13bcc385530b50afeb8a19874f128b6f2afb46b9"
+    },
+    {
+      "archive_path": "sdxl/runner_equivalence.json",
+      "source": "/var/tmp/dora-bench/sdxl/runner_equivalence.json",
+      "bytes": 1532,
+      "sha256": "03a04e83689e49e399cdc411db830505b5b924293b0fed9ca14ece91a5eee4e4"
+    },
+    {
+      "archive_path": "sdxl/selected_lrs.json",
+      "source": "/var/tmp/dora-bench/sdxl/selected_lrs.json",
+      "bytes": 574,
+      "sha256": "e4341b2164c965b854a6aaeb25192774c88d139a2fe48ab00bee44337eb62d3f"
+    },
+    {
+      "archive_path": "sdxl/three_seed_summary.json",
+      "source": "/var/tmp/dora-bench/sdxl/three_seed_summary.json",
+      "bytes": 10427,
+      "sha256": "db6c2137864d4d8f639eb368b7ad719ecb320390f44c40f5037c5a3fc9162d01"
+    },
+    {
+      "archive_path": "sdxl_seed43/baseline/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/baseline/result.json",
+      "bytes": 6320,
+      "sha256": "12e19b92d6a4a96fc7528025e9ab092ec9a4b3a8269ba1b9c75c8b3bfaa9c2d5"
+    },
+    {
+      "archive_path": "sdxl_seed43/class_clip_metrics.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/class_clip_metrics.json",
+      "bytes": 8856,
+      "sha256": "49d7c9af0c8462b4bb73daa754c2ba3b41ef1bca729412e5d4632d46d037d764"
+    },
+    {
+      "archive_path": "sdxl_seed43/dataset_manifest.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/dataset_manifest.json",
+      "bytes": 2955,
+      "sha256": "70ec434804dacd54e587ab02b38130194a9c1ee6636a30ceb92bba40ac69d2e4"
+    },
+    {
+      "archive_path": "sdxl_seed43/dora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/dora/result.json",
+      "bytes": 7170,
+      "sha256": "0d96d2830fc55e5e912aeac8f8b81119b38c02161931db2309f82a3207df2933"
+    },
+    {
+      "archive_path": "sdxl_seed43/dora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/dora/selection.json",
+      "bytes": 73,
+      "sha256": "9ccc4469dd63589b63ab35de7cc71677e0b12c5ab5116cde87d50666c92cc658"
+    },
+    {
+      "archive_path": "sdxl_seed43/dora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/dora/training.jsonl",
+      "bytes": 83832,
+      "sha256": "06b975034b878931e4423726c192620dfa6420bbf68314080ae9481571708d65"
+    },
+    {
+      "archive_path": "sdxl_seed43/dora_nora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/dora_nora/result.json",
+      "bytes": 7214,
+      "sha256": "b6ab118927f4b40e5d00a49787642803181d8a21bf601e209026e25c00b7275a"
+    },
+    {
+      "archive_path": "sdxl_seed43/dora_nora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/dora_nora/selection.json",
+      "bytes": 73,
+      "sha256": "9ccc4469dd63589b63ab35de7cc71677e0b12c5ab5116cde87d50666c92cc658"
+    },
+    {
+      "archive_path": "sdxl_seed43/dora_nora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/dora_nora/training.jsonl",
+      "bytes": 83442,
+      "sha256": "9a467821a001eaf4fcc48d6f6ea5ef03690be5133907c502f11d2885b99afc5c"
+    },
+    {
+      "archive_path": "sdxl_seed43/executed_sources/adapters.py",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/executed_sources/adapters.py",
+      "bytes": 7446,
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8"
+    },
+    {
+      "archive_path": "sdxl_seed43/executed_sources/dora.py",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/executed_sources/dora.py",
+      "bytes": 9421,
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+    },
+    {
+      "archive_path": "sdxl_seed43/executed_sources/sdxl.py",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/executed_sources/sdxl.py",
+      "bytes": 27831,
+      "sha256": "dcea1df8f9e402f45be7f785842a86bf6e4afa3051d25ef154c45cac1983a002"
+    },
+    {
+      "archive_path": "sdxl_seed43/executed_sources/sdxl_clip_diagnostic.py",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/executed_sources/sdxl_clip_diagnostic.py",
+      "bytes": 4095,
+      "sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852"
+    },
+    {
+      "archive_path": "sdxl_seed43/launch.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/launch.json",
+      "bytes": 503,
+      "sha256": "7ffeaf0bc4a7339b87acf27bcb431f3dd503c02ccbbac2e733ba714c1aa7d804"
+    },
+    {
+      "archive_path": "sdxl_seed43/lora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/lora/result.json",
+      "bytes": 7142,
+      "sha256": "7ead12b26d43ba9b30a6fe53b20fd4d0c8fe93e7f60b7bc9a416a4b4475d3b2e"
+    },
+    {
+      "archive_path": "sdxl_seed43/lora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/lora/selection.json",
+      "bytes": 73,
+      "sha256": "9ccc4469dd63589b63ab35de7cc71677e0b12c5ab5116cde87d50666c92cc658"
+    },
+    {
+      "archive_path": "sdxl_seed43/lora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/lora/training.jsonl",
+      "bytes": 83753,
+      "sha256": "647365cd663511775bd39e34e1317b8a06db8ceb6b980ada49c2cddeb31690a0"
+    },
+    {
+      "archive_path": "sdxl_seed43/nora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/nora/result.json",
+      "bytes": 7166,
+      "sha256": "d541e8f7430ca5becdcdd922c91e92d5e45852a9ca3fe37256a0668953b5364d"
+    },
+    {
+      "archive_path": "sdxl_seed43/nora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/nora/selection.json",
+      "bytes": 73,
+      "sha256": "9ccc4469dd63589b63ab35de7cc71677e0b12c5ab5116cde87d50666c92cc658"
+    },
+    {
+      "archive_path": "sdxl_seed43/nora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/nora/training.jsonl",
+      "bytes": 83416,
+      "sha256": "f6f2bd7b49fe4e7a49dea06d4070df9c06b6cdb5a6863e43f4e291664eaa266c"
+    },
+    {
+      "archive_path": "sdxl_seed43/provenance.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/provenance.json",
+      "bytes": 3288,
+      "sha256": "eed9a2bce329b81cfe865ae31663965042ee6aaac987851ae552c6f3bbe0e577"
+    },
+    {
+      "archive_path": "sdxl_seed43/results.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/results.json",
+      "bytes": 44272,
+      "sha256": "661dc3a2c3aa647f754822564a847ed29b1052816566a1d0334fbcea5f8d6030"
+    },
+    {
+      "archive_path": "sdxl_seed43/run.log",
+      "source": "/var/tmp/dora-bench/sdxl_seed43/run.log",
+      "bytes": 9621,
+      "sha256": "c705e69007abf4060aa39036f1a4f332d8af78fbb177a5e45e31cbbb4a2bc624"
+    },
+    {
+      "archive_path": "sdxl_seed44/baseline/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/baseline/result.json",
+      "bytes": 6321,
+      "sha256": "81b1cd6e72d5b2b374624bd77eb9b757b74b3f257147a9a8f573ba593b333114"
+    },
+    {
+      "archive_path": "sdxl_seed44/class_clip_metrics.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/class_clip_metrics.json",
+      "bytes": 8861,
+      "sha256": "05a22c79cc508762318c08dff111d0e68e709a2b47c17a071d664647e8eb8d59"
+    },
+    {
+      "archive_path": "sdxl_seed44/dataset_manifest.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/dataset_manifest.json",
+      "bytes": 2955,
+      "sha256": "8d81e656036ecf4add34fea98664405c81764851593166e324ee8566c9d80371"
+    },
+    {
+      "archive_path": "sdxl_seed44/dora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/dora/result.json",
+      "bytes": 7157,
+      "sha256": "63c265295722b1d32590fcd4800316b034279ca2310891c36f3741cae7e28d74"
+    },
+    {
+      "archive_path": "sdxl_seed44/dora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/dora/selection.json",
+      "bytes": 73,
+      "sha256": "9ccc4469dd63589b63ab35de7cc71677e0b12c5ab5116cde87d50666c92cc658"
+    },
+    {
+      "archive_path": "sdxl_seed44/dora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/dora/training.jsonl",
+      "bytes": 83836,
+      "sha256": "100f542dcf10bcb1a342bf9500383581edaec2d967a5cb04f2049df6a96ad09b"
+    },
+    {
+      "archive_path": "sdxl_seed44/dora_nora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/dora_nora/result.json",
+      "bytes": 7210,
+      "sha256": "efe0b53a0023243bbf2515b29972eacffe9f4b5f57044d3c2b88623506f8c22b"
+    },
+    {
+      "archive_path": "sdxl_seed44/dora_nora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/dora_nora/selection.json",
+      "bytes": 73,
+      "sha256": "9ccc4469dd63589b63ab35de7cc71677e0b12c5ab5116cde87d50666c92cc658"
+    },
+    {
+      "archive_path": "sdxl_seed44/dora_nora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/dora_nora/training.jsonl",
+      "bytes": 83482,
+      "sha256": "6fdc07a7c7cc7fa6ef364c3b40239ad5570ccad49e1dad352daa8456907046bc"
+    },
+    {
+      "archive_path": "sdxl_seed44/executed_sources/adapters.py",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/executed_sources/adapters.py",
+      "bytes": 7446,
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8"
+    },
+    {
+      "archive_path": "sdxl_seed44/executed_sources/dora.py",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/executed_sources/dora.py",
+      "bytes": 9421,
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+    },
+    {
+      "archive_path": "sdxl_seed44/executed_sources/sdxl.py",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/executed_sources/sdxl.py",
+      "bytes": 27831,
+      "sha256": "dcea1df8f9e402f45be7f785842a86bf6e4afa3051d25ef154c45cac1983a002"
+    },
+    {
+      "archive_path": "sdxl_seed44/executed_sources/sdxl_clip_diagnostic.py",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/executed_sources/sdxl_clip_diagnostic.py",
+      "bytes": 4095,
+      "sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852"
+    },
+    {
+      "archive_path": "sdxl_seed44/launch.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/launch.json",
+      "bytes": 503,
+      "sha256": "844163c0fa5938c44bf467fc29695a728df5347d46bcaf72fae189f5ecf54635"
+    },
+    {
+      "archive_path": "sdxl_seed44/lora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/lora/result.json",
+      "bytes": 7153,
+      "sha256": "1a2089da7e2705a74f7671c63e88ef5631aa291fdf310e8c2a76855b04baf519"
+    },
+    {
+      "archive_path": "sdxl_seed44/lora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/lora/selection.json",
+      "bytes": 73,
+      "sha256": "9ccc4469dd63589b63ab35de7cc71677e0b12c5ab5116cde87d50666c92cc658"
+    },
+    {
+      "archive_path": "sdxl_seed44/lora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/lora/training.jsonl",
+      "bytes": 83825,
+      "sha256": "00259d5b8670b795be01abc48961cc595d1a02279678649c9ad425fb5df58f1d"
+    },
+    {
+      "archive_path": "sdxl_seed44/nora/result.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/nora/result.json",
+      "bytes": 7168,
+      "sha256": "ef65c15e2750a4de7d93069eb177223eacce9cfe90dbb8f2271b751e650071a2"
+    },
+    {
+      "archive_path": "sdxl_seed44/nora/selection.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/nora/selection.json",
+      "bytes": 73,
+      "sha256": "9ccc4469dd63589b63ab35de7cc71677e0b12c5ab5116cde87d50666c92cc658"
+    },
+    {
+      "archive_path": "sdxl_seed44/nora/training.jsonl",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/nora/training.jsonl",
+      "bytes": 83471,
+      "sha256": "f2e614fda4873cef40029c4402a2b6b2f20729a92d2daf12105514a6976cf90a"
+    },
+    {
+      "archive_path": "sdxl_seed44/provenance.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/provenance.json",
+      "bytes": 3288,
+      "sha256": "249117aff09032e9e6158b4497483e4f643d77eb5ee700d029cf1678c45988e0"
+    },
+    {
+      "archive_path": "sdxl_seed44/results.json",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/results.json",
+      "bytes": 44269,
+      "sha256": "3a91cfe590b9b760a55c3ed44e577de1079b6487e1f299d84be456171ac14285"
+    },
+    {
+      "archive_path": "sdxl_seed44/run.log",
+      "source": "/var/tmp/dora-bench/sdxl_seed44/run.log",
+      "bytes": 9624,
+      "sha256": "5a343c712113e9f7e62c3afef68ccb75547ad4dc55faf36c052883e18af70b32"
+    },
+    {
+      "archive_path": "verification/environment.json",
+      "source": "/var/tmp/dora-bench/verification/environment.json",
+      "bytes": 661,
+      "sha256": "51676536a39051d49d0fcf19045c6aee23d728636fde1d31a19185a6a7993762"
+    },
+    {
+      "archive_path": "verification/test_provenance.json",
+      "source": "/var/tmp/dora-bench/verification/test_provenance.json",
+      "bytes": 635,
+      "sha256": "d908b83de77361ee526c3edb70efeb1263f904222e15203207ca1d5d0506c837"
+    },
+    {
+      "archive_path": "verification/unittest.log",
+      "source": "/var/tmp/dora-bench/verification/unittest.log",
+      "bytes": 3548,
+      "sha256": "0f31519041125f87632f0e56fec8176497651e59ba7b6f0e31499aec96673aad"
+    },
+    {
+      "archive_path": "audit_inputs/retrieval_test_qrels.tsv",
+      "source": "results/2026-10-08/audit_inputs/retrieval_test_qrels.tsv",
+      "bytes": 5389,
+      "sha256": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c"
+    },
+    {
+      "archive_path": "report_source/report.py",
+      "source": "results/2026-10-08/report_source/report.py",
+      "bytes": 49176,
+      "sha256": "6e6158c2bee61e440e771f6b8a26690992440c7c68036c8d030e200549a4d5fa"
+    }
+  ],
+  "excluded": "Model checkpoints, images, caches, unlisted suffixes, and individual files larger than 32 MiB.",
+  "archive_sha256": "a4477a88eacd422202694650c5d7d8586c18351d8cb65936cf67354a4051c445"
+}

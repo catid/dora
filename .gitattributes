@@ -1,0 +1,2 @@
+# Keep the pinned upstream qrels byte-for-byte, including its CRLF endings.
+results/**/audit_inputs/*.tsv -text whitespace=cr-at-eol

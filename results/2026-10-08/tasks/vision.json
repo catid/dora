@@ -1,0 +1,681 @@
+{
+  "task": "vision",
+  "title": "Flowers102 classification",
+  "metric": "Test top-1 accuracy",
+  "unit": "%",
+  "direction": "higher",
+  "baseline": "Frozen ViT backbone + trained head",
+  "seeds": 3,
+  "baseline_seeds": 3,
+  "complete": true,
+  "missing": [],
+  "provenance": {
+    "model": "vit_base_patch16_224.augreg_in21k_ft_in1k",
+    "model_hf_repository": "timm/vit_base_patch16_224.augreg_in21k_ft_in1k",
+    "model_revision": "2ec9fb3d7bb664aac471ac44582c94d18de33780",
+    "model_checkpoint_path": "/var/tmp/dora-bench/cache/huggingface/models--timm--vit_base_patch16_224.augreg_in21k_ft_in1k/snapshots/2ec9fb3d7bb664aac471ac44582c94d18de33780/model.safetensors",
+    "model_checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+    "dataset_source": "https://www.robots.ox.ac.uk/~vgg/data/flowers/102/",
+    "dataset_split": "official setid.mat train1020/val1020/test6149",
+    "dataset_file_sha256": {
+      "flowers-102/102flowers.tgz": "2d01ecc807db462958cfe3d92f57a8c252b4abd240eb955770201e45f783b246",
+      "flowers-102/setid.mat": "46b8678f91fd95d3c8f4feab80d271a6c834a1dd896fe29fd3e6ad9ce5c8dccd",
+      "flowers-102/imagelabels.mat": "4903e94206bac23bf772aadf06451916df56b58fc483a62db32a97b82656651d"
+    },
+    "split_manifest_sha256": "4e9a8879ea8fe2f434ed4d3ab75089317d04fc27fc9c58518a0b7a5617986e49",
+    "input_transform": {
+      "train": "RandomResizedCrop224 scale[0.7,1.0], horizontalflip0.5",
+      "eval": "Resize256 bicubic, CenterCrop224",
+      "mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "std": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "torch": "2.12.0+cu130",
+    "torchvision": "0.27.0+cu130",
+    "timm": "1.0.30",
+    "python": "3.12.3",
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+    "cuda_visible_devices": "0",
+    "script_sha256": "f436bed1e2622979c5fb8637fce1c916b23a6cf658e1c29c00de710dd27bb499",
+    "adapters_sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+    "command": [
+      "/var/tmp/dora-bench/venv/bin/python",
+      "/home/catid/dora/experiments/vision.py",
+      "--seeds",
+      "42",
+      "43",
+      "44",
+      "--tune-lrs",
+      "0.0001",
+      "0.001"
+    ],
+    "tf32": true
+  },
+  "validation_tuning": {
+    "selected_learning_rates": {
+      "baseline": 0.001,
+      "lora": 0.001,
+      "dora": 0.001,
+      "nora": 0.0001,
+      "dora_nora": 0.0001
+    },
+    "candidates": [
+      {
+        "method": "lora",
+        "learning_rate": 0.0001,
+        "validation": {
+          "count": 1020,
+          "correct": 1008,
+          "accuracy": 0.9882352941176471,
+          "macro_class_accuracy": 0.988235354423523,
+          "cross_entropy": 0.2761098188512466
+        }
+      },
+      {
+        "method": "lora",
+        "learning_rate": 0.001,
+        "validation": {
+          "count": 1020,
+          "correct": 1016,
+          "accuracy": 0.996078431372549,
+          "macro_class_accuracy": 0.9960784316062927,
+          "cross_entropy": 0.21981096361197677
+        }
+      },
+      {
+        "method": "dora",
+        "learning_rate": 0.0001,
+        "validation": {
+          "count": 1020,
+          "correct": 1008,
+          "accuracy": 0.9882352941176471,
+          "macro_class_accuracy": 0.988235354423523,
+          "cross_entropy": 0.2751418842988856
+        }
+      },
+      {
+        "method": "dora",
+        "learning_rate": 0.001,
+        "validation": {
+          "count": 1020,
+          "correct": 1016,
+          "accuracy": 0.996078431372549,
+          "macro_class_accuracy": 0.9960784316062927,
+          "cross_entropy": 0.22026106236027737
+        }
+      },
+      {
+        "method": "nora",
+        "learning_rate": 0.0001,
+        "validation": {
+          "count": 1020,
+          "correct": 1014,
+          "accuracy": 0.9941176470588236,
+          "macro_class_accuracy": 0.9941176176071167,
+          "cross_entropy": 0.21712868727889714
+        }
+      },
+      {
+        "method": "nora",
+        "learning_rate": 0.001,
+        "validation": {
+          "count": 1020,
+          "correct": 1001,
+          "accuracy": 0.9813725490196078,
+          "macro_class_accuracy": 0.9813726544380188,
+          "cross_entropy": 0.24763417991937375
+        }
+      },
+      {
+        "method": "dora_nora",
+        "learning_rate": 0.0001,
+        "validation": {
+          "count": 1020,
+          "correct": 1014,
+          "accuracy": 0.9941176470588236,
+          "macro_class_accuracy": 0.9941176176071167,
+          "cross_entropy": 0.22647567823821424
+        }
+      },
+      {
+        "method": "dora_nora",
+        "learning_rate": 0.001,
+        "validation": {
+          "count": 1020,
+          "correct": 996,
+          "accuracy": 0.9764705882352941,
+          "macro_class_accuracy": 0.9764705896377563,
+          "cross_entropy": 0.2921547618566775
+        }
+      }
+    ]
+  },
+  "summary": {
+    "baseline": {
+      "mean": 98.87786631972679,
+      "sample_std": 0.11727276875797049,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        99.00796877541063,
+        98.7802894779639,
+        98.84534070580582
+      ],
+      "median_training_wall_seconds": 29.17020142171532,
+      "median_peak_memory_bytes": 760357888,
+      "max_recorded_peak_memory_bytes": 760357888,
+      "trainable_parameters": [
+        78438
+      ],
+      "secondary_metrics": {
+        "macro_class_accuracy_percent": {
+          "mean": 98.94847671190898,
+          "sample_std": 0.15959533199277512,
+          "n": 3,
+          "values": [
+            99.11947250366211,
+            98.92248511314392,
+            98.8034725189209
+          ]
+        }
+      }
+    },
+    "lora": {
+      "mean": 99.50127391987857,
+      "sample_std": 0.018778671952828188,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        99.51211579118556,
+        99.4795901772646,
+        99.51211579118556
+      ],
+      "median_training_wall_seconds": 54.96191588137299,
+      "median_peak_memory_bytes": 5110866432,
+      "max_recorded_peak_memory_bytes": 5110866432,
+      "trainable_parameters": [
+        1258086
+      ],
+      "secondary_metrics": {
+        "macro_class_accuracy_percent": {
+          "mean": 99.59429105122884,
+          "sample_std": 0.02330807021744559,
+          "n": 3,
+          "values": [
+            99.5823085308075,
+            99.57941174507141,
+            99.62115287780762
+          ]
+        }
+      }
+    },
+    "dora": {
+      "mean": 99.57716701902748,
+      "sample_std": 0.016262806960483545,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        99.57716701902748,
+        99.560904212067,
+        99.59342982598797
+      ],
+      "median_training_wall_seconds": 68.07228479674086,
+      "median_peak_memory_bytes": 7302144512,
+      "max_recorded_peak_memory_bytes": 7302144512,
+      "trainable_parameters": [
+        1341030
+      ],
+      "secondary_metrics": {
+        "macro_class_accuracy_percent": {
+          "mean": 99.66216286023457,
+          "sample_std": 0.019200751043666746,
+          "n": 3,
+          "values": [
+            99.66711401939392,
+            99.64097142219543,
+            99.67840313911438
+          ]
+        }
+      }
+    },
+    "nora": {
+      "mean": 99.52295766249254,
+      "sample_std": 0.1466661165335122,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        99.38201333550171,
+        99.51211579118556,
+        99.67474386079037
+      ],
+      "median_training_wall_seconds": 55.61741672689095,
+      "median_peak_memory_bytes": 5111370240,
+      "max_recorded_peak_memory_bytes": 5111370240,
+      "trainable_parameters": [
+        1258086
+      ],
+      "secondary_metrics": {
+        "macro_class_accuracy_percent": {
+          "mean": 99.63496923446655,
+          "sample_std": 0.0806323800579052,
+          "n": 3,
+          "values": [
+            99.56047534942627,
+            99.62384700775146,
+            99.72058534622192
+          ]
+        }
+      }
+    },
+    "dora_nora": {
+      "mean": 99.44706456334363,
+      "sample_std": 0.23956610607669832,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        99.57716701902748,
+        99.17059684501545,
+        99.59342982598797
+      ],
+      "median_training_wall_seconds": 68.92540161404759,
+      "median_peak_memory_bytes": 7302636032,
+      "max_recorded_peak_memory_bytes": 7302636032,
+      "trainable_parameters": [
+        1341030
+      ],
+      "secondary_metrics": {
+        "macro_class_accuracy_percent": {
+          "mean": 99.521803855896,
+          "sample_std": 0.21270706974005224,
+          "n": 3,
+          "values": [
+            99.6695339679718,
+            99.2780089378357,
+            99.6178686618805
+          ]
+        }
+      }
+    }
+  },
+  "runs": [
+    {
+      "method": "baseline",
+      "seed": 42,
+      "value": 99.00796877541063,
+      "test": {
+        "count": 6149,
+        "correct": 6088,
+        "accuracy": 0.9900796877541064,
+        "macro_class_accuracy": 0.9911947250366211,
+        "cross_entropy": 0.31316762267913173
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 25,
+      "trainable_parameters": 78438,
+      "training_wall_seconds": 32.19302348326892,
+      "peak_memory_bytes": 760357888,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "37226106a7aafe0fb8e5bb75d71b9ef9684394d599c1677ef626a210581723b9"
+    },
+    {
+      "method": "lora",
+      "seed": 42,
+      "value": 99.51211579118556,
+      "test": {
+        "count": 6149,
+        "correct": 6119,
+        "accuracy": 0.9951211579118556,
+        "macro_class_accuracy": 0.995823085308075,
+        "cross_entropy": 0.18673255661092633
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 8,
+      "trainable_parameters": 1258086,
+      "training_wall_seconds": 54.96191588137299,
+      "peak_memory_bytes": 5110866432,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "b0ccbedeede70321506509fed9701ce7223c33b947c12916d4060e9a67005d8f"
+    },
+    {
+      "method": "dora",
+      "seed": 42,
+      "value": 99.57716701902748,
+      "test": {
+        "count": 6149,
+        "correct": 6123,
+        "accuracy": 0.9957716701902748,
+        "macro_class_accuracy": 0.9966711401939392,
+        "cross_entropy": 0.19089366583576783
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 12,
+      "trainable_parameters": 1341030,
+      "training_wall_seconds": 67.59415897866711,
+      "peak_memory_bytes": 7302144512,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "a92fb9cc6f4ddc439a7decf64a93b52e605fc8bea362b49cda9ea5b1a84d1a6e"
+    },
+    {
+      "method": "nora",
+      "seed": 42,
+      "value": 99.38201333550171,
+      "test": {
+        "count": 6149,
+        "correct": 6111,
+        "accuracy": 0.9938201333550171,
+        "macro_class_accuracy": 0.9956047534942627,
+        "cross_entropy": 0.17433395358988435
+      },
+      "learning_rate": 0.0001,
+      "selected_epoch": 13,
+      "trainable_parameters": 1258086,
+      "training_wall_seconds": 55.61741672689095,
+      "peak_memory_bytes": 5111370240,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "04368e1752e993e32467a13a31fad03a5e22d5a34621bd3849adc6a4fb629a61"
+    },
+    {
+      "method": "dora_nora",
+      "seed": 42,
+      "value": 99.57716701902748,
+      "test": {
+        "count": 6149,
+        "correct": 6123,
+        "accuracy": 0.9957716701902748,
+        "macro_class_accuracy": 0.996695339679718,
+        "cross_entropy": 0.18946275107743082
+      },
+      "learning_rate": 0.0001,
+      "selected_epoch": 20,
+      "trainable_parameters": 1341030,
+      "training_wall_seconds": 68.49361838819459,
+      "peak_memory_bytes": 7302636032,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "345756fc02198cbdc7e59795da3e116f53bef5c631bd2e2d8197527d19338d44"
+    },
+    {
+      "method": "baseline",
+      "seed": 43,
+      "value": 98.7802894779639,
+      "test": {
+        "count": 6149,
+        "correct": 6074,
+        "accuracy": 0.987802894779639,
+        "macro_class_accuracy": 0.9892248511314392,
+        "cross_entropy": 0.32013207296953683
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 27,
+      "trainable_parameters": 78438,
+      "training_wall_seconds": 29.17020142171532,
+      "peak_memory_bytes": 760357888,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "bc0c536d101a8afdc79b6e6af69e2a6b0028b448087e8773ed5b6052e46f04de"
+    },
+    {
+      "method": "lora",
+      "seed": 43,
+      "value": 99.4795901772646,
+      "test": {
+        "count": 6149,
+        "correct": 6117,
+        "accuracy": 0.994795901772646,
+        "macro_class_accuracy": 0.9957941174507141,
+        "cross_entropy": 0.19771991584102863
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 11,
+      "trainable_parameters": 1258086,
+      "training_wall_seconds": 55.17310043098405,
+      "peak_memory_bytes": 5110866432,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "3c4b0499ee49d074ecd78f56cff3e72610dc7fccc3419001141a2006704e3a76"
+    },
+    {
+      "method": "dora",
+      "seed": 43,
+      "value": 99.560904212067,
+      "test": {
+        "count": 6149,
+        "correct": 6122,
+        "accuracy": 0.99560904212067,
+        "macro_class_accuracy": 0.9964097142219543,
+        "cross_entropy": 0.1720322017314221
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 8,
+      "trainable_parameters": 1341030,
+      "training_wall_seconds": 68.41587520763278,
+      "peak_memory_bytes": 7302144512,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "6e24cdff1c978270996ecb44d14d24f3eee3b1f5a81e7e75ffc901c4edc21fc3"
+    },
+    {
+      "method": "nora",
+      "seed": 43,
+      "value": 99.51211579118556,
+      "test": {
+        "count": 6149,
+        "correct": 6119,
+        "accuracy": 0.9951211579118556,
+        "macro_class_accuracy": 0.9962384700775146,
+        "cross_entropy": 0.20621990834741907
+      },
+      "learning_rate": 0.0001,
+      "selected_epoch": 19,
+      "trainable_parameters": 1258086,
+      "training_wall_seconds": 55.663025523070246,
+      "peak_memory_bytes": 5111370240,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "1c9408dd7f918b745c16849f37feba663df71644b54be4408cf5fbd1f59b817c"
+    },
+    {
+      "method": "dora_nora",
+      "seed": 43,
+      "value": 99.17059684501545,
+      "test": {
+        "count": 6149,
+        "correct": 6098,
+        "accuracy": 0.9917059684501545,
+        "macro_class_accuracy": 0.9927800893783569,
+        "cross_entropy": 0.20895776379436065
+      },
+      "learning_rate": 0.0001,
+      "selected_epoch": 7,
+      "trainable_parameters": 1341030,
+      "training_wall_seconds": 68.92540161404759,
+      "peak_memory_bytes": 7302636032,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "1ab4b6d647b868d284db82f831347af75221280de786d840f2ff3b21c70e5f19"
+    },
+    {
+      "method": "baseline",
+      "seed": 44,
+      "value": 98.84534070580582,
+      "test": {
+        "count": 6149,
+        "correct": 6078,
+        "accuracy": 0.9884534070580582,
+        "macro_class_accuracy": 0.988034725189209,
+        "cross_entropy": 0.31260105356353535
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 28,
+      "trainable_parameters": 78438,
+      "training_wall_seconds": 29.058126502670348,
+      "peak_memory_bytes": 760357888,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "fe8606b763abd0d285a157956b84b047b06a8d4f9445e0baa02935fb3c105d4f"
+    },
+    {
+      "method": "lora",
+      "seed": 44,
+      "value": 99.51211579118556,
+      "test": {
+        "count": 6149,
+        "correct": 6119,
+        "accuracy": 0.9951211579118556,
+        "macro_class_accuracy": 0.9962115287780762,
+        "cross_entropy": 0.1868924592486977
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 12,
+      "trainable_parameters": 1258086,
+      "training_wall_seconds": 54.85715944878757,
+      "peak_memory_bytes": 5110866432,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "dcbad631c2d794950f26651d2413b7aefec99b128e0d51c7aa260a070698cb6a"
+    },
+    {
+      "method": "dora",
+      "seed": 44,
+      "value": 99.59342982598797,
+      "test": {
+        "count": 6149,
+        "correct": 6124,
+        "accuracy": 0.9959342982598797,
+        "macro_class_accuracy": 0.9967840313911438,
+        "cross_entropy": 0.1893443433729337
+      },
+      "learning_rate": 0.001,
+      "selected_epoch": 16,
+      "trainable_parameters": 1341030,
+      "training_wall_seconds": 68.07228479674086,
+      "peak_memory_bytes": 7302144512,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "a0a31e083e4a8e48458c4364c239bc2aee33b706db559117a5a80df94471d6e8"
+    },
+    {
+      "method": "nora",
+      "seed": 44,
+      "value": 99.67474386079037,
+      "test": {
+        "count": 6149,
+        "correct": 6129,
+        "accuracy": 0.9967474386079037,
+        "macro_class_accuracy": 0.9972058534622192,
+        "cross_entropy": 0.19065209352246998
+      },
+      "learning_rate": 0.0001,
+      "selected_epoch": 16,
+      "trainable_parameters": 1258086,
+      "training_wall_seconds": 55.51422256883234,
+      "peak_memory_bytes": 5111370240,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "045632e70db908d1e31f91e0d6965c25e03a5ceb942c0785e14e099260fa1f96"
+    },
+    {
+      "method": "dora_nora",
+      "seed": 44,
+      "value": 99.59342982598797,
+      "test": {
+        "count": 6149,
+        "correct": 6124,
+        "accuracy": 0.9959342982598797,
+        "macro_class_accuracy": 0.9961786866188049,
+        "cross_entropy": 0.17656054867440307
+      },
+      "learning_rate": 0.0001,
+      "selected_epoch": 13,
+      "trainable_parameters": 1341030,
+      "training_wall_seconds": 69.17837207810953,
+      "peak_memory_bytes": 7302636032,
+      "frozen_base_unchanged": true,
+      "checkpoint_sha256": "c401d219603ac3e20b6373c7b198c78d3a733f80b755d148bda3bc320ae69800",
+      "adapter_checkpoint_sha256": "6def0695540db1a9334e654c51806451544063fb34a17b91a165490406e20a6e"
+    }
+  ],
+  "raw_directory": "/var/tmp/dora-bench/runs/vision",
+  "source_files": {
+    "/var/tmp/dora-bench/runs/vision/results.json": "6a7511d832bc52d184476a96028e3bf861b527d45e352dc002bf6d7d0c0963da"
+  },
+  "paired_uncertainty": {
+    "replicates": 10000,
+    "rng_seed": 20261008,
+    "method": "paired seed and image resampling with replacement; percentile 95% intervals",
+    "caveat": "Exploratory; only three training seeds and one held-out test set. Not a claim of universal superiority.",
+    "comparisons": {
+      "baseline": {
+        "mean_accuracy_difference_percentage_points": -0.6234076001517862,
+        "percentile_95_interval": [
+          -0.8348240906380437,
+          -0.42283298097251587
+        ]
+      },
+      "dora": {
+        "mean_accuracy_difference_percentage_points": 0.07589309914891311,
+        "percentile_95_interval": [
+          0.005420935653493794,
+          0.1517861982978262
+        ]
+      },
+      "nora": {
+        "mean_accuracy_difference_percentage_points": 0.02168374261397517,
+        "percentile_95_interval": [
+          -0.14636526264433242,
+          0.1734699409118014
+        ]
+      },
+      "dora_nora": {
+        "mean_accuracy_difference_percentage_points": -0.05420935653493793,
+        "percentile_95_interval": [
+          -0.29273052528866483,
+          0.13010245568385104
+        ]
+      }
+    },
+    "task": "Flowers102 classification",
+    "metric": "top-1 accuracy",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "test_examples": 6149,
+    "raw_predictions_independently_verified": true,
+    "source_audit_script_sha256": "4e190f8d5fa0c396f0e5b96cb0c6058cd7792cf6acc5264bb3e874959b4dc747",
+    "source_summary_sha256": "cc36c77875e87e197ccd32bf17c9ec77596bf28be52a0104397f827e6130cac0"
+  }
+}

@@ -1,0 +1,1426 @@
+{
+  "created_utc": "2026-10-08T22:09:13.295318+00:00",
+  "complete": true,
+  "report_source_sha256": "6e6158c2bee61e440e771f6b8a26690992440c7c68036c8d030e200549a4d5fa",
+  "report_command": [
+    "/var/tmp/dora-bench/venv/bin/python",
+    "/home/catid/dora/experiments/report.py"
+  ],
+  "report_environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.4.4",
+    "matplotlib": "3.10.9"
+  },
+  "task_order": [
+    "vision",
+    "retrieval",
+    "extraction",
+    "sdxl"
+  ],
+  "method_order": [
+    "lora",
+    "dora",
+    "nora",
+    "dora_nora"
+  ],
+  "method_colors": {
+    "lora": "#0072B2",
+    "dora": "#E69F00",
+    "nora": "#009E73",
+    "dora_nora": "#CC79A7"
+  },
+  "tasks": {
+    "vision": {
+      "task": "vision",
+      "title": "Flowers102 classification",
+      "metric": "Test top-1 accuracy",
+      "unit": "%",
+      "direction": "higher",
+      "baseline": "Frozen ViT backbone + trained head",
+      "seeds": 3,
+      "baseline_seeds": 3,
+      "complete": true,
+      "missing": [],
+      "summary": {
+        "baseline": {
+          "mean": 98.87786631972679,
+          "sample_std": 0.11727276875797049,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            99.00796877541063,
+            98.7802894779639,
+            98.84534070580582
+          ],
+          "median_training_wall_seconds": 29.17020142171532,
+          "median_peak_memory_bytes": 760357888,
+          "max_recorded_peak_memory_bytes": 760357888,
+          "trainable_parameters": [
+            78438
+          ],
+          "secondary_metrics": {
+            "macro_class_accuracy_percent": {
+              "mean": 98.94847671190898,
+              "sample_std": 0.15959533199277512,
+              "n": 3,
+              "values": [
+                99.11947250366211,
+                98.92248511314392,
+                98.8034725189209
+              ]
+            }
+          }
+        },
+        "lora": {
+          "mean": 99.50127391987857,
+          "sample_std": 0.018778671952828188,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            99.51211579118556,
+            99.4795901772646,
+            99.51211579118556
+          ],
+          "median_training_wall_seconds": 54.96191588137299,
+          "median_peak_memory_bytes": 5110866432,
+          "max_recorded_peak_memory_bytes": 5110866432,
+          "trainable_parameters": [
+            1258086
+          ],
+          "secondary_metrics": {
+            "macro_class_accuracy_percent": {
+              "mean": 99.59429105122884,
+              "sample_std": 0.02330807021744559,
+              "n": 3,
+              "values": [
+                99.5823085308075,
+                99.57941174507141,
+                99.62115287780762
+              ]
+            }
+          }
+        },
+        "dora": {
+          "mean": 99.57716701902748,
+          "sample_std": 0.016262806960483545,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            99.57716701902748,
+            99.560904212067,
+            99.59342982598797
+          ],
+          "median_training_wall_seconds": 68.07228479674086,
+          "median_peak_memory_bytes": 7302144512,
+          "max_recorded_peak_memory_bytes": 7302144512,
+          "trainable_parameters": [
+            1341030
+          ],
+          "secondary_metrics": {
+            "macro_class_accuracy_percent": {
+              "mean": 99.66216286023457,
+              "sample_std": 0.019200751043666746,
+              "n": 3,
+              "values": [
+                99.66711401939392,
+                99.64097142219543,
+                99.67840313911438
+              ]
+            }
+          }
+        },
+        "nora": {
+          "mean": 99.52295766249254,
+          "sample_std": 0.1466661165335122,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            99.38201333550171,
+            99.51211579118556,
+            99.67474386079037
+          ],
+          "median_training_wall_seconds": 55.61741672689095,
+          "median_peak_memory_bytes": 5111370240,
+          "max_recorded_peak_memory_bytes": 5111370240,
+          "trainable_parameters": [
+            1258086
+          ],
+          "secondary_metrics": {
+            "macro_class_accuracy_percent": {
+              "mean": 99.63496923446655,
+              "sample_std": 0.0806323800579052,
+              "n": 3,
+              "values": [
+                99.56047534942627,
+                99.62384700775146,
+                99.72058534622192
+              ]
+            }
+          }
+        },
+        "dora_nora": {
+          "mean": 99.44706456334363,
+          "sample_std": 0.23956610607669832,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            99.57716701902748,
+            99.17059684501545,
+            99.59342982598797
+          ],
+          "median_training_wall_seconds": 68.92540161404759,
+          "median_peak_memory_bytes": 7302636032,
+          "max_recorded_peak_memory_bytes": 7302636032,
+          "trainable_parameters": [
+            1341030
+          ],
+          "secondary_metrics": {
+            "macro_class_accuracy_percent": {
+              "mean": 99.521803855896,
+              "sample_std": 0.21270706974005224,
+              "n": 3,
+              "values": [
+                99.6695339679718,
+                99.2780089378357,
+                99.6178686618805
+              ]
+            }
+          }
+        }
+      },
+      "raw_directory": "/var/tmp/dora-bench/runs/vision",
+      "source_files": {
+        "/var/tmp/dora-bench/runs/vision/results.json": "6a7511d832bc52d184476a96028e3bf861b527d45e352dc002bf6d7d0c0963da"
+      },
+      "paired_uncertainty": {
+        "replicates": 10000,
+        "rng_seed": 20261008,
+        "method": "paired seed and image resampling with replacement; percentile 95% intervals",
+        "caveat": "Exploratory; only three training seeds and one held-out test set. Not a claim of universal superiority.",
+        "comparisons": {
+          "baseline": {
+            "mean_accuracy_difference_percentage_points": -0.6234076001517862,
+            "percentile_95_interval": [
+              -0.8348240906380437,
+              -0.42283298097251587
+            ]
+          },
+          "dora": {
+            "mean_accuracy_difference_percentage_points": 0.07589309914891311,
+            "percentile_95_interval": [
+              0.005420935653493794,
+              0.1517861982978262
+            ]
+          },
+          "nora": {
+            "mean_accuracy_difference_percentage_points": 0.02168374261397517,
+            "percentile_95_interval": [
+              -0.14636526264433242,
+              0.1734699409118014
+            ]
+          },
+          "dora_nora": {
+            "mean_accuracy_difference_percentage_points": -0.05420935653493793,
+            "percentile_95_interval": [
+              -0.29273052528866483,
+              0.13010245568385104
+            ]
+          }
+        },
+        "task": "Flowers102 classification",
+        "metric": "top-1 accuracy",
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "test_examples": 6149,
+        "raw_predictions_independently_verified": true,
+        "source_audit_script_sha256": "4e190f8d5fa0c396f0e5b96cb0c6058cd7792cf6acc5264bb3e874959b4dc747",
+        "source_summary_sha256": "cc36c77875e87e197ccd32bf17c9ec77596bf28be52a0104397f827e6130cac0"
+      }
+    },
+    "retrieval": {
+      "task": "retrieval",
+      "title": "SciFact retrieval",
+      "metric": "Test nDCG@10",
+      "unit": "\u00d7100",
+      "direction": "higher",
+      "baseline": "Frozen MiniLM encoder",
+      "seeds": 3,
+      "baseline_seeds": 1,
+      "complete": true,
+      "missing": [],
+      "summary": {
+        "baseline": {
+          "mean": 64.6321450563457,
+          "sample_std": null,
+          "n": 1,
+          "seeds": [
+            42
+          ],
+          "values": [
+            64.6321450563457
+          ],
+          "median_training_wall_seconds": null,
+          "median_peak_memory_bytes": null,
+          "max_recorded_peak_memory_bytes": null,
+          "trainable_parameters": [
+            0
+          ],
+          "secondary_metrics": {
+            "recall_at_10_times_100": {
+              "mean": 78.83333333333333,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                78.83333333333333
+              ]
+            },
+            "mrr_at_10_times_100": {
+              "mean": 60.505820105820106,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                60.505820105820106
+              ]
+            }
+          }
+        },
+        "lora": {
+          "mean": 65.10437206950131,
+          "sample_std": 0.3062032373085719,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            65.27081359083085,
+            65.29130559349879,
+            64.75099702417427
+          ],
+          "median_training_wall_seconds": 1.59037626395002,
+          "median_peak_memory_bytes": 964608000,
+          "max_recorded_peak_memory_bytes": 964902912,
+          "trainable_parameters": [
+            73728
+          ],
+          "secondary_metrics": {
+            "recall_at_10_times_100": {
+              "mean": 81.04814814814814,
+              "sample_std": 1.3452400461973342,
+              "n": 3,
+              "values": [
+                82.0111111111111,
+                81.62222222222222,
+                79.5111111111111
+              ]
+            },
+            "mrr_at_10_times_100": {
+              "mean": 60.38672839506173,
+              "sample_std": 0.13133131091117017,
+              "n": 3,
+              "values": [
+                60.29338624338625,
+                60.536904761904765,
+                60.32989417989418
+              ]
+            }
+          }
+        },
+        "dora": {
+          "mean": 65.37823529684277,
+          "sample_std": 0.32060934554535103,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            65.61168593829507,
+            65.51033913629516,
+            65.0126808159381
+          ],
+          "median_training_wall_seconds": 1.7832995313219726,
+          "median_peak_memory_bytes": 1166358528,
+          "max_recorded_peak_memory_bytes": 1166376960,
+          "trainable_parameters": [
+            78336
+          ],
+          "secondary_metrics": {
+            "recall_at_10_times_100": {
+              "mean": 81.43703703703704,
+              "sample_std": 1.2501028764250188,
+              "n": 3,
+              "values": [
+                82.34444444444445,
+                81.95555555555556,
+                80.0111111111111
+              ]
+            },
+            "mrr_at_10_times_100": {
+              "mean": 60.638492063492066,
+              "sample_std": 0.10202589404061059,
+              "n": 3,
+              "values": [
+                60.658597883597885,
+                60.728968253968254,
+                60.52791005291005
+              ]
+            }
+          }
+        },
+        "nora": {
+          "mean": 68.46994066616081,
+          "sample_std": 0.6198648219583714,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            68.08294814798545,
+            69.18488681800781,
+            68.14198703248918
+          ],
+          "median_training_wall_seconds": 1.7257925649173558,
+          "median_peak_memory_bytes": 965222400,
+          "max_recorded_peak_memory_bytes": 965240832,
+          "trainable_parameters": [
+            73728
+          ],
+          "secondary_metrics": {
+            "recall_at_10_times_100": {
+              "mean": 83.91111111111111,
+              "sample_std": 0.29397236789606057,
+              "n": 3,
+              "values": [
+                84.24444444444444,
+                83.8,
+                83.6888888888889
+              ]
+            },
+            "mrr_at_10_times_100": {
+              "mean": 63.93584656084656,
+              "sample_std": 0.8276511470981025,
+              "n": 3,
+              "values": [
+                63.32023809523809,
+                64.87671957671958,
+                63.61058201058201
+              ]
+            }
+          }
+        },
+        "dora_nora": {
+          "mean": 68.6307912913643,
+          "sample_std": 0.4775186169555197,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            68.26881043215664,
+            69.17199196889922,
+            68.45157147303705
+          ],
+          "median_training_wall_seconds": 1.8873121365904808,
+          "median_peak_memory_bytes": 1166678016,
+          "max_recorded_peak_memory_bytes": 1166696448,
+          "trainable_parameters": [
+            78336
+          ],
+          "secondary_metrics": {
+            "recall_at_10_times_100": {
+              "mean": 84.11481481481482,
+              "sample_std": 0.4724944748952913,
+              "n": 3,
+              "values": [
+                84.57777777777777,
+                84.13333333333334,
+                83.63333333333334
+              ]
+            },
+            "mrr_at_10_times_100": {
+              "mean": 64.12566137566137,
+              "sample_std": 0.614262144136717,
+              "n": 3,
+              "values": [
+                63.543783068783064,
+                64.76785714285714,
+                64.06534391534392
+              ]
+            }
+          }
+        }
+      },
+      "raw_directory": "/var/tmp/dora-bench/runs/retrieval",
+      "source_files": {
+        "/var/tmp/dora-bench/runs/retrieval/results.json": "892dcd7e629bdef2266dbe6e8e9efa11465e9fe0b2a40b38e12972c90ac15b5a"
+      },
+      "paired_uncertainty": {
+        "primary_metric": "ndcg_at_10",
+        "procedure": "Paired hierarchical bootstrap: resample the three matched training seeds and the 300 shared test queries independently, preserving method pairing. 10000 replicates; NumPy PCG64 seed123456; percentile95 intervals; descriptive and unadjusted for multiple comparisons.",
+        "comparisons": {
+          "lora_minus_frozen": {
+            "mean_delta": 0.004722270131555883,
+            "percentile_95_ci": [
+              -0.014238358481402272,
+              0.024338774553136263
+            ]
+          },
+          "dora_minus_lora": {
+            "mean_delta": 0.0027386322734147574,
+            "percentile_95_ci": [
+              6.677053542368525e-05,
+              0.005872031773943621
+            ]
+          },
+          "nora_minus_lora": {
+            "mean_delta": 0.03365568596659513,
+            "percentile_95_ci": [
+              0.014286122626170053,
+              0.05321110104723447
+            ]
+          },
+          "dora_nora_minus_nora": {
+            "mean_delta": 0.001608506252034875,
+            "percentile_95_ci": [
+              -0.0018839476520578283,
+              0.005367934611099835
+            ]
+          },
+          "dora_nora_minus_lora": {
+            "mean_delta": 0.03526419221863001,
+            "percentile_95_ci": [
+              0.016146021398878788,
+              0.05462297870026452
+            ]
+          },
+          "dora_minus_frozen": {
+            "mean_delta": 0.007460902404970641,
+            "percentile_95_ci": [
+              -0.011683641922550584,
+              0.026707784406388064
+            ]
+          }
+        },
+        "reproduction_script": "source/experiments/analyze_retrieval.py",
+        "reproduction_script_sha256": "cb99e66a963c79b8fc8aeacc259913108769d1111eb85fba288cc664f86a93b9",
+        "reproduction_matches_original_samples_exactly": true,
+        "numpy_version": "2.4.4",
+        "sample_arrays_sha256": "62d7196942a0c539ad7cd6914b17e51b1c5b7a8b08667c5aca8574ecb30d190d"
+      }
+    },
+    "extraction": {
+      "task": "extraction",
+      "title": "ViGGO \u2192 JSON extraction",
+      "metric": "Test exact object match",
+      "unit": "%",
+      "direction": "higher",
+      "baseline": "Frozen Qwen2.5-3B-Instruct",
+      "seeds": 3,
+      "baseline_seeds": 1,
+      "complete": true,
+      "missing": [],
+      "summary": {
+        "baseline": {
+          "mean": 1.5625,
+          "sample_std": null,
+          "n": 1,
+          "seeds": [
+            null
+          ],
+          "values": [
+            1.5625
+          ],
+          "median_training_wall_seconds": null,
+          "median_peak_memory_bytes": null,
+          "max_recorded_peak_memory_bytes": null,
+          "trainable_parameters": [
+            0
+          ],
+          "secondary_metrics": {
+            "valid_json_percent": {
+              "mean": 100.0,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                100.0
+              ]
+            },
+            "schema_valid_percent": {
+              "mean": 97.265625,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                97.265625
+              ]
+            },
+            "slot_micro_f1_percent": {
+              "mean": 39.40008107012566,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                39.40008107012566
+              ]
+            },
+            "target_token_nll": {
+              "mean": 1.7910621438613588,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                1.7910621438613588
+              ]
+            }
+          }
+        },
+        "lora": {
+          "mean": 64.58333333333333,
+          "sample_std": 4.3204843809992335,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            69.140625,
+            60.546875,
+            64.0625
+          ],
+          "median_training_wall_seconds": 59.181026390753686,
+          "median_peak_memory_bytes": 21990340096,
+          "max_recorded_peak_memory_bytes": 21990340096,
+          "trainable_parameters": [
+            1843200
+          ],
+          "secondary_metrics": {
+            "valid_json_percent": {
+              "mean": 100.0,
+              "sample_std": 0.0,
+              "n": 3,
+              "values": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "schema_valid_percent": {
+              "mean": 98.828125,
+              "sample_std": 1.171875,
+              "n": 3,
+              "values": [
+                100.0,
+                97.65625,
+                98.828125
+              ]
+            },
+            "slot_micro_f1_percent": {
+              "mean": 92.00251867559888,
+              "sample_std": 1.0735497529844595,
+              "n": 3,
+              "values": [
+                93.24104234527687,
+                91.42857142857143,
+                91.33794225294835
+              ]
+            },
+            "target_token_nll": {
+              "mean": 0.04160534055783903,
+              "sample_std": 0.0019752774742324486,
+              "n": 3,
+              "values": [
+                0.04066377999986127,
+                0.04027700469634238,
+                0.04387523697731345
+              ]
+            }
+          }
+        },
+        "dora": {
+          "mean": 64.84375,
+          "sample_std": 3.767051078512873,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            67.578125,
+            60.546875,
+            66.40625
+          ],
+          "median_training_wall_seconds": 60.99715758115053,
+          "median_peak_memory_bytes": 22478685696,
+          "max_recorded_peak_memory_bytes": 22478685696,
+          "trainable_parameters": [
+            1926144
+          ],
+          "secondary_metrics": {
+            "valid_json_percent": {
+              "mean": 100.0,
+              "sample_std": 0.0,
+              "n": 3,
+              "values": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "schema_valid_percent": {
+              "mean": 99.08854166666667,
+              "sample_std": 0.9830513587592122,
+              "n": 3,
+              "values": [
+                100.0,
+                98.046875,
+                99.21875
+              ]
+            },
+            "slot_micro_f1_percent": {
+              "mean": 91.70644939312679,
+              "sample_std": 0.6073531217647864,
+              "n": 3,
+              "values": [
+                92.39528263521757,
+                91.47609147609148,
+                91.24797406807131
+              ]
+            },
+            "target_token_nll": {
+              "mean": 0.0414161201101225,
+              "sample_std": 0.00185610962716564,
+              "n": 3,
+              "values": [
+                0.04274912849850315,
+                0.03929618568869831,
+                0.04220304614316604
+              ]
+            }
+          }
+        },
+        "nora": {
+          "mean": 75.13020833333333,
+          "sample_std": 3.629520798116238,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            76.171875,
+            78.125,
+            71.09375
+          ],
+          "median_training_wall_seconds": 59.69669327000156,
+          "median_peak_memory_bytes": 21991519744,
+          "max_recorded_peak_memory_bytes": 21991519744,
+          "trainable_parameters": [
+            1843200
+          ],
+          "secondary_metrics": {
+            "valid_json_percent": {
+              "mean": 99.86979166666667,
+              "sample_std": 0.22552744890219756,
+              "n": 3,
+              "values": [
+                100.0,
+                99.609375,
+                100.0
+              ]
+            },
+            "schema_valid_percent": {
+              "mean": 98.4375,
+              "sample_std": 1.0334966058846058,
+              "n": 3,
+              "values": [
+                97.65625,
+                99.609375,
+                98.046875
+              ]
+            },
+            "slot_micro_f1_percent": {
+              "mean": 93.91006562000544,
+              "sample_std": 0.9282321634433865,
+              "n": 3,
+              "values": [
+                93.25102880658436,
+                94.97161394971614,
+                93.5075541037158
+              ]
+            },
+            "target_token_nll": {
+              "mean": 0.03814984957418256,
+              "sample_std": 0.0090602529726094,
+              "n": 3,
+              "values": [
+                0.0472081413469933,
+                0.02908763667452342,
+                0.03815377070103098
+              ]
+            }
+          }
+        },
+        "dora_nora": {
+          "mean": 69.01041666666667,
+          "sample_std": 6.792084039450509,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            61.328125,
+            74.21875,
+            71.484375
+          ],
+          "median_training_wall_seconds": 61.54412820423022,
+          "median_peak_memory_bytes": 22479865344,
+          "max_recorded_peak_memory_bytes": 22479865344,
+          "trainable_parameters": [
+            1926144
+          ],
+          "secondary_metrics": {
+            "valid_json_percent": {
+              "mean": 99.609375,
+              "sample_std": 0.6765823467065927,
+              "n": 3,
+              "values": [
+                98.828125,
+                100.0,
+                100.0
+              ]
+            },
+            "schema_valid_percent": {
+              "mean": 98.69791666666667,
+              "sample_std": 0.8131507810414581,
+              "n": 3,
+              "values": [
+                98.046875,
+                99.609375,
+                98.4375
+              ]
+            },
+            "slot_micro_f1_percent": {
+              "mean": 93.28307707230859,
+              "sample_std": 1.3535680208891183,
+              "n": 3,
+              "values": [
+                91.81929181929182,
+                93.54047424366311,
+                94.48946515397083
+              ]
+            },
+            "target_token_nll": {
+              "mean": 0.043786113723867724,
+              "sample_std": 0.007745669535824603,
+              "n": 3,
+              "values": [
+                0.05265614587252045,
+                0.038357471049856345,
+                0.040344724249226374
+              ]
+            }
+          }
+        }
+      },
+      "raw_directory": "/var/tmp/dora-bench/runs/extraction",
+      "source_files": {
+        "/var/tmp/dora-bench/runs/extraction/results.json": "67fe7477739bc5a01b6b59ea336e80cc43dfa4a76f13fe3abdbe8c23fd0adbc9"
+      },
+      "paired_uncertainty": {
+        "task": "ViGGO structured extraction",
+        "metric": "JSON object exact match",
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "test_examples": 256,
+        "final_runs": 12,
+        "replicates": 10000,
+        "rng_seed": 20261008,
+        "method": "Paired crossed bootstrap: resample three matched training seeds and 256 shared test examples with replacement; percentile 95% intervals.",
+        "caveat": "Exploratory intervals from only three training seeds and one fixed held-out test set. They do not establish broad statistical or task-independent superiority; no test-driven tuning was performed.",
+        "raw_predictions_independently_verified": true,
+        "method_exact_match_percent": {
+          "lora": {
+            "mean": 64.58333333333334,
+            "per_seed": {
+              "42": 69.140625,
+              "43": 60.546875,
+              "44": 64.0625
+            }
+          },
+          "dora": {
+            "mean": 64.84375,
+            "per_seed": {
+              "42": 67.578125,
+              "43": 60.546875,
+              "44": 66.40625
+            }
+          },
+          "nora": {
+            "mean": 75.13020833333334,
+            "per_seed": {
+              "42": 76.171875,
+              "43": 78.125,
+              "44": 71.09375
+            }
+          },
+          "dora_nora": {
+            "mean": 69.01041666666666,
+            "per_seed": {
+              "42": 61.328125,
+              "43": 74.21875,
+              "44": 71.484375
+            }
+          }
+        },
+        "comparisons": {
+          "nora_minus_lora": {
+            "left": "nora",
+            "right": "lora",
+            "mean_exact_match_difference_percentage_points": 10.546875,
+            "per_seed_difference_percentage_points": {
+              "42": 7.03125,
+              "43": 17.578125,
+              "44": 7.03125
+            },
+            "percentile_95_interval": [
+              3.1250000000000013,
+              18.75
+            ]
+          },
+          "dora_minus_lora": {
+            "left": "dora",
+            "right": "lora",
+            "mean_exact_match_difference_percentage_points": 0.26041666666666663,
+            "per_seed_difference_percentage_points": {
+              "42": -1.5625,
+              "43": 0.0,
+              "44": 2.34375
+            },
+            "percentile_95_interval": [
+              -3.3854166666666656,
+              3.6458333333333335
+            ]
+          },
+          "dora_nora_minus_nora": {
+            "left": "dora_nora",
+            "right": "nora",
+            "mean_exact_match_difference_percentage_points": -6.119791666666666,
+            "per_seed_difference_percentage_points": {
+              "42": -14.84375,
+              "43": -3.90625,
+              "44": 0.390625
+            },
+            "percentile_95_interval": [
+              -15.498046875000007,
+              2.34375
+            ]
+          }
+        },
+        "input_sha256": {
+          "results.json": "67fe7477739bc5a01b6b59ea336e80cc43dfa4a76f13fe3abdbe8c23fd0adbc9",
+          "split_manifest.json": "9b88d9696cff839b5d1f471a7d6d575e8b0aee96d964671d72bdc16bd7e7a033",
+          "lora_seed42/predictions.jsonl": "7164a5e299d6c973a5702c8f8fd00f7e998d03dca8acd5b93205056933bc7c9f",
+          "lora_seed43/predictions.jsonl": "9c264f47a63fcd9b0cf158c97aa2e9df3b49ad31b797241bbe50e149b2be8f6e",
+          "lora_seed44/predictions.jsonl": "c5a18bfdd5835277e2ca6be5d2b9ad5ae2e19273fb156cb3cebd340b530c4d1c",
+          "dora_seed42/predictions.jsonl": "74678981d636dc84f4103c9defe9d47bc9440cb67b425381f28ccb85ae43ab89",
+          "dora_seed43/predictions.jsonl": "69035161c1f11a0c4fc34ff2e4a2d93010efc38f1377509f4ce84a0ad5a6992b",
+          "dora_seed44/predictions.jsonl": "447b1f83e44040673e6496e3ef27603b748ea6bd1591157519c7ed5339ec9935",
+          "nora_seed42/predictions.jsonl": "fda2a5c2602b58824c73f4e65d42936a3a8266edcd9d0c29349be0c20e5fb86d",
+          "nora_seed43/predictions.jsonl": "b209f88c777fb62989fddf96ee70d9156751511d98e751dcaf48cc739024724d",
+          "nora_seed44/predictions.jsonl": "6c93187c44297572121de18c01a6cc90e45a9e370f8d9a70612bb3be2cb4b5ed",
+          "dora_nora_seed42/predictions.jsonl": "d635748f954200d057830ef55bf3a2d90e3386099bca6de78314ea29cf3cbb55",
+          "dora_nora_seed43/predictions.jsonl": "70da62b795ae81d7eca022df9af11cb84a2b8f0837eb298bfec24c8fb6dbee37",
+          "dora_nora_seed44/predictions.jsonl": "8a7839f625f40e592e0ed95d53be939895613a6a5f48bb93855ba6df2b8dc689"
+        },
+        "analysis_script_sha256": "cf6cb8d0cd534ffc6a3e1d88eb36dfd06a26eddaaf21becc4ef5dc571a1aa2d5",
+        "numpy_version": "2.4.4",
+        "sample_arrays": "paired_bootstrap_samples.npz",
+        "sample_arrays_sha256": "a451efbb9ec3ac2cc0d9f8ee99fe168be1d5c219470de1feacc30b50f9a0c36c"
+      }
+    },
+    "sdxl": {
+      "task": "sdxl",
+      "title": "SDXL subject adaptation",
+      "metric": "Held-out denoising MSE",
+      "unit": "MSE",
+      "direction": "lower",
+      "baseline": "Base SDXL",
+      "seeds": 3,
+      "baseline_seeds": 1,
+      "complete": true,
+      "missing": [],
+      "summary": {
+        "baseline": {
+          "mean": 0.1047059886623174,
+          "sample_std": null,
+          "n": 1,
+          "seeds": [
+            42
+          ],
+          "values": [
+            0.1047059886623174
+          ],
+          "median_training_wall_seconds": null,
+          "median_peak_memory_bytes": null,
+          "max_recorded_peak_memory_bytes": null,
+          "trainable_parameters": [
+            0
+          ],
+          "secondary_metrics": {
+            "clip_text_image_cosine_mean": {
+              "mean": 0.3135528415441513,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                0.3135528415441513
+              ]
+            },
+            "dino_train_subject_cosine_mean": {
+              "mean": 0.06768467137590051,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                0.06768467137590051
+              ]
+            },
+            "class_only_clip_mean_post_hoc": {
+              "mean": 0.3163420483469963,
+              "sample_std": null,
+              "n": 1,
+              "values": [
+                0.3163420483469963
+              ]
+            }
+          }
+        },
+        "lora": {
+          "mean": 0.10227466550422833,
+          "sample_std": 0.00011349688840531862,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            0.1022537172306329,
+            0.10239717722870409,
+            0.10217310205334798
+          ],
+          "median_training_wall_seconds": 135.76014183694497,
+          "median_peak_memory_bytes": 8156250112,
+          "max_recorded_peak_memory_bytes": 8156250112,
+          "trainable_parameters": [
+            11612160
+          ],
+          "secondary_metrics": {
+            "clip_text_image_cosine_mean": {
+              "mean": 0.2845887169241905,
+              "sample_std": 0.007704350051827534,
+              "n": 3,
+              "values": [
+                0.2757278233766556,
+                0.2883332818746567,
+                0.2897050455212593
+              ]
+            },
+            "dino_train_subject_cosine_mean": {
+              "mean": 0.8024861067533493,
+              "sample_std": 0.011701180323265569,
+              "n": 3,
+              "values": [
+                0.8143084645271301,
+                0.802239865064621,
+                0.7909099906682968
+              ]
+            },
+            "class_only_clip_mean_post_hoc": {
+              "mean": 0.2965668936570485,
+              "sample_std": 0.005692634558736761,
+              "n": 3,
+              "values": [
+                0.28999488800764084,
+                0.2997404485940933,
+                0.29996534436941147
+              ]
+            }
+          }
+        },
+        "dora": {
+          "mean": 0.10226481853363414,
+          "sample_std": 0.0001175036656038671,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            0.10225023791426793,
+            0.10238893206696957,
+            0.10215528561966494
+          ],
+          "median_training_wall_seconds": 184.57382650859654,
+          "median_peak_memory_bytes": 8164998656,
+          "max_recorded_peak_memory_bytes": 8164998656,
+          "trainable_parameters": [
+            12277760
+          ],
+          "secondary_metrics": {
+            "clip_text_image_cosine_mean": {
+              "mean": 0.28416405121485394,
+              "sample_std": 0.008468913259858199,
+              "n": 3,
+              "values": [
+                0.27446381747722626,
+                0.2879410460591316,
+                0.2900872901082039
+              ]
+            },
+            "dino_train_subject_cosine_mean": {
+              "mean": 0.8103252053260803,
+              "sample_std": 0.002680710365960442,
+              "n": 3,
+              "values": [
+                0.8116836994886398,
+                0.8072372078895569,
+                0.8120547086000443
+              ]
+            },
+            "class_only_clip_mean_post_hoc": {
+              "mean": 0.29545306662718457,
+              "sample_std": 0.006748510264226895,
+              "n": 3,
+              "values": [
+                0.28766465932130814,
+                0.29956618696451187,
+                0.29912835359573364
+              ]
+            }
+          }
+        },
+        "nora": {
+          "mean": 0.105132376945888,
+          "sample_std": 0.0013475836103549908,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            0.10473086697747931,
+            0.10663508196594193,
+            0.10403118189424276
+          ],
+          "median_training_wall_seconds": 180.59491888200864,
+          "median_peak_memory_bytes": 8157011456,
+          "max_recorded_peak_memory_bytes": 8157011456,
+          "trainable_parameters": [
+            11612160
+          ],
+          "secondary_metrics": {
+            "clip_text_image_cosine_mean": {
+              "mean": 0.2692227438092232,
+              "sample_std": 0.011038976421349107,
+              "n": 3,
+              "values": [
+                0.26934782415628433,
+                0.2581217586994171,
+                0.2801986485719681
+              ]
+            },
+            "dino_train_subject_cosine_mean": {
+              "mean": 0.8675160159667333,
+              "sample_std": 0.002610885859480126,
+              "n": 3,
+              "values": [
+                0.8696277737617493,
+                0.868323490023613,
+                0.8645967841148376
+              ]
+            },
+            "class_only_clip_mean_post_hoc": {
+              "mean": 0.2836324026187261,
+              "sample_std": 0.012038026990553534,
+              "n": 3,
+              "values": [
+                0.2874086797237396,
+                0.270158976316452,
+                0.29332955181598663
+              ]
+            }
+          }
+        },
+        "dora_nora": {
+          "mean": 0.1053494565266495,
+          "sample_std": 0.0003286203903812414,
+          "n": 3,
+          "seeds": [
+            42,
+            43,
+            44
+          ],
+          "values": [
+            0.10509359160205349,
+            0.1057200641138479,
+            0.10523471386404708
+          ],
+          "median_training_wall_seconds": 229.40341149782762,
+          "median_peak_memory_bytes": 8164998656,
+          "max_recorded_peak_memory_bytes": 8164998656,
+          "trainable_parameters": [
+            12277760
+          ],
+          "secondary_metrics": {
+            "clip_text_image_cosine_mean": {
+              "mean": 0.27808766315380734,
+              "sample_std": 0.004204836841084053,
+              "n": 3,
+              "values": [
+                0.2828029692173004,
+                0.2747274786233902,
+                0.27673254162073135
+              ]
+            },
+            "dino_train_subject_cosine_mean": {
+              "mean": 0.8657224575678507,
+              "sample_std": 0.008320018803882723,
+              "n": 3,
+              "values": [
+                0.8674040287733078,
+                0.8730732500553131,
+                0.8566900938749313
+              ]
+            },
+            "class_only_clip_mean_post_hoc": {
+              "mean": 0.29148296266794205,
+              "sample_std": 0.005669810985758378,
+              "n": 3,
+              "values": [
+                0.2975625917315483,
+                0.28633949905633926,
+                0.29054679721593857
+              ]
+            }
+          }
+        }
+      },
+      "raw_directory": "/var/tmp/dora-bench/sdxl",
+      "source_files": {
+        "/var/tmp/dora-bench/sdxl/results.json": "1962188cb35101ce3f387582254db887821a912f0866c3935a1c748068c1d654",
+        "/var/tmp/dora-bench/sdxl_seed43/results.json": "661dc3a2c3aa647f754822564a847ed29b1052816566a1d0334fbcea5f8d6030",
+        "/var/tmp/dora-bench/sdxl_seed44/results.json": "3a91cfe590b9b760a55c3ed44e577de1079b6487e1f299d84be456171ac14285"
+      },
+      "paired_uncertainty": null
+    }
+  },
+  "uncertainty": "Sample standard deviation across three training seeds for each adapter/task. SDXL first averages 20 fixed noise/timestep probes per training seed; variability among those probes is not used as seed uncertainty.",
+  "validation": {
+    "passed": true,
+    "details": "validation.json",
+    "run_counts": {
+      "vision": 15,
+      "retrieval": 13,
+      "extraction": 13,
+      "sdxl": 13
+    },
+    "verified_source_files": 24
+  },
+  "raw_archive": {
+    "archive": "raw_artifacts.tar.gz",
+    "manifest": "raw_manifest.json",
+    "file_count": 346,
+    "bytes": 2662547,
+    "sha256": "a4477a88eacd422202694650c5d7d8586c18351d8cb65936cf67354a4051c445"
+  },
+  "sdxl_images": {
+    "sdxl_samples.jpg": {
+      "path": "sdxl_samples.jpg",
+      "sha256": "1834291131f3d179b29525332fadb59def325647ab3319ad7e37faf54b68c6dc",
+      "training_seed": 42,
+      "samples": [
+        {
+          "method": "baseline",
+          "prompt": "a photo of sks dog",
+          "generation_seed": 3000,
+          "source": "/var/tmp/dora-bench/sdxl/baseline/samples/prompt_0.png",
+          "sha256": "b76cb4d01325587cd5623b072381059912e7984cd6aa0f55d0aebce97f9d7689"
+        },
+        {
+          "method": "baseline",
+          "prompt": "a photo of sks dog sitting on a beach",
+          "generation_seed": 3001,
+          "source": "/var/tmp/dora-bench/sdxl/baseline/samples/prompt_1.png",
+          "sha256": "e3371b37d1a09fbce0853e1675912aa8c67f9d17fd315f64d603b074cf80b32d"
+        },
+        {
+          "method": "baseline",
+          "prompt": "a photo of sks dog in a snowy forest",
+          "generation_seed": 3002,
+          "source": "/var/tmp/dora-bench/sdxl/baseline/samples/prompt_2.png",
+          "sha256": "6720acc06cc0d5991df727259c74c93341b6288630a79cd3f2470d6cc20b654c"
+        },
+        {
+          "method": "baseline",
+          "prompt": "a watercolor painting of sks dog",
+          "generation_seed": 3003,
+          "source": "/var/tmp/dora-bench/sdxl/baseline/samples/prompt_3.png",
+          "sha256": "e03940f8cc28a91760ff83814e2526b79b106ab4df8864c27c4a4e4be85080f0"
+        },
+        {
+          "method": "lora",
+          "prompt": "a photo of sks dog",
+          "generation_seed": 3000,
+          "source": "/var/tmp/dora-bench/sdxl/lora/samples/prompt_0.png",
+          "sha256": "d7c591adb3f4bfef207a4b0dae1d58cd1c6c318dfd81c92c0c6336309006487c"
+        },
+        {
+          "method": "lora",
+          "prompt": "a photo of sks dog sitting on a beach",
+          "generation_seed": 3001,
+          "source": "/var/tmp/dora-bench/sdxl/lora/samples/prompt_1.png",
+          "sha256": "50b93419ff6744c53a1b1ca13f2c3733cd751a7d50c9c6c2f35a883f23d840f5"
+        },
+        {
+          "method": "lora",
+          "prompt": "a photo of sks dog in a snowy forest",
+          "generation_seed": 3002,
+          "source": "/var/tmp/dora-bench/sdxl/lora/samples/prompt_2.png",
+          "sha256": "1ff1013e1cfe6f16dcb9798f8d94aa76ed2dba3e3db89c44e31414c7d67757b8"
+        },
+        {
+          "method": "lora",
+          "prompt": "a watercolor painting of sks dog",
+          "generation_seed": 3003,
+          "source": "/var/tmp/dora-bench/sdxl/lora/samples/prompt_3.png",
+          "sha256": "1cc38c2f14a3feeabcfa0955dc3faa8a7c2bb0878e5698ffb36923c34e1a100f"
+        },
+        {
+          "method": "dora",
+          "prompt": "a photo of sks dog",
+          "generation_seed": 3000,
+          "source": "/var/tmp/dora-bench/sdxl/dora/samples/prompt_0.png",
+          "sha256": "57bbc45dbf6783a4b78be1efad4fe199cbcfc89b5843137c34f1cb5f5e9e3d17"
+        },
+        {
+          "method": "dora",
+          "prompt": "a photo of sks dog sitting on a beach",
+          "generation_seed": 3001,
+          "source": "/var/tmp/dora-bench/sdxl/dora/samples/prompt_1.png",
+          "sha256": "604215a1d2347d8c765a6b56aa3c9b7b768bc930821a10ab3a055f914a0c3223"
+        },
+        {
+          "method": "dora",
+          "prompt": "a photo of sks dog in a snowy forest",
+          "generation_seed": 3002,
+          "source": "/var/tmp/dora-bench/sdxl/dora/samples/prompt_2.png",
+          "sha256": "1e010092bf0dd0ffab51eee13355768b17f234e48151209629283c5f04f5efc0"
+        },
+        {
+          "method": "dora",
+          "prompt": "a watercolor painting of sks dog",
+          "generation_seed": 3003,
+          "source": "/var/tmp/dora-bench/sdxl/dora/samples/prompt_3.png",
+          "sha256": "dc1d62724c8798a7056cb81d6e4bb517f292cd55853d77659e0ba105c329ed25"
+        },
+        {
+          "method": "nora",
+          "prompt": "a photo of sks dog",
+          "generation_seed": 3000,
+          "source": "/var/tmp/dora-bench/sdxl/nora/samples/prompt_0.png",
+          "sha256": "1333f7541e5ebbfb558895d25958dacfaeeb10654b0910f74df02e9641393abe"
+        },
+        {
+          "method": "nora",
+          "prompt": "a photo of sks dog sitting on a beach",
+          "generation_seed": 3001,
+          "source": "/var/tmp/dora-bench/sdxl/nora/samples/prompt_1.png",
+          "sha256": "bb2b9e81866038057b14e9bdcdd1584815694d86755045df7982568801ebc943"
+        },
+        {
+          "method": "nora",
+          "prompt": "a photo of sks dog in a snowy forest",
+          "generation_seed": 3002,
+          "source": "/var/tmp/dora-bench/sdxl/nora/samples/prompt_2.png",
+          "sha256": "64090a7bb0fbd1a032a909379725a0adedbf9360d3f66717e870f9af6bcedd5d"
+        },
+        {
+          "method": "nora",
+          "prompt": "a watercolor painting of sks dog",
+          "generation_seed": 3003,
+          "source": "/var/tmp/dora-bench/sdxl/nora/samples/prompt_3.png",
+          "sha256": "83c949e5a90faa5f223754f73f85519c48837a7ae184f71798605e19579da666"
+        },
+        {
+          "method": "dora_nora",
+          "prompt": "a photo of sks dog",
+          "generation_seed": 3000,
+          "source": "/var/tmp/dora-bench/sdxl/dora_nora/samples/prompt_0.png",
+          "sha256": "73980a4e177ad02bff6a505ff9ca9a1b77f1827a3403b6930c84671776887167"
+        },
+        {
+          "method": "dora_nora",
+          "prompt": "a photo of sks dog sitting on a beach",
+          "generation_seed": 3001,
+          "source": "/var/tmp/dora-bench/sdxl/dora_nora/samples/prompt_1.png",
+          "sha256": "1c79dc68ba9b236324831bf79d2d7cb465867756d33388f841f11de4e247b638"
+        },
+        {
+          "method": "dora_nora",
+          "prompt": "a photo of sks dog in a snowy forest",
+          "generation_seed": 3002,
+          "source": "/var/tmp/dora-bench/sdxl/dora_nora/samples/prompt_2.png",
+          "sha256": "dbe47778f4c18e95a8ae86d3eac6a441da131151b8b3d4a4822528fb3fe66a6e"
+        },
+        {
+          "method": "dora_nora",
+          "prompt": "a watercolor painting of sks dog",
+          "generation_seed": 3003,
+          "source": "/var/tmp/dora-bench/sdxl/dora_nora/samples/prompt_3.png",
+          "sha256": "4b0044afaf036bce0fbcc7463496d7c17624ff3f4a637bb8aef0783dc87266f3"
+        }
+      ]
+    },
+    "sdxl_dataset.jpg": {
+      "source": "/var/tmp/dora-bench/sdxl/dataset_contact_sheet.jpg",
+      "sha256": "579aa742dfa55fae5bb843bbef9594f4cce0e5ed547cf1988826988fcf34b27f"
+    }
+  },
+  "sdxl_montage_protocol": "Seed-42 baseline/LoRA/DoRA/NoRA/DoRA+NoRA rows; four predeclared prompts with shared generation seeds. The montage is illustrative, not a human-rated image-quality score."
+}

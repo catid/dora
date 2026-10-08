@@ -1,0 +1,4404 @@
+{
+  "task": "sdxl",
+  "title": "SDXL subject adaptation",
+  "metric": "Held-out denoising MSE",
+  "unit": "MSE",
+  "direction": "lower",
+  "baseline": "Base SDXL",
+  "seeds": 3,
+  "baseline_seeds": 1,
+  "complete": true,
+  "missing": [],
+  "provenance": {
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "model_revision": "462165984030d82259a11f4367a4eed129e94a7b",
+    "weight_variant": "fp16 converted to bf16",
+    "dataset": "diffusers/dog-example",
+    "dataset_revision": "7aac740a23542bde4c568131b815a9ed08a7e192",
+    "torch": "2.12.0+cu130",
+    "cuda": "13.0",
+    "diffusers": "0.36.0",
+    "transformers": "5.8.1",
+    "python": "3.12.3",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+    "device": "cuda:0",
+    "cuda_visible_devices": "1",
+    "git_head": "408029af8ab70b32788c4a51ce2549a90c5b2d1d",
+    "source_sha256": {
+      "sdxl.py": "e13a367bfb922e6992e2112e5545defce7e70db146c6d25dea1b0f6417d81878",
+      "adapters.py": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+      "dora.py": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+    },
+    "clip": [
+      "openai/clip-vit-base-patch32",
+      "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+    ],
+    "dino": [
+      "facebook/dinov2-small",
+      "ed25f3a31f01632728cabb09d1542f84ab7b0056"
+    ],
+    "config": {
+      "output": "/var/tmp/dora-bench/sdxl",
+      "device": "cuda:0",
+      "resolution": 1024,
+      "steps": 500,
+      "trial_steps": 50,
+      "inference_steps": 30,
+      "rank": 8,
+      "methods": [
+        "lora",
+        "dora",
+        "nora",
+        "dora_nora"
+      ],
+      "prepare_only": false,
+      "no_checkpointing": false
+    },
+    "controls": {
+      "rank": 8,
+      "effective_scaling": 1,
+      "adapter_dropout": 0,
+      "targets": [
+        "to_q",
+        "to_k",
+        "to_v",
+        "to_out.0"
+      ],
+      "seed": 42,
+      "train_indices": [
+        0,
+        1,
+        2
+      ],
+      "validation_index": 3,
+      "test_index": 4,
+      "lr_candidates": [
+        1e-05,
+        0.0001
+      ],
+      "optimizer": "AdamW",
+      "weight_decay": 0.01,
+      "grad_clip": 1.0,
+      "lr_schedule": "constant",
+      "min_snr_weighting": false,
+      "prior_preservation": false,
+      "latent_cache": "deterministic VAE posterior mode; fixed center crop; no augmentation",
+      "train_precision": "BF16 frozen base / FP32 adapters / BF16 autocast"
+    },
+    "limitations": [
+      "Only five photos of one corgi with a shared orange backdrop; 3/1/1 split.",
+      "One training seed; four noise seeds and five timesteps per held-out MSE.",
+      "Equal short validation-only learning-rate search; no other hyperparameter tuning.",
+      "CLIP/DINO are imperfect proxies; generated images accompany metrics.",
+      "This is a subject adaptation pilot, not a replication of the NoRA paper."
+    ],
+    "dependency_audit": "Inherited dora.py archive matches dora.py at launch git_head; original provenance retained in provenance_initial.json.",
+    "generation_precision": "BF16 frozen UNet with FP32 adapter branch; FP32 VAE decode",
+    "additional_seed_provenance": {
+      "/var/tmp/dora-bench/sdxl_seed43": {
+        "model": "stabilityai/stable-diffusion-xl-base-1.0",
+        "model_revision": "462165984030d82259a11f4367a4eed129e94a7b",
+        "weight_variant": "fp16 converted to bf16",
+        "dataset": "diffusers/dog-example",
+        "dataset_revision": "7aac740a23542bde4c568131b815a9ed08a7e192",
+        "torch": "2.12.0+cu130",
+        "cuda": "13.0",
+        "diffusers": "0.36.0",
+        "transformers": "5.8.1",
+        "python": "3.12.3",
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+        "device": "cuda:0",
+        "cuda_visible_devices": "3",
+        "git_head": "408029af8ab70b32788c4a51ce2549a90c5b2d1d",
+        "source_sha256": {
+          "sdxl.py": "dcea1df8f9e402f45be7f785842a86bf6e4afa3051d25ef154c45cac1983a002",
+          "adapters.py": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+          "dora.py": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+        },
+        "clip": [
+          "openai/clip-vit-base-patch32",
+          "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+        ],
+        "dino": [
+          "facebook/dinov2-small",
+          "ed25f3a31f01632728cabb09d1542f84ab7b0056"
+        ],
+        "config": {
+          "output": "/var/tmp/dora-bench/sdxl_seed43",
+          "device": "cuda:0",
+          "resolution": 1024,
+          "steps": 500,
+          "trial_steps": 50,
+          "inference_steps": 30,
+          "rank": 8,
+          "seed": 43,
+          "selected_lrs_json": "/var/tmp/dora-bench/sdxl/selected_lrs.json",
+          "conditioning_cache": "/var/tmp/dora-bench/sdxl/conditioning_1024.pt",
+          "methods": [
+            "lora",
+            "dora",
+            "nora",
+            "dora_nora"
+          ],
+          "prepare_only": false,
+          "no_checkpointing": false
+        },
+        "controls": {
+          "rank": 8,
+          "effective_scaling": 1,
+          "adapter_dropout": 0,
+          "targets": [
+            "to_q",
+            "to_k",
+            "to_v",
+            "to_out.0"
+          ],
+          "seed": 43,
+          "image_order_seed": 2028,
+          "training_noise_seed": 2029,
+          "train_indices": [
+            0,
+            1,
+            2
+          ],
+          "validation_index": 3,
+          "test_index": 4,
+          "lr_candidates": [
+            1e-05,
+            0.0001
+          ],
+          "optimizer": "AdamW",
+          "weight_decay": 0.01,
+          "grad_clip": 1.0,
+          "lr_schedule": "constant",
+          "min_snr_weighting": false,
+          "prior_preservation": false,
+          "latent_cache": "deterministic VAE posterior mode; fixed center crop; no augmentation",
+          "train_precision": "BF16 frozen base / FP32 adapters / BF16 autocast"
+        },
+        "limitations": [
+          "Only five photos of one corgi with a shared orange backdrop; 3/1/1 split.",
+          "One training seed per run; aggregate independent run directories for seed variability.",
+          "Four fixed noise seeds and five timesteps probe one held-out photograph.",
+          "Equal short validation-only learning-rate search; no other hyperparameter tuning.",
+          "CLIP/DINO are imperfect proxies; generated images accompany metrics.",
+          "This is a subject adaptation pilot, not a replication of the NoRA paper."
+        ],
+        "lr_selection": {
+          "source": "/var/tmp/dora-bench/sdxl/selected_lrs.json",
+          "sha256": "e4341b2164c965b854a6aaeb25192774c88d139a2fe48ab00bee44337eb62d3f",
+          "selected_lrs": {
+            "lora": 0.0001,
+            "dora": 0.0001,
+            "nora": 0.0001,
+            "dora_nora": 0.0001
+          },
+          "selection_seed": 42
+        },
+        "conditioning_cache": "/var/tmp/dora-bench/sdxl/conditioning_1024.pt",
+        "generation_precision": "BF16 frozen UNet with FP32 adapter branch; FP32 VAE decode"
+      },
+      "/var/tmp/dora-bench/sdxl_seed44": {
+        "model": "stabilityai/stable-diffusion-xl-base-1.0",
+        "model_revision": "462165984030d82259a11f4367a4eed129e94a7b",
+        "weight_variant": "fp16 converted to bf16",
+        "dataset": "diffusers/dog-example",
+        "dataset_revision": "7aac740a23542bde4c568131b815a9ed08a7e192",
+        "torch": "2.12.0+cu130",
+        "cuda": "13.0",
+        "diffusers": "0.36.0",
+        "transformers": "5.8.1",
+        "python": "3.12.3",
+        "gpu": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+        "device": "cuda:0",
+        "cuda_visible_devices": "0",
+        "git_head": "408029af8ab70b32788c4a51ce2549a90c5b2d1d",
+        "source_sha256": {
+          "sdxl.py": "dcea1df8f9e402f45be7f785842a86bf6e4afa3051d25ef154c45cac1983a002",
+          "adapters.py": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+          "dora.py": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+        },
+        "clip": [
+          "openai/clip-vit-base-patch32",
+          "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+        ],
+        "dino": [
+          "facebook/dinov2-small",
+          "ed25f3a31f01632728cabb09d1542f84ab7b0056"
+        ],
+        "config": {
+          "output": "/var/tmp/dora-bench/sdxl_seed44",
+          "device": "cuda:0",
+          "resolution": 1024,
+          "steps": 500,
+          "trial_steps": 50,
+          "inference_steps": 30,
+          "rank": 8,
+          "seed": 44,
+          "selected_lrs_json": "/var/tmp/dora-bench/sdxl/selected_lrs.json",
+          "conditioning_cache": "/var/tmp/dora-bench/sdxl/conditioning_1024.pt",
+          "methods": [
+            "lora",
+            "dora",
+            "nora",
+            "dora_nora"
+          ],
+          "prepare_only": false,
+          "no_checkpointing": false
+        },
+        "controls": {
+          "rank": 8,
+          "effective_scaling": 1,
+          "adapter_dropout": 0,
+          "targets": [
+            "to_q",
+            "to_k",
+            "to_v",
+            "to_out.0"
+          ],
+          "seed": 44,
+          "image_order_seed": 2029,
+          "training_noise_seed": 2030,
+          "train_indices": [
+            0,
+            1,
+            2
+          ],
+          "validation_index": 3,
+          "test_index": 4,
+          "lr_candidates": [
+            1e-05,
+            0.0001
+          ],
+          "optimizer": "AdamW",
+          "weight_decay": 0.01,
+          "grad_clip": 1.0,
+          "lr_schedule": "constant",
+          "min_snr_weighting": false,
+          "prior_preservation": false,
+          "latent_cache": "deterministic VAE posterior mode; fixed center crop; no augmentation",
+          "train_precision": "BF16 frozen base / FP32 adapters / BF16 autocast"
+        },
+        "limitations": [
+          "Only five photos of one corgi with a shared orange backdrop; 3/1/1 split.",
+          "One training seed per run; aggregate independent run directories for seed variability.",
+          "Four fixed noise seeds and five timesteps probe one held-out photograph.",
+          "Equal short validation-only learning-rate search; no other hyperparameter tuning.",
+          "CLIP/DINO are imperfect proxies; generated images accompany metrics.",
+          "This is a subject adaptation pilot, not a replication of the NoRA paper."
+        ],
+        "lr_selection": {
+          "source": "/var/tmp/dora-bench/sdxl/selected_lrs.json",
+          "sha256": "e4341b2164c965b854a6aaeb25192774c88d139a2fe48ab00bee44337eb62d3f",
+          "selected_lrs": {
+            "lora": 0.0001,
+            "dora": 0.0001,
+            "nora": 0.0001,
+            "dora_nora": 0.0001
+          },
+          "selection_seed": 42
+        },
+        "conditioning_cache": "/var/tmp/dora-bench/sdxl/conditioning_1024.pt",
+        "generation_precision": "BF16 frozen UNet with FP32 adapter branch; FP32 VAE decode"
+      }
+    },
+    "post_hoc_class_clip_diagnostic": {
+      "/var/tmp/dora-bench/sdxl": {
+        "diagnostic": "class-only CLIP text-image cosine",
+        "post_hoc": true,
+        "used_for_model_selection": false,
+        "prompt_rule": "replace 'sks dog' with 'a dog'",
+        "generated_images_changed": false,
+        "original_metrics_changed": false,
+        "model": "openai/clip-vit-base-patch32",
+        "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+        "device": "cpu",
+        "dtype": "float32",
+        "torch": "2.12.0+cu130",
+        "source_sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852",
+        "caveat": "An external embedding proxy; removing the identifier does not turn it into a human quality score."
+      },
+      "/var/tmp/dora-bench/sdxl_seed43": {
+        "diagnostic": "class-only CLIP text-image cosine",
+        "post_hoc": true,
+        "used_for_model_selection": false,
+        "prompt_rule": "replace 'sks dog' with 'a dog'",
+        "generated_images_changed": false,
+        "original_metrics_changed": false,
+        "model": "openai/clip-vit-base-patch32",
+        "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+        "device": "cpu",
+        "dtype": "float32",
+        "torch": "2.12.0+cu130",
+        "source_sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852",
+        "caveat": "An external embedding proxy; removing the identifier does not turn it into a human quality score."
+      },
+      "/var/tmp/dora-bench/sdxl_seed44": {
+        "diagnostic": "class-only CLIP text-image cosine",
+        "post_hoc": true,
+        "used_for_model_selection": false,
+        "prompt_rule": "replace 'sks dog' with 'a dog'",
+        "generated_images_changed": false,
+        "original_metrics_changed": false,
+        "model": "openai/clip-vit-base-patch32",
+        "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+        "device": "cpu",
+        "dtype": "float32",
+        "torch": "2.12.0+cu130",
+        "source_sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852",
+        "caveat": "An external embedding proxy; removing the identifier does not turn it into a human quality score."
+      }
+    }
+  },
+  "validation_tuning": {
+    "lora": {
+      "selected_learning_rate": 0.0001,
+      "candidates": [
+        {
+          "learning_rate": 1e-05,
+          "validation_mse": 0.10557223226642236
+        },
+        {
+          "learning_rate": 0.0001,
+          "validation_mse": 0.10493463277816772
+        }
+      ]
+    },
+    "dora": {
+      "selected_learning_rate": 0.0001,
+      "candidates": [
+        {
+          "learning_rate": 1e-05,
+          "validation_mse": 0.10556496236240491
+        },
+        {
+          "learning_rate": 0.0001,
+          "validation_mse": 0.10492695983266458
+        }
+      ]
+    },
+    "nora": {
+      "selected_learning_rate": 0.0001,
+      "candidates": [
+        {
+          "learning_rate": 1e-05,
+          "validation_mse": 0.10498836369952187
+        },
+        {
+          "learning_rate": 0.0001,
+          "validation_mse": 0.10412804416846484
+        }
+      ]
+    },
+    "dora_nora": {
+      "selected_learning_rate": 0.0001,
+      "candidates": [
+        {
+          "learning_rate": 1e-05,
+          "validation_mse": 0.10498666957719252
+        },
+        {
+          "learning_rate": 0.0001,
+          "validation_mse": 0.1041269407607615
+        }
+      ]
+    }
+  },
+  "summary": {
+    "baseline": {
+      "mean": 0.1047059886623174,
+      "sample_std": null,
+      "n": 1,
+      "seeds": [
+        42
+      ],
+      "values": [
+        0.1047059886623174
+      ],
+      "median_training_wall_seconds": null,
+      "median_peak_memory_bytes": null,
+      "max_recorded_peak_memory_bytes": null,
+      "trainable_parameters": [
+        0
+      ],
+      "secondary_metrics": {
+        "clip_text_image_cosine_mean": {
+          "mean": 0.3135528415441513,
+          "sample_std": null,
+          "n": 1,
+          "values": [
+            0.3135528415441513
+          ]
+        },
+        "dino_train_subject_cosine_mean": {
+          "mean": 0.06768467137590051,
+          "sample_std": null,
+          "n": 1,
+          "values": [
+            0.06768467137590051
+          ]
+        },
+        "class_only_clip_mean_post_hoc": {
+          "mean": 0.3163420483469963,
+          "sample_std": null,
+          "n": 1,
+          "values": [
+            0.3163420483469963
+          ]
+        }
+      }
+    },
+    "lora": {
+      "mean": 0.10227466550422833,
+      "sample_std": 0.00011349688840531862,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        0.1022537172306329,
+        0.10239717722870409,
+        0.10217310205334798
+      ],
+      "median_training_wall_seconds": 135.76014183694497,
+      "median_peak_memory_bytes": 8156250112,
+      "max_recorded_peak_memory_bytes": 8156250112,
+      "trainable_parameters": [
+        11612160
+      ],
+      "secondary_metrics": {
+        "clip_text_image_cosine_mean": {
+          "mean": 0.2845887169241905,
+          "sample_std": 0.007704350051827534,
+          "n": 3,
+          "values": [
+            0.2757278233766556,
+            0.2883332818746567,
+            0.2897050455212593
+          ]
+        },
+        "dino_train_subject_cosine_mean": {
+          "mean": 0.8024861067533493,
+          "sample_std": 0.011701180323265569,
+          "n": 3,
+          "values": [
+            0.8143084645271301,
+            0.802239865064621,
+            0.7909099906682968
+          ]
+        },
+        "class_only_clip_mean_post_hoc": {
+          "mean": 0.2965668936570485,
+          "sample_std": 0.005692634558736761,
+          "n": 3,
+          "values": [
+            0.28999488800764084,
+            0.2997404485940933,
+            0.29996534436941147
+          ]
+        }
+      }
+    },
+    "dora": {
+      "mean": 0.10226481853363414,
+      "sample_std": 0.0001175036656038671,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        0.10225023791426793,
+        0.10238893206696957,
+        0.10215528561966494
+      ],
+      "median_training_wall_seconds": 184.57382650859654,
+      "median_peak_memory_bytes": 8164998656,
+      "max_recorded_peak_memory_bytes": 8164998656,
+      "trainable_parameters": [
+        12277760
+      ],
+      "secondary_metrics": {
+        "clip_text_image_cosine_mean": {
+          "mean": 0.28416405121485394,
+          "sample_std": 0.008468913259858199,
+          "n": 3,
+          "values": [
+            0.27446381747722626,
+            0.2879410460591316,
+            0.2900872901082039
+          ]
+        },
+        "dino_train_subject_cosine_mean": {
+          "mean": 0.8103252053260803,
+          "sample_std": 0.002680710365960442,
+          "n": 3,
+          "values": [
+            0.8116836994886398,
+            0.8072372078895569,
+            0.8120547086000443
+          ]
+        },
+        "class_only_clip_mean_post_hoc": {
+          "mean": 0.29545306662718457,
+          "sample_std": 0.006748510264226895,
+          "n": 3,
+          "values": [
+            0.28766465932130814,
+            0.29956618696451187,
+            0.29912835359573364
+          ]
+        }
+      }
+    },
+    "nora": {
+      "mean": 0.105132376945888,
+      "sample_std": 0.0013475836103549908,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        0.10473086697747931,
+        0.10663508196594193,
+        0.10403118189424276
+      ],
+      "median_training_wall_seconds": 180.59491888200864,
+      "median_peak_memory_bytes": 8157011456,
+      "max_recorded_peak_memory_bytes": 8157011456,
+      "trainable_parameters": [
+        11612160
+      ],
+      "secondary_metrics": {
+        "clip_text_image_cosine_mean": {
+          "mean": 0.2692227438092232,
+          "sample_std": 0.011038976421349107,
+          "n": 3,
+          "values": [
+            0.26934782415628433,
+            0.2581217586994171,
+            0.2801986485719681
+          ]
+        },
+        "dino_train_subject_cosine_mean": {
+          "mean": 0.8675160159667333,
+          "sample_std": 0.002610885859480126,
+          "n": 3,
+          "values": [
+            0.8696277737617493,
+            0.868323490023613,
+            0.8645967841148376
+          ]
+        },
+        "class_only_clip_mean_post_hoc": {
+          "mean": 0.2836324026187261,
+          "sample_std": 0.012038026990553534,
+          "n": 3,
+          "values": [
+            0.2874086797237396,
+            0.270158976316452,
+            0.29332955181598663
+          ]
+        }
+      }
+    },
+    "dora_nora": {
+      "mean": 0.1053494565266495,
+      "sample_std": 0.0003286203903812414,
+      "n": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "values": [
+        0.10509359160205349,
+        0.1057200641138479,
+        0.10523471386404708
+      ],
+      "median_training_wall_seconds": 229.40341149782762,
+      "median_peak_memory_bytes": 8164998656,
+      "max_recorded_peak_memory_bytes": 8164998656,
+      "trainable_parameters": [
+        12277760
+      ],
+      "secondary_metrics": {
+        "clip_text_image_cosine_mean": {
+          "mean": 0.27808766315380734,
+          "sample_std": 0.004204836841084053,
+          "n": 3,
+          "values": [
+            0.2828029692173004,
+            0.2747274786233902,
+            0.27673254162073135
+          ]
+        },
+        "dino_train_subject_cosine_mean": {
+          "mean": 0.8657224575678507,
+          "sample_std": 0.008320018803882723,
+          "n": 3,
+          "values": [
+            0.8674040287733078,
+            0.8730732500553131,
+            0.8566900938749313
+          ]
+        },
+        "class_only_clip_mean_post_hoc": {
+          "mean": 0.29148296266794205,
+          "sample_std": 0.005669810985758378,
+          "n": 3,
+          "values": [
+            0.2975625917315483,
+            0.28633949905633926,
+            0.29054679721593857
+          ]
+        }
+      }
+    }
+  },
+  "runs": [
+    {
+      "method": "baseline",
+      "seed": 42,
+      "value": 0.1047059886623174,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.1047059886623174,
+        "std_across_noise_timestep": 0.1140206395195765,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30856162309646606
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3118419945240021
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30548208951950073
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.31253087520599365
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.1446143239736557
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14664745330810547
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.1436755359172821
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1466151773929596
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05068564414978027
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05127830058336258
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05041782557964325
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05158744752407074
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014179114252328873
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014500416815280914
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014434592798352242
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014581108465790749
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0029955545905977488
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0031540587078779936
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.003213480580598116
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0031231562606990337
+          }
+        ],
+        "seconds": 0.9345152089372277
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10559904866386205,
+        "std_across_noise_timestep": 0.1139149114063971,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30711978673934937
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3096177577972412
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3075799345970154
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.31260231137275696
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14773930609226227
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14817360043525696
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14892008900642395
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14917342364788055
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05185133218765259
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05220625549554825
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.0523848682641983
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05252295732498169
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014574797824025154
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014669270254671574
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.015043435618281364
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014784400351345539
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0032196762040257454
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0032747627701610327
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.003332330845296383
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.003190676448866725
+          }
+        ],
+        "seconds": 2.37416020501405
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.3135528415441513,
+        "clip_per_prompt": [
+          0.28759637475013733,
+          0.3094515800476074,
+          0.31860560178756714,
+          0.33855780959129333
+        ],
+        "dino_train_subject_cosine_mean": 0.06768467137590051,
+        "dino_per_prompt": [
+          0.07484541088342667,
+          0.20407959818840027,
+          0.005772542208433151,
+          -0.013958865776658058
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.3163420483469963
+      },
+      "learning_rate": null,
+      "class_clip_diagnostic": {
+        "method": "baseline",
+        "seed": 42,
+        "class_only_clip_mean": 0.3163420483469963,
+        "original_identifier_clip_mean": 0.3135528415441513,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.26324349641799927,
+            "image": "/var/tmp/dora-bench/sdxl/baseline/samples/prompt_0.png",
+            "image_sha256": "b76cb4d01325587cd5623b072381059912e7984cd6aa0f55d0aebce97f9d7689"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.3142634928226471,
+            "image": "/var/tmp/dora-bench/sdxl/baseline/samples/prompt_1.png",
+            "image_sha256": "e3371b37d1a09fbce0853e1675912aa8c67f9d17fd315f64d603b074cf80b32d"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.3416057229042053,
+            "image": "/var/tmp/dora-bench/sdxl/baseline/samples/prompt_2.png",
+            "image_sha256": "6720acc06cc0d5991df727259c74c93341b6288630a79cd3f2470d6cc20b654c"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.34625548124313354,
+            "image": "/var/tmp/dora-bench/sdxl/baseline/samples/prompt_3.png",
+            "image_sha256": "e03940f8cc28a91760ff83814e2526b79b106ab4df8864c27c4a4e4be85080f0"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "b76cb4d01325587cd5623b072381059912e7984cd6aa0f55d0aebce97f9d7689",
+        "e3371b37d1a09fbce0853e1675912aa8c67f9d17fd315f64d603b074cf80b32d",
+        "6720acc06cc0d5991df727259c74c93341b6288630a79cd3f2470d6cc20b654c",
+        "e03940f8cc28a91760ff83814e2526b79b106ab4df8864c27c4a4e4be85080f0"
+      ],
+      "trainable_parameters": 0,
+      "training_wall_seconds": null,
+      "peak_memory_bytes": null,
+      "frozen_base_unchanged": null,
+      "adapter_checkpoint_sha256": null
+    },
+    {
+      "method": "lora",
+      "seed": 42,
+      "value": 0.1022537172306329,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.1022537172306329,
+        "std_across_noise_timestep": 0.11242963170424249,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30450838804244995
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3061147928237915
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30010107159614563
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3083464503288269
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14079810678958893
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1423822045326233
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.13988648355007172
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1426798552274704
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.04853041097521782
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.049445658922195435
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04808754473924637
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.049582235515117645
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013252036646008492
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013673008419573307
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013407008722424507
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.013858944177627563
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0024786191061139107
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.002877450082451105
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0025392319075763226
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002524842508137226
+          }
+        ],
+        "seconds": 1.1334432200528681
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10425148712238297,
+        "std_across_noise_timestep": 0.11337110942510792,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3057340681552887
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3077310025691986
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3066350817680359
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.309454083442688
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14543774724006653
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14552396535873413
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14628362655639648
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1466154158115387
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05066405236721039
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05095195770263672
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.051154833287000656
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.051403217017650604
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014030098915100098
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013944482430815697
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014328932389616966
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.013951420783996582
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.002660810248926282
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.003056337358430028
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0027657020837068558
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002702906960621476
+          }
+        ],
+        "seconds": 1.1175864217802882
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2757278233766556,
+        "clip_per_prompt": [
+          0.2654893696308136,
+          0.29394975304603577,
+          0.28675776720046997,
+          0.256714403629303
+        ],
+        "dino_train_subject_cosine_mean": 0.8143084645271301,
+        "dino_per_prompt": [
+          0.8686844110488892,
+          0.7479221224784851,
+          0.7746133804321289,
+          0.8660139441490173
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.28999488800764084
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "lora",
+        "seed": 42,
+        "class_only_clip_mean": 0.28999488800764084,
+        "original_identifier_clip_mean": 0.2757278233766556,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.27755308151245117,
+            "image": "/var/tmp/dora-bench/sdxl/lora/samples/prompt_0.png",
+            "image_sha256": "d7c591adb3f4bfef207a4b0dae1d58cd1c6c318dfd81c92c0c6336309006487c"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.30127549171447754,
+            "image": "/var/tmp/dora-bench/sdxl/lora/samples/prompt_1.png",
+            "image_sha256": "50b93419ff6744c53a1b1ca13f2c3733cd751a7d50c9c6c2f35a883f23d840f5"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.30922630429267883,
+            "image": "/var/tmp/dora-bench/sdxl/lora/samples/prompt_2.png",
+            "image_sha256": "1ff1013e1cfe6f16dcb9798f8d94aa76ed2dba3e3db89c44e31414c7d67757b8"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.2719246745109558,
+            "image": "/var/tmp/dora-bench/sdxl/lora/samples/prompt_3.png",
+            "image_sha256": "1cc38c2f14a3feeabcfa0955dc3faa8a7c2bb0878e5698ffb36923c34e1a100f"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "d7c591adb3f4bfef207a4b0dae1d58cd1c6c318dfd81c92c0c6336309006487c",
+        "50b93419ff6744c53a1b1ca13f2c3733cd751a7d50c9c6c2f35a883f23d840f5",
+        "1ff1013e1cfe6f16dcb9798f8d94aa76ed2dba3e3db89c44e31414c7d67757b8",
+        "1cc38c2f14a3feeabcfa0955dc3faa8a7c2bb0878e5698ffb36923c34e1a100f"
+      ],
+      "trainable_parameters": 11612160,
+      "training_wall_seconds": 140.2148692747578,
+      "peak_memory_bytes": 8145870336,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "2ff1d32d128e4187f60dad5caae6db110c76b501d663136d6b2a9f058b6564e0"
+    },
+    {
+      "method": "dora",
+      "seed": 42,
+      "value": 0.10225023791426793,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10225023791426793,
+        "std_across_noise_timestep": 0.11242248388138967,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3044584393501282
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.30614158511161804
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3000619113445282
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.30832600593566895
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14081983268260956
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1423858106136322
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.13989517092704773
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1426621675491333
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.04851951450109482
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.049438610672950745
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04810003191232681
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.04957474768161774
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013251182623207569
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013691936619579792
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013400835916399956
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.013868037611246109
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.002470057923346758
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0028617498464882374
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0025417236611247063
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0025354058016091585
+          }
+        ],
+        "seconds": 1.4109185808338225
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10426655354676768,
+        "std_across_noise_timestep": 0.1133926974255336,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30580615997314453
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.307760089635849
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30667349696159363
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3095167577266693
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.1454716920852661
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1455538421869278
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14628532528877258
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14665241539478302
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.050691813230514526
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.050966862589120865
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05116516351699829
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05142052099108696
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014035243541002274
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013941544108092785
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014300278387963772
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.013966239057481289
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0026291157118976116
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.003031669883057475
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0027732844464480877
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0026895562186837196
+          }
+        ],
+        "seconds": 1.4291404117830098
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.27446381747722626,
+        "clip_per_prompt": [
+          0.2657262086868286,
+          0.2924274504184723,
+          0.2864657938480377,
+          0.2532358169555664
+        ],
+        "dino_train_subject_cosine_mean": 0.8116836994886398,
+        "dino_per_prompt": [
+          0.8624958992004395,
+          0.7419084906578064,
+          0.7718762159347534,
+          0.8704541921615601
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.28766465932130814
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "dora",
+        "seed": 42,
+        "class_only_clip_mean": 0.28766465932130814,
+        "original_identifier_clip_mean": 0.27446381747722626,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.275910884141922,
+            "image": "/var/tmp/dora-bench/sdxl/dora/samples/prompt_0.png",
+            "image_sha256": "57bbc45dbf6783a4b78be1efad4fe199cbcfc89b5843137c34f1cb5f5e9e3d17"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.3007528483867645,
+            "image": "/var/tmp/dora-bench/sdxl/dora/samples/prompt_1.png",
+            "image_sha256": "604215a1d2347d8c765a6b56aa3c9b7b768bc930821a10ab3a055f914a0c3223"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.3065759539604187,
+            "image": "/var/tmp/dora-bench/sdxl/dora/samples/prompt_2.png",
+            "image_sha256": "1e010092bf0dd0ffab51eee13355768b17f234e48151209629283c5f04f5efc0"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.2674189507961273,
+            "image": "/var/tmp/dora-bench/sdxl/dora/samples/prompt_3.png",
+            "image_sha256": "dc1d62724c8798a7056cb81d6e4bb517f292cd55853d77659e0ba105c329ed25"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "57bbc45dbf6783a4b78be1efad4fe199cbcfc89b5843137c34f1cb5f5e9e3d17",
+        "604215a1d2347d8c765a6b56aa3c9b7b768bc930821a10ab3a055f914a0c3223",
+        "1e010092bf0dd0ffab51eee13355768b17f234e48151209629283c5f04f5efc0",
+        "dc1d62724c8798a7056cb81d6e4bb517f292cd55853d77659e0ba105c329ed25"
+      ],
+      "trainable_parameters": 12277760,
+      "training_wall_seconds": 194.16731699602678,
+      "peak_memory_bytes": 8153857536,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "5e1d27b1110d2a7e8b1891cceff08f9839e9679d3abae22c5153a27ec3525af9"
+    },
+    {
+      "method": "nora",
+      "seed": 42,
+      "value": 0.10473086697747931,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10473086697747931,
+        "std_across_noise_timestep": 0.11419123781737986,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3093354105949402
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.31199556589126587
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30536240339279175
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3119284510612488
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.1450655162334442
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14747297763824463
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14489586651325226
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14674241840839386
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05087997019290924
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.051432278007268906
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05024222657084465
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.051639407873153687
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014069342985749245
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014467529021203518
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014022194780409336
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014549934305250645
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0025178473442792892
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0028416900895535946
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0025605380069464445
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002595770638436079
+          }
+        ],
+        "seconds": 1.1889772471040487
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.1073345698416233,
+        "std_across_noise_timestep": 0.11624547712706924,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.31333351135253906
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3153812885284424
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3153240382671356
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.31663084030151367
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.15026399493217468
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.15031060576438904
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.15093068778514862
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1523769497871399
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.053018271923065186
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05278942734003067
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.053177207708358765
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.053521379828453064
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014525111764669418
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.01468950230628252
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.01484595611691475
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014379611238837242
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.002729964442551136
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0031797862611711025
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0027044564485549927
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002578804735094309
+          }
+        ],
+        "seconds": 1.1915006218478084
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.26934782415628433,
+        "clip_per_prompt": [
+          0.2577396631240845,
+          0.29652801156044006,
+          0.2721988558769226,
+          0.2509247660636902
+        ],
+        "dino_train_subject_cosine_mean": 0.8696277737617493,
+        "dino_per_prompt": [
+          0.9022611975669861,
+          0.8785836100578308,
+          0.805818498134613,
+          0.8918477892875671
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.2874086797237396
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "nora",
+        "seed": 42,
+        "class_only_clip_mean": 0.2874086797237396,
+        "original_identifier_clip_mean": 0.26934782415628433,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.27340877056121826,
+            "image": "/var/tmp/dora-bench/sdxl/nora/samples/prompt_0.png",
+            "image_sha256": "1333f7541e5ebbfb558895d25958dacfaeeb10654b0910f74df02e9641393abe"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.3061046302318573,
+            "image": "/var/tmp/dora-bench/sdxl/nora/samples/prompt_1.png",
+            "image_sha256": "bb2b9e81866038057b14e9bdcdd1584815694d86755045df7982568801ebc943"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.3028174042701721,
+            "image": "/var/tmp/dora-bench/sdxl/nora/samples/prompt_2.png",
+            "image_sha256": "64090a7bb0fbd1a032a909379725a0adedbf9360d3f66717e870f9af6bcedd5d"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.2673039138317108,
+            "image": "/var/tmp/dora-bench/sdxl/nora/samples/prompt_3.png",
+            "image_sha256": "83c949e5a90faa5f223754f73f85519c48837a7ae184f71798605e19579da666"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "1333f7541e5ebbfb558895d25958dacfaeeb10654b0910f74df02e9641393abe",
+        "bb2b9e81866038057b14e9bdcdd1584815694d86755045df7982568801ebc943",
+        "64090a7bb0fbd1a032a909379725a0adedbf9360d3f66717e870f9af6bcedd5d",
+        "83c949e5a90faa5f223754f73f85519c48837a7ae184f71798605e19579da666"
+      ],
+      "trainable_parameters": 11612160,
+      "training_wall_seconds": 192.86122939176857,
+      "peak_memory_bytes": 8145870336,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "ad059ae753ccf1b3b6e9ed6fa4ebf4693e8416dd2e226e4686f87b51e7a1a33d"
+    },
+    {
+      "method": "dora_nora",
+      "seed": 42,
+      "value": 0.10509359160205349,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10509359160205349,
+        "std_across_noise_timestep": 0.1147968051765227,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3106697201728821
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3133903741836548
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3068615198135376
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3134044110774994
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14574629068374634
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14833858609199524
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14525920152664185
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1476040482521057
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05083421617746353
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05127052590250969
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05031726881861687
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05142319202423096
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013922322541475296
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014280060306191444
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013747362419962883
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014408106915652752
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.002475019544363022
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0028006122447550297
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0025649506133049726
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0025540427304804325
+          }
+        ],
+        "seconds": 1.5141336731612682
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10792916939826683,
+        "std_across_noise_timestep": 0.11720358072332189,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3154442310333252
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.31705328822135925
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.31828242540359497
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3196394443511963
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.1509765237569809
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.150705486536026
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.1519031971693039
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.15321338176727295
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05290155112743378
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05271654576063156
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05327039211988449
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.0535723976790905
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014353755861520767
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014486867934465408
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014686418697237968
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014277085661888123
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.00266947690397501
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.003167379181832075
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0027162712067365646
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0025472675915807486
+          }
+        ],
+        "seconds": 1.5238645998761058
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2828029692173004,
+        "clip_per_prompt": [
+          0.26490676403045654,
+          0.2985649108886719,
+          0.28131747245788574,
+          0.2864227294921875
+        ],
+        "dino_train_subject_cosine_mean": 0.8674040287733078,
+        "dino_per_prompt": [
+          0.9217614531517029,
+          0.8528719544410706,
+          0.7980254888534546,
+          0.8969572186470032
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.2975625917315483
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "dora_nora",
+        "seed": 42,
+        "class_only_clip_mean": 0.2975625917315483,
+        "original_identifier_clip_mean": 0.2828029692173004,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.27766770124435425,
+            "image": "/var/tmp/dora-bench/sdxl/dora_nora/samples/prompt_0.png",
+            "image_sha256": "73980a4e177ad02bff6a505ff9ca9a1b77f1827a3403b6930c84671776887167"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.3107096254825592,
+            "image": "/var/tmp/dora-bench/sdxl/dora_nora/samples/prompt_1.png",
+            "image_sha256": "1c79dc68ba9b236324831bf79d2d7cb465867756d33388f841f11de4e247b638"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.3085184395313263,
+            "image": "/var/tmp/dora-bench/sdxl/dora_nora/samples/prompt_2.png",
+            "image_sha256": "dbe47778f4c18e95a8ae86d3eac6a441da131151b8b3d4a4822528fb3fe66a6e"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.2933546006679535,
+            "image": "/var/tmp/dora-bench/sdxl/dora_nora/samples/prompt_3.png",
+            "image_sha256": "4b0044afaf036bce0fbcc7463496d7c17624ff3f4a637bb8aef0783dc87266f3"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "73980a4e177ad02bff6a505ff9ca9a1b77f1827a3403b6930c84671776887167",
+        "1c79dc68ba9b236324831bf79d2d7cb465867756d33388f841f11de4e247b638",
+        "dbe47778f4c18e95a8ae86d3eac6a441da131151b8b3d4a4822528fb3fe66a6e",
+        "4b0044afaf036bce0fbcc7463496d7c17624ff3f4a637bb8aef0783dc87266f3"
+      ],
+      "trainable_parameters": 12277760,
+      "training_wall_seconds": 241.4876660411246,
+      "peak_memory_bytes": 8153857536,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "83ef89455dbc1c2e8ce27202fa30fd70f504fc229d8ccdd22d14b776757e30bd"
+    },
+    {
+      "method": "lora",
+      "seed": 43,
+      "value": 0.10239717722870409,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10239717722870409,
+        "std_across_noise_timestep": 0.11252766386775705,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3046821355819702
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3063353896141052
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30048495531082153
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.30843406915664673
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14116987586021423
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1428186595439911
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14023219048976898
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14312250912189484
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.04865829646587372
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.04952380806207657
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04815135896205902
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.04982985183596611
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013329721055924892
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013751495629549026
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013261985965073109
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.01383355911821127
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0024698644410818815
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.002818953711539507
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0025064824149012566
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002528382232412696
+          }
+        ],
+        "seconds": 1.177065591327846
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10463744053849951,
+        "std_across_noise_timestep": 0.11366727719597237,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3061337471008301
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3091685473918915
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.307746559381485
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3099629878997803
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14593805372714996
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1460752785205841
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.1468190997838974
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14724206924438477
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05106976628303528
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.051422420889139175
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05157756805419922
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05180412530899048
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014025026932358742
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013983040116727352
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014318173751235008
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014105534180998802
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0026845254469662905
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.003091050311923027
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0027726306580007076
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0028086057864129543
+          }
+        ],
+        "seconds": 1.1616173018701375
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2883332818746567,
+        "clip_per_prompt": [
+          0.27051496505737305,
+          0.3009551167488098,
+          0.2820819318294525,
+          0.29978111386299133
+        ],
+        "dino_train_subject_cosine_mean": 0.802239865064621,
+        "dino_per_prompt": [
+          0.8526435494422913,
+          0.7788802981376648,
+          0.7223549485206604,
+          0.8550806641578674
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.2997404485940933
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "lora",
+        "seed": 43,
+        "class_only_clip_mean": 0.2997404485940933,
+        "original_identifier_clip_mean": 0.2883332818746567,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.27769070863723755,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/lora/samples/prompt_0.png",
+            "image_sha256": "f95fbb9d095fb7cf351362c51b354a939d8dac25c38eb139be8bd4365fc0be94"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.3057096004486084,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/lora/samples/prompt_1.png",
+            "image_sha256": "0a797bcf357672869b12f86840929cdc9ea5b38b3c7faf4d56698ec3c19ae8e9"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.3078617751598358,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/lora/samples/prompt_2.png",
+            "image_sha256": "5bc98502ccbf467cdd6e4632957d3ecfbcef7f7b81b3b84fbb2dafc8bc3f93d6"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.30769971013069153,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/lora/samples/prompt_3.png",
+            "image_sha256": "2b44334bac809d0968f41649783b56c7f93adab85b03fd6c8450db9a4d749810"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "f95fbb9d095fb7cf351362c51b354a939d8dac25c38eb139be8bd4365fc0be94",
+        "0a797bcf357672869b12f86840929cdc9ea5b38b3c7faf4d56698ec3c19ae8e9",
+        "5bc98502ccbf467cdd6e4632957d3ecfbcef7f7b81b3b84fbb2dafc8bc3f93d6",
+        "2b44334bac809d0968f41649783b56c7f93adab85b03fd6c8450db9a4d749810"
+      ],
+      "trainable_parameters": 11612160,
+      "training_wall_seconds": 135.76014183694497,
+      "peak_memory_bytes": 8156250112,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "36d764f7b0e83bccd2cb6aec290e66d59da060fdfb749685dbbc2d3f233a5592"
+    },
+    {
+      "method": "dora",
+      "seed": 43,
+      "value": 0.10238893206696957,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10238893206696957,
+        "std_across_noise_timestep": 0.11252469215772286,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30467575788497925
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3063390851020813
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3004482686519623
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.30842065811157227
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14116030931472778
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1427897810935974
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14023619890213013
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14311659336090088
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.04864943027496338
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.04951494559645653
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04814901947975159
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.049822598695755005
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013317286968231201
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013740372844040394
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013255785219371319
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.01382826641201973
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0024710181169211864
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0028143073432147503
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.002503002993762493
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0025259549729526043
+          }
+        ],
+        "seconds": 1.4635659214109182
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.1046706209774129,
+        "std_across_noise_timestep": 0.11369418409928783,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30624455213546753
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3092152178287506
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30783694982528687
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.31003284454345703
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14598533511161804
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14612025022506714
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14685863256454468
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1472800225019455
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05110056325793266
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05145815759897232
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05162746086716652
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05182693153619766
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014032451435923576
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014006511308252811
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014338705688714981
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014111990109086037
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0026812278665602207
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.003083846066147089
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0027687360998243093
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0028020329773426056
+          }
+        ],
+        "seconds": 1.4493550257757306
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2879410460591316,
+        "clip_per_prompt": [
+          0.27107787132263184,
+          0.30168071389198303,
+          0.2825244963169098,
+          0.29648110270500183
+        ],
+        "dino_train_subject_cosine_mean": 0.8072372078895569,
+        "dino_per_prompt": [
+          0.8535230159759521,
+          0.7847869396209717,
+          0.7364138960838318,
+          0.8542249798774719
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.29956618696451187
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "dora",
+        "seed": 43,
+        "class_only_clip_mean": 0.29956618696451187,
+        "original_identifier_clip_mean": 0.2879410460591316,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.2787315547466278,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/dora/samples/prompt_0.png",
+            "image_sha256": "ea9a8aa59370e7977a9f9a219b2cfaf423c136e35ce9fd1c6ca7dc5354c6b0ad"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.3061710298061371,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/dora/samples/prompt_1.png",
+            "image_sha256": "0a51417131af5df16390666ea85bf9deae023ac9ebfb06d97c3ef7a1f0b5e047"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.30808019638061523,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/dora/samples/prompt_2.png",
+            "image_sha256": "2d11ddd83d8220834a7b8d02d6535b9303c8d1d98786ba0301a8037ec5062036"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.30528196692466736,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/dora/samples/prompt_3.png",
+            "image_sha256": "565780b02946077ba8394c2f929972d1379621f2a5a6d6bd24881f70bbc3f2d8"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "ea9a8aa59370e7977a9f9a219b2cfaf423c136e35ce9fd1c6ca7dc5354c6b0ad",
+        "0a51417131af5df16390666ea85bf9deae023ac9ebfb06d97c3ef7a1f0b5e047",
+        "2d11ddd83d8220834a7b8d02d6535b9303c8d1d98786ba0301a8037ec5062036",
+        "565780b02946077ba8394c2f929972d1379621f2a5a6d6bd24881f70bbc3f2d8"
+      ],
+      "trainable_parameters": 12277760,
+      "training_wall_seconds": 184.57382650859654,
+      "peak_memory_bytes": 8164998656,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "19a39d08bfaaae00fc413cd997855251b6ae14f9f62f28205b02cf6dd17e6733"
+    },
+    {
+      "method": "nora",
+      "seed": 43,
+      "value": 0.10663508196594193,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10663508196594193,
+        "std_across_noise_timestep": 0.11665140897912034,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.31689977645874023
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.31708410382270813
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.31076523661613464
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.31980758905410767
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14802873134613037
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14881286025047302
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14721861481666565
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.15008306503295898
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.051256000995635986
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.051543548703193665
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05083819478750229
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05272626131772995
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.01389540545642376
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014841006137430668
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013820279389619827
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014706245623528957
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0025304590817540884
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.002832377329468727
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.002467526588588953
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0025443565100431442
+          }
+        ],
+        "seconds": 1.2272578119300306
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10950043315533549,
+        "std_across_noise_timestep": 0.11880086593035206,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.32077571749687195
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.321336030960083
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.32109153270721436
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3245224952697754
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.1540111005306244
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1533418446779251
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.15382906794548035
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.15520095825195312
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05406728386878967
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05332346633076668
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05378691852092743
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05454527214169502
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014582051895558834
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.0145873399451375
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014891281723976135
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014553189277648926
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0027746097184717655
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0032179136760532856
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0027909872587770224
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0027796009089797735
+          }
+        ],
+        "seconds": 1.2119244001805782
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2581217586994171,
+        "clip_per_prompt": [
+          0.2625243663787842,
+          0.25460028648376465,
+          0.2580883800983429,
+          0.25727400183677673
+        ],
+        "dino_train_subject_cosine_mean": 0.868323490023613,
+        "dino_per_prompt": [
+          0.89674973487854,
+          0.826617956161499,
+          0.8297725319862366,
+          0.9201537370681763
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.270158976316452
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "nora",
+        "seed": 43,
+        "class_only_clip_mean": 0.270158976316452,
+        "original_identifier_clip_mean": 0.2581217586994171,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.27739039063453674,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/nora/samples/prompt_0.png",
+            "image_sha256": "37f0363ca196cb0790f7c8588d806378f2a693982d20d1ede212afc9e40357ab"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.2613595426082611,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/nora/samples/prompt_1.png",
+            "image_sha256": "65d0b94783c32a13b392a003ef5a751d953e06f00531db7a2ea412aa1f8c6eae"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.27732914686203003,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/nora/samples/prompt_2.png",
+            "image_sha256": "1895251cb6bc99c4e526e873114c0f612b22a70305348ee6895c99a2a0631463"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.2645568251609802,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/nora/samples/prompt_3.png",
+            "image_sha256": "debf6db5e47698ad21bf5927f5c6331a790384049d285019e6ffc04d4b45589a"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "37f0363ca196cb0790f7c8588d806378f2a693982d20d1ede212afc9e40357ab",
+        "65d0b94783c32a13b392a003ef5a751d953e06f00531db7a2ea412aa1f8c6eae",
+        "1895251cb6bc99c4e526e873114c0f612b22a70305348ee6895c99a2a0631463",
+        "debf6db5e47698ad21bf5927f5c6331a790384049d285019e6ffc04d4b45589a"
+      ],
+      "trainable_parameters": 11612160,
+      "training_wall_seconds": 180.59491888200864,
+      "peak_memory_bytes": 8157011456,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "15a5649c3c690cf7527636d65dfcbb3aec404ff05c51e21908b77dab12575fed"
+    },
+    {
+      "method": "dora_nora",
+      "seed": 43,
+      "value": 0.1057200641138479,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.1057200641138479,
+        "std_across_noise_timestep": 0.11606722847328824,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3151063323020935
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.31600630283355713
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3088822066783905
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3181208670139313
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14602312445640564
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14757342636585236
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14513283967971802
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14813950657844543
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.050352539867162704
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05077856034040451
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04990880936384201
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.051672328263521194
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013715572655200958
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014536354690790176
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013672898523509502
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014424356631934643
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0025205365382134914
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.002790031023323536
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.00247487286105752
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0025698156096041203
+          }
+        ],
+        "seconds": 1.507445691153407
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10862797769950702,
+        "std_across_noise_timestep": 0.11837272647028788,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.31987181305885315
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3197198212146759
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3202109634876251
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3233141303062439
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.15197479724884033
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.15125854313373566
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.1522729992866516
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1529889702796936
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05296282097697258
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05243375897407532
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.053009890019893646
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05325600504875183
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.014280911535024643
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014516773633658886
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014684800058603287
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014306645840406418
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.002748792991042137
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0031860810704529285
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0028437587898224592
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0027172770351171494
+          }
+        ],
+        "seconds": 1.5156108289957047
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2747274786233902,
+        "clip_per_prompt": [
+          0.26654401421546936,
+          0.2869608700275421,
+          0.28170013427734375,
+          0.26370489597320557
+        ],
+        "dino_train_subject_cosine_mean": 0.8730732500553131,
+        "dino_per_prompt": [
+          0.9099777936935425,
+          0.8318799734115601,
+          0.8455907106399536,
+          0.9048445224761963
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.28633949905633926
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "dora_nora",
+        "seed": 43,
+        "class_only_clip_mean": 0.28633949905633926,
+        "original_identifier_clip_mean": 0.2747274786233902,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.2799008786678314,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/dora_nora/samples/prompt_0.png",
+            "image_sha256": "d527a90e620d076b67cbf6f14943328cc625b63232245811088be9a17d5495a1"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.2918250858783722,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/dora_nora/samples/prompt_1.png",
+            "image_sha256": "84cb0284667a24287eae8675cd208923aff63c148da99dcbcec0321c3611eae1"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.2979438602924347,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/dora_nora/samples/prompt_2.png",
+            "image_sha256": "198334295d9188bb8ee298d09f7dc35ab80145f73d8ea88b54668b2837d760c3"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.27568817138671875,
+            "image": "/var/tmp/dora-bench/sdxl_seed43/dora_nora/samples/prompt_3.png",
+            "image_sha256": "a1b6d823db1d25efe10ef16ec20b9bc49bbd5c59be0cf3145ecd248e1c925f75"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "d527a90e620d076b67cbf6f14943328cc625b63232245811088be9a17d5495a1",
+        "84cb0284667a24287eae8675cd208923aff63c148da99dcbcec0321c3611eae1",
+        "198334295d9188bb8ee298d09f7dc35ab80145f73d8ea88b54668b2837d760c3",
+        "a1b6d823db1d25efe10ef16ec20b9bc49bbd5c59be0cf3145ecd248e1c925f75"
+      ],
+      "trainable_parameters": 12277760,
+      "training_wall_seconds": 229.40341149782762,
+      "peak_memory_bytes": 8164998656,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "8e009c3f0f7bfdf1dd0fc69ec899edbd34a1467b70a3aa09124c1167b6c2320c"
+    },
+    {
+      "method": "lora",
+      "seed": 44,
+      "value": 0.10217310205334798,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10217310205334798,
+        "std_across_noise_timestep": 0.11238008834372978,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30441486835479736
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.30606865882873535
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30016660690307617
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3079262971878052
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14061030745506287
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14209288358688354
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.13980378210544586
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14247074723243713
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.048565857112407684
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.04925505816936493
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04811631515622139
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.049412135034799576
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013377598486840725
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013660176657140255
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013301392085850239
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.013856476172804832
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0024780924431979656
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0028166368138045073
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.002503594383597374
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002564556896686554
+          }
+        ],
+        "seconds": 1.1887394678778946
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10415127192391083,
+        "std_across_noise_timestep": 0.11325001549277977,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30525901913642883
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.30778250098228455
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30635666847229004
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.30885475873947144
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14522725343704224
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1453551948070526
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.1460682898759842
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14662571251392365
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.050759583711624146
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05079297721385956
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05118820071220398
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05153855308890343
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.01397393736988306
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013802509754896164
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014187529683113098
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014018183574080467
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0026614530943334103
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0030466578900814056
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.002738840412348509
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002787614008411765
+          }
+        ],
+        "seconds": 1.1725519699975848
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2897050455212593,
+        "clip_per_prompt": [
+          0.2733260691165924,
+          0.3060244917869568,
+          0.28358402848243713,
+          0.2958855926990509
+        ],
+        "dino_train_subject_cosine_mean": 0.7909099906682968,
+        "dino_per_prompt": [
+          0.8337917923927307,
+          0.7594194412231445,
+          0.7021021246910095,
+          0.8683266043663025
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.29996534436941147
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "lora",
+        "seed": 44,
+        "class_only_clip_mean": 0.29996534436941147,
+        "original_identifier_clip_mean": 0.2897050455212593,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.28100308775901794,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/lora/samples/prompt_0.png",
+            "image_sha256": "3b55a4e59b274f9f8fa9eddd1817cf7c3caf7590eb530d7b2ba12468113fef51"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.3066495358943939,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/lora/samples/prompt_1.png",
+            "image_sha256": "47bc24bc3de10f5ffc39504a2fadfdb0f168d94241a6d8760cf919007ee25731"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.30837419629096985,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/lora/samples/prompt_2.png",
+            "image_sha256": "89f6b8898cbd39578ed4620788cf26b105488ab52ee04140a9527ca03db7db92"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.30383455753326416,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/lora/samples/prompt_3.png",
+            "image_sha256": "12dc747180794e379ec6efa875e3847da28ebe5eef9f8a655a03374de8d5f7ba"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "3b55a4e59b274f9f8fa9eddd1817cf7c3caf7590eb530d7b2ba12468113fef51",
+        "47bc24bc3de10f5ffc39504a2fadfdb0f168d94241a6d8760cf919007ee25731",
+        "89f6b8898cbd39578ed4620788cf26b105488ab52ee04140a9527ca03db7db92",
+        "12dc747180794e379ec6efa875e3847da28ebe5eef9f8a655a03374de8d5f7ba"
+      ],
+      "trainable_parameters": 11612160,
+      "training_wall_seconds": 133.09448048705235,
+      "peak_memory_bytes": 8156250112,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "a104fcce91c3c5f195c693ea1ac8dd27d67f47f841778dea30658d9b99ee7b6e"
+    },
+    {
+      "method": "dora",
+      "seed": 44,
+      "value": 0.10215528561966494,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10215528561966494,
+        "std_across_noise_timestep": 0.1123706871862493,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3043593466281891
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.3060523271560669
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30011728405952454
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3079034686088562
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.1405981034040451
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1420978456735611
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.1397905945777893
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.14242185652256012
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.04854268580675125
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.04924686625599861
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04811052978038788
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.04938677325844765
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013342708349227905
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013653993606567383
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013297331519424915
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.013836024329066277
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.002466046717017889
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0028228904120624065
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0025000148452818394
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002559020882472396
+          }
+        ],
+        "seconds": 1.4589085630141199
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10415375530719757,
+        "std_across_noise_timestep": 0.11326779120200739,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.30531418323516846
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.30780595541000366
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30641230940818787
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3088906407356262
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.145215705037117
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14534544944763184
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14607033133506775
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.146627277135849
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05077142268419266
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.050757624208927155
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05118108540773392
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05148895084857941
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013967296108603477
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013819649815559387
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014203190803527832
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.01399068720638752
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0026515875943005085
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.003057447262108326
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0027235401794314384
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002780772279947996
+          }
+        ],
+        "seconds": 1.4458570582792163
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2900872901082039,
+        "clip_per_prompt": [
+          0.27363404631614685,
+          0.30158182978630066,
+          0.2878856956958771,
+          0.29724758863449097
+        ],
+        "dino_train_subject_cosine_mean": 0.8120547086000443,
+        "dino_per_prompt": [
+          0.838183581829071,
+          0.7944337129592896,
+          0.7465142011642456,
+          0.8690873384475708
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.29912835359573364
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "dora",
+        "seed": 44,
+        "class_only_clip_mean": 0.29912835359573364,
+        "original_identifier_clip_mean": 0.2900872901082039,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.281075119972229,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/dora/samples/prompt_0.png",
+            "image_sha256": "984262a677b77767af5416a52b7ea9597c086e3a71a3879f5e976e261d90c3e6"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.29908284544944763,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/dora/samples/prompt_1.png",
+            "image_sha256": "b39e27bb710168935660e1d1aee2ace7244c433663525d557c3b94670931bf5f"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.3103936016559601,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/dora/samples/prompt_2.png",
+            "image_sha256": "1314ef95712a76f98962baf20ea8d6b101ba4d167de4027e07f17cefbb997abc"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.30596184730529785,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/dora/samples/prompt_3.png",
+            "image_sha256": "893da6922926cb887f3cd38d1e87be72846754080e309f2cad9b70731ce924c3"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "984262a677b77767af5416a52b7ea9597c086e3a71a3879f5e976e261d90c3e6",
+        "b39e27bb710168935660e1d1aee2ace7244c433663525d557c3b94670931bf5f",
+        "1314ef95712a76f98962baf20ea8d6b101ba4d167de4027e07f17cefbb997abc",
+        "893da6922926cb887f3cd38d1e87be72846754080e309f2cad9b70731ce924c3"
+      ],
+      "trainable_parameters": 12277760,
+      "training_wall_seconds": 183.75123010436073,
+      "peak_memory_bytes": 8164998656,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "38621d812ba4330545ff115e2929f3ae324df820c46a87dccf704953f2357af0"
+    },
+    {
+      "method": "nora",
+      "seed": 44,
+      "value": 0.10403118189424276,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10403118189424276,
+        "std_across_noise_timestep": 0.11423660208734333,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.308061420917511
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.31138715147972107
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.30492180585861206
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3136206865310669
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14359676837921143
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14549149572849274
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14296507835388184
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.1459314227104187
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.049711041152477264
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05048591271042824
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04885047674179077
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05038844794034958
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.013593831099569798
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.013965870253741741
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.013477803207933903
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.013961240649223328
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0024222054053097963
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.002741796663030982
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0024810046888887882
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0025681774131953716
+          }
+        ],
+        "seconds": 1.2214653762057424
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10659962074132637,
+        "std_across_noise_timestep": 0.11596954839904085,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3124982416629791
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.31424304842948914
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3140605092048645
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.31671714782714844
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.14848366379737854
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.14817208051681519
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.149668350815773
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.15077559649944305
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.051480960100889206
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05198350548744202
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05288463830947876
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05263594910502434
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.01401028037071228
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014189624227583408
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014654741622507572
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.01412382535636425
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0026947984006255865
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0031424015760421753
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.002809985540807247
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0027630659751594067
+          }
+        ],
+        "seconds": 1.2057997919619083
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.2801986485719681,
+        "clip_per_prompt": [
+          0.26631420850753784,
+          0.28494328260421753,
+          0.28249067068099976,
+          0.2870464324951172
+        ],
+        "dino_train_subject_cosine_mean": 0.8645967841148376,
+        "dino_per_prompt": [
+          0.8944123387336731,
+          0.8531321883201599,
+          0.8231448531150818,
+          0.8876977562904358
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.29332955181598663
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "nora",
+        "seed": 44,
+        "class_only_clip_mean": 0.29332955181598663,
+        "original_identifier_clip_mean": 0.2801986485719681,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.2771289348602295,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/nora/samples/prompt_0.png",
+            "image_sha256": "8bead7a8a2beb6cef2d6b404912d2f58751199ce98672b7e3a7bdced4dfc38d2"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.29683491587638855,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/nora/samples/prompt_1.png",
+            "image_sha256": "fe4202bde420f2f854cbec2004f633aa56f6238ced5828821615da6aa12e05be"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.3033289611339569,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/nora/samples/prompt_2.png",
+            "image_sha256": "9e3e7e428d4b22247118255654cfd97a29f22e5d8314f261de63cf20d5461f99"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.2960253953933716,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/nora/samples/prompt_3.png",
+            "image_sha256": "c85079e1288166968bce955b4fc58f7a50ce0b5721213bcea597caf61ce888d8"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "8bead7a8a2beb6cef2d6b404912d2f58751199ce98672b7e3a7bdced4dfc38d2",
+        "fe4202bde420f2f854cbec2004f633aa56f6238ced5828821615da6aa12e05be",
+        "9e3e7e428d4b22247118255654cfd97a29f22e5d8314f261de63cf20d5461f99",
+        "c85079e1288166968bce955b4fc58f7a50ce0b5721213bcea597caf61ce888d8"
+      ],
+      "trainable_parameters": 11612160,
+      "training_wall_seconds": 178.95537978922948,
+      "peak_memory_bytes": 8157011456,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "b43e538bcd7eed9216e6ae58214a2ed6ac55cfcb1890bcfe460f2393204a8cf7"
+    },
+    {
+      "method": "dora_nora",
+      "seed": 44,
+      "value": 0.10523471386404708,
+      "test": {
+        "image_index": 4,
+        "mean_mse": 0.10523471386404708,
+        "std_across_noise_timestep": 0.11543412095779021,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.31167110800743103
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.31478676199913025
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.3080064058303833
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.3164529800415039
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.1452251672744751
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.1477506458759308
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.14458008110523224
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.147984117269516
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05030621588230133
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.05112168937921524
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.04953499138355255
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.051196664571762085
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.01367727480828762
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014250474981963634
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.01363091915845871
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014246860519051552
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.0024491597432643175
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.002741824369877577
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.002488258760422468
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.002592676319181919
+          }
+        ],
+        "seconds": 1.5081271077506244
+      },
+      "validation": {
+        "image_index": 3,
+        "mean_mse": 0.10782390914391726,
+        "std_across_noise_timestep": 0.11720955729349948,
+        "rows": [
+          {
+            "timestep": 100,
+            "noise_seed": 1001,
+            "mse": 0.3157721161842346
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1002,
+            "mse": 0.31678271293640137
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1003,
+            "mse": 0.31813937425613403
+          },
+          {
+            "timestep": 100,
+            "noise_seed": 1004,
+            "mse": 0.32008233666419983
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1001,
+            "mse": 0.15029770135879517
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1002,
+            "mse": 0.15027426183223724
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1003,
+            "mse": 0.15145817399024963
+          },
+          {
+            "timestep": 300,
+            "noise_seed": 1004,
+            "mse": 0.15288451313972473
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1001,
+            "mse": 0.05211613327264786
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1002,
+            "mse": 0.052729904651641846
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1003,
+            "mse": 0.05347348004579544
+          },
+          {
+            "timestep": 500,
+            "noise_seed": 1004,
+            "mse": 0.05335000902414322
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1001,
+            "mse": 0.01408535335212946
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1002,
+            "mse": 0.014577172696590424
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1003,
+            "mse": 0.014761408790946007
+          },
+          {
+            "timestep": 700,
+            "noise_seed": 1004,
+            "mse": 0.014292856678366661
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1001,
+            "mse": 0.002696031704545021
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1002,
+            "mse": 0.0030928589403629303
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1003,
+            "mse": 0.0028277160599827766
+          },
+          {
+            "timestep": 900,
+            "noise_seed": 1004,
+            "mse": 0.0027840672992169857
+          }
+        ],
+        "seconds": 1.5002616005949676
+      },
+      "image_metrics": {
+        "clip_text_image_cosine_mean": 0.27673254162073135,
+        "clip_per_prompt": [
+          0.26864880323410034,
+          0.2879251539707184,
+          0.2686099410057068,
+          0.2817462682723999
+        ],
+        "dino_train_subject_cosine_mean": 0.8566900938749313,
+        "dino_per_prompt": [
+          0.8849201202392578,
+          0.8413146734237671,
+          0.8197853565216064,
+          0.880740225315094
+        ],
+        "caveat": "CLIP alignment and DINO similarity are proxies, not human-rated quality or definitive identity.",
+        "class_only_clip_mean_post_hoc": 0.29054679721593857
+      },
+      "learning_rate": 0.0001,
+      "class_clip_diagnostic": {
+        "method": "dora_nora",
+        "seed": 44,
+        "class_only_clip_mean": 0.29054679721593857,
+        "original_identifier_clip_mean": 0.27673254162073135,
+        "per_prompt": [
+          {
+            "generation_prompt": "a photo of sks dog",
+            "scoring_prompt": "a photo of a dog",
+            "cosine": 0.27742841839790344,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/dora_nora/samples/prompt_0.png",
+            "image_sha256": "4a8ebcfbebf7c7ace0da261781cb7f8ff22306208a2763d34f3ef3e4bcc2efe2"
+          },
+          {
+            "generation_prompt": "a photo of sks dog sitting on a beach",
+            "scoring_prompt": "a photo of a dog sitting on a beach",
+            "cosine": 0.3020205497741699,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/dora_nora/samples/prompt_1.png",
+            "image_sha256": "9ed7ad94c35d244c7e55c3cb9016b8d2855936f106086fb94c6d7c4ab18c9a85"
+          },
+          {
+            "generation_prompt": "a photo of sks dog in a snowy forest",
+            "scoring_prompt": "a photo of a dog in a snowy forest",
+            "cosine": 0.29196807742118835,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/dora_nora/samples/prompt_2.png",
+            "image_sha256": "7cbdb05fa66fa2370d87330385f4ebf8533fe7120a74f127bbbc7e1bd55ff6bb"
+          },
+          {
+            "generation_prompt": "a watercolor painting of sks dog",
+            "scoring_prompt": "a watercolor painting of a dog",
+            "cosine": 0.29077014327049255,
+            "image": "/var/tmp/dora-bench/sdxl_seed44/dora_nora/samples/prompt_3.png",
+            "image_sha256": "688fde61e5637160fe45a8cf9d1b3e43961e1ed779c8002357292eb2d7ac3461"
+          }
+        ]
+      },
+      "generated_image_sha256": [
+        "4a8ebcfbebf7c7ace0da261781cb7f8ff22306208a2763d34f3ef3e4bcc2efe2",
+        "9ed7ad94c35d244c7e55c3cb9016b8d2855936f106086fb94c6d7c4ab18c9a85",
+        "7cbdb05fa66fa2370d87330385f4ebf8533fe7120a74f127bbbc7e1bd55ff6bb",
+        "688fde61e5637160fe45a8cf9d1b3e43961e1ed779c8002357292eb2d7ac3461"
+      ],
+      "trainable_parameters": 12277760,
+      "training_wall_seconds": 225.4408477190882,
+      "peak_memory_bytes": 8164998656,
+      "frozen_base_unchanged": true,
+      "adapter_checkpoint_sha256": "356dfc0747a83ac5cc19b320950b70c0287b002286f55f854ed46ec3a2f696e3"
+    }
+  ],
+  "raw_directory": "/var/tmp/dora-bench/sdxl",
+  "source_files": {
+    "/var/tmp/dora-bench/sdxl/results.json": "1962188cb35101ce3f387582254db887821a912f0866c3935a1c748068c1d654",
+    "/var/tmp/dora-bench/sdxl_seed43/results.json": "661dc3a2c3aa647f754822564a847ed29b1052816566a1d0334fbcea5f8d6030",
+    "/var/tmp/dora-bench/sdxl_seed44/results.json": "3a91cfe590b9b760a55c3ed44e577de1079b6487e1f299d84be456171ac14285"
+  },
+  "paired_uncertainty": null
+}

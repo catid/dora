@@ -1,0 +1,527 @@
+{
+  "vision": [
+    {
+      "method": "baseline",
+      "seed": 42,
+      "examples": 6149,
+      "correct": 6088
+    },
+    {
+      "method": "lora",
+      "seed": 42,
+      "examples": 6149,
+      "correct": 6119
+    },
+    {
+      "method": "dora",
+      "seed": 42,
+      "examples": 6149,
+      "correct": 6123
+    },
+    {
+      "method": "nora",
+      "seed": 42,
+      "examples": 6149,
+      "correct": 6111
+    },
+    {
+      "method": "dora_nora",
+      "seed": 42,
+      "examples": 6149,
+      "correct": 6123
+    },
+    {
+      "method": "baseline",
+      "seed": 43,
+      "examples": 6149,
+      "correct": 6074
+    },
+    {
+      "method": "lora",
+      "seed": 43,
+      "examples": 6149,
+      "correct": 6117
+    },
+    {
+      "method": "dora",
+      "seed": 43,
+      "examples": 6149,
+      "correct": 6122
+    },
+    {
+      "method": "nora",
+      "seed": 43,
+      "examples": 6149,
+      "correct": 6119
+    },
+    {
+      "method": "dora_nora",
+      "seed": 43,
+      "examples": 6149,
+      "correct": 6098
+    },
+    {
+      "method": "baseline",
+      "seed": 44,
+      "examples": 6149,
+      "correct": 6078
+    },
+    {
+      "method": "lora",
+      "seed": 44,
+      "examples": 6149,
+      "correct": 6119
+    },
+    {
+      "method": "dora",
+      "seed": 44,
+      "examples": 6149,
+      "correct": 6124
+    },
+    {
+      "method": "nora",
+      "seed": 44,
+      "examples": 6149,
+      "correct": 6129
+    },
+    {
+      "method": "dora_nora",
+      "seed": 44,
+      "examples": 6149,
+      "correct": 6124
+    }
+  ],
+  "retrieval": [
+    {
+      "method": "baseline",
+      "seed": 42,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "lora",
+      "seed": 42,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "lora",
+      "seed": 43,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "lora",
+      "seed": 44,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "dora",
+      "seed": 42,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "dora",
+      "seed": 43,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "dora",
+      "seed": 44,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "nora",
+      "seed": 42,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "nora",
+      "seed": 43,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "nora",
+      "seed": 44,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "dora_nora",
+      "seed": 42,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "dora_nora",
+      "seed": 43,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    },
+    {
+      "method": "dora_nora",
+      "seed": 44,
+      "queries": 300,
+      "ranking_metrics_recomputed_from_pinned_qrels": true
+    }
+  ],
+  "extraction": [
+    {
+      "method": "baseline",
+      "seed": null,
+      "examples": 256,
+      "exact_objects": 4,
+      "valid_json": 256,
+      "schema_valid": 249,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "lora",
+      "seed": 42,
+      "examples": 256,
+      "exact_objects": 177,
+      "valid_json": 256,
+      "schema_valid": 256,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "dora",
+      "seed": 42,
+      "examples": 256,
+      "exact_objects": 173,
+      "valid_json": 256,
+      "schema_valid": 256,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "nora",
+      "seed": 42,
+      "examples": 256,
+      "exact_objects": 195,
+      "valid_json": 256,
+      "schema_valid": 250,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "dora_nora",
+      "seed": 42,
+      "examples": 256,
+      "exact_objects": 157,
+      "valid_json": 253,
+      "schema_valid": 251,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "lora",
+      "seed": 43,
+      "examples": 256,
+      "exact_objects": 155,
+      "valid_json": 256,
+      "schema_valid": 250,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "dora",
+      "seed": 43,
+      "examples": 256,
+      "exact_objects": 155,
+      "valid_json": 256,
+      "schema_valid": 251,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "nora",
+      "seed": 43,
+      "examples": 256,
+      "exact_objects": 200,
+      "valid_json": 255,
+      "schema_valid": 255,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "dora_nora",
+      "seed": 43,
+      "examples": 256,
+      "exact_objects": 190,
+      "valid_json": 256,
+      "schema_valid": 255,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "lora",
+      "seed": 44,
+      "examples": 256,
+      "exact_objects": 164,
+      "valid_json": 256,
+      "schema_valid": 253,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "dora",
+      "seed": 44,
+      "examples": 256,
+      "exact_objects": 170,
+      "valid_json": 256,
+      "schema_valid": 254,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "nora",
+      "seed": 44,
+      "examples": 256,
+      "exact_objects": 182,
+      "valid_json": 256,
+      "schema_valid": 251,
+      "specifier_in_schema_and_prompt": true
+    },
+    {
+      "method": "dora_nora",
+      "seed": 44,
+      "examples": 256,
+      "exact_objects": 183,
+      "valid_json": 256,
+      "schema_valid": 252,
+      "specifier_in_schema_and_prompt": true
+    }
+  ],
+  "sdxl": [
+    {
+      "method": "baseline",
+      "seed": 42,
+      "fixed_probes": 20,
+      "probe_mean": 0.1047059886623174
+    },
+    {
+      "method": "lora",
+      "seed": 42,
+      "fixed_probes": 20,
+      "probe_mean": 0.1022537172306329
+    },
+    {
+      "method": "dora",
+      "seed": 42,
+      "fixed_probes": 20,
+      "probe_mean": 0.10225023791426793
+    },
+    {
+      "method": "nora",
+      "seed": 42,
+      "fixed_probes": 20,
+      "probe_mean": 0.10473086697747931
+    },
+    {
+      "method": "dora_nora",
+      "seed": 42,
+      "fixed_probes": 20,
+      "probe_mean": 0.10509359160205349
+    },
+    {
+      "method": "lora",
+      "seed": 43,
+      "fixed_probes": 20,
+      "probe_mean": 0.10239717722870409
+    },
+    {
+      "method": "dora",
+      "seed": 43,
+      "fixed_probes": 20,
+      "probe_mean": 0.10238893206696957
+    },
+    {
+      "method": "nora",
+      "seed": 43,
+      "fixed_probes": 20,
+      "probe_mean": 0.10663508196594193
+    },
+    {
+      "method": "dora_nora",
+      "seed": 43,
+      "fixed_probes": 20,
+      "probe_mean": 0.1057200641138479
+    },
+    {
+      "method": "lora",
+      "seed": 44,
+      "fixed_probes": 20,
+      "probe_mean": 0.10217310205334798
+    },
+    {
+      "method": "dora",
+      "seed": 44,
+      "fixed_probes": 20,
+      "probe_mean": 0.10215528561966494
+    },
+    {
+      "method": "nora",
+      "seed": 44,
+      "fixed_probes": 20,
+      "probe_mean": 0.10403118189424276
+    },
+    {
+      "method": "dora_nora",
+      "seed": 44,
+      "fixed_probes": 20,
+      "probe_mean": 0.10523471386404708
+    }
+  ],
+  "sources": [
+    {
+      "task": "vision",
+      "path": "/var/tmp/dora-bench/runs/vision/source/experiments/vision.py",
+      "sha256": "f436bed1e2622979c5fb8637fce1c916b23a6cf658e1c29c00de710dd27bb499",
+      "verified": true
+    },
+    {
+      "task": "vision",
+      "path": "/var/tmp/dora-bench/runs/vision/source/experiments/adapters.py",
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+      "verified": true
+    },
+    {
+      "task": "vision",
+      "path": "/var/tmp/dora-bench/runs/vision/source/dora.py",
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+      "verified": "Dependency snapshot; see task provenance for historical hash coverage"
+    },
+    {
+      "task": "vision",
+      "path": "/var/tmp/dora-bench/runs/vision/audit.py",
+      "sha256": "4e190f8d5fa0c396f0e5b96cb0c6058cd7792cf6acc5264bb3e874959b4dc747",
+      "verified": true,
+      "analysis": true
+    },
+    {
+      "task": "retrieval",
+      "path": "/var/tmp/dora-bench/runs/retrieval/source/experiments/retrieval.py",
+      "sha256": "cf8c02c90a6149054ed7bceb9f583db01eed833106e6105c495adbd5894a4c2d",
+      "verified": true
+    },
+    {
+      "task": "retrieval",
+      "path": "/var/tmp/dora-bench/runs/retrieval/source/experiments/adapters.py",
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+      "verified": true
+    },
+    {
+      "task": "retrieval",
+      "path": "/var/tmp/dora-bench/runs/retrieval/source/dora.py",
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+      "verified": "Dependency snapshot; see task provenance for historical hash coverage"
+    },
+    {
+      "task": "retrieval",
+      "path": "/var/tmp/dora-bench/runs/retrieval/source/experiments/analyze_retrieval.py",
+      "sha256": "cb99e66a963c79b8fc8aeacc259913108769d1111eb85fba288cc664f86a93b9",
+      "verified": true,
+      "analysis": true
+    },
+    {
+      "task": "extraction",
+      "path": "/var/tmp/dora-bench/runs/extraction/source/experiments/adapters.py",
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+      "verified": true
+    },
+    {
+      "task": "extraction",
+      "path": "/var/tmp/dora-bench/runs/extraction/source/experiments/extraction.py",
+      "sha256": "71c3f802fe2512c5246a4f57cfc8a398cfd58106d1f6dafe7fed0b533e7110d2",
+      "verified": true
+    },
+    {
+      "task": "extraction",
+      "path": "/var/tmp/dora-bench/runs/extraction/source/dora.py",
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+      "verified": true
+    },
+    {
+      "task": "extraction",
+      "path": "/var/tmp/dora-bench/runs/extraction/source/experiments/analyze_extraction.py",
+      "sha256": "cf6cb8d0cd534ffc6a3e1d88eb36dfd06a26eddaaf21becc4ef5dc571a1aa2d5",
+      "verified": true,
+      "analysis": true
+    },
+    {
+      "task": "sdxl",
+      "path": "/var/tmp/dora-bench/sdxl/executed_sources/sdxl.py",
+      "sha256": "e13a367bfb922e6992e2112e5545defce7e70db146c6d25dea1b0f6417d81878",
+      "verified": true
+    },
+    {
+      "task": "sdxl",
+      "path": "/var/tmp/dora-bench/sdxl/executed_sources/adapters.py",
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+      "verified": true
+    },
+    {
+      "task": "sdxl",
+      "path": "/var/tmp/dora-bench/sdxl/executed_sources/dora.py",
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+      "verified": true
+    },
+    {
+      "task": "sdxl",
+      "path": "/var/tmp/dora-bench/sdxl/executed_sources/sdxl_clip_diagnostic.py",
+      "sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852",
+      "verified": true,
+      "post_hoc": true
+    },
+    {
+      "task": "sdxl_seed43",
+      "path": "/var/tmp/dora-bench/sdxl_seed43/executed_sources/sdxl.py",
+      "sha256": "dcea1df8f9e402f45be7f785842a86bf6e4afa3051d25ef154c45cac1983a002",
+      "verified": true
+    },
+    {
+      "task": "sdxl_seed43",
+      "path": "/var/tmp/dora-bench/sdxl_seed43/executed_sources/adapters.py",
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+      "verified": true
+    },
+    {
+      "task": "sdxl_seed43",
+      "path": "/var/tmp/dora-bench/sdxl_seed43/executed_sources/dora.py",
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+      "verified": true
+    },
+    {
+      "task": "sdxl_seed43",
+      "path": "/var/tmp/dora-bench/sdxl_seed43/executed_sources/sdxl_clip_diagnostic.py",
+      "sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852",
+      "verified": true,
+      "post_hoc": true
+    },
+    {
+      "task": "sdxl_seed44",
+      "path": "/var/tmp/dora-bench/sdxl_seed44/executed_sources/sdxl.py",
+      "sha256": "dcea1df8f9e402f45be7f785842a86bf6e4afa3051d25ef154c45cac1983a002",
+      "verified": true
+    },
+    {
+      "task": "sdxl_seed44",
+      "path": "/var/tmp/dora-bench/sdxl_seed44/executed_sources/adapters.py",
+      "sha256": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8",
+      "verified": true
+    },
+    {
+      "task": "sdxl_seed44",
+      "path": "/var/tmp/dora-bench/sdxl_seed44/executed_sources/dora.py",
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+      "verified": true
+    },
+    {
+      "task": "sdxl_seed44",
+      "path": "/var/tmp/dora-bench/sdxl_seed44/executed_sources/sdxl_clip_diagnostic.py",
+      "sha256": "4b55c5fa3b8f8ebe8a91ebb224086dfa8cb9ac6200f87188021ebb1e630cf852",
+      "verified": true,
+      "post_hoc": true
+    }
+  ],
+  "passed": true,
+  "scope": "Recomputed vision accuracy from labels, retrieval ranking metrics from pinned qrels, JSON/schema/exact/F1 from generated text and gold, SDXL means from fixed probes, and matched recorded source hashes to archived executed .py files. No model weights were rerun."
+}

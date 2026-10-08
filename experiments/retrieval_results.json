@@ -1,0 +1,436 @@
+{
+  "task": "SciFact domain retrieval with all-MiniLM-L6-v2",
+  "provenance": {
+    "utc": "2026-10-08T21:33:19.292268+00:00",
+    "command": [
+      "/var/tmp/dora-bench/venv/bin/python",
+      "/home/catid/dora/experiments/retrieval.py",
+      "--seeds",
+      "42",
+      "43",
+      "44"
+    ],
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+    "versions": {
+      "torch": "2.12.0+cu130",
+      "transformers": "5.8.1",
+      "huggingface_hub": "1.14.0",
+      "numpy": "2.4.4",
+      "pyarrow": "24.0.0"
+    },
+    "cuda_runtime": "13.0",
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+    "cuda_visible_devices": "1",
+    "nvidia_smi": "0, GPU-4c394fc5-b18f-6622-ca94-f7fbd7112927, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, 615.71.09\n1, GPU-f10c2baf-536b-1d40-cd4b-25b202ae0ded, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, 615.71.09\n2, GPU-04cde663-7c53-2f18-3ec4-1699820e2640, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, 615.71.09\n3, GPU-972bf85d-1b32-2d1b-20f6-babc4c804999, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, 615.71.09",
+    "source_sha256": {
+      "experiments/retrieval.py": "cf8c02c90a6149054ed7bceb9f583db01eed833106e6105c495adbd5894a4c2d",
+      "experiments/adapters.py": "59c3dbf6d36311f8c9233ce6a9e688ed4709be547aae2edf03a9c99593dcdce8"
+    },
+    "model": {
+      "repository": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "pooling": "attention-mask mean pooling; L2 normalization",
+      "frozen_dtype": "bfloat16",
+      "adapter_dtype": "float32"
+    },
+    "dataset": {
+      "dataset": "BeIR/scifact",
+      "revision": "b3b5335604bf5ee3c4447671af975ea25143d4f5",
+      "qrels": "BeIR/scifact-qrels",
+      "qrels_revision": "2938d17dc3b09882fdb8c12bbbe2e2dc0e75a029",
+      "source_sha256": {
+        "corpus": "243324b35f03d82bd6d98a5f575966876e86cad7ce16e5333a35b1b793dc4f45",
+        "queries": "1c37956c5dc8b810b60302323c24d1a9e79e26411ba8f5ad9d0888642e2a9034",
+        "train_qrels": "a53f2114831916c096b6c37d9e54da68cef4efdcdbd5ed46533601af972acf1d",
+        "test_qrels": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c"
+      },
+      "corpus_size": 5183,
+      "official_train_query_count": 809,
+      "query_counts": {
+        "train": 726,
+        "validation": 81,
+        "test": 300
+      },
+      "excluded_train_ids_with_exact_test_text": [
+        "1291",
+        "871"
+      ],
+      "split_seed": 20261008,
+      "leakage_scope": "Official query split plus exact normalized-text deduplication. Shared relevant documents and paraphrased claims may occur across the official split; pretrained-data contamination is not audited."
+    },
+    "configuration": {
+      "output_dir": "/var/tmp/dora-bench/runs/retrieval",
+      "methods": [
+        "frozen",
+        "lora",
+        "dora",
+        "nora",
+        "dora_nora"
+      ],
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "device": "cuda:0",
+      "rank": 8,
+      "epochs": 5,
+      "batch_size": 32,
+      "eval_batch_size": 128,
+      "max_length": 256,
+      "learning_rates": [
+        0.0001,
+        0.001
+      ],
+      "weight_decay": 0.01,
+      "temperature": 0.05,
+      "warmup_fraction": 0.1,
+      "max_grad_norm": 1.0,
+      "validation_fraction": 0.1,
+      "split_seed": 20261008,
+      "threads": 4
+    },
+    "protocol": {
+      "target_modules": "BERT self-attention query and value projections in all 6 layers",
+      "alpha_over_rank": 1,
+      "adapter_dropout": 0,
+      "objective": "Supervised in-batch contrastive loss; all known relevant documents in the batch contribute to the positive numerator.",
+      "checkpoint_selection": "Fixed final epoch. Equal per-method learning-rate grid selected by validation nDCG@10 on the first seed; other seeds use that selected rate. Ties select the smaller rate. No test tuning.",
+      "inference_timing": "Unmerged adapters; three full-length batch warmups before synchronized corpus encoding. Includes host token-padding and transfer.",
+      "ranking": "Exhaustive cosine similarity over all 5183 corpus documents; no approximate index.",
+      "metrics": "Macro query mean Recall@10, reciprocal rank truncated at 10, and nDCG@10 with gain 2^relevance-1.",
+      "limitations": "Small single-domain adaptation set and one encoder; confidence intervals measure query and seed variability, not broad task generalization."
+    }
+  },
+  "summary": {
+    "frozen": {
+      "selected_learning_rate": null,
+      "trainable_parameters": 0,
+      "test": {
+        "recall_at_10": {
+          "mean": 0.7883333333333333,
+          "sample_std": null,
+          "per_seed": [
+            0.7883333333333333
+          ]
+        },
+        "mrr_at_10": {
+          "mean": 0.6050582010582011,
+          "sample_std": null,
+          "per_seed": [
+            0.6050582010582011
+          ]
+        },
+        "ndcg_at_10": {
+          "mean": 0.6463214505634571,
+          "sample_std": null,
+          "per_seed": [
+            0.6463214505634571
+          ]
+        }
+      },
+      "seeds": [
+        42
+      ],
+      "median_corpus_encoding_seconds": 0.7059403527528048,
+      "median_training_seconds": null,
+      "median_peak_allocated_bytes": null,
+      "training_steps_per_seed": null
+    },
+    "lora": {
+      "selected_learning_rate": 0.001,
+      "trainable_parameters": 73728,
+      "test": {
+        "recall_at_10": {
+          "mean": 0.8104814814814815,
+          "sample_std": 0.013452400461973336,
+          "per_seed": [
+            0.8201111111111111,
+            0.8162222222222222,
+            0.7951111111111111
+          ]
+        },
+        "mrr_at_10": {
+          "mean": 0.6038672839506173,
+          "sample_std": 0.0013133131091117042,
+          "per_seed": [
+            0.6029338624338625,
+            0.6053690476190476,
+            0.6032989417989418
+          ]
+        },
+        "ndcg_at_10": {
+          "mean": 0.651043720695013,
+          "sample_std": 0.003062032373085768,
+          "per_seed": [
+            0.6527081359083086,
+            0.6529130559349879,
+            0.6475099702417426
+          ]
+        }
+      },
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "median_corpus_encoding_seconds": 0.763074308168143,
+      "median_training_seconds": 1.59037626395002,
+      "median_peak_allocated_bytes": 964608000,
+      "training_steps_per_seed": 115
+    },
+    "dora": {
+      "selected_learning_rate": 0.001,
+      "trainable_parameters": 78336,
+      "test": {
+        "recall_at_10": {
+          "mean": 0.8143703703703704,
+          "sample_std": 0.01250102876425013,
+          "per_seed": [
+            0.8234444444444444,
+            0.8195555555555556,
+            0.8001111111111111
+          ]
+        },
+        "mrr_at_10": {
+          "mean": 0.6063849206349207,
+          "sample_std": 0.0010202589404061054,
+          "per_seed": [
+            0.6065859788359789,
+            0.6072896825396825,
+            0.6052791005291005
+          ]
+        },
+        "ndcg_at_10": {
+          "mean": 0.6537823529684278,
+          "sample_std": 0.0032060934554535383,
+          "per_seed": [
+            0.6561168593829507,
+            0.6551033913629516,
+            0.650126808159381
+          ]
+        }
+      },
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "median_corpus_encoding_seconds": 0.7715328237973154,
+      "median_training_seconds": 1.7832995313219726,
+      "median_peak_allocated_bytes": 1166358528,
+      "training_steps_per_seed": 115
+    },
+    "nora": {
+      "selected_learning_rate": 0.001,
+      "trainable_parameters": 73728,
+      "test": {
+        "recall_at_10": {
+          "mean": 0.8391111111111111,
+          "sample_std": 0.002939723678960654,
+          "per_seed": [
+            0.8424444444444444,
+            0.838,
+            0.8368888888888889
+          ]
+        },
+        "mrr_at_10": {
+          "mean": 0.6393584656084655,
+          "sample_std": 0.008276511470981004,
+          "per_seed": [
+            0.6332023809523809,
+            0.6487671957671958,
+            0.6361058201058201
+          ]
+        },
+        "ndcg_at_10": {
+          "mean": 0.6846994066616081,
+          "sample_std": 0.006198648219583766,
+          "per_seed": [
+            0.6808294814798544,
+            0.6918488681800782,
+            0.6814198703248918
+          ]
+        }
+      },
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "median_corpus_encoding_seconds": 0.7629104037769139,
+      "median_training_seconds": 1.7257925649173558,
+      "median_peak_allocated_bytes": 965222400,
+      "training_steps_per_seed": 115
+    },
+    "dora_nora": {
+      "selected_learning_rate": 0.001,
+      "trainable_parameters": 78336,
+      "test": {
+        "recall_at_10": {
+          "mean": 0.8411481481481482,
+          "sample_std": 0.004724944748952952,
+          "per_seed": [
+            0.8457777777777777,
+            0.8413333333333334,
+            0.8363333333333334
+          ]
+        },
+        "mrr_at_10": {
+          "mean": 0.6412566137566138,
+          "sample_std": 0.006142621441367183,
+          "per_seed": [
+            0.6354378306878307,
+            0.6476785714285714,
+            0.6406534391534392
+          ]
+        },
+        "ndcg_at_10": {
+          "mean": 0.686307912913643,
+          "sample_std": 0.004775186169555227,
+          "per_seed": [
+            0.6826881043215665,
+            0.6917199196889923,
+            0.6845157147303704
+          ]
+        }
+      },
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "median_corpus_encoding_seconds": 0.781705719884485,
+      "median_training_seconds": 1.8873121365904808,
+      "median_peak_allocated_bytes": 1166678016,
+      "training_steps_per_seed": 115
+    }
+  },
+  "validation_tuning": {
+    "lora": {
+      "selected_learning_rate": 0.001,
+      "candidates": [
+        {
+          "learning_rate": 0.0001,
+          "validation_ndcg_at_10": 0.6080754907950656,
+          "training_seconds": 6.055667195934802
+        },
+        {
+          "learning_rate": 0.001,
+          "validation_ndcg_at_10": 0.6632398938126222,
+          "training_seconds": 1.5964103150181472
+        }
+      ]
+    },
+    "dora": {
+      "selected_learning_rate": 0.001,
+      "candidates": [
+        {
+          "learning_rate": 0.0001,
+          "validation_ndcg_at_10": 0.6084538317842819,
+          "training_seconds": 1.8057064372114837
+        },
+        {
+          "learning_rate": 0.001,
+          "validation_ndcg_at_10": 0.6732020331072579,
+          "training_seconds": 1.7897973218932748
+        }
+      ]
+    },
+    "nora": {
+      "selected_learning_rate": 0.001,
+      "candidates": [
+        {
+          "learning_rate": 0.0001,
+          "validation_ndcg_at_10": 0.6399131536342276,
+          "training_seconds": 1.7351374067366123
+        },
+        {
+          "learning_rate": 0.001,
+          "validation_ndcg_at_10": 0.6991290102998793,
+          "training_seconds": 1.7257925649173558
+        }
+      ]
+    },
+    "dora_nora": {
+      "selected_learning_rate": 0.001,
+      "candidates": [
+        {
+          "learning_rate": 0.0001,
+          "validation_ndcg_at_10": 0.6399131536342276,
+          "training_seconds": 1.8912443351000547
+        },
+        {
+          "learning_rate": 0.001,
+          "validation_ndcg_at_10": 0.7028759202682698,
+          "training_seconds": 1.8873121365904808
+        }
+      ]
+    }
+  },
+  "paired_uncertainty": {
+    "primary_metric": "ndcg_at_10",
+    "procedure": "Paired hierarchical bootstrap: resample the three matched training seeds and the 300 shared test queries independently, preserving method pairing. 10000 replicates; NumPy PCG64 seed123456; percentile95 intervals; descriptive and unadjusted for multiple comparisons.",
+    "comparisons": {
+      "lora_minus_frozen": {
+        "mean_delta": 0.004722270131555883,
+        "percentile_95_ci": [
+          -0.014238358481402272,
+          0.024338774553136263
+        ]
+      },
+      "dora_minus_lora": {
+        "mean_delta": 0.0027386322734147574,
+        "percentile_95_ci": [
+          6.677053542368525e-05,
+          0.005872031773943621
+        ]
+      },
+      "nora_minus_lora": {
+        "mean_delta": 0.03365568596659513,
+        "percentile_95_ci": [
+          0.014286122626170053,
+          0.05321110104723447
+        ]
+      },
+      "dora_nora_minus_nora": {
+        "mean_delta": 0.001608506252034875,
+        "percentile_95_ci": [
+          -0.0018839476520578283,
+          0.005367934611099835
+        ]
+      },
+      "dora_nora_minus_lora": {
+        "mean_delta": 0.03526419221863001,
+        "percentile_95_ci": [
+          0.016146021398878788,
+          0.05462297870026452
+        ]
+      },
+      "dora_minus_frozen": {
+        "mean_delta": 0.007460902404970641,
+        "percentile_95_ci": [
+          -0.011683641922550584,
+          0.026707784406388064
+        ]
+      }
+    },
+    "reproduction_script": "source/experiments/analyze_retrieval.py",
+    "reproduction_script_sha256": "cb99e66a963c79b8fc8aeacc259913108769d1111eb85fba288cc664f86a93b9",
+    "reproduction_matches_original_samples_exactly": true,
+    "numpy_version": "2.4.4",
+    "sample_arrays_sha256": "62d7196942a0c539ad7cd6914b17e51b1c5b7a8b08667c5aca8574ecb30d190d"
+  },
+  "raw_artifacts": "/var/tmp/dora-bench/runs/retrieval",
+  "raw_file_sha256": {
+    "results.json": "892dcd7e629bdef2266dbe6e8e9efa11465e9fe0b2a40b38e12972c90ac15b5a",
+    "provenance.json": "b665d08c52f99b401b423409602902c7bff9bfa24c3ee80429ffcd21329df1d1",
+    "splits.json": "55ecc867f69e8ebc5746b37d7777cc1f7c68462a09f00de5bce4e99627fa583c",
+    "paired_bootstrap.json": "3b43c193dfd4a94fdb9a1a91f6bd18e25fb80cb81ec4a0f0cc2d0403106deed8",
+    "paired_bootstrap_samples.npz": "62d7196942a0c539ad7cd6914b17e51b1c5b7a8b08667c5aca8574ecb30d190d",
+    "run.log": "12020f23034e6c409f8ed57235b73ad709a4eb1ed97737217aaa1a376e9ec8b0"
+  },
+  "source_snapshot": "/var/tmp/dora-bench/runs/retrieval/source",
+  "interpretation": "NoRA and DoRA+NoRA improved nDCG over LoRA in this small domain. The additional gain from DoRA+NoRA over NoRA is not resolved by the paired interval. DoRA versus LoRA has a small borderline unadjusted interval; three seeds, one encoder/domain, and a limited LR grid do not establish a general ranking."
+}
