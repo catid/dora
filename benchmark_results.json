@@ -1,0 +1,624 @@
+{
+  "description": "Two representative FP32 CUDA benchmark configurations and one BF16 validation smoke. Each run retains its independent configuration, provenance, validation, and raw timings.",
+  "runs": [
+    {
+      "environment": {
+        "utc": "2026-10-08T20:59:53.173256+00:00",
+        "command": [
+          "/home/catid/venvs/dnn/bin/python",
+          "benchmark_dora.py",
+          "--device",
+          "cuda:0",
+          "--output",
+          "/tmp/dora_benchmark_1024_final.json"
+        ],
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+        "pytorch": "2.12.0+cu130",
+        "cuda_runtime": "13.0",
+        "device": "cuda:0",
+        "cpu_threads": 1,
+        "matmul_precision": "highest",
+        "git_revision": "bb97617a0d5e1ad4c6856cb7278f5a7386820d18",
+        "source_sha256": {
+          "dora.py": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+          "benchmark_dora.py": "0b1bed235af286cba417409834b72a9c3339a3d76b282b693f658ee78eed3460"
+        },
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+        "gpu_total_memory_bytes": 102069305344,
+        "gpu_compute_capability": [
+          12,
+          0
+        ],
+        "nvidia_smi": "0, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-4c394fc5-b18f-6622-ca94-f7fbd7112927, 615.71.09\n1, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-f10c2baf-536b-1d40-cd4b-25b202ae0ded, 615.71.09\n2, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-04cde663-7c53-2f18-3ec4-1699820e2640, 615.71.09\n3, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-972bf85d-1b32-2d1b-20f6-babc4c804999, 615.71.09"
+      },
+      "configuration": {
+        "device": "cuda:0",
+        "dtype": "float32",
+        "in_features": 1024,
+        "out_features": 1024,
+        "rank": 8,
+        "tokens": [
+          32,
+          256
+        ],
+        "warmup": 10,
+        "samples": 7,
+        "iterations": 20,
+        "threads": 1,
+        "seed": 1234,
+        "output": "/tmp/dora_benchmark_1024_final.json"
+      },
+      "methodology": {
+        "reference": "Dense DoRA; output-row norm of W + A @ B detached from autograd.",
+        "gradient_validation": "Gaussian vector-Jacobian probe divided by sqrt(output.numel()).",
+        "forward": "torch.inference_mode; no autograd graph",
+        "forward_backward": "Clear gradients; forward; float32 squared mean loss; backward including input gradients.",
+        "timing": "Synchronized wall-clock batch; each sample is mean milliseconds per call.",
+        "memory": "CUDA max_memory_allocated minus live baseline after clearing gradients; excludes existing model/input tensors.",
+        "merged": "to_linear conversion excluded from inference timing; adapters fixed for inference."
+      },
+      "cases": [
+        {
+          "tokens": 32,
+          "validation": {
+            "passed": true,
+            "rtol": 0.0002,
+            "atol": 2e-05,
+            "comparisons": {
+              "output": {
+                "max_abs": 7.152557373046875e-07,
+                "relative_l2": 2.5361006852720404e-07
+              },
+              "input_grad": {
+                "max_abs": 3.958120942115784e-09,
+                "relative_l2": 2.708934543924942e-07
+              },
+              "lora_A_grad": {
+                "max_abs": 2.2351741790771484e-08,
+                "relative_l2": 3.063351494476998e-07
+              },
+              "lora_B_grad": {
+                "max_abs": 2.980232238769531e-07,
+                "relative_l2": 2.8996541753852533e-07
+              },
+              "m_grad": {
+                "max_abs": 2.60770320892334e-08,
+                "relative_l2": 2.587911704972338e-07
+              },
+              "merged_output": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0
+              }
+            }
+          },
+          "measurements": {
+            "dense": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.036729,
+                  0.034729949999999996,
+                  0.034851150000000004,
+                  0.034479550000000005,
+                  0.03493475,
+                  0.03465135,
+                  0.03451715
+                ],
+                "median_ms_per_call": 0.034729949999999996,
+                "peak_incremental_allocated_bytes": 8523776
+              },
+              "forward_backward": {
+                "sample_ms_per_call": [
+                  0.20803925,
+                  0.2044318,
+                  0.2035074,
+                  0.20050435,
+                  0.20108075,
+                  0.20291655,
+                  0.20195054999999998
+                ],
+                "median_ms_per_call": 0.20291655,
+                "peak_incremental_allocated_bytes": 16921600
+              }
+            },
+            "factorized": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.0523731,
+                  0.05107865,
+                  0.0510216,
+                  0.0510326,
+                  0.050852800000000004,
+                  0.050813800000000006,
+                  0.050965449999999995
+                ],
+                "median_ms_per_call": 0.0510216,
+                "peak_incremental_allocated_bytes": 4202496
+              },
+              "forward_backward": {
+                "sample_ms_per_call": [
+                  0.2559937,
+                  0.25246785,
+                  0.25074029999999997,
+                  0.25030610000000003,
+                  0.2499115,
+                  0.24916739999999998,
+                  0.24914335
+                ],
+                "median_ms_per_call": 0.25030610000000003,
+                "peak_incremental_allocated_bytes": 4202496
+              }
+            },
+            "merged": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.00845575,
+                  0.0083281,
+                  0.008601,
+                  0.0083296,
+                  0.008302,
+                  0.0083296,
+                  0.00829805
+                ],
+                "median_ms_per_call": 0.0083296,
+                "peak_incremental_allocated_bytes": 131072
+              }
+            }
+          },
+          "speedup_dense_over_factorized": {
+            "forward": 0.6806911190554588,
+            "forward_backward": 0.8106736112304094
+          }
+        },
+        {
+          "tokens": 256,
+          "validation": {
+            "passed": true,
+            "rtol": 0.0002,
+            "atol": 2e-05,
+            "comparisons": {
+              "output": {
+                "max_abs": 1.4007091522216797e-06,
+                "relative_l2": 3.843144998106441e-07
+              },
+              "input_grad": {
+                "max_abs": 2.7939677238464355e-09,
+                "relative_l2": 3.8726624204787226e-07
+              },
+              "lora_A_grad": {
+                "max_abs": 2.6542693376541138e-08,
+                "relative_l2": 4.150965222186461e-07
+              },
+              "lora_B_grad": {
+                "max_abs": 3.5762786865234375e-07,
+                "relative_l2": 4.169664653573112e-07
+              },
+              "m_grad": {
+                "max_abs": 3.818422555923462e-08,
+                "relative_l2": 3.928507188678559e-07
+              },
+              "merged_output": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0
+              }
+            }
+          },
+          "measurements": {
+            "dense": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.0402343,
+                  0.03967945,
+                  0.03968195,
+                  0.0396474,
+                  0.03961285,
+                  0.039689449999999994,
+                  0.0397951
+                ],
+                "median_ms_per_call": 0.03968195,
+                "peak_incremental_allocated_bytes": 9441280
+              },
+              "forward_backward": {
+                "sample_ms_per_call": [
+                  0.22167135000000002,
+                  0.1511889,
+                  0.1488739,
+                  0.1844506,
+                  0.2186378,
+                  0.2044298,
+                  0.20458105
+                ],
+                "median_ms_per_call": 0.2044298,
+                "peak_incremental_allocated_bytes": 17839104
+              }
+            },
+            "factorized": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.052129699999999994,
+                  0.051486300000000006,
+                  0.05163495,
+                  0.0515904,
+                  0.0515739,
+                  0.051464699999999995,
+                  0.0512955
+                ],
+                "median_ms_per_call": 0.0515739,
+                "peak_incremental_allocated_bytes": 4202496
+              },
+              "forward_backward": {
+                "sample_ms_per_call": [
+                  0.26186755,
+                  0.2842909,
+                  0.25828715,
+                  0.2589727,
+                  0.2836555,
+                  0.25839585,
+                  0.2591114
+                ],
+                "median_ms_per_call": 0.2591114,
+                "peak_incremental_allocated_bytes": 6308864
+              }
+            },
+            "merged": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.024428400000000003,
+                  0.0240473,
+                  0.02392665,
+                  0.02400225,
+                  0.02384,
+                  0.023857049999999998,
+                  0.0237674
+                ],
+                "median_ms_per_call": 0.02392665,
+                "peak_incremental_allocated_bytes": 1048576
+              }
+            }
+          },
+          "speedup_dense_over_factorized": {
+            "forward": 0.7694192217381273,
+            "forward_backward": 0.7889649008110026
+          }
+        }
+      ]
+    },
+    {
+      "environment": {
+        "utc": "2026-10-08T21:00:00.457752+00:00",
+        "command": [
+          "/home/catid/venvs/dnn/bin/python",
+          "benchmark_dora.py",
+          "--device",
+          "cuda:0",
+          "--in-features",
+          "4096",
+          "--out-features",
+          "4096",
+          "--tokens",
+          "32",
+          "--output",
+          "/tmp/dora_benchmark_4096_final.json"
+        ],
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+        "pytorch": "2.12.0+cu130",
+        "cuda_runtime": "13.0",
+        "device": "cuda:0",
+        "cpu_threads": 1,
+        "matmul_precision": "highest",
+        "git_revision": "bb97617a0d5e1ad4c6856cb7278f5a7386820d18",
+        "source_sha256": {
+          "dora.py": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+          "benchmark_dora.py": "0b1bed235af286cba417409834b72a9c3339a3d76b282b693f658ee78eed3460"
+        },
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+        "gpu_total_memory_bytes": 102069305344,
+        "gpu_compute_capability": [
+          12,
+          0
+        ],
+        "nvidia_smi": "0, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-4c394fc5-b18f-6622-ca94-f7fbd7112927, 615.71.09\n1, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-f10c2baf-536b-1d40-cd4b-25b202ae0ded, 615.71.09\n2, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-04cde663-7c53-2f18-3ec4-1699820e2640, 615.71.09\n3, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-972bf85d-1b32-2d1b-20f6-babc4c804999, 615.71.09"
+      },
+      "configuration": {
+        "device": "cuda:0",
+        "dtype": "float32",
+        "in_features": 4096,
+        "out_features": 4096,
+        "rank": 8,
+        "tokens": [
+          32
+        ],
+        "warmup": 10,
+        "samples": 7,
+        "iterations": 20,
+        "threads": 1,
+        "seed": 1234,
+        "output": "/tmp/dora_benchmark_4096_final.json"
+      },
+      "methodology": {
+        "reference": "Dense DoRA; output-row norm of W + A @ B detached from autograd.",
+        "gradient_validation": "Gaussian vector-Jacobian probe divided by sqrt(output.numel()).",
+        "forward": "torch.inference_mode; no autograd graph",
+        "forward_backward": "Clear gradients; forward; float32 squared mean loss; backward including input gradients.",
+        "timing": "Synchronized wall-clock batch; each sample is mean milliseconds per call.",
+        "memory": "CUDA max_memory_allocated minus live baseline after clearing gradients; excludes existing model/input tensors.",
+        "merged": "to_linear conversion excluded from inference timing; adapters fixed for inference."
+      },
+      "cases": [
+        {
+          "tokens": 32,
+          "validation": {
+            "passed": true,
+            "rtol": 0.0002,
+            "atol": 2e-05,
+            "comparisons": {
+              "output": {
+                "max_abs": 2.1457672119140625e-06,
+                "relative_l2": 5.83331116856598e-07
+              },
+              "input_grad": {
+                "max_abs": 6.51925802230835e-09,
+                "relative_l2": 6.152477697102133e-07
+              },
+              "lora_A_grad": {
+                "max_abs": 2.2351741790771484e-08,
+                "relative_l2": 3.861304993189973e-07
+              },
+              "lora_B_grad": {
+                "max_abs": 2.980232238769531e-07,
+                "relative_l2": 3.835627684673385e-07
+              },
+              "m_grad": {
+                "max_abs": 2.561137080192566e-08,
+                "relative_l2": 3.549356982853581e-07
+              },
+              "merged_output": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0
+              }
+            }
+          },
+          "measurements": {
+            "dense": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.23126735,
+                  0.2309018,
+                  0.23058479999999998,
+                  0.2302628,
+                  0.23092885000000002,
+                  0.23066745000000002,
+                  0.23040605
+                ],
+                "median_ms_per_call": 0.23066745000000002,
+                "peak_incremental_allocated_bytes": 134758400
+              },
+              "forward_backward": {
+                "sample_ms_per_call": [
+                  0.65038745,
+                  0.6520029,
+                  0.6512953,
+                  0.6532011999999999,
+                  0.6521386,
+                  0.65145755,
+                  0.65329585
+                ],
+                "median_ms_per_call": 0.6520029,
+                "peak_incremental_allocated_bytes": 269009920
+              }
+            },
+            "factorized": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.15152735,
+                  0.15170920000000002,
+                  0.1515284,
+                  0.15471420000000002,
+                  0.15501765,
+                  0.15503470000000003,
+                  0.15484889999999998
+                ],
+                "median_ms_per_call": 0.15471420000000002,
+                "peak_incremental_allocated_bytes": 67141632
+              },
+              "forward_backward": {
+                "sample_ms_per_call": [
+                  0.25826765,
+                  0.25566720000000004,
+                  0.25561860000000003,
+                  0.25491255,
+                  0.255563,
+                  0.2725051,
+                  0.2573838
+                ],
+                "median_ms_per_call": 0.25566720000000004,
+                "peak_incremental_allocated_bytes": 67141632
+              }
+            },
+            "merged": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.06169215,
+                  0.06107025,
+                  0.0610582,
+                  0.061108300000000004,
+                  0.06113635,
+                  0.06113535,
+                  0.06112885
+                ],
+                "median_ms_per_call": 0.06112885,
+                "peak_incremental_allocated_bytes": 524288
+              }
+            }
+          },
+          "speedup_dense_over_factorized": {
+            "forward": 1.4909261722582672,
+            "forward_backward": 2.5502015901922497
+          }
+        }
+      ]
+    },
+    {
+      "environment": {
+        "utc": "2026-10-08T21:00:08.069050+00:00",
+        "command": [
+          "/home/catid/venvs/dnn/bin/python",
+          "benchmark_dora.py",
+          "--device",
+          "cuda:0",
+          "--dtype",
+          "bfloat16",
+          "--in-features",
+          "64",
+          "--out-features",
+          "96",
+          "--rank",
+          "8",
+          "--tokens",
+          "16",
+          "--samples",
+          "2",
+          "--iterations",
+          "2",
+          "--warmup",
+          "2",
+          "--output",
+          "/tmp/dora_benchmark_bfloat16_smoke.json"
+        ],
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+        "pytorch": "2.12.0+cu130",
+        "cuda_runtime": "13.0",
+        "device": "cuda:0",
+        "cpu_threads": 1,
+        "matmul_precision": "highest",
+        "git_revision": "bb97617a0d5e1ad4c6856cb7278f5a7386820d18",
+        "source_sha256": {
+          "dora.py": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+          "benchmark_dora.py": "0b1bed235af286cba417409834b72a9c3339a3d76b282b693f658ee78eed3460"
+        },
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+        "gpu_total_memory_bytes": 102069305344,
+        "gpu_compute_capability": [
+          12,
+          0
+        ],
+        "nvidia_smi": "0, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-4c394fc5-b18f-6622-ca94-f7fbd7112927, 615.71.09\n1, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-f10c2baf-536b-1d40-cd4b-25b202ae0ded, 615.71.09\n2, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-04cde663-7c53-2f18-3ec4-1699820e2640, 615.71.09\n3, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-972bf85d-1b32-2d1b-20f6-babc4c804999, 615.71.09"
+      },
+      "configuration": {
+        "device": "cuda:0",
+        "dtype": "bfloat16",
+        "in_features": 64,
+        "out_features": 96,
+        "rank": 8,
+        "tokens": [
+          16
+        ],
+        "warmup": 2,
+        "samples": 2,
+        "iterations": 2,
+        "threads": 1,
+        "seed": 1234,
+        "output": "/tmp/dora_benchmark_bfloat16_smoke.json"
+      },
+      "methodology": {
+        "reference": "Dense DoRA; output-row norm of W + A @ B detached from autograd.",
+        "gradient_validation": "Gaussian vector-Jacobian probe divided by sqrt(output.numel()).",
+        "forward": "torch.inference_mode; no autograd graph",
+        "forward_backward": "Clear gradients; forward; float32 squared mean loss; backward including input gradients.",
+        "timing": "Synchronized wall-clock batch; each sample is mean milliseconds per call.",
+        "memory": "CUDA max_memory_allocated minus live baseline after clearing gradients; excludes existing model/input tensors.",
+        "merged": "to_linear conversion excluded from inference timing; adapters fixed for inference."
+      },
+      "cases": [
+        {
+          "tokens": 16,
+          "validation": {
+            "passed": true,
+            "rtol": 0.08,
+            "atol": 0.04,
+            "comparisons": {
+              "output": {
+                "max_abs": 0.015625,
+                "relative_l2": 0.0036894592874094664
+              },
+              "input_grad": {
+                "max_abs": 0.000244140625,
+                "relative_l2": 0.0037665711307180287
+              },
+              "lora_A_grad": {
+                "max_abs": 0.000244140625,
+                "relative_l2": 0.0035201079869470633
+              },
+              "lora_B_grad": {
+                "max_abs": 0.00390625,
+                "relative_l2": 0.003469241714221525
+              },
+              "m_grad": {
+                "max_abs": 0.000657990574836731,
+                "relative_l2": 0.0030948055459405982
+              },
+              "merged_output": {
+                "max_abs": 0.0,
+                "relative_l2": 0.0
+              }
+            }
+          },
+          "measurements": {
+            "dense": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.0613425,
+                  0.051152
+                ],
+                "median_ms_per_call": 0.05624725,
+                "peak_incremental_allocated_bytes": 73728
+              },
+              "forward_backward": {
+                "sample_ms_per_call": [
+                  0.262847,
+                  0.2089905
+                ],
+                "median_ms_per_call": 0.23591875,
+                "peak_incremental_allocated_bytes": 108032
+              }
+            },
+            "factorized": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.0730155,
+                  0.0649185
+                ],
+                "median_ms_per_call": 0.068967,
+                "peak_incremental_allocated_bytes": 55296
+              },
+              "forward_backward": {
+                "sample_ms_per_call": [
+                  0.228385,
+                  0.2213645
+                ],
+                "median_ms_per_call": 0.22487475,
+                "peak_incremental_allocated_bytes": 55296
+              }
+            },
+            "merged": {
+              "forward": {
+                "sample_ms_per_call": [
+                  0.0096145,
+                  0.008493
+                ],
+                "median_ms_per_call": 0.00905375,
+                "peak_incremental_allocated_bytes": 3072
+              }
+            }
+          },
+          "speedup_dense_over_factorized": {
+            "forward": 0.8155675902968086,
+            "forward_backward": 1.0491117833371688
+          }
+        }
+      ]
+    }
+  ]
+}
