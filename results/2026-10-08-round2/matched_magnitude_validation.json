@@ -1,0 +1,2767 @@
+{
+  "analysis": "validation-only matched-factor-LR magnitude optimizer diagnostic",
+  "complete": true,
+  "pending": [],
+  "comparisons": [
+    {
+      "task": "teacher",
+      "condition": "r2_row_scale_q0_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 6.401329954996982e-08,
+      "candidate_validation": 0.9308047890663147,
+      "candidate_minus_reference": 0.9308047250530151,
+      "benefit": -0.9308047250530151,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_row_scale_q0_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 6.401329954996982e-08,
+      "candidate_validation": 1.154429316520691,
+      "candidate_minus_reference": 1.1544292525073914,
+      "benefit": -1.1544292525073914,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_row_scale_q0_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0001259341079276055,
+      "candidate_validation": 0.001839077565819025,
+      "candidate_minus_reference": 0.0017131434578914195,
+      "benefit": -0.0017131434578914195,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_row_scale_q0_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0001259341079276055,
+      "candidate_validation": 0.09992340207099915,
+      "candidate_minus_reference": 0.09979746796307154,
+      "benefit": -0.09979746796307154,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 8.829031685309019e-06,
+      "candidate_validation": 4.619793617166579e-05,
+      "candidate_minus_reference": 3.736890448635677e-05,
+      "benefit": -3.736890448635677e-05,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 8.829031685309019e-06,
+      "candidate_validation": 0.03703303262591362,
+      "candidate_minus_reference": 0.03702420359422831,
+      "benefit": -0.03702420359422831,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 5.2294933993835e-05,
+      "candidate_validation": 0.00429640244692564,
+      "candidate_minus_reference": 0.004244107512931805,
+      "benefit": -0.004244107512931805,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 5.2294933993835e-05,
+      "candidate_validation": 0.0026881503872573376,
+      "candidate_minus_reference": 0.0026358554532635026,
+      "benefit": -0.0026358554532635026,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 4.122154223296093e-06,
+      "candidate_validation": 2.9866976092307596e-06,
+      "candidate_minus_reference": -1.1354566140653333e-06,
+      "benefit": 1.1354566140653333e-06,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 4.122154223296093e-06,
+      "candidate_validation": 0.025241248309612274,
+      "candidate_minus_reference": 0.025237126155388978,
+      "benefit": -0.025237126155388978,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0006696779746562243,
+      "candidate_validation": 0.00019515551684889942,
+      "candidate_minus_reference": -0.0004745224578073248,
+      "benefit": 0.0004745224578073248,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0006696779746562243,
+      "candidate_validation": 0.0015731408493593335,
+      "candidate_minus_reference": 0.0009034628747031093,
+      "benefit": -0.0009034628747031093,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 2.986900426549255e-06,
+      "candidate_validation": 0.006477991584688425,
+      "candidate_minus_reference": 0.006475004684261876,
+      "benefit": -0.006475004684261876,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 2.986900426549255e-06,
+      "candidate_validation": 0.1461775004863739,
+      "candidate_minus_reference": 0.14617451358594735,
+      "benefit": -0.14617451358594735,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00017236013081856072,
+      "candidate_validation": 0.00010446355736348778,
+      "candidate_minus_reference": -6.789657345507294e-05,
+      "benefit": 6.789657345507294e-05,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00017236013081856072,
+      "candidate_validation": 0.007326582446694374,
+      "candidate_minus_reference": 0.007154222315875813,
+      "benefit": -0.007154222315875813,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.3280099928379059,
+      "candidate_validation": 0.3265633285045624,
+      "candidate_minus_reference": -0.0014466643333435059,
+      "benefit": 0.0014466643333435059,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.3280099928379059,
+      "candidate_validation": 0.3326106369495392,
+      "candidate_minus_reference": 0.004600644111633301,
+      "benefit": -0.004600644111633301,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.40647709369659424,
+      "candidate_validation": 0.40976613759994507,
+      "candidate_minus_reference": 0.00328904390335083,
+      "benefit": -0.00328904390335083,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.40647709369659424,
+      "candidate_validation": 0.39071783423423767,
+      "candidate_minus_reference": -0.015759259462356567,
+      "benefit": 0.015759259462356567,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 1.120449996960815e-05,
+      "candidate_validation": 0.014087255112826824,
+      "candidate_minus_reference": 0.014076050612857216,
+      "benefit": -0.014076050612857216,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 1.120449996960815e-05,
+      "candidate_validation": 0.2876299321651459,
+      "candidate_minus_reference": 0.28761872766517627,
+      "benefit": -0.28761872766517627,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0030992731917649508,
+      "candidate_validation": 0.0008262555347755551,
+      "candidate_minus_reference": -0.0022730176569893956,
+      "benefit": 0.0022730176569893956,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q1_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0030992731917649508,
+      "candidate_validation": 0.01582750678062439,
+      "candidate_minus_reference": 0.012728233588859439,
+      "benefit": -0.012728233588859439,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 6.33013655715331e-07,
+      "candidate_validation": 0.0073260474018752575,
+      "candidate_minus_reference": 0.007325414388219542,
+      "benefit": -0.007325414388219542,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 6.33013655715331e-07,
+      "candidate_validation": 0.2866462469100952,
+      "candidate_minus_reference": 0.2866456138964395,
+      "benefit": -0.2866456138964395,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0009867006447166204,
+      "candidate_validation": 0.002743534045293927,
+      "candidate_minus_reference": 0.0017568334005773067,
+      "benefit": -0.0017568334005773067,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q2_white",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0009867006447166204,
+      "candidate_validation": 0.006642196327447891,
+      "candidate_minus_reference": 0.005655495682731271,
+      "benefit": -0.005655495682731271,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_row_scale_q0_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00014760519843548536,
+      "candidate_validation": 0.6627987027168274,
+      "candidate_minus_reference": 0.6626510975183919,
+      "benefit": -0.6626510975183919,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_row_scale_q0_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00014760519843548536,
+      "candidate_validation": 0.8927937150001526,
+      "candidate_minus_reference": 0.8926461098017171,
+      "benefit": -0.8926461098017171,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_row_scale_q0_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0008547541219741106,
+      "candidate_validation": 0.0054436638019979,
+      "candidate_minus_reference": 0.004588909680023789,
+      "benefit": -0.004588909680023789,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_row_scale_q0_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0008547541219741106,
+      "candidate_validation": 0.23316238820552826,
+      "candidate_minus_reference": 0.23230763408355415,
+      "benefit": -0.23230763408355415,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 6.889762880746275e-05,
+      "candidate_validation": 0.001681679394096136,
+      "candidate_minus_reference": 0.0016127817652886733,
+      "benefit": -0.0016127817652886733,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 6.889762880746275e-05,
+      "candidate_validation": 0.03736058250069618,
+      "candidate_minus_reference": 0.03729168487188872,
+      "benefit": -0.03729168487188872,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.017919916659593582,
+      "candidate_validation": 0.03762771561741829,
+      "candidate_minus_reference": 0.019707798957824707,
+      "benefit": -0.019707798957824707,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.017919916659593582,
+      "candidate_validation": 0.028327176347374916,
+      "candidate_minus_reference": 0.010407259687781334,
+      "benefit": -0.010407259687781334,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.2760959267616272,
+      "candidate_validation": 0.2226477861404419,
+      "candidate_minus_reference": -0.0534481406211853,
+      "benefit": 0.0534481406211853,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.2760959267616272,
+      "candidate_validation": 0.2522013187408447,
+      "candidate_minus_reference": -0.02389460802078247,
+      "benefit": 0.02389460802078247,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.4350222051143646,
+      "candidate_validation": 0.4289466142654419,
+      "candidate_minus_reference": -0.0060755908489227295,
+      "benefit": 0.0060755908489227295,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_unit_column_low_rank_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.4350222051143646,
+      "candidate_validation": 0.46587029099464417,
+      "candidate_minus_reference": 0.03084808588027954,
+      "benefit": -0.03084808588027954,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00013648776803165674,
+      "candidate_validation": 0.023836417123675346,
+      "candidate_minus_reference": 0.02369992935564369,
+      "benefit": -0.02369992935564369,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00013648776803165674,
+      "candidate_validation": 0.08326835185289383,
+      "candidate_minus_reference": 0.08313186408486217,
+      "benefit": -0.08313186408486217,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.018602725118398666,
+      "candidate_validation": 0.009625650011003017,
+      "candidate_minus_reference": -0.008977075107395649,
+      "benefit": 0.008977075107395649,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.018602725118398666,
+      "candidate_validation": 0.045282118022441864,
+      "candidate_minus_reference": 0.026679392904043198,
+      "benefit": -0.026679392904043198,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.3338928818702698,
+      "candidate_validation": 0.33537450432777405,
+      "candidate_minus_reference": 0.0014816224575042725,
+      "benefit": -0.0014816224575042725,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.3338928818702698,
+      "candidate_validation": 0.3537772595882416,
+      "candidate_minus_reference": 0.019884377717971802,
+      "benefit": -0.019884377717971802,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.5064812302589417,
+      "candidate_validation": 0.515093982219696,
+      "candidate_minus_reference": 0.008612751960754395,
+      "benefit": -0.008612751960754395,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_heterogeneous_column_low_rank_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.5064812302589417,
+      "candidate_validation": 0.5185278058052063,
+      "candidate_minus_reference": 0.012046575546264648,
+      "benefit": -0.012046575546264648,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 6.361449050018564e-05,
+      "candidate_validation": 0.039468877017498016,
+      "candidate_minus_reference": 0.03940526252699783,
+      "benefit": -0.03940526252699783,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 6.361449050018564e-05,
+      "candidate_validation": 0.2930569648742676,
+      "candidate_minus_reference": 0.2929933503837674,
+      "benefit": -0.2929933503837674,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.007314628455787897,
+      "candidate_validation": 0.010034151375293732,
+      "candidate_minus_reference": 0.0027195229195058346,
+      "benefit": -0.0027195229195058346,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q1_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.007314628455787897,
+      "candidate_validation": 0.030900049954652786,
+      "candidate_minus_reference": 0.02358542149886489,
+      "benefit": -0.02358542149886489,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.14279800653457642,
+      "candidate_validation": 0.19978076219558716,
+      "candidate_minus_reference": 0.05698275566101074,
+      "benefit": -0.05698275566101074,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.14279800653457642,
+      "candidate_validation": 0.5008410811424255,
+      "candidate_minus_reference": 0.3580430746078491,
+      "benefit": -0.3580430746078491,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.3115248382091522,
+      "candidate_validation": 0.3177228271961212,
+      "candidate_minus_reference": 0.006197988986968994,
+      "benefit": -0.006197988986968994,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r2_mixed_row_and_direction_q2_rescaled",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.3115248382091522,
+      "candidate_validation": 0.35174253582954407,
+      "candidate_minus_reference": 0.040217697620391846,
+      "benefit": -0.040217697620391846,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_row_scale_q0_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.016858045011758804,
+      "candidate_validation": 1.3852497339248657,
+      "candidate_minus_reference": 1.368391688913107,
+      "benefit": -1.368391688913107,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_row_scale_q0_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.016858045011758804,
+      "candidate_validation": 1.6153011322021484,
+      "candidate_minus_reference": 1.5984430871903896,
+      "benefit": -1.5984430871903896,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_row_scale_q0_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0010503371013328433,
+      "candidate_validation": 0.010020589455962181,
+      "candidate_minus_reference": 0.008970252354629338,
+      "benefit": -0.008970252354629338,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_row_scale_q0_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0010503371013328433,
+      "candidate_validation": 0.26483267545700073,
+      "candidate_minus_reference": 0.2637823383556679,
+      "benefit": -0.2637823383556679,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 1.5142340998863801e-06,
+      "candidate_validation": 3.2180130347114755e-06,
+      "candidate_minus_reference": 1.7037789348250953e-06,
+      "benefit": -1.7037789348250953e-06,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 1.5142340998863801e-06,
+      "candidate_validation": 0.02228284440934658,
+      "candidate_minus_reference": 0.022281330175246694,
+      "benefit": -0.022281330175246694,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.001042444258928299,
+      "candidate_validation": 0.0024699033237993717,
+      "candidate_minus_reference": 0.0014274590648710728,
+      "benefit": -0.0014274590648710728,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.001042444258928299,
+      "candidate_validation": 0.0025353801902383566,
+      "candidate_minus_reference": 0.0014929359313100576,
+      "benefit": -0.0014929359313100576,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 9.69811139839294e-07,
+      "candidate_validation": 1.9176395653630607e-06,
+      "candidate_minus_reference": 9.478284255237668e-07,
+      "benefit": -9.478284255237668e-07,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 9.69811139839294e-07,
+      "candidate_validation": 0.01713729090988636,
+      "candidate_minus_reference": 0.01713632109874652,
+      "benefit": -0.01713632109874652,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0008502411074005067,
+      "candidate_validation": 0.00102189218159765,
+      "candidate_minus_reference": 0.00017165107419714332,
+      "benefit": -0.00017165107419714332,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0008502411074005067,
+      "candidate_validation": 0.0008707934175617993,
+      "candidate_minus_reference": 2.0552310161292553e-05,
+      "benefit": -2.0552310161292553e-05,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 1.676563078945037e-05,
+      "candidate_validation": 1.025383699015947e-05,
+      "candidate_minus_reference": -6.511793799290899e-06,
+      "benefit": 6.511793799290899e-06,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 1.676563078945037e-05,
+      "candidate_validation": 0.033349234610795975,
+      "candidate_minus_reference": 0.033332468980006524,
+      "benefit": -0.033332468980006524,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00023762957425788045,
+      "candidate_validation": 0.001977545442059636,
+      "candidate_minus_reference": 0.0017399158678017557,
+      "benefit": -0.0017399158678017557,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00023762957425788045,
+      "candidate_validation": 0.00017583092267159373,
+      "candidate_minus_reference": -6.179865158628672e-05,
+      "benefit": 6.179865158628672e-05,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.03808948025107384,
+      "candidate_validation": 0.035402387380599976,
+      "candidate_minus_reference": -0.0026870928704738617,
+      "benefit": 0.0026870928704738617,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.03808948025107384,
+      "candidate_validation": 0.04979003965854645,
+      "candidate_minus_reference": 0.01170055940747261,
+      "benefit": -0.01170055940747261,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.04622276872396469,
+      "candidate_validation": 0.04333057627081871,
+      "candidate_minus_reference": -0.002892192453145981,
+      "benefit": 0.002892192453145981,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.04622276872396469,
+      "candidate_validation": 0.044542208313941956,
+      "candidate_minus_reference": -0.0016805604100227356,
+      "benefit": 0.0016805604100227356,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 5.106538992549758e-06,
+      "candidate_validation": 0.020760994404554367,
+      "candidate_minus_reference": 0.020755887865561817,
+      "benefit": -0.020755887865561817,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 5.106538992549758e-06,
+      "candidate_validation": 0.5904266238212585,
+      "candidate_minus_reference": 0.590421517282266,
+      "benefit": -0.590421517282266,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0009263931424356997,
+      "candidate_validation": 0.0011342301731929183,
+      "candidate_minus_reference": 0.0002078370307572186,
+      "benefit": -0.0002078370307572186,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q7_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0009263931424356997,
+      "candidate_validation": 0.21298576891422272,
+      "candidate_minus_reference": 0.21205937577178702,
+      "benefit": -0.21205937577178702,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 3.2027064662543125e-06,
+      "candidate_validation": 0.06806263327598572,
+      "candidate_minus_reference": 0.06805943056951946,
+      "benefit": -0.06805943056951946,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 3.2027064662543125e-06,
+      "candidate_validation": 0.6054561138153076,
+      "candidate_minus_reference": 0.6054529111088414,
+      "benefit": -0.6054529111088414,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0028160451911389828,
+      "candidate_validation": 0.0032295784913003445,
+      "candidate_minus_reference": 0.0004135333001613617,
+      "benefit": -0.0004135333001613617,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q8_white",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0028160451911389828,
+      "candidate_validation": 0.06881340593099594,
+      "candidate_minus_reference": 0.06599736073985696,
+      "benefit": -0.06599736073985696,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_row_scale_q0_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.003046624595299363,
+      "candidate_validation": 1.0020277500152588,
+      "candidate_minus_reference": 0.9989811254199594,
+      "benefit": -0.9989811254199594,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_row_scale_q0_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.003046624595299363,
+      "candidate_validation": 1.2338032722473145,
+      "candidate_minus_reference": 1.230756647652015,
+      "benefit": -1.230756647652015,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_row_scale_q0_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00037484592758119106,
+      "candidate_validation": 0.008882701396942139,
+      "candidate_minus_reference": 0.008507855469360948,
+      "benefit": -0.008507855469360948,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_row_scale_q0_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.00037484592758119106,
+      "candidate_validation": 0.98408442735672,
+      "candidate_minus_reference": 0.9837095814291388,
+      "benefit": -0.9837095814291388,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0011058099335059524,
+      "candidate_validation": 0.003243714803829789,
+      "candidate_minus_reference": 0.002137904870323837,
+      "benefit": -0.002137904870323837,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0011058099335059524,
+      "candidate_validation": 0.11064895987510681,
+      "candidate_minus_reference": 0.10954314994160086,
+      "benefit": -0.10954314994160086,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.016030989587306976,
+      "candidate_validation": 0.009474174119532108,
+      "candidate_minus_reference": -0.006556815467774868,
+      "benefit": 0.006556815467774868,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.016030989587306976,
+      "candidate_validation": 0.022040557116270065,
+      "candidate_minus_reference": 0.006009567528963089,
+      "benefit": -0.006009567528963089,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.05979098752140999,
+      "candidate_validation": 0.05929437279701233,
+      "candidate_minus_reference": -0.0004966147243976593,
+      "benefit": 0.0004966147243976593,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.05979098752140999,
+      "candidate_validation": 0.08455522358417511,
+      "candidate_minus_reference": 0.02476423606276512,
+      "benefit": -0.02476423606276512,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.07289669662714005,
+      "candidate_validation": 0.07829555124044418,
+      "candidate_minus_reference": 0.005398854613304138,
+      "benefit": -0.005398854613304138,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_unit_column_low_rank_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.07289669662714005,
+      "candidate_validation": 0.07053400576114655,
+      "candidate_minus_reference": -0.0023626908659934998,
+      "benefit": 0.0023626908659934998,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.003775543300434947,
+      "candidate_validation": 0.004402478225529194,
+      "candidate_minus_reference": 0.0006269349250942469,
+      "benefit": -0.0006269349250942469,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.003775543300434947,
+      "candidate_validation": 0.06084999442100525,
+      "candidate_minus_reference": 0.0570744511205703,
+      "benefit": -0.0570744511205703,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.022993626073002815,
+      "candidate_validation": 0.03313996270298958,
+      "candidate_minus_reference": 0.010146336629986763,
+      "benefit": -0.010146336629986763,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.022993626073002815,
+      "candidate_validation": 0.01871984824538231,
+      "candidate_minus_reference": -0.004273777827620506,
+      "benefit": 0.004273777827620506,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.062422651797533035,
+      "candidate_validation": 0.0619615763425827,
+      "candidate_minus_reference": -0.00046107545495033264,
+      "benefit": 0.00046107545495033264,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.062422651797533035,
+      "candidate_validation": 0.08368819206953049,
+      "candidate_minus_reference": 0.021265540271997452,
+      "benefit": -0.021265540271997452,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0664609894156456,
+      "candidate_validation": 0.07843936234712601,
+      "candidate_minus_reference": 0.011978372931480408,
+      "benefit": -0.011978372931480408,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_heterogeneous_column_low_rank_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0664609894156456,
+      "candidate_validation": 0.06999318301677704,
+      "candidate_minus_reference": 0.003532193601131439,
+      "benefit": -0.003532193601131439,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0016526790568605065,
+      "candidate_validation": 0.12098482996225357,
+      "candidate_minus_reference": 0.11933215090539306,
+      "benefit": -0.11933215090539306,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0016526790568605065,
+      "candidate_validation": 0.5162347555160522,
+      "candidate_minus_reference": 0.5145820764591917,
+      "benefit": -0.5145820764591917,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0065986039116978645,
+      "candidate_validation": 0.028261473402380943,
+      "candidate_minus_reference": 0.02166286949068308,
+      "benefit": -0.02166286949068308,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q7_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.0065986039116978645,
+      "candidate_validation": 0.14952223002910614,
+      "candidate_minus_reference": 0.14292362611740828,
+      "benefit": -0.14292362611740828,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.04171072319149971,
+      "candidate_validation": 0.10668044537305832,
+      "candidate_minus_reference": 0.06496972218155861,
+      "benefit": -0.06496972218155861,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.04171072319149971,
+      "candidate_validation": 0.607094943523407,
+      "candidate_minus_reference": 0.5653842203319073,
+      "benefit": -0.5653842203319073,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.07636275142431259,
+      "candidate_validation": 0.09232112020254135,
+      "candidate_minus_reference": 0.01595836877822876,
+      "benefit": -0.01595836877822876,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "teacher",
+      "condition": "r8_mixed_row_and_direction_q8_rescaled",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.03,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "relative_validation_mse",
+      "higher_is_better": false,
+      "reference_validation": 0.07636275142431259,
+      "candidate_validation": 0.207707941532135,
+      "candidate_minus_reference": 0.13134519010782242,
+      "benefit": -0.13134519010782242,
+      "budget": {
+        "steps": 800
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "retrieval",
+      "condition": "nfcorpus",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.0001,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_ndcg_at_10",
+      "higher_is_better": true,
+      "reference_validation": 0.30411767857663097,
+      "candidate_validation": 0.3040534023437284,
+      "candidate_minus_reference": -6.427623290256035e-05,
+      "benefit": -6.427623290256035e-05,
+      "budget": {
+        "epochs": 5
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "retrieval",
+      "condition": "nfcorpus",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.0001,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_ndcg_at_10",
+      "higher_is_better": true,
+      "reference_validation": 0.30411767857663097,
+      "candidate_validation": 0.30383580917763514,
+      "candidate_minus_reference": -0.0002818693989958265,
+      "benefit": -0.0002818693989958265,
+      "budget": {
+        "epochs": 5
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "retrieval",
+      "condition": "nfcorpus",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.0003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_ndcg_at_10",
+      "higher_is_better": true,
+      "reference_validation": 0.308304070385688,
+      "candidate_validation": 0.3079371098476593,
+      "candidate_minus_reference": -0.00036696053802870443,
+      "benefit": -0.00036696053802870443,
+      "budget": {
+        "epochs": 5
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "retrieval",
+      "condition": "nfcorpus",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.0003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_ndcg_at_10",
+      "higher_is_better": true,
+      "reference_validation": 0.308304070385688,
+      "candidate_validation": 0.3079672660815291,
+      "candidate_minus_reference": -0.00033680430415894413,
+      "benefit": -0.00033680430415894413,
+      "budget": {
+        "epochs": 5
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "retrieval",
+      "condition": "nfcorpus",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.0001,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_ndcg_at_10",
+      "higher_is_better": true,
+      "reference_validation": 0.3066948408587319,
+      "candidate_validation": 0.3071030147669852,
+      "candidate_minus_reference": 0.00040817390825331756,
+      "benefit": 0.00040817390825331756,
+      "budget": {
+        "epochs": 5
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "retrieval",
+      "condition": "nfcorpus",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.0001,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_ndcg_at_10",
+      "higher_is_better": true,
+      "reference_validation": 0.3066948408587319,
+      "candidate_validation": 0.30546713288972654,
+      "candidate_minus_reference": -0.0012277079690053427,
+      "benefit": -0.0012277079690053427,
+      "budget": {
+        "epochs": 5
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "retrieval",
+      "condition": "nfcorpus",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.0003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_ndcg_at_10",
+      "higher_is_better": true,
+      "reference_validation": 0.3061121287735087,
+      "candidate_validation": 0.3052969363338355,
+      "candidate_minus_reference": -0.0008151924396732069,
+      "benefit": -0.0008151924396732069,
+      "budget": {
+        "epochs": 5
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "retrieval",
+      "condition": "nfcorpus",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.0003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_ndcg_at_10",
+      "higher_is_better": true,
+      "reference_validation": 0.3061121287735087,
+      "candidate_validation": 0.3063407498438207,
+      "candidate_minus_reference": 0.0002286210703120184,
+      "benefit": 0.0002286210703120184,
+      "budget": {
+        "epochs": 5
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr"
+    },
+    {
+      "task": "cogs",
+      "condition": "iid_validation",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.0003,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_target_token_nll",
+      "higher_is_better": false,
+      "reference_validation": 0.004080778788691103,
+      "candidate_validation": 0.007562073097507349,
+      "candidate_minus_reference": 0.0034812943088162462,
+      "benefit": -0.0034812943088162462,
+      "budget": {
+        "steps": 384
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 384,
+      "candidate_selected_checkpoint": 384
+    },
+    {
+      "task": "cogs",
+      "condition": "iid_validation",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.0003,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_target_token_nll",
+      "higher_is_better": false,
+      "reference_validation": 0.004080778788691103,
+      "candidate_validation": 0.005132888273418257,
+      "candidate_minus_reference": 0.001052109484727154,
+      "benefit": -0.001052109484727154,
+      "budget": {
+        "steps": 384
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 384,
+      "candidate_selected_checkpoint": 384
+    },
+    {
+      "task": "cogs",
+      "condition": "iid_validation",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.001,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_target_token_nll",
+      "higher_is_better": false,
+      "reference_validation": 0.023079204171897072,
+      "candidate_validation": 0.027381079153488187,
+      "candidate_minus_reference": 0.004301874981591115,
+      "benefit": -0.004301874981591115,
+      "budget": {
+        "steps": 384
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 288,
+      "candidate_selected_checkpoint": 384
+    },
+    {
+      "task": "cogs",
+      "condition": "iid_validation",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.001,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_target_token_nll",
+      "higher_is_better": false,
+      "reference_validation": 0.023079204171897072,
+      "candidate_validation": 0.026678547201856303,
+      "candidate_minus_reference": 0.003599343029959231,
+      "benefit": -0.003599343029959231,
+      "budget": {
+        "steps": 384
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 288,
+      "candidate_selected_checkpoint": 384
+    },
+    {
+      "task": "aircraft",
+      "condition": "validation",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.0001,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_macro_accuracy",
+      "higher_is_better": true,
+      "reference_validation": 0.5363190770149231,
+      "candidate_validation": 0.5363458395004272,
+      "candidate_minus_reference": 2.676248550415039e-05,
+      "benefit": 2.676248550415039e-05,
+      "budget": {
+        "epochs": 10
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 10,
+      "candidate_selected_checkpoint": 10,
+      "secondary_validation": {
+        "metric": "cross_entropy",
+        "higher_is_better": false,
+        "reference": 1.864607512825715,
+        "candidate": 1.8688163687937474
+      }
+    },
+    {
+      "task": "aircraft",
+      "condition": "validation",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.0001,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_macro_accuracy",
+      "higher_is_better": true,
+      "reference_validation": 0.5363190770149231,
+      "candidate_validation": 0.5372371077537537,
+      "candidate_minus_reference": 0.0009180307388305664,
+      "benefit": 0.0009180307388305664,
+      "budget": {
+        "epochs": 10
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 10,
+      "candidate_selected_checkpoint": 10,
+      "secondary_validation": {
+        "metric": "cross_entropy",
+        "higher_is_better": false,
+        "reference": 1.864607512825715,
+        "candidate": 1.8695906009754188
+      }
+    },
+    {
+      "task": "aircraft",
+      "condition": "validation",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.001,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_macro_accuracy",
+      "higher_is_better": true,
+      "reference_validation": 0.5519340634346008,
+      "candidate_validation": 0.5499643683433533,
+      "candidate_minus_reference": -0.0019696950912475586,
+      "benefit": -0.0019696950912475586,
+      "budget": {
+        "epochs": 10
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 10,
+      "candidate_selected_checkpoint": 10,
+      "secondary_validation": {
+        "metric": "cross_entropy",
+        "higher_is_better": false,
+        "reference": 1.828734284580344,
+        "candidate": 1.8414933098853976
+      }
+    },
+    {
+      "task": "aircraft",
+      "condition": "validation",
+      "rank": 2,
+      "seed": 42,
+      "factor_learning_rate": 0.001,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_macro_accuracy",
+      "higher_is_better": true,
+      "reference_validation": 0.5519340634346008,
+      "candidate_validation": 0.5408377647399902,
+      "candidate_minus_reference": -0.011096298694610596,
+      "benefit": -0.011096298694610596,
+      "budget": {
+        "epochs": 10
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 10,
+      "candidate_selected_checkpoint": 9,
+      "secondary_validation": {
+        "metric": "cross_entropy",
+        "higher_is_better": false,
+        "reference": 1.828734284580344,
+        "candidate": 1.8511975856647096
+      }
+    },
+    {
+      "task": "aircraft",
+      "condition": "validation",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.0001,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_macro_accuracy",
+      "higher_is_better": true,
+      "reference_validation": 0.5597325563430786,
+      "candidate_validation": 0.5615507960319519,
+      "candidate_minus_reference": 0.001818239688873291,
+      "benefit": 0.001818239688873291,
+      "budget": {
+        "epochs": 10
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 10,
+      "candidate_selected_checkpoint": 10,
+      "secondary_validation": {
+        "metric": "cross_entropy",
+        "higher_is_better": false,
+        "reference": 1.8221445095778728,
+        "candidate": 1.8215439550661303
+      }
+    },
+    {
+      "task": "aircraft",
+      "condition": "validation",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.0001,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_macro_accuracy",
+      "higher_is_better": true,
+      "reference_validation": 0.5597325563430786,
+      "candidate_validation": 0.5609180331230164,
+      "candidate_minus_reference": 0.0011854767799377441,
+      "benefit": 0.0011854767799377441,
+      "budget": {
+        "epochs": 10
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 10,
+      "candidate_selected_checkpoint": 10,
+      "secondary_validation": {
+        "metric": "cross_entropy",
+        "higher_is_better": false,
+        "reference": 1.8221445095778728,
+        "candidate": 1.8218573147636115
+      }
+    },
+    {
+      "task": "aircraft",
+      "condition": "validation",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.001,
+      "magnitude_lr_multiplier": 0.1,
+      "metric": "validation_macro_accuracy",
+      "higher_is_better": true,
+      "reference_validation": 0.5993493795394897,
+      "candidate_validation": 0.5877183675765991,
+      "candidate_minus_reference": -0.011631011962890625,
+      "benefit": -0.011631011962890625,
+      "budget": {
+        "epochs": 10
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 10,
+      "candidate_selected_checkpoint": 10,
+      "secondary_validation": {
+        "metric": "cross_entropy",
+        "higher_is_better": false,
+        "reference": 1.7121079251317695,
+        "candidate": 1.7655751195141334
+      }
+    },
+    {
+      "task": "aircraft",
+      "condition": "validation",
+      "rank": 8,
+      "seed": 42,
+      "factor_learning_rate": 0.001,
+      "magnitude_lr_multiplier": 0.01,
+      "metric": "validation_macro_accuracy",
+      "higher_is_better": true,
+      "reference_validation": 0.5993493795394897,
+      "candidate_validation": 0.5939394235610962,
+      "candidate_minus_reference": -0.005409955978393555,
+      "benefit": -0.005409955978393555,
+      "budget": {
+        "epochs": 10
+      },
+      "reference_method": "dora_nora",
+      "candidate_method": "dora_nora_mlr",
+      "reference_selected_checkpoint": 10,
+      "candidate_selected_checkpoint": 10,
+      "secondary_validation": {
+        "metric": "cross_entropy",
+        "higher_is_better": false,
+        "reference": 1.7121079251317695,
+        "candidate": 1.734486414350406
+      }
+    }
+  ],
+  "descriptive_summary": [
+    {
+      "task": "aircraft",
+      "metric": "validation_macro_accuracy",
+      "magnitude_lr_multiplier": 0.01,
+      "pairs": 4,
+      "strictly_better": 2,
+      "strictly_worse": 2,
+      "exact_ties": 0,
+      "median_reference_validation": 0.5558333098888397,
+      "median_candidate_validation": 0.5508778989315033,
+      "median_benefit": -0.002245962619781494
+    },
+    {
+      "task": "aircraft",
+      "metric": "validation_macro_accuracy",
+      "magnitude_lr_multiplier": 0.1,
+      "pairs": 4,
+      "strictly_better": 2,
+      "strictly_worse": 2,
+      "exact_ties": 0,
+      "median_reference_validation": 0.5558333098888397,
+      "median_candidate_validation": 0.5557575821876526,
+      "median_benefit": -0.0009714663028717041
+    },
+    {
+      "task": "cogs",
+      "metric": "validation_target_token_nll",
+      "magnitude_lr_multiplier": 0.01,
+      "pairs": 2,
+      "strictly_better": 0,
+      "strictly_worse": 2,
+      "exact_ties": 0,
+      "median_reference_validation": 0.013579991480294087,
+      "median_candidate_validation": 0.017471576125497768,
+      "median_benefit": -0.0038915846452036804
+    },
+    {
+      "task": "cogs",
+      "metric": "validation_target_token_nll",
+      "magnitude_lr_multiplier": 0.1,
+      "pairs": 2,
+      "strictly_better": 0,
+      "strictly_worse": 2,
+      "exact_ties": 0,
+      "median_reference_validation": 0.013579991480294087,
+      "median_candidate_validation": 0.01590571773763728,
+      "median_benefit": -0.0023257262573431925
+    },
+    {
+      "task": "retrieval",
+      "metric": "validation_ndcg_at_10",
+      "magnitude_lr_multiplier": 0.01,
+      "pairs": 4,
+      "strictly_better": 1,
+      "strictly_worse": 3,
+      "exact_ties": 0,
+      "median_reference_validation": 0.3064034848161203,
+      "median_candidate_validation": 0.30619997555041034,
+      "median_benefit": -0.0002156183854656324
+    },
+    {
+      "task": "retrieval",
+      "metric": "validation_ndcg_at_10",
+      "magnitude_lr_multiplier": 0.1,
+      "pairs": 4,
+      "strictly_better": 1,
+      "strictly_worse": 3,
+      "exact_ties": 0,
+      "median_reference_validation": 0.3064034848161203,
+      "median_candidate_validation": 0.3059039413667736,
+      "median_benefit": -0.00030933685157738533
+    },
+    {
+      "task": "teacher",
+      "metric": "relative_validation_mse",
+      "magnitude_lr_multiplier": 0.01,
+      "pairs": 56,
+      "strictly_better": 6,
+      "strictly_worse": 50,
+      "exact_ties": 0,
+      "median_reference_validation": 0.0013792444951832294,
+      "median_candidate_validation": 0.09223931282758713,
+      "median_benefit": -0.03209027743014303
+    },
+    {
+      "task": "teacher",
+      "metric": "relative_validation_mse",
+      "magnitude_lr_multiplier": 0.1,
+      "pairs": 56,
+      "strictly_better": 14,
+      "strictly_worse": 42,
+      "exact_ties": 0,
+      "median_reference_validation": 0.0013792444951832294,
+      "median_candidate_validation": 0.017424124758690596,
+      "median_benefit": -0.0024287138949148357
+    }
+  ],
+  "input_sha256": {
+    "teacher_compact/manifest.json": "d9f5e325b04bc7e66ae0e95800acb42e6daeb13ad88df3967a16e34304e48894",
+    "teacher_compact/selections/r2_row_scale_q0_white/dora_nora.json": "5b390558e1350cfc3b0d55d5685697594332b812efa6f257322c206655b1ad8c",
+    "teacher_compact/selections/r2_row_scale_q0_white/dora_nora_mlr.json": "9a2c436ae7c5ffbc346a99baf5dff0af3d6204c70649758784ba19a7988f5b3e",
+    "teacher_compact/selections/r2_unit_column_low_rank_q1_white/dora_nora.json": "c66f735ac4e3c0833d070162184083f2a33b5cbf63050792013ece100ebcabdc",
+    "teacher_compact/selections/r2_unit_column_low_rank_q1_white/dora_nora_mlr.json": "5f8fbdbf108f55c5179cdedf36ce201102980fe60c5346f6597e2acc18451e0a",
+    "teacher_compact/selections/r2_unit_column_low_rank_q2_white/dora_nora.json": "929a6e4453f502d5e49c0c44db674e4623829f6b0178cfdd0dce2db82a5ba036",
+    "teacher_compact/selections/r2_unit_column_low_rank_q2_white/dora_nora_mlr.json": "e68744898b2facdaa408efef4e580e73071c9c95684af38776d474f041673324",
+    "teacher_compact/selections/r2_heterogeneous_column_low_rank_q1_white/dora_nora.json": "b51131c2c1cdf31068f4fa38c8def898a4d92c90a49fedaf8f82cb0a8716eb9c",
+    "teacher_compact/selections/r2_heterogeneous_column_low_rank_q1_white/dora_nora_mlr.json": "8a64d18da73f83250245f2cc45f621fed836d720823b0a2d78dc74a030778d42",
+    "teacher_compact/selections/r2_heterogeneous_column_low_rank_q2_white/dora_nora.json": "c63cd2e818de2ac35e117c50ec2afd018124866f463a092cf8b845832c5f248c",
+    "teacher_compact/selections/r2_heterogeneous_column_low_rank_q2_white/dora_nora_mlr.json": "4a7dfffafd9a292665fffb7fac2847efb039cfa72009455f09be2cbfb729b27c",
+    "teacher_compact/selections/r2_mixed_row_and_direction_q1_white/dora_nora.json": "5b934f010fb5cbf7a421228a0c9712cd754afd8df0a11c86e8735664c6fbc4f7",
+    "teacher_compact/selections/r2_mixed_row_and_direction_q1_white/dora_nora_mlr.json": "a058b1ac69e416476b7179b0847397eac84bd421d61ed9b6dc1f097117293f04",
+    "teacher_compact/selections/r2_mixed_row_and_direction_q2_white/dora_nora.json": "8598cc4b67e4afbfe0bc21b7595935fdba30d2877459dd20c73885ad3ee48410",
+    "teacher_compact/selections/r2_mixed_row_and_direction_q2_white/dora_nora_mlr.json": "b4189513c36d6242d2b6c9c3f823c0a992f07beed1886a40f6a3c1e3c66fb64d",
+    "teacher_compact/selections/r2_row_scale_q0_rescaled/dora_nora.json": "8c3a4d8475882e871d8e8e4b18820408276b8b1abbfa28ede333a12b3be765e6",
+    "teacher_compact/selections/r2_row_scale_q0_rescaled/dora_nora_mlr.json": "35ad3cb67a55801b05acf908f08deb3c287a2e7abd40005bce7201e6f1c01b22",
+    "teacher_compact/selections/r2_unit_column_low_rank_q1_rescaled/dora_nora.json": "38f7bddcbd93210a420e05030eb454bf325273fdd4d87625da44fc4f1a5cd985",
+    "teacher_compact/selections/r2_unit_column_low_rank_q1_rescaled/dora_nora_mlr.json": "2bd9fec2e1d06c8891512aee4da6079d62c81817a214a082431de1347d3c8363",
+    "teacher_compact/selections/r2_unit_column_low_rank_q2_rescaled/dora_nora.json": "b0d5a4114b596f5a997e970b54a912475f37c4e502d49ee92e77e660b58f9915",
+    "teacher_compact/selections/r2_unit_column_low_rank_q2_rescaled/dora_nora_mlr.json": "d77d4fca79a0039a59e50c7bbf4ef893382a8d2176d82772d16b22888ea725c9",
+    "teacher_compact/selections/r2_heterogeneous_column_low_rank_q1_rescaled/dora_nora.json": "ed4bc34a3bafbc4ba11c5f6f6ee340beeaafa544aee78461ca9b24b5e30a0bef",
+    "teacher_compact/selections/r2_heterogeneous_column_low_rank_q1_rescaled/dora_nora_mlr.json": "c426dd40705caf08830998d80cbfd9b593e9413669c540ba3ed615f71a82ae49",
+    "teacher_compact/selections/r2_heterogeneous_column_low_rank_q2_rescaled/dora_nora.json": "2a68587bf8442472727837d131c62302bd4ae64ca2486d4632ba637174490baf",
+    "teacher_compact/selections/r2_heterogeneous_column_low_rank_q2_rescaled/dora_nora_mlr.json": "162f84e7754e28f2bc61c431c4b494e364dcc632c221548d99a70c5c0679a8b2",
+    "teacher_compact/selections/r2_mixed_row_and_direction_q1_rescaled/dora_nora.json": "e6b6b028a4b7ba0a053781f4083c44fabe5cea4d2ed523a4cab16e546ccd2df3",
+    "teacher_compact/selections/r2_mixed_row_and_direction_q1_rescaled/dora_nora_mlr.json": "4244ba2fc5e884d2509bbb04213c62e0f19aa8c5b4f0b6a1daccedbb77cdce0e",
+    "teacher_compact/selections/r2_mixed_row_and_direction_q2_rescaled/dora_nora.json": "08aea86c89c683b9f7ce855058f13e96d900d4f5cdc5f7ae84ff737c0062ccaf",
+    "teacher_compact/selections/r2_mixed_row_and_direction_q2_rescaled/dora_nora_mlr.json": "e93693c6e46039073b429b5c218799cab3e535bfc898eb9e92fa941ef12fa2b9",
+    "teacher_compact/selections/r8_row_scale_q0_white/dora_nora.json": "30c4da231ac60153ed8ece2780083f2bb4417dcf2a9c9203cffecf67a7e52f57",
+    "teacher_compact/selections/r8_row_scale_q0_white/dora_nora_mlr.json": "89614d99c2cb6d5c0165d1dc1d3fec8e124c3515d1ca0fe5022ebceb588261c3",
+    "teacher_compact/selections/r8_unit_column_low_rank_q7_white/dora_nora.json": "b0d1a97199557067420803737e8ccd7ef73ac7091a372d92c02d5f9ae34d37f1",
+    "teacher_compact/selections/r8_unit_column_low_rank_q7_white/dora_nora_mlr.json": "277c094eed56367ac087ff7dd3f026bd39282ab37911ee12ee0d3fb4cd4163dd",
+    "teacher_compact/selections/r8_unit_column_low_rank_q8_white/dora_nora.json": "eff697af2930ec1536bfea5c7d0ed5f4b0124c658d0f551d2b0325ec620a52a0",
+    "teacher_compact/selections/r8_unit_column_low_rank_q8_white/dora_nora_mlr.json": "3c39726f1b4f96d946dafd458e5c465e828064ece022eda4356311cee47ca84d",
+    "teacher_compact/selections/r8_heterogeneous_column_low_rank_q7_white/dora_nora.json": "11c2cad893bb75355093e6166009e80d5dbc12ad9649327b276c0d5ee4c77f36",
+    "teacher_compact/selections/r8_heterogeneous_column_low_rank_q7_white/dora_nora_mlr.json": "52b187b9d291c25e8d365c25ecf468ff816f24a333c1df20d2cd87b7e38479b8",
+    "teacher_compact/selections/r8_heterogeneous_column_low_rank_q8_white/dora_nora.json": "f4bd8a2c0bb640575791c80a05f2c73458d192242a674f2829abcb4f9370da0b",
+    "teacher_compact/selections/r8_heterogeneous_column_low_rank_q8_white/dora_nora_mlr.json": "30ceea39630f8cf97d6ba4631a8d028c4d235664025e0a4f47825bb4489a2930",
+    "teacher_compact/selections/r8_mixed_row_and_direction_q7_white/dora_nora.json": "cb1c106577050dc77db3cc0594228f2f3c2a6fc3c06d9f915e3058ae9d17c678",
+    "teacher_compact/selections/r8_mixed_row_and_direction_q7_white/dora_nora_mlr.json": "eb02aeaaf2aa00d565c258989db82eda0dfb227ed7a20a7505b2d595fe40de79",
+    "teacher_compact/selections/r8_mixed_row_and_direction_q8_white/dora_nora.json": "a2dea6cf4f68136a645182ff79bb7c47896a9ad30ada8846d694cbc4e48e0577",
+    "teacher_compact/selections/r8_mixed_row_and_direction_q8_white/dora_nora_mlr.json": "e30ba600a1a1910f4fef92450b6d11f719067f5c07f691001bd160ba431a70b3",
+    "teacher_compact/selections/r8_row_scale_q0_rescaled/dora_nora.json": "2b8f9ea5208379f4224399d584e1bda12cb15f8a11d592d6502c52d7fa9ac1a6",
+    "teacher_compact/selections/r8_row_scale_q0_rescaled/dora_nora_mlr.json": "19c6503391d5a1df6a188b830ae079f542e20c406d5160701a4d7c9284519718",
+    "teacher_compact/selections/r8_unit_column_low_rank_q7_rescaled/dora_nora.json": "a65a55bf137d7ea983028ad10fff84a71ac1c0b1a7c729e2926574b2254e1097",
+    "teacher_compact/selections/r8_unit_column_low_rank_q7_rescaled/dora_nora_mlr.json": "7b97f7c2c4493890736bae6b4bfb78e6387c16c4592be9d4ed97c9a9772812e7",
+    "teacher_compact/selections/r8_unit_column_low_rank_q8_rescaled/dora_nora.json": "3c3cca47a53dfecdf65ed6038940c18b9a54c58d437d9c11e997fe3c100480bc",
+    "teacher_compact/selections/r8_unit_column_low_rank_q8_rescaled/dora_nora_mlr.json": "856a14e036da5e8de9bc84e7c20825a85d87224d35e2f20f37655019e1e2b642",
+    "teacher_compact/selections/r8_heterogeneous_column_low_rank_q7_rescaled/dora_nora.json": "a52d16b9a05a97a8fb624e56f8bfdcf74abee7ddefc6ff3793fdc6e77e767ba5",
+    "teacher_compact/selections/r8_heterogeneous_column_low_rank_q7_rescaled/dora_nora_mlr.json": "1d2237abdd8ab981f33d28ff9fb55905d8d35f2cda283e6ad68083b9653eb6d6",
+    "teacher_compact/selections/r8_heterogeneous_column_low_rank_q8_rescaled/dora_nora.json": "03c2f70eac53dfe19bbf3fdeff60bd415758f2e8715404d077a166b6e38f15c0",
+    "teacher_compact/selections/r8_heterogeneous_column_low_rank_q8_rescaled/dora_nora_mlr.json": "8d9b733360bae5311cb96b90cf7cfef85d13e0a89ba7e6c92d9547653becc64d",
+    "teacher_compact/selections/r8_mixed_row_and_direction_q7_rescaled/dora_nora.json": "dbfd75c06aed8298c3a58d77a7b26139783fb65d365f8e2c109dc7c3d21792a5",
+    "teacher_compact/selections/r8_mixed_row_and_direction_q7_rescaled/dora_nora_mlr.json": "7633f8cb18d4a6c0e2f4feb6a9803fb1e8c343a2a1ad86300ffbb6b4f06549af",
+    "teacher_compact/selections/r8_mixed_row_and_direction_q8_rescaled/dora_nora.json": "6f147fd8c30b6a804be33242ffb181902eed570959cbbe3ff6e64ad15134b975",
+    "teacher_compact/selections/r8_mixed_row_and_direction_q8_rescaled/dora_nora_mlr.json": "66eda6d3d052f9747e51fbcc92e21e934c3fbbaa968d8f6e838302f761c4c55e",
+    "retrieval/tuning/dora_nora_r2_lr0.0001_m1_seed42/result.json": "06d1935c93d24dc977cebefb54b0420267a885e27ec344885754e511c6db0e62",
+    "retrieval/tuning/dora_nora_r2_lr0.0003_m1_seed42/result.json": "48f75c52664bf537622843ca7c6bb3712df8a77a04470e9ed1f48ec4c5ced72e",
+    "retrieval/tuning/dora_nora_r2_lr0.001_m1_seed42/result.json": "dd25800fcbc8f44b3df1b78a4f2199d808f2942055696b2e77d25dcc5e615428",
+    "retrieval/tuning/dora_nora_r2_lr3e-05_m1_seed42/result.json": "82fb3d6ff7a40f8a19be579d96436fd1a8cb619a1be26c394e887fe3f9c2564d",
+    "retrieval/tuning/dora_nora_mlr_r2_lr0.0001_m0.01_seed42/result.json": "18096c39c9739d1c8b0443c5d83f3f300426bd9edfa7a82d60396e89629a0ecd",
+    "retrieval/tuning/dora_nora_mlr_r2_lr0.0001_m0.1_seed42/result.json": "fdd7e6749eff843251133b25685b45d430ab3b49aff9014af1e9d23d9dd2d038",
+    "retrieval/tuning/dora_nora_mlr_r2_lr0.0003_m0.01_seed42/result.json": "4e0a3474f84e8204bc270f571705c5a18443e516f2209d2cdf8380c695425be8",
+    "retrieval/tuning/dora_nora_mlr_r2_lr0.0003_m0.1_seed42/result.json": "fe23c9f2c917e58cfda099e71b289671b33d4f8c55e6afeb698931be06d8024a",
+    "retrieval/tuning/dora_nora_r8_lr0.0001_m1_seed42/result.json": "5646f59d240c074ee69de4f1e3abcb0cd42b822965dc44d405d06e2cba763a8d",
+    "retrieval/tuning/dora_nora_r8_lr0.0003_m1_seed42/result.json": "122acd9875af0dcb46e027b66b35a4e6133adf0776ea11ea8f71e58028eb4816",
+    "retrieval/tuning/dora_nora_r8_lr0.001_m1_seed42/result.json": "175bbc199a30cff2d72e08168a0e4a42df0d3c6fc587dd791a57fa25823753cb",
+    "retrieval/tuning/dora_nora_r8_lr3e-05_m1_seed42/result.json": "055afbfe60f5d8cb278a0c2e86433cd98305e7dcbf64e46418774eb103e43f5e",
+    "retrieval/tuning/dora_nora_mlr_r8_lr0.0001_m0.01_seed42/result.json": "da2686cb7e88243c13951fad94d32dd3cc13d94c72f5f7dcb6de4b42ac852a1c",
+    "retrieval/tuning/dora_nora_mlr_r8_lr0.0001_m0.1_seed42/result.json": "83d38dddf7d760c70c98f442020c3245a5efb4d32478113900155a33671d4721",
+    "retrieval/tuning/dora_nora_mlr_r8_lr0.0003_m0.01_seed42/result.json": "70f767dabc3af55481a04328c05b6a83997abaa7a29862c05ae7ea03f4fa7aa6",
+    "retrieval/tuning/dora_nora_mlr_r8_lr0.0003_m0.1_seed42/result.json": "136238f55099a859f2edc2bcb530d07db07a6979a3eaa7072c307334778a7ff3",
+    "cogs/dora_nora/tuning.json": "49360fa488899a29971779d68bcf199ed85595a3db2aedd313da1c1b0ffd40ce",
+    "cogs/dora_nora_mlr/tuning.json": "eee18b661907b9d9400e2c634ac39a7feb9ac6454f23ca70f59e0b0dc05ed99f",
+    "vision/rank2_run/rank_2/pilot_results.json": "263538b368b8355dbc9e1f0acdd88cd4605335c78b74051522f323bbb21efa76",
+    "vision/rank8_run/rank_8/pilot_results.json": "b05e61b25b845c5bce76a0695c8f55d14672bf88b0313b443d4d7057324d3c69"
+  },
+  "analysis_source_sha256": "2b118f4d466271a771be4fe0b6a7f3cfcc2fd351ee2072186259e698f9ce97be",
+  "protocol": "Compare the original combination (magnitude multiplier 1) with multipliers 0.1/0.01 at the same factor learning rate, rank, training seed and full trial budget. Teacher/retrieval use final-horizon validation; COGS/Aircraft use the best validation checkpoint within their common budget. Only validation trial artifacts are loaded; no test metric is used and no searches are altered.",
+  "limitations": "Exploratory optimizer diagnostic at one tuning seed. Shared-LR cases and synthetic cells are not independent statistical replicates; no confidence interval or test-superiority inference is made. Strict better/worse counts include arbitrarily small floating-point differences. Candidate methods may choose different validation-best checkpoints. Joint-search conclusions remain conditional on tested grids and horizons."
+}

@@ -1,0 +1,291 @@
+{
+  "format_version": 1,
+  "passed": true,
+  "preview": false,
+  "created_utc": "2026-10-09T00:42:48.162947+00:00",
+  "archive": {
+    "path": "raw_artifacts.tar.gz",
+    "sha256": "0cf81edd47e17098ab4300c3267c7fb6101b884ac3830e2b9bb6d2a869c556cd",
+    "bytes": 47298177
+  },
+  "archive_input_mode": "parts_only",
+  "original_full_archive_present": true,
+  "original_full_archive_read": false,
+  "parts_verified_before_and_after": [
+    {
+      "path": "raw_artifacts.tar.gz.part-000",
+      "bytes": 4194304,
+      "sha256": "86df28a522041ffe575f9b75c9850597d29b77789e7910e8872f4d248e915196"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-001",
+      "bytes": 4194304,
+      "sha256": "69cc6d9efa79679c60627904b595b5a9a022348518206838bcfabe9f80b24314"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-002",
+      "bytes": 4194304,
+      "sha256": "a8ee39c72d11364fcef3ea4e5fadd160d90a8e848eacb59550f2604026d6d6c0"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-003",
+      "bytes": 4194304,
+      "sha256": "37b6e8d92a225f852aa75f13364d1f4ade8a46198589d706207b86232283dcb0"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-004",
+      "bytes": 4194304,
+      "sha256": "e357834d4c55a2493c1333fb86e3f997560cc86d3ee723b250d6f2739a73150c"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-005",
+      "bytes": 4194304,
+      "sha256": "bddcc42958e4b19a055289f09c1cad137a83cc9a272aa89dee3b6b8259f0e372"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-006",
+      "bytes": 4194304,
+      "sha256": "39fb517bad6c68057086e8fceb5c595a827513a70438cf6f95368deda009f16b"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-007",
+      "bytes": 4194304,
+      "sha256": "9ec13417925d0a688b8fd132cb9ac4a2669f4e6f16e94aae9905ad8765285e9e"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-008",
+      "bytes": 4194304,
+      "sha256": "9a7847b6483a9ec0ec0a807a882ab0e4360108e2b31b710b272bf60831184639"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-009",
+      "bytes": 4194304,
+      "sha256": "86fe9aa92fd70f88efe739751d5af5d757ede7ddc22f52761125d83b9bc4beef"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-010",
+      "bytes": 4194304,
+      "sha256": "d7f5f9fe97893ee023b0db4e2c13e4460d0762ed687a4dae17f7e32ae8c93043"
+    },
+    {
+      "path": "raw_artifacts.tar.gz.part-011",
+      "bytes": 1160833,
+      "sha256": "5d9feaa27bc7c32020b384cbca5c676d6214080c7ce816459d4de548d38f142c"
+    }
+  ],
+  "input_files_verified_before_and_after": 1628,
+  "read_only_evidence": true,
+  "byte_identical_outputs": [
+    {
+      "path": "cogs_categories.md",
+      "sha256": "1796416e04914dbb26998a78c1fac31e5164755648577fac0e2559c4a53bd2c0",
+      "bytes": 2908
+    },
+    {
+      "path": "cogs_category_heatmap.png",
+      "sha256": "afc5708697e81eaeb4e720ff3bd760abada345c1376fc3b311a2aaf8ab08b796",
+      "bytes": 426036
+    },
+    {
+      "path": "cogs_category_heatmap.svg",
+      "sha256": "e4587281da191ae6f536c5611c1ed3792e4ca56a8cf4ae2263698cfb97bfbb1e",
+      "bytes": 64722
+    },
+    {
+      "path": "cogs_metrics.md",
+      "sha256": "721555debc6db336661d61e3fafe9fe88040501fe4e6af1c617f11d035814c04",
+      "bytes": 1831
+    },
+    {
+      "path": "matched_magnitude_validation.json",
+      "sha256": "148875a64d30932add121d9c10b2cf618a5650c20b0f5bfe29810e18cbfdce66",
+      "bytes": 98421
+    },
+    {
+      "path": "matched_magnitude_validation.md",
+      "sha256": "14d406d8341a1d5552f333b501e60b63290f5e84afb4113086b76ab949a3f346",
+      "bytes": 1545
+    },
+    {
+      "path": "numerical_controls.md",
+      "sha256": "59a676723ff679251616fd2476de119c0b4a1f62a9caf837f48755d2a8371904",
+      "bytes": 3687
+    },
+    {
+      "path": "paired_differences.md",
+      "sha256": "2632ac098f78b8fa4e400de42f0949e97c552a86bb865ba19b0aed271f1d5886",
+      "bytes": 5748
+    },
+    {
+      "path": "rank2_comparison.png",
+      "sha256": "8dd6c99b4fa4b366a0cebb86dd6d53885043fa91a8f75a236de05f39bbde6345",
+      "bytes": 281989
+    },
+    {
+      "path": "rank2_comparison.svg",
+      "sha256": "09a102fccb280606fdd7db55c07c48646fa98ac9873055ed2c60708e8a5e5e16",
+      "bytes": 46264
+    },
+    {
+      "path": "rank2_table.csv",
+      "sha256": "d57f1b11915f2752a7a5703d20aa34cd8fb013bde16a133b2a12070f6bf1d739",
+      "bytes": 1243
+    },
+    {
+      "path": "rank2_table.md",
+      "sha256": "4896b29378a80ef1efd97f58b9dcd873d217d17276452149f5628599300561c8",
+      "bytes": 973
+    },
+    {
+      "path": "rank8_comparison.png",
+      "sha256": "fa50fbf77af00077c9187eacd14a18c240ec810f6bafa660dbad7a10441e083b",
+      "bytes": 315670
+    },
+    {
+      "path": "rank8_comparison.svg",
+      "sha256": "fabdbdfc99ab9ac6960160128620c117b76ce960a0f974875eb8aacbd893370a",
+      "bytes": 60085
+    },
+    {
+      "path": "rank8_paired_differences.png",
+      "sha256": "66afc07f97f130005dc2823215b66aac27b9b2bad6c6bff57d47699b2c08a623",
+      "bytes": 211069
+    },
+    {
+      "path": "rank8_paired_differences.svg",
+      "sha256": "43bcff31f378a616c351ef16f21003bd72912b0c1e4f3d6ceb0444521cba89a0",
+      "bytes": 37746
+    },
+    {
+      "path": "rank8_table.csv",
+      "sha256": "fe139d73f225ef068d1809ebd390224d6de669215e1c578a335edf34b4ab8568",
+      "bytes": 1601
+    },
+    {
+      "path": "rank8_table.md",
+      "sha256": "baa2aef25c2278be2d34402f31ef055670c1047a114fe5587117240d00d8b1fe",
+      "bytes": 1102
+    },
+    {
+      "path": "reproduce.md",
+      "sha256": "00bd9a29a5f732a1be5c82c2c22a452fc9c6f8cb9aafdcd0bd755a7a0c2d4908",
+      "bytes": 5136
+    },
+    {
+      "path": "retrieval_metrics.md",
+      "sha256": "d5f87086711f6513d6caea66092d268cd5489bedae185d563ab57824e98b4dbd",
+      "bytes": 2230
+    },
+    {
+      "path": "runtime_memory.md",
+      "sha256": "0fb9d3c3f9b2182bfac705245e4d1ea213854a61afbb7e00df396ab114f74b6a",
+      "bytes": 3261
+    },
+    {
+      "path": "selected_settings.md",
+      "sha256": "cef9c035b2301abdb630e11a2c80ce97f70df4648813544ed17501f66fefc377",
+      "bytes": 2567
+    },
+    {
+      "path": "teacher_heatmap.png",
+      "sha256": "80733b0f0bd6797c4d735e8823efb765d20dcf2436a8d440ca5d8c225a9ecc9f",
+      "bytes": 598148
+    },
+    {
+      "path": "teacher_heatmap.svg",
+      "sha256": "9d34c85c6d7b6c7a2e9eb12647df3f5e83c528d98472ab8ca2a490f3610dcd4e",
+      "bytes": 70743
+    },
+    {
+      "path": "teacher_recomputed.json",
+      "sha256": "c6e8aa0f4e558732491b1c3ebcafb6c0d3cdd337d2028520058669ce9574ed2c",
+      "bytes": 99043
+    }
+  ],
+  "structured_task_fields_equal": {
+    "aircraft": [
+      "ranks",
+      "paired_uncertainty",
+      "provenance",
+      "initial_numerical_controls"
+    ],
+    "nfcorpus": [
+      "ranks",
+      "paired_uncertainty",
+      "provenance",
+      "initial_numerical_control"
+    ],
+    "scifact": [
+      "ranks",
+      "paired_uncertainty",
+      "provenance",
+      "initial_numerical_control"
+    ],
+    "cogs": [
+      "ranks",
+      "paired_uncertainty",
+      "provenance"
+    ]
+  },
+  "source_sha256": {
+    "report_source/experiments/__init__.py": "ce6589cd82941e8fb46aa8d9cd8706f3310ac4a38bcef38505222e25adff9e69",
+    "report_source/experiments/second_round/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "report_source/experiments/second_round/analyze_cogs.py": "cb00f1032ba9f82a293ee2beedab66d40248d549ffab4d32e597fd0f6843209d",
+    "report_source/experiments/second_round/analyze_retrieval.py": "0225eab3a47878ed585da01602d745ced6d8fe3d01db1b8a075939f975282c34",
+    "report_source/experiments/second_round/analyze_vision.py": "876cc854b867e5deff92fad294f8119ef081100ef7b6c57e03c7edb925b990a9",
+    "report_source/experiments/second_round/archive.py": "eb68b4a7b85f2c002cab980096df6cc322042acd3cca2555200799059332b5ce",
+    "report_source/experiments/second_round/audit_teacher.py": "762c4a3435e9581fdc220d52a0f78d0df1c247523c782181aa5a95dbcdf8b754",
+    "report_source/experiments/second_round/cogs.py": "40e75a4492a7b715dd453dbe95375ebb6744fb90b2283314cd1db717c920a693",
+    "report_source/experiments/second_round/compact_teacher.py": "b2e3f64287ff3e9d81cd0aead29ef79e755d36fa17edbe3c44ba33291941b92c",
+    "report_source/experiments/second_round/control_retrieval.py": "570d13607c9a7f241a83aa5247cf4d6be62bef68f1426bcb78cc5625f56a64d2",
+    "report_source/experiments/second_round/control_vision.py": "45146aaca602664591df3140aa8a1d1ddbd53499f1b8370150cb1ff338f6f316",
+    "report_source/experiments/second_round/generation_diagnostics.py": "4294411fb2acd9b2516c7af0b9dcbdb5fb950f1f5638cd2babf0f9e62356787b",
+    "report_source/experiments/second_round/matched_magnitude.py": "2b118f4d466271a771be4fe0b6a7f3cfcc2fd351ee2072186259e698f9ce97be",
+    "report_source/experiments/second_round/plot_teacher.py": "71b2f8a78927266d1b091b851e4d23a138ed9621c26fa6557aec4c20ecafc8c7",
+    "report_source/experiments/second_round/prepare_aircraft.py": "a79e0f6a000322cc463fd5ba4c324ba6e0121fe588f78afff42e4bfd1f0a3016",
+    "report_source/experiments/second_round/report.py": "68ee0243b68841d94910331c9bbbf486a2e3957a5ca2a8434786a59928b55d02",
+    "report_source/experiments/second_round/retrieval.py": "e37ac36a2e12eb03fe12033bfef9c3ab93eaf432691257dc5a01e56bcc0bbe0a",
+    "report_source/experiments/second_round/teacher.py": "114b4f3c08d8c9f74d08d3d1cc239b3b9829c0f34cf647e122bec34c3134b5bd",
+    "report_source/experiments/second_round/test_adapters.py": "39a86ed6be18aae99b2a2b196f1bd771c8da1d54e085b6ee536e1b3d400016f5",
+    "report_source/experiments/second_round/test_cogs.py": "42abba95f0a0b25cfd1daf580d28f2d7a845991d5fa9468f234fd7ca930bfb25",
+    "report_source/experiments/second_round/test_generation_diagnostics.py": "caaef0281921b4266437b5b08f72860fae5ef50d8372aded92ed02ce27ec5f0f",
+    "report_source/experiments/second_round/time_retrieval.py": "384798847963af477148f68c00771237ce70c5b8b16d217220db415b876754c7",
+    "report_source/experiments/second_round/validate_control_vision.py": "e488b723916d4017091e06ebd4e2389a1f06cac7606bca1e2ac793cc009a8ca5",
+    "report_source/experiments/second_round/validate_retrieval.py": "8f60dc36134e647d4c5129d207b94191d4965731ba3127a5cc954ee0019952b9",
+    "report_source/experiments/second_round/verify_report_rebuild.py": "b2f65e5301ce84181d9b3975bbc172e3e55bb885d59a6dac9d92ea4559060b80",
+    "report_source/experiments/second_round/verify_teacher_compact.py": "69c75b15dad5ff70c155a4f6a5426c198643e908095828451bd6525f0ed3bb6f",
+    "report_source/experiments/second_round/vision.py": "bfea931fdae5814ae4f91177718a1a731f081b0de304dfb258fc1761e8dc198f"
+  },
+  "verifier_sha256": "b2f65e5301ce84181d9b3975bbc172e3e55bb885d59a6dac9d92ea4559060b80",
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "python_executable": "/var/tmp/dora-bench/venv/bin/python",
+    "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+    "report_versions": {
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "numpy": "2.4.4",
+      "matplotlib": "3.10.9"
+    },
+    "variables": {
+      "PYTHONPATH": "/var/tmp/dora-bench/round2/report_offline_rebuild_oakuqgp4/raw/report_source",
+      "CUDA_VISIBLE_DEVICES": "",
+      "HF_HUB_OFFLINE": "1",
+      "TRANSFORMERS_OFFLINE": "1",
+      "HF_HOME": "/var/tmp/dora-bench/round2/report_offline_rebuild_oakuqgp4/absent_model_cache",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "cwd": "/var/tmp/dora-bench/round2/report_offline_rebuild_oakuqgp4"
+  },
+  "command": [
+    "/var/tmp/dora-bench/venv/bin/python",
+    "-m",
+    "experiments.second_round.report",
+    "--raw-root",
+    "/var/tmp/dora-bench/round2/report_offline_rebuild_oakuqgp4/raw",
+    "--output-dir",
+    "/var/tmp/dora-bench/round2/report_offline_rebuild_oakuqgp4/rebuilt",
+    "--skip-bundle"
+  ],
+  "work_directory": "/var/tmp/dora-bench/round2/report_offline_rebuild_oakuqgp4",
+  "scope": "Rebuilt from archived sources outside the repository, with GPUs disabled, offline model-library settings and a nonexistent model cache. Every included evidence file remained hash-identical. Compared report outputs, source files, task scores, uncertainty and numerical controls. Recomputed saved predictions/logits and compact teacher checkpoints; did not rerun downstream model inference or training."
+}

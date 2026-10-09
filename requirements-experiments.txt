@@ -15,3 +15,4 @@ Pillow==12.2.0
 scipy==1.17.1
 tqdm==4.70.1
 matplotlib==3.10.9
+pyarrow==24.0.0

@@ -1,0 +1,2592 @@
+{
+  "passed": true,
+  "format": "dora-teacher-compact-v1",
+  "tensor_count": 308,
+  "final_run_count": 504,
+  "validation_candidate_count": 672,
+  "runtime_torch": "2.12.0+cu130",
+  "recorded_torch": "2.12.0+cu130",
+  "all_problem_tensors_regenerated_with_exact_hashes": true,
+  "independent_dense_weight_math": true,
+  "cuda_used": false,
+  "max_absolute_difference_from_recorded_gpu_test_relative_mse": 1.4164096440172358e-07,
+  "scope": "Recomputes selected-checkpoint test MSE and weighted weight error. Verifies saved validation selection, without retraining or independently recomputing training curves. CPU/GPU floating-point differences use relative tolerance 1e-4 and absolute tolerance 2e-8.",
+  "cells": {
+    "r2_row_scale_q0_white": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "row_scale",
+        "teacher_direction_rank": 0,
+        "coordinates": "white",
+        "seed": 20263008,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.9058545392445605,
+        "teacher_mean_abs_relative_row_norm_change": 0.24701835215091705,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "bab749bbd805fb3e8d93ae5413b1bb98502efb29d056b6163718af2cbbe9f58e"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.9121035235222518,
+          "test_relative_mse_sample_std": 1.5774375913308208e-06,
+          "test_relative_mse_per_seed": [
+            0.9121018302920675,
+            0.9121049515477083,
+            0.9121037887269794
+          ],
+          "weighted_weight_error_ratio_mean": 0.9106782873471578,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 7.931332970452724e-13,
+          "test_relative_mse_sample_std": 6.813931724346649e-13,
+          "test_relative_mse_per_seed": [
+            1.5799375200942646e-12,
+            3.9873550244834233e-13,
+            4.007268685932102e-13
+          ],
+          "weighted_weight_error_ratio_mean": 4.3724824650738514e-13,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.9289772151194277,
+          "test_relative_mse_sample_std": 0.0036780779639706733,
+          "test_relative_mse_per_seed": [
+            0.9247792690851624,
+            0.9305183401921396,
+            0.9316340360809808
+          ],
+          "weighted_weight_error_ratio_mean": 0.9280232985814413,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 2.7983093397485637e-06,
+          "test_relative_mse_sample_std": 4.733082989118637e-06,
+          "test_relative_mse_per_seed": [
+            6.117902868167088e-08,
+            8.263600362003306e-06,
+            7.014862856071408e-08
+          ],
+          "weighted_weight_error_ratio_mean": 2.812223740988884e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0019838573908166415,
+          "test_relative_mse_sample_std": 0.0007605397128023074,
+          "test_relative_mse_per_seed": [
+            0.0017333947947202185,
+            0.0013801360012939135,
+            0.002838041376435793
+          ],
+          "weighted_weight_error_ratio_mean": 0.001975235529243946,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 0.005385492156905626,
+          "test_relative_mse_sample_std": 0.009322672467899818,
+          "test_relative_mse_per_seed": [
+            7.2592416450292334e-09,
+            6.082708225270375e-06,
+            0.016150386503249962
+          ],
+          "weighted_weight_error_ratio_mean": 0.005492601461515534,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_unit_column_low_rank_q1_white": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "unit_column_low_rank",
+        "teacher_direction_rank": 1,
+        "coordinates": "white",
+        "seed": 20263109,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 1,
+        "lora_population_rank_bound": 1.2615061046780835e-28,
+        "teacher_mean_abs_relative_row_norm_change": 0.03143821656703949,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "cec071608531a489c20967a696e445267fe5bc4a71f845e9ff6e3a8fa2817361"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 2.248580811558738e-08,
+          "test_relative_mse_sample_std": 2.1325022689649118e-08,
+          "test_relative_mse_per_seed": [
+            9.107703289054716e-09,
+            1.1271611489872621e-08,
+            4.70781095678348e-08
+          ],
+          "weighted_weight_error_ratio_mean": 2.2486648099118156e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 1.4610380432191013e-08,
+          "test_relative_mse_sample_std": 1.5200492576496925e-08,
+          "test_relative_mse_per_seed": [
+            9.796668915261428e-10,
+            1.1849322902411441e-08,
+            3.100215150263545e-08
+          ],
+          "weighted_weight_error_ratio_mean": 1.4295627200529756e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 5.269467572757276e-07,
+          "test_relative_mse_sample_std": 8.104565789313135e-07,
+          "test_relative_mse_per_seed": [
+            1.1777389883130321e-07,
+            1.4604179821051488e-06,
+            2.648390890731021e-09
+          ],
+          "weighted_weight_error_ratio_mean": 5.271847733171834e-07,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 4.89860056403401e-07,
+          "test_relative_mse_sample_std": 4.214547306695163e-07,
+          "test_relative_mse_per_seed": [
+            6.707593240831617e-07,
+            7.906656860660187e-07,
+            8.155159061022505e-09
+          ],
+          "weighted_weight_error_ratio_mean": 4.900291425968817e-07,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 5.3616375639528566e-05,
+          "test_relative_mse_sample_std": 2.3133117393835097e-06,
+          "test_relative_mse_per_seed": [
+            5.163301765314477e-05,
+            5.3058496783863164e-05,
+            5.615761248157777e-05
+          ],
+          "weighted_weight_error_ratio_mean": 5.140697855191926e-05,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 9.41992736236941e-07,
+          "test_relative_mse_sample_std": 7.598511028043711e-07,
+          "test_relative_mse_per_seed": [
+            1.3895362806442076e-06,
+            1.371789843591962e-06,
+            6.465208447465347e-08
+          ],
+          "weighted_weight_error_ratio_mean": 9.426820900178731e-07,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_unit_column_low_rank_q2_white": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "unit_column_low_rank",
+        "teacher_direction_rank": 2,
+        "coordinates": "white",
+        "seed": 20263110,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 2,
+        "lora_population_rank_bound": 2.0690799096455606e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03560519218444824,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "c20e7ecf9217498e7bd995abfc2b38644f8ee2311dfa7924549c3877bc32e4c7"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 3.1135605811010517e-09,
+          "test_relative_mse_sample_std": 5.131393137534675e-09,
+          "test_relative_mse_per_seed": [
+            6.895841608178079e-11,
+            2.3370380927289257e-10,
+            9.038019517948482e-09
+          ],
+          "weighted_weight_error_ratio_mean": 3.0983953990445143e-09,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 7.40851907513147e-09,
+          "test_relative_mse_sample_std": 6.84117451455002e-10,
+          "test_relative_mse_per_seed": [
+            6.830971419762051e-09,
+            7.230553450103799e-09,
+            8.16403235552856e-09
+          ],
+          "weighted_weight_error_ratio_mean": 7.53302279813776e-09,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 3.727862037045551e-09,
+          "test_relative_mse_sample_std": 6.454113275616025e-09,
+          "test_relative_mse_per_seed": [
+            1.1180429975901843e-08,
+            3.484207262570898e-13,
+            2.8077145085524406e-12
+          ],
+          "weighted_weight_error_ratio_mean": 3.7134128495812596e-09,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 3.494304613356638e-08,
+          "test_relative_mse_sample_std": 4.077433239731203e-08,
+          "test_relative_mse_per_seed": [
+            2.508556554469225e-08,
+            1.1363232400796362e-12,
+            7.97424365327668e-08
+          ],
+          "weighted_weight_error_ratio_mean": 3.651289128482428e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 2.7572324426180573e-06,
+          "test_relative_mse_sample_std": 5.535760088591655e-07,
+          "test_relative_mse_per_seed": [
+            2.852345248398515e-06,
+            3.2570895609500113e-06,
+            2.162262518505645e-06
+          ],
+          "weighted_weight_error_ratio_mean": 2.8509302107219505e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 6.689551870554847e-07,
+          "test_relative_mse_sample_std": 1.0884254766606894e-06,
+          "test_relative_mse_per_seed": [
+            1.924891533422884e-06,
+            5.155591285887589e-10,
+            8.145846861498168e-08
+          ],
+          "weighted_weight_error_ratio_mean": 6.617415952240672e-07,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_heterogeneous_column_low_rank_q1_white": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "heterogeneous_column_low_rank",
+        "teacher_direction_rank": 1,
+        "coordinates": "white",
+        "seed": 20263209,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 1,
+        "lora_population_rank_bound": 1.0591057934103553e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03174804896116257,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "5871b94e7f0efa14b95c8ce2d93cf864bacdcb3f782361f58210bf347a1723ce"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 1.791070097473168e-07,
+          "test_relative_mse_sample_std": 1.5731466062736976e-07,
+          "test_relative_mse_per_seed": [
+            1.4804621789931782e-10,
+            2.416018759382957e-07,
+            2.9557110708575545e-07
+          ],
+          "weighted_weight_error_ratio_mean": 1.7904113952527112e-07,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 8.889659911514019e-08,
+          "test_relative_mse_sample_std": 8.700827840071396e-08,
+          "test_relative_mse_per_seed": [
+            4.147074311345973e-08,
+            3.5905344393412724e-08,
+            1.8931370983854809e-07
+          ],
+          "weighted_weight_error_ratio_mean": 8.905850161037658e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 3.488446252368589e-06,
+          "test_relative_mse_sample_std": 5.184760552829997e-06,
+          "test_relative_mse_per_seed": [
+            7.504179482471834e-07,
+            9.468224196313947e-06,
+            2.466966125446359e-07
+          ],
+          "weighted_weight_error_ratio_mean": 3.5011554189168237e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 4.167635131259272e-06,
+          "test_relative_mse_sample_std": 3.5203647931589926e-06,
+          "test_relative_mse_per_seed": [
+            3.0440908003036404e-06,
+            8.112631259054164e-06,
+            1.3461833344200123e-06
+          ],
+          "weighted_weight_error_ratio_mean": 4.220860735889194e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0014028660878704473,
+          "test_relative_mse_sample_std": 0.0021219210864331164,
+          "test_relative_mse_per_seed": [
+            0.00010212341991929939,
+            0.0038514588989944825,
+            0.0002550159446975598
+          ],
+          "weighted_weight_error_ratio_mean": 0.0013871583068976179,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 1.7013162161018585e-08,
+          "test_relative_mse_sample_std": 1.7646457727484227e-08,
+          "test_relative_mse_per_seed": [
+            1.2953125401401733e-08,
+            3.633579591447156e-08,
+            1.750565167182465e-09
+          ],
+          "weighted_weight_error_ratio_mean": 1.7150059150594643e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_heterogeneous_column_low_rank_q2_white": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "heterogeneous_column_low_rank",
+        "teacher_direction_rank": 2,
+        "coordinates": "white",
+        "seed": 20263210,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 2,
+        "lora_population_rank_bound": 1.9512276658257e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.030142713338136673,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "45a06899ef97de53128f72e3f78ec28118028da050c8a968115c7d69d9c74409"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 2.9773135425681987e-08,
+          "test_relative_mse_sample_std": 3.418163416793459e-08,
+          "test_relative_mse_per_seed": [
+            1.321511030375205e-08,
+            7.023806628516544e-09,
+            6.908048934477737e-08
+          ],
+          "weighted_weight_error_ratio_mean": 2.9286184736558123e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 1.5259302370816547e-08,
+          "test_relative_mse_sample_std": 2.6374155777603068e-08,
+          "test_relative_mse_per_seed": [
+            6.147020013229798e-11,
+            2.9014387760575475e-12,
+            4.571353547354129e-08
+          ],
+          "weighted_weight_error_ratio_mean": 1.493270708893939e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.2737442217250734,
+          "test_relative_mse_sample_std": 0.01354146938336516,
+          "test_relative_mse_per_seed": [
+            0.2893017720910011,
+            0.26460774148601945,
+            0.2673231515981996
+          ],
+          "weighted_weight_error_ratio_mean": 0.2801322042942047,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.27214364547200987,
+          "test_relative_mse_sample_std": 0.012470600622232587,
+          "test_relative_mse_per_seed": [
+            0.28652046401767267,
+            0.26425082420464524,
+            0.2656596481937117
+          ],
+          "weighted_weight_error_ratio_mean": 0.27792758742968243,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.2966631785159363,
+          "test_relative_mse_sample_std": 0.046836625633793726,
+          "test_relative_mse_per_seed": [
+            0.3472483760173673,
+            0.2879393107385349,
+            0.2548018487919067
+          ],
+          "weighted_weight_error_ratio_mean": 0.3011125326156616,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 2.3361542211373845e-05,
+          "test_relative_mse_sample_std": 2.5503755085538928e-05,
+          "test_relative_mse_per_seed": [
+            1.549175172872618e-05,
+            2.7202025542724502e-06,
+            5.18726723511229e-05
+          ],
+          "weighted_weight_error_ratio_mean": 2.36352504240737e-05,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_mixed_row_and_direction_q1_white": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "mixed_row_and_direction",
+        "teacher_direction_rank": 1,
+        "coordinates": "white",
+        "seed": 20263309,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.33073564810726097,
+        "teacher_mean_abs_relative_row_norm_change": 0.1386679708957672,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "7ff646654cb572dd603d91b975a7fc1dae7d50f975f52b16cbacf227080784da"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.3419311202453901,
+          "test_relative_mse_sample_std": 7.042240936874338e-07,
+          "test_relative_mse_per_seed": [
+            0.3419319303809967,
+            0.3419307759377573,
+            0.34193065441741627
+          ],
+          "weighted_weight_error_ratio_mean": 0.33215899268786114,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 5.567218383734024e-08,
+          "test_relative_mse_sample_std": 4.824208481505495e-08,
+          "test_relative_mse_per_seed": [
+            5.451866642838006e-11,
+            8.61838368025492e-08,
+            8.077819604304315e-08
+          ],
+          "weighted_weight_error_ratio_mean": 5.628952957451953e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.3492904123488971,
+          "test_relative_mse_sample_std": 0.0016155951919825133,
+          "test_relative_mse_per_seed": [
+            0.34744111579977094,
+            0.35042772122018573,
+            0.3500024000267345
+          ],
+          "weighted_weight_error_ratio_mean": 0.3391621609528859,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 1.868092280717724e-07,
+          "test_relative_mse_sample_std": 1.2633355117045626e-07,
+          "test_relative_mse_per_seed": [
+            1.0713615247932187e-07,
+            1.2081894072159146e-07,
+            3.324725910144039e-07
+          ],
+          "weighted_weight_error_ratio_mean": 1.8941422060455201e-07,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0003164458299009375,
+          "test_relative_mse_sample_std": 0.0004436664163459904,
+          "test_relative_mse_per_seed": [
+            0.0008285070533064166,
+            7.401178418585549e-05,
+            4.681865221054045e-05
+          ],
+          "weighted_weight_error_ratio_mean": 0.00031554317926444736,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 9.937623783441625e-08,
+          "test_relative_mse_sample_std": 6.760344758426516e-08,
+          "test_relative_mse_per_seed": [
+            1.7449615352704542e-07,
+            4.343218835898653e-08,
+            8.020037161721681e-08
+          ],
+          "weighted_weight_error_ratio_mean": 1.0053172635101267e-07,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_mixed_row_and_direction_q2_white": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "mixed_row_and_direction",
+        "teacher_direction_rank": 2,
+        "coordinates": "white",
+        "seed": 20263310,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.3404836213094559,
+        "teacher_mean_abs_relative_row_norm_change": 0.1450294852256775,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "f1b1fe5fd060a99814871ecae13289984a31605ede724ecc7ec0bddbf4cee801"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.34239957955942874,
+          "test_relative_mse_sample_std": 1.7369777094794307e-08,
+          "test_relative_mse_per_seed": [
+            0.3423995895878742,
+            0.34239955950253775,
+            0.3423995895878742
+          ],
+          "weighted_weight_error_ratio_mean": 0.34163522720336914,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 2.4103273451380876e-07,
+          "test_relative_mse_sample_std": 3.1319024956496607e-07,
+          "test_relative_mse_per_seed": [
+            5.320428907944675e-13,
+            5.950348962573408e-07,
+            1.2806277524119465e-07
+          ],
+          "weighted_weight_error_ratio_mean": 2.424434226192043e-07,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.34828083161325435,
+          "test_relative_mse_sample_std": 1.3566229598058535e-07,
+          "test_relative_mse_per_seed": [
+            0.3482808215848089,
+            0.34828070124346305,
+            0.34828097201149116
+          ],
+          "weighted_weight_error_ratio_mean": 0.34761394063631695,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 5.9385944582865614e-08,
+          "test_relative_mse_sample_std": 1.0109129679153076e-07,
+          "test_relative_mse_per_seed": [
+            1.389550044401001e-09,
+            1.7611534469576934e-07,
+            6.529390084265004e-10
+          ],
+          "weighted_weight_error_ratio_mean": 5.96772565993516e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0011416637850085259,
+          "test_relative_mse_sample_std": 0.0013518142483544035,
+          "test_relative_mse_per_seed": [
+            0.0026765226843136016,
+            0.0006203194455759874,
+            0.00012814922513598872
+          ],
+          "weighted_weight_error_ratio_mean": 0.0011377181557084743,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 1.3312938198248183e-05,
+          "test_relative_mse_sample_std": 1.6502948621717605e-05,
+          "test_relative_mse_per_seed": [
+            1.208370680277937e-06,
+            3.2111079994777334e-05,
+            6.61936391968928e-06
+          ],
+          "weighted_weight_error_ratio_mean": 1.3396328881754016e-05,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_row_scale_q0_rescaled": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "row_scale",
+        "teacher_direction_rank": 0,
+        "coordinates": "rescaled",
+        "seed": 20263008,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.9058545392445605,
+        "teacher_mean_abs_relative_row_norm_change": 0.24701835215091705,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "45601c91a121c6d59b3fdb249235fc843c66521ea45ae436440dd1f7a1ded30a"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.9121164573528153,
+          "test_relative_mse_sample_std": 2.4491450116939933e-05,
+          "test_relative_mse_per_seed": [
+            0.9121000554604286,
+            0.9121446098546732,
+            0.9121047067433443
+          ],
+          "weighted_weight_error_ratio_mean": 0.9106860955556234,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 6.052656482337852e-06,
+          "test_relative_mse_sample_std": 1.0483504485283646e-05,
+          "test_relative_mse_per_seed": [
+            3.888681651969377e-12,
+            8.027358572607967e-13,
+            1.8157964755596045e-05
+          ],
+          "weighted_weight_error_ratio_mean": 6.156313354253081e-06,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.9367433275612544,
+          "test_relative_mse_sample_std": 0.0003393264084550878,
+          "test_relative_mse_per_seed": [
+            0.9366768223757064,
+            0.9371109829152259,
+            0.9364421773928311
+          ],
+          "weighted_weight_error_ratio_mean": 0.9366161425908407,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 3.3491529817487645e-06,
+          "test_relative_mse_sample_std": 4.646200562787101e-06,
+          "test_relative_mse_per_seed": [
+            1.3498896528147527e-06,
+            8.660326049916765e-06,
+            3.724324251477552e-08
+          ],
+          "weighted_weight_error_ratio_mean": 3.408091296582446e-06,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.005396514097293904,
+          "test_relative_mse_sample_std": 0.0012511354763133774,
+          "test_relative_mse_per_seed": [
+            0.0054643150246903565,
+            0.006612370512261699,
+            0.004112856754929656
+          ],
+          "weighted_weight_error_ratio_mean": 0.005355614082266887,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 3.2590787961896155e-05,
+          "test_relative_mse_sample_std": 3.302898634640724e-05,
+          "test_relative_mse_per_seed": [
+            6.794341616698271e-05,
+            2.5226338702372603e-06,
+            2.73063138484685e-05
+          ],
+          "weighted_weight_error_ratio_mean": 3.3040184462151956e-05,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_unit_column_low_rank_q1_rescaled": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "unit_column_low_rank",
+        "teacher_direction_rank": 1,
+        "coordinates": "rescaled",
+        "seed": 20263109,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 1,
+        "lora_population_rank_bound": 1.2615061046780835e-28,
+        "teacher_mean_abs_relative_row_norm_change": 0.03143821656703949,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "93a720c39afa4b400c1ae47b0b8c3e56a22cf9bcb383f9ca841441ee3a2d92b6"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 3.434517305460523e-07,
+          "test_relative_mse_sample_std": 3.278201511612055e-07,
+          "test_relative_mse_per_seed": [
+            6.62148687023521e-07,
+            7.212780669203836e-09,
+            3.6099372394543193e-07
+          ],
+          "weighted_weight_error_ratio_mean": 3.4340578573358965e-07,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 3.7467972877996494e-08,
+          "test_relative_mse_sample_std": 4.204340926585227e-08,
+          "test_relative_mse_per_seed": [
+            3.3982169756224647e-09,
+            8.445426251979402e-08,
+            2.4551439138572996e-08
+          ],
+          "weighted_weight_error_ratio_mean": 3.75552238936668e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 3.070389441949507e-05,
+          "test_relative_mse_sample_std": 1.5586414156404344e-05,
+          "test_relative_mse_per_seed": [
+            4.6070568029886614e-05,
+            1.4906661332688728e-05,
+            3.1134453895909875e-05
+          ],
+          "weighted_weight_error_ratio_mean": 3.074599195921716e-05,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.0002225613329493809,
+          "test_relative_mse_sample_std": 0.00021902047294183207,
+          "test_relative_mse_per_seed": [
+            5.6821319604378224e-05,
+            0.00013999962092814885,
+            0.00047086305831561565
+          ],
+          "weighted_weight_error_ratio_mean": 0.00022151327114746286,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0016234197051465272,
+          "test_relative_mse_sample_std": 0.00019428379948574967,
+          "test_relative_mse_per_seed": [
+            0.0018425520365478907,
+            0.0014722367069910413,
+            0.0015554703719006498
+          ],
+          "weighted_weight_error_ratio_mean": 0.0015869336978842814,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 5.042245720991472e-05,
+          "test_relative_mse_sample_std": 8.334598641184285e-05,
+          "test_relative_mse_per_seed": [
+            1.6450127886748018e-09,
+            4.640893875310855e-06,
+            0.00014662483274164464
+          ],
+          "weighted_weight_error_ratio_mean": 5.041701724180688e-05,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_unit_column_low_rank_q2_rescaled": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "unit_column_low_rank",
+        "teacher_direction_rank": 2,
+        "coordinates": "rescaled",
+        "seed": 20263110,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 2,
+        "lora_population_rank_bound": 2.0690799096455606e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03560519218444824,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "9e63b148cd42fd24a900baa16e53366f4584fe4ba932d706154c100873183da7"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 6.491722872134641e-10,
+          "test_relative_mse_sample_std": 1.1196133967546283e-09,
+          "test_relative_mse_per_seed": [
+            1.941989166336417e-09,
+            1.1682338116992392e-12,
+            4.359461492275782e-12
+          ],
+          "weighted_weight_error_ratio_mean": 6.322274384429107e-10,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 2.0647988858598853e-09,
+          "test_relative_mse_sample_std": 3.4750883568945294e-09,
+          "test_relative_mse_per_seed": [
+            1.1518124186917475e-10,
+            6.076955625019819e-09,
+            2.259790690662536e-12
+          ],
+          "weighted_weight_error_ratio_mean": 2.0222807537708873e-09,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.2746303858995096,
+          "test_relative_mse_sample_std": 0.016153048368708747,
+          "test_relative_mse_per_seed": [
+            0.25748879903136745,
+            0.27683364673976574,
+            0.2895687119273957
+          ],
+          "weighted_weight_error_ratio_mean": 0.27265360951423645,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.281058770901181,
+          "test_relative_mse_sample_std": 0.027279709037095208,
+          "test_relative_mse_per_seed": [
+            0.24955908529459592,
+            0.2967092146939274,
+            0.2969080127150196
+          ],
+          "weighted_weight_error_ratio_mean": 0.2822721004486084,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.25871262775847303,
+          "test_relative_mse_sample_std": 0.028706836745198847,
+          "test_relative_mse_per_seed": [
+            0.2290820304473056,
+            0.2606592336617577,
+            0.2863966191663559
+          ],
+          "weighted_weight_error_ratio_mean": 0.25769729912281036,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 0.0001370735957372878,
+          "test_relative_mse_sample_std": 0.00020179655434088606,
+          "test_relative_mse_per_seed": [
+            2.6220221011022142e-05,
+            1.5002406133672697e-05,
+            0.0003699981600671685
+          ],
+          "weighted_weight_error_ratio_mean": 0.00014074291387563184,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_heterogeneous_column_low_rank_q1_rescaled": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "heterogeneous_column_low_rank",
+        "teacher_direction_rank": 1,
+        "coordinates": "rescaled",
+        "seed": 20263209,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 1,
+        "lora_population_rank_bound": 1.0591057934103553e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03174804896116257,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "f5f4d057c97538cf1e07228b18b3f706cc065c13b56cec21476295b712b81152"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 3.871013170916959e-08,
+          "test_relative_mse_sample_std": 6.689391702745005e-08,
+          "test_relative_mse_per_seed": [
+            1.3459842100715043e-10,
+            4.324100005981979e-11,
+            1.1595255570644182e-07
+          ],
+          "weighted_weight_error_ratio_mean": 3.831868669012158e-08,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 2.8445840843185923e-08,
+          "test_relative_mse_sample_std": 3.80799566125304e-08,
+          "test_relative_mse_per_seed": [
+            3.86335297238518e-12,
+            1.3625935439750406e-08,
+            7.170772373683498e-08
+          ],
+          "weighted_weight_error_ratio_mean": 2.833890619615501e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.0007744920448197197,
+          "test_relative_mse_sample_std": 0.0011243266205410096,
+          "test_relative_mse_per_seed": [
+            0.00013206312447109768,
+            0.0020727296169939183,
+            0.00011868339299414286
+          ],
+          "weighted_weight_error_ratio_mean": 0.0007620270577414582,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.0004292862849394706,
+          "test_relative_mse_sample_std": 0.00040566417856792355,
+          "test_relative_mse_per_seed": [
+            0.00014111135593770853,
+            0.0002535615647220232,
+            0.00089318593415868
+          ],
+          "weighted_weight_error_ratio_mean": 0.0004281849251128733,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.009103091691604477,
+          "test_relative_mse_sample_std": 0.001632436127458608,
+          "test_relative_mse_per_seed": [
+            0.01028593332899901,
+            0.007240642959812292,
+            0.009782698786002129
+          ],
+          "weighted_weight_error_ratio_mean": 0.009119785080353418,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 0.0009872230838363298,
+          "test_relative_mse_sample_std": 0.001705443316359916,
+          "test_relative_mse_per_seed": [
+            5.460745237732774e-07,
+            4.625185802020974e-06,
+            0.0029564979911831948
+          ],
+          "weighted_weight_error_ratio_mean": 0.0009919308097702622,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_heterogeneous_column_low_rank_q2_rescaled": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "heterogeneous_column_low_rank",
+        "teacher_direction_rank": 2,
+        "coordinates": "rescaled",
+        "seed": 20263210,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 2,
+        "lora_population_rank_bound": 1.9512276658257e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.030142713338136673,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "aed66fdc1db3c594552e77a9725ad9d5f76b25997ecf2e7cc324409cf4aa8a59"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 5.384936905970254e-12,
+          "test_relative_mse_sample_std": 6.937262697721619e-12,
+          "test_relative_mse_per_seed": [
+            1.4524387364874563e-12,
+            1.3074117272682645e-12,
+            1.339496025415504e-11
+          ],
+          "weighted_weight_error_ratio_mean": 4.665882336168011e-12,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 1.7187852628509738e-10,
+          "test_relative_mse_sample_std": 1.48056958580023e-10,
+          "test_relative_mse_per_seed": [
+            2.692584006300704e-10,
+            1.4974512332048994e-12,
+            2.448797269920168e-10
+          ],
+          "weighted_weight_error_ratio_mean": 1.7152927049655237e-10,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.36417990717391047,
+          "test_relative_mse_sample_std": 0.021205555923415654,
+          "test_relative_mse_per_seed": [
+            0.33990359333496817,
+            0.3790877286607964,
+            0.37354839952596686
+          ],
+          "weighted_weight_error_ratio_mean": 0.37019844849904376,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.3624574879180084,
+          "test_relative_mse_sample_std": 0.021582065977144658,
+          "test_relative_mse_per_seed": [
+            0.33797154696825604,
+            0.3787147570484103,
+            0.37068615973735886
+          ],
+          "weighted_weight_error_ratio_mean": 0.3686535557111104,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.3629070303913598,
+          "test_relative_mse_sample_std": 0.02078399371002411,
+          "test_relative_mse_per_seed": [
+            0.33932140472350286,
+            0.37854212001517695,
+            0.37085756643539963
+          ],
+          "weighted_weight_error_ratio_mean": 0.36896448334058124,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 0.001387695343992955,
+          "test_relative_mse_sample_std": 0.0014273194884910725,
+          "test_relative_mse_per_seed": [
+            0.0010723323024624829,
+            0.0029463231650330816,
+            0.00014443056448330032
+          ],
+          "weighted_weight_error_ratio_mean": 0.0013683351086607824,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_mixed_row_and_direction_q1_rescaled": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "mixed_row_and_direction",
+        "teacher_direction_rank": 1,
+        "coordinates": "rescaled",
+        "seed": 20263309,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.33073564810726097,
+        "teacher_mean_abs_relative_row_norm_change": 0.1386679708957672,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "adab2f20644deee3df373a15022ce43eeca208bcdb8422ac05ed1a240bacb6a4"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.3419267353864195,
+          "test_relative_mse_sample_std": 5.447192490997183e-06,
+          "test_relative_mse_per_seed": [
+            0.3419297733949441,
+            0.3419204467087735,
+            0.34192998605554087
+          ],
+          "weighted_weight_error_ratio_mean": 0.3321574628353119,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 2.4845244764869297e-09,
+          "test_relative_mse_sample_std": 2.9990130470553277e-09,
+          "test_relative_mse_per_seed": [
+            4.3568542859065255e-11,
+            5.832296464815817e-09,
+            1.5777084217859068e-09
+          ],
+          "weighted_weight_error_ratio_mean": 2.4991272847459576e-09,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.3574789288792078,
+          "test_relative_mse_sample_std": 0.001042589354219779,
+          "test_relative_mse_per_seed": [
+            0.3564547048119017,
+            0.3574431208853972,
+            0.3585389609403244
+          ],
+          "weighted_weight_error_ratio_mean": 0.34720558921496075,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.0003001283642166679,
+          "test_relative_mse_sample_std": 0.000447754387945112,
+          "test_relative_mse_per_seed": [
+            2.4549723376269887e-05,
+            5.9069032193016834e-05,
+            0.0008167663370807169
+          ],
+          "weighted_weight_error_ratio_mean": 0.0002871926220298822,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.010647119312848043,
+          "test_relative_mse_sample_std": 0.009082078546239436,
+          "test_relative_mse_per_seed": [
+            0.010329442593790919,
+            0.001728047018118683,
+            0.019883868326634524
+          ],
+          "weighted_weight_error_ratio_mean": 0.010279254871420562,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 1.4850436268501443e-05,
+          "test_relative_mse_sample_std": 1.82781522025865e-05,
+          "test_relative_mse_per_seed": [
+            4.0951566912622086e-08,
+            9.232113692176254e-06,
+            3.5278243546415453e-05
+          ],
+          "weighted_weight_error_ratio_mean": 1.4355027416238878e-05,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r2_mixed_row_and_direction_q2_rescaled": {
+      "teacher": {
+        "adapter_rank": 2,
+        "family": "mixed_row_and_direction",
+        "teacher_direction_rank": 2,
+        "coordinates": "rescaled",
+        "seed": 20263310,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.3404836213094559,
+        "teacher_mean_abs_relative_row_norm_change": 0.1450294852256775,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "17b892c830d90ef470b18db70c2f2a8bffd6bc273540156eb584173fd27f6cdc"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.3423979248659237,
+          "test_relative_mse_sample_std": 1.9304692438582844e-06,
+          "test_relative_mse_per_seed": [
+            0.3423980853210515,
+            0.3423997700998929,
+            0.3423959191768267
+          ],
+          "weighted_weight_error_ratio_mean": 0.341633677482605,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 1.3553395242562672e-10,
+          "test_relative_mse_sample_std": 2.1902574956242263e-10,
+          "test_relative_mse_per_seed": [
+            3.8844299532897377e-10,
+            9.281877672604551e-12,
+            8.8769842753018e-12
+          ],
+          "weighted_weight_error_ratio_mean": 1.357452064527457e-10,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.49594025461340585,
+          "test_relative_mse_sample_std": 6.646067368461749e-05,
+          "test_relative_mse_per_seed": [
+            0.495871720216961,
+            0.49600442663606464,
+            0.49594461698719183
+          ],
+          "weighted_weight_error_ratio_mean": 0.4932178457578023,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.14684197432332863,
+          "test_relative_mse_sample_std": 0.001625112675957788,
+          "test_relative_mse_per_seed": [
+            0.14549393563856006,
+            0.1463854694564037,
+            0.14864651787502214
+          ],
+          "weighted_weight_error_ratio_mean": 0.1454320251941681,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.2018336621460039,
+          "test_relative_mse_sample_std": 0.0007531102644954973,
+          "test_relative_mse_per_seed": [
+            0.20167801565785318,
+            0.20265243457763077,
+            0.20117053620252776
+          ],
+          "weighted_weight_error_ratio_mean": 0.19955186049143472,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 4.228875890124318e-06,
+          "test_relative_mse_sample_std": 6.8632812620321695e-06,
+          "test_relative_mse_per_seed": [
+            3.840855631263271e-09,
+            1.2147979228638072e-05,
+            5.348075861036183e-07
+          ],
+          "weighted_weight_error_ratio_mean": 4.194675532550225e-06,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_row_scale_q0_white": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "row_scale",
+        "teacher_direction_rank": 0,
+        "coordinates": "white",
+        "seed": 20269008,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.6762230270357137,
+        "teacher_mean_abs_relative_row_norm_change": 0.24700351059436798,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "38a1be2de8d4a7b1bf7e66df5e01f5c4ffb3033bc8d5a4cefb28d5c30d82419e"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.7001784011436943,
+          "test_relative_mse_sample_std": 6.899692501062217e-06,
+          "test_relative_mse_per_seed": [
+            0.7001733928902119,
+            0.7001862712563096,
+            0.7001755392845614
+          ],
+          "weighted_weight_error_ratio_mean": 0.6977378527323405,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 7.549997759749419e-06,
+          "test_relative_mse_sample_std": 3.6537802579817454e-06,
+          "test_relative_mse_per_seed": [
+            9.688833060877886e-06,
+            9.630047975286088e-06,
+            3.331112243084282e-06
+          ],
+          "weighted_weight_error_ratio_mean": 7.532867736396535e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.707927560462637,
+          "test_relative_mse_sample_std": 0.0009200424165943157,
+          "test_relative_mse_per_seed": [
+            0.707351531816063,
+            0.7074425150876618,
+            0.7089886344841863
+          ],
+          "weighted_weight_error_ratio_mean": 0.705291231473287,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 4.281805281856376e-05,
+          "test_relative_mse_sample_std": 4.2295330499373075e-05,
+          "test_relative_mse_per_seed": [
+            1.580700347219624e-05,
+            2.1085850664421217e-05,
+            9.156130431907383e-05
+          ],
+          "weighted_weight_error_ratio_mean": 4.3697214399192795e-05,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0038996374238745466,
+          "test_relative_mse_sample_std": 0.004873651015436682,
+          "test_relative_mse_per_seed": [
+            0.009525614280176247,
+            0.0009693351877758191,
+            0.0012039628036715744
+          ],
+          "weighted_weight_error_ratio_mean": 0.0038902243056024113,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 2.2936312502774833e-05,
+          "test_relative_mse_sample_std": 1.3643117684665686e-05,
+          "test_relative_mse_per_seed": [
+            7.512814634389587e-06,
+            2.786931256641898e-05,
+            3.342681030751593e-05
+          ],
+          "weighted_weight_error_ratio_mean": 2.322166346857557e-05,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_unit_column_low_rank_q7_white": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "unit_column_low_rank",
+        "teacher_direction_rank": 7,
+        "coordinates": "white",
+        "seed": 20269115,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 7,
+        "lora_population_rank_bound": 2.5787368194461904e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.030951330438256264,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "717acafc59ddeb267d0a8e01b42499fc139977fd9d1ae69e07fcb02574e4d225"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 4.0883461124379245e-11,
+          "test_relative_mse_sample_std": 5.995323665802006e-11,
+          "test_relative_mse_per_seed": [
+            1.1162476259233954e-11,
+            1.0989086371586044e-10,
+            1.5970433980433489e-12
+          ],
+          "weighted_weight_error_ratio_mean": 3.9134326620572875e-11,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 2.3380470902139886e-09,
+          "test_relative_mse_sample_std": 2.5281258172035857e-09,
+          "test_relative_mse_per_seed": [
+            1.7803151530294152e-09,
+            1.3535680067015278e-10,
+            5.098469316942398e-09
+          ],
+          "weighted_weight_error_ratio_mean": 2.2997903766549164e-09,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 2.6242256790012005e-06,
+          "test_relative_mse_sample_std": 1.6060875526899614e-06,
+          "test_relative_mse_per_seed": [
+            9.722332801256832e-07,
+            4.180090402523102e-06,
+            2.720353354354817e-06
+          ],
+          "weighted_weight_error_ratio_mean": 2.6437339026112263e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 3.2564115710450846e-06,
+          "test_relative_mse_sample_std": 1.8896874734719262e-06,
+          "test_relative_mse_per_seed": [
+            1.515382767911309e-06,
+            2.987833010035765e-06,
+            5.26601893518818e-06
+          ],
+          "weighted_weight_error_ratio_mean": 3.2952668031308954e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 3.9692807562794e-06,
+          "test_relative_mse_sample_std": 6.644293277492867e-07,
+          "test_relative_mse_per_seed": [
+            3.202127680741887e-06,
+            4.361427626210355e-06,
+            4.344286961885958e-06
+          ],
+          "weighted_weight_error_ratio_mean": 3.992624669990619e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 5.133064017372424e-08,
+          "test_relative_mse_sample_std": 6.121815565249495e-08,
+          "test_relative_mse_per_seed": [
+            1.8214590521019994e-08,
+            1.2197339503585282e-07,
+            1.3803934964299915e-08
+          ],
+          "weighted_weight_error_ratio_mean": 5.059717445021761e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_unit_column_low_rank_q8_white": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "unit_column_low_rank",
+        "teacher_direction_rank": 8,
+        "coordinates": "white",
+        "seed": 20269116,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 8,
+        "lora_population_rank_bound": 3.084325654566668e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03472331166267395,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "b085aa0a645b105cf49cfce0e9764c00c2cb0a6f95c073f41e3690eb439c2c03"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 2.3222657001419777e-09,
+          "test_relative_mse_sample_std": 2.857505182918342e-09,
+          "test_relative_mse_per_seed": [
+            1.4326802942218142e-09,
+            1.5365428843197723e-11,
+            5.518751377360921e-09
+          ],
+          "weighted_weight_error_ratio_mean": 2.401943395048678e-09,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 2.821053391122493e-09,
+          "test_relative_mse_sample_std": 2.451364322088246e-09,
+          "test_relative_mse_per_seed": [
+            4.818037143982634e-09,
+            8.525642987955766e-11,
+            3.559866599505288e-09
+          ],
+          "weighted_weight_error_ratio_mean": 2.839759651966182e-09,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 2.316388441753395e-08,
+          "test_relative_mse_sample_std": 1.050222986014243e-08,
+          "test_relative_mse_per_seed": [
+            2.6660276956062125e-08,
+            1.1359433306249368e-08,
+            3.147194299029036e-08
+          ],
+          "weighted_weight_error_ratio_mean": 2.3079091822827042e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 2.12783599002604e-08,
+          "test_relative_mse_sample_std": 1.0342143573208103e-08,
+          "test_relative_mse_per_seed": [
+            2.981548513654484e-08,
+            2.4241536575942743e-08,
+            9.778057988293616e-09
+          ],
+          "weighted_weight_error_ratio_mean": 2.105123601362872e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 1.310908569595671e-06,
+          "test_relative_mse_sample_std": 5.041550742420008e-07,
+          "test_relative_mse_per_seed": [
+            1.8930234036968273e-06,
+            1.025243630963665e-06,
+            1.0144586741265207e-06
+          ],
+          "weighted_weight_error_ratio_mean": 1.3175970252632396e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 1.1356390153796992e-07,
+          "test_relative_mse_sample_std": 5.021286102654835e-08,
+          "test_relative_mse_per_seed": [
+            1.715300845886125e-07,
+            8.570891877336495e-08,
+            8.345270125193228e-08
+          ],
+          "weighted_weight_error_ratio_mean": 1.1499221841404506e-07,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_heterogeneous_column_low_rank_q7_white": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "heterogeneous_column_low_rank",
+        "teacher_direction_rank": 7,
+        "coordinates": "white",
+        "seed": 20269215,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 7,
+        "lora_population_rank_bound": 2.527258749554874e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03632849454879761,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "9aee1dbb9b568a502a3a5d532afb816c845ba8ce53f20e9a161f1638d4c8e11d"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 2.1348105999540567e-10,
+          "test_relative_mse_sample_std": 2.4604001901616296e-10,
+          "test_relative_mse_per_seed": [
+            1.346879776589274e-11,
+            1.387530725876245e-10,
+            4.882213096326998e-10
+          ],
+          "weighted_weight_error_ratio_mean": 2.0921287300958621e-10,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 5.23187445001536e-10,
+          "test_relative_mse_sample_std": 8.348315862941208e-10,
+          "test_relative_mse_per_seed": [
+            1.314297590517841e-11,
+            6.980671715294497e-11,
+            1.4866126419464845e-09
+          ],
+          "weighted_weight_error_ratio_mean": 5.234954206234654e-10,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 6.217846693061165e-05,
+          "test_relative_mse_sample_std": 4.426260577657021e-05,
+          "test_relative_mse_per_seed": [
+            2.9788756439693463e-05,
+            0.00011261303976935624,
+            4.413360458278525e-05
+          ],
+          "weighted_weight_error_ratio_mean": 6.216792886940918e-05,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.00014177028328409295,
+          "test_relative_mse_sample_std": 0.00022538431776987486,
+          "test_relative_mse_per_seed": [
+            1.4151586610621996e-05,
+            9.153584745381192e-06,
+            0.00040200567849627564
+          ],
+          "weighted_weight_error_ratio_mean": 0.0001389070084769628,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 1.962087915391708e-05,
+          "test_relative_mse_sample_std": 1.893807485144976e-05,
+          "test_relative_mse_per_seed": [
+            1.0393762603058668e-05,
+            4.140405941693733e-05,
+            7.0648154417552435e-06
+          ],
+          "weighted_weight_error_ratio_mean": 1.9580707430577604e-05,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 1.6551100759022668e-06,
+          "test_relative_mse_sample_std": 1.450244634134194e-06,
+          "test_relative_mse_per_seed": [
+            1.2726151220781387e-06,
+            4.344500818519697e-07,
+            3.258265023776692e-06
+          ],
+          "weighted_weight_error_ratio_mean": 1.691876898727666e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_heterogeneous_column_low_rank_q8_white": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "heterogeneous_column_low_rank",
+        "teacher_direction_rank": 8,
+        "coordinates": "white",
+        "seed": 20269216,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 8,
+        "lora_population_rank_bound": 2.542197594987006e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03025752492249012,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "118d64f3b41d7e0febce08a9a09a69f8d2d85800123ed640b5a84e01f7802953"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 7.143002826550443e-10,
+          "test_relative_mse_sample_std": 7.401394752810487e-10,
+          "test_relative_mse_per_seed": [
+            5.929957573331085e-10,
+            4.230641520160219e-11,
+            1.5075986754304222e-09
+          ],
+          "weighted_weight_error_ratio_mean": 7.18298693673051e-10,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 4.365194012390531e-10,
+          "test_relative_mse_sample_std": 6.932289104161445e-10,
+          "test_relative_mse_per_seed": [
+            2.09116086825318e-11,
+            5.185477994741227e-11,
+            1.2367918150872152e-09
+          ],
+          "weighted_weight_error_ratio_mean": 4.345043104249842e-10,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.03637682021447086,
+          "test_relative_mse_sample_std": 0.001842098525684632,
+          "test_relative_mse_per_seed": [
+            0.03685912865318342,
+            0.03792978441533926,
+            0.03434154757488991
+          ],
+          "weighted_weight_error_ratio_mean": 0.036245753367741905,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.037387967789865424,
+          "test_relative_mse_sample_std": 0.0008521925527573519,
+          "test_relative_mse_per_seed": [
+            0.03642916755770625,
+            0.03805909357737094,
+            0.037675642234519094
+          ],
+          "weighted_weight_error_ratio_mean": 0.03736238554120064,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.04068465899323882,
+          "test_relative_mse_sample_std": 0.0044642857871235115,
+          "test_relative_mse_per_seed": [
+            0.03589088083875369,
+            0.04144001956226143,
+            0.044723076578701344
+          ],
+          "weighted_weight_error_ratio_mean": 0.04132959619164467,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 0.000856846367533454,
+          "test_relative_mse_sample_std": 0.0013640014491674809,
+          "test_relative_mse_per_seed": [
+            0.00011878783729439606,
+            2.0905858016702135e-05,
+            0.0024308454072892636
+          ],
+          "weighted_weight_error_ratio_mean": 0.0008409765426525458,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_mixed_row_and_direction_q7_white": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "mixed_row_and_direction",
+        "teacher_direction_rank": 7,
+        "coordinates": "white",
+        "seed": 20269315,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.30094133238370385,
+        "teacher_mean_abs_relative_row_norm_change": 0.14692719280719757,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "b9603efda3bb24f37682d45dd4aecab826f64e002e5c4f9f715b6abd9b32beb9"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.30572405800384406,
+          "test_relative_mse_sample_std": 1.5004372626523437e-05,
+          "test_relative_mse_per_seed": [
+            0.3057098504726538,
+            0.30572257452651586,
+            0.3057397490123625
+          ],
+          "weighted_weight_error_ratio_mean": 0.30716588099797565,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 5.120339063752173e-09,
+          "test_relative_mse_sample_std": 7.0270248049327115e-09,
+          "test_relative_mse_per_seed": [
+            1.3183342161958046e-08,
+            3.0139647693181603e-10,
+            1.876278552366658e-09
+          ],
+          "weighted_weight_error_ratio_mean": 5.091582886788497e-09,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.31071047333400714,
+          "test_relative_mse_sample_std": 0.0005586937914312768,
+          "test_relative_mse_per_seed": [
+            0.3113526696737648,
+            0.3104425413985754,
+            0.3103362089296813
+          ],
+          "weighted_weight_error_ratio_mean": 0.3121427396933238,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 4.123525959759595e-06,
+          "test_relative_mse_sample_std": 2.1007150422627104e-06,
+          "test_relative_mse_per_seed": [
+            5.143091096498534e-06,
+            5.519883178433223e-06,
+            1.7076036043470289e-06
+          ],
+          "weighted_weight_error_ratio_mean": 4.079716101538604e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0010197571097343512,
+          "test_relative_mse_sample_std": 0.00010856171986319063,
+          "test_relative_mse_per_seed": [
+            0.0011242137249694562,
+            0.0009075099828192417,
+            0.0010275476214143557
+          ],
+          "weighted_weight_error_ratio_mean": 0.0010271520586684346,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 6.498292317132651e-08,
+          "test_relative_mse_sample_std": 2.4137400878338903e-08,
+          "test_relative_mse_per_seed": [
+            9.22716806838579e-08,
+            5.624842284821292e-08,
+            4.6428665981908724e-08
+          ],
+          "weighted_weight_error_ratio_mean": 6.554644116363306e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_mixed_row_and_direction_q8_white": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "mixed_row_and_direction",
+        "teacher_direction_rank": 8,
+        "coordinates": "white",
+        "seed": 20269316,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.28419815320069053,
+        "teacher_mean_abs_relative_row_norm_change": 0.14669181406497955,
+        "coordinate_scale_range": [
+          1.0,
+          1.0
+        ],
+        "problem_sha256": "4102c4baec51c12c64b71c9dca3d1245f371308c1162ce3ec81b8868b672bc7a"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.2875265683995373,
+          "test_relative_mse_sample_std": 7.1978072494509005e-06,
+          "test_relative_mse_per_seed": [
+            0.287532943862086,
+            0.2875187629266972,
+            0.28752799840982857
+          ],
+          "weighted_weight_error_ratio_mean": 0.2890687684218089,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 1.8862314165607746e-09,
+          "test_relative_mse_sample_std": 1.488616592415958e-09,
+          "test_relative_mse_per_seed": [
+            3.5536682237691892e-09,
+            6.909604860796894e-10,
+            1.4140655398334458e-09
+          ],
+          "weighted_weight_error_ratio_mean": 1.8620707568454502e-09,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.29209291897037354,
+          "test_relative_mse_sample_std": 5.998682364431986e-06,
+          "test_relative_mse_per_seed": [
+            0.2920875862236622,
+            0.29209941360044656,
+            0.29209175708701185
+          ],
+          "weighted_weight_error_ratio_mean": 0.2936902443567912,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 1.163318941212275e-07,
+          "test_relative_mse_sample_std": 2.645818957489908e-08,
+          "test_relative_mse_per_seed": [
+            1.2836916730586243e-07,
+            1.3463123105242038e-07,
+            8.59952840053997e-08
+          ],
+          "weighted_weight_error_ratio_mean": 1.1672211049547816e-07,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0016373655269278586,
+          "test_relative_mse_sample_std": 0.0014033764573398836,
+          "test_relative_mse_per_seed": [
+            0.003231566070631426,
+            0.0010919772946317533,
+            0.0005885532155203962
+          ],
+          "weighted_weight_error_ratio_mean": 0.0016396284918300807,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 9.080056832479788e-08,
+          "test_relative_mse_sample_std": 4.6108084128998445e-08,
+          "test_relative_mse_per_seed": [
+            1.3546450511546336e-07,
+            9.356451562936294e-08,
+            4.3372684229567335e-08
+          ],
+          "weighted_weight_error_ratio_mean": 9.076060199693832e-08,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_row_scale_q0_rescaled": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "row_scale",
+        "teacher_direction_rank": 0,
+        "coordinates": "rescaled",
+        "seed": 20269008,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.6762230270357137,
+        "teacher_mean_abs_relative_row_norm_change": 0.24700351059436798,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "eb143fa54b2d632f3501bc27f9a506bcb1d10bded4c28b384987a2cd14350e28"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.7001756187806485,
+          "test_relative_mse_sample_std": 1.3769126170334583e-07,
+          "test_relative_mse_per_seed": [
+            0.7001757777728225,
+            0.7001755392845614,
+            0.7001755392845614
+          ],
+          "weighted_weight_error_ratio_mean": 0.6977368791898092,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 6.321644416103179e-06,
+          "test_relative_mse_sample_std": 2.201201382001305e-06,
+          "test_relative_mse_per_seed": [
+            3.9450627636054535e-06,
+            6.729433954151411e-06,
+            8.29043653055267e-06
+          ],
+          "weighted_weight_error_ratio_mean": 6.286811337001079e-06,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.718644686316589,
+          "test_relative_mse_sample_std": 0.0013908796942094335,
+          "test_relative_mse_per_seed": [
+            0.7172842697793519,
+            0.718585640597952,
+            0.7200641485724629
+          ],
+          "weighted_weight_error_ratio_mean": 0.7172538836797079,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.0003403919970931461,
+          "test_relative_mse_sample_std": 0.00028128013442205467,
+          "test_relative_mse_per_seed": [
+            0.00010445453954281442,
+            0.0006516704543198393,
+            0.0002650509974167846
+          ],
+          "weighted_weight_error_ratio_mean": 0.0003415392857277766,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.00455218008379762,
+          "test_relative_mse_sample_std": 0.003831060012002047,
+          "test_relative_mse_per_seed": [
+            0.008944739788141339,
+            0.0019019341002976691,
+            0.0028098663629538534
+          ],
+          "weighted_weight_error_ratio_mean": 0.00457141005123655,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 3.819978508823174e-05,
+          "test_relative_mse_sample_std": 5.9583370720317036e-05,
+          "test_relative_mse_per_seed": [
+            8.402304777693512e-07,
+            0.00010691330926370685,
+            6.845815523219033e-06
+          ],
+          "weighted_weight_error_ratio_mean": 3.812532183170939e-05,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_unit_column_low_rank_q7_rescaled": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "unit_column_low_rank",
+        "teacher_direction_rank": 7,
+        "coordinates": "rescaled",
+        "seed": 20269115,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 7,
+        "lora_population_rank_bound": 2.5787368194461904e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.030951330438256264,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "9f11dc2c750c0e1d1383543aed4004b17d3d36545fac202f28aa67238e3b9730"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 8.249445944580576e-09,
+          "test_relative_mse_sample_std": 1.4256478205823208e-08,
+          "test_relative_mse_per_seed": [
+            2.4711405927262153e-08,
+            2.7182578441505528e-11,
+            9.749328038071408e-12
+          ],
+          "weighted_weight_error_ratio_mean": 8.200358504797481e-09,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 8.853663370257894e-09,
+          "test_relative_mse_sample_std": 8.306111330666738e-09,
+          "test_relative_mse_per_seed": [
+            9.707300005068018e-09,
+            1.5369790021418795e-10,
+            1.6699992205491475e-08
+          ],
+          "weighted_weight_error_ratio_mean": 8.848346578586389e-09,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.005457304119415648,
+          "test_relative_mse_sample_std": 0.00409803603664304,
+          "test_relative_mse_per_seed": [
+            0.001013064794697733,
+            0.0062721384602785904,
+            0.00908670910327062
+          ],
+          "weighted_weight_error_ratio_mean": 0.0054396220948547125,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.005673456463716144,
+          "test_relative_mse_sample_std": 0.004845344503709416,
+          "test_relative_mse_per_seed": [
+            0.0011499725129368648,
+            0.005083719336971462,
+            0.010786677541240106
+          ],
+          "weighted_weight_error_ratio_mean": 0.005640415164331595,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.006564722657051535,
+          "test_relative_mse_sample_std": 0.003795198388083265,
+          "test_relative_mse_per_seed": [
+            0.0031594461218922925,
+            0.005878511914285335,
+            0.010656209934976978
+          ],
+          "weighted_weight_error_ratio_mean": 0.006561436535169681,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 1.3377348016911498e-05,
+          "test_relative_mse_sample_std": 1.1512432412639342e-05,
+          "test_relative_mse_per_seed": [
+            1.1029040788404443e-06,
+            2.393493417501018e-05,
+            1.5094205796883871e-05
+          ],
+          "weighted_weight_error_ratio_mean": 1.3581737675849581e-05,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_unit_column_low_rank_q8_rescaled": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "unit_column_low_rank",
+        "teacher_direction_rank": 8,
+        "coordinates": "rescaled",
+        "seed": 20269116,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 8,
+        "lora_population_rank_bound": 3.084325654566668e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03472331166267395,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "8550e0a0b522f39b1ade2ec966334080035fb4e422b75565a2fce5550a47970a"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 1.0439515256280306e-08,
+          "test_relative_mse_sample_std": 1.5437560776135735e-08,
+          "test_relative_mse_per_seed": [
+            2.8172581683438283e-08,
+            7.069286113863142e-13,
+            3.1452571567912466e-09
+          ],
+          "weighted_weight_error_ratio_mean": 1.0411609110455932e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 3.6800321541879042e-09,
+          "test_relative_mse_sample_std": 5.9162341133684026e-09,
+          "test_relative_mse_per_seed": [
+            1.0504699299405438e-08,
+            5.318289507631403e-10,
+            3.5682123951342332e-12
+          ],
+          "weighted_weight_error_ratio_mean": 3.6884079969955186e-09,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.06251015147299765,
+          "test_relative_mse_sample_std": 0.0016908435571882693,
+          "test_relative_mse_per_seed": [
+            0.06090143066578765,
+            0.062356406998093916,
+            0.06427261675511141
+          ],
+          "weighted_weight_error_ratio_mean": 0.06386289248863856,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.06252445891816213,
+          "test_relative_mse_sample_std": 0.001059347456043779,
+          "test_relative_mse_per_seed": [
+            0.06173004748800022,
+            0.062116121405137066,
+            0.06372720786134914
+          ],
+          "weighted_weight_error_ratio_mean": 0.0638678049047788,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.06274754655829384,
+          "test_relative_mse_sample_std": 0.001325661962470495,
+          "test_relative_mse_per_seed": [
+            0.06137527583845868,
+            0.06284628559344134,
+            0.06402107824298153
+          ],
+          "weighted_weight_error_ratio_mean": 0.06418781727552414,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 3.7480717031417585e-05,
+          "test_relative_mse_sample_std": 2.9933215094529874e-05,
+          "test_relative_mse_per_seed": [
+            4.727030595107924e-05,
+            6.129341858714721e-05,
+            3.8784265560263065e-06
+          ],
+          "weighted_weight_error_ratio_mean": 3.7229536474114866e-05,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_heterogeneous_column_low_rank_q7_rescaled": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "heterogeneous_column_low_rank",
+        "teacher_direction_rank": 7,
+        "coordinates": "rescaled",
+        "seed": 20269215,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 7,
+        "lora_population_rank_bound": 2.527258749554874e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03632849454879761,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "b4c91a164fe6bc6167f2d5ff6b37d4acea7407684a84ebe642a8014821a49453"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 9.940486300121755e-08,
+          "test_relative_mse_sample_std": 1.5621678881137831e-07,
+          "test_relative_mse_per_seed": [
+            3.6928007209144955e-09,
+            2.7967345380652063e-07,
+            1.4848334476217534e-08
+          ],
+          "weighted_weight_error_ratio_mean": 9.885468288395316e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 3.7305528395965537e-07,
+          "test_relative_mse_sample_std": 6.071352170859381e-07,
+          "test_relative_mse_per_seed": [
+            4.734730360114994e-11,
+            4.549507222872911e-08,
+            1.0736234323466358e-06
+          ],
+          "weighted_weight_error_ratio_mean": 3.7527364272112634e-07,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.012313166908384892,
+          "test_relative_mse_sample_std": 0.011295619300532982,
+          "test_relative_mse_per_seed": [
+            0.0028028769704917427,
+            0.024798564418838726,
+            0.009338059335824206
+          ],
+          "weighted_weight_error_ratio_mean": 0.012306033245598277,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.010827345099090311,
+          "test_relative_mse_sample_std": 0.00850533493510576,
+          "test_relative_mse_per_seed": [
+            0.003659682316809934,
+            0.020225742685396314,
+            0.008596610295064686
+          ],
+          "weighted_weight_error_ratio_mean": 0.010827655903995037,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.011728569725260615,
+          "test_relative_mse_sample_std": 0.008480381369484088,
+          "test_relative_mse_per_seed": [
+            0.004274893585843287,
+            0.020955307992100443,
+            0.009955507597838116
+          ],
+          "weighted_weight_error_ratio_mean": 0.011727037684371075,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 2.0110146419053188e-05,
+          "test_relative_mse_sample_std": 2.1133803228427837e-05,
+          "test_relative_mse_per_seed": [
+            2.278086384313377e-07,
+            4.2305176830568345e-05,
+            1.7797453788159877e-05
+          ],
+          "weighted_weight_error_ratio_mean": 2.0206678257750355e-05,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_heterogeneous_column_low_rank_q8_rescaled": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "heterogeneous_column_low_rank",
+        "teacher_direction_rank": 8,
+        "coordinates": "rescaled",
+        "seed": 20269216,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 8,
+        "lora_population_rank_bound": 2.542197594987006e-15,
+        "teacher_mean_abs_relative_row_norm_change": 0.03025752492249012,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "e223ae175ed1f1ba06749165cf61abebc9a8e2a54deb3ce783144fc2fd2c2295"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 4.512393167616182e-08,
+          "test_relative_mse_sample_std": 7.313650218130233e-08,
+          "test_relative_mse_per_seed": [
+            1.2951457549570975e-07,
+            1.6955592362058526e-10,
+            5.687663609155131e-09
+          ],
+          "weighted_weight_error_ratio_mean": 4.491668155933345e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 4.2725170741754514e-09,
+          "test_relative_mse_sample_std": 4.935779275701463e-09,
+          "test_relative_mse_per_seed": [
+            3.128365260467834e-09,
+            9.295210587792119e-12,
+            9.67989075147073e-09
+          ],
+          "weighted_weight_error_ratio_mean": 4.244068738517663e-09,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.06454140100085035,
+          "test_relative_mse_sample_std": 0.018114623900810208,
+          "test_relative_mse_per_seed": [
+            0.049748133222797114,
+            0.08474463554746418,
+            0.05913143423228976
+          ],
+          "weighted_weight_error_ratio_mean": 0.06533075869083405,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.06331534803454017,
+          "test_relative_mse_sample_std": 0.0180844878063828,
+          "test_relative_mse_per_seed": [
+            0.04918052055793902,
+            0.08369454934529881,
+            0.05707097420038266
+          ],
+          "weighted_weight_error_ratio_mean": 0.0646791619559129,
+          "selected_learning_rate": 0.001,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.053770292292917674,
+          "test_relative_mse_sample_std": 0.006848861983534962,
+          "test_relative_mse_per_seed": [
+            0.06157496489461762,
+            0.050973498688989025,
+            0.04876241329514637
+          ],
+          "weighted_weight_error_ratio_mean": 0.05437488233049711,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 0.00012563313863379267,
+          "test_relative_mse_sample_std": 5.325125758526098e-05,
+          "test_relative_mse_per_seed": [
+            0.00014603173321555693,
+            0.0001656694804722023,
+            6.51982022136188e-05
+          ],
+          "weighted_weight_error_ratio_mean": 0.0001264757714428318,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_mixed_row_and_direction_q7_rescaled": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "mixed_row_and_direction",
+        "teacher_direction_rank": 7,
+        "coordinates": "rescaled",
+        "seed": 20269315,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.30094133238370385,
+        "teacher_mean_abs_relative_row_norm_change": 0.14692719280719757,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "d456370db08b78408944a3460cb36532ce6dcf5ffe1ae0fafe321b1c3275260b"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.3057252328382382,
+          "test_relative_mse_sample_std": 1.9586197412439994e-07,
+          "test_relative_mse_per_seed": [
+            0.305725053626212,
+            0.3057252029695672,
+            0.30572544191893547
+          ],
+          "weighted_weight_error_ratio_mean": 0.3071674009164174,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 1.718077208583046e-06,
+          "test_relative_mse_sample_std": 2.975573672849585e-06,
+          "test_relative_mse_per_seed": [
+            9.291989167971105e-12,
+            2.486059284608949e-10,
+            5.15397372783151e-06
+          ],
+          "weighted_weight_error_ratio_mean": 1.6944483862751589e-06,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.31849021673583855,
+          "test_relative_mse_sample_std": 0.0010730392171951827,
+          "test_relative_mse_per_seed": [
+            0.31732780770884117,
+            0.31944292777970396,
+            0.31869991471897047
+          ],
+          "weighted_weight_error_ratio_mean": 0.3200425903002421,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.002531802441138855,
+          "test_relative_mse_sample_std": 0.0028682965127144627,
+          "test_relative_mse_per_seed": [
+            0.001511116971883664,
+            0.005770840058762428,
+            0.00031345029277047334
+          ],
+          "weighted_weight_error_ratio_mean": 0.0025200708381210766,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.024495017410348784,
+          "test_relative_mse_sample_std": 0.013112466514757835,
+          "test_relative_mse_per_seed": [
+            0.031163373386822946,
+            0.032933118280893105,
+            0.009388560563330305
+          ],
+          "weighted_weight_error_ratio_mean": 0.024134512059390545,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 0.00011454037386160042,
+          "test_relative_mse_sample_std": 0.00017730512910949905,
+          "test_relative_mse_per_seed": [
+            1.245131993493573e-05,
+            0.00031927445027383003,
+            1.1895351376035487e-05
+          ],
+          "weighted_weight_error_ratio_mean": 0.00011468981422998088,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    },
+    "r8_mixed_row_and_direction_q8_rescaled": {
+      "teacher": {
+        "adapter_rank": 8,
+        "family": "mixed_row_and_direction",
+        "teacher_direction_rank": 8,
+        "coordinates": "rescaled",
+        "seed": 20269316,
+        "strength": 0.25,
+        "teacher_delta_numerical_rank": 64,
+        "lora_population_rank_bound": 0.28419815320069053,
+        "teacher_mean_abs_relative_row_norm_change": 0.14669181406497955,
+        "coordinate_scale_range": [
+          0.25118863582611084,
+          3.981071949005127
+        ],
+        "problem_sha256": "8f657bd8c7ce0a66780e8f50cb30d6dcb09900aea6ef1ada93ea1e3a8d131b81"
+      },
+      "methods": {
+        "lora": {
+          "test_relative_mse_mean": 0.2875254660999377,
+          "test_relative_mse_sample_std": 4.011739793274021e-06,
+          "test_relative_mse_per_seed": [
+            0.2875220996173769,
+            0.2875243935922192,
+            0.287529905090217
+          ],
+          "weighted_weight_error_ratio_mean": 0.2890692353248596,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora": {
+          "test_relative_mse_mean": 3.983994237084236e-08,
+          "test_relative_mse_sample_std": 6.736140241166895e-08,
+          "test_relative_mse_per_seed": [
+            1.343474322786326e-09,
+            1.176208595363047e-07,
+            5.554932534360521e-10
+          ],
+          "weighted_weight_error_ratio_mean": 4.103966157649926e-08,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "nora": {
+          "test_relative_mse_mean": 0.3335460970173004,
+          "test_relative_mse_sample_std": 0.003057252809593732,
+          "test_relative_mse_per_seed": [
+            0.33361723009866595,
+            0.3365671625783467,
+            0.33045389837488864
+          ],
+          "weighted_weight_error_ratio_mean": 0.33554331461588544,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora": {
+          "test_relative_mse_mean": 0.04137564219378832,
+          "test_relative_mse_sample_std": 0.005948776086656001,
+          "test_relative_mse_per_seed": [
+            0.04299712490472556,
+            0.046345561033554236,
+            0.03478424064308516
+          ],
+          "weighted_weight_error_ratio_mean": 0.041049944857756294,
+          "selected_learning_rate": 0.003,
+          "selected_magnitude_lr_multiplier": 1.0
+        },
+        "dora_nora_mlr": {
+          "test_relative_mse_mean": 0.0765385798504241,
+          "test_relative_mse_sample_std": 0.010353367012387128,
+          "test_relative_mse_per_seed": [
+            0.0884540611577268,
+            0.06973930048424914,
+            0.07142237790929636
+          ],
+          "weighted_weight_error_ratio_mean": 0.07645447303851445,
+          "selected_learning_rate": 0.03,
+          "selected_magnitude_lr_multiplier": 0.1
+        },
+        "dora_nora_gain": {
+          "test_relative_mse_mean": 0.00012820280441453314,
+          "test_relative_mse_sample_std": 5.3400428453070464e-05,
+          "test_relative_mse_per_seed": [
+            0.00017279683784021435,
+            0.00014278579442747035,
+            6.90257809759147e-05
+          ],
+          "weighted_weight_error_ratio_mean": 0.00012756476401894665,
+          "selected_learning_rate": 0.01,
+          "selected_magnitude_lr_multiplier": 1.0
+        }
+      }
+    }
+  }
+}
