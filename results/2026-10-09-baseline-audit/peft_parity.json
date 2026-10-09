@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "command": [
+    "/var/tmp/dora-bench/venv/bin/python",
+    "/var/tmp/dora-bench/baseline_audit/peft_parity.py"
+  ],
+  "torch": "2.12.0+cu130",
+  "peft": "0.21.2",
+  "device": "cpu",
+  "dtype": "float64",
+  "seed": 20261009,
+  "weight_shape": [
+    5,
+    7
+  ],
+  "input_shape": [
+    4,
+    2,
+    7
+  ],
+  "rank": 3,
+  "lora_alpha": 3,
+  "effective_scaling": 1,
+  "adapter_dropout": 0,
+  "both_low_rank_factors_nonzero": true,
+  "magnitudes_nontrivially_rescaled": true,
+  "base_weight_and_bias_identical_and_gradient_free": true,
+  "errors": {
+    "output": {
+      "maximum_absolute_error": 2.220446049250313e-16,
+      "relative_l2_error": 9.571997153606649e-17,
+      "peft_l2_norm": 3.0142910426956564
+    },
+    "loss": {
+      "maximum_absolute_error": 0.0,
+      "relative_l2_error": 0.0,
+      "peft_l2_norm": 29.462543135871798
+    },
+    "input_gradient": {
+      "maximum_absolute_error": 4.440892098500626e-16,
+      "relative_l2_error": 1.0393944927893548e-16,
+      "peft_l2_norm": 5.892971051691201
+    },
+    "standalone_A_vs_peft_B_gradient": {
+      "maximum_absolute_error": 0.0,
+      "relative_l2_error": 0.0,
+      "peft_l2_norm": 8.201209859073515
+    },
+    "standalone_B_vs_peft_A_gradient": {
+      "maximum_absolute_error": 2.220446049250313e-16,
+      "relative_l2_error": 3.696264778111398e-17,
+      "peft_l2_norm": 7.3573731165724325
+    },
+    "magnitude_gradient": {
+      "maximum_absolute_error": 1.7763568394002505e-15,
+      "relative_l2_error": 1.722019917825541e-16,
+      "peft_l2_norm": 11.817937750806056
+    }
+  },
+  "source_paths": {
+    "standalone": "/home/catid/dora/dora.py",
+    "peft_dora": "/var/tmp/dora-bench/venv/lib/python3.12/site-packages/peft/tuners/lora/dora.py",
+    "peft_linear": "/var/tmp/dora-bench/venv/lib/python3.12/site-packages/peft/tuners/lora/layer.py",
+    "audit_script": "/var/tmp/dora-bench/baseline_audit/peft_parity.py"
+  },
+  "source_sha256": {
+    "standalone": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+    "peft_dora": "2ff9d222eeada2ec82d6414ad2e0e46b17c6ccb76fc2cc0923a20c079ccf974c",
+    "peft_linear": "9a2688af69fd16cef94fdb08ab0e973b37d7b2a672e64ba2057a01df7e98b7d8",
+    "audit_script": "a9b741c3b0ff115e3cdf8bb379e6fa9d08ae052ec2dc8d0f1c320e33a5e0409a"
+  },
+  "scope": "Actual installed PEFT forward/backward parity for one deterministic nonsquare nonzero-adapter CPU FP64 case. Confirms the detached-denominator variant; does not compare the full-gradient variant, train models, guarantee lower-precision identity, or establish task-quality superiority."
+}

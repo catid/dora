@@ -1,0 +1,7 @@
+Total Parameters: 11
+Trainable Parameters: 11
+Final Evaluation Loss: 0.134155735373497
+Total Parameters: 65
+Trainable Parameters: 54
+Continuing training with DoRA layers...
+Final (DoRA) Evaluation Loss: 0.060803063213825226

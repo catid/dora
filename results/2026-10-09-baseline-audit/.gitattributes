@@ -1,0 +1,4 @@
+# Preserve exact historical source bytes, including original trailing whitespace.
+original_dora.py -whitespace
+gpu_source/dora_original_bb97617.py -whitespace
+gpu_source/dora_axis_only_dim1.py -whitespace

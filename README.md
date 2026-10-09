@@ -50,7 +50,14 @@ Move the base layer to its intended **device and dtype before wrapping it**. Nor
 
 ## Corrections and validation
 
-The original code normalized `dim=0` even though PyTorch stores transposed linear weights. Its one-output demo consequently reduced direction adaptation to elementwise signs, with nearly zero direction gradients. This version normalizes `dim=1`, detaches the denominator, initializes standalone weights, handles missing biases, and avoids resetting the caller's RNG on import. **Old adapter checkpoints are incompatible with the corrected magnitude layout.**
+The changes address different concerns and do not establish better task quality:
+
+- **Normalization axis:** the original used `dim=0`. For PyTorch weights stored as `[out, in]`, `dim=1` agrees with the [authors' implementation](https://github.com/NVlabs/DoRA/blob/7e2f10abbe8efe212c8fca1d983ae1d04ef13a18/commonsense_reasoning/peft/src/peft/tuners/dora.py#L243) and PEFT. In the original one-output demo, direction adaptation reduces to elementwise signs with nearly zero direction gradients, but **the model still learns through one magnitude per input**.
+- **Norm gradient:** detaching the denominator is the optional memory-saving approximation in [paper §4.3](https://arxiv.org/html/2402.09353v3#S4.SS3). The full-gradient formula in §4.2 is valid; changing it was an algorithm choice, not a mandatory bug fix. The authors expose this choice as `dora_simple` and use the detached variant in their reported experiments.
+- **Engineering fixes:** initialize standalone weights, support biasless linear layers, preserve device/dtype during conversion, handle zero rows, and avoid resetting the caller's RNG on import. Conversion and merge support also extend the API.
+- **Factorization:** apply the low-rank update to activations while preserving the detached variant's forward/backward computation within floating-point tolerance. This reduces memory, but can increase latency for small layers.
+
+**Old adapter checkpoints are incompatible with the output-wise magnitude layout.** The [original-baseline audit below](#original-baseline-audit-2026-10-09) separates these changes experimentally.
 
 The 20 tests cover an independent dense forward/gradient reference with nonzero adapters, conversion identity, frozen base weights, optimizer updates, root/shared module conversion, state dictionaries, merged inference, zero/tiny weights, CPU/CUDA execution, autocast, and FP16 overflow regressions. They passed locally with PyTorch 2.12.0+cu130, including FP32, FP64, FP16 and BF16 checks.
 
@@ -72,7 +79,7 @@ This synthetic example is a smoke test, not a model-quality benchmark. Exact los
 
 Training applies the low-rank update to activations, keeping the dense adapted weight out of the backward graph. The row norm still requires a dense temporary, computed without autograd and reused for the base-weight addition. `to_linear()` folds the adapter into a plain frozen linear layer for inference, eliminating ongoing adapter overhead; the export is a snapshot and does not track later training updates.
 
-The benchmark compares against a **corrected dense DoRA reference**, validates outputs and input/adapter gradients first, and saves raw timings, peak incremental CUDA allocations, source hashes, seed, commands, and environment details:
+The benchmark compares against an **output-wise, detached-denominator dense DoRA reference**, validates outputs and input/adapter gradients first, and saves raw timings, peak incremental CUDA allocations, source hashes, seed, commands, and environment details. This reference is not the original repository implementation:
 
 ```bash
 python benchmark_dora.py --device cuda:0 --output benchmark_1024.json
@@ -91,6 +98,42 @@ Measured on an NVIDIA RTX PRO 6000 Blackwell Max-Q with PyTorch 2.12.0+cu130, FP
 | 4096 × 4096 / 32 | 0.652 ms | 0.256 ms | 256.5 / 64.0 MiB |
 
 The largest case is **2.55× faster with 75% less incremental peak allocation**. Its merged inference takes 0.061 ms versus 0.231 ms for the dense adapter. These allocation figures exclude existing model/input tensors and optimizer state. Small cases favor dense computation for latency. Worst FP32 output/gradient relative-L2 error was 6.2e-7; a separate BF16 smoke check also passed. Full configurations, comparisons, raw timing samples, and provenance are in [benchmark_results.json](benchmark_results.json).
+
+## Original-baseline audit (2026-10-09)
+
+**The changes do not demonstrate a quality improvement over the original code.** The downstream tables below did not include the original implementation from commit `bb97617a0d5e1ad4c6856cb7278f5a7386820d18`. In the new matched toy comparison, the original beats the current implementation in all five seeds, and LoRA has the lowest mean held-out MSE. Across our downstream comparisons, DoRA has small benefits in a few settings but no consistent practical advantage over LoRA sufficient to establish a general preference. LoRA is the economical default for these measured tasks: for example, rank-8 Aircraft gains only 0.18 percentage points with DoRA while taking 13.5% more training time and 45.5% more peak allocated memory. Its paired quality interval includes zero.
+
+The untouched original demo reproduces training-minibatch losses **0.134156 → 0.060803**. It evaluates different shuffled training minibatches before and after adaptation; these are not held-out scores and cannot be compared directly with the current demo's numbers.
+
+For a matched comparison, each seed shares one pretrained `Linear(10, 1)` base, 1,000 training examples, 10,000 independent held-out examples, stored rank-4 factors, and identical training minibatches. The target is `y = sum(x)`. Each variant gets 5 additional epochs / 80 AdamW updates at learning rate 0.001 and weight decay 0.01, following 100 epochs of base pretraining. This uses CPU FP32, seeds 0–4, and **no learning-rate search**. Values are mean ± sample SD; lower is better.
+
+| Method | Held-out MSE ↓ | Trainable parameters |
+|:--|--:|--:|
+| Original: input-column norm, full gradient | 0.06832 ± 0.02972 | 54 |
+| Original: magnitudes only, factors frozen | 0.06832 ± 0.02972 | 10 |
+| Output-row norm, full gradient | 0.08602 ± 0.02754 | 45 |
+| Output-row norm, detached gradient, dense | 0.11082 ± 0.03564 | 45 |
+| Current: output-row norm, detached gradient, factorized | 0.11082 ± 0.03564 | 45 |
+| LoRA, using the same historical factor initialization | **0.02971 ± 0.02525** | 44 |
+| Continue full linear training, fresh optimizer | 0.06805 ± 0.02986 | 11 |
+
+![Matched original-baseline toy comparison](results/2026-10-09-baseline-audit/toy_comparison.png)
+
+The original and its magnitude-only control have identical recorded losses in all five seeds. The detached dense and factorized versions agree to rounding precision, so factorization does not explain the observed quality difference. Changing the axis and then detaching the norm each worsens mean loss in this fixed-budget toy. This same-task, one-output continuation problem is particularly favorable to the original's independent input magnitudes; rank 4 imposes no meaningful low-rank capacity restriction here. It is not evidence of a general downstream ranking. Equal rank does not equalize parameter counts. All continuation variants start fresh optimizers, and this toy applies weight decay to magnitudes too, unlike the second-round tasks. The task runners below also use conventional down-factor Kaiming initialization and zero up-factors, rather than the standalone demo's historical factor initialization.
+
+An independent check against **installed PEFT 0.21.2** uses a nonsquare weight, nonzero factors, rescaled magnitudes, and CPU FP64. Maximum absolute output error is **2.22e-16**; the largest input/adapter-gradient error is **1.78e-15**. This supports correctness for the detached PEFT variant in the tested case. It does not establish better task quality or equivalence to the full-gradient formula.
+
+A fresh GPU audit measures the actual original alongside the other variants. FP32, rank 8, seven samples of 20 forward+backward calls, including input gradients and excluding optimizer steps:
+
+| Weight / tokens | Original, full gradient | Output-row, full gradient | Output-row, detached dense | Current, factorized |
+|:--|--:|--:|--:|--:|
+| 1024 × 1024 / 32 | 0.170 ms | 0.161 ms | 0.138 ms | 0.176 ms |
+| 1024 × 1024 / 256 | 0.171 ms | 0.166 ms | 0.143 ms | 0.182 ms |
+| 4096 × 4096 / 32 | 1.330 ms | 1.432 ms | 0.689 ms | 0.253 ms |
+
+Current versus original is 4–6% slower at width 1024 and 5.25× faster at width 4096, but this combines different axis and gradient semantics. The comparable factorization-only speedup at width 4096 is **2.72×** versus detached dense. Incremental peak allocation falls from **448.5 MiB original / 256.5 MiB detached dense to 64.0 MiB factorized** in that case. These measurements are a separate session from the earlier latency table and are not cross-session speedup estimates.
+
+[Raw results, exact executed source snapshots, commands, source hashes, and report script](results/2026-10-09-baseline-audit/README.md) preserve the audit. No core algorithm or default was changed as part of this audit.
 
 ## Real-world task comparisons (2026-10-08)
 

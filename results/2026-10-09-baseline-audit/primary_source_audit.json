@@ -1,0 +1,31 @@
+{
+  "paper_url": "https://arxiv.org/html/2402.09353v3",
+  "paper_html_sha256": "6158bce6385cdfcb61de9d1a296bde2b55eeeec5c9407ebc80a5891b9fc3e77b",
+  "nvlabs_source_url": "https://github.com/NVlabs/DoRA/blob/7e2f10abbe8efe212c8fca1d983ae1d04ef13a18/commonsense_reasoning/peft/src/peft/tuners/dora.py",
+  "nvlabs_row_norm_lines": [
+    243,
+    434,
+    436
+  ],
+  "nvlabs_detach_option": "dora_simple defaults True; False retains the norm gradient.",
+  "nvlabs_detach_option_lines": [
+    76,
+    77,
+    433,
+    434,
+    435,
+    436
+  ],
+  "peft_version": "0.21.2",
+  "peft_row_norm_line": 90,
+  "peft_detach_line": 152,
+  "paper_full_gradient": "Section 4.2 equation 6 contains the direction-orthogonal projection.",
+  "paper_detached_gradient": "Section 4.3 equation 11 replaces it with m/C times upstream gradient. Paper explicitly says all subsequent experiments incorporate this adjustment.",
+  "axis_conclusion": "For torch.nn.Linear weights shaped [out,in], current dim=1 agrees with the authors and PEFT. Paper says column normalization in its notation; the literal word column alone is insufficient to select a PyTorch storage dimension.",
+  "detach_conclusion": "Documented optional memory-saving gradient choice, not a correction of an invalid full-gradient DoRA formula.",
+  "source_sha256": {
+    "nvlabs_dora_7e2f10a.py": "a2b36c729ffd62904e320bb1cc7e18fabd2341b8c840b2c27475f04a0e107178",
+    "peft_0.21.2_dora.py": "2ff9d222eeada2ec82d6414ad2e0e46b17c6ccb76fc2cc0923a20c079ccf974c",
+    "paper_sections.txt": "529ae749e10e86d0a0b722c9367ab25da7089d7c6715a047082d5167ec286946"
+  }
+}

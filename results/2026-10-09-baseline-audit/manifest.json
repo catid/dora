@@ -1,0 +1,226 @@
+{
+  "format_version": 1,
+  "scope": "Compact baseline challenge audit; every listed file is included. Executed scripts and raw evidence are unchanged. This manifest excludes itself.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 205,
+      "sha256": "1c85721ab274113ceab12032a94ee089c06e1df355cd0d263a8dd5054fc9c11e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7268,
+      "sha256": "0c300c045da195eae934b1da4e0614d83aa87eb660764f0d39664dc9729927b1"
+    },
+    {
+      "path": "gpu_latency.json",
+      "bytes": 41112,
+      "sha256": "10c8c501c03c7f92084bffcf2770a5c11c11f2b3a3795cfd1558ea8a1af93821"
+    },
+    {
+      "path": "gpu_latency.py",
+      "bytes": 11327,
+      "sha256": "a0a0f4e440deb40149b8b82fff13061bb579e0351bb1bd9ce0976e741a9d4be9"
+    },
+    {
+      "path": "gpu_latency_stdout.txt",
+      "bytes": 8628,
+      "sha256": "89d17bd762f4a0c19cfdacf3bbc1b818532416dfa7e17b7b9443778add12e31d"
+    },
+    {
+      "path": "gpu_latency_validation.json",
+      "bytes": 1184,
+      "sha256": "d001575df89ef0d85e025b9ebdaead61bb41e100b65c95e3a25b04865c62d7e2"
+    },
+    {
+      "path": "gpu_source/benchmark_dora.py",
+      "bytes": 10453,
+      "sha256": "0b1bed235af286cba417409834b72a9c3339a3d76b282b693f658ee78eed3460"
+    },
+    {
+      "path": "gpu_source/dora.py",
+      "bytes": 9421,
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0"
+    },
+    {
+      "path": "gpu_source/dora_axis_only_dim1.py",
+      "bytes": 4542,
+      "sha256": "8483812c0e1c8d6797f2d13de339e6af335d60f304e157726a2681eb945618fb"
+    },
+    {
+      "path": "gpu_source/dora_original_bb97617.py",
+      "bytes": 4542,
+      "sha256": "e1d25979459dce1ff5f458469bece1e928c8bae02844acc6259b606ac228174d"
+    },
+    {
+      "path": "original_demo_stdout.txt",
+      "bytes": 224,
+      "sha256": "1654d111ac1ca0004ad44928156bfc53a987be94baa98b6fa28a9e798493dadc"
+    },
+    {
+      "path": "original_dora.py",
+      "bytes": 4542,
+      "sha256": "e1d25979459dce1ff5f458469bece1e928c8bae02844acc6259b606ac228174d"
+    },
+    {
+      "path": "peft_parity.json",
+      "bytes": 2599,
+      "sha256": "7a24440f587992e3373f481bf6df3fcd46df9d3cd68e3b2e0942ecd81117ff92"
+    },
+    {
+      "path": "peft_parity.py",
+      "bytes": 5080,
+      "sha256": "a9b741c3b0ff115e3cdf8bb379e6fa9d08ae052ec2dc8d0f1c320e33a5e0409a"
+    },
+    {
+      "path": "primary_source_audit.json",
+      "bytes": 1600,
+      "sha256": "27c7006ecbf9c422ada22ee2b461b02eea3d6e77da75e997f9425584a9ab3b93"
+    },
+    {
+      "path": "report.py",
+      "bytes": 10084,
+      "sha256": "c685499c506ed61071cd13cafed1f180548dfb5df8e86d8ffe2bcd7eae8bfa83"
+    },
+    {
+      "path": "toy_chart_summary.json",
+      "bytes": 3173,
+      "sha256": "31a3b22989c14b56d258cd3931521f5e8366983fe20f15eb23a42e675505d86e"
+    },
+    {
+      "path": "toy_compare.py",
+      "bytes": 6264,
+      "sha256": "7b9b28253fa40f203138e9fd0f015a72d0015a2eca5cd9379368dc1378a7c40a"
+    },
+    {
+      "path": "toy_comparison.json",
+      "bytes": 24131,
+      "sha256": "d66163bbe46b303e9ec57d65708ad03327fbef88647222c6addca354d29bfdb6"
+    },
+    {
+      "path": "toy_comparison.png",
+      "bytes": 299291,
+      "sha256": "76b3072e6eadf51eccb187a3ed2ecd32e33974955de5f239e73e80e15063a04f"
+    },
+    {
+      "path": "toy_comparison_stdout.txt",
+      "bytes": 3833,
+      "sha256": "08ad5edf70fd7936ba48f1fc95096821b97a397eee408ca1cea534e56a5a6ef3"
+    }
+  ],
+  "retained_executed_evidence": [
+    {
+      "path": "gpu_latency.json",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/gpu_latency.json",
+      "sha256": "10c8c501c03c7f92084bffcf2770a5c11c11f2b3a3795cfd1558ea8a1af93821",
+      "byte_identical": true
+    },
+    {
+      "path": "gpu_latency.py",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/gpu_latency.py",
+      "sha256": "a0a0f4e440deb40149b8b82fff13061bb579e0351bb1bd9ce0976e741a9d4be9",
+      "byte_identical": true
+    },
+    {
+      "path": "gpu_latency_stdout.txt",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/gpu_latency.log",
+      "sha256": "89d17bd762f4a0c19cfdacf3bbc1b818532416dfa7e17b7b9443778add12e31d",
+      "byte_identical": true
+    },
+    {
+      "path": "gpu_latency_validation.json",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/gpu_latency_validation.json",
+      "sha256": "d001575df89ef0d85e025b9ebdaead61bb41e100b65c95e3a25b04865c62d7e2",
+      "byte_identical": true
+    },
+    {
+      "path": "gpu_source/benchmark_dora.py",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/gpu_source/benchmark_dora.py",
+      "sha256": "0b1bed235af286cba417409834b72a9c3339a3d76b282b693f658ee78eed3460",
+      "byte_identical": true
+    },
+    {
+      "path": "gpu_source/dora.py",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/gpu_source/dora.py",
+      "sha256": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+      "byte_identical": true
+    },
+    {
+      "path": "gpu_source/dora_axis_only_dim1.py",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/gpu_source/dora_axis_only_dim1.py",
+      "sha256": "8483812c0e1c8d6797f2d13de339e6af335d60f304e157726a2681eb945618fb",
+      "byte_identical": true
+    },
+    {
+      "path": "gpu_source/dora_original_bb97617.py",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/gpu_source/dora_original_bb97617.py",
+      "sha256": "e1d25979459dce1ff5f458469bece1e928c8bae02844acc6259b606ac228174d",
+      "byte_identical": true
+    },
+    {
+      "path": "original_demo_stdout.txt",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/original_demo_stdout.txt",
+      "sha256": "1654d111ac1ca0004ad44928156bfc53a987be94baa98b6fa28a9e798493dadc",
+      "byte_identical": true
+    },
+    {
+      "path": "original_dora.py",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/original_dora.py",
+      "sha256": "e1d25979459dce1ff5f458469bece1e928c8bae02844acc6259b606ac228174d",
+      "byte_identical": true
+    },
+    {
+      "path": "peft_parity.json",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/peft_parity.json",
+      "sha256": "7a24440f587992e3373f481bf6df3fcd46df9d3cd68e3b2e0942ecd81117ff92",
+      "byte_identical": true
+    },
+    {
+      "path": "peft_parity.py",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/peft_parity.py",
+      "sha256": "a9b741c3b0ff115e3cdf8bb379e6fa9d08ae052ec2dc8d0f1c320e33a5e0409a",
+      "byte_identical": true
+    },
+    {
+      "path": "primary_source_audit.json",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/primary_source_audit.json",
+      "sha256": "27c7006ecbf9c422ada22ee2b461b02eea3d6e77da75e997f9425584a9ab3b93",
+      "byte_identical": true
+    },
+    {
+      "path": "toy_compare.py",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/toy_compare.py",
+      "sha256": "7b9b28253fa40f203138e9fd0f015a72d0015a2eca5cd9379368dc1378a7c40a",
+      "byte_identical": true
+    },
+    {
+      "path": "toy_comparison.json",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/toy_comparison.json",
+      "sha256": "d66163bbe46b303e9ec57d65708ad03327fbef88647222c6addca354d29bfdb6",
+      "byte_identical": true
+    },
+    {
+      "path": "toy_comparison_stdout.txt",
+      "historical_path": "/var/tmp/dora-bench/baseline_audit/toy_comparison.log",
+      "sha256": "08ad5edf70fd7936ba48f1fc95096821b97a397eee408ca1cea534e56a5a6ef3",
+      "byte_identical": true
+    }
+  ],
+  "omitted_external_source_sha256": {
+    "nvlabs_dora_7e2f10a.py": "a2b36c729ffd62904e320bb1cc7e18fabd2341b8c840b2c27475f04a0e107178",
+    "peft_0.21.2_dora.py": "2ff9d222eeada2ec82d6414ad2e0e46b17c6ccb76fc2cc0923a20c079ccf974c",
+    "paper_sections.txt": "529ae749e10e86d0a0b722c9367ab25da7089d7c6715a047082d5167ec286946"
+  },
+  "omitted_external_scope": "Full NVLabs/PEFT source snapshots and paper excerpts are omitted; primary_source_audit.json retains upstream URLs and hashes.",
+  "new_generated_files": [
+    "README.md",
+    "report.py",
+    "toy_comparison.png",
+    "toy_chart_summary.json",
+    ".gitattributes"
+  ],
+  "chart_environment": {
+    "python": "3.12.3",
+    "matplotlib": "3.10.9"
+  }
+}

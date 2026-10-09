@@ -1,0 +1,1326 @@
+{
+  "started_utc": "2026-10-09T04:08:18.718358+00:00",
+  "command": [
+    "/var/tmp/dora-bench/venv/bin/python",
+    "/var/tmp/dora-bench/baseline_audit/gpu_latency.py"
+  ],
+  "cuda_visible_devices": "1",
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "torch": "2.12.0+cu130",
+    "cuda": "13.0",
+    "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+    "device": "cuda:0",
+    "threads": 1,
+    "matmul_precision": "highest",
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "nvidia_smi": "0, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-4c394fc5-b18f-6622-ca94-f7fbd7112927, 615.71.09\n1, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-f10c2baf-536b-1d40-cd4b-25b202ae0ded, 615.71.09\n2, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-04cde663-7c53-2f18-3ec4-1699820e2640, 615.71.09\n3, NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, GPU-972bf85d-1b32-2d1b-20f6-babc4c804999, 615.71.09\n"
+  },
+  "source_sha256": {
+    "benchmark_dora.py": "0b1bed235af286cba417409834b72a9c3339a3d76b282b693f658ee78eed3460",
+    "dora.py": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+    "dora_axis_only_dim1.py": "8483812c0e1c8d6797f2d13de339e6af335d60f304e157726a2681eb945618fb",
+    "dora_original_bb97617.py": "e1d25979459dce1ff5f458469bece1e928c8bae02844acc6259b606ac228174d"
+  },
+  "benchmark_script_sha256": "a0a0f4e440deb40149b8b82fff13061bb579e0351bb1bd9ce0976e741a9d4be9",
+  "configuration": {
+    "dtype": "float32",
+    "rank": 8,
+    "seed": 1234,
+    "warmup": 10,
+    "samples": 7,
+    "calls_per_sample": 20,
+    "cases": [
+      [
+        1024,
+        1024,
+        32
+      ],
+      [
+        1024,
+        1024,
+        256
+      ],
+      [
+        4096,
+        4096,
+        32
+      ]
+    ],
+    "measurement_order": [
+      "original_dim0_full_gradient",
+      "axis_only_dim1_full_gradient",
+      "dense_dim1_detached_reference",
+      "current_factorized_dim1_detached"
+    ]
+  },
+  "semantics": {
+    "original_dim0_full_gradient": "Exact DoRALayer source at bb97617; dim0 column normalization; full norm gradient. CPU constructor then whole module moved to GPU; forward unmodified.",
+    "axis_only_dim1_full_gradient": "Exact original source with only both dim=0 occurrences replaced by dim=1; row normalization; full norm gradient.",
+    "dense_dim1_detached_reference": "DenseDoRA reference captured from existing benchmark_dora.py; row normalization with detached norm.",
+    "current_factorized_dim1_detached": "Current dora.py DoRALayer; row normalization with detached norm and factorized activation path."
+  },
+  "methodology": {
+    "weights": "Identical copied FP32 W, bias, A, B in all methods; B is nonzero N(0,.02). Magnitude uses CPU norm of W on the method axis times a shared U(.8,1.2) vector. All row-based methods use identical m. Original column magnitudes intentionally retain original semantics.",
+    "forward": "Existing benchmark.measure with inference_mode.",
+    "forward_backward": "Existing benchmark.measure: clear adapter/input gradients; forward; FP32 squared-mean loss; backward including input gradients. No optimizer step.",
+    "timing": "Synchronized wall-clock batches; seven samples each averaging20 calls, after10 warmup calls; same protocol as original reported microbenchmark.",
+    "memory": "max_memory_allocated minus resident allocation after clearing gradients; excludes already-resident model/input tensors, includes temporary tensors and gradients. All four models resident; no optimizer state.",
+    "probe": "Shared Gaussian upstream/sqrt(output.numel()); finite output/input/all-adapter gradients; only current vs detached dense is required to match.",
+    "limits": "Original, row full-gradient and row detached variants have different mathematical or gradient semantics. Latency and memory comparisons do not establish task quality or semantic equivalence. Fixed method order and one device/run; raw timings retained."
+  },
+  "cases": [
+    {
+      "width": 1024,
+      "tokens": 32,
+      "input_sha256": "a76b6af5224909efc01554dc5e19b3e8e5622616df4cf9db6283d05d24c76261",
+      "shared_parameter_sha256": {
+        "weight": "23762f7ef1f9360a62b99e88ea440fb986e6b46dd13d0385519f9bad19ed68cb",
+        "bias": "599ccb7894e47bab026eca3cb3623d81cd92b27748461f7efaf79dab9aa292c6",
+        "lora_A": "637f05b273e589100464bc6df996c41a41969fdef4fe078bedaa135e26ef823c",
+        "lora_B": "5fdbf7d08b64873fb288c7fda1eae34b2b2692f89e83ac8f4270a314206ea95c"
+      },
+      "measurements": {
+        "original_dim0_full_gradient": {
+          "parameters": 1067008,
+          "trainable_parameters": 17408,
+          "magnitude_shape": [
+            1,
+            1024
+          ],
+          "magnitude_sha256": "ea524f1b69f23632837ab7c3a58bd766416e1cc5811f1100077c64ed5ba78474",
+          "forward": {
+            "sample_ms_per_call": [
+              0.0301095,
+              0.02891565,
+              0.02876195,
+              0.02881655,
+              0.028932700000000002,
+              0.029531599999999998,
+              0.02877195
+            ],
+            "median_ms_per_call": 0.02891565,
+            "peak_incremental_allocated_bytes": 16912384
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.22197025,
+              0.1695927,
+              0.16747295,
+              0.16644145000000002,
+              0.1706738,
+              0.1864692,
+              0.1678295
+            ],
+            "median_ms_per_call": 0.1695927,
+            "peak_incremental_allocated_bytes": 29500928
+          },
+          "finite_after_timing": true
+        },
+        "axis_only_dim1_full_gradient": {
+          "parameters": 1067008,
+          "trainable_parameters": 17408,
+          "magnitude_shape": [
+            1024,
+            1
+          ],
+          "magnitude_sha256": "ba88981f9567eeed0f8ca5d789dfb366a4a9076b8f2780bbf8851da150a61375",
+          "forward": {
+            "sample_ms_per_call": [
+              0.025714349999999997,
+              0.0246923,
+              0.024903099999999997,
+              0.0246222,
+              0.02485705,
+              0.0247068,
+              0.026798950000000002
+            ],
+            "median_ms_per_call": 0.02485705,
+            "peak_incremental_allocated_bytes": 16912384
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.16365970000000002,
+              0.16136425,
+              0.1594128,
+              0.15875229999999999,
+              0.19530255,
+              0.16056404999999999,
+              0.16024660000000002
+            ],
+            "median_ms_per_call": 0.16056404999999999,
+            "peak_incremental_allocated_bytes": 25306112
+          },
+          "finite_after_timing": true
+        },
+        "dense_dim1_detached_reference": {
+          "parameters": 1067008,
+          "trainable_parameters": 17408,
+          "magnitude_shape": [
+            1024,
+            1
+          ],
+          "magnitude_sha256": "ba88981f9567eeed0f8ca5d789dfb366a4a9076b8f2780bbf8851da150a61375",
+          "forward": {
+            "sample_ms_per_call": [
+              0.03300335,
+              0.03228225,
+              0.03181905,
+              0.03194575,
+              0.03272695,
+              0.0331045,
+              0.03243045
+            ],
+            "median_ms_per_call": 0.03243045,
+            "peak_incremental_allocated_bytes": 8523776
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.15274320000000002,
+              0.14602854999999998,
+              0.1369068,
+              0.13624129999999998,
+              0.13790885,
+              0.1376339,
+              0.15612585
+            ],
+            "median_ms_per_call": 0.13790885,
+            "peak_incremental_allocated_bytes": 16921600
+          },
+          "finite_after_timing": true
+        },
+        "current_factorized_dim1_detached": {
+          "parameters": 1067008,
+          "trainable_parameters": 17408,
+          "magnitude_shape": [
+            1024,
+            1
+          ],
+          "magnitude_sha256": "ba88981f9567eeed0f8ca5d789dfb366a4a9076b8f2780bbf8851da150a61375",
+          "forward": {
+            "sample_ms_per_call": [
+              0.05014375,
+              0.050081150000000005,
+              0.04933,
+              0.0486655,
+              0.04858335,
+              0.0496425,
+              0.0488658
+            ],
+            "median_ms_per_call": 0.04933,
+            "peak_incremental_allocated_bytes": 4202496
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.17965285,
+              0.18608305,
+              0.17599635,
+              0.17561275,
+              0.17587365,
+              0.17556270000000002,
+              0.18293985000000001
+            ],
+            "median_ms_per_call": 0.17599635,
+            "peak_incremental_allocated_bytes": 4202496
+          },
+          "finite_after_timing": true
+        }
+      },
+      "probes": {
+        "original_dim0_full_gradient": {
+          "output": {
+            "shape": [
+              32,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 104.08275857637227,
+            "max_absolute": 2.3991451263427734
+          },
+          "input_gradient": {
+            "shape": [
+              32,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.5800310895659309,
+            "max_absolute": 0.013929596170783043
+          },
+          "m_gradient": {
+            "shape": [
+              1,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.9342754326795171,
+            "max_absolute": 0.1040978878736496
+          },
+          "lora_A_gradient": {
+            "shape": [
+              1024,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.1524445063093096,
+            "max_absolute": 0.05820111930370331
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 21.446638754351657,
+            "max_absolute": 1.0302777290344238
+          }
+        },
+        "axis_only_dim1_full_gradient": {
+          "output": {
+            "shape": [
+              32,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 103.73974106941004,
+            "max_absolute": 2.525848865509033
+          },
+          "input_gradient": {
+            "shape": [
+              32,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.5755401182464739,
+            "max_absolute": 0.01529476884752512
+          },
+          "m_gradient": {
+            "shape": [
+              1024,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 0.9473765892986407,
+            "max_absolute": 0.11017532646656036
+          },
+          "lora_A_gradient": {
+            "shape": [
+              1024,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.1768772623010226,
+            "max_absolute": 0.061815738677978516
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 20.36199735123736,
+            "max_absolute": 0.969459593296051
+          }
+        },
+        "dense_dim1_detached_reference": {
+          "output": {
+            "shape": [
+              32,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 103.73974102479019,
+            "max_absolute": 2.525848627090454
+          },
+          "input_gradient": {
+            "shape": [
+              32,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.575540119494109,
+            "max_absolute": 0.01529476698487997
+          },
+          "m_gradient": {
+            "shape": [
+              1024,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 0.9473765891979595,
+            "max_absolute": 0.11017532646656036
+          },
+          "lora_A_gradient": {
+            "shape": [
+              1024,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.2116699115201663,
+            "max_absolute": 0.06205422058701515
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 20.37275905231324,
+            "max_absolute": 0.9763814210891724
+          }
+        },
+        "current_factorized_dim1_detached": {
+          "output": {
+            "shape": [
+              32,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 103.73974103291467,
+            "max_absolute": 2.525848865509033
+          },
+          "input_gradient": {
+            "shape": [
+              32,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.5755401149080649,
+            "max_absolute": 0.015294767916202545
+          },
+          "m_gradient": {
+            "shape": [
+              1024,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 0.9473765949520294,
+            "max_absolute": 0.11017532646656036
+          },
+          "lora_A_gradient": {
+            "shape": [
+              1024,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.2116699111218185,
+            "max_absolute": 0.062054216861724854
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 20.37275874764209,
+            "max_absolute": 0.9763811826705933
+          }
+        }
+      },
+      "comparisons": {
+        "factorized_vs_detached_dense": {
+          "output": {
+            "max_absolute": 7.152557373046875e-07,
+            "relative_l2": 2.492844568015313e-07
+          },
+          "input_gradient": {
+            "max_absolute": 4.0745362639427185e-09,
+            "relative_l2": 2.8026690219242105e-07
+          },
+          "lora_A_gradient": {
+            "max_absolute": 1.6763806343078613e-08,
+            "relative_l2": 2.8911541580268085e-07
+          },
+          "lora_B_gradient": {
+            "max_absolute": 3.5762786865234375e-07,
+            "relative_l2": 3.011027461663748e-07
+          },
+          "m_gradient": {
+            "max_absolute": 2.2351741790771484e-08,
+            "relative_l2": 2.414468152351638e-07
+          }
+        },
+        "full_gradient_vs_detached_row": {
+          "output": {
+            "max_absolute": 5.364418029785156e-07,
+            "relative_l2": 1.3921445214480085e-07
+          },
+          "input_gradient": {
+            "max_absolute": 2.7939677238464355e-09,
+            "relative_l2": 1.3683473242588316e-07
+          },
+          "lora_A_gradient": {
+            "max_absolute": 0.025042824214324355,
+            "relative_l2": 0.24662116665026165
+          },
+          "lora_B_gradient": {
+            "max_absolute": 0.026409000158309937,
+            "relative_l2": 0.0284790990779326
+          },
+          "m_gradient": {
+            "max_absolute": 1.862645149230957e-08,
+            "relative_l2": 1.448143861075496e-07
+          }
+        },
+        "original_vs_current_different_semantics": {
+          "output": {
+            "max_absolute": 1.0146440267562866,
+            "relative_l2": 0.24321787954384966
+          },
+          "input_gradient": {
+            "max_absolute": 0.004560873145237565,
+            "relative_l2": 0.24521384920888714
+          },
+          "lora_A_gradient": {
+            "max_absolute": 0.022245096042752266,
+            "relative_l2": 0.24870050836325172
+          },
+          "lora_B_gradient": {
+            "max_absolute": 0.5179468337446451,
+            "relative_l2": 0.3570414359718899
+          },
+          "m_gradient": {
+            "comparable": false,
+            "reason": "Different magnitude axes/shapes"
+          }
+        }
+      },
+      "factorized_detached_dense_parity_passed": true
+    },
+    {
+      "width": 1024,
+      "tokens": 256,
+      "input_sha256": "d7fda8f74fcd97a9563057cb6222602c7500ea36516f143765c003e948b63a97",
+      "shared_parameter_sha256": {
+        "weight": "23762f7ef1f9360a62b99e88ea440fb986e6b46dd13d0385519f9bad19ed68cb",
+        "bias": "599ccb7894e47bab026eca3cb3623d81cd92b27748461f7efaf79dab9aa292c6",
+        "lora_A": "637f05b273e589100464bc6df996c41a41969fdef4fe078bedaa135e26ef823c",
+        "lora_B": "5fdbf7d08b64873fb288c7fda1eae34b2b2692f89e83ac8f4270a314206ea95c"
+      },
+      "measurements": {
+        "original_dim0_full_gradient": {
+          "parameters": 1067008,
+          "trainable_parameters": 17408,
+          "magnitude_shape": [
+            1,
+            1024
+          ],
+          "magnitude_sha256": "ea524f1b69f23632837ab7c3a58bd766416e1cc5811f1100077c64ed5ba78474",
+          "forward": {
+            "sample_ms_per_call": [
+              0.04578965,
+              0.04520025,
+              0.044804199999999995,
+              0.0440936,
+              0.044024,
+              0.04452375,
+              0.04450825
+            ],
+            "median_ms_per_call": 0.04452375,
+            "peak_incremental_allocated_bytes": 17829888
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.171485,
+              0.16851354999999998,
+              0.169796,
+              0.18160079999999998,
+              0.17097125,
+              0.17998535000000002,
+              0.1686212
+            ],
+            "median_ms_per_call": 0.17097125,
+            "peak_incremental_allocated_bytes": 30418432
+          },
+          "finite_after_timing": true
+        },
+        "axis_only_dim1_full_gradient": {
+          "parameters": 1067008,
+          "trainable_parameters": 17408,
+          "magnitude_shape": [
+            1024,
+            1
+          ],
+          "magnitude_sha256": "ba88981f9567eeed0f8ca5d789dfb366a4a9076b8f2780bbf8851da150a61375",
+          "forward": {
+            "sample_ms_per_call": [
+              0.040584800000000004,
+              0.040253300000000006,
+              0.04014865,
+              0.0400931,
+              0.039971900000000005,
+              0.040095599999999995,
+              0.0402353
+            ],
+            "median_ms_per_call": 0.04014865,
+            "peak_incremental_allocated_bytes": 17829888
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.1661124,
+              0.16802785,
+              0.16593465,
+              0.16189555,
+              0.16521904999999998,
+              0.16132370000000001,
+              0.17763085
+            ],
+            "median_ms_per_call": 0.16593465,
+            "peak_incremental_allocated_bytes": 26223616
+          },
+          "finite_after_timing": true
+        },
+        "dense_dim1_detached_reference": {
+          "parameters": 1067008,
+          "trainable_parameters": 17408,
+          "magnitude_shape": [
+            1024,
+            1
+          ],
+          "magnitude_sha256": "ba88981f9567eeed0f8ca5d789dfb366a4a9076b8f2780bbf8851da150a61375",
+          "forward": {
+            "sample_ms_per_call": [
+              0.03988175,
+              0.0394451,
+              0.03933845,
+              0.039411550000000004,
+              0.03930335,
+              0.0394566,
+              0.039233300000000006
+            ],
+            "median_ms_per_call": 0.039411550000000004,
+            "peak_incremental_allocated_bytes": 9441280
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.14436105,
+              0.151944,
+              0.14307115,
+              0.14211515,
+              0.14181020000000003,
+              0.14414575,
+              0.14270054999999998
+            ],
+            "median_ms_per_call": 0.14307115,
+            "peak_incremental_allocated_bytes": 17839104
+          },
+          "finite_after_timing": true
+        },
+        "current_factorized_dim1_detached": {
+          "parameters": 1067008,
+          "trainable_parameters": 17408,
+          "magnitude_shape": [
+            1024,
+            1
+          ],
+          "magnitude_sha256": "ba88981f9567eeed0f8ca5d789dfb366a4a9076b8f2780bbf8851da150a61375",
+          "forward": {
+            "sample_ms_per_call": [
+              0.050733099999999996,
+              0.0499029,
+              0.04981475,
+              0.04982025,
+              0.04975865,
+              0.04979825,
+              0.0498533
+            ],
+            "median_ms_per_call": 0.04982025,
+            "peak_incremental_allocated_bytes": 4202496
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.19533755,
+              0.18175305,
+              0.1790825,
+              0.17937245000000002,
+              0.18692735,
+              0.18898295,
+              0.1804025
+            ],
+            "median_ms_per_call": 0.18175305,
+            "peak_incremental_allocated_bytes": 6308864
+          },
+          "finite_after_timing": true
+        }
+      },
+      "probes": {
+        "original_dim0_full_gradient": {
+          "output": {
+            "shape": [
+              256,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 296.0742599857078,
+            "max_absolute": 2.9848129749298096
+          },
+          "input_gradient": {
+            "shape": [
+              256,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.5816286166124669,
+            "max_absolute": 0.006111262831836939
+          },
+          "m_gradient": {
+            "shape": [
+              1,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.9889643677042902,
+            "max_absolute": 0.10820285230875015
+          },
+          "lora_A_gradient": {
+            "shape": [
+              1024,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.1714425384474032,
+            "max_absolute": 0.050559259951114655
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 21.791866815035856,
+            "max_absolute": 1.0750436782836914
+          }
+        },
+        "axis_only_dim1_full_gradient": {
+          "output": {
+            "shape": [
+              256,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 297.23245908137466,
+            "max_absolute": 2.9064667224884033
+          },
+          "input_gradient": {
+            "shape": [
+              256,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.5813043234454729,
+            "max_absolute": 0.006407696753740311
+          },
+          "m_gradient": {
+            "shape": [
+              1024,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 1.0214574741158395,
+            "max_absolute": 0.10602918267250061
+          },
+          "lora_A_gradient": {
+            "shape": [
+              1024,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.212551923837818,
+            "max_absolute": 0.07404499500989914
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 20.947779194005353,
+            "max_absolute": 0.9565143585205078
+          }
+        },
+        "dense_dim1_detached_reference": {
+          "output": {
+            "shape": [
+              256,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 297.2324591556126,
+            "max_absolute": 2.9064667224884033
+          },
+          "input_gradient": {
+            "shape": [
+              256,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.5813043234714683,
+            "max_absolute": 0.006407696753740311
+          },
+          "m_gradient": {
+            "shape": [
+              1024,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 1.0214574745777334,
+            "max_absolute": 0.1060291975736618
+          },
+          "lora_A_gradient": {
+            "shape": [
+              1024,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.2556294228858322,
+            "max_absolute": 0.07287005335092545
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 20.958736135899727,
+            "max_absolute": 0.9533226490020752
+          }
+        },
+        "current_factorized_dim1_detached": {
+          "output": {
+            "shape": [
+              256,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 297.2324593695143,
+            "max_absolute": 2.906465530395508
+          },
+          "input_gradient": {
+            "shape": [
+              256,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 0.5813043245892612,
+            "max_absolute": 0.006407699082046747
+          },
+          "m_gradient": {
+            "shape": [
+              1024,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 1.0214574832519878,
+            "max_absolute": 0.1060292050242424
+          },
+          "lora_A_gradient": {
+            "shape": [
+              1024,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.255629416126404,
+            "max_absolute": 0.07287004590034485
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              1024
+            ],
+            "finite": true,
+            "l2_norm": 20.958736285800455,
+            "max_absolute": 0.9533225893974304
+          }
+        }
+      },
+      "comparisons": {
+        "factorized_vs_detached_dense": {
+          "output": {
+            "max_absolute": 1.6093254089355469e-06,
+            "relative_l2": 3.808549268115225e-07
+          },
+          "input_gradient": {
+            "max_absolute": 3.259629011154175e-09,
+            "relative_l2": 3.8328804066799615e-07
+          },
+          "lora_A_gradient": {
+            "max_absolute": 3.026798367500305e-08,
+            "relative_l2": 4.101900751448864e-07
+          },
+          "lora_B_gradient": {
+            "max_absolute": 4.470348358154297e-07,
+            "relative_l2": 3.9934951249828975e-07
+          },
+          "m_gradient": {
+            "max_absolute": 4.470348358154297e-08,
+            "relative_l2": 3.83427346453775e-07
+          }
+        },
+        "full_gradient_vs_detached_row": {
+          "output": {
+            "max_absolute": 5.960464477539062e-07,
+            "relative_l2": 1.4462883532112591e-07
+          },
+          "input_gradient": {
+            "max_absolute": 1.1641532182693481e-09,
+            "relative_l2": 1.4415904697120657e-07
+          },
+          "lora_A_gradient": {
+            "max_absolute": 0.025968889705836773,
+            "relative_l2": 0.2566696292609355
+          },
+          "lora_B_gradient": {
+            "max_absolute": 0.035753607749938965,
+            "relative_l2": 0.033602079787158054
+          },
+          "m_gradient": {
+            "max_absolute": 1.4901161193847656e-08,
+            "relative_l2": 1.3281801286005598e-07
+          }
+        },
+        "original_vs_current_different_semantics": {
+          "output": {
+            "max_absolute": 1.1346369981765747,
+            "relative_l2": 0.24116365236363357
+          },
+          "input_gradient": {
+            "max_absolute": 0.002457341179251671,
+            "relative_l2": 0.2427534922668659
+          },
+          "lora_A_gradient": {
+            "max_absolute": 0.02808530628681183,
+            "relative_l2": 0.24685132694899056
+          },
+          "lora_B_gradient": {
+            "max_absolute": 0.4239235520362854,
+            "relative_l2": 0.36250390277193395
+          },
+          "m_gradient": {
+            "comparable": false,
+            "reason": "Different magnitude axes/shapes"
+          }
+        }
+      },
+      "factorized_detached_dense_parity_passed": true
+    },
+    {
+      "width": 4096,
+      "tokens": 32,
+      "input_sha256": "649e2c92e48e17e3ffed1b4df4bfa0a6a25a57ebfa353ebd2d859d176cc37ab7",
+      "shared_parameter_sha256": {
+        "weight": "72061c12445ee07e8b132c21f449600fc43a9b8cef8c8ec40c8694776f717ab4",
+        "bias": "e4ae6921668804e0141294d38b9f6d47290343dc58b7bd6ea5e6cd9eacc61b84",
+        "lora_A": "d5122477445336da7803cda78b7b396156ace99bf3ab0cb552d1f3a8de6eb858",
+        "lora_B": "0a42c895bd507a9a99bfcd641cbb04a94c8cc791f09e329d1c3c824216d0d33f"
+      },
+      "measurements": {
+        "original_dim0_full_gradient": {
+          "parameters": 16850944,
+          "trainable_parameters": 69632,
+          "magnitude_shape": [
+            1,
+            4096
+          ],
+          "magnitude_sha256": "1be54d661c28e581c2d4fa1736e2f913237567a7f270f26b70b9d62d6ef6b419",
+          "forward": {
+            "sample_ms_per_call": [
+              0.2978294,
+              0.29807225,
+              0.29782135,
+              0.29766815,
+              0.2976316,
+              0.29788245,
+              0.29768065000000005
+            ],
+            "median_ms_per_call": 0.29782135,
+            "peak_incremental_allocated_bytes": 268976128
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              1.31340745,
+              1.31513755,
+              1.32100795,
+              1.3302528999999998,
+              1.3468133999999998,
+              1.3579382,
+              1.3620374
+            ],
+            "median_ms_per_call": 1.3302528999999998,
+            "peak_incremental_allocated_bytes": 470320640
+          },
+          "finite_after_timing": true
+        },
+        "axis_only_dim1_full_gradient": {
+          "parameters": 16850944,
+          "trainable_parameters": 69632,
+          "magnitude_shape": [
+            4096,
+            1
+          ],
+          "magnitude_sha256": "c38a13131a54b2ba2807b34150d4017f0b3b3a76f80347245578397699e21984",
+          "forward": {
+            "sample_ms_per_call": [
+              0.3288277,
+              0.32849875,
+              0.32864395,
+              0.32808305,
+              0.32791935,
+              0.32880015,
+              0.3286715
+            ],
+            "median_ms_per_call": 0.32864395,
+            "peak_incremental_allocated_bytes": 268976128
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              1.42163545,
+              1.42594295,
+              1.4308888999999998,
+              1.43377225,
+              1.431631,
+              1.4325314,
+              1.43210025
+            ],
+            "median_ms_per_call": 1.431631,
+            "peak_incremental_allocated_bytes": 403211264
+          },
+          "finite_after_timing": true
+        },
+        "dense_dim1_detached_reference": {
+          "parameters": 16850944,
+          "trainable_parameters": 69632,
+          "magnitude_shape": [
+            4096,
+            1
+          ],
+          "magnitude_sha256": "c38a13131a54b2ba2807b34150d4017f0b3b3a76f80347245578397699e21984",
+          "forward": {
+            "sample_ms_per_call": [
+              0.2457192,
+              0.24542170000000002,
+              0.2453316,
+              0.24523545000000002,
+              0.24540014999999998,
+              0.24535964999999998,
+              0.24538415
+            ],
+            "median_ms_per_call": 0.24538415,
+            "peak_incremental_allocated_bytes": 134758400
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.68877895,
+              0.68788205,
+              0.687522,
+              0.68860265,
+              0.6890684,
+              0.69103585,
+              0.6901229499999999
+            ],
+            "median_ms_per_call": 0.68877895,
+            "peak_incremental_allocated_bytes": 269009920
+          },
+          "finite_after_timing": true
+        },
+        "current_factorized_dim1_detached": {
+          "parameters": 16850944,
+          "trainable_parameters": 69632,
+          "magnitude_shape": [
+            4096,
+            1
+          ],
+          "magnitude_sha256": "c38a13131a54b2ba2807b34150d4017f0b3b3a76f80347245578397699e21984",
+          "forward": {
+            "sample_ms_per_call": [
+              0.15812535,
+              0.15759255,
+              0.1572701,
+              0.15732664999999998,
+              0.15732115,
+              0.15742879999999998,
+              0.15739575
+            ],
+            "median_ms_per_call": 0.15739575,
+            "peak_incremental_allocated_bytes": 67141632
+          },
+          "forward_backward": {
+            "sample_ms_per_call": [
+              0.25365015,
+              0.2535986,
+              0.25372075,
+              0.25345685,
+              0.25280485,
+              0.25265465,
+              0.2528905
+            ],
+            "median_ms_per_call": 0.25345685,
+            "peak_incremental_allocated_bytes": 67141632
+          },
+          "finite_after_timing": true
+        }
+      },
+      "probes": {
+        "original_dim0_full_gradient": {
+          "output": {
+            "shape": [
+              32,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 211.70170765070276,
+            "max_absolute": 2.9335200786590576
+          },
+          "input_gradient": {
+            "shape": [
+              32,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 0.5406254389782434,
+            "max_absolute": 0.007386402692645788
+          },
+          "m_gradient": {
+            "shape": [
+              1,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 0.9468256140862523,
+            "max_absolute": 0.05717581883072853
+          },
+          "lora_A_gradient": {
+            "shape": [
+              4096,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.495741294511808,
+            "max_absolute": 0.03812140226364136
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 25.324550080154662,
+            "max_absolute": 0.8616756200790405
+          }
+        },
+        "axis_only_dim1_full_gradient": {
+          "output": {
+            "shape": [
+              32,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 212.9711392050087,
+            "max_absolute": 2.556030511856079
+          },
+          "input_gradient": {
+            "shape": [
+              32,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 0.5381228985967902,
+            "max_absolute": 0.009007002227008343
+          },
+          "m_gradient": {
+            "shape": [
+              4096,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 1.0127280921926198,
+            "max_absolute": 0.05938582122325897
+          },
+          "lora_A_gradient": {
+            "shape": [
+              4096,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.5912945059728905,
+            "max_absolute": 0.04850847274065018
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 23.576441580328797,
+            "max_absolute": 0.6246286630630493
+          }
+        },
+        "dense_dim1_detached_reference": {
+          "output": {
+            "shape": [
+              32,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 212.97113919393303,
+            "max_absolute": 2.556030511856079
+          },
+          "input_gradient": {
+            "shape": [
+              32,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 0.5381228979491494,
+            "max_absolute": 0.009007001295685768
+          },
+          "m_gradient": {
+            "shape": [
+              4096,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 1.0127280975051605,
+            "max_absolute": 0.05938582867383957
+          },
+          "lora_A_gradient": {
+            "shape": [
+              4096,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.6682773584252673,
+            "max_absolute": 0.05440777912735939
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 23.578249865799208,
+            "max_absolute": 0.6280114054679871
+          }
+        },
+        "current_factorized_dim1_detached": {
+          "output": {
+            "shape": [
+              32,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 212.97113871136702,
+            "max_absolute": 2.556029796600342
+          },
+          "input_gradient": {
+            "shape": [
+              32,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 0.5381229027475021,
+            "max_absolute": 0.00900699757039547
+          },
+          "m_gradient": {
+            "shape": [
+              4096,
+              1
+            ],
+            "finite": true,
+            "l2_norm": 1.012728099201259,
+            "max_absolute": 0.05938582122325897
+          },
+          "lora_A_gradient": {
+            "shape": [
+              4096,
+              8
+            ],
+            "finite": true,
+            "l2_norm": 1.66827735101837,
+            "max_absolute": 0.05440777540206909
+          },
+          "lora_B_gradient": {
+            "shape": [
+              8,
+              4096
+            ],
+            "finite": true,
+            "l2_norm": 23.57825018230838,
+            "max_absolute": 0.6280114054679871
+          }
+        }
+      },
+      "comparisons": {
+        "factorized_vs_detached_dense": {
+          "output": {
+            "max_absolute": 2.0265579223632812e-06,
+            "relative_l2": 6.003706973362414e-07
+          },
+          "input_gradient": {
+            "max_absolute": 6.984919309616089e-09,
+            "relative_l2": 6.424631141735618e-07
+          },
+          "lora_A_gradient": {
+            "max_absolute": 2.2351741790771484e-08,
+            "relative_l2": 3.660709461191006e-07
+          },
+          "lora_B_gradient": {
+            "max_absolute": 2.682209014892578e-07,
+            "relative_l2": 3.9414542395730614e-07
+          },
+          "m_gradient": {
+            "max_absolute": 2.514570951461792e-08,
+            "relative_l2": 3.387281831382866e-07
+          }
+        },
+        "full_gradient_vs_detached_row": {
+          "output": {
+            "max_absolute": 7.152557373046875e-07,
+            "relative_l2": 1.813530505785383e-07
+          },
+          "input_gradient": {
+            "max_absolute": 1.862645149230957e-09,
+            "relative_l2": 1.9649071963517603e-07
+          },
+          "lora_A_gradient": {
+            "max_absolute": 0.02290701842866838,
+            "relative_l2": 0.3051535922732
+          },
+          "lora_B_gradient": {
+            "max_absolute": 0.01950909197330475,
+            "relative_l2": 0.021845576426089208
+          },
+          "m_gradient": {
+            "max_absolute": 1.4901161193847656e-08,
+            "relative_l2": 1.8907724614212894e-07
+          }
+        },
+        "original_vs_current_different_semantics": {
+          "output": {
+            "max_absolute": 1.6532044410705566,
+            "relative_l2": 0.32013610576665646
+          },
+          "input_gradient": {
+            "max_absolute": 0.003737757448107004,
+            "relative_l2": 0.33224741122250595
+          },
+          "lora_A_gradient": {
+            "max_absolute": 0.02549019455909729,
+            "relative_l2": 0.32550543493987694
+          },
+          "lora_B_gradient": {
+            "max_absolute": 0.455029159784317,
+            "relative_l2": 0.4908342992939552
+          },
+          "m_gradient": {
+            "comparable": false,
+            "reason": "Different magnitude axes/shapes"
+          }
+        }
+      },
+      "factorized_detached_dense_parity_passed": true
+    }
+  ],
+  "complete": true,
+  "completed_utc": "2026-10-09T04:08:21.899974+00:00"
+}

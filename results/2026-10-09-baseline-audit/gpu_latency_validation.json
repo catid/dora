@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "input_results_sha256": "10c8c501c03c7f92084bffcf2770a5c11c11f2b3a3795cfd1558ea8a1af93821",
+  "script_sha256": "a0a0f4e440deb40149b8b82fff13061bb579e0351bb1bd9ce0976e741a9d4be9",
+  "source_sha256": {
+    "benchmark_dora.py": "0b1bed235af286cba417409834b72a9c3339a3d76b282b693f658ee78eed3460",
+    "dora.py": "cfd4509daa929a021b73e898081fb20b51484c73546cbe8407c0b26152dc2de0",
+    "dora_axis_only_dim1.py": "8483812c0e1c8d6797f2d13de339e6af335d60f304e157726a2681eb945618fb",
+    "dora_original_bb97617.py": "e1d25979459dce1ff5f458469bece1e928c8bae02844acc6259b606ac228174d"
+  },
+  "original_commit": "bb97617a0d5e1ad4c6856cb7278f5a7386820d18",
+  "original_source_git_bytes_exact": true,
+  "axis_source_only_two_dim_replacements": true,
+  "cases": 3,
+  "methods_per_case": 4,
+  "timing_modes": 2,
+  "raw_samples_recomputed": 168,
+  "timed_calls": 3360,
+  "all_finite": true,
+  "current_detached_dense_parity_passed": true,
+  "scope": "Source/hash and saved-result audit; output/gradient parity and finiteness were measured by the GPU script. Original and corrected semantics are explicitly distinct; no task-quality or original/current equivalence assertion."
+}

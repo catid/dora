@@ -1,0 +1,118 @@
+{
+  "input_toy_sha256": "d66163bbe46b303e9ec57d65708ad03327fbef88647222c6addca354d29bfdb6",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "methods": {
+    "original_dim0_fullgrad": {
+      "label": "Original: dim 0, full gradient",
+      "mean": 0.06831604987382889,
+      "sample_sd": 0.02971970160819233,
+      "values": [
+        0.04803329333662987,
+        0.04243529587984085,
+        0.05211858078837395,
+        0.11056530475616455,
+        0.08842777460813522
+      ],
+      "trainable_parameters": 54
+    },
+    "row_dim1_fullgrad": {
+      "label": "Row norm: full gradient",
+      "mean": 0.08601508885622025,
+      "sample_sd": 0.027535979490505087,
+      "values": [
+        0.07217226922512054,
+        0.059642426669597626,
+        0.07766951620578766,
+        0.13147394359111786,
+        0.08911728858947754
+      ],
+      "trainable_parameters": 45
+    },
+    "row_dim1_detached_dense": {
+      "label": "Row norm: detached, dense",
+      "mean": 0.11081546396017075,
+      "sample_sd": 0.03564331086847274,
+      "values": [
+        0.08976172655820847,
+        0.0751001164317131,
+        0.09692408889532089,
+        0.16449666023254395,
+        0.12779472768306732
+      ],
+      "trainable_parameters": 45
+    },
+    "current_factorized": {
+      "label": "Current: detached, factorized",
+      "mean": 0.1108154833316803,
+      "sample_sd": 0.035643335254065905,
+      "values": [
+        0.08976168185472488,
+        0.07510010898113251,
+        0.09692404419183731,
+        0.16449661552906036,
+        0.12779496610164642
+      ],
+      "trainable_parameters": 45
+    },
+    "lora": {
+      "label": "LoRA",
+      "mean": 0.029706932697445156,
+      "sample_sd": 0.025252936302277835,
+      "values": [
+        0.012160811573266983,
+        0.004144082311540842,
+        0.019398892298340797,
+        0.051096923649311066,
+        0.06173395365476608
+      ],
+      "trainable_parameters": 44
+    },
+    "original_magnitude_only": {
+      "label": "Original: magnitudes only",
+      "mean": 0.06831604987382889,
+      "sample_sd": 0.02971970160819233,
+      "values": [
+        0.04803329333662987,
+        0.04243529587984085,
+        0.05211858078837395,
+        0.11056530475616455,
+        0.08842777460813522
+      ],
+      "trainable_parameters": 10
+    },
+    "continue_full_training": {
+      "label": "Continue full Linear training",
+      "mean": 0.06804860308766365,
+      "sample_sd": 0.029857460810804638,
+      "values": [
+        0.04703795164823532,
+        0.0424005389213562,
+        0.05207613483071327,
+        0.11054786294698715,
+        0.0881805270910263
+      ],
+      "trainable_parameters": 11
+    },
+    "pretrained_reference": {
+      "label": "Pretrained Linear, no extra updates",
+      "mean": 0.18290937542915345,
+      "sample_sd": 0.05104922653635562,
+      "values": [
+        0.15082043409347534,
+        0.13675668835639954,
+        0.15640996396541595,
+        0.2584829330444336,
+        0.21207685768604279
+      ],
+      "trainable_parameters": 0
+    }
+  },
+  "toy_runs_recomputed": 35,
+  "scope": "Recomputed means and sample SD from the retained per-seed runs; no new fitting or inference."
+}
