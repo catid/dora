@@ -1,5 +1,30 @@
 # Reproduce the task comparisons
 
+These experiment recipes retain their historical implementations. Their row-normalized dependency is explicitly `dora_row.py`; importing the default `dora.py` now selects the original implementation plus FP32 magnitude storage.
+
+The up-factor study uses [nora_up.py](nora_up.py) and its
+[matched comparison protocol](nora_up_protocol.md). It adds differentiable
+normalization across each up-factor row's rank dimension while retaining the
+accepted random-up/zero-down initialization. This is a NoRA-inspired variant;
+the paper normalizes down-factor columns. The `nora_up_retrieval.py`,
+`nora_up_extraction.py` and `nora_up_aircraft.py` runners freshly train both the
+accepted baseline and the up-normalized treatment. Earlier down-normalization
+and alternate-initializer results are explicitly historical references.
+`nora_up_report.py` collects audited predictions; `check_nora_up_report.py`
+independently verifies and replays the [report](../results/2026-10-09-up-normalization/validation_tuned_table.md).
+
+The accepted-DoRA/NoRA study uses [nora_current.py](nora_current.py) and its
+[four-recipe protocol](nora_current_protocol.md). It tests NoRA with both the
+accepted zero-down initializer and the previous alternate random-down/zero-up
+initializer. NoRA is a separate experimental addition; the selected public
+`dora.py` retains its original column normalization, full norm derivative, dense
+projection and FP32 magnitudes. The `nora_retrieval.py`, `nora_extraction.py` and
+`nora_aircraft.py` runners record source-bound controls and fresh matched fits.
+`nora_current_report.py` collects their audited predictions;
+`check_nora_current_report.py` independently checks the archived report.
+
+The next-step study uses [next_ablations.py](next_ablations.py) to add one change at a time to that current default. Its [protocol](next_protocol.md) specifies the six recipes, four training tasks, five evaluations, matched seeds, and validation-only tuning; the `next_retrieval.py` and `next_extraction.py` runners preserve the prior task loops. The descriptions below apply to the historical comparisons.
+
 The experiments use the shared adapters in `adapters.py`, checked against independent forward and gradient references. NoRA implements equations 7–9 of [Normalized Low-Rank Adaptation](https://arxiv.org/abs/2608.31036); DoRA + NoRA follows the paper's DoRA-style parameterization. These are controlled small-task comparisons, not reproductions of the paper's benchmark scores.
 
 All four methods use rank 8, effective scaling 1, the same Kaiming-initialized input-to-rank factor, a zero output factor, no adapter dropout, and matched pretrained checkpoints. NoRA normalizes the input factor across rank during every forward pass, including its derivative. DoRA learns one output magnitude and detaches the adapted-weight norm. The experimental factor convention differs from the historical standalone demo so the initialization is consistent across methods. DoRA methods have additional magnitude parameters; exact counts are recorded.

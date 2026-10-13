@@ -28,7 +28,7 @@ from torch import nn
 from torch.nn import functional as F
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from huggingface_hub import HfApi, hf_hub_download
-from experiments.adapters import AdapterLinear, METHODS, inject_adapters
+from experiments.adapters import ADAPTER_TYPES, METHODS, SUPPORTED_METHODS, inject_adapters
 
 MODEL = 'Qwen/Qwen2.5-3B-Instruct'
 MODEL_REVISION = 'aa8e72537993ba99e69dfaafa59ed015b17504d1'
@@ -201,14 +201,14 @@ def generate_metrics(model, items, tokenizer, batch_size, output_file):
             'correct_slots': tp, 'predicted_slots': predicted_slots, 'gold_slots': true_slots}
 
 
-def strip_adapters(model):
+def strip_adapters(model, adapter_types=ADAPTER_TYPES):
     for name, module in list(model.named_children()):
-        if isinstance(module, AdapterLinear):
+        if isinstance(module, adapter_types):
             base = nn.Linear(module.in_features, module.out_features, bias=module.bias is not None, device='meta', dtype=module.weight.dtype)
             base.weight, base.bias = module.weight, module.bias
             setattr(model, name, base)
         else:
-            strip_adapters(module)
+            strip_adapters(module, adapter_types)
     model.requires_grad_(False)
 
 
@@ -221,11 +221,13 @@ def frozen_digest(model):
     return h.hexdigest()
 
 
-def fit(model, method, seed, lr, steps, records, tokenizer, args, directory, evaluate_test=False):
+def fit(model, method, seed, lr, steps, records, tokenizer, args, directory, evaluate_test=False, backend=None):
     directory.mkdir(parents=True, exist_ok=True)
-    strip_adapters(model)
+    adapter_types = ADAPTER_TYPES if backend is None else backend.adapter_types
+    inject = inject_adapters if backend is None else backend.inject_adapters
+    strip_adapters(model, adapter_types)
     seed_all(seed)
-    inject_adapters(model, method, rank=args.rank, targets=('q_proj', 'v_proj'))
+    inject(model, method, rank=args.rank, targets=('q_proj', 'v_proj'))
     params = [p for p in model.parameters() if p.requires_grad]
     before = frozen_digest(model)
     optimizer = torch.optim.AdamW(params, lr=lr, weight_decay=0.01)
@@ -289,6 +291,9 @@ def fit(model, method, seed, lr, steps, records, tokenizer, args, directory, eva
     if evaluate_test:
         result['test_nll'] = nll(model, records['test'], tokenizer, args.batch_size)
         result['test'] = generate_metrics(model, records['test'], tokenizer, args.generation_batch_size, directory / 'predictions.jsonl')
+    if backend is not None:
+        result['recipe'] = backend.recipe_manifest(method)
+        result['norm_diagnostics'] = backend.assert_no_clamp(model)
     write_json(directory / 'result.json', result)
     return result
 
@@ -308,6 +313,7 @@ def main():
     parser.add_argument('--eval-every', type=int, default=64)
     parser.add_argument('--seeds', type=int, nargs='+', default=[42,43,44])
     parser.add_argument('--learning-rates', type=float, nargs='+', default=[1e-4,3e-4])
+    parser.add_argument('--methods', nargs='+', choices=SUPPORTED_METHODS, default=list(METHODS))
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     torch.set_num_threads(8)
@@ -320,15 +326,19 @@ def main():
                 'configuration': {k: str(v) if isinstance(v,Path) else v for k,v in vars(args).items()},
                 'environment': {'torch': torch.__version__, 'cuda': torch.version.cuda,
                                 'gpu': torch.cuda.get_device_name(), 'CUDA_VISIBLE_DEVICES': os.environ.get('CUDA_VISIBLE_DEVICES')},
-                'source_sha256': {name: hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in ['experiments/adapters.py', 'experiments/extraction.py', 'dora.py']},
+                'source_sha256': {name: hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in ['experiments/adapters.py', 'experiments/original_dora.py', 'experiments/extraction.py', 'dora_row.py']},
                 'system_prompt_sha256': hashlib.sha256(SYSTEM.encode()).hexdigest(),
-                'protocol': 'Official ViGGO splits, query-text deduplication, fixed deterministic subsets. Two equally budgeted LR pilots per method selected by validation NLL; final checkpoint by validation NLL. Test greedy generation only after selection. No adapter dropout; rank8 effective scale1; A Kaiming and B zero. Target q_proj/v_proj, frozen BF16 base, FP32 adapters, BF16 autocast.'}
+                'protocol': 'Official ViGGO splits, query-text deduplication, fixed deterministic subsets. Two equally budgeted LR pilots per method selected by validation NLL; final checkpoint by validation NLL. Test greedy generation only after selection. No adapter dropout; rank8 effective scale1. Standard methods: down factor Kaiming, up factor zero, FP32 adapters. dora_original: historical up factor normal, down factor zero, dim0 norm, full norm gradient, FP32 factors and base-dtype magnitudes. Target q_proj/v_proj, frozen BF16 base, BF16 autocast.'}
     manifest_path = args.output / 'manifest.json'
     if manifest_path.exists() and json.loads(manifest_path.read_text()) != manifest:
         raise ValueError('Existing run differs in configuration, source, data or environment; use a fresh output directory')
     if not manifest_path.exists() and (args.output / 'baseline.json').exists():
         raise ValueError('Cached baseline lacks provenance; use a fresh output directory')
     write_json(manifest_path, manifest)
+    for name in manifest['source_sha256']:
+        target = args.output / 'source' / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(Path(name).read_bytes())
     baseline_file = args.output / 'baseline.json'
     if baseline_file.exists():
         baseline = json.loads(baseline_file.read_text())
@@ -339,7 +349,7 @@ def main():
     print(json.dumps({'event':'baseline','result':baseline}),flush=True)
     pilots = []
     selected = {}
-    for method in METHODS:
+    for method in args.methods:
         for lr in args.learning_rates:
             directory = args.output / f'pilot_{method}_{lr:g}'
             if (directory / 'result.json').exists():
@@ -351,7 +361,7 @@ def main():
     write_json(args.output/'tuning.json',{'pilots':pilots,'selected_learning_rates':selected})
     results=[]
     for seed in args.seeds:
-        for method in METHODS:
+        for method in args.methods:
             directory=args.output/f'{method}_seed{seed}'
             if (directory/'result.json').exists():
                 result=json.loads((directory/'result.json').read_text())

@@ -381,7 +381,7 @@ def validate_artifacts(tasks, roots, extra_roots, output, cache):
     source_roots.extend((root.name, root, load_json(root / "provenance.json", {})) for root in extra_roots)
     for name, root, provenance in source_roots:
         hashes = provenance.get("source_sha256", {})
-        if name == "vision" and provenance:
+        if name == "vision" and provenance and not hashes:
             hashes = {"experiments/vision.py": provenance["script_sha256"], "experiments/adapters.py": provenance["adapters_sha256"]}
         for filename, expected in hashes.items():
             paths = [root / "source" / filename, root / "executed_sources" / Path(filename).name]
@@ -390,9 +390,13 @@ def validate_artifacts(tasks, roots, extra_roots, output, cache):
                 raise ValueError(f"Recorded source hash lacks matching snapshot: {name}/{filename}")
             audited["sources"].append({"task": name, "path": str(matching), "sha256": expected, "verified": True})
         if provenance:
-            dependency = next((path for path in (root / "source" / "dora.py", root / "executed_sources" / "dora.py") if path.exists()), None)
+            # Historical snapshots used dora.py for the preserved row variant.
+            dependency = next((root / directory / filename
+                               for filename in ("dora_row.py", "dora.py")
+                               for directory in ("source", "executed_sources")
+                               if (root / directory / filename).exists()), None)
             if dependency is None:
-                raise ValueError(f"Inherited dora.py dependency snapshot missing: {name}")
+                raise ValueError(f"Inherited DoRA dependency snapshot missing: {name}")
             if not any(Path(entry["path"]) == dependency for entry in audited["sources"]):
                 audited["sources"].append({"task": name, "path": str(dependency), "sha256": sha256(dependency), "verified": "Dependency snapshot; see task provenance for historical hash coverage"})
         diagnostic = load_json(root / "class_clip_metrics.json", {})

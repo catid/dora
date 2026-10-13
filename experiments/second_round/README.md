@@ -1,5 +1,7 @@
 # Harder tasks and experimental DoRA/NoRA mixtures
 
+These experiment recipes retain their historical implementations. Their row-normalized dependency is explicitly `dora_row.py`; importing the default `dora.py` now selects the original implementation plus FP32 magnitude storage.
+
 This round preserves the original experiments. It separates capacity, optimization, and generalization effects using tasks with more room to improve. Neither new mixture is assumed to win.
 
 ## Methods and controls

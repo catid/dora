@@ -37,8 +37,8 @@ from huggingface_hub import hf_hub_download
 from safetensors.torch import load_file
 
 from experiments.vision import (MODEL, REPO, REVISION, TARGET_SUFFIXES, file_sha256,
-                                tensor_digest, seed_everything, seed_worker, write_json)
-from experiments.second_round_adapters import AdapterLinear, METHODS, inject_adapters, parameter_groups
+                                tensor_digest, seed_everything, seed_worker, write_json, reuse_baseline_artifacts)
+from experiments.second_round_adapters import ADAPTER_TYPES, METHODS, SUPPORTED_METHODS, inject_adapters, parameter_groups
 
 BASE_LRS = (1e-5, 1e-4, 3e-4, 1e-3)
 MLR_BASE_LRS = (1e-4, 1e-3)
@@ -171,11 +171,19 @@ def train_epoch(model, loader, optimizer):
 def adapter_diagnostics(model):
     rows = []
     for name, module in model.named_modules():
-        if not isinstance(module, AdapterLinear):
+        if not isinstance(module, ADAPTER_TYPES):
             continue
         merged = module.to_linear().weight.float()
         row = {"name": name, "up_factor_l2": module.lora_B.norm().item()}
         assert row["up_factor_l2"] > 0
+        if getattr(module, "use_original", False):
+            row["normalization_axis"] = 0
+            row["zero_initialized_factor_l2"] = row.pop("up_factor_l2")
+            error = (merged.norm(dim=0) / module.m.flatten().abs().clamp_min(1e-12) - 1).abs().max().item()
+            row["original_column_magnitude_relative_error"] = error
+            assert error < 1e-4
+            rows.append(row)
+            continue
         if module.use_nora:
             expected = module.log_gain.exp() if module.log_gain is not None else torch.ones(module.in_features, device=merged.device)
             relative = (module.effective_down().norm(dim=0) / expected - 1).abs().max().item()
@@ -193,7 +201,13 @@ def adapter_diagnostics(model):
     return rows
 
 
-def run_one(args, datasets, checkpoint, provenance, method, rank, seed, lr, multiplier, stage):
+def run_one(args, datasets, checkpoint, provenance, method, rank, seed, lr, multiplier, stage, backend=None):
+    # Explicit adapter dependency injection for isolated per-change experiments.
+    # The existing runner defaults retain the original training/evaluation path.
+    adapter_types = ADAPTER_TYPES if backend is None else backend.adapter_types
+    inject = inject_adapters if backend is None else backend.inject_adapters
+    make_groups = parameter_groups if backend is None else backend.parameter_groups
+    diagnose = adapter_diagnostics if backend is None else backend.adapter_diagnostics
     if stage == "pilot":
         directory = args.output / f"rank_{rank}" / "pilots" / method / f"lr_{lr:g}_m_{multiplier:g}"
     elif stage == "baseline_pilot":
@@ -231,13 +245,22 @@ def run_one(args, datasets, checkpoint, provenance, method, rank, seed, lr, mult
     head_digest = tensor_digest(model.head.state_dict().items())
     backbone_digest = tensor_digest((name, parameter) for name, parameter in model.named_parameters()
                                     if not name.startswith("head."))
+    reference_initialization = None
+    if args.reference_root is not None:
+        reference_path = args.reference_root / "baseline" / f"seed_{seed}" / "result.json"
+        reference = json.loads(reference_path.read_text())
+        assert reference["initial_head_sha256"] == head_digest
+        assert reference["initial_backbone_sha256"] == backbone_digest
+        assert reference["provenance"]["checkpoint_sha256"] == provenance["checkpoint_sha256"]
+        reference_initialization = {"result_path": str(reference_path), "result_sha256": file_sha256(reference_path),
+                                    "initial_head_exact": True, "initial_backbone_exact": True}
     model.eval()
     probe = torch.randn(2, 3, 224, 224, generator=torch.Generator().manual_seed(999))
     with torch.no_grad(): before = model(probe)
     if method == "baseline":
         model.requires_grad_(False)
     else:
-        inject_adapters(model, method, rank=rank, targets=lambda name, module: name.endswith(TARGET_SUFFIXES))
+        inject(model, method, rank=rank, targets=lambda name, module: name.endswith(TARGET_SUFFIXES))
     model.head.requires_grad_(True)
     model.eval()
     with torch.no_grad(): after = model(probe)
@@ -249,9 +272,9 @@ def run_one(args, datasets, checkpoint, provenance, method, rank, seed, lr, mult
     initial_trainable = tensor_digest((name, parameter) for name, parameter in model.named_parameters() if parameter.requires_grad)
     frozen_before = tensor_digest((name, parameter) for name, parameter in model.named_parameters() if not parameter.requires_grad)
     assert frozen_before == backbone_digest
-    assert sum(isinstance(module, AdapterLinear) for module in model.modules()) == (0 if method == "baseline" else 48)
+    assert sum(isinstance(module, adapter_types) for module in model.modules()) == (0 if method == "baseline" else 48)
     model.cuda()
-    groups = [] if method == "baseline" else parameter_groups(model, lr, magnitude_lr_multiplier=multiplier)
+    groups = [] if method == "baseline" else make_groups(model, lr, magnitude_lr_multiplier=multiplier)
     head = list(model.head.parameters())
     groups.append({"params": head, "lr": args.head_lr, "weight_decay": 0.01,
                    "group_name": "classifier", "parameter_count": sum(p.numel() for p in head),
@@ -263,6 +286,7 @@ def run_one(args, datasets, checkpoint, provenance, method, rank, seed, lr, mult
                    "optimizer_groups": [{key: value for key, value in group.items() if key != "params"} for group in groups],
                    "source_state_sha256": source_digest, "initial_head_sha256": head_digest,
                    "initial_backbone_sha256": backbone_digest, "initial_trainable_sha256": initial_trainable,
+                   "reference_initialization": reference_initialization,
                    "initial_output_max_absolute_error": identity_error})
     write_json(directory / "config.json", config)
     optimizer = torch.optim.AdamW(groups)
@@ -301,13 +325,15 @@ def run_one(args, datasets, checkpoint, provenance, method, rank, seed, lr, mult
     assert frozen_after == frozen_before and all(parameter.grad is None for parameter in model.parameters() if not parameter.requires_grad)
     final_trainable = tensor_digest((name, parameter) for name, parameter in model.named_parameters() if parameter.requires_grad)
     assert initial_trainable != final_trainable
-    diagnostics = adapter_diagnostics(model)
+    diagnostics = diagnose(model)
     test, test_seconds = None, 0.0
     if evaluate_test:
         test_started = time.perf_counter()
         test, predictions = evaluate(model, loaders["test"], keep_predictions=True)
         torch.cuda.synchronize(); test_seconds = time.perf_counter() - test_started
         write_json(directory / "test_predictions.json", predictions)
+    if backend is not None:
+        diagnostics = diagnose(model)  # Include test-time norm-floor observations.
     result = {**config, "best_epoch": best_epoch, "best_validation": history[best_epoch - 1]["validation"],
               "test": test, "training_wall_seconds": duration, "test_seconds": test_seconds,
               "peak_cuda_allocated_bytes": torch.cuda.max_memory_allocated(),
@@ -337,7 +363,12 @@ def main():
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--head-lr", type=float, default=1e-3)
+    parser.add_argument("--methods", nargs="+", choices=SUPPORTED_METHODS, default=list(METHODS))
+    parser.add_argument("--reference-root", type=Path, help="Prior Aircraft shard whose per-seed initial heads and backbone must match")
+    parser.add_argument("--reuse-baselines", action="store_true", help="Copy exact trained-head baselines from --reference-root")
     args = parser.parse_args()
+    if args.reuse_baselines and args.reference_root is None:
+        parser.error("--reuse-baselines requires --reference-root")
     args.output.mkdir(parents=True, exist_ok=True)
     torch.set_num_threads(8)
     torch.backends.cuda.matmul.allow_tf32 = True; torch.backends.cudnn.allow_tf32 = True
@@ -345,7 +376,7 @@ def main():
     checkpoint = hf_hub_download(REPO, "model.safetensors", revision=REVISION,
                                 cache_dir="/var/tmp/dora-bench/cache/huggingface")
     sources = ["experiments/second_round/vision.py", "experiments/second_round_adapters.py",
-               "experiments/adapters.py", "experiments/vision.py", "dora.py"]
+               "experiments/adapters.py", "experiments/vision.py", "experiments/original_dora.py", "dora_row.py"]
     provenance = {"model": MODEL, "model_repository": REPO, "model_revision": REVISION,
                   "checkpoint_sha256": file_sha256(checkpoint), "dataset": "FGVC-Aircraft variants",
                   "official_split_sizes": manifest["official_sizes"], "split_sizes": manifest["effective_sizes"],
@@ -357,6 +388,12 @@ def main():
                   "python": platform.python_version(), "cuda": torch.version.cuda,
                   "gpu": torch.cuda.get_device_name(0), "cuda_visible_devices": os.environ.get("CUDA_VISIBLE_DEVICES"),
                   "precision": "FP32 base/adapters, BF16 autocast; TF32 permitted", "command": [sys.executable, *sys.argv]}
+    if args.reference_root is not None:
+        reference = json.loads((args.reference_root / "protocol.json").read_text())["provenance"]
+        for key in ("model", "model_revision", "checkpoint_sha256", "split_manifest_sha256", "transform",
+                    "torch", "torchvision", "timm"):
+            assert provenance[key] == reference[key], key
+        provenance["reference_run_root"] = str(args.reference_root)
     for source in sources:
         destination = args.output / "source" / source; destination.parent.mkdir(parents=True, exist_ok=True)
         if destination.exists(): assert file_sha256(destination) == file_sha256(source)
@@ -365,7 +402,7 @@ def main():
         run_one(args, datasets, checkpoint, provenance, "baseline", 0, 42, args.head_lr, 1.0, "baseline_pilot")
         return
     protocol = {"epochs": args.epochs, "pilot_epochs": args.pilot_epochs, "ranks": args.ranks,
-                "seeds": args.seeds, "batch_size": args.batch_size, "head_lr": args.head_lr,
+                "seeds": args.seeds, "batch_size": args.batch_size, "head_lr": args.head_lr, "methods": args.methods,
                 "standard_and_gain_lr_grid": BASE_LRS, "mlr_base_lr_grid": MLR_BASE_LRS,
                 "magnitude_multipliers": MAGNITUDE_MULTIPLIERS,
                 "pilot_seed": 42, "trials_per_method_per_rank": 4,
@@ -375,12 +412,22 @@ def main():
     if path.exists(): assert json.loads(path.read_text()) == json.loads(json.dumps(protocol))
     else: write_json(path, protocol)
     results = []
+    reused = []
     for seed in args.seeds:
-        results.append(run_one(args, datasets, checkpoint, provenance, "baseline", 0, seed, args.head_lr, 1.0, "final"))
+        if args.reuse_baselines:
+            baseline, attestation = reuse_baseline_artifacts(
+                args.reference_root / "baseline" / f"seed_{seed}", args.output / "baseline" / f"seed_{seed}",
+                {"seed": seed, "epochs": args.epochs, "rank": 0, "batch_size": args.batch_size,
+                 "head_learning_rate": args.head_lr})
+            assert baseline["provenance"]["checkpoint_sha256"] == provenance["checkpoint_sha256"]
+            results.append(baseline); reused.append(attestation)
+            write_json(args.output / "baseline_reuse.json", {"reused": reused})
+        else:
+            results.append(run_one(args, datasets, checkpoint, provenance, "baseline", 0, seed, args.head_lr, 1.0, "final"))
         write_json(args.output / "results.json", results)
     for rank in args.ranks:
         pilots, selected = [], {}
-        for method in METHODS:
+        for method in args.methods:
             candidates = [(lr, multiplier) for lr in MLR_BASE_LRS for multiplier in MAGNITUDE_MULTIPLIERS] if method == "dora_nora_mlr" else [(lr, 1.0) for lr in BASE_LRS]
             trials = []
             for lr, multiplier in candidates:
@@ -391,7 +438,7 @@ def main():
             selected[method] = {"lr": winner["adapter_learning_rate"], "magnitude_multiplier": winner["magnitude_lr_multiplier"]}
             write_json(args.output / f"rank_{rank}" / "selected.json", selected)
         for seed in args.seeds:
-            for method in METHODS:
+            for method in args.methods:
                 choice = selected[method]
                 results.append(run_one(args, datasets, checkpoint, provenance, method, rank, seed,
                                        choice["lr"], choice["magnitude_multiplier"], "final"))

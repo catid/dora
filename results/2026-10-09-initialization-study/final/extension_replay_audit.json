@@ -1,0 +1,97 @@
+{
+  "status": "pass",
+  "scope": "Saved-prediction scoring and report replay only. Tensor payloads are omitted; their original hashes are retained as provenance, not reverified checkpoint contents. No model inference, training or full tensor audit is replayed.",
+  "prediction_rows_rescored": 92097,
+  "dataset_fits_rescored": 126,
+  "validation_selections_checked": 5,
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "packages": {
+      "numpy": "2.4.4",
+      "matplotlib": "3.10.9",
+      "torch": "2.12.0+cu130"
+    }
+  },
+  "byte_identical_outputs": {
+    "all_candidates.csv": {
+      "sha256": "c0101a5919f09754716ce69e91c2a5f47415929a94003311d66f4e13f0b0b5e3",
+      "bytes": 22629050
+    },
+    "all_candidates.json": {
+      "sha256": "ef5b5a3118137f820bebf1abc7efe2dd4c1bd816f48b9e5f22aba13dd6cb4ea6",
+      "bytes": 39006193
+    },
+    "all_comparisons.csv": {
+      "sha256": "2cc55f53da7d69c4f09b7afc52812ca97ebf58ffcbf8adefa51e8d73b156c862",
+      "bytes": 85106
+    },
+    "all_families.csv": {
+      "sha256": "023a36690ba9375e1ee0d7456046316bb6d65480b5e0d45df9f58ab7d4858063",
+      "bytes": 85052
+    },
+    "all_fits.csv": {
+      "sha256": "50247214474b88bbb667b618c4e296e66bee4b01761879dfa94b22e35d8c7974",
+      "bytes": 11581323
+    },
+    "all_fits.json": {
+      "sha256": "695c6fa6b748252c7caf95b759381acc06ba2e41e794eeb2f14ab4572e03a93f",
+      "bytes": 20171338
+    },
+    "evidence_manifest.json": {
+      "sha256": "a86520c1832189a1b0c51694de2c5bf0647f86fdc72bddc7f27929925a75e1b2",
+      "bytes": 676178
+    },
+    "failures.json": {
+      "sha256": "19b35c1c475056a0c137414ab397b5c65cf356c9a196c339b5278ddd8f2b7010",
+      "bytes": 53
+    },
+    "initial_controls.json": {
+      "sha256": "6093a1354fb18b5016947adb23cd7fecfbfaedec0e4b14caaf33dd73981423f6",
+      "bytes": 653569487
+    },
+    "report.md": {
+      "sha256": "fbdaf3150c32984375cf1492c3279f2ef769712cce0a6a9eca56e1e095fb3639",
+      "bytes": 6743
+    },
+    "report_inputs.json": {
+      "sha256": "a227e5e4a840864a189b440bbcab98bed39aad97804395d8f5e1c5fb563255d6",
+      "bytes": 779257230
+    },
+    "search_budgets.csv": {
+      "sha256": "e2a9d4dd132c6b84fd5d9532562525d053a7366546663b537f9de7eaa9260561",
+      "bytes": 3122
+    },
+    "search_budgets.json": {
+      "sha256": "2d90f144290badab358e7637abaa82d7bc5326434c51651e60ddc361a4cf0a18",
+      "bytes": 14107
+    },
+    "summary.json": {
+      "sha256": "a18ae88419f339ff66cf6bddf310883194e6cf881f51981ec2cc4411df4a86f2",
+      "bytes": 333148
+    },
+    "report_manifest.json": {
+      "sha256": "e7190e04285b9ee7576f7e1289876642942359fe4e14823f98b8a30e9b90c884",
+      "bytes": 1389
+    }
+  },
+  "imported_frozen_modules": {
+    "experiments": "source/experiments/__init__.py",
+    "experiments.change_report": "source/experiments/change_report.py",
+    "experiments.init_report": "source/experiments/init_report.py",
+    "experiments.init_common": "source/experiments/init_common.py",
+    "experiments.init_extension": "source/experiments/init_extension.py",
+    "experiments.init_extension_registry": "source/experiments/init_extension_registry.py",
+    "experiments.init_extension_report": "source/experiments/init_extension_report.py"
+  },
+  "included_original_paths": 2041,
+  "excluded_tensor_bindings": 867,
+  "excluded_tensor_payloads_verified": 0,
+  "original_host_paths_denied": true,
+  "network_denied": true,
+  "gpu_visible_devices": "",
+  "portable_manifest_sha256": "29e03e01a563c297dcb6569080a9eb0ee8088bcef0ed8bfb71ca11e4961a2f19",
+  "work_directory": "/var/tmp/dora-bench/init_study/report_supplements_v3/dora_portable_replay_aqg_yjre",
+  "archive_sha256": "a383ef9686e46aa12f3dd1f3c558a5688f36ae509fe4728f988faf494d288a9d",
+  "parts_only": false,
+  "read_only_archive_files_verified_after_replay": 1598
+}

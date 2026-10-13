@@ -1,4 +1,6 @@
-"""Validate and benchmark dense, factorized, and merged DoRA on one device.
+"""Benchmark the preserved row-normalized variant in dora_row.py on one device.
+
+Compares its dense, factorized, and merged forms; this is not the default dora.py.
 
 Example: python benchmark_dora.py --device cuda:0 --output benchmark_results.json
 CUDA timings include synchronization; each raw sample averages --iterations calls.
@@ -21,7 +23,7 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from dora import DoRALayer
+from dora_row import DoRALayer
 
 
 class DenseDoRA(nn.Module):
@@ -157,7 +159,7 @@ def provenance(device):
         "git_revision": revision,
         "source_sha256": {
             name: hashlib.sha256((source / name).read_bytes()).hexdigest()
-            for name in ("dora.py", "benchmark_dora.py")
+            for name in ("dora_row.py", "benchmark_dora.py")
         },
     }
     if device.type == "cuda":

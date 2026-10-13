@@ -250,7 +250,8 @@ def train(model, tokenizer, corpus_tokens, query_tokens, relevance, splits, args
 
 def provenance(args, dataset):
     root = Path(__file__).resolve().parent.parent
-    source = [Path(__file__).resolve(), root / "experiments" / "adapters.py"]
+    source = [Path(__file__).resolve(), root / "experiments" / "adapters.py",
+              root / "experiments" / "original_dora.py", root / "dora_row.py"]
     config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
     config.pop("current_method", None)
     return {
@@ -261,7 +262,7 @@ def provenance(args, dataset):
         "cuda_visible_devices": os.environ.get("CUDA_VISIBLE_DEVICES"),
         "nvidia_smi": subprocess.check_output(["nvidia-smi", "--query-gpu=index,uuid,name,driver_version", "--format=csv,noheader"], text=True).strip(),
         "source_sha256": {str(path.relative_to(root)): hashlib.sha256(path.read_bytes()).hexdigest() for path in source if path.exists()},
-        "model": {"repository": MODEL, "revision": MODEL_REVISION, "pooling": "attention-mask mean pooling; L2 normalization", "frozen_dtype": "bfloat16", "adapter_dtype": "float32"},
+        "model": {"repository": MODEL, "revision": MODEL_REVISION, "pooling": "attention-mask mean pooling; L2 normalization", "frozen_dtype": "bfloat16", "adapter_dtype": "float32 factors; original magnitude inherits bfloat16" if "dora_original" in args.methods else "float32"},
         "dataset": dataset, "configuration": config,
         "protocol": {
             "target_modules": "BERT self-attention query and value projections in all 6 layers",
@@ -272,6 +273,7 @@ def provenance(args, dataset):
             "ranking": "Exhaustive cosine similarity over all 5183 corpus documents; no approximate index.",
             "metrics": "Macro query mean Recall@10, reciprocal rank truncated at 10, and nDCG@10 with gain 2^relevance-1.",
             "limitations": "Small single-domain adaptation set and one encoder; confidence intervals measure query and seed variability, not broad task generalization.",
+            "original_precision_compatibility": "For dora_original outside autocast, keep historical norm/update/magnitude arithmetic; cast activation and frozen bias to the dense adapted-weight dtype for F.linear, then cast its result to the input dtype. BF16 frozen weights and magnitude, FP32 factors and final dense projection. No norm promotion or denominator detachment.",
         },
     }
 
@@ -293,7 +295,7 @@ def summarize(runs):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=Path("/var/tmp/dora-bench/runs/retrieval"))
-    parser.add_argument("--methods", nargs="+", choices=("frozen", "lora", "dora", "nora", "dora_nora"), default=["frozen", "lora", "dora", "nora", "dora_nora"])
+    parser.add_argument("--methods", nargs="+", choices=("frozen", "lora", "dora", "nora", "dora_nora", "dora_original"), default=["frozen", "lora", "dora", "nora", "dora_nora"])
     parser.add_argument("--seeds", type=int, nargs="+", default=[42, 43, 44])
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--rank", type=int, default=8)
@@ -328,6 +330,11 @@ def main():
     query_tokens = tokenize_all(tokenizer, queries, args.max_length)
     metadata = provenance(args, dataset_provenance)
     write_json(args.output_dir / "provenance.json", metadata)
+    source_root = Path(__file__).resolve().parents[1]
+    for relative in metadata["source_sha256"]:
+        destination = args.output_dir / "source" / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source_root / relative, destination)
     results, tuning = [], {}
 
     def new_model(method, seed):

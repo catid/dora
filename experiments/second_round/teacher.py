@@ -20,7 +20,8 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from experiments.second_round_adapters import AdapterLinear, METHODS, parameter_groups
+from experiments.second_round_adapters import AdapterLinear, METHODS, SUPPORTED_METHODS, parameter_groups
+from experiments.original_dora import OriginalDoRALinear
 
 
 def write_json(path, value):
@@ -122,7 +123,8 @@ def new_layer(data, method, rank, seed):
     torch.manual_seed(seed)
     base = nn.Linear(data["base_weight"].shape[1], data["base_weight"].shape[0], bias=False, device="meta")
     base.weight = nn.Parameter(data["base_weight"].clone(), requires_grad=False)
-    return AdapterLinear(base, method, rank=rank)
+    return (OriginalDoRALinear(base, rank=rank) if method == "dora_original"
+            else AdapterLinear(base, method, rank=rank))
 
 
 def fit(data, method, rank, seed, lr, multiplier, args):
@@ -179,7 +181,7 @@ def main():
     parser.add_argument("--validation-size", type=int, default=1024)
     parser.add_argument("--test-size", type=int, default=4096)
     parser.add_argument("--strength", type=float, default=0.25)
-    parser.add_argument("--methods", nargs="+", choices=METHODS, default=list(METHODS))
+    parser.add_argument("--methods", nargs="+", choices=SUPPORTED_METHODS, default=list(METHODS))
     parser.add_argument("--max-cells", type=int)
     args = parser.parse_args()
     if args.steps < 1 or any(rank < 2 for rank in args.ranks):
@@ -190,7 +192,8 @@ def main():
     device = torch.device("cuda:0")
     source_root = Path(__file__).resolve().parents[2]
     sources = {"teacher.py": Path(__file__), "second_round_adapters.py": source_root / "experiments/second_round_adapters.py",
-               "adapters.py": source_root / "experiments/adapters.py", "dora.py": source_root / "dora.py"}
+               "adapters.py": source_root / "experiments/adapters.py", "dora_row.py": source_root / "dora_row.py",
+               "original_dora.py": source_root / "experiments/original_dora.py"}
     config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
     provenance = {"config": config, "source_sha256": {name: sha256(path) for name, path in sources.items()},
                   "torch": torch.__version__, "python": platform.python_version(), "cuda": torch.version.cuda,

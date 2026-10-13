@@ -1,0 +1,69 @@
+{
+  "status": "pass",
+  "scope": "Saved-prediction scoring and report replay only. Tensor payloads are omitted; their original hashes are retained as provenance, not reverified checkpoint contents. No model inference, training or full tensor audit is replayed.",
+  "prediction_rows_rescored": 67680,
+  "dataset_fits_rescored": 75,
+  "validation_selections_checked": 5,
+  "environment": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "packages": {
+      "numpy": "2.4.4",
+      "matplotlib": "3.10.9"
+    }
+  },
+  "byte_identical_outputs": {
+    "summary.json": {
+      "sha256": "a1493321fe5235cd170d445487a1d0901e1a163bf8de3bb029b2f2de71d593c1",
+      "bytes": 40653
+    },
+    "all_fits.json": {
+      "sha256": "ceb8f670ef60d39a3bbf2540bce427378dd74fc5ad183ee28bc37bb1fb86dfa8",
+      "bytes": 163659
+    },
+    "report_inputs.json": {
+      "sha256": "e153ddfb584368286c1095dc81f844df209a09fd9c7e9ae1c79d755fa641db59",
+      "bytes": 3586712
+    },
+    "report.md": {
+      "sha256": "f239c23791798d9e249939e09e7f719e72cc39d4ddcfbc9d74bb517e60f760a9",
+      "bytes": 2789
+    },
+    "evidence_manifest.json": {
+      "sha256": "a61798452e124bed93002666667a51c50ea00084f244f4f7d6fc7f17a67c926e",
+      "bytes": 1140107
+    },
+    "all_comparisons.csv": {
+      "sha256": "0bed6d6c6045667113202aba7b20817515afd4d35b765d79d61f8f656974584e",
+      "bytes": 3954
+    },
+    "all_fits.csv": {
+      "sha256": "ace31cf8d021b883bdae7952153babe6d41bf7fcf4d60c296100a2b7e18da863",
+      "bytes": 103814
+    },
+    "all_roles.csv": {
+      "sha256": "6a753ac4084e2dc6a3826cc9a7e65ee37775d36e2949b198c6d5c7bf4081bc36",
+      "bytes": 20820
+    },
+    "report_manifest.json": {
+      "sha256": "248b1d1a4934b859318751810d860b560ca4786616845d37617b8fb36b0b1db0",
+      "bytes": 883
+    }
+  },
+  "imported_frozen_modules": {
+    "experiments": "source/experiments/__init__.py",
+    "experiments.change_report": "source/experiments/change_report.py",
+    "experiments.init_report": "source/experiments/init_report.py",
+    "experiments.init_confirm_report": "source/experiments/init_confirm_report.py"
+  },
+  "included_original_paths": 4711,
+  "excluded_tensor_bindings": 351,
+  "excluded_tensor_payloads_verified": 0,
+  "original_host_paths_denied": true,
+  "network_denied": true,
+  "gpu_visible_devices": "",
+  "portable_manifest_sha256": "29cb629932519153e571eea3436fb6f50eb0d9ca1b43374eb391207cc2639b72",
+  "work_directory": "/var/tmp/dora-bench/init_study/report_supplements_v3/dora_portable_replay_i56e04j1",
+  "archive_sha256": "b6d12966205240fba702d9567dca0f4b632f44c733aafa2cfa5e90c0e2a796a3",
+  "parts_only": false,
+  "read_only_archive_files_verified_after_replay": 4638
+}

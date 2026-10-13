@@ -25,7 +25,7 @@ from PIL import Image, ImageDraw, ImageOps
 import torch
 from torch.nn import functional as F
 
-from experiments.adapters import AdapterLinear, METHODS, inject_adapters
+from experiments.adapters import ADAPTER_TYPES, METHODS, SUPPORTED_METHODS, inject_adapters
 
 
 MODEL_ID = "stabilityai/stable-diffusion-xl-base-1.0"
@@ -280,7 +280,12 @@ def save_adapter(model, directory):
 def adapter_diagnostics(model):
     down_errors, magnitude_errors = [], []
     for module in model.modules():
-        if isinstance(module, AdapterLinear):
+        if isinstance(module, ADAPTER_TYPES):
+            if module.method == "dora_original":
+                adapted = module.weight + module.lora_A @ module.lora_B
+                merged = module.m * (adapted / adapted.norm(p=2, dim=0, keepdim=True))
+                magnitude_errors.append(float((merged.norm(dim=0, keepdim=True) - module.m.abs()).abs().max()))
+                continue
             if module.use_nora:
                 down_errors.append(float((module.effective_down().norm(dim=0) - 1).abs().max()))
             if module.use_dora:
@@ -308,13 +313,13 @@ def main():
                         help="JSON containing selected_lrs {method: rate}, chosen using seed42 validation only")
     parser.add_argument("--conditioning-cache", type=Path,
                         help="Read an existing cache plus matching .json metadata and SHA256")
-    parser.add_argument("--methods", nargs="+", default=list(METHODS))
+    parser.add_argument("--methods", nargs="+", choices=SUPPORTED_METHODS, default=list(METHODS))
     parser.add_argument("--prepare-only", action="store_true")
     parser.add_argument("--no-checkpointing", action="store_true")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    source_paths = {name: Path(__file__).parent / name for name in ("sdxl.py", "adapters.py")}
-    source_paths["dora.py"] = Path(__file__).parent.parent / "dora.py"
+    source_paths = {name: Path(__file__).parent / name for name in ("sdxl.py", "adapters.py", "original_dora.py")}
+    source_paths["dora_row.py"] = Path(__file__).parent.parent / "dora_row.py"
     config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
     # Reject an incompatible resume before regenerating image crops, replacing
     # their manifest, or touching CUDA. Completed research artifacts stay intact.
@@ -380,6 +385,13 @@ def main():
                                   {"selection_seed": args.seed, "source": "validation-only LR trials in this run"})
     provenance["conditioning_cache"] = (str(args.conditioning_cache) if args.conditioning_cache is not None else None)
     provenance["generation_precision"] = "BF16 frozen UNet with FP32 adapter branch; FP32 VAE decode"
+    if "dora_original" in args.methods:
+        provenance["original_adapter"] = {
+            "normalization": "dim0, full norm gradient, historical dense forward",
+            "initialization": "CPU normal up factor std=1/sqrt(rank), zero down factor; transfer factors to base device",
+            "parameter_precision": "FP32 factors; magnitude inherits BF16 base dtype",
+            "mixed_dtype_portability": "Outside autocast only, final projection casts input/bias to dense weight dtype then output back to input dtype",
+        }
     provenance_path = args.output / "provenance.json"
     if provenance_path.exists():
         previous = json.loads(provenance_path.read_text())

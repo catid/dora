@@ -1,0 +1,1426 @@
+{
+  "seeds": [
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "results": [
+    {
+      "dataset": "scifact",
+      "role": "validation_winner",
+      "candidate_id": "inilora_alpha__i3__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "controlled",
+          "family": "normal",
+          "both_nonzero": true,
+          "scaling": "absolute",
+          "scale": 1.0,
+          "companion_scale": 1.0
+        }
+      },
+      "learning_rate": 0.001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/inilora_alpha__i3__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/inilora_alpha__i3__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/inilora_alpha__i3__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/inilora_alpha__i3__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/inilora_alpha__i3__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 70.36890700518485,
+      "sample_sd": 1.3365813994089746,
+      "values": [
+        71.0684700666459,
+        68.34469641287461,
+        70.07644595716283,
+        70.41394023811219,
+        71.9409823511287
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 3.3702748248353602,
+        "sample_sd": 1.1239890823757719,
+        "values": [
+          2.625835129059851,
+          2.53727119974792,
+          4.622968273237348,
+          4.5774818561039865,
+          2.487817666027695
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 6.2844542,
+        "sample_sd": 1.3794123369294622,
+        "values": [
+          4.761752,
+          4.789846,
+          7.323864,
+          7.378808,
+          7.168001
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 998685900.8,
+        "sample_sd": 468937.4431149639,
+        "values": [
+          998895616,
+          998895616,
+          998895616,
+          998895616,
+          997847040
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "scifact",
+      "role": "accepted_anchor",
+      "candidate_id": "accepted_anchor__i0__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted"
+        }
+      },
+      "learning_rate": 0.001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_anchor__i0__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_anchor__i0__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_anchor__i0__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_anchor__i0__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_anchor__i0__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 68.6028174458356,
+      "sample_sd": 1.392601742599364,
+      "values": [
+        69.74977949121104,
+        68.55724586624487,
+        69.29934765752623,
+        66.23104584381257,
+        69.17666837038328
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 2.1349470002576707,
+        "sample_sd": 0.02626132233437513,
+        "values": [
+          2.1273728269152343,
+          2.1298030451871455,
+          2.127308502793312,
+          2.1798330722376704,
+          2.110417554154992
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 3.3053018,
+        "sample_sd": 0.02631864747094724,
+        "values": [
+          3.292172,
+          3.310285,
+          3.293996,
+          3.348617,
+          3.281439
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 1044500172.8,
+        "sample_sd": 175851.54116811146,
+        "values": [
+          1044578816,
+          1044578816,
+          1044578816,
+          1044578816,
+          1044185600
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "scifact",
+      "role": "accepted_gaussian_scale",
+      "candidate_id": "accepted_gaussian_scale__i3__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted_scaled",
+          "scale": 2.0
+        }
+      },
+      "learning_rate": 0.001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_gaussian_scale__i3__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_gaussian_scale__i3__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_gaussian_scale__i3__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_gaussian_scale__i3__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/scifact/run/fits/accepted_gaussian_scale__i3__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 69.6339834024224,
+      "sample_sd": 1.4688443189852103,
+      "values": [
+        71.31905069941861,
+        69.55092083845304,
+        69.54471338232335,
+        67.35585537877323,
+        70.3993767131438
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 2.144608726538718,
+        "sample_sd": 0.026133030057947145,
+        "values": [
+          2.1840552180074155,
+          2.1582988193258643,
+          2.1277654860168695,
+          2.1312578110955656,
+          2.121666298247874
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 3.315729,
+        "sample_sd": 0.028498537892320038,
+        "values": [
+          3.36089,
+          3.325435,
+          3.30556,
+          3.295888,
+          3.290872
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 1046308966.4,
+        "sample_sd": 1472446.7701824743,
+        "values": [
+          1045234176,
+          1045234176,
+          1047986688,
+          1045234176,
+          1047855616
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "nfcorpus",
+      "role": "validation_winner",
+      "candidate_id": "student_t3_up__i2__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "controlled",
+          "orientation": "up",
+          "family": "student_t",
+          "df": 3.0,
+          "scale": 1.0
+        }
+      },
+      "learning_rate": 0.0001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 32.046269155887124,
+      "sample_sd": 0.40099437825021816,
+      "values": [
+        32.504801319538515,
+        32.45626631162835,
+        31.74326933829004,
+        31.682523374587213,
+        31.84448543539152
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 22.593629002012314,
+        "sample_sd": 0.27629352707456817,
+        "values": [
+          22.46390555612743,
+          22.748639973346144,
+          22.313286126125604,
+          22.444229669868946,
+          22.99808368459344
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 25.9123656,
+        "sample_sd": 0.44014362438788157,
+        "values": [
+          26.526063,
+          25.847542,
+          25.425821,
+          25.602444,
+          26.159958
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 3498642227.2,
+        "sample_sd": 10287075.150905197,
+        "values": [
+          3491053568,
+          3494417920,
+          3509665280,
+          3509668352,
+          3488406016
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "nfcorpus",
+      "role": "accepted_anchor",
+      "candidate_id": "accepted_anchor__i0__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted"
+        }
+      },
+      "learning_rate": 0.0001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 31.92423260614248,
+      "sample_sd": 0.466998888488307,
+      "values": [
+        32.26438962357195,
+        31.64431128293208,
+        31.30982770227506,
+        32.47265091818473,
+        31.92998350374857
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 22.572004742827268,
+        "sample_sd": 0.28053321730532715,
+        "values": [
+          22.400190005078912,
+          22.764398996252567,
+          22.261792270001024,
+          22.482210599351674,
+          22.951431843452156
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 24.4173716,
+        "sample_sd": 0.3035996552489806,
+        "values": [
+          24.239832,
+          24.625438,
+          24.066317,
+          24.333432,
+          24.821839
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 3525274828.8,
+        "sample_sd": 10308121.205790471,
+        "values": [
+          3533565952,
+          3539064320,
+          3517406208,
+          3519439872,
+          3516897792
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "nfcorpus",
+      "role": "accepted_gaussian_scale",
+      "candidate_id": "accepted_gaussian_scale__i3__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted_scaled",
+          "scale": 2.0
+        }
+      },
+      "learning_rate": 0.0001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 31.868463295258124,
+      "sample_sd": 0.5379880282294639,
+      "values": [
+        32.321507365835714,
+        31.5498508901498,
+        31.083029256933038,
+        32.299209448802934,
+        32.088719514569135
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 22.745662527251987,
+        "sample_sd": 0.38010553800571906,
+        "values": [
+          22.467564220074564,
+          23.036132731940597,
+          22.46052460325882,
+          22.496231476776302,
+          23.26785960420966
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 24.6002152,
+        "sample_sd": 0.39520570429613006,
+        "values": [
+          24.328975,
+          24.906439,
+          24.285765,
+          24.340276,
+          25.139621
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 3544057446.4,
+        "sample_sd": 10598646.068795618,
+        "values": [
+          3536711680,
+          3538905088,
+          3555487744,
+          3555490816,
+          3533691904
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "scifact_transfer",
+      "role": "validation_winner",
+      "candidate_id": "student_t3_up__i2__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "controlled",
+          "orientation": "up",
+          "family": "student_t",
+          "df": 3.0,
+          "scale": 1.0
+        }
+      },
+      "learning_rate": 0.0001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/student_t3_up__i2__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 64.33003616852666,
+      "sample_sd": 0.8967407646421813,
+      "values": [
+        65.05693959968592,
+        64.0945606043717,
+        64.37075109638961,
+        62.94828269856442,
+        65.17964684362167
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 22.593629002012314,
+        "sample_sd": 0.27629352707456817,
+        "values": [
+          22.46390555612743,
+          22.748639973346144,
+          22.313286126125604,
+          22.444229669868946,
+          22.99808368459344
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 25.9123656,
+        "sample_sd": 0.44014362438788157,
+        "values": [
+          26.526063,
+          25.847542,
+          25.425821,
+          25.602444,
+          26.159958
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 3498642227.2,
+        "sample_sd": 10287075.150905197,
+        "values": [
+          3491053568,
+          3494417920,
+          3509665280,
+          3509668352,
+          3488406016
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "scifact_transfer",
+      "role": "accepted_anchor",
+      "candidate_id": "accepted_anchor__i0__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted"
+        }
+      },
+      "learning_rate": 0.0001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_anchor__i0__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 63.72376709226795,
+      "sample_sd": 0.750507009659523,
+      "values": [
+        64.22100501866996,
+        63.71467348473925,
+        62.76083933953684,
+        64.6560599984062,
+        63.26625761998748
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 22.572004742827268,
+        "sample_sd": 0.28053321730532715,
+        "values": [
+          22.400190005078912,
+          22.764398996252567,
+          22.261792270001024,
+          22.482210599351674,
+          22.951431843452156
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 24.4173716,
+        "sample_sd": 0.3035996552489806,
+        "values": [
+          24.239832,
+          24.625438,
+          24.066317,
+          24.333432,
+          24.821839
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 3525274828.8,
+        "sample_sd": 10308121.205790471,
+        "values": [
+          3533565952,
+          3539064320,
+          3517406208,
+          3519439872,
+          3516897792
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "scifact_transfer",
+      "role": "accepted_gaussian_scale",
+      "candidate_id": "accepted_gaussian_scale__i3__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted_scaled",
+          "scale": 2.0
+        }
+      },
+      "learning_rate": 0.0001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/nfcorpus/run/fits/accepted_gaussian_scale__i3__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 62.1052242167639,
+      "sample_sd": 1.3595903379958207,
+      "values": [
+        61.74238415512118,
+        62.50325386445004,
+        60.295171249820825,
+        64.05390547360884,
+        61.93140634081862
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 22.745662527251987,
+        "sample_sd": 0.38010553800571906,
+        "values": [
+          22.467564220074564,
+          23.036132731940597,
+          22.46052460325882,
+          22.496231476776302,
+          23.26785960420966
+        ],
+        "n": 5
+      },
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": {
+        "mean": 24.6002152,
+        "sample_sd": 0.39520570429613006,
+        "values": [
+          24.328975,
+          24.906439,
+          24.285765,
+          24.340276,
+          25.139621
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 3544057446.4,
+        "sample_sd": 10598646.068795618,
+        "values": [
+          3536711680,
+          3538905088,
+          3555487744,
+          3555490816,
+          3533691904
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "extraction",
+      "role": "validation_winner",
+      "candidate_id": "truncnormal2_down__i3__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "controlled",
+          "orientation": "down",
+          "family": "truncnormal",
+          "truncation": 2.0,
+          "scale": 2.0
+        }
+      },
+      "learning_rate": 0.0003,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/truncnormal2_down__i3__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/truncnormal2_down__i3__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/truncnormal2_down__i3__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/truncnormal2_down__i3__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/truncnormal2_down__i3__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 76.015625,
+      "sample_sd": 0.6536406457297466,
+      "values": [
+        76.5625,
+        75.0,
+        76.171875,
+        75.78125,
+        76.5625
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 63.039238745626065,
+        "sample_sd": 3.137319374711234,
+        "values": [
+          63.33635342074558,
+          61.638469997793436,
+          59.236531369853765,
+          67.81877783685923,
+          63.1660611028783
+        ],
+        "n": 5
+      },
+      "initializer_seconds": {
+        "mean": 0.8085500896908343,
+        "sample_sd": 0.3656990449025933,
+        "values": [
+          0.5137642589397728,
+          0.794965784996748,
+          1.214545083232224,
+          1.1327408142387867,
+          0.3867345070466399
+        ],
+        "n": 5
+      },
+      "total_fit_wall_seconds": null,
+      "peak_memory_bytes": {
+        "mean": 23340853452.8,
+        "sample_sd": 266131.81802107015,
+        "values": [
+          23340561920,
+          23341047808,
+          23341047808,
+          23340561920,
+          23341047808
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "extraction",
+      "role": "accepted_anchor",
+      "candidate_id": "accepted_anchor__i0__lr1",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted"
+        }
+      },
+      "learning_rate": 0.0003,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_anchor__i0__lr1/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_anchor__i0__lr1/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_anchor__i0__lr1/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_anchor__i0__lr1/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_anchor__i0__lr1/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 68.515625,
+      "sample_sd": 5.3317092965987465,
+      "values": [
+        70.703125,
+        76.953125,
+        64.84375,
+        65.234375,
+        64.84375
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 62.87227912331,
+        "sample_sd": 2.2268956041457133,
+        "values": [
+          63.56851807795465,
+          62.25365071091801,
+          59.55063524423167,
+          65.65049908868968,
+          63.33809249475598
+        ],
+        "n": 5
+      },
+      "initializer_seconds": {
+        "mean": 0.2124405131675303,
+        "sample_sd": 0.025116141664747474,
+        "values": [
+          0.2571149580180645,
+          0.1966721429489553,
+          0.2024012729525566,
+          0.20282041188329458,
+          0.2031937800347805
+        ],
+        "n": 5
+      },
+      "total_fit_wall_seconds": null,
+      "peak_memory_bytes": {
+        "mean": 23347253043.2,
+        "sample_sd": 8496868.234162703,
+        "values": [
+          23356560896,
+          23341047808,
+          23341047808,
+          23356560896,
+          23341047808
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "extraction",
+      "role": "accepted_gaussian_scale",
+      "candidate_id": "accepted_gaussian_scale__i3__lr0",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted_scaled",
+          "scale": 2.0
+        }
+      },
+      "learning_rate": 0.0001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_gaussian_scale__i3__lr0/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_gaussian_scale__i3__lr0/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_gaussian_scale__i3__lr0/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_gaussian_scale__i3__lr0/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/extraction/run/finals/accepted_gaussian_scale__i3__lr0/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 69.375,
+      "sample_sd": 2.742732762740931,
+      "values": [
+        66.796875,
+        68.75,
+        67.1875,
+        70.703125,
+        73.4375
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 62.9148405120708,
+        "sample_sd": 2.0970043093854374,
+        "values": [
+          63.195084935985506,
+          62.39838550472632,
+          59.87555322982371,
+          65.70209700567648,
+          63.40308188414201
+        ],
+        "n": 5
+      },
+      "initializer_seconds": {
+        "mean": 0.2057188106700778,
+        "sample_sd": 0.015492640142232308,
+        "values": [
+          0.23256702721118927,
+          0.19651772594079375,
+          0.19740502908825874,
+          0.19647358637303114,
+          0.2056306847371161
+        ],
+        "n": 5
+      },
+      "total_fit_wall_seconds": null,
+      "peak_memory_bytes": {
+        "mean": 23347253043.2,
+        "sample_sd": 8496868.234162703,
+        "values": [
+          23356560896,
+          23341047808,
+          23341047808,
+          23356560896,
+          23341047808
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "aircraft",
+      "role": "validation_winner",
+      "candidate_id": "loraga_ArBr__i1__lr3",
+      "spec": {
+        "kind": "data",
+        "config": {
+          "method": "loraga",
+          "direction": "ArBr",
+          "gamma": 16.0
+        }
+      },
+      "learning_rate": 0.001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/loraga_ArBr__i1__lr3/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/loraga_ArBr__i1__lr3/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/loraga_ArBr__i1__lr3/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/loraga_ArBr__i1__lr3/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/loraga_ArBr__i1__lr3/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 62.035472370766456,
+      "sample_sd": 1.1583364458838692,
+      "values": [
+        62.58288770053473,
+        62.36720142602491,
+        59.97237076648837,
+        62.627450980392126,
+        62.62745098039214
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 160.95862295189872,
+        "sample_sd": 3.3570653109392405,
+        "values": [
+          162.17717551300302,
+          163.9390229699202,
+          163.18512431066483,
+          155.61149232601747,
+          159.8802996398881
+        ],
+        "n": 5
+      },
+      "initializer_seconds": {
+        "mean": 12.564057656098157,
+        "sample_sd": 0.7104756216981362,
+        "values": [
+          11.78811661619693,
+          13.052592862863094,
+          13.285506134852767,
+          11.81615646276623,
+          12.877916203811765
+        ],
+        "n": 5
+      },
+      "total_fit_wall_seconds": {
+        "mean": 182.5743464,
+        "sample_sd": 3.9900928929624326,
+        "values": [
+          183.636816,
+          185.855404,
+          185.66032,
+          176.151533,
+          181.567659
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 9943918592,
+        "sample_sd": 0.0,
+        "values": [
+          9943918592,
+          9943918592,
+          9943918592,
+          9943918592,
+          9943918592
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "aircraft",
+      "role": "accepted_anchor",
+      "candidate_id": "accepted_anchor__i0__lr3",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted"
+        }
+      },
+      "learning_rate": 0.001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_anchor__i0__lr3/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_anchor__i0__lr3/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_anchor__i0__lr3/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_anchor__i0__lr3/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_anchor__i0__lr3/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 55.41550802139037,
+      "sample_sd": 1.5374470277603975,
+      "values": [
+        56.37700534759358,
+        54.88146167557934,
+        53.213012477718365,
+        55.34937611408197,
+        57.25668449197862
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 159.34569091629237,
+        "sample_sd": 1.5785539314928052,
+        "values": [
+          160.0605903356336,
+          160.12637604167685,
+          160.9899993161671,
+          156.9967817850411,
+          158.5547071029432
+        ],
+        "n": 5
+      },
+      "initializer_seconds": {
+        "mean": 0.039782119635492566,
+        "sample_sd": 0.0010228138438786068,
+        "values": [
+          0.03892565378919244,
+          0.039459328167140484,
+          0.0414487780071795,
+          0.03906390117481351,
+          0.04001293703913689
+        ],
+        "n": 5
+      },
+      "total_fit_wall_seconds": {
+        "mean": 167.549465,
+        "sample_sd": 1.6358487406236615,
+        "values": [
+          168.420423,
+          168.276231,
+          169.202907,
+          165.087719,
+          166.760045
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 9949816832,
+        "sample_sd": 0.0,
+        "values": [
+          9949816832,
+          9949816832,
+          9949816832,
+          9949816832,
+          9949816832
+        ],
+        "n": 5
+      }
+    },
+    {
+      "dataset": "aircraft",
+      "role": "accepted_gaussian_scale",
+      "candidate_id": "accepted_gaussian_scale__i1__lr3",
+      "spec": {
+        "kind": "random",
+        "config": {
+          "mode": "accepted_scaled",
+          "scale": 0.5
+        }
+      },
+      "learning_rate": 0.001,
+      "seeds": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "status": "pass",
+      "fit_ids": [
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_gaussian_scale__i1__lr3/seed_45",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_gaussian_scale__i1__lr3/seed_46",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_gaussian_scale__i1__lr3/seed_47",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_gaussian_scale__i1__lr3/seed_48",
+        "/var/tmp/dora-bench/init_study/confirmation_v3/aircraft/run/fits/accepted_gaussian_scale__i1__lr3/seed_49"
+      ],
+      "failed_seeds": [],
+      "mean": 56.59144385026736,
+      "sample_sd": 1.0252536960441079,
+      "values": [
+        57.6060606060606,
+        56.61051693404631,
+        54.99197860962565,
+        56.39661319073082,
+        57.352049910873426
+      ],
+      "n": 5,
+      "training_seconds": {
+        "mean": 158.44075885098428,
+        "sample_sd": 1.3992141769649702,
+        "values": [
+          159.96930795069784,
+          158.4767333031632,
+          159.6757154641673,
+          156.88324946397915,
+          157.19878807291389
+        ],
+        "n": 5
+      },
+      "initializer_seconds": {
+        "mean": 0.03922438807785511,
+        "sample_sd": 0.002283782894736246,
+        "values": [
+          0.04088945407420397,
+          0.042107169050723314,
+          0.036458613350987434,
+          0.03885411377996206,
+          0.03781259013339877
+        ],
+        "n": 5
+      },
+      "total_fit_wall_seconds": {
+        "mean": 166.40803739999998,
+        "sample_sd": 1.427375811962745,
+        "values": [
+          168.156847,
+          166.641943,
+          167.320462,
+          165.041474,
+          164.879461
+        ],
+        "n": 5
+      },
+      "peak_memory_bytes": {
+        "mean": 9949816832,
+        "sample_sd": 0.0,
+        "values": [
+          9949816832,
+          9949816832,
+          9949816832,
+          9949816832,
+          9949816832
+        ],
+        "n": 5
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "dataset": "scifact",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_anchor",
+      "candidate_id": "inilora_alpha__i3__lr1",
+      "reference_id": "accepted_anchor__i0__lr1",
+      "status": "pass",
+      "difference": 1.7660895593492558,
+      "paired_seed_differences": [
+        1.3186905754348495,
+        -0.21254945337023323,
+        0.7770982996366245,
+        4.182894394299617,
+        2.7643139807454213
+      ],
+      "ci95": [
+        -0.5491823464527186,
+        4.232034699700919
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "scifact",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_gaussian_scale",
+      "candidate_id": "inilora_alpha__i3__lr1",
+      "reference_id": "accepted_gaussian_scale__i3__lr1",
+      "status": "pass",
+      "difference": 0.734923602762434,
+      "paired_seed_differences": [
+        -0.250580632772713,
+        -1.2062244255784198,
+        0.5317325748394843,
+        3.0580848593389396,
+        1.541605637984879
+      ],
+      "ci95": [
+        -1.417607527451986,
+        2.945081200404329
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "nfcorpus",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_anchor",
+      "candidate_id": "student_t3_up__i2__lr1",
+      "reference_id": "accepted_anchor__i0__lr1",
+      "status": "pass",
+      "difference": 0.12203654974464724,
+      "paired_seed_differences": [
+        0.2404116959665647,
+        0.8119550286962592,
+        0.4334416360149836,
+        -0.7901275435975151,
+        -0.08549806835705605
+      ],
+      "ci95": [
+        -0.6811205710369664,
+        0.9146539661646235
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "nfcorpus",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_gaussian_scale",
+      "candidate_id": "student_t3_up__i2__lr1",
+      "reference_id": "accepted_gaussian_scale__i3__lr1",
+      "status": "pass",
+      "difference": 0.177805860629004,
+      "paired_seed_differences": [
+        0.18329395370280874,
+        0.9064154214785465,
+        0.6602400813570051,
+        -0.6166860742157206,
+        -0.24423407917761958
+      ],
+      "ci95": [
+        -0.6960046766926137,
+        1.0536763118924592
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "scifact_transfer",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_anchor",
+      "candidate_id": "student_t3_up__i2__lr1",
+      "reference_id": "accepted_anchor__i0__lr1",
+      "status": "pass",
+      "difference": 0.6062690762587102,
+      "paired_seed_differences": [
+        0.8359345810159402,
+        0.37988711963244676,
+        1.609911756852777,
+        -1.707777299841792,
+        1.9133892236341792
+      ],
+      "ci95": [
+        -1.0857244960235364,
+        2.12626315664744
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "scifact_transfer",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_gaussian_scale",
+      "candidate_id": "student_t3_up__i2__lr1",
+      "reference_id": "accepted_gaussian_scale__i3__lr1",
+      "status": "pass",
+      "difference": 2.2248119517627636,
+      "paired_seed_differences": [
+        3.31455544456474,
+        1.5913067399216603,
+        4.0755798465687905,
+        -1.1056227750444119,
+        3.2482405028030388
+      ],
+      "ci95": [
+        0.01320359227331817,
+        4.304088762081916
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "extraction",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_anchor",
+      "candidate_id": "truncnormal2_down__i3__lr1",
+      "reference_id": "accepted_anchor__i0__lr1",
+      "status": "pass",
+      "difference": 7.5,
+      "paired_seed_differences": [
+        5.859375,
+        -1.953125,
+        11.328125,
+        10.546875,
+        11.71875
+      ],
+      "ci95": [
+        1.25,
+        13.515625
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "extraction",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_gaussian_scale",
+      "candidate_id": "truncnormal2_down__i3__lr1",
+      "reference_id": "accepted_gaussian_scale__i3__lr0",
+      "status": "pass",
+      "difference": 6.640625,
+      "paired_seed_differences": [
+        9.765625,
+        6.25,
+        8.984375,
+        5.078125,
+        3.125
+      ],
+      "ci95": [
+        2.265625,
+        11.09375
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "aircraft",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_anchor",
+      "candidate_id": "loraga_ArBr__i1__lr3",
+      "reference_id": "accepted_anchor__i0__lr3",
+      "status": "pass",
+      "difference": 6.61996434937611,
+      "paired_seed_differences": [
+        6.205882352941172,
+        7.48573975044563,
+        6.759358288770049,
+        7.278074866310156,
+        5.370766488413544
+      ],
+      "ci95": [
+        5.44524064171123,
+        7.774153297682711
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    },
+    {
+      "dataset": "aircraft",
+      "candidate_role": "validation_winner",
+      "reference_role": "accepted_gaussian_scale",
+      "candidate_id": "loraga_ArBr__i1__lr3",
+      "reference_id": "accepted_gaussian_scale__i1__lr3",
+      "status": "pass",
+      "difference": 5.444028520499106,
+      "paired_seed_differences": [
+        4.976827094474151,
+        5.756684491978607,
+        4.9803921568627425,
+        6.230837789661315,
+        5.275401069518715
+      ],
+      "ci95": [
+        4.410681818181818,
+        6.476849376114083
+      ],
+      "replicates": 10000,
+      "random_seed": 20261009,
+      "resampling": "Crossed paired five fresh training seeds and examples; Aircraft preserves class counts and equal class weights."
+    }
+  ],
+  "bootstrap_replicates": 10000
+}

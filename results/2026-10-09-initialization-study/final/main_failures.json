@@ -1,0 +1,2346 @@
+{
+  "failed_final_fits": [
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i1_original__i0__lr3/seed_42",
+      "candidate_id": "nf4_control_i1_original__i0__lr3",
+      "seed": 42,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_original__i0__lr3/final/seed_42",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 0.7808326361700892,
+      "total_fit_wall_seconds": 1.832574,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "d970d94e2e230e34c1c1571e124d2d75aed933ea9e654f3bfab6ea6713b86166",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i1_original__i0__lr3/seed_43",
+      "candidate_id": "nf4_control_i1_original__i0__lr3",
+      "seed": 43,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_original__i0__lr3/final/seed_43",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 0.878159464802593,
+      "total_fit_wall_seconds": 2.039595,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "d970d94e2e230e34c1c1571e124d2d75aed933ea9e654f3bfab6ea6713b86166",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i1_original__i0__lr3/seed_44",
+      "candidate_id": "nf4_control_i1_original__i0__lr3",
+      "seed": 44,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_original__i0__lr3/final/seed_44",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 0.8228521752171218,
+      "total_fit_wall_seconds": 1.932524,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "d970d94e2e230e34c1c1571e124d2d75aed933ea9e654f3bfab6ea6713b86166",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i1_quantized__i0__lr3/seed_42",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr3",
+      "seed": 42,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_quantized__i0__lr3/final/seed_42",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 0.8327841428108513,
+      "total_fit_wall_seconds": 1.982465,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "2cc34f642b4e1eed30b3f4957ddbea4f3d6a0c630f07545d8b13b7e0f6f19dca",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i1_quantized__i0__lr3/seed_43",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr3",
+      "seed": 43,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_quantized__i0__lr3/final/seed_43",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 0.9015454868786037,
+      "total_fit_wall_seconds": 1.990433,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "2cc34f642b4e1eed30b3f4957ddbea4f3d6a0c630f07545d8b13b7e0f6f19dca",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i1_quantized__i0__lr3/seed_44",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr3",
+      "seed": 44,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_quantized__i0__lr3/final/seed_44",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 0.9320108266547322,
+      "total_fit_wall_seconds": 2.087436,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "2cc34f642b4e1eed30b3f4957ddbea4f3d6a0c630f07545d8b13b7e0f6f19dca",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i3_original__i0__lr3/seed_42",
+      "candidate_id": "nf4_control_i3_original__i0__lr3",
+      "seed": 42,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_original__i0__lr3/final/seed_42",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 13.185709367971867,
+      "total_fit_wall_seconds": 14.260762,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "7635ad6a5f52841c16c0a5fecf5b96ac578f09804b5760b3f21e3a3875a8535c",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i3_original__i0__lr3/seed_43",
+      "candidate_id": "nf4_control_i3_original__i0__lr3",
+      "seed": 43,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_original__i0__lr3/final/seed_43",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 13.035543299745768,
+      "total_fit_wall_seconds": 14.123143,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "7635ad6a5f52841c16c0a5fecf5b96ac578f09804b5760b3f21e3a3875a8535c",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i3_original__i0__lr3/seed_44",
+      "candidate_id": "nf4_control_i3_original__i0__lr3",
+      "seed": 44,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_original__i0__lr3/final/seed_44",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 10.572626991197467,
+      "total_fit_wall_seconds": 11.619465,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "7635ad6a5f52841c16c0a5fecf5b96ac578f09804b5760b3f21e3a3875a8535c",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i3_quantized__i0__lr3/seed_42",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr3",
+      "seed": 42,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_quantized__i0__lr3/final/seed_42",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 11.714373760856688,
+      "total_fit_wall_seconds": 12.746052,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "a245fcb9c3a0b70352df3f48dbad2576a8200aa444db3b6ef767df9dd3fcf0be",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i3_quantized__i0__lr3/seed_43",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr3",
+      "seed": 43,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_quantized__i0__lr3/final/seed_43",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 10.487230660859495,
+      "total_fit_wall_seconds": 11.53723,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "a245fcb9c3a0b70352df3f48dbad2576a8200aa444db3b6ef767df9dd3fcf0be",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/aircraft",
+      "fit_key": "nf4_control_i3_quantized__i0__lr3/seed_44",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr3",
+      "seed": 44,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.001,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_quantized__i0__lr3/final/seed_44",
+      "status": "numerical_failure",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": 10.493727895896882,
+      "total_fit_wall_seconds": 11.563978,
+      "trainable_parameters": null,
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      },
+      "recipe_sha256": "a245fcb9c3a0b70352df3f48dbad2576a8200aa444db3b6ef767df9dd3fcf0be",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i1_original__i0__lr1/seed_42",
+      "candidate_id": "nf4_control_i1_original__i0__lr1",
+      "seed": 42,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i1_original__i0__lr1/seed_42",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "6d5e1559b29e6734435ee568f3eb6729512f46302213296081c8ce3fcd79c127",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i1_original__i0__lr1/seed_43",
+      "candidate_id": "nf4_control_i1_original__i0__lr1",
+      "seed": 43,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i1_original__i0__lr1/seed_43",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "6d5e1559b29e6734435ee568f3eb6729512f46302213296081c8ce3fcd79c127",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i1_original__i0__lr1/seed_44",
+      "candidate_id": "nf4_control_i1_original__i0__lr1",
+      "seed": 44,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i1_original__i0__lr1/seed_44",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "6d5e1559b29e6734435ee568f3eb6729512f46302213296081c8ce3fcd79c127",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i1_quantized__i0__lr1/seed_42",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr1",
+      "seed": 42,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i1_quantized__i0__lr1/seed_42",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "ceb57091d5a7ea75103c1bc41eb291e92053537d14fe115dbc2fbbeaea1abb06",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i1_quantized__i0__lr1/seed_43",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr1",
+      "seed": 43,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i1_quantized__i0__lr1/seed_43",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "ceb57091d5a7ea75103c1bc41eb291e92053537d14fe115dbc2fbbeaea1abb06",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i1_quantized__i0__lr1/seed_44",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr1",
+      "seed": 44,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i1_quantized__i0__lr1/seed_44",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "ceb57091d5a7ea75103c1bc41eb291e92053537d14fe115dbc2fbbeaea1abb06",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i3_original__i0__lr1/seed_42",
+      "candidate_id": "nf4_control_i3_original__i0__lr1",
+      "seed": 42,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i3_original__i0__lr1/seed_42",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "b8012ad2bf3fe6c092b5023cfb4dadda5ab03036700b2eeaa509fb79cf041f0e",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i3_original__i0__lr1/seed_43",
+      "candidate_id": "nf4_control_i3_original__i0__lr1",
+      "seed": 43,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i3_original__i0__lr1/seed_43",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "b8012ad2bf3fe6c092b5023cfb4dadda5ab03036700b2eeaa509fb79cf041f0e",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i3_original__i0__lr1/seed_44",
+      "candidate_id": "nf4_control_i3_original__i0__lr1",
+      "seed": 44,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i3_original__i0__lr1/seed_44",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "b8012ad2bf3fe6c092b5023cfb4dadda5ab03036700b2eeaa509fb79cf041f0e",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i3_quantized__i0__lr1/seed_42",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr1",
+      "seed": 42,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i3_quantized__i0__lr1/seed_42",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "e888b16a14ddf6dc3419898c30426c3a9a7ac436f7921713b1e8828bf96b44f1",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i3_quantized__i0__lr1/seed_43",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr1",
+      "seed": 43,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i3_quantized__i0__lr1/seed_43",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "e888b16a14ddf6dc3419898c30426c3a9a7ac436f7921713b1e8828bf96b44f1",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    },
+    {
+      "task": "quantized/extraction",
+      "fit_key": "nf4_control_i3_quantized__i0__lr1/seed_44",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr1",
+      "seed": 44,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "fit_id": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/finals/nf4_control_i3_quantized__i0__lr1/seed_44",
+      "status": "failed_numerically",
+      "training_seconds": null,
+      "peak_memory_bytes": null,
+      "initializer_seconds": null,
+      "total_fit_wall_seconds": null,
+      "trainable_parameters": null,
+      "failure": "Nonfinite initial forward logits or loss",
+      "recipe_sha256": "e888b16a14ddf6dc3419898c30426c3a9a7ac436f7921713b1e8828bf96b44f1",
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      }
+    }
+  ],
+  "failed_pilots": [
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i1_original__i0__lr0",
+      "family_id": "nf4_control_i1_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 1e-05,
+      "comparison_control_id": "accepted_anchor__i0__lr0",
+      "pilot": {
+        "candidate_id": "nf4_control_i1_original__i0__lr0",
+        "family_id": "nf4_control_i1_original",
+        "fit_id": "fits/nf4_control_i1_original__i0__lr0/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 1e-05,
+        "pilot_sha256": "77164e7f45f5853576ae216bac283d24517b99bf3ff5f2a3c5a8a9f0b044ad9b",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_original__i0__lr0/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 0.8975672689266503,
+        "total_fit_wall_seconds": 2.127231,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i1_original__i0__lr1",
+      "family_id": "nf4_control_i1_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0001,
+      "comparison_control_id": "accepted_anchor__i0__lr1",
+      "pilot": {
+        "candidate_id": "nf4_control_i1_original__i0__lr1",
+        "family_id": "nf4_control_i1_original",
+        "fit_id": "fits/nf4_control_i1_original__i0__lr1/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.0001,
+        "pilot_sha256": "725fbb9eb232fbf1512620441d095e110f052f3e1c223d58c3abea48369fc673",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_original__i0__lr1/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 0.9107287009246647,
+        "total_fit_wall_seconds": 2.131237,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i1_original__i0__lr2",
+      "family_id": "nf4_control_i1_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "comparison_control_id": "accepted_anchor__i0__lr2",
+      "pilot": {
+        "candidate_id": "nf4_control_i1_original__i0__lr2",
+        "family_id": "nf4_control_i1_original",
+        "fit_id": "fits/nf4_control_i1_original__i0__lr2/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.0003,
+        "pilot_sha256": "e1831e8bcd0f114fe9a542afda08c867dfe44b6caa238e0d298a2855524ac87c",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_original__i0__lr2/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 0.9225084818899632,
+        "total_fit_wall_seconds": 2.140637,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i1_original__i0__lr3",
+      "family_id": "nf4_control_i1_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.001,
+      "comparison_control_id": "accepted_anchor__i0__lr3",
+      "pilot": {
+        "candidate_id": "nf4_control_i1_original__i0__lr3",
+        "family_id": "nf4_control_i1_original",
+        "fit_id": "fits/nf4_control_i1_original__i0__lr3/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.001,
+        "pilot_sha256": "e18a02c93cd63320d89903c639fc0a0665c672bdb9f4d5993c0282218e76d570",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_original__i0__lr3/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 0.9054515440948308,
+        "total_fit_wall_seconds": 2.122934,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr0",
+      "family_id": "nf4_control_i1_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 1e-05,
+      "comparison_control_id": "accepted_anchor__i0__lr0",
+      "pilot": {
+        "candidate_id": "nf4_control_i1_quantized__i0__lr0",
+        "family_id": "nf4_control_i1_quantized",
+        "fit_id": "fits/nf4_control_i1_quantized__i0__lr0/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 1e-05,
+        "pilot_sha256": "aed9f4d918740f22816faed3c7d4c73683b6362674d25d3016e649c9d121abb0",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_quantized__i0__lr0/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 0.9304718761704862,
+        "total_fit_wall_seconds": 2.175428,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr1",
+      "family_id": "nf4_control_i1_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0001,
+      "comparison_control_id": "accepted_anchor__i0__lr1",
+      "pilot": {
+        "candidate_id": "nf4_control_i1_quantized__i0__lr1",
+        "family_id": "nf4_control_i1_quantized",
+        "fit_id": "fits/nf4_control_i1_quantized__i0__lr1/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.0001,
+        "pilot_sha256": "01375eb6941fe2a1272b6f339e9ecd7196a38dfb1653001d4744865032f76efd",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_quantized__i0__lr1/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 0.9466815078631043,
+        "total_fit_wall_seconds": 2.129375,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr2",
+      "family_id": "nf4_control_i1_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "comparison_control_id": "accepted_anchor__i0__lr2",
+      "pilot": {
+        "candidate_id": "nf4_control_i1_quantized__i0__lr2",
+        "family_id": "nf4_control_i1_quantized",
+        "fit_id": "fits/nf4_control_i1_quantized__i0__lr2/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.0003,
+        "pilot_sha256": "707b7c0ea5e7431dd7fab2e5394db6b2b2de2c4c9932943b51f53dc066695904",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_quantized__i0__lr2/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 0.9456036612391472,
+        "total_fit_wall_seconds": 2.220409,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr3",
+      "family_id": "nf4_control_i1_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.001,
+      "comparison_control_id": "accepted_anchor__i0__lr3",
+      "pilot": {
+        "candidate_id": "nf4_control_i1_quantized__i0__lr3",
+        "family_id": "nf4_control_i1_quantized",
+        "fit_id": "fits/nf4_control_i1_quantized__i0__lr3/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.001,
+        "pilot_sha256": "f6b1fe4297418822221ca8ada3fce4aec86d749ed60d31320e899e0a1306f1ed",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i1_quantized__i0__lr3/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 0.9079066528938711,
+        "total_fit_wall_seconds": 2.0688,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i3_original__i0__lr0",
+      "family_id": "nf4_control_i3_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 1e-05,
+      "comparison_control_id": "accepted_anchor__i0__lr0",
+      "pilot": {
+        "candidate_id": "nf4_control_i3_original__i0__lr0",
+        "family_id": "nf4_control_i3_original",
+        "fit_id": "fits/nf4_control_i3_original__i0__lr0/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 1e-05,
+        "pilot_sha256": "cc6a4e61532406ac6b38c58010e2aa647e85e3b9ffe9937be7acad6196ad42a2",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_original__i0__lr0/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 15.680002517998219,
+        "total_fit_wall_seconds": 16.934603,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i3_original__i0__lr1",
+      "family_id": "nf4_control_i3_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0001,
+      "comparison_control_id": "accepted_anchor__i0__lr1",
+      "pilot": {
+        "candidate_id": "nf4_control_i3_original__i0__lr1",
+        "family_id": "nf4_control_i3_original",
+        "fit_id": "fits/nf4_control_i3_original__i0__lr1/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.0001,
+        "pilot_sha256": "4f49d040bdd81adfa67073712bf5808dabf7ce7a7f80b88047b561a8325609e0",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_original__i0__lr1/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 15.90229833079502,
+        "total_fit_wall_seconds": 17.131613,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i3_original__i0__lr2",
+      "family_id": "nf4_control_i3_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "comparison_control_id": "accepted_anchor__i0__lr2",
+      "pilot": {
+        "candidate_id": "nf4_control_i3_original__i0__lr2",
+        "family_id": "nf4_control_i3_original",
+        "fit_id": "fits/nf4_control_i3_original__i0__lr2/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.0003,
+        "pilot_sha256": "4584ac76dbb5f435ef30bdfb096ea135025e8228c2e8081e81d853d2ff6592c6",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_original__i0__lr2/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 16.129616876132786,
+        "total_fit_wall_seconds": 17.33262,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i3_original__i0__lr3",
+      "family_id": "nf4_control_i3_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.001,
+      "comparison_control_id": "accepted_anchor__i0__lr3",
+      "pilot": {
+        "candidate_id": "nf4_control_i3_original__i0__lr3",
+        "family_id": "nf4_control_i3_original",
+        "fit_id": "fits/nf4_control_i3_original__i0__lr3/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.001,
+        "pilot_sha256": "50b3cae284002bc8283ec1691d747e2aa353c717faf5ec165a034660256085a9",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_original__i0__lr3/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 16.25609075790271,
+        "total_fit_wall_seconds": 17.459912,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr0",
+      "family_id": "nf4_control_i3_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 1e-05,
+      "comparison_control_id": "accepted_anchor__i0__lr0",
+      "pilot": {
+        "candidate_id": "nf4_control_i3_quantized__i0__lr0",
+        "family_id": "nf4_control_i3_quantized",
+        "fit_id": "fits/nf4_control_i3_quantized__i0__lr0/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 1e-05,
+        "pilot_sha256": "34ea1eca3597e87f62d23921df340da93cb55c1418a25da6eb738611fd8c888c",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_quantized__i0__lr0/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 15.588376902975142,
+        "total_fit_wall_seconds": 17.013654,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr1",
+      "family_id": "nf4_control_i3_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0001,
+      "comparison_control_id": "accepted_anchor__i0__lr1",
+      "pilot": {
+        "candidate_id": "nf4_control_i3_quantized__i0__lr1",
+        "family_id": "nf4_control_i3_quantized",
+        "fit_id": "fits/nf4_control_i3_quantized__i0__lr1/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.0001,
+        "pilot_sha256": "2b3f3c5b7b7e21eef6e25e0e84e8acd83e717bd0c83848e70e2c36d23d5ffc71",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_quantized__i0__lr1/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 15.890837840735912,
+        "total_fit_wall_seconds": 17.090536,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr2",
+      "family_id": "nf4_control_i3_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "comparison_control_id": "accepted_anchor__i0__lr2",
+      "pilot": {
+        "candidate_id": "nf4_control_i3_quantized__i0__lr2",
+        "family_id": "nf4_control_i3_quantized",
+        "fit_id": "fits/nf4_control_i3_quantized__i0__lr2/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.0003,
+        "pilot_sha256": "82cf2eb3cb83edec0efd14dbbc863571523c704d7c04046ebb2e338207151c52",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_quantized__i0__lr2/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 15.963412343990058,
+        "total_fit_wall_seconds": 17.127182,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "aircraft",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr3",
+      "family_id": "nf4_control_i3_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.001,
+      "comparison_control_id": "accepted_anchor__i0__lr3",
+      "pilot": {
+        "candidate_id": "nf4_control_i3_quantized__i0__lr3",
+        "family_id": "nf4_control_i3_quantized",
+        "fit_id": "fits/nf4_control_i3_quantized__i0__lr3/pilot/seed_42",
+        "status": "numerical_failure",
+        "learning_rate": 0.001,
+        "pilot_sha256": "7151305168a2f2d6e905942b1744516832ecf2dd2d7476fd8eaefe5a747b8f3d",
+        "selection_value": null,
+        "selection_cross_entropy": null,
+        "failure": {
+          "type": "RuntimeError",
+          "message": "Nonfinite initializer output"
+        }
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/aircraft/fits/nf4_control_i3_quantized__i0__lr3/pilot/seed_42/fit.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": 16.392810090910643,
+        "total_fit_wall_seconds": 17.576995,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": {
+        "type": "RuntimeError",
+        "message": "Nonfinite initializer output"
+      }
+    },
+    {
+      "study_lane": "quantized",
+      "task": "extraction",
+      "candidate_id": "nf4_control_i1_original__i0__lr0",
+      "family_id": "nf4_control_i1_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0001,
+      "comparison_control_id": "accepted_anchor__i0__lr0",
+      "pilot": {
+        "status": "failed_numerically",
+        "failure_stage": "initialization",
+        "seed": 42,
+        "candidate_id": "nf4_control_i1_original__i0__lr0",
+        "recipe": {
+          "schema": "dora-init-quantized-v1",
+          "method": "nf4_control_i1_original__i0__lr0",
+          "config": {
+            "bits": 4,
+            "blocksize": 64,
+            "iterations": 1,
+            "magnitude_policy": "original",
+            "adapter_scale": 1.0,
+            "method": "quantizer_only",
+            "base_source": "direct"
+          },
+          "initializer_kind": "quantized",
+          "source_sha256": "f1f38fdf030f562c3dd397a6dbb8097c07ea70fe8c179d2a991533e723cc354d",
+          "factor_generator_source_sha256": "dd6e672dc1689cf09de58af7531d8a4d28b0e796fb04628839e99c86d00ac4b0",
+          "runtime_source_sha256": "5da15384670413d4dacb9fd20cf558b17bb1cafb47b65e78226bb5abfd8dbebe",
+          "runtime_core_source_sha256": "6d2383c5d1dde79d8edb918bac310390b58e3a5371731c7a68de846ce4a6b094",
+          "quantizer": "NF4 dense dequantized simulation; no compression claim",
+          "magnitude_policy": "original",
+          "compensation": "none",
+          "initial_identity": "not required; measure quantization/reconstruction error",
+          "trainable_registration_order": [
+            "m",
+            "lora_B",
+            "lora_A"
+          ],
+          "factor_seed_policy": "accepted global CPU draws; explicit fit seed controls RNG",
+          "formula": "accepted column-norm DoRA on dense quantized base plus BA",
+          "recipe_sha256": "ea27cb77655cc731d0db4ee8ea310575bd1da53590eb23ae60d5368ed78a5187"
+        },
+        "manifest_sha256": "ebbce77957727aa52ab86e07e18fc7c707fd90935ce9d5e8c810f310f3ac4a48",
+        "error": "Nonfinite initial forward logits or loss",
+        "exception_type": "RuntimeError",
+        "steps_completed": 0,
+        "initialization_failure_from_control_sha256": "b015f7f6e9967dec7621a838bcabec7b6256bb4b3650f018c1f01cc495ae06d1"
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/pilots/nf4_control_i1_original__i0__lr0/receipt.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": null,
+        "total_fit_wall_seconds": null,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": "Nonfinite initial forward logits or loss"
+    },
+    {
+      "study_lane": "quantized",
+      "task": "extraction",
+      "candidate_id": "nf4_control_i1_original__i0__lr1",
+      "family_id": "nf4_control_i1_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "comparison_control_id": "accepted_anchor__i0__lr1",
+      "pilot": {
+        "status": "failed_numerically",
+        "failure_stage": "initialization",
+        "seed": 42,
+        "candidate_id": "nf4_control_i1_original__i0__lr1",
+        "recipe": {
+          "schema": "dora-init-quantized-v1",
+          "method": "nf4_control_i1_original__i0__lr1",
+          "config": {
+            "bits": 4,
+            "blocksize": 64,
+            "iterations": 1,
+            "magnitude_policy": "original",
+            "adapter_scale": 1.0,
+            "method": "quantizer_only",
+            "base_source": "direct"
+          },
+          "initializer_kind": "quantized",
+          "source_sha256": "f1f38fdf030f562c3dd397a6dbb8097c07ea70fe8c179d2a991533e723cc354d",
+          "factor_generator_source_sha256": "dd6e672dc1689cf09de58af7531d8a4d28b0e796fb04628839e99c86d00ac4b0",
+          "runtime_source_sha256": "5da15384670413d4dacb9fd20cf558b17bb1cafb47b65e78226bb5abfd8dbebe",
+          "runtime_core_source_sha256": "6d2383c5d1dde79d8edb918bac310390b58e3a5371731c7a68de846ce4a6b094",
+          "quantizer": "NF4 dense dequantized simulation; no compression claim",
+          "magnitude_policy": "original",
+          "compensation": "none",
+          "initial_identity": "not required; measure quantization/reconstruction error",
+          "trainable_registration_order": [
+            "m",
+            "lora_B",
+            "lora_A"
+          ],
+          "factor_seed_policy": "accepted global CPU draws; explicit fit seed controls RNG",
+          "formula": "accepted column-norm DoRA on dense quantized base plus BA",
+          "recipe_sha256": "6d5e1559b29e6734435ee568f3eb6729512f46302213296081c8ce3fcd79c127"
+        },
+        "manifest_sha256": "ebbce77957727aa52ab86e07e18fc7c707fd90935ce9d5e8c810f310f3ac4a48",
+        "error": "Nonfinite initial forward logits or loss",
+        "exception_type": "RuntimeError",
+        "steps_completed": 0,
+        "initialization_failure_from_control_sha256": "b015f7f6e9967dec7621a838bcabec7b6256bb4b3650f018c1f01cc495ae06d1"
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/pilots/nf4_control_i1_original__i0__lr1/receipt.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": null,
+        "total_fit_wall_seconds": null,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": "Nonfinite initial forward logits or loss"
+    },
+    {
+      "study_lane": "quantized",
+      "task": "extraction",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr0",
+      "family_id": "nf4_control_i1_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0001,
+      "comparison_control_id": "accepted_anchor__i0__lr0",
+      "pilot": {
+        "status": "failed_numerically",
+        "failure_stage": "initialization",
+        "seed": 42,
+        "candidate_id": "nf4_control_i1_quantized__i0__lr0",
+        "recipe": {
+          "schema": "dora-init-quantized-v1",
+          "method": "nf4_control_i1_quantized__i0__lr0",
+          "config": {
+            "bits": 4,
+            "blocksize": 64,
+            "iterations": 1,
+            "magnitude_policy": "quantized",
+            "adapter_scale": 1.0,
+            "method": "quantizer_only",
+            "base_source": "direct"
+          },
+          "initializer_kind": "quantized",
+          "source_sha256": "f1f38fdf030f562c3dd397a6dbb8097c07ea70fe8c179d2a991533e723cc354d",
+          "factor_generator_source_sha256": "dd6e672dc1689cf09de58af7531d8a4d28b0e796fb04628839e99c86d00ac4b0",
+          "runtime_source_sha256": "5da15384670413d4dacb9fd20cf558b17bb1cafb47b65e78226bb5abfd8dbebe",
+          "runtime_core_source_sha256": "6d2383c5d1dde79d8edb918bac310390b58e3a5371731c7a68de846ce4a6b094",
+          "quantizer": "NF4 dense dequantized simulation; no compression claim",
+          "magnitude_policy": "quantized",
+          "compensation": "none",
+          "initial_identity": "not required; measure quantization/reconstruction error",
+          "trainable_registration_order": [
+            "m",
+            "lora_B",
+            "lora_A"
+          ],
+          "factor_seed_policy": "accepted global CPU draws; explicit fit seed controls RNG",
+          "formula": "accepted column-norm DoRA on dense quantized base plus BA",
+          "recipe_sha256": "4f10a160976994054c294ac9dff2909245f344be1e4db11800771ae36737ac6d"
+        },
+        "manifest_sha256": "ebbce77957727aa52ab86e07e18fc7c707fd90935ce9d5e8c810f310f3ac4a48",
+        "error": "Nonfinite initial forward logits or loss",
+        "exception_type": "RuntimeError",
+        "steps_completed": 0,
+        "initialization_failure_from_control_sha256": "b015f7f6e9967dec7621a838bcabec7b6256bb4b3650f018c1f01cc495ae06d1"
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/pilots/nf4_control_i1_quantized__i0__lr0/receipt.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": null,
+        "total_fit_wall_seconds": null,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": "Nonfinite initial forward logits or loss"
+    },
+    {
+      "study_lane": "quantized",
+      "task": "extraction",
+      "candidate_id": "nf4_control_i1_quantized__i0__lr1",
+      "family_id": "nf4_control_i1_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 1,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "direct"
+        }
+      },
+      "learning_rate": 0.0003,
+      "comparison_control_id": "accepted_anchor__i0__lr1",
+      "pilot": {
+        "status": "failed_numerically",
+        "failure_stage": "initialization",
+        "seed": 42,
+        "candidate_id": "nf4_control_i1_quantized__i0__lr1",
+        "recipe": {
+          "schema": "dora-init-quantized-v1",
+          "method": "nf4_control_i1_quantized__i0__lr1",
+          "config": {
+            "bits": 4,
+            "blocksize": 64,
+            "iterations": 1,
+            "magnitude_policy": "quantized",
+            "adapter_scale": 1.0,
+            "method": "quantizer_only",
+            "base_source": "direct"
+          },
+          "initializer_kind": "quantized",
+          "source_sha256": "f1f38fdf030f562c3dd397a6dbb8097c07ea70fe8c179d2a991533e723cc354d",
+          "factor_generator_source_sha256": "dd6e672dc1689cf09de58af7531d8a4d28b0e796fb04628839e99c86d00ac4b0",
+          "runtime_source_sha256": "5da15384670413d4dacb9fd20cf558b17bb1cafb47b65e78226bb5abfd8dbebe",
+          "runtime_core_source_sha256": "6d2383c5d1dde79d8edb918bac310390b58e3a5371731c7a68de846ce4a6b094",
+          "quantizer": "NF4 dense dequantized simulation; no compression claim",
+          "magnitude_policy": "quantized",
+          "compensation": "none",
+          "initial_identity": "not required; measure quantization/reconstruction error",
+          "trainable_registration_order": [
+            "m",
+            "lora_B",
+            "lora_A"
+          ],
+          "factor_seed_policy": "accepted global CPU draws; explicit fit seed controls RNG",
+          "formula": "accepted column-norm DoRA on dense quantized base plus BA",
+          "recipe_sha256": "ceb57091d5a7ea75103c1bc41eb291e92053537d14fe115dbc2fbbeaea1abb06"
+        },
+        "manifest_sha256": "ebbce77957727aa52ab86e07e18fc7c707fd90935ce9d5e8c810f310f3ac4a48",
+        "error": "Nonfinite initial forward logits or loss",
+        "exception_type": "RuntimeError",
+        "steps_completed": 0,
+        "initialization_failure_from_control_sha256": "b015f7f6e9967dec7621a838bcabec7b6256bb4b3650f018c1f01cc495ae06d1"
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/pilots/nf4_control_i1_quantized__i0__lr1/receipt.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": null,
+        "total_fit_wall_seconds": null,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": "Nonfinite initial forward logits or loss"
+    },
+    {
+      "study_lane": "quantized",
+      "task": "extraction",
+      "candidate_id": "nf4_control_i3_original__i0__lr0",
+      "family_id": "nf4_control_i3_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0001,
+      "comparison_control_id": "accepted_anchor__i0__lr0",
+      "pilot": {
+        "status": "failed_numerically",
+        "failure_stage": "initialization",
+        "seed": 42,
+        "candidate_id": "nf4_control_i3_original__i0__lr0",
+        "recipe": {
+          "schema": "dora-init-quantized-v1",
+          "method": "nf4_control_i3_original__i0__lr0",
+          "config": {
+            "bits": 4,
+            "blocksize": 64,
+            "iterations": 3,
+            "magnitude_policy": "original",
+            "adapter_scale": 1.0,
+            "method": "quantizer_only",
+            "base_source": "paired_loftq"
+          },
+          "initializer_kind": "quantized",
+          "source_sha256": "f1f38fdf030f562c3dd397a6dbb8097c07ea70fe8c179d2a991533e723cc354d",
+          "factor_generator_source_sha256": "dd6e672dc1689cf09de58af7531d8a4d28b0e796fb04628839e99c86d00ac4b0",
+          "runtime_source_sha256": "5da15384670413d4dacb9fd20cf558b17bb1cafb47b65e78226bb5abfd8dbebe",
+          "runtime_core_source_sha256": "6d2383c5d1dde79d8edb918bac310390b58e3a5371731c7a68de846ce4a6b094",
+          "quantizer": "NF4 dense dequantized simulation; no compression claim",
+          "magnitude_policy": "original",
+          "compensation": "none",
+          "initial_identity": "not required; measure quantization/reconstruction error",
+          "trainable_registration_order": [
+            "m",
+            "lora_B",
+            "lora_A"
+          ],
+          "factor_seed_policy": "accepted global CPU draws; explicit fit seed controls RNG",
+          "formula": "accepted column-norm DoRA on dense quantized base plus BA",
+          "recipe_sha256": "a9787bdf56f28af4650e4a7885d762094445ee2cdf83f8ed8bd19172467b2fb2"
+        },
+        "manifest_sha256": "ebbce77957727aa52ab86e07e18fc7c707fd90935ce9d5e8c810f310f3ac4a48",
+        "error": "Nonfinite initial forward logits or loss",
+        "exception_type": "RuntimeError",
+        "steps_completed": 0,
+        "initialization_failure_from_control_sha256": "b015f7f6e9967dec7621a838bcabec7b6256bb4b3650f018c1f01cc495ae06d1"
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/pilots/nf4_control_i3_original__i0__lr0/receipt.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": null,
+        "total_fit_wall_seconds": null,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": "Nonfinite initial forward logits or loss"
+    },
+    {
+      "study_lane": "quantized",
+      "task": "extraction",
+      "candidate_id": "nf4_control_i3_original__i0__lr1",
+      "family_id": "nf4_control_i3_original",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "original",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "comparison_control_id": "accepted_anchor__i0__lr1",
+      "pilot": {
+        "status": "failed_numerically",
+        "failure_stage": "initialization",
+        "seed": 42,
+        "candidate_id": "nf4_control_i3_original__i0__lr1",
+        "recipe": {
+          "schema": "dora-init-quantized-v1",
+          "method": "nf4_control_i3_original__i0__lr1",
+          "config": {
+            "bits": 4,
+            "blocksize": 64,
+            "iterations": 3,
+            "magnitude_policy": "original",
+            "adapter_scale": 1.0,
+            "method": "quantizer_only",
+            "base_source": "paired_loftq"
+          },
+          "initializer_kind": "quantized",
+          "source_sha256": "f1f38fdf030f562c3dd397a6dbb8097c07ea70fe8c179d2a991533e723cc354d",
+          "factor_generator_source_sha256": "dd6e672dc1689cf09de58af7531d8a4d28b0e796fb04628839e99c86d00ac4b0",
+          "runtime_source_sha256": "5da15384670413d4dacb9fd20cf558b17bb1cafb47b65e78226bb5abfd8dbebe",
+          "runtime_core_source_sha256": "6d2383c5d1dde79d8edb918bac310390b58e3a5371731c7a68de846ce4a6b094",
+          "quantizer": "NF4 dense dequantized simulation; no compression claim",
+          "magnitude_policy": "original",
+          "compensation": "none",
+          "initial_identity": "not required; measure quantization/reconstruction error",
+          "trainable_registration_order": [
+            "m",
+            "lora_B",
+            "lora_A"
+          ],
+          "factor_seed_policy": "accepted global CPU draws; explicit fit seed controls RNG",
+          "formula": "accepted column-norm DoRA on dense quantized base plus BA",
+          "recipe_sha256": "b8012ad2bf3fe6c092b5023cfb4dadda5ab03036700b2eeaa509fb79cf041f0e"
+        },
+        "manifest_sha256": "ebbce77957727aa52ab86e07e18fc7c707fd90935ce9d5e8c810f310f3ac4a48",
+        "error": "Nonfinite initial forward logits or loss",
+        "exception_type": "RuntimeError",
+        "steps_completed": 0,
+        "initialization_failure_from_control_sha256": "b015f7f6e9967dec7621a838bcabec7b6256bb4b3650f018c1f01cc495ae06d1"
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/pilots/nf4_control_i3_original__i0__lr1/receipt.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": null,
+        "total_fit_wall_seconds": null,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": "Nonfinite initial forward logits or loss"
+    },
+    {
+      "study_lane": "quantized",
+      "task": "extraction",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr0",
+      "family_id": "nf4_control_i3_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0001,
+      "comparison_control_id": "accepted_anchor__i0__lr0",
+      "pilot": {
+        "status": "failed_numerically",
+        "failure_stage": "initialization",
+        "seed": 42,
+        "candidate_id": "nf4_control_i3_quantized__i0__lr0",
+        "recipe": {
+          "schema": "dora-init-quantized-v1",
+          "method": "nf4_control_i3_quantized__i0__lr0",
+          "config": {
+            "bits": 4,
+            "blocksize": 64,
+            "iterations": 3,
+            "magnitude_policy": "quantized",
+            "adapter_scale": 1.0,
+            "method": "quantizer_only",
+            "base_source": "paired_loftq"
+          },
+          "initializer_kind": "quantized",
+          "source_sha256": "f1f38fdf030f562c3dd397a6dbb8097c07ea70fe8c179d2a991533e723cc354d",
+          "factor_generator_source_sha256": "dd6e672dc1689cf09de58af7531d8a4d28b0e796fb04628839e99c86d00ac4b0",
+          "runtime_source_sha256": "5da15384670413d4dacb9fd20cf558b17bb1cafb47b65e78226bb5abfd8dbebe",
+          "runtime_core_source_sha256": "6d2383c5d1dde79d8edb918bac310390b58e3a5371731c7a68de846ce4a6b094",
+          "quantizer": "NF4 dense dequantized simulation; no compression claim",
+          "magnitude_policy": "quantized",
+          "compensation": "none",
+          "initial_identity": "not required; measure quantization/reconstruction error",
+          "trainable_registration_order": [
+            "m",
+            "lora_B",
+            "lora_A"
+          ],
+          "factor_seed_policy": "accepted global CPU draws; explicit fit seed controls RNG",
+          "formula": "accepted column-norm DoRA on dense quantized base plus BA",
+          "recipe_sha256": "e47ea4c21bd19a5c4ada522cd0a6c7e3dd6c58d772ebc7ff634395d0820ba36d"
+        },
+        "manifest_sha256": "ebbce77957727aa52ab86e07e18fc7c707fd90935ce9d5e8c810f310f3ac4a48",
+        "error": "Nonfinite initial forward logits or loss",
+        "exception_type": "RuntimeError",
+        "steps_completed": 0,
+        "initialization_failure_from_control_sha256": "b015f7f6e9967dec7621a838bcabec7b6256bb4b3650f018c1f01cc495ae06d1"
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/pilots/nf4_control_i3_quantized__i0__lr0/receipt.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": null,
+        "total_fit_wall_seconds": null,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": "Nonfinite initial forward logits or loss"
+    },
+    {
+      "study_lane": "quantized",
+      "task": "extraction",
+      "candidate_id": "nf4_control_i3_quantized__i0__lr1",
+      "family_id": "nf4_control_i3_quantized",
+      "parent_family": "nf4_quantizer_control",
+      "initializer_index": 0,
+      "source_default_setting": true,
+      "spec": {
+        "kind": "quantized",
+        "config": {
+          "bits": 4,
+          "blocksize": 64,
+          "iterations": 3,
+          "magnitude_policy": "quantized",
+          "adapter_scale": 1.0,
+          "method": "quantizer_only",
+          "base_source": "paired_loftq"
+        }
+      },
+      "learning_rate": 0.0003,
+      "comparison_control_id": "accepted_anchor__i0__lr1",
+      "pilot": {
+        "status": "failed_numerically",
+        "failure_stage": "initialization",
+        "seed": 42,
+        "candidate_id": "nf4_control_i3_quantized__i0__lr1",
+        "recipe": {
+          "schema": "dora-init-quantized-v1",
+          "method": "nf4_control_i3_quantized__i0__lr1",
+          "config": {
+            "bits": 4,
+            "blocksize": 64,
+            "iterations": 3,
+            "magnitude_policy": "quantized",
+            "adapter_scale": 1.0,
+            "method": "quantizer_only",
+            "base_source": "paired_loftq"
+          },
+          "initializer_kind": "quantized",
+          "source_sha256": "f1f38fdf030f562c3dd397a6dbb8097c07ea70fe8c179d2a991533e723cc354d",
+          "factor_generator_source_sha256": "dd6e672dc1689cf09de58af7531d8a4d28b0e796fb04628839e99c86d00ac4b0",
+          "runtime_source_sha256": "5da15384670413d4dacb9fd20cf558b17bb1cafb47b65e78226bb5abfd8dbebe",
+          "runtime_core_source_sha256": "6d2383c5d1dde79d8edb918bac310390b58e3a5371731c7a68de846ce4a6b094",
+          "quantizer": "NF4 dense dequantized simulation; no compression claim",
+          "magnitude_policy": "quantized",
+          "compensation": "none",
+          "initial_identity": "not required; measure quantization/reconstruction error",
+          "trainable_registration_order": [
+            "m",
+            "lora_B",
+            "lora_A"
+          ],
+          "factor_seed_policy": "accepted global CPU draws; explicit fit seed controls RNG",
+          "formula": "accepted column-norm DoRA on dense quantized base plus BA",
+          "recipe_sha256": "e888b16a14ddf6dc3419898c30426c3a9a7ac436f7921713b1e8828bf96b44f1"
+        },
+        "manifest_sha256": "ebbce77957727aa52ab86e07e18fc7c707fd90935ce9d5e8c810f310f3ac4a48",
+        "error": "Nonfinite initial forward logits or loss",
+        "exception_type": "RuntimeError",
+        "steps_completed": 0,
+        "initialization_failure_from_control_sha256": "b015f7f6e9967dec7621a838bcabec7b6256bb4b3650f018c1f01cc495ae06d1"
+      },
+      "pilot_result_path": "/var/tmp/dora-bench/init_study/substudies_v1/runs/quantized/extraction/pilots/nf4_control_i3_quantized__i0__lr1/receipt.json",
+      "pilot_timing": {
+        "training_seconds": null,
+        "peak_memory_bytes": null,
+        "initializer_seconds": null,
+        "total_fit_wall_seconds": null,
+        "trainable_parameters": null
+      },
+      "initialization": {
+        "initial_quality": null,
+        "module_preprocessing": [],
+        "timing_scope": "Factor-cache hits may retain historical source computation seconds; these are not new wall time. Full injection timer is separate."
+      },
+      "selected_lanes": [],
+      "failure": "Nonfinite initial forward logits or loss"
+    }
+  ]
+}

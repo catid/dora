@@ -1,0 +1,10 @@
+{
+  "schema": "dora-init-cost-artifacts-v1",
+  "source_sha256": "8dc3ea83766b3983f1cd0965728c8ccfd8ebc6c79febf60942353802d1e0d11c",
+  "outputs": {
+    "README.md": "26f5c076cbaae269818bcf83bd824daebc91511e4c578418365189d69031237e",
+    "costs.json": "69d6d9133aa280df7db630f5a967323f971d6eae21118450e69ab9f1e1175b03",
+    "fits.csv": "b99622df9fc80d4babcaa57874c45bce4545cd24ea66e73b98e85d29b171a77a",
+    "raw_costs.csv": "f5030baf84cdf8ccdc569c6914c05d3526aecfbbbf2d45aeaf74db374580d53d"
+  }
+}

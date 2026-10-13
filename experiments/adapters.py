@@ -1,5 +1,7 @@
 """Controlled LoRA/DoRA/NoRA adapters for the task experiments.
 
+The revised DoRA recipe inherits dora_row.py; it is not the default dora.py.
+
 All methods use the same down-factor draw, zero up-factor, rank, and effective
 scale 1 (conventional LoRA alpha=rank), with no adapter dropout. NoRA follows
 equations 7--9 of https://arxiv.org/abs/2608.31036: normalize each down-factor
@@ -14,10 +16,12 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from dora import DoRALayer
+from dora_row import DoRALayer
+from experiments.original_dora import OriginalDoRALinear
 
 
 METHODS = ("lora", "dora", "nora", "dora_nora")
+SUPPORTED_METHODS = (*METHODS, "dora_original")
 
 
 def _method_name(method):
@@ -139,6 +143,9 @@ def _rewrite_modules(model, transform):
     return replace(model)
 
 
+ADAPTER_TYPES = (AdapterLinear, OriginalDoRALinear)
+
+
 def inject_adapters(model, method, rank=8, targets=None):
     """Freeze a model, replace selected linears, and return its possibly new root.
 
@@ -149,7 +156,9 @@ def inject_adapters(model, method, rank=8, targets=None):
     optimizer afterward. No selected modules is an error rather than a silent
     frozen-model experiment.
     """
-    method = _method_name(method)
+    method = method.lower().replace("+", "_")
+    if method not in SUPPORTED_METHODS:
+        raise ValueError(f"method must be one of {SUPPORTED_METHODS}")
     if isinstance(rank, bool) or not isinstance(rank, int) or rank <= 0:
         raise ValueError("rank must be a positive integer")
     if isinstance(targets, str):
@@ -168,11 +177,14 @@ def inject_adapters(model, method, rank=8, targets=None):
     if not selected:
         raise ValueError("no nn.Linear modules matched adapter targets")
     model.requires_grad_(False)
-    return _rewrite_modules(
-        model, lambda module: AdapterLinear(module, method, rank) if id(module) in selected else module
-    )
+    def convert(module):
+        if id(module) not in selected:
+            return module
+        return (OriginalDoRALinear(module, rank=rank) if method == "dora_original"
+                else AdapterLinear(module, method, rank))
+    return _rewrite_modules(model, convert)
 
 
 def merge_adapters(model):
     """Merge adapters in place and return the possibly replaced root."""
-    return _rewrite_modules(model, lambda module: module.to_linear() if isinstance(module, AdapterLinear) else module)
+    return _rewrite_modules(model, lambda module: module.to_linear() if isinstance(module, ADAPTER_TYPES) else module)

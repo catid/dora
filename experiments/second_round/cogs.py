@@ -26,7 +26,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from experiments.extraction import batch, frozen_digest, nll, seed_all, strip_adapters, write_json
 from experiments.second_round.generation_diagnostics import hit_generation_cap
-from experiments.second_round_adapters import METHODS, inject_adapters, parameter_groups
+from experiments.second_round_adapters import METHODS, SUPPORTED_METHODS, inject_adapters, parameter_groups
 
 MODEL = 'Qwen/Qwen2.5-3B-Instruct'
 MODEL_REVISION = 'aa8e72537993ba99e69dfaafa59ed015b17504d1'
@@ -34,7 +34,7 @@ DATA_REVISION = '165a7b669eade971fa47bf568a2e51925360fed8'
 STRUCTURAL = {'cp_recursion', 'pp_recursion', 'obj_pp_to_subj_pp'}
 SOURCES = ['experiments/second_round/cogs.py', 'experiments/second_round_adapters.py',
            'experiments/second_round/generation_diagnostics.py',
-           'experiments/adapters.py', 'experiments/extraction.py', 'dora.py']
+           'experiments/adapters.py', 'experiments/original_dora.py', 'experiments/extraction.py', 'dora_row.py']
 SYSTEM = ('Translate the sentence into the COGS logical-form notation. Output only the logical form. '
           'Use the exact predicate and role notation shown in the examples. Variables x _ i refer '
           'to the zero-based whitespace token position of the noun or verb in the input sentence. '
@@ -294,7 +294,7 @@ def main():
     p.add_argument('--learning-rates', type=float, nargs='+', default=[1e-4, 3e-4, 1e-3, 3e-3])
     p.add_argument('--mlr-learning-rates', type=float, nargs='+', default=[3e-4, 1e-3])
     p.add_argument('--magnitude-multipliers', type=float, nargs='+', default=[.01, .1])
-    p.add_argument('--methods', nargs='+', choices=METHODS, default=list(METHODS))
+    p.add_argument('--methods', nargs='+', choices=SUPPORTED_METHODS, default=list(METHODS))
     p.add_argument('--baseline-from', type=Path)
     p.add_argument('--prepare-only', action='store_true')
     p.add_argument('--smoke', action='store_true')
@@ -312,7 +312,7 @@ def main():
                 'source_sha256': {name: sha(name) for name in SOURCES},
                 'environment': {'torch': torch.__version__, 'cuda': torch.version.cuda, 'gpu': torch.cuda.get_device_name(),
                                 'CUDA_VISIBLE_DEVICES': os.environ.get('CUDA_VISIBLE_DEVICES')},
-                'protocol': 'Four full-horizon tuning trials per method at seed42; best validation target-token NLL selects rates and checkpoints. Winning seed42 checkpoint reused; seeds43/44 refit. IID and all21 OOD categories evaluated only after selection. No OOD data used for tuning. Primary atom-set exact match with strict-string exact match separately. BF16 frozen base, FP32 adapters; target q_proj/v_proj. Shared factor weight decay .01, no magnitude/gain decay.'}
+                'protocol': 'Four full-horizon tuning trials per method at seed42; best validation target-token NLL selects rates and checkpoints. Winning seed42 checkpoint reused; seeds43/44 refit. IID and all21 OOD categories evaluated only after selection. No OOD data used for tuning. Primary atom-set exact match with strict-string exact match separately. BF16 frozen base; standard adapters FP32; dora_original historical normal up/zero down factors FP32, full gradient dim0 norm, base-dtype magnitudes. Target q_proj/v_proj. Shared factor weight decay .01, no magnitude/gain decay.'}
     manifest_path = args.output / 'manifest.json'
     if manifest_path.exists() and json.loads(manifest_path.read_text()) != manifest:
         raise ValueError('Configuration/source mismatch; use a fresh output directory')

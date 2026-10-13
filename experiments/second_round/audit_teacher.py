@@ -28,7 +28,11 @@ def main():
     source_root = Path(__file__).resolve().parents[2]
     live_sources = {"teacher.py": Path(__file__).with_name("teacher.py"),
                     "second_round_adapters.py": source_root / "experiments/second_round_adapters.py",
-                    "adapters.py": source_root / "experiments/adapters.py", "dora.py": source_root / "dora.py"}
+                    "adapters.py": source_root / "experiments/adapters.py",
+                    "original_dora.py": source_root / "experiments/original_dora.py",
+                    "dora_row.py": source_root / "dora_row.py",
+                    # Historical teacher snapshots used this name for row DoRA.
+                    "dora.py": source_root / "dora_row.py"}
     for name, expected in result["provenance"]["source_sha256"].items():
         assert sha(root / "executed_sources" / name) == expected, name
         assert sha(live_sources[name]) == expected, f"Live reconstruction source changed: {name}"

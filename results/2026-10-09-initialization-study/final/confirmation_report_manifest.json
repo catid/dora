@@ -1,0 +1,14 @@
+{
+  "schema": "dora-confirm-report-artifacts-v1",
+  "source_sha256": "89a748ea8aebc3e5adeaf3cdd771a203bd523fd2c8375c9c942b0b784cd7c90e",
+  "outputs": {
+    "summary.json": "a1493321fe5235cd170d445487a1d0901e1a163bf8de3bb029b2f2de71d593c1",
+    "all_fits.json": "ceb8f670ef60d39a3bbf2540bce427378dd74fc5ad183ee28bc37bb1fb86dfa8",
+    "report_inputs.json": "e153ddfb584368286c1095dc81f844df209a09fd9c7e9ae1c79d755fa641db59",
+    "report.md": "f239c23791798d9e249939e09e7f719e72cc39d4ddcfbc9d74bb517e60f760a9",
+    "evidence_manifest.json": "a61798452e124bed93002666667a51c50ea00084f244f4f7d6fc7f17a67c926e",
+    "all_comparisons.csv": "0bed6d6c6045667113202aba7b20817515afd4d35b765d79d61f8f656974584e",
+    "all_fits.csv": "ace31cf8d021b883bdae7952153babe6d41bf7fcf4d60c296100a2b7e18da863",
+    "all_roles.csv": "6a753ac4084e2dc6a3826cc9a7e65ee37775d36e2949b198c6d5c7bf4081bc36"
+  }
+}

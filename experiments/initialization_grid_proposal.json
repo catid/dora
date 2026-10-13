@@ -1,0 +1,824 @@
+{
+  "status": "proposal_parent_registry_is_authoritative",
+  "per_family_initializer_count": 4,
+  "common_learning_rates_per_initializer": 2,
+  "main_families": [
+    {
+      "family_id": "pissa",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "pissa",
+            "balance_gain": 0.25
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "pissa",
+            "balance_gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "pissa",
+            "balance_gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "pissa",
+            "balance_gain": 2
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "milora",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "milora",
+            "balance_gain": 0.25
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "milora",
+            "balance_gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "milora",
+            "balance_gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "milora",
+            "balance_gain": 2
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "olora",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "olora",
+            "balance_gain": 0.25
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "olora",
+            "balance_gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "olora",
+            "balance_gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "olora",
+            "balance_gain": 2
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "eva",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "eva",
+            "centered": true,
+            "whiten": false,
+            "gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "eva",
+            "centered": true,
+            "whiten": false,
+            "gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "eva",
+            "centered": true,
+            "whiten": false,
+            "gain": 2
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "eva",
+            "centered": true,
+            "whiten": false,
+            "gain": 4
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "corda_ipm",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "corda",
+            "selection": "top",
+            "adaptive_damping": true,
+            "covariance_key": "corda_input_cov",
+            "damping": 0.001
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "corda",
+            "selection": "top",
+            "adaptive_damping": true,
+            "covariance_key": "corda_input_cov",
+            "damping": 0.01
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "corda",
+            "selection": "top",
+            "adaptive_damping": true,
+            "covariance_key": "corda_input_cov",
+            "damping": 0.1
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "corda",
+            "selection": "top",
+            "adaptive_damping": true,
+            "covariance_key": "corda_input_cov",
+            "damping": 1
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "astra_tail",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "astra",
+            "selection": "bottom",
+            "covariance_key": "astra_output_cov",
+            "balance_gain": 0.25
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "astra",
+            "selection": "bottom",
+            "covariance_key": "astra_output_cov",
+            "balance_gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "astra",
+            "selection": "bottom",
+            "covariance_key": "astra_output_cov",
+            "balance_gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "astra",
+            "selection": "bottom",
+            "covariance_key": "astra_output_cov",
+            "balance_gain": 2
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "loraga",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "loraga",
+            "direction": "ArB2r",
+            "gamma": 4
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "loraga",
+            "direction": "ArB2r",
+            "gamma": 16
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "loraga",
+            "direction": "ArB2r",
+            "gamma": 64
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "loraga",
+            "direction": "ArB2r",
+            "gamma": 256
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "loraone_centered",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "loraone",
+            "gamma": 32
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "loraone",
+            "gamma": 128
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "loraone",
+            "gamma": 512
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "loraone",
+            "gamma": 2048
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "filet",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "filet",
+            "input_covariance_key": "filet_input_cov",
+            "output_covariance_key": "filet_output_grad_cov",
+            "score_floor": 1e-08,
+            "gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "filet",
+            "input_covariance_key": "filet_input_cov",
+            "output_covariance_key": "filet_output_grad_cov",
+            "score_floor": 1e-08,
+            "gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "filet",
+            "input_covariance_key": "filet_input_cov",
+            "output_covariance_key": "filet_output_grad_cov",
+            "score_floor": 1e-08,
+            "gain": 2
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "filet",
+            "input_covariance_key": "filet_input_cov",
+            "output_covariance_key": "filet_output_grad_cov",
+            "score_floor": 1e-08,
+            "gain": 4
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "lorada_centered",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "lorada",
+            "gamma": 1024,
+            "damping": 1e-06,
+            "variance_beta": 0
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "lorada",
+            "gamma": 1024,
+            "damping": 1e-06,
+            "variance_beta": 0.003
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "lorada",
+            "gamma": 1024,
+            "damping": 1e-06,
+            "variance_beta": 0.03
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "lorada",
+            "gamma": 1024,
+            "damping": 1e-06,
+            "variance_beta": 0.3
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "cntlora_cross_centered",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "cross",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 0.25
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "cross",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "cross",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "cross",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 2
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "inilora",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "inilora",
+            "prefit_lr": 0.0005,
+            "prefit_device": "cuda",
+            "initial_std_policy": "group_mean_rounded",
+            "prefit_steps": 0
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "inilora",
+            "prefit_lr": 0.0005,
+            "prefit_device": "cuda",
+            "initial_std_policy": "group_mean_rounded",
+            "prefit_steps": 1000
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "inilora",
+            "prefit_lr": 0.0005,
+            "prefit_device": "cuda",
+            "initial_std_policy": "group_mean_rounded",
+            "prefit_steps": 4000
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "inilora",
+            "prefit_lr": 0.0005,
+            "prefit_device": "cuda",
+            "initial_std_policy": "group_mean_rounded",
+            "prefit_steps": 20000
+          },
+          "source_factor_default_setting": true
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "tlora_init_only",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "tlora",
+            "covariance_key": "tlora_input_cov",
+            "gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "tlora",
+            "covariance_key": "tlora_input_cov",
+            "gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "tlora",
+            "covariance_key": "tlora_input_cov",
+            "gain": 2
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "tlora",
+            "covariance_key": "tlora_input_cov",
+            "gain": 4
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "mica_init_only",
+      "kind": "data",
+      "configurations": [
+        {
+          "config": {
+            "method": "mica",
+            "gain": 0.5
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "mica",
+            "gain": 1
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "mica",
+            "gain": 2
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "mica",
+            "gain": 4
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    }
+  ],
+  "warmstart_families": [
+    {
+      "family_id": "loraone_warm",
+      "kind": "warmstart",
+      "configurations": [
+        {
+          "config": {
+            "method": "loraone",
+            "gamma": 32,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "loraone",
+            "gamma": 128,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "loraone",
+            "gamma": 512,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "loraone",
+            "gamma": 2048,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "lorada_warm",
+      "kind": "warmstart",
+      "configurations": [
+        {
+          "config": {
+            "method": "lorada",
+            "gamma": 1024,
+            "damping": 1e-06,
+            "variance_beta": 0,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "lorada",
+            "gamma": 1024,
+            "damping": 1e-06,
+            "variance_beta": 0.003,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "lorada",
+            "gamma": 1024,
+            "damping": 1e-06,
+            "variance_beta": 0.03,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "lorada",
+            "gamma": 1024,
+            "damping": 1e-06,
+            "variance_beta": 0.3,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "cntlora_cross_warm",
+      "kind": "warmstart",
+      "configurations": [
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "cross",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 0.25,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "cross",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 0.5,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "cross",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 1,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "cross",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 2,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "cntlora_self_warm",
+      "kind": "warmstart",
+      "configurations": [
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "self",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 0.25,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "self",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 0.5,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "self",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 1,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "self",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 2,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    },
+    {
+      "family_id": "cntlora_shift_warm",
+      "kind": "warmstart",
+      "configurations": [
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "shift",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 0.25,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "shift",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 0.5,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "shift",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 1,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": true
+        },
+        {
+          "config": {
+            "method": "cntlora",
+            "mode": "shift",
+            "delta_sign": "target_minus_base",
+            "pooled_covariance": false,
+            "balance_gain": 2,
+            "magnitude_policy": "original"
+          },
+          "source_factor_default_setting": false
+        }
+      ],
+      "count": 4
+    }
+  ],
+  "notes": [
+    "Source factor default flag identifies only factor hyperparameters; all accepted-column DoRA, common calibration, fixed-rank and dense solver adaptations remain labeled.",
+    "LoRA-DA full training_population_size must be supplied by task calibration or spec; calibration sample count is not populationN.",
+    "CNT source delta-sign ambiguity unresolved; target-minus-base uses source supplement derivation.",
+    "Otherhyperparameters must create predeclared childfamilies; parent total tuning opportunity must be reported."
+  ]
+}

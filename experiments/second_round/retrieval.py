@@ -113,8 +113,10 @@ def mine_negatives(model, tokenizer, data, args):
     return result
 
 
-def train(model, tokenizer, data, negatives, args, method, seed, learning_rate, multiplier, run_dir):
+def train(model, tokenizer, data, negatives, args, method, seed, learning_rate, multiplier, run_dir, adapter_backend=None):
     from experiments.second_round_adapters import parameter_groups
+    if adapter_backend is not None:
+        parameter_groups = adapter_backend.parameter_groups
     model.train()
     groups = parameter_groups(model, learning_rate, magnitude_lr_multiplier=multiplier, weight_decay=args.weight_decay)
     group_metadata = [{key: value for key, value in group.items() if key != 'params'} for group in groups]
@@ -194,7 +196,7 @@ def summarize(runs):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-dir', type=Path, default=Path('/var/tmp/dora-bench/round2/retrieval'))
-    parser.add_argument('--methods', nargs='+', choices=['frozen', *METHODS], default=['frozen', *METHODS])
+    parser.add_argument('--methods', nargs='+', choices=['frozen', *METHODS, 'dora_original'], default=['frozen', *METHODS])
     parser.add_argument('--ranks', type=int, nargs='+', default=[2, 8])
     parser.add_argument('--seeds', type=int, nargs='+', default=[42, 43, 44])
     parser.add_argument('--epochs', type=int, default=5)
@@ -230,13 +232,13 @@ def main():
         write_json(args.output_dir / f'{name}_splits.json', dataset['splits'])
         write_json(args.output_dir / f'{name}_qrels.json', {qid: dataset['relevance'][qid] for split in dataset['splits'].values() for qid in split})
     root = Path(__file__).resolve().parents[2]
-    source_paths = [Path(__file__).resolve(), root / 'experiments/retrieval.py', root / 'experiments/adapters.py', root / 'experiments/second_round_adapters.py', root / 'dora.py']
+    source_paths = [Path(__file__).resolve(), root / 'experiments/retrieval.py', root / 'experiments/adapters.py', root / 'experiments/second_round_adapters.py', root / 'experiments/original_dora.py', root / 'dora_row.py']
     configuration = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items() if key not in ('resume', 'baseline_only')}
     metadata = {'utc': datetime.now(timezone.utc).isoformat(), 'command': [sys.executable, *sys.argv], 'configuration': configuration,
                 'python': sys.version, 'platform': platform.platform(), 'versions': {name: importlib.metadata.version(name) for name in ('torch', 'transformers', 'huggingface_hub', 'numpy', 'pyarrow')},
                 'cuda_runtime': torch.version.cuda, 'gpu_name': torch.cuda.get_device_name(), 'cuda_visible_devices': os.environ.get('CUDA_VISIBLE_DEVICES'),
                 'nvidia_smi': subprocess.check_output(['nvidia-smi', '--query-gpu=index,uuid,name,driver_version', '--format=csv,noheader'], text=True).strip(),
-                'model': {'repository': MODEL, 'revision': MODEL_REVISION, 'frozen_dtype': 'bfloat16', 'adapter_dtype': 'float32', 'pooling': 'FP32 mean pooling and L2 normalization'},
+                'model': {'repository': MODEL, 'revision': MODEL_REVISION, 'frozen_dtype': 'bfloat16', 'adapter_dtype': 'float32 factors; original magnitude inherits bfloat16' if 'dora_original' in args.methods else 'float32', 'pooling': 'FP32 mean pooling and L2 normalization'},
                 'datasets': {name: ds['metadata'] for name, ds in data.items()},
                 'source_sha256': {str(path.relative_to(root)): sha256(path) for path in source_paths if path.exists()},
                 'protocol': {
@@ -248,6 +250,7 @@ def main():
                     'ranking': 'Exhaustive cosine similarity, top10; nDCG gain 2^grade-1; macro query metrics.',
                     'inference': 'Unmerged adapters; three longest-batch warmups, synchronized wall times include CPU padding/transfers.',
                     'leakage_scope': 'Official split and exact lowercased whitespace-normalized query text audit within NFCorpus and against SciFact test. Shared corpus documents and paraphrases permitted by benchmark; pretrained-data contamination not audited.',
+                    'original_precision_compatibility': 'For dora_original outside autocast, keep historical norm/update/magnitude arithmetic; cast activation and frozen bias to the dense adapted-weight dtype for F.linear, then cast its result to the input dtype. BF16 frozen weights and magnitude, FP32 factors and final dense projection. No norm promotion or denominator detachment.',
                 }}
     if args.resume and (args.output_dir / 'provenance.json').exists():
         previous = json.loads((args.output_dir / 'provenance.json').read_text())

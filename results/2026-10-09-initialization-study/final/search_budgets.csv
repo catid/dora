@@ -1,0 +1,525 @@
+study_lane,training_task,scope,name,family_count,initializer_count,learning_rate_count,learning_rates,fixed_lr_candidate_count,joint_candidate_count,passed_pilots,failed_pilots
+centered,aircraft,family,accepted_anchor,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+centered,aircraft,family,accepted_gaussian_scale,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,astra_tail,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,astra_top,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,bimi_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,bimi_down_permuted,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,bimi_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,bimi_up_permuted,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,cntlora_cross_centered,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,cntlora_self_centered,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,cntlora_shift_centered,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,corda_ipm,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,corda_kpm_task,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,cropped_hadamard_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,cropped_hadamard_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,dct_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,dct_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,eva,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,eva_whiten,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,filet,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,inilora_alpha,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,inilora_beta,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,inilora_prefit,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,laplace_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,laplace_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,lora_kaiming_uniform_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,lorada_centered,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,loraga_A2rBr,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,loraga_ArB2r,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,loraga_ArBr,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,loraga_random,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,loraone_centered,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,mica_init_only,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,milora,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,milora_power,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,nonzero_uniform_original_in,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_exponential_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_exponential_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_fanin_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_matern32_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_matern32_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_rbf_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_rbf_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_sample_rms_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_sample_rms_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,normal_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,olora,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,orthogonal_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,orthogonal_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,peft_complementary,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,pissa,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,pissa_power,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,rademacher_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,rademacher_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,sparse01_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,sparse01_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,sparse10_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,sparse10_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,sparse50_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,sparse50_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,spherical_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,spherical_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,student_t10_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,student_t10_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,student_t3_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,student_t3_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,student_t5_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,student_t5_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,tlora_init_only,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,truncnormal1_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,truncnormal1_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,truncnormal2_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,truncnormal2_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,uniform_down,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,family,uniform_up,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,accepted,2,5,4,"[1e-05, 0.0001, 0.0003, 0.001]",5,20,20,0
+centered,aircraft,parent,astra,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,bimi,4,16,4,"[1e-05, 0.0001, 0.0003, 0.001]",16,64,64,0
+centered,aircraft,parent,cntlora,3,12,4,"[1e-05, 0.0001, 0.0003, 0.001]",12,48,48,0
+centered,aircraft,parent,corda,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,eva,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,filet,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,inilora,3,12,4,"[1e-05, 0.0001, 0.0003, 0.001]",12,48,48,0
+centered,aircraft,parent,kernel_exponential,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,kernel_matern32,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,kernel_rbf,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,lora_standard,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,lorada,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,loraga,4,16,4,"[1e-05, 0.0001, 0.0003, 0.001]",16,64,64,0
+centered,aircraft,parent,loraone,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,mica,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,milora,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,nonzero_lora,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,olora,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,peft_orthogonal,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,aircraft,parent,pissa,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,random_cropped_hadamard,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,random_dct,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,random_laplace,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,random_normal,5,20,4,"[1e-05, 0.0001, 0.0003, 0.001]",20,80,80,0
+centered,aircraft,parent,random_orthogonal,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,random_rademacher,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,random_sparse,6,24,4,"[1e-05, 0.0001, 0.0003, 0.001]",24,96,96,0
+centered,aircraft,parent,random_student_t,6,24,4,"[1e-05, 0.0001, 0.0003, 0.001]",24,96,96,0
+centered,aircraft,parent,random_truncnormal,4,16,4,"[1e-05, 0.0001, 0.0003, 0.001]",16,64,64,0
+centered,aircraft,parent,random_uniform,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,spherical,2,8,4,"[1e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,aircraft,parent,tlora,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,extraction,family,accepted_anchor,1,1,2,"[0.0001, 0.0003]",1,2,2,0
+centered,extraction,family,accepted_gaussian_scale,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,astra_tail,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,astra_top,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,bimi_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,bimi_down_permuted,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,bimi_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,bimi_up_permuted,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,cntlora_cross_centered,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,cntlora_self_centered,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,cntlora_shift_centered,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,corda_ipm,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,corda_kpm_task,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,cropped_hadamard_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,cropped_hadamard_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,dct_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,dct_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,eva,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,eva_whiten,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,filet,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,inilora_alpha,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,inilora_beta,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,inilora_prefit,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,laplace_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,laplace_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,lora_kaiming_uniform_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,lorada_centered,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,loraga_A2rBr,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,loraga_ArB2r,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,loraga_ArBr,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,loraga_random,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,loraone_centered,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,mica_init_only,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,milora,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,milora_power,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,nonzero_uniform_original_in,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_exponential_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_exponential_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_fanin_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_matern32_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_matern32_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_rbf_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_rbf_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_sample_rms_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_sample_rms_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,normal_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,olora,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,orthogonal_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,orthogonal_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,peft_complementary,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,pissa,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,pissa_power,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,rademacher_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,rademacher_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,sparse01_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,sparse01_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,sparse10_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,sparse10_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,sparse50_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,sparse50_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,spherical_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,spherical_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,student_t10_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,student_t10_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,student_t3_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,student_t3_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,student_t5_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,student_t5_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,tlora_init_only,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,truncnormal1_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,truncnormal1_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,truncnormal2_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,truncnormal2_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,uniform_down,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,family,uniform_up,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,accepted,2,5,2,"[0.0001, 0.0003]",5,10,10,0
+centered,extraction,parent,astra,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,bimi,4,16,2,"[0.0001, 0.0003]",16,32,32,0
+centered,extraction,parent,cntlora,3,12,2,"[0.0001, 0.0003]",12,24,24,0
+centered,extraction,parent,corda,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,eva,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,filet,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,inilora,3,12,2,"[0.0001, 0.0003]",12,24,24,0
+centered,extraction,parent,kernel_exponential,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,kernel_matern32,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,kernel_rbf,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,lora_standard,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,lorada,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,loraga,4,16,2,"[0.0001, 0.0003]",16,32,32,0
+centered,extraction,parent,loraone,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,mica,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,milora,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,nonzero_lora,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,olora,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,peft_orthogonal,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,extraction,parent,pissa,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,random_cropped_hadamard,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,random_dct,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,random_laplace,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,random_normal,5,20,2,"[0.0001, 0.0003]",20,40,40,0
+centered,extraction,parent,random_orthogonal,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,random_rademacher,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,random_sparse,6,24,2,"[0.0001, 0.0003]",24,48,48,0
+centered,extraction,parent,random_student_t,6,24,2,"[0.0001, 0.0003]",24,48,48,0
+centered,extraction,parent,random_truncnormal,4,16,2,"[0.0001, 0.0003]",16,32,32,0
+centered,extraction,parent,random_uniform,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,spherical,2,8,2,"[0.0001, 0.0003]",8,16,16,0
+centered,extraction,parent,tlora,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+centered,nfcorpus,family,accepted_anchor,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+centered,nfcorpus,family,accepted_gaussian_scale,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,astra_tail,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,astra_top,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,bimi_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,bimi_down_permuted,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,bimi_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,bimi_up_permuted,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,cntlora_cross_centered,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,cntlora_self_centered,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,cntlora_shift_centered,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,corda_ipm,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,corda_kpm_task,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,cropped_hadamard_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,cropped_hadamard_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,dct_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,dct_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,eva,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,eva_whiten,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,filet,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,inilora_alpha,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,inilora_beta,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,inilora_prefit,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,laplace_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,laplace_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,lora_kaiming_uniform_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,lorada_centered,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,loraga_A2rBr,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,loraga_ArB2r,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,loraga_ArBr,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,loraga_random,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,loraone_centered,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,mica_init_only,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,milora,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,milora_power,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,nonzero_uniform_original_in,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_exponential_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_exponential_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_fanin_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_matern32_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_matern32_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_rbf_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_rbf_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_sample_rms_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_sample_rms_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,normal_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,olora,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,orthogonal_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,orthogonal_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,peft_complementary,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,pissa,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,pissa_power,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,rademacher_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,rademacher_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,sparse01_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,sparse01_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,sparse10_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,sparse10_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,sparse50_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,sparse50_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,spherical_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,spherical_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,student_t10_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,student_t10_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,student_t3_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,student_t3_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,student_t5_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,student_t5_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,tlora_init_only,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,truncnormal1_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,truncnormal1_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,truncnormal2_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,truncnormal2_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,uniform_down,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,family,uniform_up,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,accepted,2,5,4,"[3e-05, 0.0001, 0.0003, 0.001]",5,20,20,0
+centered,nfcorpus,parent,astra,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,bimi,4,16,4,"[3e-05, 0.0001, 0.0003, 0.001]",16,64,64,0
+centered,nfcorpus,parent,cntlora,3,12,4,"[3e-05, 0.0001, 0.0003, 0.001]",12,48,48,0
+centered,nfcorpus,parent,corda,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,eva,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,filet,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,inilora,3,12,4,"[3e-05, 0.0001, 0.0003, 0.001]",12,48,48,0
+centered,nfcorpus,parent,kernel_exponential,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,kernel_matern32,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,kernel_rbf,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,lora_standard,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,lorada,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,loraga,4,16,4,"[3e-05, 0.0001, 0.0003, 0.001]",16,64,64,0
+centered,nfcorpus,parent,loraone,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,mica,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,milora,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,nonzero_lora,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,olora,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,peft_orthogonal,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,nfcorpus,parent,pissa,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,random_cropped_hadamard,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,random_dct,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,random_laplace,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,random_normal,5,20,4,"[3e-05, 0.0001, 0.0003, 0.001]",20,80,80,0
+centered,nfcorpus,parent,random_orthogonal,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,random_rademacher,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,random_sparse,6,24,4,"[3e-05, 0.0001, 0.0003, 0.001]",24,96,96,0
+centered,nfcorpus,parent,random_student_t,6,24,4,"[3e-05, 0.0001, 0.0003, 0.001]",24,96,96,0
+centered,nfcorpus,parent,random_truncnormal,4,16,4,"[3e-05, 0.0001, 0.0003, 0.001]",16,64,64,0
+centered,nfcorpus,parent,random_uniform,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,spherical,2,8,4,"[3e-05, 0.0001, 0.0003, 0.001]",8,32,32,0
+centered,nfcorpus,parent,tlora,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+centered,scifact,family,accepted_anchor,1,1,2,"[0.0001, 0.001]",1,2,2,0
+centered,scifact,family,accepted_gaussian_scale,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,astra_tail,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,astra_top,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,bimi_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,bimi_down_permuted,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,bimi_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,bimi_up_permuted,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,cntlora_cross_centered,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,cntlora_self_centered,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,cntlora_shift_centered,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,corda_ipm,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,corda_kpm_task,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,cropped_hadamard_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,cropped_hadamard_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,dct_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,dct_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,eva,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,eva_whiten,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,filet,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,inilora_alpha,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,inilora_beta,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,inilora_prefit,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,laplace_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,laplace_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,lora_kaiming_uniform_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,lorada_centered,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,loraga_A2rBr,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,loraga_ArB2r,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,loraga_ArBr,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,loraga_random,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,loraone_centered,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,mica_init_only,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,milora,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,milora_power,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,nonzero_uniform_original_in,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_exponential_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_exponential_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_fanin_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_matern32_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_matern32_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_rbf_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_rbf_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_sample_rms_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_sample_rms_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,normal_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,olora,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,orthogonal_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,orthogonal_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,peft_complementary,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,pissa,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,pissa_power,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,rademacher_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,rademacher_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,sparse01_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,sparse01_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,sparse10_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,sparse10_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,sparse50_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,sparse50_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,spherical_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,spherical_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,student_t10_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,student_t10_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,student_t3_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,student_t3_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,student_t5_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,student_t5_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,tlora_init_only,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,truncnormal1_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,truncnormal1_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,truncnormal2_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,truncnormal2_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,uniform_down,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,family,uniform_up,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,accepted,2,5,2,"[0.0001, 0.001]",5,10,10,0
+centered,scifact,parent,astra,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,bimi,4,16,2,"[0.0001, 0.001]",16,32,32,0
+centered,scifact,parent,cntlora,3,12,2,"[0.0001, 0.001]",12,24,24,0
+centered,scifact,parent,corda,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,eva,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,filet,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,inilora,3,12,2,"[0.0001, 0.001]",12,24,24,0
+centered,scifact,parent,kernel_exponential,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,kernel_matern32,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,kernel_rbf,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,lora_standard,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,lorada,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,loraga,4,16,2,"[0.0001, 0.001]",16,32,32,0
+centered,scifact,parent,loraone,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,mica,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,milora,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,nonzero_lora,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,olora,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,peft_orthogonal,1,4,2,"[0.0001, 0.001]",4,8,8,0
+centered,scifact,parent,pissa,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,random_cropped_hadamard,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,random_dct,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,random_laplace,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,random_normal,5,20,2,"[0.0001, 0.001]",20,40,40,0
+centered,scifact,parent,random_orthogonal,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,random_rademacher,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,random_sparse,6,24,2,"[0.0001, 0.001]",24,48,48,0
+centered,scifact,parent,random_student_t,6,24,2,"[0.0001, 0.001]",24,48,48,0
+centered,scifact,parent,random_truncnormal,4,16,2,"[0.0001, 0.001]",16,32,32,0
+centered,scifact,parent,random_uniform,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,spherical,2,8,2,"[0.0001, 0.001]",8,16,16,0
+centered,scifact,parent,tlora,1,4,2,"[0.0001, 0.001]",4,8,8,0
+quantized,aircraft,family,accepted_anchor,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+quantized,aircraft,family,loftq_i1_original,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,aircraft,family,loftq_i1_quantized,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,aircraft,family,loftq_i3_original,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,aircraft,family,loftq_i3_quantized,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,aircraft,family,nf4_control_i1_original,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,0,4
+quantized,aircraft,family,nf4_control_i1_quantized,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,0,4
+quantized,aircraft,family,nf4_control_i3_original,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,0,4
+quantized,aircraft,family,nf4_control_i3_quantized,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,0,4
+quantized,aircraft,parent,accepted,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+quantized,aircraft,parent,loftq,4,16,4,"[1e-05, 0.0001, 0.0003, 0.001]",16,64,64,0
+quantized,aircraft,parent,nf4_quantizer_control,4,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,0,16
+quantized,extraction,family,accepted_anchor,1,1,2,"[0.0001, 0.0003]",1,2,2,0
+quantized,extraction,family,loftq_i1_original,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+quantized,extraction,family,loftq_i1_quantized,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+quantized,extraction,family,loftq_i3_original,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+quantized,extraction,family,loftq_i3_quantized,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+quantized,extraction,family,nf4_control_i1_original,1,1,2,"[0.0001, 0.0003]",1,2,0,2
+quantized,extraction,family,nf4_control_i1_quantized,1,1,2,"[0.0001, 0.0003]",1,2,0,2
+quantized,extraction,family,nf4_control_i3_original,1,1,2,"[0.0001, 0.0003]",1,2,0,2
+quantized,extraction,family,nf4_control_i3_quantized,1,1,2,"[0.0001, 0.0003]",1,2,0,2
+quantized,extraction,parent,accepted,1,1,2,"[0.0001, 0.0003]",1,2,2,0
+quantized,extraction,parent,loftq,4,16,2,"[0.0001, 0.0003]",16,32,32,0
+quantized,extraction,parent,nf4_quantizer_control,4,4,2,"[0.0001, 0.0003]",4,8,0,8
+quantized,nfcorpus,family,accepted_anchor,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+quantized,nfcorpus,family,loftq_i1_original,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,nfcorpus,family,loftq_i1_quantized,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,nfcorpus,family,loftq_i3_original,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,nfcorpus,family,loftq_i3_quantized,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,nfcorpus,family,nf4_control_i1_original,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+quantized,nfcorpus,family,nf4_control_i1_quantized,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+quantized,nfcorpus,family,nf4_control_i3_original,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+quantized,nfcorpus,family,nf4_control_i3_quantized,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+quantized,nfcorpus,parent,accepted,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+quantized,nfcorpus,parent,loftq,4,16,4,"[3e-05, 0.0001, 0.0003, 0.001]",16,64,64,0
+quantized,nfcorpus,parent,nf4_quantizer_control,4,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+quantized,scifact,family,accepted_anchor,1,1,2,"[0.0001, 0.001]",1,2,2,0
+quantized,scifact,family,loftq_i1_original,1,4,2,"[0.0001, 0.001]",4,8,8,0
+quantized,scifact,family,loftq_i1_quantized,1,4,2,"[0.0001, 0.001]",4,8,8,0
+quantized,scifact,family,loftq_i3_original,1,4,2,"[0.0001, 0.001]",4,8,8,0
+quantized,scifact,family,loftq_i3_quantized,1,4,2,"[0.0001, 0.001]",4,8,8,0
+quantized,scifact,family,nf4_control_i1_original,1,1,2,"[0.0001, 0.001]",1,2,2,0
+quantized,scifact,family,nf4_control_i1_quantized,1,1,2,"[0.0001, 0.001]",1,2,2,0
+quantized,scifact,family,nf4_control_i3_original,1,1,2,"[0.0001, 0.001]",1,2,2,0
+quantized,scifact,family,nf4_control_i3_quantized,1,1,2,"[0.0001, 0.001]",1,2,2,0
+quantized,scifact,parent,accepted,1,1,2,"[0.0001, 0.001]",1,2,2,0
+quantized,scifact,parent,loftq,4,16,2,"[0.0001, 0.001]",16,32,32,0
+quantized,scifact,parent,nf4_quantizer_control,4,4,2,"[0.0001, 0.001]",4,8,8,0
+warmstart,aircraft,family,accepted_anchor,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+warmstart,aircraft,family,cntlora_cross_warm,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,aircraft,family,cntlora_self_warm,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,aircraft,family,cntlora_shift_warm,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,aircraft,family,lorada_warm,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,aircraft,family,loraone_warm,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,aircraft,parent,accepted,1,1,4,"[1e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+warmstart,aircraft,parent,cntlora,3,12,4,"[1e-05, 0.0001, 0.0003, 0.001]",12,48,48,0
+warmstart,aircraft,parent,lorada,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,aircraft,parent,loraone,1,4,4,"[1e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,extraction,family,accepted_anchor,1,1,2,"[0.0001, 0.0003]",1,2,2,0
+warmstart,extraction,family,cntlora_cross_warm,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+warmstart,extraction,family,cntlora_self_warm,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+warmstart,extraction,family,cntlora_shift_warm,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+warmstart,extraction,family,lorada_warm,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+warmstart,extraction,family,loraone_warm,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+warmstart,extraction,parent,accepted,1,1,2,"[0.0001, 0.0003]",1,2,2,0
+warmstart,extraction,parent,cntlora,3,12,2,"[0.0001, 0.0003]",12,24,24,0
+warmstart,extraction,parent,lorada,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+warmstart,extraction,parent,loraone,1,4,2,"[0.0001, 0.0003]",4,8,8,0
+warmstart,nfcorpus,family,accepted_anchor,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+warmstart,nfcorpus,family,cntlora_cross_warm,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,nfcorpus,family,cntlora_self_warm,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,nfcorpus,family,cntlora_shift_warm,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,nfcorpus,family,lorada_warm,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,nfcorpus,family,loraone_warm,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,nfcorpus,parent,accepted,1,1,4,"[3e-05, 0.0001, 0.0003, 0.001]",1,4,4,0
+warmstart,nfcorpus,parent,cntlora,3,12,4,"[3e-05, 0.0001, 0.0003, 0.001]",12,48,48,0
+warmstart,nfcorpus,parent,lorada,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,nfcorpus,parent,loraone,1,4,4,"[3e-05, 0.0001, 0.0003, 0.001]",4,16,16,0
+warmstart,scifact,family,accepted_anchor,1,1,2,"[0.0001, 0.001]",1,2,2,0
+warmstart,scifact,family,cntlora_cross_warm,1,4,2,"[0.0001, 0.001]",4,8,8,0
+warmstart,scifact,family,cntlora_self_warm,1,4,2,"[0.0001, 0.001]",4,8,8,0
+warmstart,scifact,family,cntlora_shift_warm,1,4,2,"[0.0001, 0.001]",4,8,8,0
+warmstart,scifact,family,lorada_warm,1,4,2,"[0.0001, 0.001]",4,8,8,0
+warmstart,scifact,family,loraone_warm,1,4,2,"[0.0001, 0.001]",4,8,8,0
+warmstart,scifact,parent,accepted,1,1,2,"[0.0001, 0.001]",1,2,2,0
+warmstart,scifact,parent,cntlora,3,12,2,"[0.0001, 0.001]",12,24,24,0
+warmstart,scifact,parent,lorada,1,4,2,"[0.0001, 0.001]",4,8,8,0
+warmstart,scifact,parent,loraone,1,4,2,"[0.0001, 0.001]",4,8,8,0

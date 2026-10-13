@@ -1,0 +1,180 @@
+"""Independent CPU audit of the separate SciFact LoRA initializer supplement."""
+
+import argparse
+import hashlib
+import json
+import math
+from pathlib import Path
+
+import torch
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def audit(root, allow_missing_checkpoints=False):
+    bindings = {}
+    def read(relative, lines=False):
+        path = root / relative
+        bindings[str(relative)] = sha(path)
+        text = path.read_text()
+        return [json.loads(row) for row in text.splitlines()] if lines else json.loads(text)
+    manifest = read(Path('manifest.json'))
+    results = read(Path('results.json'))
+    assert results['complete'] and results['manifest_sha256'] == sha(root / 'manifest.json')
+    assert results['task'] == manifest['task'] and results['rank'] == manifest['rank'] == 8
+    assert manifest['schema'] == results['schema'] == 'lora-initializer-retrieval-v1'
+    assert manifest['task'] == 'scifact'
+    assert set(manifest['recipes']) == {'lora_conventional','lora_historical_init'}
+    config = manifest['configuration']
+    assert config['seeds'] == [42,43,44] and config['epochs'] == 5 and config['batch_size'] == 32
+    task = manifest['task']
+    dataset = 'scifact' if task == 'scifact' else 'nfcorpus'
+    fixed = .001 if task == 'scifact' else .0001
+    rates = [.0001,.001] if task == 'scifact' else [.00003,.0001,.0003,.001]
+    assert config['learning_rates'] == rates and config['fixed_lr'] == fixed
+    expected_train_queries = 726 if task == 'scifact' else 2582
+    splits = read(Path(f'{dataset}_splits.json'))
+    assert len(splits['train']) == expected_train_queries
+    epoch_steps = math.ceil(expected_train_queries / config['batch_size'])
+    expected_steps = epoch_steps * config['epochs']
+    warmup = max(1, round(expected_steps * config['warmup_fraction']))
+    for name, expected in manifest['source_sha256'].items():
+        path = Path('source') / name
+        assert sha(root / path) == expected
+        bindings[str(path)] = expected
+    for name, expected in manifest['input_sha256'].items():
+        assert sha(root / name) == expected
+        bindings[name] = expected
+    if task == 'nfcorpus':
+        assert sha(root / 'hard_negatives.json') == manifest['hard_negatives_sha256']
+        bindings['hard_negatives.json'] = sha(root / 'hard_negatives.json')
+    endpoint = read(Path('endpoint_control/control.json'))
+    assert endpoint['status'] == 'pass' and endpoint['manifest_sha256'] == sha(root / 'manifest.json')
+    assert {row['method'] for row in endpoint['controls']} == {'ab_original','ab_revised','lora_conventional'}
+    for row in endpoint['controls']:
+        assert row['steps'] == 5 and row['logged_loss_learning_rate_clip_norm_bitwise'] and row['initialized_and_final_adapter_tensors_bitwise']
+    endpoint_checkpoints = {}
+    verified_endpoint_checkpoints = omitted_endpoint_checkpoints = 0
+    for name,digest in endpoint['evidence_sha256'].items():
+        path=Path('endpoint_control')/name
+        if path.suffix == '.pt':
+            endpoint_checkpoints[str(path)] = digest
+            if not (root/path).exists():
+                assert allow_missing_checkpoints
+                omitted_endpoint_checkpoints += 1
+                continue
+            verified_endpoint_checkpoints += 1
+        assert sha(root/path)==digest
+        if path.suffix != '.pt':bindings[str(path)]=digest
+    fits = {}
+    checkpoints = {}
+    verified_checkpoints = omitted_checkpoints = logged_steps = 0
+    for path in sorted((root/'fits').glob('*/*/*/result.json')):
+        relative=path.relative_to(root)
+        row=read(relative)
+        fit_id=str(relative.parent)
+        assert row['fit_id']==fit_id and row['manifest_sha256']==sha(root/'manifest.json')
+        method=row['method'];recipe=manifest['recipes'][method]
+        core_recipe=recipe.get('base_recipe',recipe)
+        assert row['recipe_sha256']==recipe['recipe_sha256']
+        assert row['rank']==8 and row['seed'] in config['seeds'] and row['learning_rate'] in rates
+        assert row['training']['steps']==expected_steps and row['training']['queries_seen']==expected_train_queries*5
+        assert row['frozen_weights_unchanged']
+        logs=read(relative.parent/'training.jsonl',lines=True)
+        assert len(logs)==expected_steps and [v['step'] for v in logs]==list(range(1,expected_steps+1))
+        for step,item in enumerate(logs,1):
+            assert item['epoch']==(step-1)//epoch_steps+1
+            assert math.isfinite(item['loss']) and math.isfinite(item['gradient_norm'])
+            factor=step/warmup if step<=warmup else (expected_steps-step+1)/max(1,expected_steps-warmup)
+            learning_rates=item.get('learning_rates',[item.get('learning_rate')])
+            assert len(learning_rates)==(2 if task=='nfcorpus' else 1)
+            assert all(math.isclose(value,row['learning_rate']*factor,abs_tol=1e-15,rel_tol=0) for value in learning_rates)
+        logged_steps+=len(logs)
+        if task=='nfcorpus':
+            groups=row['training']['optimizer_groups']
+            assert [g['group_name'] for g in groups]==['adapter_factors','magnitudes']
+            assert [g['weight_decay'] for g in groups]==[config['weight_decay'],0]
+            assert sum(g['parameter_count'] for g in groups)==row['trainable_parameters']
+            assert all(g['lr']==row['learning_rate'] for g in groups)
+        assert row['diagnostics']=={}
+        assert row.get('post_reload_diagnostics',{})=={}
+        checkpoint=relative.parent/'adapter.pt'
+        checkpoints[str(checkpoint)]=row['checkpoint_sha256']
+        if (root/checkpoint).exists():
+            assert sha(root/checkpoint)==row['checkpoint_sha256']
+            state=torch.load(root/checkpoint,map_location='cpu',weights_only=True)
+            assert list(state)==row['trainable_parameter_order']
+            assert len(state)==24 and sum(t.numel() for t in state.values())==row['trainable_parameters']==73728
+            assert [n.rsplit('.',1)[-1] for n in state]==recipe['trainable_registration_order']*12
+            factor_dtype=torch.bfloat16 if recipe.get('factor_storage')=='bfloat16' else torch.float32
+            for name,tensor in state.items():
+                assert torch.isfinite(tensor).all()
+                suffix=name.rsplit('.',1)[-1]
+                assert suffix in ('lora_A','lora_B')
+                shape=(8,384) if suffix=='lora_A' else (384,8)
+                assert tuple(tensor.shape)==shape
+                assert tensor.dtype==factor_dtype
+                if suffix==core_recipe['zero_initialized_factor']:
+                    assert float(tensor.float().norm())>0
+            verified_checkpoints+=1
+        else:
+            assert allow_missing_checkpoints
+            omitted_checkpoints+=1
+        fits[fit_id]=row
+    assert len({row['frozen_sha256'] for row in fits.values()})==1
+    expected_runs={(method,seed,lane) for method in config['methods'] for seed in config['seeds'] for lane in ('fixed','tuned')}
+    assert {(r['method'],r['seed'],r['lane']) for r in results['runs']}==expected_runs and len(results['runs'])==len(expected_runs)
+    for method in config['methods']:
+        selection=read(Path('selections')/f'{method}.json')
+        assert selection==results['tuning'][method]
+        trials=selection['trials']
+        assert [r['learning_rate'] for r in trials]==rates
+        assert selection['test_used_for_selection'] is False and selection['fixed_learning_rate']==fixed
+        assert selection['selection_metric']==f'{dataset}.validation.ndcg_at_10'
+        for trial in trials:
+            fit=fits[trial['fit_id']]
+            assert fit['method']==method and fit['seed']==42 and fit['learning_rate']==trial['learning_rate']
+            assert trial['checkpoint_sha256']==fit['checkpoint_sha256'] and trial['training_steps']==expected_steps
+            assert trial['validation_ndcg_at_10']==fit['evaluation'][dataset]['validation']['ndcg_at_10']
+        winner=max(trials,key=lambda r:(r['validation_ndcg_at_10'],-r['learning_rate']))
+        assert selection['selected_learning_rate']==winner['learning_rate']
+    for row in results['runs']:
+        fit=fits[row['fit_id']]
+        for key,value in fit.items():assert row[key]==value,(row['fit_id'],key)
+        expected_rate=fixed if row['lane']=='fixed' else results['tuning'][row['method']]['selected_learning_rate']
+        assert row['learning_rate']==expected_rate
+        expected_lanes=[lane for lane,rate in (('fixed',fixed),('tuned',results['tuning'][row['method']]['selected_learning_rate'])) if rate==expected_rate]
+        assert row['shared_lanes']==expected_lanes and row['reused_full_budget_validation_fit']==(row['seed']==42)
+        assert 'test' in row['evaluation'][dataset]
+    assert results['unique_final_fits']==len({r['fit_id'] for r in results['runs']})
+    assert results['unique_trained_fits']==len(fits)
+    # Bind raw ranking predictions and all stored JSON independently of whether
+    # metric replay consumes them; checkpoint payload hashes remain separate.
+    for path in sorted(root.rglob('*')):
+        if path.is_file() and path.suffix in ('.json','.jsonl','.py','.txt') and path.name not in ('task_audit.json',):
+            bindings[str(path.relative_to(root))]=sha(path)
+    return {'status':'pass','task':task,'rank':8,'source_sha256':sha(__file__),
+            'input_results_sha256':sha(root/'results.json'),'input_sha256':bindings,
+            'checkpoint_sha256':checkpoints,'endpoint_checkpoint_sha256':endpoint_checkpoints,'artifact_roots':{'task':str(root)},
+            'audit':{'recipes':len(config['methods']),'lane_records':len(results['runs']),'unique_trained_fits':len(fits),
+                     'unique_final_fits':results['unique_final_fits'],'logged_optimizer_updates':logged_steps,
+                     'checkpoint_payloads_verified':verified_checkpoints,'checkpoint_payloads_omitted':omitted_checkpoints,
+                     'endpoint_checkpoint_payloads_verified':verified_endpoint_checkpoints,'endpoint_checkpoint_payloads_omitted':omitted_endpoint_checkpoints,
+                     'full_budget_validation_only_selection':True,'fit_sharing_explicit':True,'norm_clamp_activations':0},
+            'scope':'Recomputed training-update/LR budgets, checked actual adapter tensors/shapes/dtypes and frozen attestations, reconstructed validation selection and shared fixed/tuned fits. Optimizer state payloads are not saved. Ranking metrics are independently rescored by the separate LoRA initializer report from bound qrels/predictions. No training or model inference rerun.'}
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root',type=Path,required=True)
+    parser.add_argument('--allow-missing-checkpoints',action='store_true')
+    args=parser.parse_args()
+    torch.set_num_threads(2)
+    source=args.root/'audit_source'/Path(__file__).name
+    source.parent.mkdir(exist_ok=True)
+    source.write_bytes(Path(__file__).read_bytes())
+    result=audit(args.root,args.allow_missing_checkpoints)
+    (args.root/'task_audit.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+    print(json.dumps(result['audit'],indent=2))

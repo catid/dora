@@ -35,7 +35,7 @@ import timm
 from huggingface_hub import hf_hub_download
 from safetensors.torch import load_file
 
-from experiments.adapters import AdapterLinear, inject_adapters
+from experiments.adapters import ADAPTER_TYPES, SUPPORTED_METHODS, inject_adapters
 
 MODEL = "vit_base_patch16_224.augreg_in21k_ft_in1k"
 REPO = "timm/" + MODEL
@@ -66,6 +66,30 @@ def write_json(path, payload):
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(json.dumps(payload, indent=2) + "\n")
     temporary.replace(path)
+
+
+def reuse_baseline_artifacts(source, destination, expected):
+    """Copy a measured baseline byte for byte, retaining its original provenance."""
+    source, destination = Path(source), Path(destination)
+    result = json.loads((source / "result.json").read_text())
+    for key, value in expected.items():
+        assert result[key] == value, (source, key, result[key], value)
+    assert result["method"] == "baseline" and result["frozen_base_unchanged"]
+    assert result["test"] is not None
+    assert file_sha256(source / "best_adapter_and_head.pt") == result["best_adapter_checkpoint_sha256"]
+    destination.mkdir(parents=True, exist_ok=True)
+    hashes = {}
+    for name in ("config.json", "result.json", "epochs.jsonl", "test_predictions.json", "best_adapter_and_head.pt"):
+        content = (source / name).read_bytes()
+        target = destination / name
+        if target.exists():
+            assert target.read_bytes() == content, target
+        else:
+            target.write_bytes(content)
+        hashes[name] = hashlib.sha256(content).hexdigest()
+    return result, {"source_directory": str(source), "destination_directory": str(destination),
+                    "files_sha256": hashes, "byte_identical": True,
+                    "scope": "Existing trained-head baseline reused without refitting; original result/provenance unchanged."}
 
 
 def seed_everything(seed):
@@ -178,7 +202,7 @@ def train_epoch(model, loader, optimizer):
 def row_norm_diagnostics(model):
     values = []
     for name, module in model.named_modules():
-        if not isinstance(module, AdapterLinear):
+        if not isinstance(module, ADAPTER_TYPES):
             continue
         if hasattr(module, "effective_weight"):
             adapted = module.effective_weight().detach().float()
@@ -193,6 +217,15 @@ def row_norm_diagnostics(model):
                  "row_norm_ratio_mean": ratio.mean().item(),
                  "up_factor_l2_norm": module.lora_B.detach().norm().item()}
         assert entry["up_factor_l2_norm"] > 0, f"Adapter did not learn: {name}"
+        if getattr(module, "use_original", False):
+            entry["normalization_axis"] = 0
+            entry["zero_initialized_factor_l2_norm"] = entry.pop("up_factor_l2_norm")
+            magnitude = module.m.detach().flatten().abs()
+            error = ((adapted.norm(dim=0) - magnitude).abs() / magnitude.clamp_min(1e-12)).max().item()
+            entry["original_column_magnitude_relative_max_error"] = error
+            assert error < 1e-4
+            values.append(entry)
+            continue
         if module.use_nora:
             error = (module.effective_down().detach().norm(dim=0) - 1).abs().max().item()
             entry["nora_down_column_norm_max_error"] = error
@@ -237,6 +270,15 @@ def run_one(args, method, seed, checkpoint, checkpoint_hash, datasets, provenanc
     initial_head_digest = tensor_digest(model.head.state_dict().items())
     initial_backbone_digest = tensor_digest((name, parameter) for name, parameter in model.named_parameters()
                                             if not name.startswith("head."))
+    reference_initialization = None
+    if args.reference_root is not None:
+        reference_path = args.reference_root / f"seed_{seed}" / "baseline" / "result.json"
+        reference = json.loads(reference_path.read_text())
+        assert reference["initial_head_sha256"] == initial_head_digest
+        assert reference["initial_backbone_sha256"] == initial_backbone_digest
+        assert reference["checkpoint_sha256"] == checkpoint_hash
+        reference_initialization = {"result_path": str(reference_path), "result_sha256": file_sha256(reference_path),
+                                    "initial_head_exact": True, "initial_backbone_exact": True}
     model.eval()
     # Use an isolated generator so identity validation does not alter training RNG.
     identity_input = torch.randn(2, 3, 224, 224, generator=torch.Generator().manual_seed(999))
@@ -252,11 +294,11 @@ def run_one(args, method, seed, checkpoint, checkpoint_hash, datasets, provenanc
     with torch.no_grad():
         after = model(identity_input)
     identity_error = (after - before).abs().max().item()
-    torch.testing.assert_close(after, before, rtol=1e-4, atol=1e-5)
+    torch.testing.assert_close(after, before, rtol=1e-4, atol=args.identity_atol)
     del identity_input, before, after
     frozen_before = tensor_digest((name, parameter) for name, parameter in model.named_parameters()
                                    if not parameter.requires_grad)
-    targeted = [name for name, module in model.named_modules() if isinstance(module, AdapterLinear)]
+    targeted = [name for name, module in model.named_modules() if isinstance(module, ADAPTER_TYPES)]
     assert len(targeted) == (0 if method == "baseline" else 48)
     trainable = [(name, parameter) for name, parameter in model.named_parameters() if parameter.requires_grad]
     trainable_names = {name for name, _ in trainable}
@@ -292,6 +334,8 @@ def run_one(args, method, seed, checkpoint, checkpoint_hash, datasets, provenanc
         "loaded_source_state_sha256": loaded_checkpoint_digest,
         "checkpoint_sha256": checkpoint_hash,
         "initial_output_max_absolute_error": identity_error,
+        "initial_output_tolerance": {"rtol": 1e-4, "atol": args.identity_atol},
+        "reference_initialization": reference_initialization,
         "selection": "maximum validation accuracy, tie-break lower validation cross-entropy",
         "provenance": provenance,
     }
@@ -375,7 +419,9 @@ def main():
     parser.add_argument("--cache", type=Path, default=Path("/var/tmp/dora-bench/cache"))
     parser.add_argument("--output", type=Path, default=Path("/var/tmp/dora-bench/runs/vision"))
     parser.add_argument("--methods", nargs="+", default=["baseline", "lora", "dora", "nora", "dora_nora"],
-                        choices=["baseline", "lora", "dora", "nora", "dora_nora"])
+                        choices=["baseline", *SUPPORTED_METHODS])
+    parser.add_argument("--reference-root", type=Path, help="Prior Flowers run whose per-seed initial heads and backbone must match")
+    parser.add_argument("--reuse-baselines", action="store_true", help="Copy exact trained-head baselines from --reference-root")
     parser.add_argument("--seeds", nargs="+", type=int, default=[42])
     parser.add_argument("--epochs", type=int, default=30)
     parser.add_argument("--rank", type=int, default=8)
@@ -386,8 +432,12 @@ def main():
     parser.add_argument("--tune-lrs", nargs="+", type=float, default=[])
     parser.add_argument("--pilot-epochs", type=int, default=5)
     parser.add_argument("--weight-decay", type=float, default=0.01)
+    parser.add_argument("--identity-atol", type=float, default=1e-5, choices=[1e-5, 2e-5],
+                        help="FP32 native-versus-injected diagnostic tolerance; does not change training")
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
+    if args.reuse_baselines and args.reference_root is None:
+        parser.error("--reuse-baselines requires --reference-root")
     args.cache.mkdir(parents=True, exist_ok=True)
     args.output.mkdir(parents=True, exist_ok=True)
     if not torch.cuda.is_available():
@@ -423,10 +473,35 @@ def main():
         "adapters_sha256": file_sha256(Path(__file__).with_name("adapters.py")),
         "command": [sys.executable, *sys.argv], "tf32": True,
     }
+    sources = ["experiments/vision.py", "experiments/adapters.py", "experiments/original_dora.py", "dora_row.py"]
+    provenance["source_sha256"] = {name: file_sha256(name) for name in sources}
+    for name in sources:
+        destination = args.output / "source" / name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        if destination.exists():
+            assert file_sha256(destination) == provenance["source_sha256"][name]
+        else:
+            destination.write_bytes(Path(name).read_bytes())
+    if args.reference_root is not None:
+        reference = json.loads((args.reference_root / "provenance.json").read_text())
+        for key in ("model", "model_revision", "model_checkpoint_sha256", "split_manifest_sha256", "input_transform",
+                    "torch", "torchvision", "timm"):
+            assert provenance[key] == reference[key], key
+        provenance["reference_run_root"] = str(args.reference_root)
     write_json(args.output / "provenance.json", provenance)
     results = []
+    if args.reuse_baselines:
+        reused = []
+        for seed in args.seeds:
+            baseline, attestation = reuse_baseline_artifacts(
+                args.reference_root / f"seed_{seed}" / "baseline", args.output / f"seed_{seed}" / "baseline",
+                {"seed": seed, "epochs": args.epochs, "rank": args.rank, "batch_size": args.batch_size,
+                 "head_learning_rate": args.head_lr, "weight_decay": args.weight_decay, "checkpoint_sha256": checkpoint_hash})
+            results.append(baseline); reused.append(attestation)
+        write_json(args.output / "baseline_reuse.json", {"reused": reused})
+        write_json(args.output / "results.json", results)
     # Complete the head-only baseline first to expose an early real measurement.
-    if "baseline" in args.methods:
+    if "baseline" in args.methods and not args.reuse_baselines:
         results.append(run_one(args, "baseline", args.seeds[0], checkpoint, checkpoint_hash, datasets, provenance))
         write_json(args.output / "results.json", results)
     selected_lrs = {method: args.lr for method in args.methods}
@@ -452,7 +527,7 @@ def main():
             write_json(args.output / "selected_learning_rates.json", selected_lrs)
     for seed in args.seeds:
         for method in args.methods:
-            if method == "baseline" and seed == args.seeds[0]:
+            if method == "baseline" and (args.reuse_baselines or seed == args.seeds[0]):
                 continue
             run_args = copy.copy(args)
             run_args.lr = selected_lrs[method]

@@ -12,9 +12,11 @@ import torch
 from torch import nn
 
 from experiments.adapters import AdapterLinear as FirstRoundAdapter, _rewrite_modules
+from experiments.original_dora import OriginalDoRALinear
 
 
 METHODS = ("lora", "dora", "nora", "dora_nora", "dora_nora_mlr", "dora_nora_gain")
+SUPPORTED_METHODS = (*METHODS, "dora_original")
 
 
 class AdapterLinear(FirstRoundAdapter):
@@ -39,6 +41,9 @@ class AdapterLinear(FirstRoundAdapter):
         return down
 
 
+ADAPTER_TYPES = (AdapterLinear, OriginalDoRALinear)
+
+
 def inject_adapters(model, method, rank=8, targets=None):
     """Freeze the model, replace selected linears, and return its possibly new root.
 
@@ -46,8 +51,8 @@ def inject_adapters(model, method, rank=8, targets=None):
     predicate ``(name, module) -> bool``. Re-enable task heads separately.
     """
     method = method.lower().replace("+", "_")
-    if method not in METHODS:
-        raise ValueError(f"method must be one of {METHODS}")
+    if method not in SUPPORTED_METHODS:
+        raise ValueError(f"method must be one of {SUPPORTED_METHODS}")
     if isinstance(rank, bool) or not isinstance(rank, int) or rank <= 0:
         raise ValueError("rank must be a positive integer")
     if isinstance(targets, str):
@@ -64,13 +69,17 @@ def inject_adapters(model, method, rank=8, targets=None):
     if not selected:
         raise ValueError("no nn.Linear modules matched adapter targets")
     model.requires_grad_(False)
-    return _rewrite_modules(model, lambda module: AdapterLinear(module, method, rank=rank)
-                            if id(module) in selected else module)
+    def convert(module):
+        if id(module) not in selected:
+            return module
+        return (OriginalDoRALinear(module, rank=rank) if method == "dora_original"
+                else AdapterLinear(module, method, rank=rank))
+    return _rewrite_modules(model, convert)
 
 
 def merge_adapters(model):
     return _rewrite_modules(model, lambda module: module.to_linear()
-                            if isinstance(module, AdapterLinear) else module)
+                            if isinstance(module, ADAPTER_TYPES) else module)
 
 
 def parameter_groups(model, lr, magnitude_lr_multiplier=1.0, weight_decay=0.01):
@@ -88,7 +97,7 @@ def parameter_groups(model, lr, magnitude_lr_multiplier=1.0, weight_decay=0.01):
     names = {name: [] for name in buckets}
     seen = set()
     for prefix, module in model.named_modules():
-        if not isinstance(module, AdapterLinear):
+        if not isinstance(module, ADAPTER_TYPES):
             continue
         members = [("lora_A", "adapter_factors"), ("lora_B", "adapter_factors"),
                    ("m", "decoupled_magnitudes" if module.method == "dora_nora_mlr" else "magnitudes"),
