@@ -591,3 +591,28 @@ The complete suite passed **41 tests** ([test record](results/2026-10-08-round2/
 Aircraft's 10-epoch tuning and 20-epoch final training are different horizons. A zero-update adapter control using its trained baseline head also exposes small CPU/GPU norm-initialization differences between LoRA/NoRA and the DoRA family under BF16: **43/3,333 validation predictions change**, with three net fewer correct for the DoRA family. Reinitializing only a fresh DoRA probe's magnitudes on GPU removes this family difference on 128 images; it does not measure the effect on subsequent training. These results retain the original protocol. See [numerical controls](results/2026-10-08-round2/numerical_controls.md).
 
 An audit also found that the historical COGS generation-cap diagnostic missed one configured EOS token. Text scores and selection are unaffected; the old cap flags cannot be corrected exactly because raw token IDs were not saved. The current runner fixes the diagnostic and preserves raw token IDs for future runs, while the archive keeps the original executed source. See the [diagnostic note](experiments/second_round/generation_diagnostics.md).
+
+## Pure-LoRA IniLoRA-alpha and NoRA (2026-10-13)
+
+**Combining IniLoRA-alpha with NoRA did not beat standalone IniLoRA-alpha on this four-task study.** The combination remained above LoRA on SciFact and ViGGO, but was below LoRA on NFCorpus and Aircraft; it was below IniLoRA-alpha on every task and had high seed variability on ViGGO. These are pure-LoRA adapters: there is no DoRA magnitude parameter and no adapted-weight normalization.
+
+The implementation uses the centered update
+
+```text
+W_eff = W + B @ normalize(A) - B0 @ normalize(A0)
+```
+
+for the combined method. `A` is the down/input factor and NoRA applies differentiable column normalization to both the live and frozen initial factors. The LoRA and NoRA controls use the conventional random-down/zero-up Kaiming initialization. IniLoRA-alpha uses both factors nonzero with centered compensation. Scale is tuned separately for each initializer family on validation data, along with the learning rate. Only the selected setting receives fresh final fits at seeds 42, 43, and 44; held-out test data is not used for selection.
+
+| Method | SciFact nDCG@10 ×100 ↑ | NFCorpus nDCG@10 ×100 ↑ | ViGGO exact match % ↑ | Aircraft macro accuracy % ↑ |
+|:--|--:|--:|--:|--:|
+| LoRA | 65.60 ± 0.45 | 32.16 ± 0.08 | 66.54 ± 0.81 | 60.58 ± 0.62 |
+| NoRA | 68.65 ± 1.54 | 31.77 ± 0.41 | 75.65 ± 2.51 | 59.25 ± 0.73 |
+| IniLoRA-alpha | **70.59 ± 1.65** | **32.34 ± 0.25** | **80.60 ± 2.29** | **59.70 ± 1.10** |
+| IniLoRA-alpha + NoRA | 70.13 ± 1.23 | 31.88 ± 0.48 | 73.83 ± 10.58 | 57.71 ± 0.56 |
+
+Values are mean ± sample standard deviation over the three final training seeds. Selected scales and learning rates were: SciFact, IniLoRA 1.0 and combined 0.25; NFCorpus, 0.25 and 1.0; ViGGO, 0.25 and 0.5; Aircraft, 0.25 and 0.25. The full selected-setting table, machine-readable summary, source hashes and raw run roots are in the [study results](results/2026-10-13-pure-lora-inilora-nora/table.md) and [summary](results/2026-10-13-pure-lora-inilora-nora/summary.json).
+
+![Pure-LoRA IniLoRA-alpha and NoRA comparison; bars show means and whiskers show sample SD](results/2026-10-13-pure-lora-inilora-nora/pure_lora_comparison.png)
+
+The [runner](experiments/pure_lora_retrieval.py), [extraction runner](experiments/pure_lora_extraction.py), [Aircraft runner](experiments/pure_lora_aircraft.py), and [backend tests](experiments/test_inilora_nora_lora.py) retain the exact protocol and implementation. All 48 final fits passed, and the four focused backend tests pass. The result is exploratory: each task has three training seeds, the initializer grid is small, and no multiple-comparison correction is applied.
