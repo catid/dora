@@ -1,0 +1,401 @@
+{
+  "schema": "pure-lora-inilora-nora-compatibility-summary-v1",
+  "protocol": "The four previously reported controls are copied from the locked baseline summary. The compatibility row is selected from five NoRA factor geometries \u00d7 four scales \u00d7 the task LR grid using validation only; only that row receives three fresh held-out seeds.",
+  "tasks": {
+    "scifact": {
+      "label": "SciFact",
+      "metric": "nDCG@10 \u00d7100",
+      "methods": {
+        "lora": {
+          "candidate_id": "lora",
+          "label": "LoRA",
+          "scores": [
+            65.47465030481168,
+            65.22058910866329,
+            66.10146061272982
+          ],
+          "mean": 65.59890000873493,
+          "sample_sd": 0.4533896154113717,
+          "selected_lr": 0.001
+        },
+        "nora": {
+          "candidate_id": "nora",
+          "label": "NoRA",
+          "scores": [
+            66.98744245434798,
+            68.93693068184578,
+            70.02387980961402
+          ],
+          "mean": 68.6494176486026,
+          "sample_sd": 1.5385011411524092,
+          "selected_lr": 0.001
+        },
+        "inilora": {
+          "candidate_id": "inilora_alpha_s1",
+          "label": "IniLoRA-alpha",
+          "scores": [
+            68.83031505634855,
+            70.83542804326612,
+            72.09663769451885
+          ],
+          "mean": 70.58746026471117,
+          "sample_sd": 1.6472194476016375,
+          "selected_lr": 0.001,
+          "selected_scale": 1.0
+        },
+        "inilora_nora": {
+          "candidate_id": "inilora_alpha_nora_s0.25",
+          "label": "IniLoRA-alpha + NoRA",
+          "scores": [
+            69.02448032518818,
+            69.89987565794988,
+            71.4521711263434
+          ],
+          "mean": 70.12550903649382,
+          "sample_sd": 1.2294728433919502,
+          "selected_lr": 0.001,
+          "selected_scale": 0.25
+        },
+        "compatibility": {
+          "candidate_id": "inilora_nora_up_anchor_s1",
+          "label": "IniLoRA-alpha + NoRA[up_anchor] s=1",
+          "mode": "up_anchor",
+          "scale": 1.0,
+          "selected_lr": 0.001,
+          "scores": [
+            68.7238462630689,
+            70.55494735309213,
+            72.23183395081304
+          ],
+          "mean": 70.5035425223247,
+          "sample_sd": 1.7545587042931279,
+          "completion": {
+            "status": "complete",
+            "task": "scifact",
+            "candidate_count": 20,
+            "pilot_count": 20,
+            "final_count": 3,
+            "selected_candidate": {
+              "candidate_id": "inilora_nora_up_anchor_s1",
+              "label": "IniLoRA-alpha + NoRA[up_anchor] s=1",
+              "mode": "up_anchor",
+              "scale": 1.0,
+              "selected_lr": 0.001,
+              "selected_validation": 0.755299785262059,
+              "trials": [
+                {
+                  "lr": 0.0001,
+                  "metric": 0.6756884371114795,
+                  "fit_id": "pilots/inilora_nora_up_anchor_s1/lr_0.0001",
+                  "checkpoint_sha256": "c7ba45ca89f9e9d08c08481b901c344a49ac16cac495cd689bebee553a085c3e"
+                },
+                {
+                  "lr": 0.001,
+                  "metric": 0.755299785262059,
+                  "fit_id": "pilots/inilora_nora_up_anchor_s1/lr_0.001",
+                  "checkpoint_sha256": "0460721b441c42af81d0bccf85333496afbee2c652fa21f6035ece7032f2e95e"
+                }
+              ]
+            },
+            "test_used_for_selection": false,
+            "manifest_sha256": "5cb4c5a8677b75c813283d25aa30d92a5f610b04e9a41de4d031f83a79fa0123"
+          },
+          "manifest_sha256": "5cb4c5a8677b75c813283d25aa30d92a5f610b04e9a41de4d031f83a79fa0123",
+          "pilot_selection_sha256": "f21b69089bc04fadbda612565fc8805f160c6a31a602b7454866912a233f0ef9",
+          "final_results_sha256": "a6fb73209bc05a914a4b76e4b44e17f85eb5f9a59a938fd88af0b5c9cb03772d",
+          "artifact_root": "/var/tmp/dora-bench/pure_lora_mix_v3/scifact"
+        }
+      }
+    },
+    "nfcorpus": {
+      "label": "NFCorpus",
+      "metric": "nDCG@10 \u00d7100",
+      "methods": {
+        "lora": {
+          "candidate_id": "lora",
+          "label": "LoRA",
+          "scores": [
+            32.08041796109681,
+            32.24141873994977,
+            32.15016580784552
+          ],
+          "mean": 32.1573341696307,
+          "sample_sd": 0.08073940646194569,
+          "selected_lr": 0.0003
+        },
+        "nora": {
+          "candidate_id": "nora",
+          "label": "NoRA",
+          "scores": [
+            31.311290142208087,
+            32.104211686226805,
+            31.895286194015675
+          ],
+          "mean": 31.77026267415019,
+          "sample_sd": 0.41097968822306,
+          "selected_lr": 0.0001
+        },
+        "inilora": {
+          "candidate_id": "inilora_alpha_s0.25",
+          "label": "IniLoRA-alpha",
+          "scores": [
+            32.06784511705731,
+            32.37608245385994,
+            32.571251190944764
+          ],
+          "mean": 32.33839292062067,
+          "sample_sd": 0.2538105484284304,
+          "selected_lr": 0.0001,
+          "selected_scale": 0.25
+        },
+        "inilora_nora": {
+          "candidate_id": "inilora_alpha_nora_s1",
+          "label": "IniLoRA-alpha + NoRA",
+          "scores": [
+            31.34653869370666,
+            32.04611614006506,
+            32.25512729565407
+          ],
+          "mean": 31.88259404314193,
+          "sample_sd": 0.4758549348633372,
+          "selected_lr": 0.0001,
+          "selected_scale": 1.0
+        },
+        "compatibility": {
+          "candidate_id": "inilora_nora_up_anchor_s0.25",
+          "label": "IniLoRA-alpha + NoRA[up_anchor] s=0.25",
+          "mode": "up_anchor",
+          "scale": 0.25,
+          "selected_lr": 0.0001,
+          "scores": [
+            32.0684684944248,
+            32.39556256714042,
+            32.4062724861067
+          ],
+          "mean": 32.29010118255731,
+          "sample_sd": 0.19201422324322096,
+          "completion": {
+            "status": "complete",
+            "task": "nfcorpus",
+            "candidate_count": 20,
+            "pilot_count": 20,
+            "final_count": 3,
+            "selected_candidate": {
+              "candidate_id": "inilora_nora_up_anchor_s0.25",
+              "label": "IniLoRA-alpha + NoRA[up_anchor] s=0.25",
+              "mode": "up_anchor",
+              "scale": 0.25,
+              "selected_lr": 0.0001,
+              "selected_validation": 0.3109391711372222,
+              "trials": [
+                {
+                  "lr": 3e-05,
+                  "metric": 0.287981500013605,
+                  "fit_id": "pilots/inilora_nora_up_anchor_s0.25/lr_3e-05",
+                  "checkpoint_sha256": "2611314b8b39f45a83555e1a27eb187c9e1e933912d04cb2ed142dfee79fd129"
+                },
+                {
+                  "lr": 0.0001,
+                  "metric": 0.3109391711372222,
+                  "fit_id": "pilots/inilora_nora_up_anchor_s0.25/lr_0.0001",
+                  "checkpoint_sha256": "9708214c454700f4a7ac366892bbecb3989158730c3b1d4111cc4f5eeb24df21"
+                },
+                {
+                  "lr": 0.0003,
+                  "metric": 0.30221552106861027,
+                  "fit_id": "pilots/inilora_nora_up_anchor_s0.25/lr_0.0003",
+                  "checkpoint_sha256": "f689e5cf894d57130785b07d713c0edee60c959b8b28e302ee9519c273625f25"
+                },
+                {
+                  "lr": 0.001,
+                  "metric": 0.28407403061428466,
+                  "fit_id": "pilots/inilora_nora_up_anchor_s0.25/lr_0.001",
+                  "checkpoint_sha256": "cc4e71cfb81d94b4ebb95d30b2ea3d1ba009e298cb54cd80538c6f5a6850370d"
+                }
+              ]
+            },
+            "test_used_for_selection": false,
+            "manifest_sha256": "7503fc5e6d57ea1bfaa4e6666c89b03374ea12d01c8a61433bfd6948daad8a18"
+          },
+          "manifest_sha256": "7503fc5e6d57ea1bfaa4e6666c89b03374ea12d01c8a61433bfd6948daad8a18",
+          "pilot_selection_sha256": "6fc386fcc706dc0144e7a7283387adaae33f78043ab62c8300371e58c4ce4895",
+          "final_results_sha256": "8bfb7f8e742f0884f599f7217cd3d406b985f60cae49152aad24f438a1a1f241",
+          "artifact_root": "/var/tmp/dora-bench/pure_lora_mix_v3/nfcorpus"
+        }
+      }
+    },
+    "extraction": {
+      "label": "ViGGO",
+      "metric": "exact match %",
+      "methods": {
+        "lora": {
+          "candidate_id": "lora",
+          "label": "LoRA",
+          "scores": [
+            65.625,
+            67.1875,
+            66.796875
+          ],
+          "mean": 66.53645833333333,
+          "sample_sd": 0.8131507810414581,
+          "selected_lr": 0.0003
+        },
+        "nora": {
+          "candidate_id": "nora",
+          "label": "NoRA",
+          "scores": [
+            73.828125,
+            74.609375,
+            78.515625
+          ],
+          "mean": 75.65104166666667,
+          "sample_sd": 2.5113673856752485,
+          "selected_lr": 0.0003
+        },
+        "inilora": {
+          "candidate_id": "inilora_alpha_s0.25",
+          "label": "IniLoRA-alpha",
+          "scores": [
+            78.90625,
+            83.203125,
+            79.6875
+          ],
+          "mean": 80.59895833333333,
+          "sample_sd": 2.2888536238602795,
+          "selected_lr": 0.0003,
+          "selected_scale": 0.25
+        },
+        "inilora_nora": {
+          "candidate_id": "inilora_alpha_nora_s0.5",
+          "label": "IniLoRA-alpha + NoRA",
+          "scores": [
+            81.25,
+            78.515625,
+            61.71875
+          ],
+          "mean": 73.828125,
+          "sample_sd": 10.57577060209444,
+          "selected_lr": 0.0003,
+          "selected_scale": 0.5
+        },
+        "compatibility": {
+          "candidate_id": "inilora_nora_down_learned_s0.25",
+          "label": "IniLoRA-alpha + NoRA[down_learned] s=0.25",
+          "mode": "down_learned",
+          "scale": 0.25,
+          "selected_lr": 0.0003,
+          "scores": [
+            83.203125,
+            79.296875,
+            73.046875
+          ],
+          "mean": 78.515625,
+          "sample_sd": 5.122998847110938,
+          "completion": {
+            "status": "complete",
+            "selected_ids": [
+              "inilora_nora_down_learned_s0.25"
+            ],
+            "pilot_count": 20,
+            "final_count": 3,
+            "test_used_for_selection": false,
+            "manifest_sha256": "4f9966b9cab04c04f5cdc163d44d4220112a5a397d3cdc65a31a86e9af9a2d11"
+          },
+          "manifest_sha256": "4f9966b9cab04c04f5cdc163d44d4220112a5a397d3cdc65a31a86e9af9a2d11",
+          "pilot_selection_sha256": "39990441b433f0fb1c239fdcfffd891be82e38f07d5c51738cacaa5c9a4562c8",
+          "final_results_sha256": "e4ce31c26b3e3f354a2e916b6d5973a82371bf4f55fb29187f2f74b952b3d29e",
+          "artifact_root": "/var/tmp/dora-bench/pure_lora_mix_v3/extraction"
+        }
+      }
+    },
+    "aircraft": {
+      "label": "Aircraft",
+      "metric": "macro accuracy %",
+      "methods": {
+        "lora": {
+          "candidate_id": "lora",
+          "label": "LoRA",
+          "scores": [
+            60.46880483627319,
+            60.02228260040283,
+            61.254894733428955
+          ],
+          "mean": 60.58199405670166,
+          "sample_sd": 0.6240528962649763,
+          "selected_lr": 0.001
+        },
+        "nora": {
+          "candidate_id": "nora",
+          "label": "NoRA",
+          "scores": [
+            58.49999785423279,
+            59.3048095703125,
+            59.95365381240845
+          ],
+          "mean": 59.25282041231791,
+          "sample_sd": 0.7282211653039468,
+          "selected_lr": 0.001
+        },
+        "inilora": {
+          "candidate_id": "inilora_alpha_s0.25",
+          "label": "IniLoRA-alpha",
+          "scores": [
+            58.42870473861694,
+            60.31283140182495,
+            60.34759283065796
+          ],
+          "mean": 59.69637632369995,
+          "sample_sd": 1.0979733716961342,
+          "selected_lr": 0.001,
+          "selected_scale": 0.25
+        },
+        "inilora_nora": {
+          "candidate_id": "inilora_alpha_nora_s0.25",
+          "label": "IniLoRA-alpha + NoRA",
+          "scores": [
+            57.53743052482605,
+            57.25489854812622,
+            58.34313631057739
+          ],
+          "mean": 57.71182179450989,
+          "sample_sd": 0.5646898202665239,
+          "selected_lr": 0.0003,
+          "selected_scale": 0.25
+        },
+        "compatibility": {
+          "candidate_id": "inilora_nora_down_anchor_s0.25",
+          "label": "IniLoRA-alpha + NoRA[down_anchor] s=0.25",
+          "mode": "down_anchor",
+          "scale": 0.25,
+          "selected_lr": 0.001,
+          "scores": [
+            58.88680815696716,
+            59.32442545890808,
+            59.802138805389404
+          ],
+          "mean": 59.33779080708822,
+          "sample_sd": 0.45781166802982676,
+          "completion": {
+            "status": "complete",
+            "selected_ids": [
+              "inilora_nora_down_anchor_s0.25"
+            ],
+            "pilot_count": 20,
+            "pilot_fit_count": 80,
+            "final_count": 3,
+            "test_used_for_selection": false,
+            "manifest_sha256": "baff1013189fccd24159d3b9a81886a516bb8a81da183c6a961303538d1d02da",
+            "shards": [
+              "/var/tmp/dora-bench/pure_lora_mix_v3/aircraft_shardA",
+              "/var/tmp/dora-bench/pure_lora_mix_v3/aircraft_shardB"
+            ]
+          },
+          "manifest_sha256": "baff1013189fccd24159d3b9a81886a516bb8a81da183c6a961303538d1d02da",
+          "pilot_selection_sha256": "dfbec4e28122966a099287281db8c343d8c4fe244e9bafe061a9bcf911521312",
+          "final_results_sha256": "e38a9eaee66dcd620ca3c6eb64a740ac9c34c6c247bee9794feb2fe7d1813474",
+          "artifact_root": "/var/tmp/dora-bench/pure_lora_mix_v3/aircraft"
+        }
+      }
+    }
+  }
+}

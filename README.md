@@ -616,3 +616,21 @@ Values are mean ± sample standard deviation over the three final training seeds
 ![Pure-LoRA IniLoRA-alpha and NoRA comparison; bars show means and whiskers show sample SD](results/2026-10-13-pure-lora-inilora-nora/pure_lora_comparison.png)
 
 The [runner](experiments/pure_lora_retrieval.py), [extraction runner](experiments/pure_lora_extraction.py), [Aircraft runner](experiments/pure_lora_aircraft.py), and [backend tests](experiments/test_inilora_nora_lora.py) retain the exact protocol and implementation. All 48 final fits passed, and the four focused backend tests pass. The result is exploratory: each task has three training seeds, the initializer grid is small, and no multiple-comparison correction is applied.
+
+## Corrected pure-LoRA IniLoRA-alpha and NoRA compatibility sweep (2026-10-13)
+
+The compatibility sweep expands the comparison above with five ways to place NoRA's normalization around the IniLoRA-alpha factors: `down_unit`, `down_anchor`, `down_learned`, `up_anchor`, and `both_anchor`. Each task retunes the initializer scale (`0.25`, `0.5`, `1`, or `2`) and learning rate on validation data. The selected candidate alone receives fresh held-out final fits at seeds 42, 43, and 44. The first four rows below are locked controls from the preceding pure-LoRA protocol; the compatible row is the corrected fresh sweep. This corrected run also freezes the exact initial live gain in `down_learned`; that removes the FP32 round-trip startup residual and passes the CUDA identity probe.
+
+| Method | SciFact nDCG@10 ×100 ↑ | NFCorpus nDCG@10 ×100 ↑ | ViGGO exact match % ↑ | Aircraft macro accuracy % ↑ |
+|:--|--:|--:|--:|--:|
+| LoRA | 65.60 ± 0.45 | 32.16 ± 0.08 | 66.54 ± 0.81 | 60.58 ± 0.62 |
+| NoRA | 68.65 ± 1.54 | 31.77 ± 0.41 | 75.65 ± 2.51 | 59.25 ± 0.73 |
+| IniLoRA-alpha | 70.59 ± 1.65 | 32.34 ± 0.25 | 80.60 ± 2.29 | 59.70 ± 1.10 |
+| Original IniLoRA-alpha + NoRA | 70.13 ± 1.23 | 31.88 ± 0.48 | 73.83 ± 10.58 | 57.71 ± 0.56 |
+| Best compatible mix | 70.50 ± 1.75 | 32.29 ± 0.19 | 78.52 ± 5.12 | 59.34 ± 0.46 |
+
+The best geometry is task-specific: `up_anchor`, scale 1 and LR 0.001 on SciFact; `up_anchor`, scale 0.25 and LR 0.0001 on NFCorpus; `down_learned`, scale 0.25 and LR 0.0003 on ViGGO; and `down_anchor`, scale 0.25 and LR 0.001 on Aircraft. The compatible mix improves on the historical combined row on all four tasks, but remains below standalone IniLoRA-alpha on every task. These are exploratory three-seed results without multiple-comparison correction.
+
+![Corrected pure-LoRA IniLoRA-alpha/NoRA compatibility sweep; bars show means and whiskers show sample SD](results/2026-10-13-pure-lora-inilora-nora/compatibility_comparison.png)
+
+The [corrected table](results/2026-10-13-pure-lora-inilora-nora/compatibility_table.md), [machine-readable summary](results/2026-10-13-pure-lora-inilora-nora/compatibility_summary.json), and [aggregate script](results/2026-10-13-pure-lora-inilora-nora/aggregate_compatibility.py) retain the selected settings, checksums, and raw artifact roots. The implementation is in [inilora_nora_variants.py](experiments/inilora_nora_variants.py), with [focused backend tests](experiments/test_inilora_nora_variants.py) and task runners for [retrieval](experiments/pure_lora_variant_retrieval.py), [extraction](experiments/pure_lora_variant_extraction.py), and [Aircraft](experiments/pure_lora_variant_aircraft.py). All 80 pilot fits per task and all 12 selected final fits completed.
