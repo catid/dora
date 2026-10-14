@@ -10,8 +10,8 @@
   ],
   "counts": {
     "total": 959,
-    "pending": 912,
-    "complete": 47,
+    "pending": 911,
+    "complete": 48,
     "failed": 0,
     "blocked": 0,
     "not_in_scope": 0
@@ -455,8 +455,8 @@
       "run_id": "hpo_I_WIDE_lr0.001_s4",
       "stage": "B_hpo",
       "method_id": "I_WIDE",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "tune_I_WIDE_1002_a",
@@ -519,7 +519,7 @@
       "stage": "B_hpo",
       "method_id": "ADALORA_REF",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "hpo_ADALORA_REF_lr1e-05_s1",

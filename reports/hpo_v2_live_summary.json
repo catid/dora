@@ -46,8 +46,8 @@
     "I_RAW_UNCERTAINTY",
     "I_GATE_UNCERTAINTY"
   ],
-  "rows": 47,
-  "complete_rows": 47,
+  "rows": 48,
+  "complete_rows": 48,
   "best_by_method": {
     "I_FIXED": {
       "run_id": "hpo_I_FIXED_lr0.0001_s4",
