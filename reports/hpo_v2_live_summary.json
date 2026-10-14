@@ -46,8 +46,8 @@
     "I_RAW_UNCERTAINTY",
     "I_GATE_UNCERTAINTY"
   ],
-  "rows": 36,
-  "complete_rows": 36,
+  "rows": 47,
+  "complete_rows": 47,
   "best_by_method": {
     "I_FIXED": {
       "run_id": "hpo_I_FIXED_lr0.0001_s4",
@@ -66,6 +66,24 @@
       "status": "complete",
       "source_revision": "ab39c71fc36776ab3c29570831bd66b0503cbcbe",
       "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr0.0001_s4"
+    },
+    "I_WIDE": {
+      "run_id": "hpo_I_WIDE_lr0.0001_s4",
+      "method": "I_WIDE",
+      "stage": "hpo",
+      "seed": 1001,
+      "lr": 0.0001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "updates": 128,
+      "input_tokens": 1068437,
+      "supervised_tokens": 794312,
+      "elapsed_s": 593.2726476192474,
+      "dev_group_balanced_nll": 0.21533881349751027,
+      "dev_token_weighted_nll": 0.21304629340798997,
+      "status": "complete",
+      "source_revision": "484be9c88415056636051b14ee7c864d944fa400",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr0.0001_s4"
     },
     "L_FIXED": {
       "run_id": "hpo_L_FIXED_lr0.001_s4",
