@@ -48,6 +48,10 @@ def main():
     for j in jobs(a.root,a.data_root,a.manifest_root,a.updates,a.seed,16,8):
         out=Path(j['out']);
         if a.resume and (out/'metadata.json').exists(): continue
+        out.mkdir(parents=True, exist_ok=True)
+        # Clear a stale status from an interrupted/retried attempt. The run is
+        # pending until a worker is assigned; it is not a terminal failure.
+        (out/'launcher_status.json').write_text(json.dumps({'status':'pending','stage':'v2_hpo'},indent=2)+'\n')
         queue.append(j)
     i=0
     while i<len(queue) or active:

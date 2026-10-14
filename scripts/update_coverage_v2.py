@@ -3,6 +3,7 @@
 from __future__ import annotations
 import argparse, hashlib, json
 from pathlib import Path
+import os
 
 
 def candidates(run, roots):
@@ -27,6 +28,17 @@ def candidates(run, roots):
 def inspect(run, roots):
     status, reason = "pending", ""
     for d in candidates(run, roots):
+        # A prior failed attempt may have left a stale launcher status while a
+        # resumable retry is currently training in the same directory. Inspect
+        # command lines so live work is reported as pending rather than failed.
+        try:
+            live = any(str(d) in Path(f"/proc/{pid}/cmdline").read_bytes().replace(b"\x00", b" ").decode(errors="ignore")
+                       for pid in os.listdir("/proc") if pid.isdigit())
+        except OSError:
+            live = False
+        if live:
+            status, reason = "pending", "running"
+            continue
         metadata = d / "metadata.json"
         launcher = d / "launcher_status.json"
         if metadata.exists():

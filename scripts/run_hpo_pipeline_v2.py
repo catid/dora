@@ -43,6 +43,9 @@ def main():
     for job in jobs(a.root, a.data_root, a.manifest_root, a.updates, a.seed, 16, 8):
         if a.resume and (Path(job["out"]) / "metadata.json").exists():
             continue
+        Path(job["out"]).mkdir(parents=True, exist_ok=True)
+        (Path(job["out"]) / "launcher_status.json").write_text(json.dumps({
+            "status": "pending", "stage": "v2_pipeline_hpo"}, indent=2) + "\n")
         queue.append(job)
     i = 0
     while i < len(queue) or active:
