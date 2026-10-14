@@ -76,8 +76,12 @@ def main():
     if not manifest_path.exists():
         raise FileNotFoundError(manifest_path)
     manifest = json.loads(manifest_path.read_text())
-    if len(manifest["updates"]) != args.updates:
+    if args.updates > len(manifest["updates"]):
         raise ValueError(f"manifest has {len(manifest['updates'])} updates, requested {args.updates}")
+    # Short HPO trials consume the prefix of the same sealed paired stream;
+    # full-horizon runs consume all updates. Keeping one manifest preserves
+    # identical row ordering and token accounting across both stages.
+    manifest["updates"] = manifest["updates"][:args.updates]
     train = read_jsonl(Path(args.data_root) / "train.jsonl")
     dev = read_jsonl(Path(args.data_root) / "dev_tune.jsonl")
     tokenizer = AutoTokenizer.from_pretrained(args.model, local_files_only=True)
