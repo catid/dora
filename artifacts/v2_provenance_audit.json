@@ -1,0 +1,153 @@
+{
+  "schema": "adaptive-rank-v2-provenance-audit-v1",
+  "run_root": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001",
+  "revisions": {
+    "4762679bb4c3ab0f2fcd37e9b388277d84a2e38d": {
+      "runs": [
+        "hpo_L_FIXED_lr0.0001_s0.25",
+        "hpo_L_FIXED_lr1e-05_s4",
+        "hpo_L_FIXED_lr1e-05_s1",
+        "hpo_L_FIXED_lr0.0001_s1"
+      ],
+      "training_file_sha256": {
+        "scripts/run_one_v2.py": "d6cdea2d070e51e2b5e73a1a99968624277964993688ebfcb22728f80fd5b2b6",
+        "src/rankstudy/adapters.py": "c19a579c37b8b71285fd61b641aafdcdafe5eac7dd0fee0c767741d0b2046ff3",
+        "src/rankstudy/algebra.py": "cb8f4ef58864aa5dacbce4cf60bac46110ccdefcc1b5adf0b8ac1ed60ba63434",
+        "src/rankstudy/allocator.py": "bd4ce06fefff7f9e2b804a0800e83379d567fd11ba8d3b973a39ec7294f13b06",
+        "src/rankstudy/scores.py": "c040dedd81238bdc67a2db03bf555f13e7b31c632c01849871ecb4d6b4cf1f81",
+        "src/rankstudy/data.py": "7437bba474f239caaccf1e505bc68320e76b82a813548bd08105b10c1bfdda23",
+        "src/rankstudy/v2/data.py": "07d41c9ff0b99163bf8a19700c9aa1d52bd667ffcc588ffddffe86f33fe0a56c"
+      }
+    },
+    "4f0ab296ba5934ad5d893eef3e448d86d75e131c": {
+      "runs": [
+        "hpo_I_FIXED_lr1e-05_s4",
+        "hpo_I_FIXED_lr0.0001_s1",
+        "hpo_I_FIXED_lr0.0001_s0.25",
+        "hpo_I_FIXED_lr1e-05_s1"
+      ],
+      "training_file_sha256": {
+        "scripts/run_one_v2.py": "d6cdea2d070e51e2b5e73a1a99968624277964993688ebfcb22728f80fd5b2b6",
+        "src/rankstudy/adapters.py": "c19a579c37b8b71285fd61b641aafdcdafe5eac7dd0fee0c767741d0b2046ff3",
+        "src/rankstudy/algebra.py": "cb8f4ef58864aa5dacbce4cf60bac46110ccdefcc1b5adf0b8ac1ed60ba63434",
+        "src/rankstudy/allocator.py": "bd4ce06fefff7f9e2b804a0800e83379d567fd11ba8d3b973a39ec7294f13b06",
+        "src/rankstudy/scores.py": "c040dedd81238bdc67a2db03bf555f13e7b31c632c01849871ecb4d6b4cf1f81",
+        "src/rankstudy/data.py": "7437bba474f239caaccf1e505bc68320e76b82a813548bd08105b10c1bfdda23",
+        "src/rankstudy/v2/data.py": "07d41c9ff0b99163bf8a19700c9aa1d52bd667ffcc588ffddffe86f33fe0a56c"
+      }
+    },
+    "69d0ef4617527fa9c5fb37fdca510997bd7db150": {
+      "runs": [
+        "hpo_L_FIXED_lr1e-05_s0.25",
+        "hpo_L_FIXED_lr1e-06_s4",
+        "hpo_L_FIXED_lr1e-06_s0.25",
+        "hpo_L_FIXED_lr1e-06_s1"
+      ],
+      "training_file_sha256": {
+        "scripts/run_one_v2.py": "d6cdea2d070e51e2b5e73a1a99968624277964993688ebfcb22728f80fd5b2b6",
+        "src/rankstudy/adapters.py": "c19a579c37b8b71285fd61b641aafdcdafe5eac7dd0fee0c767741d0b2046ff3",
+        "src/rankstudy/algebra.py": "cb8f4ef58864aa5dacbce4cf60bac46110ccdefcc1b5adf0b8ac1ed60ba63434",
+        "src/rankstudy/allocator.py": "bd4ce06fefff7f9e2b804a0800e83379d567fd11ba8d3b973a39ec7294f13b06",
+        "src/rankstudy/scores.py": "c040dedd81238bdc67a2db03bf555f13e7b31c632c01849871ecb4d6b4cf1f81",
+        "src/rankstudy/data.py": "7437bba474f239caaccf1e505bc68320e76b82a813548bd08105b10c1bfdda23",
+        "src/rankstudy/v2/data.py": "07d41c9ff0b99163bf8a19700c9aa1d52bd667ffcc588ffddffe86f33fe0a56c"
+      }
+    },
+    "7e05caf518a9d5149156cceb21301dcaed2b61a5": {
+      "runs": [
+        "hpo_L_FIXED_lr0.0001_s4",
+        "hpo_L_FIXED_lr0.001_s1",
+        "hpo_L_FIXED_lr0.001_s0.25",
+        "hpo_L_FIXED_lr0.001_s4"
+      ],
+      "training_file_sha256": {
+        "scripts/run_one_v2.py": "d6cdea2d070e51e2b5e73a1a99968624277964993688ebfcb22728f80fd5b2b6",
+        "src/rankstudy/adapters.py": "c19a579c37b8b71285fd61b641aafdcdafe5eac7dd0fee0c767741d0b2046ff3",
+        "src/rankstudy/algebra.py": "cb8f4ef58864aa5dacbce4cf60bac46110ccdefcc1b5adf0b8ac1ed60ba63434",
+        "src/rankstudy/allocator.py": "bd4ce06fefff7f9e2b804a0800e83379d567fd11ba8d3b973a39ec7294f13b06",
+        "src/rankstudy/scores.py": "c040dedd81238bdc67a2db03bf555f13e7b31c632c01849871ecb4d6b4cf1f81",
+        "src/rankstudy/data.py": "7437bba474f239caaccf1e505bc68320e76b82a813548bd08105b10c1bfdda23",
+        "src/rankstudy/v2/data.py": "07d41c9ff0b99163bf8a19700c9aa1d52bd667ffcc588ffddffe86f33fe0a56c"
+      }
+    },
+    "ab39c71fc36776ab3c29570831bd66b0503cbcbe": {
+      "runs": [
+        "hpo_I_FIXED_lr0.0001_s4",
+        "hpo_I_FIXED_lr0.001_s0.25",
+        "hpo_I_FIXED_lr0.001_s1",
+        "hpo_I_FIXED_lr0.001_s4"
+      ],
+      "training_file_sha256": {
+        "scripts/run_one_v2.py": "d6cdea2d070e51e2b5e73a1a99968624277964993688ebfcb22728f80fd5b2b6",
+        "src/rankstudy/adapters.py": "c19a579c37b8b71285fd61b641aafdcdafe5eac7dd0fee0c767741d0b2046ff3",
+        "src/rankstudy/algebra.py": "cb8f4ef58864aa5dacbce4cf60bac46110ccdefcc1b5adf0b8ac1ed60ba63434",
+        "src/rankstudy/allocator.py": "bd4ce06fefff7f9e2b804a0800e83379d567fd11ba8d3b973a39ec7294f13b06",
+        "src/rankstudy/scores.py": "c040dedd81238bdc67a2db03bf555f13e7b31c632c01849871ecb4d6b4cf1f81",
+        "src/rankstudy/data.py": "7437bba474f239caaccf1e505bc68320e76b82a813548bd08105b10c1bfdda23",
+        "src/rankstudy/v2/data.py": "07d41c9ff0b99163bf8a19700c9aa1d52bd667ffcc588ffddffe86f33fe0a56c"
+      }
+    },
+    "e011f30aae58867cbb849937053298b6f259c86b": {
+      "runs": [
+        "hpo_I_FIXED_lr1e-06_s4",
+        "hpo_I_FIXED_lr1e-06_s0.25",
+        "hpo_I_FIXED_lr1e-06_s1",
+        "hpo_I_FIXED_lr1e-05_s0.25"
+      ],
+      "training_file_sha256": {
+        "scripts/run_one_v2.py": "d6cdea2d070e51e2b5e73a1a99968624277964993688ebfcb22728f80fd5b2b6",
+        "src/rankstudy/adapters.py": "c19a579c37b8b71285fd61b641aafdcdafe5eac7dd0fee0c767741d0b2046ff3",
+        "src/rankstudy/algebra.py": "cb8f4ef58864aa5dacbce4cf60bac46110ccdefcc1b5adf0b8ac1ed60ba63434",
+        "src/rankstudy/allocator.py": "bd4ce06fefff7f9e2b804a0800e83379d567fd11ba8d3b973a39ec7294f13b06",
+        "src/rankstudy/scores.py": "c040dedd81238bdc67a2db03bf555f13e7b31c632c01849871ecb4d6b4cf1f81",
+        "src/rankstudy/data.py": "7437bba474f239caaccf1e505bc68320e76b82a813548bd08105b10c1bfdda23",
+        "src/rankstudy/v2/data.py": "07d41c9ff0b99163bf8a19700c9aa1d52bd667ffcc588ffddffe86f33fe0a56c"
+      }
+    }
+  },
+  "common_training_files": {
+    "scripts/run_one_v2.py": {
+      "unique_hashes": [
+        "d6cdea2d070e51e2b5e73a1a99968624277964993688ebfcb22728f80fd5b2b6"
+      ],
+      "identical_across_revisions": true
+    },
+    "src/rankstudy/adapters.py": {
+      "unique_hashes": [
+        "c19a579c37b8b71285fd61b641aafdcdafe5eac7dd0fee0c767741d0b2046ff3"
+      ],
+      "identical_across_revisions": true
+    },
+    "src/rankstudy/algebra.py": {
+      "unique_hashes": [
+        "cb8f4ef58864aa5dacbce4cf60bac46110ccdefcc1b5adf0b8ac1ed60ba63434"
+      ],
+      "identical_across_revisions": true
+    },
+    "src/rankstudy/allocator.py": {
+      "unique_hashes": [
+        "bd4ce06fefff7f9e2b804a0800e83379d567fd11ba8d3b973a39ec7294f13b06"
+      ],
+      "identical_across_revisions": true
+    },
+    "src/rankstudy/scores.py": {
+      "unique_hashes": [
+        "c040dedd81238bdc67a2db03bf555f13e7b31c632c01849871ecb4d6b4cf1f81"
+      ],
+      "identical_across_revisions": true
+    },
+    "src/rankstudy/data.py": {
+      "unique_hashes": [
+        "7437bba474f239caaccf1e505bc68320e76b82a813548bd08105b10c1bfdda23"
+      ],
+      "identical_across_revisions": true
+    },
+    "src/rankstudy/v2/data.py": {
+      "unique_hashes": [
+        "07d41c9ff0b99163bf8a19700c9aa1d52bd667ffcc588ffddffe86f33fe0a56c"
+      ],
+      "identical_across_revisions": true
+    }
+  },
+  "all_common_training_files_identical": true
+}
