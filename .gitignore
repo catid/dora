@@ -122,6 +122,10 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.venv-study/
+/runs/
+/artifacts/cache/
+/artifacts/data/
 env/
 venv/
 ENV/
@@ -161,3 +165,8 @@ cython_debug/
 
 # Round-two evidence is published as checksum-verified parts for GitHub's API.
 /results/2026-10-08-round2/raw_artifacts.tar.gz
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key

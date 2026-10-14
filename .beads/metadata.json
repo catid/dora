@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "arank",
+  "project_id": "9b2f0c11-39cc-4ac8-ab0a-e62a3d43f8a5"
+}
