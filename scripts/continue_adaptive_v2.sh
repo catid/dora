@@ -27,28 +27,40 @@ while pgrep -f "scripts/run_hpo_v2.py --root ${HPO}" >/dev/null; do
   sleep 60
 done
 
+echo "[$(date -u +%FT%TZ)] reporting corrected native HPO"
+"$PY" scripts/report_v2.py --roots "$HPO" \
+  --out reports/hpo_v2.csv --summary reports/hpo_v2_summary.json
+
 echo "[$(date -u +%FT%TZ)] launching/resuming corrected native tuning"
 "$PY" scripts/run_tune_v2.py \
   --hpo-root "$HPO" --out-root "$TUNE" \
   --gpus 0,1,2,3 --updates 512 --seeds 1002,1003 \
   --python "$PY" --microbatch 2 --resume
+"$PY" scripts/report_v2.py --roots "$TUNE" \
+  --out reports/tuning_v2.csv --summary reports/tuning_v2_summary.json
 
 echo "[$(date -u +%FT%TZ)] launching/resuming corrected native screening"
 "$PY" scripts/run_screen_v2.py \
   --tune-root "$TUNE" --out-root "$SCREEN" \
   --gpus 0,1,2,3 --updates 512 --seeds 2001,2002,2003 \
   --python "$PY" --microbatch 2 --resume
+"$PY" scripts/report_v2.py --roots "$SCREEN" \
+  --out reports/screening_v2.csv --summary reports/screening_v2_summary.json
 
 echo "[$(date -u +%FT%TZ)] launching/resuming pipeline HPO"
 "$PY" scripts/run_hpo_pipeline_v2.py \
   --root "$PIPE_HPO" --data-root /var/tmp/dora-adaptive-rank/data_v2 \
   --manifest-root artifacts/manifests_v2 --updates 128 --seed 1001 \
   --gpus 0,1,2,3 --python "$PY" --microbatch 2 --resume
+"$PY" scripts/report_v2.py --roots "$PIPE_HPO" \
+  --out reports/pipeline_hpo_v2.csv --summary reports/pipeline_hpo_v2_summary.json
 
 echo "[$(date -u +%FT%TZ)] launching/resuming pipeline tuning"
 "$PY" scripts/run_tune_pipeline_v2.py \
   --hpo-root "$PIPE_HPO" --out-root "$PIPE_TUNE" \
   --gpus 0,1,2,3 --updates 512 --seeds 1002,1003 \
   --python "$PY" --microbatch 2 --resume
+"$PY" scripts/report_v2.py --roots "$PIPE_TUNE" \
+  --out reports/pipeline_tuning_v2.csv --summary reports/pipeline_tuning_v2_summary.json
 
 echo "[$(date -u +%FT%TZ)] continuation reached pipeline tuning terminal state"
