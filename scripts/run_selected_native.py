@@ -12,7 +12,7 @@ from rankstudy.registry import build_registry
 
 SUPPORTED={"fixed","wide","reference","online","allocation_control","triplet","triplet_ortho","online_uncertainty"}
 
-def load_jobs(hpo_root, seed_list, out_root, updates):
+def load_jobs(hpo_root, seed_list, out_root, updates, resume=False):
   by=defaultdict(list)
   for d in Path(hpo_root).iterdir():
     c=d/'config.json'; m=d/'metadata.json'
@@ -36,18 +36,20 @@ def load_jobs(hpo_root, seed_list, out_root, updates):
     for ci,cf in enumerate(chosen):
       for seed in seed_list:
         out=Path(out_root)/f'{mid}_c{ci+1}_seed{seed}'
+        if resume and (out/'metadata.json').exists(): continue
         jobs.append({'method':mid,'init':spec.init,'lr':cf['lr'],'scale':cf['scale'],'seed':seed,'rank':rank,'target_rank':8,'updates':updates,'out':str(out)})
   return jobs
 
 def main():
- ap=argparse.ArgumentParser(); ap.add_argument('--hpo-root',required=True); ap.add_argument('--out-root',required=True); ap.add_argument('--gpus',default='0,1,2,3'); ap.add_argument('--updates',type=int,default=512); ap.add_argument('--seeds',default='1002,1003'); ap.add_argument('--python',default='.venv/bin/python'); args=ap.parse_args()
- jobs=load_jobs(args.hpo_root,[int(x) for x in args.seeds.split(',')],args.out_root,args.updates); Path(args.out_root).mkdir(parents=True,exist_ok=True)
+ ap=argparse.ArgumentParser(); ap.add_argument('--hpo-root',required=True); ap.add_argument('--out-root',required=True); ap.add_argument('--gpus',default='0,1,2,3'); ap.add_argument('--updates',type=int,default=512); ap.add_argument('--seeds',default='1002,1003'); ap.add_argument('--python',default='.venv/bin/python'); ap.add_argument('--microbatch',type=int,default=1); ap.add_argument('--resume',action='store_true'); args=ap.parse_args()
+ jobs=load_jobs(args.hpo_root,[int(x) for x in args.seeds.split(',')],args.out_root,args.updates,args.resume); Path(args.out_root).mkdir(parents=True,exist_ok=True)
  gpus=[x.strip() for x in args.gpus.split(',') if x.strip()]; free=list(gpus); active={}; i=0
  while i<len(jobs) or active:
   while i<len(jobs) and free:
    j=jobs[i]; i+=1; out=Path(j['out']); out.mkdir(parents=True,exist_ok=True)
    cmd=[args.python,'scripts/run_one.py']
    for k in ('method','init','scale','lr','seed','updates','rank','target_rank','out'): cmd += [f'--{k.replace("_","-")}',str(j[k])]
+   cmd += ['--microbatch',str(args.microbatch)]
    gpu=free.pop(0); env=os.environ.copy(); env.update({'CUDA_VISIBLE_DEVICES':gpu,'PYTHONPATH':'src','HF_HOME':os.environ.get('HF_HOME','/var/tmp/dora-adaptive-rank/hf')})
    log=(out/'stdout.log').open('w'); p=subprocess.Popen(cmd,env=env,stdout=log,stderr=subprocess.STDOUT)
    active[p.pid]=(p,log,j,gpu); print(json.dumps({'event':'launch','pid':p.pid,'gpu':gpu,**{k:j[k] for k in ('method','lr','scale','seed')}}),flush=True)

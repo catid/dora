@@ -21,7 +21,7 @@ def select(tune_root):
  return out
 
 def main():
- ap=argparse.ArgumentParser(); ap.add_argument('--tune-root',required=True); ap.add_argument('--out-root',required=True); ap.add_argument('--gpus',default='0,1,2,3'); ap.add_argument('--updates',type=int,default=512); ap.add_argument('--seeds',default='2001,2002,2003'); ap.add_argument('--python',default='.venv/bin/python'); args=ap.parse_args()
+ ap=argparse.ArgumentParser(); ap.add_argument('--tune-root',required=True); ap.add_argument('--out-root',required=True); ap.add_argument('--gpus',default='0,1,2,3'); ap.add_argument('--updates',type=int,default=512); ap.add_argument('--seeds',default='2001,2002,2003'); ap.add_argument('--python',default='.venv/bin/python'); ap.add_argument('--microbatch',type=int,default=1); args=ap.parse_args()
  specmap={x.id:x for x in build_registry()}; chosen=select(args.tune_root); jobs=[]
  for mid,cf in sorted(chosen.items()):
   spec=specmap[mid]
@@ -34,6 +34,7 @@ def main():
    j=jobs[i]; i+=1; out=Path(j['out']); out.mkdir(parents=True,exist_ok=True)
    cmd=[args.python,'scripts/run_one.py']
    for k in ('method','init','scale','lr','seed','updates','rank','target_rank','out'): cmd += [f'--{k.replace("_","-")}',str(j[k])]
+   cmd += ['--microbatch',str(args.microbatch)]
    gpu=free.pop(0); env=os.environ.copy(); env.update({'CUDA_VISIBLE_DEVICES':gpu,'PYTHONPATH':'src','HF_HOME':os.environ.get('HF_HOME','/var/tmp/dora-adaptive-rank/hf')})
    log=(out/'stdout.log').open('w'); p=subprocess.Popen(cmd,env=env,stdout=log,stderr=subprocess.STDOUT); active[p.pid]=(p,log,j,gpu)
    print(json.dumps({'event':'launch','pid':p.pid,'gpu':gpu,'method':j['method'],'seed':j['seed']}),flush=True)

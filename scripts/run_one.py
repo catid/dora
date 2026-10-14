@@ -22,15 +22,15 @@ def loss_fn(logits,labels):
     total,n=loss_sum_count(logits,labels)
     return total / max(1, int(n))
 
-def safe_stream_batches(ds, seed):
+def safe_stream_batches(ds, seed, microbatch=1):
     """Length-aware microbatches with a fixed token-memory cap.
 
     The effective update still accumulates by token count. Splitting only long
     padded batches preserves example order/IDs while avoiding a rare pair of
     2048-token examples exceeding card memory.
     """
-    for batch in stream_batches(ds,seed,batch_size=2):
-        if batch['input_ids'].shape[0] == 2 and int(batch['input_ids'].shape[0]*batch['input_ids'].shape[1]) > 1800:
+    for batch in stream_batches(ds,seed,batch_size=microbatch):
+        if batch['input_ids'].shape[0] > 1 and int(batch['input_ids'].shape[0]*batch['input_ids'].shape[1]) > 1800:
             for i in range(2):
                 yield {k:v[i:i+1] for k,v in batch.items()}
         else:
@@ -46,7 +46,7 @@ def evaluate(model, ds, seed, device):
     model.train(); return total/max(1,count)
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--method',required=True); ap.add_argument('--init',choices=['L','I','T0','T1','ADALORA'],default=None); ap.add_argument('--scale',type=float,default=1.); ap.add_argument('--lr',type=float,default=1e-4); ap.add_argument('--seed',type=int,default=2001); ap.add_argument('--updates',type=int,default=8); ap.add_argument('--data-root',default='artifacts/data'); ap.add_argument('--model',default='/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B'); ap.add_argument('--out',required=True); ap.add_argument('--rank',type=int,default=16); ap.add_argument('--target-rank',type=int,default=8); args=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--method',required=True); ap.add_argument('--init',choices=['L','I','T0','T1','ADALORA'],default=None); ap.add_argument('--scale',type=float,default=1.); ap.add_argument('--lr',type=float,default=1e-4); ap.add_argument('--seed',type=int,default=2001); ap.add_argument('--updates',type=int,default=8); ap.add_argument('--data-root',default='artifacts/data'); ap.add_argument('--model',default='/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B'); ap.add_argument('--out',required=True); ap.add_argument('--rank',type=int,default=16); ap.add_argument('--target-rank',type=int,default=8); ap.add_argument('--microbatch',type=int,default=1); args=ap.parse_args()
     torch.manual_seed(args.seed); torch.cuda.manual_seed_all(args.seed); torch.set_float32_matmul_precision('high'); device='cuda'
     reg={x.id:x for x in build_registry()}; spec=reg.get(args.method); init=args.init or (spec.init if spec else 'L'); adalora=(args.method=='ADALORA_REF' or init=='ADALORA'); triplet=init in ('T0','T1')
     tok=AutoTokenizer.from_pretrained(args.model); tok.padding_side='right'; tok.pad_token=tok.eos_token
@@ -63,7 +63,7 @@ def main():
     # Single-example microbatches keep peak activation memory within the
     # measured 97.9-GiB cards even for 2048-token rows; effective updates still
     # accumulate to >=8192 tokens.
-    metrics=[]; score_ema={}; unc={}; epoch=0; it=iter(safe_stream_batches(ds,args.seed+epoch)); model.train(); t0=time.time(); opt.zero_grad(set_to_none=True)
+    metrics=[]; score_ema={}; unc={}; epoch=0; it=iter(safe_stream_batches(ds,args.seed+epoch,args.microbatch)); model.train(); t0=time.time(); opt.zero_grad(set_to_none=True)
     for step in range(args.updates):
         # Reference AdaLoRA keeps dormant E coordinates zero during the
         # forward pass, but does not freeze their optimizer update before the
@@ -76,7 +76,7 @@ def main():
         while input_tokens < 8192:
             try: raw=next(it)
             except StopIteration:
-                epoch += 1; it=iter(safe_stream_batches(ds,args.seed+epoch)); raw=next(it)
+                epoch += 1; it=iter(safe_stream_batches(ds,args.seed+epoch,args.microbatch)); raw=next(it)
             batch={k:v.to(device) for k,v in raw.items() if k!='group_id'}
             valid_x=batch.get('attention_mask').detach().bool() if 'attention_mask' in batch else None
             for m in modules(model): m._score_valid.append(valid_x.reshape(-1) if valid_x is not None else None)
