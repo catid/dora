@@ -1,0 +1,47 @@
+{
+  "schema": "adaptive-rank-withdrawn-failure-v1",
+  "reason": "AdaLoRA allocator return unpacking bug before terminal metadata",
+  "source_root": "/var/tmp/dora-adaptive-rank/runs/withdrawn_adalora_unpack_bug",
+  "runs": [
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.0001_s0.25",
+      "method": "ADALORA_REF",
+      "lr": 0.0001,
+      "scale": 0.25,
+      "seed": 1001,
+      "failure": "ValueError: too many values to unpack (expected 3)",
+      "stdout_sha256": "4ad58f361e62796a8e2597a16cadc3f43d5706153e89c1cdb1f6d40f863fcc20",
+      "source_root": "/var/tmp/dora-adaptive-rank/runs/withdrawn_adalora_unpack_bug/hpo_ADALORA_REF_lr0.0001_s0.25"
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.0001_s1",
+      "method": "ADALORA_REF",
+      "lr": 0.0001,
+      "scale": 1.0,
+      "seed": 1001,
+      "failure": "ValueError: too many values to unpack (expected 3)",
+      "stdout_sha256": "65a2ff597295c32113231a0ac99ddec7be6d1c710e505969fdc41c11cfa0101f",
+      "source_root": "/var/tmp/dora-adaptive-rank/runs/withdrawn_adalora_unpack_bug/hpo_ADALORA_REF_lr0.0001_s1"
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-05_s1",
+      "method": "ADALORA_REF",
+      "lr": 1e-05,
+      "scale": 1.0,
+      "seed": 1001,
+      "failure": "ValueError: too many values to unpack (expected 3)",
+      "stdout_sha256": "2ba5b0cbab1fdb899d9418ff7fbe075610fb35f9eabe39e94995712d801a0648",
+      "source_root": "/var/tmp/dora-adaptive-rank/runs/withdrawn_adalora_unpack_bug/hpo_ADALORA_REF_lr1e-05_s1"
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-05_s4",
+      "method": "ADALORA_REF",
+      "lr": 1e-05,
+      "scale": 4.0,
+      "seed": 1001,
+      "failure": "ValueError: too many values to unpack (expected 3)",
+      "stdout_sha256": "5d6595a3c16605a1d53e7a2b16363ad1b8378fa704840f23dd85b6bd321fb9a1",
+      "source_root": "/var/tmp/dora-adaptive-rank/runs/withdrawn_adalora_unpack_bug/hpo_ADALORA_REF_lr1e-05_s4"
+    }
+  ]
+}
