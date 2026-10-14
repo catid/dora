@@ -9,11 +9,16 @@ def main():
  for run in p['runs']:
   rid=run['run_id']; status='pending'; reason=''
   for root in args.roots:
-   for d in [Path(root)/rid]:
-    if d.exists():
+   prefixes=[rid]
+   if rid.startswith('hpo_'): prefixes.append(rid[4:])
+   if rid.startswith('tune_'): prefixes.append(rid[5:])
+   if rid.startswith('screen_'): prefixes.append(rid[7:])
+   for pref in prefixes:
+    for d in Path(root).glob(f'{pref}*'):
      m=d/'metadata.json'; s=d/'launcher_status.json'
      if m.exists() and json.loads(m.read_text()).get('status')=='complete': status='complete'; break
      if s.exists() and json.loads(s.read_text()).get('status')=='failed': status='failed'; reason=json.loads(s.read_text()).get('returncode')
+    if status!='pending': break
    if status!='pending': break
   rows.append({'run_id':rid,'stage':run.get('stage'),'method_id':run.get('method_id'),'status':status,'failure_reason':reason})
  counts={x:sum(r['status']==x for r in rows) for x in ('pending','complete','failed','blocked','not_in_scope')}
