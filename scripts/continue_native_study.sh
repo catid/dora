@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-PY=.venv/bin/python
+PY=.venv-study/bin/python
 export PYTHONPATH=src HF_HOME=/var/tmp/dora-adaptive-rank/hf
 HPO=/var/tmp/dora-adaptive-rank/runs/hpo_accepted_final2
 TUNE=/var/tmp/dora-adaptive-rank/runs/tune_accepted_final2
