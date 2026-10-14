@@ -20,6 +20,18 @@ def collect(roots):
     for root in roots:
         root = Path(root)
         for metadata_path in sorted(root.glob("**/metadata.json")):
+            # A worker writes metadata immediately before its launcher records
+            # terminal status.  Do not promote that narrow interval into a
+            # completed result in live reports; coverage treats it as
+            # pending/running until the launcher exits cleanly.
+            launcher_path = metadata_path.parent / "launcher_status.json"
+            if launcher_path.exists():
+                try:
+                    launcher = json.loads(launcher_path.read_text())
+                except Exception:
+                    launcher = {}
+                if launcher.get("status") == "running":
+                    continue
             try:
                 md = json.loads(metadata_path.read_text())
             except Exception as exc:
