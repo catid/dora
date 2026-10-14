@@ -9,11 +9,8 @@ def main():
  for run in p['runs']:
   rid=run['run_id']; status='pending'; reason=''
   for root in args.roots:
-   prefixes=[rid]
-   if rid.startswith('hpo_'): prefixes.append(rid[4:])
-   if rid.startswith('tune_'): prefixes.append(rid[5:])
-   for pref in prefixes:
-    for d in Path(root).glob(f'{pref}*'):
+   for d in [Path(root)/rid]:
+    if d.exists():
      m=d/'metadata.json'; s=d/'launcher_status.json'
      if m.exists() and json.loads(m.read_text()).get('status')=='complete': status='complete'; break
      if s.exists() and json.loads(s.read_text()).get('status')=='failed': status='failed'; reason=json.loads(s.read_text()).get('returncode')
