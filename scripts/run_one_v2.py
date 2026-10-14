@@ -65,6 +65,7 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--rank", type=int, default=16)
     ap.add_argument("--target-rank", type=int, default=8)
+    ap.add_argument("--penalty", type=float, default=0.0)
     ap.add_argument("--microbatch", type=int, default=1)
     args = ap.parse_args()
     torch.manual_seed(args.seed)
@@ -96,7 +97,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(args.model, torch_dtype=torch.bfloat16,
                                                   attn_implementation="sdpa").to(device)
     model = inject(model, args.rank, ("q_proj", "o_proj"), init, args.scale, args.method,
-                   args.seed, triplet, adalora=adalora)
+                   args.seed, triplet, penalty=args.penalty, adalora=adalora)
     params = [p for p in model.parameters() if p.requires_grad]
     opt = torch.optim.AdamW(params, lr=args.lr, weight_decay=0.0, betas=(0.9, 0.999), eps=1e-8)
     warmup = max(1, int(round(0.03 * args.updates)))
@@ -206,8 +207,8 @@ def main():
                     module.set_mask(torch.tensor([(str(mi), j) in keep for j in range(module.rank)], device=device))
 
         regularizer = torch.zeros((), device=device)
-        if spec and spec.triplet and spec.penalty:
-            regularizer = spec.penalty * sum(m.orth_penalty() for m in modules(model)) / max(1, len(modules(model)))
+        if spec and spec.triplet and args.penalty:
+            regularizer = args.penalty * sum(m.orth_penalty() for m in modules(model)) / max(1, len(modules(model)))
         elif any(m.adalora for m in modules(model)):
             regularizer = 0.1 * sum(m.adalora_orth_penalty() for m in modules(model)) / max(1, len(modules(model)))
         if regularizer.requires_grad:
@@ -244,7 +245,8 @@ def main():
     (out / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
     source_revision = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
     metadata = {"protocol": "adaptive-rank-v2", "method": args.method, "init": init,
-                "lr": args.lr, "scale": args.scale, "rank": args.rank, "target_rank": args.target_rank,
+                "lr": args.lr, "scale": args.scale, "penalty": args.penalty,
+                "rank": args.rank, "target_rank": args.target_rank,
                 "seed": args.seed, "updates": args.updates, "config_sha256": hashlib.sha256(config_bytes).hexdigest(),
                 "manifest": str(manifest_path), "manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
                 "source_revision": source_revision, "torch": torch.__version__, "cuda": torch.version.cuda,

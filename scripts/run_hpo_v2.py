@@ -21,10 +21,16 @@ def jobs(root, data_root, manifest_root, updates, seed, rank, target_rank):
         if spec.group not in SUPPORTED:
             continue
         r = target_rank if spec.group in {"fixed"} or (spec.group in {"triplet", "triplet_ortho"} and spec.allocator == "none") else rank
+        trial_index = 0
         for lr in lrs:
             for scale in scales:
+                # The protocol gives orthogonality candidates the same twelve
+                # LR/scale trials, with the three registered penalty weights
+                # assigned in a deterministic balanced cycle.
+                penalty = (1e-4, 1e-3, 1e-2)[trial_index % 3] if spec.group == "triplet_ortho" else 0.0
                 name = f"hpo_{spec.id}_lr{lr:g}_s{scale:g}"
                 out.append({"method": spec.id, "init": spec.init, "lr": lr, "scale": scale,
+                            "penalty": penalty,
                             "seed": seed, "rank": r, "target_rank": target_rank,
                             "updates": updates, "data_root": str(data_root),
                             # run_one_v2 resolves the seed-specific manifest from
@@ -33,6 +39,7 @@ def jobs(root, data_root, manifest_root, updates, seed, rank, target_rank):
                             # second time and fail before model loading.
                             "manifest": str(Path(manifest_root)),
                             "out": str(Path(root) / name)})
+                trial_index += 1
     return out
 
 def main():
@@ -47,7 +54,7 @@ def main():
         while i<len(queue) and free:
             j=queue[i]; i+=1; out=Path(j['out']); out.mkdir(parents=True,exist_ok=True); gpu=free.pop(0)
             cmd=[a.python,'scripts/run_one_v2.py']
-            for k in ('method','init','scale','lr','seed','updates','data_root','manifest','out','rank','target_rank'): cmd += [f'--{k.replace("_","-")}',str(j[k])]
+            for k in ('method','init','scale','lr','penalty','seed','updates','data_root','manifest','out','rank','target_rank'): cmd += [f'--{k.replace("_","-")}',str(j[k])]
             cmd += ['--microbatch',str(a.microbatch)]
             env=os.environ.copy(); env.update({'CUDA_VISIBLE_DEVICES':gpu,'PYTHONPATH':'src','HF_HOME':os.environ.get('HF_HOME','/var/tmp/dora-adaptive-rank/hf'),'PYTORCH_CUDA_ALLOC_CONF':'expandable_segments:True'})
             log=(out/'stdout.log').open('w'); proc=subprocess.Popen(cmd,env=env,stdout=log,stderr=subprocess.STDOUT)
