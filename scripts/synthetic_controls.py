@@ -3,7 +3,9 @@
 from __future__ import annotations
 import argparse,json
 from pathlib import Path
+import sys
 import torch
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from rankstudy.algebra import CenteredTwoFactor
 
 def one(seed,init,anisotropic,noise,steps):
@@ -33,7 +35,7 @@ def one(seed,init,anisotropic,noise,steps):
  for budget in (8,16,32):
   keep={(mi,j) for _,mi,j in slots[:budget]}; err=0; oracle=[]
   for mi,a in enumerate(modules):
-   mask=torch.tensor([ (mi,j) in keep for j in range(16)]); a.set_mask(mask); err += float(((xs[mi]@teachers[mi][0].T+a(xs[mi])-ys[mi])**2).mean())
+   mask=torch.tensor([ (mi,j) in keep for j in range(16)]); a.set_mask(mask); err += float(((xs[mi]@teachers[mi][0].T+a(xs[mi])-ys[mi])**2).mean().detach())
   out.append({'budget_slots':budget,'energy_selected_mse':err/8})
  return {'seed':seed,'init':init,'anisotropic':anisotropic,'noise':noise,'steps':steps,'results':out}
 
