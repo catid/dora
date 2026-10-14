@@ -30,6 +30,8 @@ done
 echo "[$(date -u +%FT%TZ)] reporting corrected native HPO"
 "$PY" scripts/report_v2.py --roots "$HPO" \
   --out reports/hpo_v2.csv --summary reports/hpo_v2_summary.json
+"$PY" scripts/plot_v2_progress.py --csv reports/hpo_v2.csv \
+  --out reports/figures/hpo_v2.png
 
 echo "[$(date -u +%FT%TZ)] launching/resuming corrected native tuning"
 "$PY" scripts/run_tune_v2.py \
@@ -38,6 +40,8 @@ echo "[$(date -u +%FT%TZ)] launching/resuming corrected native tuning"
   --python "$PY" --microbatch 2 --resume
 "$PY" scripts/report_v2.py --roots "$TUNE" \
   --out reports/tuning_v2.csv --summary reports/tuning_v2_summary.json
+"$PY" scripts/plot_v2_progress.py --csv reports/tuning_v2.csv \
+  --out reports/figures/tuning_v2.png
 
 echo "[$(date -u +%FT%TZ)] launching/resuming corrected native screening"
 "$PY" scripts/run_screen_v2.py \
@@ -46,6 +50,8 @@ echo "[$(date -u +%FT%TZ)] launching/resuming corrected native screening"
   --python "$PY" --microbatch 2 --resume
 "$PY" scripts/report_v2.py --roots "$SCREEN" \
   --out reports/screening_v2.csv --summary reports/screening_v2_summary.json
+"$PY" scripts/plot_v2_progress.py --csv reports/screening_v2.csv \
+  --out reports/figures/screening_v2.png
 
 echo "[$(date -u +%FT%TZ)] launching/resuming pipeline HPO"
 "$PY" scripts/run_hpo_pipeline_v2.py \
