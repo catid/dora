@@ -22,6 +22,20 @@ def loss_fn(logits,labels):
     total,n=loss_sum_count(logits,labels)
     return total / max(1, int(n))
 
+def safe_stream_batches(ds, seed):
+    """Length-aware microbatches with a fixed token-memory cap.
+
+    The effective update still accumulates by token count. Splitting only long
+    padded batches preserves example order/IDs while avoiding a rare pair of
+    2048-token examples exceeding card memory.
+    """
+    for batch in stream_batches(ds,seed,batch_size=2):
+        if batch['input_ids'].shape[0] == 2 and int(batch['input_ids'].shape[0]*batch['input_ids'].shape[1]) > 1800:
+            for i in range(2):
+                yield {k:v[i:i+1] for k,v in batch.items()}
+        else:
+            yield batch
+
 @torch.no_grad()
 def evaluate(model, ds, seed, device):
     model.eval(); total=0.; count=0
@@ -49,7 +63,7 @@ def main():
     # Single-example microbatches keep peak activation memory within the
     # measured 97.9-GiB cards even for 2048-token rows; effective updates still
     # accumulate to >=8192 tokens.
-    metrics=[]; score_ema={}; unc={}; epoch=0; it=iter(stream_batches(ds,args.seed+epoch,batch_size=1)); model.train(); t0=time.time(); opt.zero_grad(set_to_none=True)
+    metrics=[]; score_ema={}; unc={}; epoch=0; it=iter(safe_stream_batches(ds,args.seed+epoch)); model.train(); t0=time.time(); opt.zero_grad(set_to_none=True)
     for step in range(args.updates):
         # Reference AdaLoRA keeps dormant E coordinates zero during the
         # forward pass, but does not freeze their optimizer update before the
@@ -62,7 +76,7 @@ def main():
         while input_tokens < 8192:
             try: raw=next(it)
             except StopIteration:
-                epoch += 1; it=iter(stream_batches(ds,args.seed+epoch,batch_size=1)); raw=next(it)
+                epoch += 1; it=iter(safe_stream_batches(ds,args.seed+epoch)); raw=next(it)
             batch={k:v.to(device) for k,v in raw.items() if k!='group_id'}
             valid_x=batch.get('attention_mask').detach().bool() if 'attention_mask' in batch else None
             for m in modules(model): m._score_valid.append(valid_x.reshape(-1) if valid_x is not None else None)
