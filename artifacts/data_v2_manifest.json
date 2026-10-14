@@ -1,0 +1,176 @@
+{
+  "protocol": "adaptive-rank-v2",
+  "seed": 20261014,
+  "source_rows": 395000,
+  "source_sha256": "fb39a5d8c05c042ece92eae37dfd5ea414a5979df2bf3ad3b86411bef8205725",
+  "source_revisions": [
+    {
+      "kind": "model",
+      "repo": "Qwen/Qwen2.5-Math-1.5B",
+      "sha": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Math-1.5B",
+      "files": [
+        ".gitattributes",
+        "LICENSE",
+        "README.md",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model.safetensors",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ]
+    },
+    {
+      "kind": "model",
+      "repo": "Qwen/Qwen2.5-Math-7B",
+      "sha": "b101308fe89651ea5ce025f25317fea6fc07e96e",
+      "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Math-7B",
+      "files": [
+        ".gitattributes",
+        "LICENSE",
+        "README.md",
+        "config.json",
+        "generation_config.json",
+        "merges.txt",
+        "model-00001-of-00004.safetensors",
+        "model-00002-of-00004.safetensors",
+        "model-00003-of-00004.safetensors",
+        "model-00004-of-00004.safetensors",
+        "model.safetensors.index.json",
+        "tokenizer.json",
+        "tokenizer_config.json",
+        "vocab.json"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "repo": "meta-math/MetaMathQA",
+      "sha": "aa4f34d3d2d3231299b5b03d9b3e5a20da45aa18",
+      "url": "https://huggingface.co/api/datasets/meta-math/MetaMathQA",
+      "files": [
+        ".gitattributes",
+        "MetaMathQA-395K.json",
+        "README.md"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "repo": "openai/gsm8k",
+      "sha": "740312add88f781978c0658806c59bc2815b9866",
+      "url": "https://huggingface.co/api/datasets/openai/gsm8k",
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "eval.yaml",
+        "main/test-00000-of-00001.parquet",
+        "main/train-00000-of-00001.parquet",
+        "socratic/test-00000-of-00001.parquet",
+        "socratic/train-00000-of-00001.parquet"
+      ]
+    },
+    {
+      "kind": "dataset",
+      "repo": "HuggingFaceH4/MATH-500",
+      "sha": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+      "url": "https://huggingface.co/api/datasets/HuggingFaceH4/MATH-500",
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "eval.yaml",
+        "test.jsonl"
+      ]
+    }
+  ],
+  "tokenizer": "/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B",
+  "max_length": 2048,
+  "output": "/var/tmp/dora-adaptive-rank/data_v2",
+  "original_groups": 13928,
+  "eligible_groups": 13918,
+  "eligible_rows": 146026,
+  "train_candidate_rows": 135017,
+  "blocked_groups": {
+    "near_trigram_jaccard": 10
+  },
+  "excluded": {
+    "duplicate_query_rows": 248859,
+    "heldout_overlap_rows": 108,
+    "empty_rows": 4,
+    "overlength_rows": 3
+  },
+  "splits": {
+    "train": {
+      "rows": 20000,
+      "groups": 8899,
+      "sha256": "baca81d59be2d45c878a2e3c558b21d22797364084d3fb11e01fbbb80805d6cf",
+      "input_tokens": 5306219,
+      "supervised_tokens": 3953742,
+      "types": {
+        "MATH_Rephrased": 2576,
+        "GSM_Rephrased": 8104,
+        "MATH_FOBAR": 670,
+        "GSM_SV": 4009,
+        "GSM_FOBAR": 2259,
+        "GSM_AnsAug": 984,
+        "MATH_AnsAug": 770,
+        "MATH_SV": 628
+      }
+    },
+    "dev_tune": {
+      "rows": 512,
+      "groups": 512,
+      "sha256": "88e0ba08be89e8188a715d12dad9ea7a044af148bd1de1040e480065f2b1d295",
+      "input_tokens": 146015,
+      "supervised_tokens": 110553,
+      "types": {
+        "GSM_Rephrased": 154,
+        "MATH_AnsAug": 55,
+        "GSM_SV": 61,
+        "MATH_FOBAR": 34,
+        "MATH_Rephrased": 118,
+        "GSM_FOBAR": 37,
+        "MATH_SV": 33,
+        "GSM_AnsAug": 20
+      }
+    },
+    "dev_audit": {
+      "rows": 512,
+      "groups": 512,
+      "sha256": "fe1596c4d5d5d62a3039e26e1ff3945871c7f566e6073c7f5690bc31ab89d658",
+      "input_tokens": 148496,
+      "supervised_tokens": 112938,
+      "types": {
+        "GSM_Rephrased": 160,
+        "GSM_AnsAug": 22,
+        "GSM_SV": 58,
+        "MATH_Rephrased": 111,
+        "GSM_FOBAR": 32,
+        "MATH_SV": 28,
+        "MATH_AnsAug": 69,
+        "MATH_FOBAR": 32
+      }
+    }
+  },
+  "pre_filter_length_bins_256": {
+    "0": 83023,
+    "1": 56846,
+    "3": 927,
+    "2": 4921,
+    "4": 229,
+    "7": 6,
+    "5": 46,
+    "6": 28,
+    "8": 1,
+    "9": 1,
+    "10": 1
+  },
+  "holdout_question_sha256": "36b5ea29c33a3f9266ed69314ea606bee0b61f32a13bd4a3fd17bb68aaae86d7",
+  "near_duplicate_rule": "equal numeral multiset AND word/punctuation trigram Jaccard >= 0.85",
+  "template": "Question: {query}\nAnswer: {response}<EOS>",
+  "boundary_rule": "full-text offsets; response-overlapping whitespace token supervised; explicit EOS",
+  "limitations": [
+    "Conservative near-duplicate detection does not detect all paraphrases.",
+    "Base-model pretraining contamination is not measured."
+  ]
+}

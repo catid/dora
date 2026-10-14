@@ -1,0 +1,48 @@
+{
+  "schema": "adaptive-rank-data-v1",
+  "seed": 20261014,
+  "model_tokenizer": "/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B",
+  "max_sequence_length": 2048,
+  "template": "Question: {question}\\nAnswer: {response}<EOS>",
+  "counts": {
+    "all_rows": 395000,
+    "connected_groups": 13928,
+    "eligible_groups": 13928,
+    "train": 12904,
+    "dev_tune": 512,
+    "dev_audit": 512,
+    "gsm8k_test": 1319,
+    "math500_test": 500
+  },
+  "excluded": {
+    "overlap": 0,
+    "overlength": 0,
+    "empty": 0
+  },
+  "blocker": {
+    "kind": "insufficient_unique_training_groups",
+    "requested": 20000,
+    "available": 12904,
+    "reason": "MetaMathQA contains 13,928 connected original-question groups after the required duplicate grouping; 20,000 disjoint groups cannot be formed from this pinned revision."
+  },
+  "overlap_keys_sha256": "15d64ba4563a4daacfde6e8f741f424c2ab06dc701e28fd5f5b4ab211e40e77e",
+  "split_group_sha256": {
+    "train": "813c306b4522603cf2d1f90fe15a4877626432e15512f525bc0c4d0400329330",
+    "dev_tune": "1adb96ac7c9ba20d90eb65243b5b3d0807ca66521da427dbf5a9141f8871e233",
+    "dev_audit": "927ca97042b0eaee0d813b52e6d1ba68cea76aa4a29205a431a8f42e845519b3"
+  },
+  "token_stats": {
+    "train": {
+      "tokens": 3190477,
+      "mean": 247.24713267203967
+    },
+    "dev_tune": {
+      "tokens": 124827,
+      "mean": 243.802734375
+    },
+    "dev_audit": {
+      "tokens": 132137,
+      "mean": 258.080078125
+    }
+  }
+}
