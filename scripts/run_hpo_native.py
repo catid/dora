@@ -14,7 +14,7 @@ from rankstudy.registry import build_registry
 SUPPORTED_GROUPS={"fixed","wide","reference","online","allocation_control","triplet","triplet_ortho","online_uncertainty"}
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--gpus',default='0,1,2,3'); ap.add_argument('--limit',type=int,default=0); ap.add_argument('--updates',type=int,default=128); ap.add_argument('--resume',action='store_true'); ap.add_argument('--root',default='/var/tmp/dora-adaptive-rank/runs/hpo'); args=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('--gpus',default='0,1,2,3'); ap.add_argument('--limit',type=int,default=0); ap.add_argument('--updates',type=int,default=128); ap.add_argument('--resume',action='store_true'); ap.add_argument('--root',default='/var/tmp/dora-adaptive-rank/runs/hpo'); ap.add_argument('--python',default='.venv/bin/python'); args=ap.parse_args()
     cfg=yaml.safe_load(Path('configs/study.yaml').read_text()); root=Path(args.root); root.mkdir(parents=True,exist_ok=True)
     rows=[]
     for spec in build_registry():
@@ -39,7 +39,7 @@ def main():
         while idx<len(pending) and free_gpus:
             spec,lr,scale,out,rank=pending[idx]; idx+=1
             out.mkdir(parents=True,exist_ok=True)
-            cmd=['.venv-study/bin/python','scripts/run_one.py','--method',spec.id,'--init',spec.init,'--scale',str(scale),'--lr',str(lr),'--seed',str(cfg['seed_hpo']),'--updates',str(args.updates),'--rank',str(rank),'--target-rank',str(cfg['final_average_rank']),'--out',str(out)]
+            cmd=[args.python,'scripts/run_one.py','--method',spec.id,'--init',spec.init,'--scale',str(scale),'--lr',str(lr),'--seed',str(cfg['seed_hpo']),'--updates',str(args.updates),'--rank',str(rank),'--target-rank',str(cfg['final_average_rank']),'--out',str(out)]
             gpu=free_gpus.pop(0)
             env=os.environ.copy(); env['CUDA_VISIBLE_DEVICES']=gpu; env['PYTHONPATH']='src'; env.setdefault('HF_HOME','/var/tmp/dora-adaptive-rank/hf')
             log=(out/'stdout.log').open('w')

@@ -40,13 +40,13 @@ def load_jobs(hpo_root, seed_list, out_root, updates):
   return jobs
 
 def main():
- ap=argparse.ArgumentParser(); ap.add_argument('--hpo-root',required=True); ap.add_argument('--out-root',required=True); ap.add_argument('--gpus',default='0,1,2,3'); ap.add_argument('--updates',type=int,default=512); ap.add_argument('--seeds',default='1002,1003'); args=ap.parse_args()
+ ap=argparse.ArgumentParser(); ap.add_argument('--hpo-root',required=True); ap.add_argument('--out-root',required=True); ap.add_argument('--gpus',default='0,1,2,3'); ap.add_argument('--updates',type=int,default=512); ap.add_argument('--seeds',default='1002,1003'); ap.add_argument('--python',default='.venv/bin/python'); args=ap.parse_args()
  jobs=load_jobs(args.hpo_root,[int(x) for x in args.seeds.split(',')],args.out_root,args.updates); Path(args.out_root).mkdir(parents=True,exist_ok=True)
  gpus=[x.strip() for x in args.gpus.split(',') if x.strip()]; free=list(gpus); active={}; i=0
  while i<len(jobs) or active:
   while i<len(jobs) and free:
    j=jobs[i]; i+=1; out=Path(j['out']); out.mkdir(parents=True,exist_ok=True)
-   cmd=['.venv-study/bin/python','scripts/run_one.py']
+   cmd=[args.python,'scripts/run_one.py']
    for k in ('method','init','scale','lr','seed','updates','rank','target_rank','out'): cmd += [f'--{k.replace("_","-")}',str(j[k])]
    gpu=free.pop(0); env=os.environ.copy(); env.update({'CUDA_VISIBLE_DEVICES':gpu,'PYTHONPATH':'src','HF_HOME':os.environ.get('HF_HOME','/var/tmp/dora-adaptive-rank/hf')})
    log=(out/'stdout.log').open('w'); p=subprocess.Popen(cmd,env=env,stdout=log,stderr=subprocess.STDOUT)

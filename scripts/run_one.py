@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run one actual study training job; all metrics are immutable JSONL."""
 from __future__ import annotations
-import argparse,json,time,random,hashlib
+import argparse,json,time,random,hashlib,subprocess
 from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM,AutoTokenizer
@@ -179,7 +179,9 @@ def main():
         print(json.dumps(metrics[-1]),flush=True)
     dev_loss=evaluate(model,dev,args.seed+991,device)
     (out/'metrics.json').write_text(json.dumps(metrics,indent=2)+'\n')
-    metadata={'method':args.method,'init':init,'lr':args.lr,'scale':args.scale,'rank':args.rank,'target_rank':args.target_rank,'seed':args.seed,'updates':args.updates,'config_sha256':hashlib.sha256(config_bytes).hexdigest(),'torch':torch.__version__,'cuda':torch.version.cuda,'device':torch.cuda.get_device_name(),'status':'complete','allocator_update_order':'pre_optimizer_shared_runner; faithful AdaLoRA reference ordering differs and is recorded as a compatibility exception','final_active_slots':metrics[-1]['active_slots'],'input_tokens':sum(x['input_tokens'] for x in metrics),'supervised_tokens':sum(x['supervised_tokens'] for x in metrics),'elapsed_s':metrics[-1]['elapsed_s'],'peak_memory_bytes':torch.cuda.max_memory_allocated(),'dev_tune_endpoint_nll':dev_loss}
+    try: source_revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+    except Exception: source_revision='unknown'
+    metadata={'method':args.method,'init':init,'lr':args.lr,'scale':args.scale,'rank':args.rank,'target_rank':args.target_rank,'seed':args.seed,'updates':args.updates,'config_sha256':hashlib.sha256(config_bytes).hexdigest(),'source_revision':source_revision,'torch':torch.__version__,'cuda':torch.version.cuda,'device':torch.cuda.get_device_name(),'status':'complete','allocator_update_order':'custom_pre_optimizer; faithful AdaLoRA_post_optimizer','final_active_slots':metrics[-1]['active_slots'],'input_tokens':sum(x['input_tokens'] for x in metrics),'supervised_tokens':sum(x['supervised_tokens'] for x in metrics),'elapsed_s':metrics[-1]['elapsed_s'],'peak_memory_bytes':torch.cuda.max_memory_allocated(),'dev_tune_endpoint_nll':dev_loss}
     (out/'metadata.json').write_text(json.dumps(metadata,indent=2)+'\n')
 
 if __name__=='__main__': main()
