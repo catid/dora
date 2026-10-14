@@ -2,12 +2,18 @@
 from __future__ import annotations
 import argparse,json,hashlib
 from pathlib import Path
+import sys
+sys.path.insert(0,'src')
+from rankstudy.registry import build_registry
 
 def main():
  ap=argparse.ArgumentParser(); ap.add_argument('--plan',default='artifacts/run_plan.json'); ap.add_argument('--roots',nargs='+',required=True); ap.add_argument('--out',default='artifacts/coverage.json'); args=ap.parse_args()
  p=json.loads(Path(args.plan).read_text()); rows=[]
+ blocked_methods={x.id for x in build_registry() if x.group in {'restart','restart_control','compress'}}
  for run in p['runs']:
   rid=run['run_id']; status='pending'; reason=''
+  if run.get('method_id') in blocked_methods:
+   status='blocked'; reason='pipeline_not_implemented_in_current_scope'
   for root in args.roots:
    prefixes=[rid]
    if rid.startswith('hpo_'): prefixes.append(rid[4:])
@@ -19,7 +25,7 @@ def main():
      if m.exists() and json.loads(m.read_text()).get('status')=='complete': status='complete'; break
      if s.exists() and json.loads(s.read_text()).get('status')=='failed': status='failed'; reason=json.loads(s.read_text()).get('returncode')
     if status!='pending': break
-   if status!='pending': break
+   if status not in {'pending'}: break
   rows.append({'run_id':rid,'stage':run.get('stage'),'method_id':run.get('method_id'),'status':status,'failure_reason':reason})
  counts={x:sum(r['status']==x for r in rows) for x in ('pending','complete','failed','blocked','not_in_scope')}
  out={'schema':'adaptive-rank-coverage-v1','plan_sha256':hashlib.sha256(Path(args.plan).read_bytes()).hexdigest(),'counts':{'total':len(rows),**counts},'runs':rows}
