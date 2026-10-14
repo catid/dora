@@ -9,15 +9,26 @@ from rankstudy.registry import build_registry
 SUPPORTED={"fixed","wide","reference","online","allocation_control","triplet","triplet_ortho","online_uncertainty"}
 
 def select(tune_root):
- by=defaultdict(list)
+ # Select the configuration by its mean endpoint development loss over the
+ # two independent tuning seeds.  Selecting the best individual seed would
+ # turn seed noise into an extra hyperparameter search.
+ by=defaultdict(lambda: defaultdict(list))
  for d in Path(tune_root).iterdir() if Path(tune_root).exists() else []:
   c=d/'config.json'; m=d/'metadata.json'
   if c.exists() and m.exists():
    cf=json.loads(c.read_text()); md=json.loads(m.read_text())
-   if md.get('status')=='complete' and md.get('dev_tune_endpoint_nll') is not None: by[cf['method']].append((float(md['dev_tune_endpoint_nll']),cf))
+   if md.get('status')=='complete' and md.get('dev_tune_endpoint_nll') is not None:
+    by[cf['method']][(float(cf['lr']),float(cf['scale']))].append((float(md['dev_tune_endpoint_nll']),cf))
  out={}
- for mid,rows in by.items():
-  rows.sort(key=lambda x:x[0]); out[mid]=rows[0][1]
+ for mid,groups in by.items():
+  ranked=[]
+  for key,rows in groups.items():
+   # Require both declared tuning seeds before a configuration can be used.
+   seeds={int(cf.get('seed')) for _,cf in rows}
+   if not {1002,1003}.issubset(seeds): continue
+   ranked.append((sum(v for v,_ in rows)/len(rows),key,rows[0][1]))
+  if ranked:
+   ranked.sort(key=lambda x:(x[0],x[1][0],x[1][1])); out[mid]=ranked[0][2]
  return out
 
 def main():
