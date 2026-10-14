@@ -1,0 +1,234 @@
+[
+  {
+    "method": "ADALORA_REF",
+    "n": 12,
+    "best_dev_tune_nll": 0.4524640128470422,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_ACT",
+    "n": 12,
+    "best_dev_tune_nll": 0.24427914305405163,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_DISP",
+    "n": 12,
+    "best_dev_tune_nll": 0.23923485313386153,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_FIXED",
+    "n": 12,
+    "best_dev_tune_nll": 0.24034440541314098,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_GATE",
+    "n": 12,
+    "best_dev_tune_nll": 0.23940248926137941,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_GATE_UNCERTAINTY",
+    "n": 12,
+    "best_dev_tune_nll": 0.23905521100190072,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_GLOBAL_RANDOM",
+    "n": 12,
+    "best_dev_tune_nll": 0.2409733447243087,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_RAW",
+    "n": 12,
+    "best_dev_tune_nll": 0.23942599731287958,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_RAW_UNCERTAINTY",
+    "n": 12,
+    "best_dev_tune_nll": 0.23913717419133868,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_UNIFORM_GATE",
+    "n": 12,
+    "best_dev_tune_nll": 0.24010777025203667,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "I_WIDE",
+    "n": 12,
+    "best_dev_tune_nll": 0.23712076360376858,
+    "lr": 0.001,
+    "scale": 0.25,
+    "seed": 1001
+  },
+  {
+    "method": "L_ACT",
+    "n": 12,
+    "best_dev_tune_nll": 0.23612503860168202,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_DISP",
+    "n": 12,
+    "best_dev_tune_nll": 0.23567949258153564,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_FIXED",
+    "n": 12,
+    "best_dev_tune_nll": 0.23788887968130565,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_GATE",
+    "n": 12,
+    "best_dev_tune_nll": 0.23588766640598793,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_GATE_UNCERTAINTY",
+    "n": 12,
+    "best_dev_tune_nll": 0.23581921969741368,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_GLOBAL_RANDOM",
+    "n": 12,
+    "best_dev_tune_nll": 0.23665428138000943,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_RAW",
+    "n": 12,
+    "best_dev_tune_nll": 0.23562533245662573,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_RAW_UNCERTAINTY",
+    "n": 12,
+    "best_dev_tune_nll": 0.2358085566381053,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_UNIFORM_GATE",
+    "n": 12,
+    "best_dev_tune_nll": 0.23673953640247045,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "L_WIDE",
+    "n": 12,
+    "best_dev_tune_nll": 0.2344089081004318,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "T0_FIXED",
+    "n": 12,
+    "best_dev_tune_nll": 0.286383340314339,
+    "lr": 0.001,
+    "scale": 1.0,
+    "seed": 1001
+  },
+  {
+    "method": "T0_FIXED_ORTHO",
+    "n": 12,
+    "best_dev_tune_nll": 0.28650211682904886,
+    "lr": 0.001,
+    "scale": 1.0,
+    "seed": 1001
+  },
+  {
+    "method": "T0_GATE",
+    "n": 12,
+    "best_dev_tune_nll": 0.28085535880781887,
+    "lr": 0.001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "T0_GATE_ORTHO",
+    "n": 12,
+    "best_dev_tune_nll": 0.28149633298295895,
+    "lr": 0.001,
+    "scale": 1.0,
+    "seed": 1001
+  },
+  {
+    "method": "T1_FIXED",
+    "n": 12,
+    "best_dev_tune_nll": 0.24024575534959958,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "T1_FIXED_ORTHO",
+    "n": 12,
+    "best_dev_tune_nll": 0.24017407125244938,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "T1_GATE",
+    "n": 12,
+    "best_dev_tune_nll": 0.2403564138976997,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  },
+  {
+    "method": "T1_GATE_ORTHO",
+    "n": 12,
+    "best_dev_tune_nll": 0.2401757755966243,
+    "lr": 0.0001,
+    "scale": 4.0,
+    "seed": 1001
+  }
+]
