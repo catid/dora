@@ -1,0 +1,6734 @@
+{
+  "schema": "adaptive-rank-coverage-v2",
+  "plan_sha256": "cde7f8f8ab4359dbd22993b4538cdfcb2f394e6f72f2f078aef36afec5881f76",
+  "roots": [
+    "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001",
+    "/var/tmp/dora-adaptive-rank/runs/tune_v2_seed1001",
+    "/var/tmp/dora-adaptive-rank/runs/screen_v2_seed1001",
+    "/var/tmp/dora-adaptive-rank/runs/pipeline_hpo_v2_seed1001",
+    "/var/tmp/dora-adaptive-rank/runs/pipeline_tune_v2_seed1001"
+  ],
+  "counts": {
+    "total": 959,
+    "pending": 931,
+    "complete": 28,
+    "failed": 0,
+    "blocked": 0,
+    "not_in_scope": 0
+  },
+  "runs": [
+    {
+      "run_id": "hpo_L_FIXED_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_FIXED_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_FIXED_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_FIXED_2001",
+      "stage": "B_screen",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_FIXED_2002",
+      "stage": "B_screen",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_FIXED_2003",
+      "stage": "B_screen",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_FIXED",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_FIXED_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_FIXED_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_FIXED_2001",
+      "stage": "B_screen",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_FIXED_2002",
+      "stage": "B_screen",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_FIXED_2003",
+      "stage": "B_screen",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "complete",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": "running"
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": "running"
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": "running"
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": "running"
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_WIDE_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_WIDE_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_WIDE_2001",
+      "stage": "B_screen",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_WIDE_2002",
+      "stage": "B_screen",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_WIDE_2003",
+      "stage": "B_screen",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_WIDE_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_WIDE_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_WIDE_2001",
+      "stage": "B_screen",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_WIDE_2002",
+      "stage": "B_screen",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_WIDE_2003",
+      "stage": "B_screen",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_ADALORA_REF_1002_a",
+      "stage": "B_tuning",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_ADALORA_REF_1003_a",
+      "stage": "B_tuning",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_ADALORA_REF_2001",
+      "stage": "B_screen",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_ADALORA_REF_2002",
+      "stage": "B_screen",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_ADALORA_REF_2003",
+      "stage": "B_screen",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_RAW_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_RAW_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_RAW_2001",
+      "stage": "B_screen",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_RAW_2002",
+      "stage": "B_screen",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_RAW_2003",
+      "stage": "B_screen",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_GATE_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_GATE_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GATE_2001",
+      "stage": "B_screen",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GATE_2002",
+      "stage": "B_screen",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GATE_2003",
+      "stage": "B_screen",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_DISP_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_DISP_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_DISP_2001",
+      "stage": "B_screen",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_DISP_2002",
+      "stage": "B_screen",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_DISP_2003",
+      "stage": "B_screen",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_ACT_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_ACT_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_ACT_2001",
+      "stage": "B_screen",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_ACT_2002",
+      "stage": "B_screen",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_ACT_2003",
+      "stage": "B_screen",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_UNIFORM_GATE_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_UNIFORM_GATE_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_GATE_2001",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_GATE_2002",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_GATE_2003",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_GLOBAL_RANDOM_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_GLOBAL_RANDOM_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GLOBAL_RANDOM_2001",
+      "stage": "B_screen",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GLOBAL_RANDOM_2002",
+      "stage": "B_screen",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GLOBAL_RANDOM_2003",
+      "stage": "B_screen",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_RAW_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_RAW_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_RAW_2001",
+      "stage": "B_screen",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_RAW_2002",
+      "stage": "B_screen",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_RAW_2003",
+      "stage": "B_screen",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_GATE_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_GATE_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GATE_2001",
+      "stage": "B_screen",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GATE_2002",
+      "stage": "B_screen",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GATE_2003",
+      "stage": "B_screen",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_DISP_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_DISP_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_DISP_2001",
+      "stage": "B_screen",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_DISP_2002",
+      "stage": "B_screen",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_DISP_2003",
+      "stage": "B_screen",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_ACT_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_ACT_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_ACT_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_ACT_2001",
+      "stage": "B_screen",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_ACT_2002",
+      "stage": "B_screen",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_ACT_2003",
+      "stage": "B_screen",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_GATE_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_UNIFORM_GATE_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_UNIFORM_GATE_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_GATE_2001",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_GATE_2002",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_GATE_2003",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_RANDOM_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_GLOBAL_RANDOM_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_GLOBAL_RANDOM_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GLOBAL_RANDOM_2001",
+      "stage": "B_screen",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GLOBAL_RANDOM_2002",
+      "stage": "B_screen",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GLOBAL_RANDOM_2003",
+      "stage": "B_screen",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T0_FIXED_1002_a",
+      "stage": "B_tuning",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T0_FIXED_1003_a",
+      "stage": "B_tuning",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_FIXED_2001",
+      "stage": "B_screen",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_FIXED_2002",
+      "stage": "B_screen",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_FIXED_2003",
+      "stage": "B_screen",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T0_GATE_1002_a",
+      "stage": "B_tuning",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T0_GATE_1003_a",
+      "stage": "B_tuning",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_GATE_2001",
+      "stage": "B_screen",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_GATE_2002",
+      "stage": "B_screen",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_GATE_2003",
+      "stage": "B_screen",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_FIXED_ORTHO_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T0_FIXED_ORTHO_1002_a",
+      "stage": "B_tuning",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T0_FIXED_ORTHO_1003_a",
+      "stage": "B_tuning",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_FIXED_ORTHO_2001",
+      "stage": "B_screen",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_FIXED_ORTHO_2002",
+      "stage": "B_screen",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_FIXED_ORTHO_2003",
+      "stage": "B_screen",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T0_GATE_ORTHO_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T0_GATE_ORTHO_1002_a",
+      "stage": "B_tuning",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T0_GATE_ORTHO_1003_a",
+      "stage": "B_tuning",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_GATE_ORTHO_2001",
+      "stage": "B_screen",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_GATE_ORTHO_2002",
+      "stage": "B_screen",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T0_GATE_ORTHO_2003",
+      "stage": "B_screen",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T1_FIXED_1002_a",
+      "stage": "B_tuning",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T1_FIXED_1003_a",
+      "stage": "B_tuning",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_FIXED_2001",
+      "stage": "B_screen",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_FIXED_2002",
+      "stage": "B_screen",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_FIXED_2003",
+      "stage": "B_screen",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T1_GATE_1002_a",
+      "stage": "B_tuning",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T1_GATE_1003_a",
+      "stage": "B_tuning",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_GATE_2001",
+      "stage": "B_screen",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_GATE_2002",
+      "stage": "B_screen",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_GATE_2003",
+      "stage": "B_screen",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_FIXED_ORTHO_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T1_FIXED_ORTHO_1002_a",
+      "stage": "B_tuning",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T1_FIXED_ORTHO_1003_a",
+      "stage": "B_tuning",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_FIXED_ORTHO_2001",
+      "stage": "B_screen",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_FIXED_ORTHO_2002",
+      "stage": "B_screen",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_FIXED_ORTHO_2003",
+      "stage": "B_screen",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_T1_GATE_ORTHO_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T1_GATE_ORTHO_1002_a",
+      "stage": "B_tuning",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_T1_GATE_ORTHO_1003_a",
+      "stage": "B_tuning",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_GATE_ORTHO_2001",
+      "stage": "B_screen",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_GATE_ORTHO_2002",
+      "stage": "B_screen",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_T1_GATE_ORTHO_2003",
+      "stage": "B_screen",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_L_STUDENT_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_PILOT_L_STUDENT_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_PILOT_L_STUDENT_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_PILOT_L_STUDENT_2001",
+      "stage": "B_screen",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_PILOT_L_STUDENT_2002",
+      "stage": "B_screen",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_PILOT_L_STUDENT_2003",
+      "stage": "B_screen",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_PILOT_I_STUDENT_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_PILOT_I_STUDENT_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_PILOT_I_STUDENT_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_PILOT_I_STUDENT_2001",
+      "stage": "B_screen",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_PILOT_I_STUDENT_2002",
+      "stage": "B_screen",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_PILOT_I_STUDENT_2003",
+      "stage": "B_screen",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_L_STUDENT_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_PILOT_L_STUDENT_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_PILOT_L_STUDENT_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_PILOT_L_STUDENT_2001",
+      "stage": "B_screen",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_PILOT_L_STUDENT_2002",
+      "stage": "B_screen",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_PILOT_L_STUDENT_2003",
+      "stage": "B_screen",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_PILOT_I_STUDENT_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_PILOT_I_STUDENT_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_PILOT_I_STUDENT_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_PILOT_I_STUDENT_2001",
+      "stage": "B_screen",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_PILOT_I_STUDENT_2002",
+      "stage": "B_screen",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_PILOT_I_STUDENT_2003",
+      "stage": "B_screen",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_RESTART_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_UNIFORM_RESTART_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_UNIFORM_RESTART_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_RESTART_2001",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_RESTART_2002",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_RESTART_2003",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_SHUFFLED_SELF_RESTART_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_SHUFFLED_SELF_RESTART_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_SHUFFLED_SELF_RESTART_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_SHUFFLED_SELF_RESTART_2001",
+      "stage": "B_screen",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_SHUFFLED_SELF_RESTART_2002",
+      "stage": "B_screen",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_SHUFFLED_SELF_RESTART_2003",
+      "stage": "B_screen",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_RESTART_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_UNIFORM_RESTART_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_UNIFORM_RESTART_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_RESTART_2001",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_RESTART_2002",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_RESTART_2003",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_SHUFFLED_SELF_RESTART_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_SHUFFLED_SELF_RESTART_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_SHUFFLED_SELF_RESTART_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_SHUFFLED_SELF_RESTART_2001",
+      "stage": "B_screen",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_SHUFFLED_SELF_RESTART_2002",
+      "stage": "B_screen",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_SHUFFLED_SELF_RESTART_2003",
+      "stage": "B_screen",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_SVD_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_UNIFORM_SVD_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_UNIFORM_SVD_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_SVD_2001",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_SVD_2002",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_UNIFORM_SVD_2003",
+      "stage": "B_screen",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_SVD_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_GLOBAL_SVD_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_GLOBAL_SVD_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GLOBAL_SVD_2001",
+      "stage": "B_screen",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GLOBAL_SVD_2002",
+      "stage": "B_screen",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GLOBAL_SVD_2003",
+      "stage": "B_screen",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_UNIFORM_SVD_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_UNIFORM_SVD_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_UNIFORM_SVD_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_SVD_2001",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_SVD_2002",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_UNIFORM_SVD_2003",
+      "stage": "B_screen",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GLOBAL_SVD_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_GLOBAL_SVD_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_GLOBAL_SVD_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GLOBAL_SVD_2001",
+      "stage": "B_screen",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GLOBAL_SVD_2002",
+      "stage": "B_screen",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GLOBAL_SVD_2003",
+      "stage": "B_screen",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_RAW_UNCERTAINTY_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_RAW_UNCERTAINTY_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_RAW_UNCERTAINTY_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_RAW_UNCERTAINTY_2001",
+      "stage": "B_screen",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_RAW_UNCERTAINTY_2002",
+      "stage": "B_screen",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_RAW_UNCERTAINTY_2003",
+      "stage": "B_screen",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_L_GATE_UNCERTAINTY_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_GATE_UNCERTAINTY_1002_a",
+      "stage": "B_tuning",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_L_GATE_UNCERTAINTY_1003_a",
+      "stage": "B_tuning",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GATE_UNCERTAINTY_2001",
+      "stage": "B_screen",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GATE_UNCERTAINTY_2002",
+      "stage": "B_screen",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_L_GATE_UNCERTAINTY_2003",
+      "stage": "B_screen",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_RAW_UNCERTAINTY_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_RAW_UNCERTAINTY_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_RAW_UNCERTAINTY_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_RAW_UNCERTAINTY_2001",
+      "stage": "B_screen",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_RAW_UNCERTAINTY_2002",
+      "stage": "B_screen",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_RAW_UNCERTAINTY_2003",
+      "stage": "B_screen",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr1e-06_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr1e-06_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr1e-06_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr1e-05_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr1e-05_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr1e-05_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr0.0001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr0.0001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr0.0001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr0.001_s0.25",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr0.001_s1",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hpo_I_GATE_UNCERTAINTY_lr0.001_s4",
+      "stage": "B_hpo",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_GATE_UNCERTAINTY_1002_a",
+      "stage": "B_tuning",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "tune_I_GATE_UNCERTAINTY_1003_a",
+      "stage": "B_tuning",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GATE_UNCERTAINTY_2001",
+      "stage": "B_screen",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GATE_UNCERTAINTY_2002",
+      "stage": "B_screen",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "screen_I_GATE_UNCERTAINTY_2003",
+      "stage": "B_screen",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_FIXED_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_FIXED_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_FIXED_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_FIXED_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_FIXED_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_FIXED_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_FIXED_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_FIXED_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_FIXED_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_FIXED_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_WIDE_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_WIDE_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_WIDE_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_WIDE_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_WIDE_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_WIDE_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_WIDE_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_WIDE_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_WIDE_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_WIDE_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_WIDE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_ADALORA_REF_3001",
+      "stage": "C_confirmation",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_ADALORA_REF_3002",
+      "stage": "C_confirmation",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_ADALORA_REF_3003",
+      "stage": "C_confirmation",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_ADALORA_REF_3004",
+      "stage": "C_confirmation",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_ADALORA_REF_3005",
+      "stage": "C_confirmation",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_DISP_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_DISP_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_DISP_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_DISP_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_DISP_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_ACT_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_ACT_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_ACT_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_ACT_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_ACT_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_GATE_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_GATE_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_GATE_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_GATE_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_GATE_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_RANDOM_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_RANDOM_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_RANDOM_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_RANDOM_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_RANDOM_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_DISP_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_DISP_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_DISP_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_DISP_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_DISP_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_DISP",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_ACT_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_ACT_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_ACT_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_ACT_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_ACT_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_ACT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_GATE_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_GATE_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_GATE_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_GATE_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_GATE_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_RANDOM_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_RANDOM_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_RANDOM_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_RANDOM_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_RANDOM_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_RANDOM",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_3001",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_3002",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_3003",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_3004",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_3005",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_3001",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_3002",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_3003",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_3004",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_3005",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_ORTHO_3001",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_ORTHO_3002",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_ORTHO_3003",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_ORTHO_3004",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_FIXED_ORTHO_3005",
+      "stage": "C_confirmation",
+      "method_id": "T0_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_ORTHO_3001",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_ORTHO_3002",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_ORTHO_3003",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_ORTHO_3004",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T0_GATE_ORTHO_3005",
+      "stage": "C_confirmation",
+      "method_id": "T0_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_3001",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_3002",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_3003",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_3004",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_3005",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_3001",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_3002",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_3003",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_3004",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_3005",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_ORTHO_3001",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_ORTHO_3002",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_ORTHO_3003",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_ORTHO_3004",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_FIXED_ORTHO_3005",
+      "stage": "C_confirmation",
+      "method_id": "T1_FIXED_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_ORTHO_3001",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_ORTHO_3002",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_ORTHO_3003",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_ORTHO_3004",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_T1_GATE_ORTHO_3005",
+      "stage": "C_confirmation",
+      "method_id": "T1_GATE_ORTHO",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_L_STUDENT_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_L_STUDENT_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_L_STUDENT_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_L_STUDENT_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_L_STUDENT_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_I_STUDENT_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_I_STUDENT_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_I_STUDENT_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_I_STUDENT_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_PILOT_I_STUDENT_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_L_STUDENT_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_L_STUDENT_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_L_STUDENT_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_L_STUDENT_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_L_STUDENT_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_L_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_I_STUDENT_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_I_STUDENT_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_I_STUDENT_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_I_STUDENT_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_PILOT_I_STUDENT_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_PILOT_I_STUDENT",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_RESTART_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_RESTART_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_RESTART_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_RESTART_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_RESTART_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_SHUFFLED_SELF_RESTART_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_SHUFFLED_SELF_RESTART_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_SHUFFLED_SELF_RESTART_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_SHUFFLED_SELF_RESTART_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_SHUFFLED_SELF_RESTART_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_RESTART_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_RESTART_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_RESTART_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_RESTART_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_RESTART_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_SHUFFLED_SELF_RESTART_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_SHUFFLED_SELF_RESTART_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_SHUFFLED_SELF_RESTART_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_SHUFFLED_SELF_RESTART_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_SHUFFLED_SELF_RESTART_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_SHUFFLED_SELF_RESTART",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_SVD_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_SVD_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_SVD_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_SVD_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_UNIFORM_SVD_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_SVD_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_SVD_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_SVD_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_SVD_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GLOBAL_SVD_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_SVD_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_SVD_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_SVD_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_SVD_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_UNIFORM_SVD_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_UNIFORM_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_SVD_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_SVD_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_SVD_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_SVD_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GLOBAL_SVD_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_GLOBAL_SVD",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_UNCERTAINTY_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_UNCERTAINTY_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_UNCERTAINTY_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_UNCERTAINTY_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_RAW_UNCERTAINTY_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_UNCERTAINTY_3001",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_UNCERTAINTY_3002",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_UNCERTAINTY_3003",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_UNCERTAINTY_3004",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_L_GATE_UNCERTAINTY_3005",
+      "stage": "C_confirmation",
+      "method_id": "L_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_UNCERTAINTY_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_UNCERTAINTY_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_UNCERTAINTY_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_UNCERTAINTY_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_RAW_UNCERTAINTY_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_RAW_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_UNCERTAINTY_3001",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_UNCERTAINTY_3002",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_UNCERTAINTY_3003",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_UNCERTAINTY_3004",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "confirm_I_GATE_UNCERTAINTY_3005",
+      "stage": "C_confirmation",
+      "method_id": "I_GATE_UNCERTAINTY",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_FIXED_4001",
+      "stage": "C_rank4",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_FIXED_4002",
+      "stage": "C_rank4",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_FIXED_4003",
+      "stage": "C_rank4",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_FIXED_4001",
+      "stage": "C_rank4",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_FIXED_4002",
+      "stage": "C_rank4",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_FIXED_4003",
+      "stage": "C_rank4",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_ADALORA_REF_4001",
+      "stage": "C_rank4",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_ADALORA_REF_4002",
+      "stage": "C_rank4",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_ADALORA_REF_4003",
+      "stage": "C_rank4",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_RAW_4001",
+      "stage": "C_rank4",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_RAW_4002",
+      "stage": "C_rank4",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_RAW_4003",
+      "stage": "C_rank4",
+      "method_id": "L_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_GATE_4001",
+      "stage": "C_rank4",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_GATE_4002",
+      "stage": "C_rank4",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_L_GATE_4003",
+      "stage": "C_rank4",
+      "method_id": "L_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_RAW_4001",
+      "stage": "C_rank4",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_RAW_4002",
+      "stage": "C_rank4",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_RAW_4003",
+      "stage": "C_rank4",
+      "method_id": "I_RAW",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_GATE_4001",
+      "stage": "C_rank4",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_GATE_4002",
+      "stage": "C_rank4",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "rank4_I_GATE_4003",
+      "stage": "C_rank4",
+      "method_id": "I_GATE",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_L_FIXED_5001",
+      "stage": "D_export",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_L_FIXED_5002",
+      "stage": "D_export",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_L_FIXED_5003",
+      "stage": "D_export",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_I_FIXED_5001",
+      "stage": "D_export",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_I_FIXED_5002",
+      "stage": "D_export",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_I_FIXED_5003",
+      "stage": "D_export",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_ADALORA_REF_5001",
+      "stage": "D_export",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_ADALORA_REF_5002",
+      "stage": "D_export",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "export_ADALORA_REF_5003",
+      "stage": "D_export",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_L_FIXED_6001",
+      "stage": "D_compute",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_L_FIXED_6002",
+      "stage": "D_compute",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_L_FIXED_6003",
+      "stage": "D_compute",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_I_FIXED_6001",
+      "stage": "D_compute",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_I_FIXED_6002",
+      "stage": "D_compute",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_I_FIXED_6003",
+      "stage": "D_compute",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_ADALORA_REF_6001",
+      "stage": "D_compute",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_ADALORA_REF_6002",
+      "stage": "D_compute",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "compute_ADALORA_REF_6003",
+      "stage": "D_compute",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_L_FIXED_7001",
+      "stage": "E_7b",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_L_FIXED_7002",
+      "stage": "E_7b",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_L_FIXED_7003",
+      "stage": "E_7b",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_I_FIXED_7001",
+      "stage": "E_7b",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_I_FIXED_7002",
+      "stage": "E_7b",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_I_FIXED_7003",
+      "stage": "E_7b",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_ADALORA_REF_7001",
+      "stage": "E_7b",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_ADALORA_REF_7002",
+      "stage": "E_7b",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "7b_ADALORA_REF_7003",
+      "stage": "E_7b",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_L_FIXED_8001",
+      "stage": "E_hetero",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_L_FIXED_8002",
+      "stage": "E_hetero",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_L_FIXED_8003",
+      "stage": "E_hetero",
+      "method_id": "L_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_I_FIXED_8001",
+      "stage": "E_hetero",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_I_FIXED_8002",
+      "stage": "E_hetero",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_I_FIXED_8003",
+      "stage": "E_hetero",
+      "method_id": "I_FIXED",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_ADALORA_REF_8001",
+      "stage": "E_hetero",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_ADALORA_REF_8002",
+      "stage": "E_hetero",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    },
+    {
+      "run_id": "hetero_ADALORA_REF_8003",
+      "stage": "E_hetero",
+      "method_id": "ADALORA_REF",
+      "status": "pending",
+      "failure_reason": ""
+    }
+  ]
+}
