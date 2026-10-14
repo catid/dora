@@ -2,7 +2,7 @@ import torch
 from torch import nn
 
 from rankstudy.compress import thin_core_svd
-from scripts.run_pipeline_v2 import export_factors, inject_pattern
+from scripts.run_pipeline_v2 import export_factors, inject_pattern, prefix_energy_ranks
 
 
 class TinyTargets(nn.Module):
@@ -33,3 +33,14 @@ def test_pipeline_export_factors_reconstructs_thin_core_update():
     reconstructed = factors["x"]["B"] @ factors["x"]["A"]
     direct = 1.7 * (b @ a - b0 @ a0)
     assert torch.allclose(reconstructed, direct, atol=2e-5, rtol=2e-5)
+
+
+def test_global_prefix_energy_selection_respects_budget_and_prefixes():
+    # The second singular value of the first module cannot be retained without
+    # retaining its first; a greedy non-prefix selector would violate this.
+    entries = [("a", None, None, torch.tensor([10.0, 9.0]), None, {}),
+               ("b", None, None, torch.tensor([8.0, 1.0]), None, {})]
+    ranks, score = prefix_energy_ranks(entries, 2)
+    assert sum(ranks) <= 2
+    assert ranks == (2, 0)
+    assert score == 181.0

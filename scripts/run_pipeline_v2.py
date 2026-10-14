@@ -186,6 +186,29 @@ def module_pattern(model):
     return {name: module for name, module in model.named_modules() if isinstance(module, StudyLinear)}
 
 
+def prefix_energy_ranks(entries, budget):
+    """Exact prefix-feasible energy allocation for equal slot costs."""
+    # dp[cost] = (retained energy, rank tuple), with deterministic ties.
+    dp = {0: (0.0, ())}
+    for _, _, _, singular_values, _, _ in entries:
+        prefix = [0.0]
+        for value in singular_values:
+            prefix.append(prefix[-1] + float(value.detach().square()))
+        nxt = {}
+        for used, (score, ranks) in dp.items():
+            for rank, value in enumerate(prefix):
+                cost = used + rank
+                if cost > budget:
+                    break
+                candidate = (score + value, ranks + (rank,))
+                old = nxt.get(cost)
+                if old is None or candidate[0] > old[0] or (candidate[0] == old[0] and candidate[1] < old[1]):
+                    nxt[cost] = candidate
+        dp = nxt
+    best = max(dp.values(), key=lambda x: (x[0], -sum(x[1]), tuple(-v for v in x[1])))
+    return best[1], best[0]
+
+
 def global_svd_factors(model, target_rank):
     entries, total = [], 0
     for name, module in module_pattern(model).items():
@@ -194,16 +217,8 @@ def global_svd_factors(model, target_rank):
         total += target_rank
     # Equal-cost q/o modules: global energy selection is the exact prefix-feasible
     # solution for the specified Frobenius objective at this budget.
-    chosen = {name: target_rank for name, *_ in entries}
-    remaining = total
-    ranked = sorted(((float(sv * sv), name, j) for name, _, _, s, _, _ in entries for j, sv in enumerate(s)), reverse=True)
-    chosen = {name: 0 for name, *_ in entries}
-    for _, name, j in ranked:
-        if remaining <= 0:
-            break
-        if j == chosen[name]:
-            chosen[name] += 1
-            remaining -= 1
+    ranks, _ = prefix_energy_ranks(entries, total)
+    chosen = {entry[0]: rank for entry, rank in zip(entries, ranks)}
     return entries, chosen
 
 
@@ -212,9 +227,12 @@ def export_factors(entries, ranks):
     for name, module, left, s, right, meta in entries:
         r = int(ranks[name])
         root = s[:r].clamp_min(0).sqrt()
+        meta_out = dict(meta)
+        meta_out["retained_rank"] = r
+        meta_out["reconstruction_error_fro"] = float(s[r:].detach().square().sum().sqrt())
         out[name] = {"B": (left[:, :r] * root[None, :]).float().cpu(),
                      "A": (right[:, :r] * root[None, :]).T.float().cpu(),
-                     "rank": r, "meta": meta}
+                     "rank": r, "meta": meta_out}
     return out
 
 
@@ -305,10 +323,8 @@ def main():
             entries2 = [(n, m, l, s, r, meta) for n, m, l, s, r, meta in entries]
             ranks = {n: args.target_rank for n, *_ in entries2}
             # Select globally largest singular energies with a prefix constraint.
-            candidates = sorted(((float(sv * sv), n, j) for n, _, _, s, _, _ in entries2 for j, sv in enumerate(s)), reverse=True)
-            ranks = {n: 0 for n, *_ in entries2}; remaining = args.target_rank * len(entries2)
-            for _, n, j in candidates:
-                if remaining and j == ranks[n]: ranks[n] += 1; remaining -= 1
+            ranks_tuple, _ = prefix_energy_ranks(entries2, args.target_rank * len(entries2))
+            ranks = {entry[0]: rank for entry, rank in zip(entries2, ranks_tuple)}
             factors = export_factors(entries2, ranks)
         else:
             factors = export_factors(entries, {n: args.target_rank for n, *_ in entries})

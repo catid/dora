@@ -25,7 +25,7 @@ def thin_core_svd(A0,B0,A,B,scale=1.0,energy=None,rank=None):
     left=Qc@uc[:,:rank]
     right=Qd@vt[:rank,:].T
     vals=s[:rank]
-    return left,vals,right,{'full_rank':len(s),'retained_rank':rank,'singular_values':s.detach().cpu().tolist(),'reconstruction_error_fro':float(s[rank:].square().sum().sqrt())}
+    return left,vals,right,{'full_rank':len(s),'retained_rank':rank,'singular_values':s.detach().cpu().tolist(),'reconstruction_error_fro':float(s[rank:].detach().square().sum().sqrt())}
 
 
 def balanced_lora_factors(left, singular_values, right, scale=1.0):
