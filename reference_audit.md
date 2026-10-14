@@ -17,3 +17,13 @@ Custom `L` and `I` two-factor adapters use the same fixed forward multiplier and
 ## Compatibility differences
 
 The faithful AdaLoRA reference is kept as a distinct arm because its initialization, element-level score aggregation, uncertainty weighting, rank-number denominator offset, orthogonality penalty, and masking/re-activation semantics differ from the custom methods. The current environment uses the 2026-10-13 PyTorch nightly rather than the older dependency set in upstream repositories. Native SDPA is used; backend selection is recorded at runtime. No claim of a full paper reproduction is made: this is a controlled minimal arm with the required q/o target modules and task loop.
+
+The AdaLoRA arm follows the upstream update order: after each optimizer step it
+updates `abs(parameter * gradient)` scores and their EMAs, then applies a mask
+only at allocation events. A masked `E` coefficient is zeroed at that event but
+is not forcibly zeroed before every later forward; Adam can therefore move it
+and the slot can reactivate at a later allocation. The custom L/I allocators
+remain pre-optimizer, monotonic, persistent-mask methods under the registered
+protocol. An earlier launcher version zeroed AdaLoRA `E` before every forward;
+it produced no terminal AdaLoRA records and was withdrawn before corrected
+AdaLoRA HPO restarted.

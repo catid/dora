@@ -121,9 +121,6 @@ def main():
     for step, update in enumerate(manifest["updates"]):
         for module in modules(model):
             module.begin_score_accum()
-            if module.adalora:
-                with torch.no_grad():
-                    module.E.data[~module.active_mask, 0] = 0
         opt.zero_grad(set_to_none=True)
         input_tokens = supervised_tokens = 0
         task_loss_sum = 0.0
@@ -149,7 +146,12 @@ def main():
 
         pending_keep = None
         progress = (step + 1) / args.updates
-        if spec and spec.allocator != "none" and (step + 1) % 16 == 0 or (spec and spec.allocator != "none" and step == args.updates - 1):
+        # Custom allocators use the declared pre-optimizer global-batch
+        # gradients.  Faithful AdaLoRA is handled after optimizer.step below,
+        # matching the upstream trainer ordering and allowing masked E
+        # coefficients to reactivate between allocation events.
+        if (spec and spec.allocator != "none" and not any(m.adalora for m in modules(model))
+                and ((step + 1) % 16 == 0 or step == args.updates - 1)):
             allslots = []
             for mi, module in enumerate(modules(model)):
                 if spec.allocator == "global_random":
@@ -200,11 +202,8 @@ def main():
                     keep.update((s.module, s.index) for s in sorted(group, key=lambda s: (-s.score, s.index))[:base + int(mi < extra)])
             else:
                 keep = allocate(allslots, budget, floor)
-            if any(m.adalora for m in modules(model)):
-                pending_keep = keep
-            else:
-                for mi, module in enumerate(modules(model)):
-                    module.set_mask(torch.tensor([(str(mi), j) in keep for j in range(module.rank)], device=device))
+            for mi, module in enumerate(modules(model)):
+                module.set_mask(torch.tensor([(str(mi), j) in keep for j in range(module.rank)], device=device))
 
         regularizer = torch.zeros((), device=device)
         if spec and spec.triplet and args.penalty:
@@ -222,6 +221,35 @@ def main():
                 module.lam.grad.mul_(mask)
         torch.nn.utils.clip_grad_norm_(params, 1.0)
         opt.step()
+
+        # Faithful AdaLoRA reference path.  Upstream updates element scores
+        # after optimizer.step using the post-step parameter and retained
+        # gradient, smooths every step through the shrink interval, and only
+        # masks at allocation events.  Crucially, E is zeroed when a slot is
+        # masked but is then free to move with Adam between events, preserving
+        # the reference reactivation semantics.  The q/o screen has equal
+        # module costs, so this is the exact global slot budget in rank units.
+        if any(m.adalora for m in modules(model)):
+            for mi, module in enumerate(modules(model)):
+                if progress < 0.80:
+                    raw_q = adalora_scores(module.adapter)
+                    smoothed_q = ema_update(score_ema.get(mi), raw_q, 0.85)
+                    score_ema[mi] = smoothed_q
+                    uncertainty[mi] = uncertainty_update(uncertainty.get(mi), raw_q, smoothed_q, 0.85)
+            if ((step + 1) % 16 == 0 or step == args.updates - 1) and progress > 0.10:
+                allslots = []
+                for mi, module in enumerate(modules(model)):
+                    q = score_ema.get(mi, torch.zeros(module.rank, device=device)) * uncertainty.get(
+                        mi, torch.zeros(module.rank, device=device))
+                    for j, value in enumerate(q.tolist()):
+                        allslots.append(Slot(str(mi), j, 1, float(value)))
+                initial_slots = sum(m.rank for m in modules(model))
+                target_slots = args.target_rank * len(modules(model))
+                u = max(0.0, min(1.0, (progress - 0.10) / 0.70))
+                budget_slots = round(target_slots + (initial_slots - target_slots) * (1 - u) ** 3)
+                keep, _, _ = allocate(allslots, budget_slots, {})
+                for mi, module in enumerate(modules(model)):
+                    module.set_mask(torch.tensor([(str(mi), j) in keep for j in range(module.rank)], device=device))
         if pending_keep is not None:
             for mi, module in enumerate(modules(model)):
                 module.set_mask(torch.tensor([(str(mi), j) in pending_keep for j in range(module.rank)], device=device))
@@ -256,7 +284,8 @@ def main():
                 "supervised_tokens": sum(x["supervised_tokens"] for x in metrics),
                 "elapsed_s": metrics[-1]["elapsed_s"], "peak_memory_bytes": torch.cuda.max_memory_allocated(),
                 "dev_tune_endpoint_group_balanced_nll": dev["group_balanced_nll"],
-                "dev_tune_endpoint_token_weighted_nll": dev["token_weighted_nll"]}
+                "dev_tune_endpoint_token_weighted_nll": dev["token_weighted_nll"],
+                "adalora_update_order": "post_optimizer_reference" if any(m.adalora for m in modules(model)) else None}
     (out / "metadata.json").write_text(json.dumps(metadata, indent=2) + "\n")
 
 

@@ -47,6 +47,19 @@ def test_adalora_mask_removes_whole_slot_and_e_gradients():
     m(torch.randn(2,5)).float().sum().backward()
     assert m.E.grad is not None and torch.count_nonzero(m.E.grad[[0,2]]) > 0
 
+def test_adalora_masked_slot_can_reactivate_between_reference_allocations():
+    torch.manual_seed(41)
+    base=torch.nn.Linear(5,4,bias=False,dtype=torch.float32)
+    m=StudyLinear(base,rank=3,init='ADALORA',adalora=True)
+    m.set_mask(torch.tensor([False, True, True]))
+    opt=torch.optim.AdamW([m.E, m.A, m.B],lr=.05,weight_decay=0.)
+    m(torch.randn(8,5)).sum().backward(); opt.step()
+    # Upstream masks E at an allocation event, then permits the optimizer to
+    # move it until the next event.  A persistent pre-forward zero would make
+    # the faithful reference arm permanently monotonic instead.
+    assert m.E[0,0].abs() > 0
+    assert not bool(m.active_mask[0])
+
 def test_loss_fn_is_supervised_token_mean():
     torch.manual_seed(12)
     logits=torch.randn(2,4,7,requires_grad=True)
