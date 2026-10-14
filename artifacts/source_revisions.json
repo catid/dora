@@ -1,0 +1,6 @@
+{
+  "IniLoRA": {"repo": "https://github.com/xueyongfu11/IniLoRA", "revision": "b0260ac7df0cfe0744d3568a3301a4fb1e66def3"},
+  "AdaLoRA": {"repo": "https://github.com/QingruZhang/AdaLoRA", "revision": "d10f5ebee16c478fa2f41a44a237b38e8c9b0338"},
+  "peft": {"repo": "https://github.com/huggingface/peft", "revision": "eac46efeef6e5f63ecc38de5c9148513df602b29"},
+  "study_source_branch": "study/adaptive-rank"
+}

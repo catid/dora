@@ -1,0 +1,8 @@
+{
+  "status": "blocked_scope",
+  "requested_train_groups": 20000,
+  "available_after_required_connected_group_deduplication": 12904,
+  "pinned_dataset_revision": "aa4f34d3d2d3231299b5b03d9b3e5a20da45aa18",
+  "command": "HF_HOME=/var/tmp/dora-adaptive-rank/hf .venv-study/bin/python scripts/prepare_data.py --out artifacts/data_manifest.json --allow-available",
+  "reason": "The MetaMathQA revision contains only 13,928 connected original-question groups. After reserving 512 dev_tune and 512 dev_audit groups, only 12,904 train groups remain. The study proceeds with the complete deduplicated pool and flags the requested 20,000-group scope as blocked; it does not duplicate groups or weaken the split rule."
+}

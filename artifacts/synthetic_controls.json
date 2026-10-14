@@ -1,0 +1,338 @@
+[
+  {
+    "seed": 11,
+    "init": "L",
+    "anisotropic": false,
+    "noise": false,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 23.21662974357605
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 18.057878918014467
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 10.703289574943483
+      }
+    ]
+  },
+  {
+    "seed": 11,
+    "init": "L",
+    "anisotropic": false,
+    "noise": true,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 26.486368705387576
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 19.721364130135044
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 9.526819712351426
+      }
+    ]
+  },
+  {
+    "seed": 11,
+    "init": "L",
+    "anisotropic": true,
+    "noise": false,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 79.76573276519775
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 58.39134220778942
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 38.727366015315056
+      }
+    ]
+  },
+  {
+    "seed": 11,
+    "init": "L",
+    "anisotropic": true,
+    "noise": true,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 80.0354376331452
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 58.85801624213491
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 35.64163876776729
+      }
+    ]
+  },
+  {
+    "seed": 11,
+    "init": "I",
+    "anisotropic": false,
+    "noise": false,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 18.12920582294464
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 12.946795463562012
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 8.166821249295026
+      }
+    ]
+  },
+  {
+    "seed": 11,
+    "init": "I",
+    "anisotropic": false,
+    "noise": true,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 22.291189438205038
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 16.63519931445626
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 8.312821080449794
+      }
+    ]
+  },
+  {
+    "seed": 11,
+    "init": "I",
+    "anisotropic": true,
+    "noise": false,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 57.37051773071289
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 39.97475481033325
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 23.34352919459343
+      }
+    ]
+  },
+  {
+    "seed": 11,
+    "init": "I",
+    "anisotropic": true,
+    "noise": true,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 70.38699365268258
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 53.55504871020821
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 28.13596743951348
+      }
+    ]
+  },
+  {
+    "seed": 12,
+    "init": "L",
+    "anisotropic": false,
+    "noise": false,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 16.20774358510971
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 12.430130721069872
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 7.185112060047686
+      }
+    ]
+  },
+  {
+    "seed": 12,
+    "init": "L",
+    "anisotropic": false,
+    "noise": true,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 20.598241066116316
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 16.067735826152784
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 10.94237406670436
+      }
+    ]
+  },
+  {
+    "seed": 12,
+    "init": "L",
+    "anisotropic": true,
+    "noise": false,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 60.62817740440369
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 45.349479615688324
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 24.20606940984726
+      }
+    ]
+  },
+  {
+    "seed": 12,
+    "init": "L",
+    "anisotropic": true,
+    "noise": true,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 63.76074561991845
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 50.03790101924096
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 32.34430270039593
+      }
+    ]
+  },
+  {
+    "seed": 12,
+    "init": "I",
+    "anisotropic": false,
+    "noise": false,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 14.863780975341797
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 10.824940183665603
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 5.861323991324753
+      }
+    ]
+  },
+  {
+    "seed": 12,
+    "init": "I",
+    "anisotropic": false,
+    "noise": true,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 23.318340704223374
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 17.368643209716538
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 9.204738890199224
+      }
+    ]
+  },
+  {
+    "seed": 12,
+    "init": "I",
+    "anisotropic": true,
+    "noise": false,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 43.13117218017578
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 32.768866777420044
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 18.02482568193227
+      }
+    ]
+  },
+  {
+    "seed": 12,
+    "init": "I",
+    "anisotropic": true,
+    "noise": true,
+    "steps": 100,
+    "results": [
+      {
+        "budget_slots": 8,
+        "energy_selected_mse": 62.27333109117899
+      },
+      {
+        "budget_slots": 16,
+        "energy_selected_mse": 46.91205541826639
+      },
+      {
+        "budget_slots": 32,
+        "energy_selected_mse": 26.445361573620175
+      }
+    ]
+  }
+]

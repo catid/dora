@@ -1,0 +1,80 @@
+[
+  {
+    "kind": "model",
+    "repo": "Qwen/Qwen2.5-Math-1.5B",
+    "sha": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Math-1.5B",
+    "files": [
+      ".gitattributes",
+      "LICENSE",
+      "README.md",
+      "config.json",
+      "generation_config.json",
+      "merges.txt",
+      "model.safetensors",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ]
+  },
+  {
+    "kind": "model",
+    "repo": "Qwen/Qwen2.5-Math-7B",
+    "sha": "b101308fe89651ea5ce025f25317fea6fc07e96e",
+    "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-Math-7B",
+    "files": [
+      ".gitattributes",
+      "LICENSE",
+      "README.md",
+      "config.json",
+      "generation_config.json",
+      "merges.txt",
+      "model-00001-of-00004.safetensors",
+      "model-00002-of-00004.safetensors",
+      "model-00003-of-00004.safetensors",
+      "model-00004-of-00004.safetensors",
+      "model.safetensors.index.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ]
+  },
+  {
+    "kind": "dataset",
+    "repo": "meta-math/MetaMathQA",
+    "sha": "aa4f34d3d2d3231299b5b03d9b3e5a20da45aa18",
+    "url": "https://huggingface.co/api/datasets/meta-math/MetaMathQA",
+    "files": [
+      ".gitattributes",
+      "MetaMathQA-395K.json",
+      "README.md"
+    ]
+  },
+  {
+    "kind": "dataset",
+    "repo": "openai/gsm8k",
+    "sha": "740312add88f781978c0658806c59bc2815b9866",
+    "url": "https://huggingface.co/api/datasets/openai/gsm8k",
+    "files": [
+      ".gitattributes",
+      "README.md",
+      "eval.yaml",
+      "main/test-00000-of-00001.parquet",
+      "main/train-00000-of-00001.parquet",
+      "socratic/test-00000-of-00001.parquet",
+      "socratic/train-00000-of-00001.parquet"
+    ]
+  },
+  {
+    "kind": "dataset",
+    "repo": "HuggingFaceH4/MATH-500",
+    "sha": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+    "url": "https://huggingface.co/api/datasets/HuggingFaceH4/MATH-500",
+    "files": [
+      ".gitattributes",
+      "README.md",
+      "eval.yaml",
+      "test.jsonl"
+    ]
+  }
+]

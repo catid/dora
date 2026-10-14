@@ -1,0 +1,7 @@
+short_updates: 128
+configs_per_candidate: 12
+peak_learning_rates: [1.0e-6, 1.0e-5, 1.0e-4, 1.0e-3]
+forward_scales: [0.25, 1.0, 4.0]
+orthogonal_penalties: [1.0e-4, 1.0e-3, 1.0e-2]
+selection_metric: dev_tune_endpoint_group_balanced_nll
+boundary_rescue_max: 2

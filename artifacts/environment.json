@@ -1,0 +1,15 @@
+{
+  "python": "3.12.3",
+  "torch": "2.16.0.dev20261013+cu130",
+  "cuda_runtime": "13.0",
+  "driver": "615.71.09",
+  "gpus_visible": 4,
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+  "gpu_memory_mib": 97887,
+  "cuda_visible_devices": null,
+  "sdpa": "torch.nn.attention.sdpa_kernel; backend probe recorded by smoke test",
+  "backbone_dtype": "bfloat16",
+  "adapter_dtype": "float32",
+  "optimizer": "AdamW",
+  "cache_root": "/var/tmp/dora-adaptive-rank"
+}

@@ -1,0 +1,131 @@
+[
+  {
+    "id": "R1",
+    "url": "https://arxiv.org/abs/2510.03731",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R1.txt",
+    "sha256": "5c31f184d8321b902a11590f1d04b2e3db6bbb2942d5170bb0d6b8e018da1fa5",
+    "bytes": 41326,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:58.676709+00:00"
+  },
+  {
+    "id": "R2",
+    "url": "https://arxiv.org/html/2510.03731v1",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R2.txt",
+    "sha256": "b55d99dd73d8fbd29efec193ef818476563dd46eb7d76a506c484df84a0d3208",
+    "bytes": 176967,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:58.742123+00:00"
+  },
+  {
+    "id": "R3",
+    "url": "https://raw.githubusercontent.com/xueyongfu11/IniLoRA/b0260ac7df0cfe0744d3568a3301a4fb1e66def3/README.md",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R3.txt",
+    "sha256": "2af0b5fb99669c78755ad50cfb071c3886fe7da729939a09e9266f5ed85987bb",
+    "bytes": 3327,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:58.629753+00:00"
+  },
+  {
+    "id": "R4",
+    "url": "https://raw.githubusercontent.com/xueyongfu11/IniLoRA/b0260ac7df0cfe0744d3568a3301a4fb1e66def3/peft/tuners/lora/layer.py",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R4.txt",
+    "sha256": "c12abed79f579fd80660dc51e5bf7ce4fbf87433d955e7d09da3d43b52812fa4",
+    "bytes": 56498,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:58.610731+00:00"
+  },
+  {
+    "id": "R5",
+    "url": "https://arxiv.org/pdf/2303.10512",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R5.pdf",
+    "sha256": "7afe399a4d0c5cf37c956b0a8afb2294c2d2b289608162b4e49bddecc3b311ef",
+    "bytes": 668060,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:58.719430+00:00"
+  },
+  {
+    "id": "R6",
+    "url": "https://raw.githubusercontent.com/QingruZhang/AdaLoRA/d10f5ebee16c478fa2f41a44a237b38e8c9b0338/loralib/loralib/adalora.py",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R6.txt",
+    "sha256": "8a2f94ec9be49c231f9283311b38ef9abeb4c9b9cdf819245f4442efe7012f95",
+    "bytes": 14804,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:58.640360+00:00"
+  },
+  {
+    "id": "R7",
+    "url": "https://raw.githubusercontent.com/huggingface/peft/eac46efeef6e5f63ecc38de5c9148513df602b29/src/peft/tuners/adalora/layer.py",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R7.txt",
+    "sha256": "fea21a311da946eceb85d7d72e9bf36cf71dc090a1b2a452cae5002d8d7c8701",
+    "bytes": 22174,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:58.788031+00:00"
+  },
+  {
+    "id": "R13",
+    "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.attention.sdpa_kernel.html",
+    "status": "failed",
+    "reason": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "R14",
+    "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.attention.SDPBackend.html",
+    "status": "failed",
+    "reason": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "R15",
+    "url": "https://download.pytorch.org/whl/nightly/cu130/torch/",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R15.txt",
+    "sha256": "2aa51c39f2a87d17a11609f714fcfa751d562c80ba38a5d3fca6f35dc27a1385",
+    "bytes": 524716,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:58.968562+00:00"
+  },
+  {
+    "id": "R8",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/resolve/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2/README.md",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R8.txt",
+    "sha256": "2fa98ea4581329d6c9e2d58d28be62484d68ff596f59bc9e4d1f20ff950a0b80",
+    "bytes": 3426,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:59.013674+00:00"
+  },
+  {
+    "id": "R9",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Math-7B/resolve/b101308fe89651ea5ce025f25317fea6fc07e96e/README.md",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R9.txt",
+    "sha256": "ba6802fe3bb6e25256f795bb117a1de8f24c80a4ebf8efa4bc3b4a5dc1c4dfd6",
+    "bytes": 3421,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:59.046093+00:00"
+  },
+  {
+    "id": "R10",
+    "url": "https://huggingface.co/datasets/meta-math/MetaMathQA/resolve/aa4f34d3d2d3231299b5b03d9b3e5a20da45aa18/README.md",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R10.txt",
+    "sha256": "6456351cc70fa23069d07ba544c83f167962159d28b09492d4e16501fb8ce418",
+    "bytes": 4445,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:59.025590+00:00"
+  },
+  {
+    "id": "R11",
+    "url": "https://huggingface.co/datasets/openai/gsm8k/resolve/740312add88f781978c0658806c59bc2815b9866/README.md",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R11.txt",
+    "sha256": "a17e882503578c9e324560630e31017617714ee025c87cf4fea6fd916895f3c1",
+    "bytes": 7935,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:59.064921+00:00"
+  },
+  {
+    "id": "R12",
+    "url": "https://huggingface.co/datasets/HuggingFaceH4/MATH-500/resolve/6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be/README.md",
+    "path": "/var/tmp/dora-adaptive-rank/source_cache/R12.txt",
+    "sha256": "5d32f78943f75423da61419c5bb98cee964d5a29183b11a5294f661fb96f69f7",
+    "bytes": 412,
+    "status": "retrieved",
+    "access_utc": "2026-10-14T05:50:59.043196+00:00"
+  }
+]

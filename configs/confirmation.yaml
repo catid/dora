@@ -1,0 +1,4 @@
+seeds: [3001, 3002, 3003, 3004, 3005]
+rank4_seeds: [4001, 4002, 4003]
+model: Qwen/Qwen2.5-Math-1.5B
+seven_b_model: Qwen/Qwen2.5-Math-7B

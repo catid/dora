@@ -1,0 +1,28 @@
+model: Qwen/Qwen2.5-Math-1.5B
+model_revision: 4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2
+target_modules: [q_proj, o_proj]
+final_average_rank: 8
+maximum_rank: 16
+full_horizon_updates: 512
+short_horizon_updates: 128
+target_input_tokens_per_update: 8192
+max_sequence_length: 2048
+optimizer: AdamW
+betas: [0.9, 0.999]
+eps: 1.0e-8
+weight_decay: 0.0
+gradient_clip_norm: 1.0
+adapter_dropout: 0.0
+lr_warmup_fraction: 0.03
+lr_decay: cosine_to_0.10_of_peak
+allocation_warmup_fraction: 0.10
+allocation_freeze_fraction: 0.80
+allocation_interval_updates: 16
+score_ema_beta: 0.85
+minimum_rank_per_module: 1
+seed_hpo: 1001
+tuning_seeds: [1002, 1003]
+screening_seeds: [2001, 2002, 2003]
+confirmation_seeds: [3001, 3002, 3003, 3004, 3005]
+peak_learning_rates: [1.0e-6, 1.0e-5, 1.0e-4, 1.0e-3]
+forward_scales: [0.25, 1.0, 4.0]
