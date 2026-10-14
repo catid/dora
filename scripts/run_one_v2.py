@@ -247,7 +247,7 @@ def main():
                 target_slots = args.target_rank * len(modules(model))
                 u = max(0.0, min(1.0, (progress - 0.10) / 0.70))
                 budget_slots = round(target_slots + (initial_slots - target_slots) * (1 - u) ** 3)
-                keep, _, _ = allocate(allslots, budget_slots, {})
+                keep = allocate(allslots, budget_slots, {})
                 for mi, module in enumerate(modules(model)):
                     module.set_mask(torch.tensor([(str(mi), j) in keep for j in range(module.rank)], device=device))
         if pending_keep is not None:
