@@ -99,10 +99,13 @@ def set_lr(opt, peak, step, total):
         group["lr"] = peak * frac
 
 
-def mask_by_gate(model, target_cost, initial_cost, progress, seed, floor=True):
+def mask_by_gate(model, target_cost, initial_cost, progress, score_ema, floor=True):
     allslots = []
     for mi, module in enumerate(modules(model)):
-        q = module.score_gate()
+        raw = module.score_gate().detach().float()
+        old = score_ema.get(mi)
+        q = raw if old is None else 0.85 * old + 0.15 * raw
+        score_ema[mi] = q
         cost = module.A.shape[1] + module.B.shape[0]
         for j, value in enumerate(q.tolist()):
             if bool(module.active_mask[j]):
@@ -120,7 +123,7 @@ def train_updates(model, updates, train_rows, tokenizer, peak_lr, microbatch, to
                   start_step=0, allocate_gate=False, allocation_total_steps=None):
     device = "cuda"
     opt = optimizer(model, peak_lr)
-    metrics, t0 = [], time.time()
+    metrics, t0, score_ema = [], time.time(), {}
     if allocation_total_steps is None:
         allocation_total_steps = total_steps
     initial_cost = sum(m.rank * (m.A.shape[1] + m.B.shape[0]) for m in modules(model))
@@ -148,7 +151,7 @@ def train_updates(model, updates, train_rows, tokenizer, peak_lr, microbatch, to
                 p.grad.div_(denom)
         progress = (local_step + 1) / max(1, allocation_total_steps)
         if allocate_gate and ((local_step + 1) % 16 == 0 or local_step == len(updates) - 1):
-            mask_by_gate(model, target_cost, initial_cost, progress, 0)
+            mask_by_gate(model, target_cost, initial_cost, progress, score_ema)
         # Apply the newly persistent mask before the update. This prevents the
         # allocation event itself from giving a pruned coordinate one last
         # Adam/momentum step.
@@ -248,10 +251,14 @@ def main():
     is_restart = "PILOT" in args.method or "RESTART" in args.method
     is_compress = "SVD" in args.method
     if is_restart:
-        pilot_init = args.pilot_init or args.method.split("_PILOT_")[0]
-        student_init = args.student_init or args.init or args.method.split("_STUDENT")[-1]
-        if student_init not in ("L", "I"):
-            student_init = "I" if "_I_STUDENT" in args.method else "L"
+        if "_PILOT_" in args.method:
+            default_pilot = args.method.split("_PILOT_", 1)[0]
+            default_student = "I" if "_I_STUDENT" in args.method else "L"
+        else:
+            default_pilot = args.method[0]
+            default_student = args.method[0]
+        pilot_init = args.pilot_init or args.init or default_pilot
+        student_init = args.student_init or args.init or default_student
         source_model = load_model(args.model)
         source_model = inject(source_model, args.rank, ("q_proj", "o_proj"), pilot_init, args.scale, args.method, args.seed)
         pilot_steps = max(1, int(round(.20 * args.updates)))
@@ -264,9 +271,12 @@ def main():
         if "UNIFORM_RESTART" in args.method:
             pattern = {}
         elif "SHUFFLED_SELF_RESTART" in args.method:
-            # This branch is supplied by a self-pilot caller; derive a uniform
-            # compatible pattern if no pilot is present.
-            pattern = {}
+            # Preserve the pilot's rank multiset, but shuffle placement among
+            # equal-cost q/o modules. The pilot itself remains discarded.
+            names = sorted(pattern)
+            values = [pattern[n] for n in names]
+            random.Random(args.seed + 991).shuffle(values)
+            pattern = dict(zip(names, values))
         fresh = load_model(args.model)
         if not pattern:
             names = [n for n, m in fresh.named_modules() if isinstance(m, torch.nn.Linear) and
