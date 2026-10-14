@@ -3,6 +3,12 @@
 from __future__ import annotations
 import argparse, json, os, subprocess, time
 from pathlib import Path
+import sys
+
+# Make direct ``python scripts/run_hpo_v2.py`` invocation reproducible without
+# requiring callers to remember a repository-specific PYTHONPATH.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
 from rankstudy.registry import build_registry
 
 SUPPORTED = {"fixed", "wide", "reference", "online", "allocation_control", "triplet", "triplet_ortho", "online_uncertainty"}
