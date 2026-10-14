@@ -10,8 +10,8 @@
   ],
   "counts": {
     "total": 959,
-    "pending": 931,
-    "complete": 28,
+    "pending": 923,
+    "complete": 36,
     "failed": 0,
     "blocked": 0,
     "not_in_scope": 0
@@ -287,56 +287,56 @@
       "run_id": "hpo_L_WIDE_lr1e-05_s1",
       "stage": "B_hpo",
       "method_id": "L_WIDE",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "hpo_L_WIDE_lr1e-05_s4",
       "stage": "B_hpo",
       "method_id": "L_WIDE",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "hpo_L_WIDE_lr0.0001_s0.25",
       "stage": "B_hpo",
       "method_id": "L_WIDE",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "hpo_L_WIDE_lr0.0001_s1",
       "stage": "B_hpo",
       "method_id": "L_WIDE",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "hpo_L_WIDE_lr0.0001_s4",
       "stage": "B_hpo",
       "method_id": "L_WIDE",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_WIDE_lr0.001_s0.25",
       "stage": "B_hpo",
       "method_id": "L_WIDE",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_WIDE_lr0.001_s1",
       "stage": "B_hpo",
       "method_id": "L_WIDE",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_WIDE_lr0.001_s4",
       "stage": "B_hpo",
       "method_id": "L_WIDE",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
@@ -379,28 +379,28 @@
       "stage": "B_hpo",
       "method_id": "I_WIDE",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "hpo_I_WIDE_lr1e-06_s1",
       "stage": "B_hpo",
       "method_id": "I_WIDE",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "hpo_I_WIDE_lr1e-06_s4",
       "stage": "B_hpo",
       "method_id": "I_WIDE",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "hpo_I_WIDE_lr1e-05_s0.25",
       "stage": "B_hpo",
       "method_id": "I_WIDE",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "hpo_I_WIDE_lr1e-05_s1",
