@@ -59,6 +59,7 @@ def main():
             env=os.environ.copy(); env.update({'CUDA_VISIBLE_DEVICES':gpu,'PYTHONPATH':'src','HF_HOME':os.environ.get('HF_HOME','/var/tmp/dora-adaptive-rank/hf'),'PYTORCH_CUDA_ALLOC_CONF':'expandable_segments:True'})
             log=(out/'stdout.log').open('w'); proc=subprocess.Popen(cmd,env=env,stdout=log,stderr=subprocess.STDOUT)
             active[proc.pid]=(proc,log,j,gpu); print(json.dumps({'event':'launch','pid':proc.pid,'gpu':gpu,'method':j['method'],'lr':j['lr'],'scale':j['scale']}),flush=True)
+            (out/'launcher_status.json').write_text(json.dumps({'status':'running','pid':proc.pid,'gpu':gpu,'stage':'v2_hpo'},indent=2)+'\n')
         time.sleep(1)
         for pid,(proc,log,j,gpu) in list(active.items()):
             rc=proc.poll()

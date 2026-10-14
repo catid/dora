@@ -62,6 +62,9 @@ def main():
             log = (out / "stdout.log").open("w")
             proc = subprocess.Popen(cmd, env=env, stdout=log, stderr=subprocess.STDOUT)
             active[proc.pid] = (proc, log, job, gpu)
+            (out / "launcher_status.json").write_text(json.dumps({
+                "status": "running", "pid": proc.pid, "gpu": gpu,
+                "stage": "v2_pipeline_hpo"}, indent=2) + "\n")
             print(json.dumps({"event": "launch", "pid": proc.pid, "gpu": gpu,
                               "method": job["method"], "lr": job["lr"],
                               "scale": job["scale"]}), flush=True)
