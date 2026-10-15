@@ -1,6 +1,6 @@
 # Roadmap and provisional ETA
 
-Updated 2026-10-15T18:27:51.302039+00:00.
+Updated 2026-10-15T18:32:43.411846+00:00.
 
 Planning ranges remain anchored to the initial ETA snapshot, 2026-10-15T05:39:35.166627+00:00; refreshing this report does not restart the clock.
 
@@ -25,9 +25,9 @@ Stage A has now executed all 41 GPU smoke cells and 984 retained synthetic budge
 
 Stage B contains **779 mandatory training jobs**: 492 short searches, 164 full-horizon tuning runs and 123 independent screening runs. Conditional rescue trials are extra. At the two measured native rates, training alone extrapolates to **42.6–46.8 GPU-hours**, or **10.7–11.7 hours** with ideal four-GPU parallelism. This arithmetic excludes evaluation, setup, pipeline overhead differences, rescue trials and remaining engineering. The timing runs used two concurrent GPUs; the live HPO rate is an observed four-job queue measurement.
 
-At the current HPO rate (1.92 completed trials/minute), the remaining short search is estimated at 0.00 hours, near 2026-10-15T18:27:51.318794+00:00. This forecast is arithmetic from launcher completion times and is not a guarantee.
+At the current HPO rate (1.92 completed trials/minute), the remaining short search is estimated at 0.00 hours, near 2026-10-15T18:32:43.429204+00:00. This forecast is arithmetic from launcher completion times and is not a guarantee.
 
-The live full-horizon tuning queue has **149/164 complete**, 4 running and 0 failed. Its observed rate is 32.8 jobs/hour, implying about 0.5 hours remaining and an ETA near 2026-10-15T18:55:16.640815+00:00. The four diagnostics are held until tuning finishes because of the recorded order incident.
+The live full-horizon tuning queue has **151/164 complete**, 4 running and 0 failed. Its observed rate is 32.5 jobs/hour, implying about 0.4 hours remaining and an ETA near 2026-10-15T18:56:41.566186+00:00. The four diagnostics are held until tuning finishes because of the recorded order incident.
 
 The screening queue is **0/123 complete** (0 running, 0 failed). It has not started, so no measured screening-rate ETA is claimed.
 
