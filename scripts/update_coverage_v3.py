@@ -59,6 +59,13 @@ def main():
                                  'reason':'launcher running; terminal receipt pending','conditional':run.get('conditional'),
                                  'evidence':str(launcher)})
                     continue
+                if live.get('status') in {'complete', 'failed'}:
+                    rows.append({'run_id':run['run_id'],'stage':run['stage'],'method_id':run['method_id'],
+                                 'selection_role':run['selection_role'],
+                                 'status':'failed' if live.get('status')=='failed' else 'pending',
+                                 'reason':'launcher terminal but metadata receipt is missing',
+                                 'conditional':run.get('conditional'),'evidence':str(launcher)})
+                    continue
             record=json.loads(path.read_text())
             state=record['status']
             if state in {'complete','passed'}:
