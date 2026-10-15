@@ -1,6 +1,6 @@
 {
   "schema": "rankstudy-v3-roadmap",
-  "updated_at": "2026-10-15T12:13:53.045890+00:00",
+  "updated_at": "2026-10-15T12:43:54.036857+00:00",
   "first_eta_snapshot_at": "2026-10-15T05:39:35.166627+00:00",
   "scope": "All required stages retained; no reduced-scope completion claim.",
   "actual_hardware": "4 RTX PRO 6000 Blackwell Max-Q GPUs",
@@ -110,12 +110,12 @@
   ],
   "live_phase": "B_hpo",
   "hpo_counts": {
-    "complete": 309,
+    "complete": 366,
     "running": 4
   },
-  "hpo_rate_complete_per_minute": 1.9143620690484415,
-  "hpo_remaining_hours_at_observed_rate": 1.5932200336146662,
-  "hpo_eta_utc_at_observed_rate": "2026-10-15T13:49:28.654270+00:00",
+  "hpo_rate_complete_per_minute": 1.9221340353261949,
+  "hpo_remaining_hours_at_observed_rate": 1.092535672021239,
+  "hpo_eta_utc_at_observed_rate": "2026-10-15T13:49:27.182556+00:00",
   "declared_diagnostics_complete": 0,
   "tuning_launcher_records": 0,
   "screening_launcher_records": 0,
