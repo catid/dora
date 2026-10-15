@@ -60,16 +60,47 @@ def main():
         hpo_remaining = remaining / (hpo_rate * 60.0) if hpo_rate else None
         if hpo_remaining is not None:
             hpo_eta = datetime.fromtimestamp(time.time() + hpo_remaining * 3600, timezone.utc).isoformat()
+    def queue_status(root, expected):
+        """Read launcher receipts and derive a cautious observed-rate ETA."""
+        rows = []
+        root = Path(root)
+        paths = root.glob('*/launcher_status.json') if root.exists() else []
+        for path in paths:
+            try:
+                row = json.loads(path.read_text())
+                row['_mtime'] = path.stat().st_mtime
+                rows.append(row)
+            except (OSError, json.JSONDecodeError):
+                continue
+        counts = dict(Counter(row.get('status', 'unknown') for row in rows))
+        done_times = sorted(row['_mtime'] for row in rows if row.get('status') == 'complete')
+        rate = None
+        if len(done_times) >= 2 and done_times[-1] > done_times[0]:
+            rate = (len(done_times) - 1) / ((done_times[-1] - done_times[0]) / 3600.0)
+        remaining = max(0, expected - counts.get('complete', 0) - counts.get('failed', 0))
+        eta_hours = remaining / rate if rate and rate > 0 else None
+        eta = (datetime.fromtimestamp(time.time() + eta_hours * 3600, timezone.utc).isoformat()
+               if eta_hours is not None else None)
+        return {
+            'expected': expected, 'records': len(rows), 'counts': counts,
+            'complete': counts.get('complete', 0), 'running': counts.get('running', 0),
+            'failed': counts.get('failed', 0), 'remaining': remaining,
+            'rate_complete_per_hour': rate, 'eta_hours_at_observed_rate': eta_hours,
+            'eta_utc_at_observed_rate': eta,
+        }
+
     diagnostic_root = Path('/var/tmp/dora-adaptive-rank/runs/v3_deletion_diagnostics_declared_20261015_final')
     diagnostic_count = len(list(diagnostic_root.glob('*_s*_summary.json')))
-    tuning_count = len(list(Path('/var/tmp/dora-adaptive-rank/runs/v3_tuning_20261015').glob('*/launcher_status.json')))
-    screening_count = len(list(Path('/var/tmp/dora-adaptive-rank/runs/v3_screening_20261015').glob('*/launcher_status.json')))
+    tuning = queue_status('/var/tmp/dora-adaptive-rank/runs/v3_tuning_20261015', 164)
+    screening = queue_status('/var/tmp/dora-adaptive-rank/runs/v3_screening_20261015', 123)
+    tuning_count = tuning['records']
+    screening_count = screening['records']
     if hpo_counts.get('complete', 0) < 492:
         live_phase = 'B_hpo'
+    elif tuning_count < 164:
+        live_phase = 'B_tuning (diagnostics queued until tuning finishes)'
     elif diagnostic_count < 4:
         live_phase = 'B_deletion_diagnostics'
-    elif tuning_count < 164:
-        live_phase = 'B_tuning'
     elif screening_count < 123:
         live_phase = 'B_screening'
     else:
@@ -86,6 +117,8 @@ def main():
         'hpo_remaining_hours_at_observed_rate': hpo_remaining,
         'hpo_eta_utc_at_observed_rate': hpo_eta,
         'declared_diagnostics_complete': diagnostic_count,
+        'tuning_queue': tuning,
+        'screening_queue': screening,
         'tuning_launcher_records': tuning_count,
         'screening_launcher_records': screening_count,
         'stage_B_mandatory_training_jobs': len(stage_b), 'stage_B_total_updates': updates,
@@ -137,6 +170,19 @@ def main():
          f"estimated at {hpo_remaining:.2f} hours, near {hpo_eta}. This forecast is arithmetic from "
          'launcher completion times and is not a guarantee.') if hpo_rate is not None else
         'A live HPO rate is not yet available; the queue forecast will be populated after two completed trials.', '',
+        f"The live full-horizon tuning queue has **{tuning['complete']}/{tuning['expected']} complete**, "
+        f"{tuning['running']} running and {tuning['failed']} failed. "
+        + (f"Its observed rate is {tuning['rate_complete_per_hour']:.1f} jobs/hour, implying "
+           f"about {tuning['eta_hours_at_observed_rate']:.1f} hours remaining and an ETA near "
+           f"{tuning['eta_utc_at_observed_rate']}. "
+           if tuning['eta_hours_at_observed_rate'] is not None else
+           'A rate-based ETA is not yet estimable. ')
+        + 'The four diagnostics are held until tuning finishes because of the recorded order incident.', '',
+        f"The screening queue is **{screening['complete']}/{screening['expected']} complete** "
+        f"({screening['running']} running, {screening['failed']} failed). "
+        + (f"Its observed-rate estimate is {screening['eta_hours_at_observed_rate']:.1f} hours."
+           if screening['eta_hours_at_observed_rate'] is not None else
+           'It has not started, so no measured screening-rate ETA is claimed.'), '',
         estimate['uncertainty'], '',
         'The 3,064-entry plan includes diagnostics, conditional branches and separate evaluation jobs; '
         'it is not a count of unconditional training runs. See `artifacts/coverage_v3.json` for exact coverage '
