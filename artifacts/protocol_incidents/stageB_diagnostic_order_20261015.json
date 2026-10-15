@@ -1,0 +1,32 @@
+{
+  "schema": "rankstudy-v3-protocol-incident",
+  "incident_id": "stageB_diagnostic_order_20261015",
+  "status": "open",
+  "selection_eligible": false,
+  "discovered_at_utc": "2026-10-15T13:49:00Z",
+  "scope": "Stage B declared deletion diagnostics",
+  "declared_order": [
+    "complete 492-trial HPO",
+    "run L_GATE/I_GATE diagnostics for seeds 2901 and 2902",
+    "run 164 tuning jobs",
+    "run 123 screening jobs"
+  ],
+  "observed_order": [
+    "complete 492-trial HPO",
+    "launch tuning jobs before diagnostics"
+  ],
+  "cause": "The long-lived supervisor process was started before the final diagnostic-transition code was loaded. The HPO launcher completed normally, but the supervisor proceeded directly to tuning using its already-loaded older code path.",
+  "containment": [
+    "The supervisor PID 3446058 was stopped before screening could launch.",
+    "The four active tuning jobs were left running; no training job was killed.",
+    "The four diagnostics will run sequentially after tuning releases the GPUs and before screening is resumed.",
+    "The HPO records, tuning records, and incident evidence remain immutable and selection-ineligible until the declared diagnostics are complete."
+  ],
+  "affected_roots": {
+    "hpo": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry",
+    "tuning": "/var/tmp/dora-adaptive-rank/runs/v3_tuning_20261015",
+    "diagnostics_expected": "/var/tmp/dora-adaptive-rank/runs/v3_deletion_diagnostics_declared_20261015_final",
+    "screening": "/var/tmp/dora-adaptive-rank/runs/v3_screening_20261015"
+  },
+  "quality_claim": "No quality claim is made from HPO or tuning while this incident is open."
+}
