@@ -4,7 +4,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 
 | Method | Complete / 4 | Endpoint dev NLL mean ± SD | Range |
 |:--|--:|--:|--:|
-| ADALORA_REF | 3 / 4 | 0.227118 ± 0.003079 | 0.223563–0.228935 |
+| ADALORA_REF | 4 / 4 | 0.226150 ± 0.003173 | 0.223246–0.228935 |
 | I_ACT | 2 / 4 | 0.204720 ± 0.000074 | 0.204668–0.204772 |
 | I_DISP | 4 / 4 | 0.201545 ± 0.001320 | 0.200085–0.203206 |
 | I_FIXED | 3 / 4 | 0.201467 ± 0.000183 | 0.201257–0.201593 |
@@ -37,7 +37,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | L_UNIFORM_RESTART | 3 / 4 | 0.199931 ± 0.002712 | 0.198333–0.203062 |
 | L_UNIFORM_SVD | 2 / 4 | 0.196762 ± 0.000174 | 0.196639–0.196885 |
 | L_WIDE | 4 / 4 | 0.196446 ± 0.001615 | 0.194969–0.197916 |
-| T0_FIXED | 2 / 4 | 0.238738 ± 0.000448 | 0.238421–0.239055 |
+| T0_FIXED | 3 / 4 | 0.238077 ± 0.001189 | 0.236754–0.239055 |
 | T0_FIXED_ORTHO | 4 / 4 | 0.237437 ± 0.001656 | 0.235379–0.239128 |
 | T0_GATE | 3 / 4 | 0.232549 ± 0.001632 | 0.231010–0.234259 |
 | T0_GATE_ORTHO | 3 / 4 | 0.231585 ± 0.000663 | 0.231088–0.232337 |
@@ -46,6 +46,6 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T1_GATE | 2 / 4 | 0.201981 ± 0.002177 | 0.200442–0.203520 |
 | T1_GATE_ORTHO | 3 / 4 | 0.202615 ± 0.000767 | 0.201920–0.203438 |
 
-Terminal launcher records: **125**; counts: `{'complete': 121, 'running': 4}`.
+Terminal launcher records: **127**; counts: `{'complete': 123, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
