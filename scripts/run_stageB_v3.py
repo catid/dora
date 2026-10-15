@@ -34,6 +34,38 @@ def run(cmd):
     if result.returncode: raise SystemExit(result.returncode)
 
 
+def verify_hpo_integrity(root):
+    """Require the declared 41x12 search before any tuning selection."""
+    # Keep this check independent of the report writer: it validates the
+    # immutable launcher/config/metadata records that selection consumes.
+    import yaml
+    method_ids = [row['id'] for row in yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']]
+    seen = {method: [] for method in method_ids}
+    issues = []
+    for path in sorted(root.glob('*/launcher_status.json')):
+        launcher = json.loads(path.read_text())
+        config_path = path.parent / 'hpo_config.json'
+        metadata_path = path.parent / 'metadata.json'
+        if not config_path.exists():
+            issues.append(f'{path.parent.name}: missing hpo_config.json'); continue
+        config = json.loads(config_path.read_text())
+        method, trial, seed = config.get('method'), config.get('trial_index'), config.get('seed')
+        if method not in seen: issues.append(f'{path.parent.name}: unknown method {method}'); continue
+        if seed != 1001 or trial not in range(12):
+            issues.append(f'{path.parent.name}: seed/trial mismatch ({seed}, {trial})')
+        seen[method].append(trial)
+        if launcher.get('status') == 'complete' and not metadata_path.exists():
+            issues.append(f'{path.parent.name}: complete launcher without metadata')
+        if launcher.get('status') == 'failed':
+            issues.append(f'{path.parent.name}: failed launcher')
+    missing = {method: sorted(set(range(12)) - set(trials)) for method, trials in seen.items()
+               if sorted(set(range(12)) - set(trials))}
+    duplicate = {method: trials for method, trials in seen.items() if len(trials) != len(set(trials))}
+    if missing or duplicate or issues or len(sum(seen.values(), [])) != 492:
+        raise RuntimeError(json.dumps({'missing': missing, 'duplicate': duplicate, 'issues': issues,
+                                       'records': len(sum(seen.values(), []))}, sort_keys=True))
+
+
 def run_declared_diagnostics(out_root, checkpoint_root, data_root, model):
     """Run the two registered diagnostic seeds sequentially on one free GPU."""
     import os
@@ -57,6 +89,7 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--hpo-root',type=Path,required=True);ap.add_argument('--tuning-root',type=Path,required=True);ap.add_argument('--screening-root',type=Path,required=True);ap.add_argument('--gpus',default='0,1,2,3');ap.add_argument('--model',default='/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B');ap.add_argument('--data-root',type=Path,default=Path('/var/tmp/dora-adaptive-rank/data_v2'));ap.add_argument('--manifest-root',type=Path,default=Path('artifacts/manifests_v2'));ap.add_argument('--poll-seconds',type=int,default=30);args=ap.parse_args()
     counts=wait_for(args.hpo_root,492,args.poll_seconds)
     if counts.get('failed',0): raise RuntimeError(f'HPO contains {counts["failed"]} failed trials; rescue policy must run before tuning')
+    verify_hpo_integrity(args.hpo_root)
     run_declared_diagnostics(Path('/var/tmp/dora-adaptive-rank/runs/v3_deletion_diagnostics_declared_20261015_final'), Path('/var/tmp/dora-adaptive-rank/runs/v3_deletion_replay_20261015'), args.data_root, args.model)
     run([sys.executable,'scripts/run_tuning_v3.py','--hpo-root',str(args.hpo_root),'--out-root',str(args.tuning_root),'--gpus',args.gpus,'--model',args.model,'--data-root',str(args.data_root),'--manifest-root',str(args.manifest_root)])
     tuning_rows=statuses(args.tuning_root)
