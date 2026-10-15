@@ -21,7 +21,7 @@ This is a progress report over the corrected 492-trial short search. It is descr
 | I_UNIFORM_RESTART | 10 / 12 | 0.339804 ± 0.111428 | 0.218946–0.514304 |
 | I_UNIFORM_SVD | 8 / 12 | 0.308716 ± 0.100867 | 0.219311–0.507831 |
 | I_WIDE | 8 / 12 | 0.319217 ± 0.114494 | 0.214152–0.506467 |
-| L_ACT | 4 / 12 | 0.338235 ± 0.148497 | 0.212983–0.518853 |
+| L_ACT | 5 / 12 | 0.373244 ± 0.150555 | 0.212983–0.518853 |
 | L_DISP | 3 / 12 | 0.515018 ± 0.005782 | 0.508372–0.518895 |
 | L_FIXED | 6 / 12 | 0.432671 ± 0.135055 | 0.213610–0.518871 |
 | L_GATE | 6 / 12 | 0.326372 ± 0.130781 | 0.211754–0.508535 |
@@ -29,8 +29,8 @@ This is a progress report over the corrected 492-trial short search. It is descr
 | L_GLOBAL_RANDOM | 5 / 12 | 0.366777 ± 0.141234 | 0.231752–0.518872 |
 | L_GLOBAL_SVD | 5 / 12 | 0.363806 ± 0.119482 | 0.216741–0.505426 |
 | L_PILOT_I_STUDENT | 6 / 12 | 0.307669 ± 0.098980 | 0.217662–0.449528 |
-| L_PILOT_L_STUDENT | 5 / 12 | 0.457405 ± 0.089120 | 0.317666–0.519003 |
-| L_RAW | 7 / 12 | 0.330247 ± 0.123377 | 0.212390–0.508495 |
+| L_PILOT_L_STUDENT | 6 / 12 | 0.467582 ± 0.083518 | 0.317666–0.519003 |
+| L_RAW | 8 / 12 | 0.353729 ± 0.132132 | 0.212390–0.518110 |
 | L_RAW_UNCERTAINTY | 6 / 12 | 0.420543 ± 0.133699 | 0.211821–0.518997 |
 | L_SHUFFLED_SELF_RESTART | 5 / 12 | 0.480690 ± 0.074945 | 0.347447–0.518885 |
 | L_UNIFORM_GATE | 9 / 12 | 0.382646 ± 0.129996 | 0.219916–0.518813 |
@@ -40,12 +40,12 @@ This is a progress report over the corrected 492-trial short search. It is descr
 | T0_FIXED | 9 / 12 | 0.453726 ± 0.099935 | 0.281537–0.518773 |
 | T0_FIXED_ORTHO | 7 / 12 | 0.478515 ± 0.083254 | 0.291930–0.518770 |
 | T0_GATE | 7 / 12 | 0.448619 ± 0.096174 | 0.268250–0.517813 |
-| T0_GATE_ORTHO | 7 / 12 | 0.379607 ± 0.109701 | 0.268198–0.514410 |
+| T0_GATE_ORTHO | 8 / 12 | 0.396979 ± 0.112826 | 0.268198–0.518587 |
 | T1_FIXED | 8 / 12 | 0.334945 ± 0.128730 | 0.221475–0.512846 |
-| T1_FIXED_ORTHO | 7 / 12 | 0.386356 ± 0.115473 | 0.221420–0.512981 |
+| T1_FIXED_ORTHO | 8 / 12 | 0.367385 ± 0.119619 | 0.221420–0.512981 |
 | T1_GATE | 7 / 12 | 0.355113 ± 0.124786 | 0.216531–0.509098 |
 | T1_GATE_ORTHO | 5 / 12 | 0.316238 ± 0.109692 | 0.216708–0.478153 |
 
-Terminal launcher records: **272**; counts: `{'complete': 268, 'running': 4}`.
+Terminal launcher records: **277**; counts: `{'complete': 273, 'running': 4}`.
 
 The endpoint is development loss from the short horizon, not a final quality result.

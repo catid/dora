@@ -3,10 +3,10 @@
   "plan_sha256": "dd6dd84bb50b03d3c3a5a7bbac7163c28af2560c8772cc131dd9a16ccde09f57",
   "counts": {
     "total": 3064,
-    "passed": 599,
+    "passed": 604,
     "failed": 0,
     "blocked": 0,
-    "pending": 2465,
+    "pending": 2460,
     "not_in_scope": 0
   },
   "runs": [
@@ -3946,9 +3946,9 @@
       "method_id": "L_WIDE",
       "selection_role": null,
       "status": "pending",
-      "reason": "",
+      "reason": "terminal receipt pending; inspect live PID separately",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_WIDE_c08/metadata.json"
     },
     {
       "run_id": "B_hpo_L_WIDE_c09",
@@ -4515,8 +4515,8 @@
       "stage": "B_hpo",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_RAW_c02/metadata.json"
     },
@@ -5165,10 +5165,10 @@
       "stage": "B_hpo",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
-      "reason": "launcher running; terminal receipt pending",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
-      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_ACT_c04/launcher_status.json"
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_ACT_c04/metadata.json"
     },
     {
       "run_id": "B_hpo_L_ACT_c05",
@@ -7655,10 +7655,10 @@
       "stage": "B_hpo",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T0_GATE_ORTHO_c01/metadata.json"
     },
     {
       "run_id": "B_hpo_T0_GATE_ORTHO_c02",
@@ -8345,8 +8345,8 @@
       "stage": "B_hpo",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T1_FIXED_ORTHO_c07/metadata.json"
     },
@@ -8725,8 +8725,8 @@
       "stage": "B_hpo",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_PILOT_L_STUDENT_c03/metadata.json"
     },
@@ -8746,9 +8746,9 @@
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
       "status": "pending",
-      "reason": "",
+      "reason": "terminal receipt pending; inspect live PID separately",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_PILOT_L_STUDENT_c05/metadata.json"
     },
     {
       "run_id": "B_hpo_L_PILOT_L_STUDENT_c06",
@@ -10596,9 +10596,9 @@
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
       "status": "pending",
-      "reason": "",
+      "reason": "terminal receipt pending; inspect live PID separately",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_GLOBAL_SVD_c01/metadata.json"
     },
     {
       "run_id": "B_hpo_L_GLOBAL_SVD_c02",
@@ -11886,9 +11886,9 @@
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
       "status": "pending",
-      "reason": "",
+      "reason": "terminal receipt pending; inspect live PID separately",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_UNCERTAINTY_c04/metadata.json"
     },
     {
       "run_id": "B_hpo_I_GATE_UNCERTAINTY_c05",
