@@ -1,0 +1,2693 @@
+{
+  "schema": "rankstudy-v3-hpo-integrity",
+  "root": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry",
+  "selection_eligible": false,
+  "expected_methods": 41,
+  "expected_trials": 492,
+  "launcher_counts": {
+    "complete": 229,
+    "running": 4
+  },
+  "complete_records_with_metadata": 229,
+  "complete_input_token_counts": {
+    "1068437": 229
+  },
+  "duplicate_trials": {},
+  "missing_trials_by_method": {
+    "L_FIXED": [
+      0,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10
+    ],
+    "I_FIXED": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11
+    ],
+    "L_WIDE": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11
+    ],
+    "I_WIDE": [
+      3,
+      5,
+      8,
+      11
+    ],
+    "ADALORA_REF": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "L_RAW": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      8
+    ],
+    "L_GATE": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7,
+      9
+    ],
+    "L_DISP": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "L_ACT": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9
+    ],
+    "L_UNIFORM_GATE": [
+      0,
+      2,
+      5,
+      11
+    ],
+    "L_GLOBAL_RANDOM": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11
+    ],
+    "I_RAW": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "I_GATE": [
+      3,
+      6,
+      7,
+      8,
+      10
+    ],
+    "I_DISP": [
+      0,
+      3,
+      9,
+      10,
+      11
+    ],
+    "I_ACT": [
+      3,
+      8,
+      11
+    ],
+    "I_UNIFORM_GATE": [
+      0,
+      2,
+      7,
+      9,
+      10
+    ],
+    "I_GLOBAL_RANDOM": [
+      1,
+      2,
+      3,
+      5,
+      8,
+      9,
+      10
+    ],
+    "T0_FIXED": [
+      1,
+      6,
+      7,
+      10
+    ],
+    "T0_GATE": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      9,
+      10
+    ],
+    "T0_FIXED_ORTHO": [
+      0,
+      4,
+      7,
+      8,
+      10,
+      11
+    ],
+    "T0_GATE_ORTHO": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "T1_FIXED": [
+      0,
+      2,
+      4,
+      7,
+      8,
+      11
+    ],
+    "T1_GATE": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      9,
+      11
+    ],
+    "T1_FIXED_ORTHO": [
+      6,
+      7,
+      8,
+      9,
+      11
+    ],
+    "T1_GATE_ORTHO": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10
+    ],
+    "L_PILOT_L_STUDENT": [
+      2,
+      3,
+      5,
+      8,
+      9,
+      10,
+      11
+    ],
+    "L_PILOT_I_STUDENT": [
+      0,
+      1,
+      4,
+      6,
+      7,
+      9,
+      10,
+      11
+    ],
+    "I_PILOT_L_STUDENT": [
+      0,
+      6,
+      9,
+      10
+    ],
+    "I_PILOT_I_STUDENT": [
+      1,
+      2,
+      3,
+      10
+    ],
+    "L_UNIFORM_RESTART": [
+      3,
+      4,
+      8,
+      9,
+      10
+    ],
+    "L_SHUFFLED_SELF_RESTART": [
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "I_UNIFORM_RESTART": [
+      3,
+      7,
+      9
+    ],
+    "I_SHUFFLED_SELF_RESTART": [
+      3,
+      4,
+      6,
+      10
+    ],
+    "L_UNIFORM_SVD": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "L_GLOBAL_SVD": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      9,
+      11
+    ],
+    "I_UNIFORM_SVD": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "I_GLOBAL_SVD": [
+      0,
+      1,
+      2,
+      4,
+      9
+    ],
+    "L_RAW_UNCERTAINTY": [
+      1,
+      3,
+      6,
+      8,
+      9,
+      10
+    ],
+    "L_GATE_UNCERTAINTY": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "I_RAW_UNCERTAINTY": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9
+    ],
+    "I_GATE_UNCERTAINTY": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8
+    ]
+  },
+  "issues": [],
+  "records": [
+    {
+      "run_id": "ADALORA_REF_c00",
+      "method": "ADALORA_REF",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.87292490061373
+    },
+    {
+      "run_id": "ADALORA_REF_c03",
+      "method": "ADALORA_REF",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.15863990411162
+    },
+    {
+      "run_id": "ADALORA_REF_c07",
+      "method": "ADALORA_REF",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.14636124158278
+    },
+    {
+      "run_id": "I_ACT_c00",
+      "method": "I_ACT",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 125.38972509792075
+    },
+    {
+      "run_id": "I_ACT_c01",
+      "method": "I_ACT",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 126.24399525579065
+    },
+    {
+      "run_id": "I_ACT_c02",
+      "method": "I_ACT",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 126.484409914352
+    },
+    {
+      "run_id": "I_ACT_c04",
+      "method": "I_ACT",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 125.4084573276341
+    },
+    {
+      "run_id": "I_ACT_c05",
+      "method": "I_ACT",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 124.52891275053844
+    },
+    {
+      "run_id": "I_ACT_c06",
+      "method": "I_ACT",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 126.98171878000721
+    },
+    {
+      "run_id": "I_ACT_c07",
+      "method": "I_ACT",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 124.45553206140175
+    },
+    {
+      "run_id": "I_ACT_c09",
+      "method": "I_ACT",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 125.95024449098855
+    },
+    {
+      "run_id": "I_ACT_c10",
+      "method": "I_ACT",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 124.8472679858096
+    },
+    {
+      "run_id": "I_DISP_c01",
+      "method": "I_DISP",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.8542314209044
+    },
+    {
+      "run_id": "I_DISP_c02",
+      "method": "I_DISP",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.88728093635291
+    },
+    {
+      "run_id": "I_DISP_c04",
+      "method": "I_DISP",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.79730279743671
+    },
+    {
+      "run_id": "I_DISP_c05",
+      "method": "I_DISP",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.08133262535557
+    },
+    {
+      "run_id": "I_DISP_c06",
+      "method": "I_DISP",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.81938721705228
+    },
+    {
+      "run_id": "I_DISP_c07",
+      "method": "I_DISP",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.46683552116156
+    },
+    {
+      "run_id": "I_DISP_c08",
+      "method": "I_DISP",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.52508494956419
+    },
+    {
+      "run_id": "I_FIXED_c01",
+      "method": "I_FIXED",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.70983016397804
+    },
+    {
+      "run_id": "I_FIXED_c02",
+      "method": "I_FIXED",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.3101885668002
+    },
+    {
+      "run_id": "I_FIXED_c09",
+      "method": "I_FIXED",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.64075415907428
+    },
+    {
+      "run_id": "I_FIXED_c10",
+      "method": "I_FIXED",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.95252727204934
+    },
+    {
+      "run_id": "I_GATE_UNCERTAINTY_c00",
+      "method": "I_GATE_UNCERTAINTY",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 110.02231141366065
+    },
+    {
+      "run_id": "I_GATE_UNCERTAINTY_c05",
+      "method": "I_GATE_UNCERTAINTY",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.86298788664863
+    },
+    {
+      "run_id": "I_GATE_UNCERTAINTY_c07",
+      "method": "I_GATE_UNCERTAINTY",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.79572386806831
+    },
+    {
+      "run_id": "I_GATE_UNCERTAINTY_c09",
+      "method": "I_GATE_UNCERTAINTY",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 109.89892682619393
+    },
+    {
+      "run_id": "I_GATE_UNCERTAINTY_c10",
+      "method": "I_GATE_UNCERTAINTY",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.93649636488408
+    },
+    {
+      "run_id": "I_GATE_UNCERTAINTY_c11",
+      "method": "I_GATE_UNCERTAINTY",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.79436177760363
+    },
+    {
+      "run_id": "I_GATE_c00",
+      "method": "I_GATE",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 110.26753085758537
+    },
+    {
+      "run_id": "I_GATE_c01",
+      "method": "I_GATE",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "running",
+      "metadata_status": "running",
+      "input_tokens": null,
+      "charged_gpu_seconds": null
+    },
+    {
+      "run_id": "I_GATE_c02",
+      "method": "I_GATE",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.2735028131865
+    },
+    {
+      "run_id": "I_GATE_c04",
+      "method": "I_GATE",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.17914151772857
+    },
+    {
+      "run_id": "I_GATE_c05",
+      "method": "I_GATE",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.53514602780342
+    },
+    {
+      "run_id": "I_GATE_c09",
+      "method": "I_GATE",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 109.72668389929458
+    },
+    {
+      "run_id": "I_GATE_c11",
+      "method": "I_GATE",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 109.86648459825665
+    },
+    {
+      "run_id": "I_GLOBAL_RANDOM_c00",
+      "method": "I_GLOBAL_RANDOM",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.26218564761803
+    },
+    {
+      "run_id": "I_GLOBAL_RANDOM_c04",
+      "method": "I_GLOBAL_RANDOM",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.19856006558985
+    },
+    {
+      "run_id": "I_GLOBAL_RANDOM_c06",
+      "method": "I_GLOBAL_RANDOM",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.32663933513686
+    },
+    {
+      "run_id": "I_GLOBAL_RANDOM_c07",
+      "method": "I_GLOBAL_RANDOM",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 109.25568938301876
+    },
+    {
+      "run_id": "I_GLOBAL_RANDOM_c11",
+      "method": "I_GLOBAL_RANDOM",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.22257510153577
+    },
+    {
+      "run_id": "I_GLOBAL_SVD_c03",
+      "method": "I_GLOBAL_SVD",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.56949371797964
+    },
+    {
+      "run_id": "I_GLOBAL_SVD_c05",
+      "method": "I_GLOBAL_SVD",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.88725355872884
+    },
+    {
+      "run_id": "I_GLOBAL_SVD_c06",
+      "method": "I_GLOBAL_SVD",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.66184579534456
+    },
+    {
+      "run_id": "I_GLOBAL_SVD_c07",
+      "method": "I_GLOBAL_SVD",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.90896726539358
+    },
+    {
+      "run_id": "I_GLOBAL_SVD_c08",
+      "method": "I_GLOBAL_SVD",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.40196033427492
+    },
+    {
+      "run_id": "I_GLOBAL_SVD_c10",
+      "method": "I_GLOBAL_SVD",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.5516780554317
+    },
+    {
+      "run_id": "I_GLOBAL_SVD_c11",
+      "method": "I_GLOBAL_SVD",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.02303741173819
+    },
+    {
+      "run_id": "I_PILOT_I_STUDENT_c00",
+      "method": "I_PILOT_I_STUDENT",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.76068333163857
+    },
+    {
+      "run_id": "I_PILOT_I_STUDENT_c04",
+      "method": "I_PILOT_I_STUDENT",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.43456106167287
+    },
+    {
+      "run_id": "I_PILOT_I_STUDENT_c05",
+      "method": "I_PILOT_I_STUDENT",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.32574630202726
+    },
+    {
+      "run_id": "I_PILOT_I_STUDENT_c06",
+      "method": "I_PILOT_I_STUDENT",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.84356060158461
+    },
+    {
+      "run_id": "I_PILOT_I_STUDENT_c07",
+      "method": "I_PILOT_I_STUDENT",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.8984849541448
+    },
+    {
+      "run_id": "I_PILOT_I_STUDENT_c08",
+      "method": "I_PILOT_I_STUDENT",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.14704450313002
+    },
+    {
+      "run_id": "I_PILOT_I_STUDENT_c09",
+      "method": "I_PILOT_I_STUDENT",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.55472718924284
+    },
+    {
+      "run_id": "I_PILOT_I_STUDENT_c11",
+      "method": "I_PILOT_I_STUDENT",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 109.2067342158407
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT_c01",
+      "method": "I_PILOT_L_STUDENT",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.52651971299201
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT_c02",
+      "method": "I_PILOT_L_STUDENT",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 102.45723574375734
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT_c03",
+      "method": "I_PILOT_L_STUDENT",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.2749827420339
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT_c04",
+      "method": "I_PILOT_L_STUDENT",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 102.62546389782801
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT_c05",
+      "method": "I_PILOT_L_STUDENT",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.96254513971508
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT_c07",
+      "method": "I_PILOT_L_STUDENT",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 102.19011463783681
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT_c08",
+      "method": "I_PILOT_L_STUDENT",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.42074051965028
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT_c11",
+      "method": "I_PILOT_L_STUDENT",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.62869027722627
+    },
+    {
+      "run_id": "I_RAW_UNCERTAINTY_c02",
+      "method": "I_RAW_UNCERTAINTY",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.58378872601315
+    },
+    {
+      "run_id": "I_RAW_UNCERTAINTY_c08",
+      "method": "I_RAW_UNCERTAINTY",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.76583585469052
+    },
+    {
+      "run_id": "I_RAW_UNCERTAINTY_c10",
+      "method": "I_RAW_UNCERTAINTY",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.1891659819521
+    },
+    {
+      "run_id": "I_RAW_UNCERTAINTY_c11",
+      "method": "I_RAW_UNCERTAINTY",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.1218443736434
+    },
+    {
+      "run_id": "I_RAW_c00",
+      "method": "I_RAW",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.06195309571922
+    },
+    {
+      "run_id": "I_RAW_c01",
+      "method": "I_RAW",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.17370300833136
+    },
+    {
+      "run_id": "I_RAW_c02",
+      "method": "I_RAW",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.38967189146206
+    },
+    {
+      "run_id": "I_RAW_c03",
+      "method": "I_RAW",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.62502725468948
+    },
+    {
+      "run_id": "I_RAW_c08",
+      "method": "I_RAW",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.43174286046997
+    },
+    {
+      "run_id": "I_RAW_c09",
+      "method": "I_RAW",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.76325005525723
+    },
+    {
+      "run_id": "I_RAW_c10",
+      "method": "I_RAW",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.59727733908221
+    },
+    {
+      "run_id": "I_RAW_c11",
+      "method": "I_RAW",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.88871133513749
+    },
+    {
+      "run_id": "I_SHUFFLED_SELF_RESTART_c00",
+      "method": "I_SHUFFLED_SELF_RESTART",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.15736199682578
+    },
+    {
+      "run_id": "I_SHUFFLED_SELF_RESTART_c01",
+      "method": "I_SHUFFLED_SELF_RESTART",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.28743128618225
+    },
+    {
+      "run_id": "I_SHUFFLED_SELF_RESTART_c02",
+      "method": "I_SHUFFLED_SELF_RESTART",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.89995319582522
+    },
+    {
+      "run_id": "I_SHUFFLED_SELF_RESTART_c05",
+      "method": "I_SHUFFLED_SELF_RESTART",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.47214635275304
+    },
+    {
+      "run_id": "I_SHUFFLED_SELF_RESTART_c07",
+      "method": "I_SHUFFLED_SELF_RESTART",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.19727516779676
+    },
+    {
+      "run_id": "I_SHUFFLED_SELF_RESTART_c08",
+      "method": "I_SHUFFLED_SELF_RESTART",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.27907559741288
+    },
+    {
+      "run_id": "I_SHUFFLED_SELF_RESTART_c09",
+      "method": "I_SHUFFLED_SELF_RESTART",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.40841295104474
+    },
+    {
+      "run_id": "I_SHUFFLED_SELF_RESTART_c11",
+      "method": "I_SHUFFLED_SELF_RESTART",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.15907938033342
+    },
+    {
+      "run_id": "I_UNIFORM_GATE_c01",
+      "method": "I_UNIFORM_GATE",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 109.11109268432483
+    },
+    {
+      "run_id": "I_UNIFORM_GATE_c03",
+      "method": "I_UNIFORM_GATE",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.69116556411609
+    },
+    {
+      "run_id": "I_UNIFORM_GATE_c04",
+      "method": "I_UNIFORM_GATE",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 110.40422853408381
+    },
+    {
+      "run_id": "I_UNIFORM_GATE_c05",
+      "method": "I_UNIFORM_GATE",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 110.5658638519235
+    },
+    {
+      "run_id": "I_UNIFORM_GATE_c06",
+      "method": "I_UNIFORM_GATE",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.02012053038925
+    },
+    {
+      "run_id": "I_UNIFORM_GATE_c08",
+      "method": "I_UNIFORM_GATE",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.58075382793322
+    },
+    {
+      "run_id": "I_UNIFORM_GATE_c11",
+      "method": "I_UNIFORM_GATE",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.14836299186572
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c00",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.85249173780903
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c01",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.78544577537104
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c02",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.37944074021652
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c04",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.81582940137014
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c05",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.52712433086708
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c06",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.59285619854927
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c08",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 109.14954531751573
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c10",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.99516305839643
+    },
+    {
+      "run_id": "I_UNIFORM_RESTART_c11",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.07467223796993
+    },
+    {
+      "run_id": "I_UNIFORM_SVD_c04",
+      "method": "I_UNIFORM_SVD",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.19899332616478
+    },
+    {
+      "run_id": "I_UNIFORM_SVD_c06",
+      "method": "I_UNIFORM_SVD",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.7446048730053
+    },
+    {
+      "run_id": "I_UNIFORM_SVD_c08",
+      "method": "I_UNIFORM_SVD",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.66414546826854
+    },
+    {
+      "run_id": "I_UNIFORM_SVD_c09",
+      "method": "I_UNIFORM_SVD",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.74639087729156
+    },
+    {
+      "run_id": "I_UNIFORM_SVD_c10",
+      "method": "I_UNIFORM_SVD",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.98537233099341
+    },
+    {
+      "run_id": "I_WIDE_c00",
+      "method": "I_WIDE",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.86018372513354
+    },
+    {
+      "run_id": "I_WIDE_c01",
+      "method": "I_WIDE",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.59336097631603
+    },
+    {
+      "run_id": "I_WIDE_c02",
+      "method": "I_WIDE",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.03322543902323
+    },
+    {
+      "run_id": "I_WIDE_c04",
+      "method": "I_WIDE",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.45634181285277
+    },
+    {
+      "run_id": "I_WIDE_c06",
+      "method": "I_WIDE",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.77521852403879
+    },
+    {
+      "run_id": "I_WIDE_c07",
+      "method": "I_WIDE",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.74034738866612
+    },
+    {
+      "run_id": "I_WIDE_c09",
+      "method": "I_WIDE",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 107.36794250505045
+    },
+    {
+      "run_id": "I_WIDE_c10",
+      "method": "I_WIDE",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.79733181232587
+    },
+    {
+      "run_id": "L_ACT_c00",
+      "method": "L_ACT",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 111.3184437812306
+    },
+    {
+      "run_id": "L_ACT_c06",
+      "method": "L_ACT",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 113.25219127815217
+    },
+    {
+      "run_id": "L_ACT_c10",
+      "method": "L_ACT",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 113.82754400651902
+    },
+    {
+      "run_id": "L_ACT_c11",
+      "method": "L_ACT",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 113.16335496259853
+    },
+    {
+      "run_id": "L_DISP_c00",
+      "method": "L_DISP",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 101.41878745844588
+    },
+    {
+      "run_id": "L_DISP_c03",
+      "method": "L_DISP",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.60109404893592
+    },
+    {
+      "run_id": "L_DISP_c04",
+      "method": "L_DISP",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.176830931101
+    },
+    {
+      "run_id": "L_FIXED_c01",
+      "method": "L_FIXED",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.61743932729587
+    },
+    {
+      "run_id": "L_FIXED_c02",
+      "method": "L_FIXED",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 97.70119282417
+    },
+    {
+      "run_id": "L_FIXED_c03",
+      "method": "L_FIXED",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.90002395631745
+    },
+    {
+      "run_id": "L_FIXED_c07",
+      "method": "L_FIXED",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.27975665451959
+    },
+    {
+      "run_id": "L_FIXED_c11",
+      "method": "L_FIXED",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 97.08150106994435
+    },
+    {
+      "run_id": "L_GATE_UNCERTAINTY_c00",
+      "method": "L_GATE_UNCERTAINTY",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.40460018115118
+    },
+    {
+      "run_id": "L_GATE_UNCERTAINTY_c01",
+      "method": "L_GATE_UNCERTAINTY",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.52303003147244
+    },
+    {
+      "run_id": "L_GATE_UNCERTAINTY_c02",
+      "method": "L_GATE_UNCERTAINTY",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 102.49893465684727
+    },
+    {
+      "run_id": "L_GATE_UNCERTAINTY_c11",
+      "method": "L_GATE_UNCERTAINTY",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.95004679914564
+    },
+    {
+      "run_id": "L_GATE_c04",
+      "method": "L_GATE",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 101.38904601614922
+    },
+    {
+      "run_id": "L_GATE_c05",
+      "method": "L_GATE",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 101.15826935041696
+    },
+    {
+      "run_id": "L_GATE_c08",
+      "method": "L_GATE",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.54802588792518
+    },
+    {
+      "run_id": "L_GATE_c10",
+      "method": "L_GATE",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 102.40653099678457
+    },
+    {
+      "run_id": "L_GATE_c11",
+      "method": "L_GATE",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 101.16787672042847
+    },
+    {
+      "run_id": "L_GLOBAL_RANDOM_c03",
+      "method": "L_GLOBAL_RANDOM",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.88145805662498
+    },
+    {
+      "run_id": "L_GLOBAL_RANDOM_c08",
+      "method": "L_GLOBAL_RANDOM",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.54540430475026
+    },
+    {
+      "run_id": "L_GLOBAL_RANDOM_c09",
+      "method": "L_GLOBAL_RANDOM",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.28393272357062
+    },
+    {
+      "run_id": "L_GLOBAL_SVD_c04",
+      "method": "L_GLOBAL_SVD",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.99639168474823
+    },
+    {
+      "run_id": "L_GLOBAL_SVD_c05",
+      "method": "L_GLOBAL_SVD",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "running",
+      "metadata_status": "running",
+      "input_tokens": null,
+      "charged_gpu_seconds": null
+    },
+    {
+      "run_id": "L_GLOBAL_SVD_c06",
+      "method": "L_GLOBAL_SVD",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 102.70727409934625
+    },
+    {
+      "run_id": "L_GLOBAL_SVD_c07",
+      "method": "L_GLOBAL_SVD",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 97.99774797447026
+    },
+    {
+      "run_id": "L_GLOBAL_SVD_c10",
+      "method": "L_GLOBAL_SVD",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "running",
+      "metadata_status": "running",
+      "input_tokens": null,
+      "charged_gpu_seconds": null
+    },
+    {
+      "run_id": "L_PILOT_I_STUDENT_c02",
+      "method": "L_PILOT_I_STUDENT",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 106.37207282800227
+    },
+    {
+      "run_id": "L_PILOT_I_STUDENT_c03",
+      "method": "L_PILOT_I_STUDENT",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 104.69479623017833
+    },
+    {
+      "run_id": "L_PILOT_I_STUDENT_c05",
+      "method": "L_PILOT_I_STUDENT",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.75371889630333
+    },
+    {
+      "run_id": "L_PILOT_I_STUDENT_c08",
+      "method": "L_PILOT_I_STUDENT",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.77700346056372
+    },
+    {
+      "run_id": "L_PILOT_L_STUDENT_c00",
+      "method": "L_PILOT_L_STUDENT",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.9290400040336
+    },
+    {
+      "run_id": "L_PILOT_L_STUDENT_c01",
+      "method": "L_PILOT_L_STUDENT",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.89467910397798
+    },
+    {
+      "run_id": "L_PILOT_L_STUDENT_c04",
+      "method": "L_PILOT_L_STUDENT",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.87140911724418
+    },
+    {
+      "run_id": "L_PILOT_L_STUDENT_c06",
+      "method": "L_PILOT_L_STUDENT",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.88553733378649
+    },
+    {
+      "run_id": "L_PILOT_L_STUDENT_c07",
+      "method": "L_PILOT_L_STUDENT",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.46012905752286
+    },
+    {
+      "run_id": "L_RAW_UNCERTAINTY_c00",
+      "method": "L_RAW_UNCERTAINTY",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 97.89196584839374
+    },
+    {
+      "run_id": "L_RAW_UNCERTAINTY_c02",
+      "method": "L_RAW_UNCERTAINTY",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.24476703349501
+    },
+    {
+      "run_id": "L_RAW_UNCERTAINTY_c04",
+      "method": "L_RAW_UNCERTAINTY",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.32300013676286
+    },
+    {
+      "run_id": "L_RAW_UNCERTAINTY_c05",
+      "method": "L_RAW_UNCERTAINTY",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 97.66944106295705
+    },
+    {
+      "run_id": "L_RAW_UNCERTAINTY_c07",
+      "method": "L_RAW_UNCERTAINTY",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "running",
+      "metadata_status": "running",
+      "input_tokens": null,
+      "charged_gpu_seconds": null
+    },
+    {
+      "run_id": "L_RAW_UNCERTAINTY_c11",
+      "method": "L_RAW_UNCERTAINTY",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 97.86820136383176
+    },
+    {
+      "run_id": "L_RAW_c04",
+      "method": "L_RAW",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.57895675580949
+    },
+    {
+      "run_id": "L_RAW_c05",
+      "method": "L_RAW",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.95607880642638
+    },
+    {
+      "run_id": "L_RAW_c07",
+      "method": "L_RAW",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 97.13909862143919
+    },
+    {
+      "run_id": "L_RAW_c09",
+      "method": "L_RAW",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.50965907145292
+    },
+    {
+      "run_id": "L_RAW_c10",
+      "method": "L_RAW",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.83170296577737
+    },
+    {
+      "run_id": "L_RAW_c11",
+      "method": "L_RAW",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.68187338439748
+    },
+    {
+      "run_id": "L_SHUFFLED_SELF_RESTART_c00",
+      "method": "L_SHUFFLED_SELF_RESTART",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.04790773289278
+    },
+    {
+      "run_id": "L_SHUFFLED_SELF_RESTART_c01",
+      "method": "L_SHUFFLED_SELF_RESTART",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.28557564737275
+    },
+    {
+      "run_id": "L_SHUFFLED_SELF_RESTART_c02",
+      "method": "L_SHUFFLED_SELF_RESTART",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.98625366296619
+    },
+    {
+      "run_id": "L_SHUFFLED_SELF_RESTART_c05",
+      "method": "L_SHUFFLED_SELF_RESTART",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.10889233229682
+    },
+    {
+      "run_id": "L_SHUFFLED_SELF_RESTART_c07",
+      "method": "L_SHUFFLED_SELF_RESTART",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.43764276243746
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c01",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.21823254553601
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c03",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.29678169032559
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c04",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.7510501658544
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c06",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 101.48344353679568
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c07",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 101.98314541904256
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c08",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.93088437709957
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c09",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.19943477585912
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c10",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.65035732230172
+    },
+    {
+      "run_id": "L_UNIFORM_RESTART_c00",
+      "method": "L_UNIFORM_RESTART",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.39707803167403
+    },
+    {
+      "run_id": "L_UNIFORM_RESTART_c01",
+      "method": "L_UNIFORM_RESTART",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.70916433539242
+    },
+    {
+      "run_id": "L_UNIFORM_RESTART_c02",
+      "method": "L_UNIFORM_RESTART",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.40340198669583
+    },
+    {
+      "run_id": "L_UNIFORM_RESTART_c05",
+      "method": "L_UNIFORM_RESTART",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.82317831134424
+    },
+    {
+      "run_id": "L_UNIFORM_RESTART_c06",
+      "method": "L_UNIFORM_RESTART",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.86358540970832
+    },
+    {
+      "run_id": "L_UNIFORM_RESTART_c07",
+      "method": "L_UNIFORM_RESTART",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 100.78002704726532
+    },
+    {
+      "run_id": "L_UNIFORM_RESTART_c11",
+      "method": "L_UNIFORM_RESTART",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.10909506073222
+    },
+    {
+      "run_id": "L_UNIFORM_SVD_c03",
+      "method": "L_UNIFORM_SVD",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.25121944956481
+    },
+    {
+      "run_id": "L_UNIFORM_SVD_c07",
+      "method": "L_UNIFORM_SVD",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.14093242259696
+    },
+    {
+      "run_id": "L_WIDE_c02",
+      "method": "L_WIDE",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 97.25984550500289
+    },
+    {
+      "run_id": "L_WIDE_c09",
+      "method": "L_WIDE",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.32997093070298
+    },
+    {
+      "run_id": "T0_FIXED_ORTHO_c01",
+      "method": "T0_FIXED_ORTHO",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 117.5830517434515
+    },
+    {
+      "run_id": "T0_FIXED_ORTHO_c02",
+      "method": "T0_FIXED_ORTHO",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 117.08340565580875
+    },
+    {
+      "run_id": "T0_FIXED_ORTHO_c03",
+      "method": "T0_FIXED_ORTHO",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 116.91053872648627
+    },
+    {
+      "run_id": "T0_FIXED_ORTHO_c05",
+      "method": "T0_FIXED_ORTHO",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 116.8909032647498
+    },
+    {
+      "run_id": "T0_FIXED_ORTHO_c06",
+      "method": "T0_FIXED_ORTHO",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 117.88503724196926
+    },
+    {
+      "run_id": "T0_FIXED_ORTHO_c09",
+      "method": "T0_FIXED_ORTHO",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 115.67329719429836
+    },
+    {
+      "run_id": "T0_FIXED_c00",
+      "method": "T0_FIXED",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 114.23928178008646
+    },
+    {
+      "run_id": "T0_FIXED_c02",
+      "method": "T0_FIXED",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 111.36569439666346
+    },
+    {
+      "run_id": "T0_FIXED_c03",
+      "method": "T0_FIXED",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 112.03093754360452
+    },
+    {
+      "run_id": "T0_FIXED_c04",
+      "method": "T0_FIXED",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 112.15400040801615
+    },
+    {
+      "run_id": "T0_FIXED_c05",
+      "method": "T0_FIXED",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 113.33673607325181
+    },
+    {
+      "run_id": "T0_FIXED_c08",
+      "method": "T0_FIXED",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 114.26255710050464
+    },
+    {
+      "run_id": "T0_FIXED_c09",
+      "method": "T0_FIXED",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 113.15809555351734
+    },
+    {
+      "run_id": "T0_FIXED_c11",
+      "method": "T0_FIXED",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 114.41158128669485
+    },
+    {
+      "run_id": "T0_GATE_ORTHO_c04",
+      "method": "T0_GATE_ORTHO",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 120.95108460169286
+    },
+    {
+      "run_id": "T0_GATE_ORTHO_c07",
+      "method": "T0_GATE_ORTHO",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 119.1733918027021
+    },
+    {
+      "run_id": "T0_GATE_ORTHO_c08",
+      "method": "T0_GATE_ORTHO",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 119.87529796455055
+    },
+    {
+      "run_id": "T0_GATE_ORTHO_c09",
+      "method": "T0_GATE_ORTHO",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 119.59490685770288
+    },
+    {
+      "run_id": "T0_GATE_ORTHO_c10",
+      "method": "T0_GATE_ORTHO",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 121.29020571010187
+    },
+    {
+      "run_id": "T0_GATE_ORTHO_c11",
+      "method": "T0_GATE_ORTHO",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 119.07689818367362
+    },
+    {
+      "run_id": "T0_GATE_c04",
+      "method": "T0_GATE",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 115.87361972685903
+    },
+    {
+      "run_id": "T0_GATE_c05",
+      "method": "T0_GATE",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 117.40220805024728
+    },
+    {
+      "run_id": "T0_GATE_c07",
+      "method": "T0_GATE",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 115.38933656876907
+    },
+    {
+      "run_id": "T0_GATE_c08",
+      "method": "T0_GATE",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 116.4325647787191
+    },
+    {
+      "run_id": "T0_GATE_c11",
+      "method": "T0_GATE",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 117.5620100623928
+    },
+    {
+      "run_id": "T1_FIXED_ORTHO_c00",
+      "method": "T1_FIXED_ORTHO",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 115.91382525628433
+    },
+    {
+      "run_id": "T1_FIXED_ORTHO_c01",
+      "method": "T1_FIXED_ORTHO",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 116.53383331792429
+    },
+    {
+      "run_id": "T1_FIXED_ORTHO_c02",
+      "method": "T1_FIXED_ORTHO",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 116.40613525686786
+    },
+    {
+      "run_id": "T1_FIXED_ORTHO_c03",
+      "method": "T1_FIXED_ORTHO",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 118.30381046794355
+    },
+    {
+      "run_id": "T1_FIXED_ORTHO_c04",
+      "method": "T1_FIXED_ORTHO",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 116.64163062535226
+    },
+    {
+      "run_id": "T1_FIXED_ORTHO_c05",
+      "method": "T1_FIXED_ORTHO",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 117.43428522953764
+    },
+    {
+      "run_id": "T1_FIXED_ORTHO_c10",
+      "method": "T1_FIXED_ORTHO",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 115.37702369410545
+    },
+    {
+      "run_id": "T1_FIXED_c01",
+      "method": "T1_FIXED",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 113.9736324143596
+    },
+    {
+      "run_id": "T1_FIXED_c03",
+      "method": "T1_FIXED",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 112.8939580717124
+    },
+    {
+      "run_id": "T1_FIXED_c05",
+      "method": "T1_FIXED",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 112.5118799014017
+    },
+    {
+      "run_id": "T1_FIXED_c06",
+      "method": "T1_FIXED",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 112.00718312710524
+    },
+    {
+      "run_id": "T1_FIXED_c09",
+      "method": "T1_FIXED",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 112.22573739243671
+    },
+    {
+      "run_id": "T1_FIXED_c10",
+      "method": "T1_FIXED",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 114.29819460399449
+    },
+    {
+      "run_id": "T1_GATE_ORTHO_c08",
+      "method": "T1_GATE_ORTHO",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 119.06379586737603
+    },
+    {
+      "run_id": "T1_GATE_ORTHO_c09",
+      "method": "T1_GATE_ORTHO",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 118.92746405955404
+    },
+    {
+      "run_id": "T1_GATE_ORTHO_c11",
+      "method": "T1_GATE_ORTHO",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 120.49302231054753
+    },
+    {
+      "run_id": "T1_GATE_c00",
+      "method": "T1_GATE",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 116.67973766801879
+    },
+    {
+      "run_id": "T1_GATE_c01",
+      "method": "T1_GATE",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 114.82076359959319
+    },
+    {
+      "run_id": "T1_GATE_c03",
+      "method": "T1_GATE",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 114.70787006756291
+    },
+    {
+      "run_id": "T1_GATE_c05",
+      "method": "T1_GATE",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 115.3084019436501
+    },
+    {
+      "run_id": "T1_GATE_c10",
+      "method": "T1_GATE",
+      "trial_index": 10,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 115.04648012202233
+    }
+  ],
+  "note": "Integrity audit only; no HPO result or configuration is selected here."
+}
