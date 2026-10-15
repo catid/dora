@@ -3,10 +3,10 @@
   "plan_sha256": "dd6dd84bb50b03d3c3a5a7bbac7163c28af2560c8772cc131dd9a16ccde09f57",
   "counts": {
     "total": 3064,
-    "passed": 527,
+    "passed": 536,
     "failed": 0,
     "blocked": 0,
-    "pending": 2537,
+    "pending": 2528,
     "not_in_scope": 0
   },
   "runs": [
@@ -3745,10 +3745,10 @@
       "stage": "B_hpo",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_FIXED_c09/metadata.json"
     },
     {
       "run_id": "B_hpo_I_FIXED_c10",
@@ -4956,9 +4956,9 @@
       "method_id": "L_DISP",
       "selection_role": null,
       "status": "pending",
-      "reason": "",
+      "reason": "terminal receipt pending; inspect live PID separately",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_DISP_c04/metadata.json"
     },
     {
       "run_id": "B_hpo_L_DISP_c05",
@@ -5755,8 +5755,8 @@
       "stage": "B_hpo",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_RAW_c00/metadata.json"
     },
@@ -6016,9 +6016,9 @@
       "method_id": "I_GATE",
       "selection_role": null,
       "status": "pending",
-      "reason": "",
+      "reason": "terminal receipt pending; inspect live PID separately",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_c05/metadata.json"
     },
     {
       "run_id": "B_hpo_I_GATE_c06",
@@ -6636,9 +6636,9 @@
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
       "status": "pending",
-      "reason": "",
+      "reason": "launcher running; terminal receipt pending",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_UNIFORM_GATE_c04/launcher_status.json"
     },
     {
       "run_id": "B_hpo_I_UNIFORM_GATE_c05",
@@ -7275,10 +7275,10 @@
       "stage": "B_hpo",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T0_GATE_c05/metadata.json"
     },
     {
       "run_id": "B_hpo_T0_GATE_c06",
@@ -8076,9 +8076,9 @@
       "method_id": "T1_GATE",
       "selection_role": null,
       "status": "pending",
-      "reason": "",
+      "reason": "terminal receipt pending; inspect live PID separately",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T1_GATE_c01/metadata.json"
     },
     {
       "run_id": "B_hpo_T1_GATE_c02",
@@ -8165,10 +8165,10 @@
       "stage": "B_hpo",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T1_GATE_c10/metadata.json"
     },
     {
       "run_id": "B_hpo_T1_GATE_c11",
@@ -8595,8 +8595,8 @@
       "stage": "B_hpo",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T1_GATE_ORTHO_c11/metadata.json"
     },
@@ -9545,10 +9545,10 @@
       "stage": "B_hpo",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_UNIFORM_RESTART_c01/metadata.json"
     },
     {
       "run_id": "B_hpo_L_UNIFORM_RESTART_c02",
@@ -9585,8 +9585,8 @@
       "stage": "B_hpo",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_UNIFORM_RESTART_c05/metadata.json"
     },
@@ -10855,8 +10855,8 @@
       "stage": "B_hpo",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_UNIFORM_SVD_c06/metadata.json"
     },
@@ -11955,10 +11955,10 @@
       "stage": "B_hpo",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_UNCERTAINTY_c11/metadata.json"
     },
     {
       "run_id": "B_rescue_I_GATE_UNCERTAINTY_1",
