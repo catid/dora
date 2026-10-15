@@ -42,6 +42,7 @@ def verify_hpo_integrity(root):
     method_ids = [row['id'] for row in yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']]
     seen = {method: [] for method in method_ids}
     issues = []
+    completed_token_counts = []
     for path in sorted(root.glob('*/launcher_status.json')):
         launcher = json.loads(path.read_text())
         config_path = path.parent / 'hpo_config.json'
@@ -54,13 +55,22 @@ def verify_hpo_integrity(root):
         if seed != 1001 or trial not in range(12):
             issues.append(f'{path.parent.name}: seed/trial mismatch ({seed}, {trial})')
         seen[method].append(trial)
-        if launcher.get('status') == 'complete' and not metadata_path.exists():
-            issues.append(f'{path.parent.name}: complete launcher without metadata')
+        if launcher.get('status') == 'complete':
+            if not metadata_path.exists():
+                issues.append(f'{path.parent.name}: complete launcher without metadata')
+            else:
+                metadata = json.loads(metadata_path.read_text())
+                if metadata.get('status') not in {'complete', 'passed'}:
+                    issues.append(f'{path.parent.name}: launcher complete but metadata status is {metadata.get("status")}')
+                if metadata.get('input_tokens') is not None:
+                    completed_token_counts.append(metadata['input_tokens'])
         if launcher.get('status') == 'failed':
             issues.append(f'{path.parent.name}: failed launcher')
     missing = {method: sorted(set(range(12)) - set(trials)) for method, trials in seen.items()
                if sorted(set(range(12)) - set(trials))}
     duplicate = {method: trials for method, trials in seen.items() if len(trials) != len(set(trials))}
+    if len(set(completed_token_counts)) > 1:
+        issues.append(f'inconsistent completed input-token counts: {sorted(set(completed_token_counts))}')
     if missing or duplicate or issues or len(sum(seen.values(), [])) != 492:
         raise RuntimeError(json.dumps({'missing': missing, 'duplicate': duplicate, 'issues': issues,
                                        'records': len(sum(seen.values(), []))}, sort_keys=True))

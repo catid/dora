@@ -19,7 +19,7 @@ def _write_hpo_root(root: Path, complete: bool = True):
             (directory / 'launcher_status.json').write_text(json.dumps({
                 'status': 'complete' if complete else 'running',
             }))
-            (directory / 'metadata.json').write_text(json.dumps({'status': 'complete'}))
+            (directory / 'metadata.json').write_text(json.dumps({'status': 'complete', 'input_tokens': 1234}))
 
 
 def test_hpo_integrity_accepts_declared_grid(tmp_path):
@@ -34,4 +34,12 @@ def test_hpo_integrity_rejects_duplicate_trial(tmp_path):
     config['trial_index'] = 0
     (duplicate / 'hpo_config.json').write_text(json.dumps(config))
     with pytest.raises(RuntimeError, match='duplicate'):
+        verify_hpo_integrity(tmp_path)
+
+
+def test_hpo_integrity_rejects_inconsistent_token_exposure(tmp_path):
+    _write_hpo_root(tmp_path)
+    metadata = tmp_path / 'L_FIXED_c00' / 'metadata.json'
+    metadata.write_text(json.dumps({'status': 'complete', 'input_tokens': 1235}))
+    with pytest.raises(RuntimeError, match='token'):
         verify_hpo_integrity(tmp_path)
