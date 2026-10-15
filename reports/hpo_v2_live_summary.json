@@ -46,8 +46,8 @@
     "I_RAW_UNCERTAINTY",
     "I_GATE_UNCERTAINTY"
   ],
-  "rows": 71,
-  "complete_rows": 71,
+  "rows": 76,
+  "complete_rows": 76,
   "best_by_method": {
     "ADALORA_REF": {
       "run_id": "hpo_ADALORA_REF_lr0.001_s4",
@@ -121,23 +121,41 @@
       "source_revision": "7e05caf518a9d5149156cceb21301dcaed2b61a5",
       "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr0.001_s4"
     },
-    "L_RAW": {
-      "run_id": "hpo_L_RAW_lr0.001_s1",
-      "method": "L_RAW",
+    "L_GATE": {
+      "run_id": "hpo_L_GATE_lr1e-05_s0.25",
+      "method": "L_GATE",
       "stage": "hpo",
       "seed": 1001,
-      "lr": 0.001,
-      "scale": 1.0,
+      "lr": 1e-05,
+      "scale": 0.25,
       "penalty": 0.0,
       "updates": 128,
       "input_tokens": 1068437,
       "supervised_tokens": 794312,
-      "elapsed_s": 589.6636335849762,
-      "dev_group_balanced_nll": 0.21924008523637895,
-      "dev_token_weighted_nll": 0.21839815311496238,
+      "elapsed_s": 603.5866076946259,
+      "dev_group_balanced_nll": 0.5176471681916155,
+      "dev_token_weighted_nll": 0.46138592121247485,
+      "status": "complete",
+      "source_revision": "7ff9d82bd1cb2794828b74b0b56f96c3fec9fc1a",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr1e-05_s0.25"
+    },
+    "L_RAW": {
+      "run_id": "hpo_L_RAW_lr0.001_s4",
+      "method": "L_RAW",
+      "stage": "hpo",
+      "seed": 1001,
+      "lr": 0.001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "updates": 128,
+      "input_tokens": 1068437,
+      "supervised_tokens": 794312,
+      "elapsed_s": 603.242422580719,
+      "dev_group_balanced_nll": 0.21252749717677943,
+      "dev_token_weighted_nll": 0.2107420037492852,
       "status": "complete",
       "source_revision": "cbd6e46e9fb432701af2144c11e49ee9281e7359",
-      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.001_s1"
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.001_s4"
     },
     "L_WIDE": {
       "run_id": "hpo_L_WIDE_lr0.001_s4",
