@@ -69,10 +69,10 @@ def main() -> None:
             'complete': len(values),
             'expected': 12,
             'pending_or_nonterminal': 12 - len(values),
-            'mean_endpoint_dev_nll': mean,
-            'sd_endpoint_dev_nll': sd,
-            'min_endpoint_dev_nll': min(values) if values else math.nan,
-            'max_endpoint_dev_nll': max(values) if values else math.nan,
+            'mean_endpoint_dev_nll': mean if values else None,
+            'sd_endpoint_dev_nll': sd if values else None,
+            'min_endpoint_dev_nll': min(values) if values else None,
+            'max_endpoint_dev_nll': max(values) if values else None,
             'selection_eligible': False,
         })
 
