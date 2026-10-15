@@ -14,7 +14,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | I_GLOBAL_SVD | 4 / 4 | 0.205128 ± 0.003210 | 0.201990–0.207993 |
 | I_PILOT_I_STUDENT | 3 / 4 | 0.202971 ± 0.000209 | 0.202787–0.203198 |
 | I_PILOT_L_STUDENT | 4 / 4 | 0.200344 ± 0.002903 | 0.197477–0.203287 |
-| I_RAW | 3 / 4 | 0.201626 ± 0.001754 | 0.200026–0.203501 |
+| I_RAW | 4 / 4 | 0.201689 ± 0.001438 | 0.200026–0.203501 |
 | I_RAW_UNCERTAINTY | 4 / 4 | 0.202080 ± 0.001292 | 0.200862–0.203765 |
 | I_SHUFFLED_SELF_RESTART | 3 / 4 | 0.203164 ± 0.000283 | 0.202879–0.203446 |
 | I_UNIFORM_GATE | 4 / 4 | 0.202109 ± 0.000584 | 0.201573–0.202927 |
@@ -24,14 +24,14 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | L_ACT | 3 / 4 | 0.196806 ± 0.002089 | 0.194848–0.199006 |
 | L_DISP | 4 / 4 | 0.197377 ± 0.001866 | 0.195495–0.199281 |
 | L_FIXED | 4 / 4 | 0.198818 ± 0.002594 | 0.196423–0.201388 |
-| L_GATE | 3 / 4 | 0.198008 ± 0.001854 | 0.195926–0.199482 |
+| L_GATE | 4 / 4 | 0.197347 ± 0.002010 | 0.195363–0.199482 |
 | L_GATE_UNCERTAINTY | 4 / 4 | 0.197353 ± 0.001927 | 0.195420–0.199256 |
 | L_GLOBAL_RANDOM | 4 / 4 | 0.197939 ± 0.001912 | 0.195996–0.199725 |
 | L_GLOBAL_SVD | 4 / 4 | 0.197339 ± 0.000585 | 0.196809–0.197992 |
 | L_PILOT_I_STUDENT | 3 / 4 | 0.203320 ± 0.000563 | 0.202697–0.203792 |
 | L_PILOT_L_STUDENT | 4 / 4 | 0.200152 ± 0.002576 | 0.197741–0.202441 |
 | L_RAW | 4 / 4 | 0.197382 ± 0.001911 | 0.195467–0.199323 |
-| L_RAW_UNCERTAINTY | 3 / 4 | 0.196731 ± 0.001744 | 0.195428–0.198712 |
+| L_RAW_UNCERTAINTY | 4 / 4 | 0.197434 ± 0.002001 | 0.195428–0.199542 |
 | L_SHUFFLED_SELF_RESTART | 4 / 4 | 0.201236 ± 0.003156 | 0.198462–0.204058 |
 | L_UNIFORM_GATE | 4 / 4 | 0.197798 ± 0.001813 | 0.195782–0.199474 |
 | L_UNIFORM_RESTART | 4 / 4 | 0.200849 ± 0.002877 | 0.198333–0.203604 |
@@ -46,6 +46,6 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T1_GATE | 4 / 4 | 0.201913 ± 0.001267 | 0.200442–0.203520 |
 | T1_GATE_ORTHO | 4 / 4 | 0.202105 ± 0.001196 | 0.200577–0.203438 |
 
-Terminal launcher records: **158**; counts: `{'complete': 154, 'running': 4}`.
+Terminal launcher records: **161**; counts: `{'complete': 157, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
