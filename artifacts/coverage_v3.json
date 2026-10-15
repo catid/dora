@@ -3,10 +3,10 @@
   "plan_sha256": "345c94088243540f3dd5760a2399f6b803a01c8052d8efa342b7267f37b7d8be",
   "counts": {
     "total": 3064,
-    "passed": 0,
+    "passed": 2,
     "failed": 0,
     "blocked": 0,
-    "pending": 3064,
+    "pending": 3062,
     "not_in_scope": 0
   },
   "runs": [
@@ -3425,8 +3425,8 @@
       "stage": "A_full_horizon_diagnostic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_full_horizon_checks_20261015/L_FIXED/metadata.json"
     },
@@ -3435,8 +3435,8 @@
       "stage": "A_full_horizon_diagnostic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
-      "reason": "terminal receipt pending; inspect live PID separately",
+      "status": "passed",
+      "reason": "",
       "conditional": null,
       "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_full_horizon_checks_20261015/I_GATE/metadata.json"
     },
@@ -30653,7 +30653,7 @@
   ],
   "separate_historical_accounting": {
     "v2_quarantined_completed_trials": 166,
-    "v3_completed_smoke_executions": 13,
+    "v3_completed_smoke_executions": 23,
     "v3_failed_smoke_attempts": 4
   },
   "note": "No broad gate is inferred from a narrow test. Conditional jobs stay pending until resolved by frozen rules."

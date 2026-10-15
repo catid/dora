@@ -21,7 +21,8 @@ allocator budgets, compaction and optimizer/RNG resume, and a 40-step trajectory
 comparison with the pinned original AdaLoRA source. Real Qwen1.5B GPU smoke runs
 have trained, but smoke endpoints are not a leaderboard or full-horizon screening.
 The [progress report](reports/progress.md) records exactly which validation gates
-have passed. Large sweeps remain gated while remaining checks are completed.
+have passed. The [roadmap and provisional ETA](reports/roadmap_v3.md) uses measured
+full-horizon timing. Large sweeps remain gated while remaining checks are completed.
 
 The [full v3 run plan](artifacts/run_plan_v3.json) replaces the incomplete 959-run
 plan. It lists training, diagnostic, evaluation, and conditional jobs separately;

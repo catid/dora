@@ -44,3 +44,17 @@ budgeting study (2026-10-14). This work is isolated in `src/rankstudy`, `tests`,
   terminal records. Current raw reports: `reports/smoke_v3_summary.json` and
   `reports/failures_v3.csv`. Full-model DDP, pipeline runners, parser/evaluation,
   full diagnostic matrix and all primary sweeps/confirmations remain unfinished.
+
+## Pipeline checkpoint and roadmap
+
+- `scripts/run_pipeline_v3.py` has eight completed real-model engineering checks,
+  and the full automated suite passes 71 tests. Both 512-update native timing
+  diagnostics have finished; their old PIDs are no longer live.
+- Do not treat pipeline execution success as primary readiness. Three common
+  uniform-export smoke cases underspend the deployment budget because low-rank
+  source modules have too few singular directions. Resolve and predeclare that
+  allocation policy before equal-export-size comparisons. Preserve these records.
+- Mid-stage pipeline resume, exact full-model export parity/distortion, full-model
+  DDP/rebuild, parser/evaluation, synthetic controls and diagnostic restoration
+  remain open. `artifacts/v3_pipeline_smoke_audit.json` distinguishes passed narrow
+  checks from these open issues. `reports/roadmap_v3.md` contains provisional ETAs.

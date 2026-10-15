@@ -27,7 +27,7 @@ from torch.nn.attention import sdpa_kernel, SDPBackend
 from rankstudy.v2.data import collate, microbatches, read_jsonl
 from rankstudy.v3.adapters import adapted, inject, compact
 from rankstudy.v3.allocation import Candidate, TokenSchedule, allocate, uniform_allocate
-from rankstudy.v3.checkpoint import backbone_hash, json_write, save_checkpoint, load_checkpoint
+from rankstudy.v3.checkpoint import backbone_hash, json_write, save_checkpoint, load_checkpoint, load_adapter
 from rankstudy.v3.reference import reference_allocator, reference_after_step, reference_penalty
 from rankstudy.v3.scoring import SlotEMA, token_subsample
 
@@ -84,6 +84,12 @@ def main():
     ap.add_argument('--data-root',type=Path,default=Path('/var/tmp/dora-adaptive-rank/data_v2'))
     ap.add_argument('--manifest-root',type=Path,default=Path('artifacts/manifests_v2'))
     ap.add_argument('--seed',type=int,default=1001)
+    ap.add_argument('--adapter-seed',type=int)
+    ap.add_argument('--stream-offset',type=int,default=0)
+    ap.add_argument('--pattern',type=Path)
+    ap.add_argument('--initial-adapter',type=Path)
+    ap.add_argument('--parent-run')
+    ap.add_argument('--skip-eval',action='store_true')
     ap.add_argument('--updates',type=int,default=128)
     ap.add_argument('--lr',type=float,default=1e-4)
     ap.add_argument('--scale',type=float,default=1.)
@@ -120,7 +126,9 @@ def main():
     args.out.mkdir(parents=True,exist_ok=True)
     manifest_path=args.manifest_root/f'train_seed{args.seed}.json'
     manifest=json.loads(manifest_path.read_text())
-    updates=manifest['updates'][:args.updates]
+    if args.stream_offset<0:
+        raise ValueError('negative stream offset')
+    updates=manifest['updates'][args.stream_offset:args.stream_offset+args.updates]
     if len(updates)!=args.updates:
         raise ValueError('insufficient sealed manifest updates')
     train=read_jsonl(args.data_root/'train.jsonl')
@@ -133,7 +141,7 @@ def main():
     files=[Path(__file__),*Path('src/rankstudy/v3').rglob('*.py'),Path('src/rankstudy/v2/data.py'),Path('configs/methods.yaml')]
     source_hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)}
     config={k:str(v) if isinstance(v,Path) else v for k,v in vars(args).items()}
-    invariant_keys=['method','model','data_root','seed','updates','lr','scale','penalty','target_rank','max_rank','targets','microbatch','backend']
+    invariant_keys=['method','model','data_root','seed','adapter_seed','stream_offset','pattern','initial_adapter','updates','lr','scale','penalty','target_rank','max_rank','targets','microbatch','backend']
     resume_invariants={k:config[k] for k in invariant_keys}
     digest=hashlib.sha256(json.dumps(config,sort_keys=True).encode()).hexdigest()
     meta={'status':'running','protocol':'adaptive-rank-v3','method':args.method,'config':config,
@@ -153,21 +161,35 @@ def main():
     target_cost=sum(args.target_rank*(d+n) for d,n in target_shapes.values())
     rank=args.target_rank if spec['allocator']=='none' and spec['group']!='wide' else args.max_rank
     pattern={name:rank for name in target_shapes}
+    if args.pattern:
+        pattern=json.loads(args.pattern.read_text())
+        if set(pattern)!=set(target_shapes) or any(not isinstance(v,int) or v<0 for v in pattern.values()):
+            raise ValueError('rank pattern differs from actual target modules')
     if triplet and not custom_online:
         cells=[Candidate(name,i,d+n+1,0.) for name,(d,n) in target_shapes.items() for i in range(rank)]
         keep,_=uniform_allocate(cells,target_cost)
         pattern={name:sum(n==name for n,_ in keep) for name in target_shapes}
-    if args.resume:
-        desc=json.loads((args.resume/'manifest.json').read_text())
+    if args.resume or args.initial_adapter:
+        desc=json.loads(((args.resume or args.initial_adapter)/'manifest.json').read_text())
         pattern={name:m['rank'] for name,m in desc['modules'].items()}
+        if set(pattern)!=set(target_shapes):
+            raise ValueError('adapter modules differ from actual target modules')
+        if any(m['init']!=spec['init'] or m['score']!=spec['score'] for m in desc['modules'].values()):
+            raise ValueError('adapter representation or score differs')
     # For reference s is the nominal multiplier; record alpha and offset exactly.
     alpha=args.scale*args.max_rank if adalora else args.scale
-    inject(model,rank,spec['init'],alpha,args.seed,spec['score'],tuple(args.targets),pattern)
+    adapter_seed=args.seed if args.adapter_seed is None else args.adapter_seed
+    inject(model,rank,spec['init'],alpha,adapter_seed,spec['score'],tuple(args.targets),pattern)
+    if args.initial_adapter and not args.resume:
+        load_adapter(args.initial_adapter,model,'cuda')
+        if any(float(m.scale)!=alpha for m in adapted(model).values()):
+            raise ValueError('initial adapter scale differs from declared multiplier')
     mods=adapted(model)
     initial_cost=sum(args.max_rank*m.slot_cost for m in mods.values())
     schedule=TokenSchedule([u['input_tokens'] for u in updates],initial_cost,target_cost)
     original_hash=backbone_hash(model)
     meta.update({'target_shapes':target_shapes,'P_target':target_cost,'initial_counts':counts(model),
+                 'initialization_seed':adapter_seed,'stream_offset':args.stream_offset,'parent_run':args.parent_run,
                  'original_backbone_sha256':original_hash,'actual_multiplier':float(next(iter(mods.values())).multiplier),
                  'reference_alpha':alpha if adalora else None})
     params=[p for p in model.parameters() if p.requires_grad]
@@ -182,7 +204,11 @@ def main():
             raise ValueError('resume provenance mismatch')
         if extra['method']!=args.method or extra['updates']!=args.updates:
             raise ValueError('resume method/horizon mismatch')
-        if extra.get('resume_invariants')!=resume_invariants:
+        saved_invariants=dict(extra.get('resume_invariants',{}))
+        # New stage controls default exactly to the earlier native behavior.
+        for k,v in {'adapter_seed':None,'stream_offset':0,'pattern':None,'initial_adapter':None}.items():
+            saved_invariants.setdefault(k,v)
+        if saved_invariants!=resume_invariants:
             raise ValueError('resume hyperparameter/backend mismatch or unaudited older checkpoint')
         start_step,tokens,supervised,charged,compacted=(extra[k] for k in ['step','input_tokens','supervised_tokens','charged_s','compacted'])
         events=extra['pruning_events']
@@ -198,7 +224,7 @@ def main():
     backend=getattr(SDPBackend,args.backend)
     completed=start_step
     with sdpa_kernel(backend):
-        if args.smoke and not args.resume:
+        if args.smoke and not args.resume and not args.skip_eval:
             before=evaluate(model,dev,tokenizer.pad_token_id,'cuda')
             json_write(args.out/'smoke_before.json',before)
         for step in range(start_step,args.updates):
@@ -289,7 +315,8 @@ def main():
                 charged+=ck_elapsed
                 json_write(ck_path/'accounting.json',{'checkpoint_write_s':ck_elapsed})
         eval_start=time.perf_counter()
-        dev_metrics=evaluate(model,dev,tokenizer.pad_token_id,'cuda')
+        dev_metrics=(evaluate(model,dev,tokenizer.pad_token_id,'cuda') if not args.skip_eval else
+                     {'group_balanced_nll':None,'token_weighted_nll':None,'groups':[]})
         eval_s=time.perf_counter()-eval_start
     final_hash=backbone_hash(model)
     if final_hash!=original_hash: raise RuntimeError('original frozen backbone changed')

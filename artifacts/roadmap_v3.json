@@ -1,0 +1,136 @@
+{
+  "schema": "rankstudy-v3-roadmap",
+  "updated_at": "2026-10-15T05:39:35.166627+00:00",
+  "scope": "All required stages retained; no reduced-scope completion claim.",
+  "actual_hardware": "4 RTX PRO 6000 Blackwell Max-Q GPUs",
+  "full_horizon_timing_evidence": [
+    {
+      "method": "I_GATE",
+      "updates_finished": 512,
+      "input_tokens": 4275819,
+      "charged_gpu_seconds": 410.8797402717173,
+      "setup_s": 3.398083606734872,
+      "evaluation_s": 0.18346825381740928,
+      "backbone_unchanged": true,
+      "budget_delta": 0,
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_full_horizon_checks_20261015/I_GATE/metadata.json",
+      "selection_eligible": false
+    },
+    {
+      "method": "L_FIXED",
+      "updates_finished": 512,
+      "input_tokens": 4275819,
+      "charged_gpu_seconds": 374.1399059225805,
+      "setup_s": 3.418117658700794,
+      "evaluation_s": 0.1718863993883133,
+      "backbone_unchanged": true,
+      "budget_delta": 0,
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_full_horizon_checks_20261015/L_FIXED/metadata.json",
+      "selection_eligible": false
+    }
+  ],
+  "pipeline_engineering_checks": [
+    {
+      "run_id": "ADALORA_REF_EXPORT",
+      "method": "ADALORA_REF",
+      "status": "complete",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/ADALORA_REF_EXPORT/metadata.json",
+      "failure_reason": null,
+      "selection_eligible": false
+    },
+    {
+      "run_id": "I_GLOBAL_SVD",
+      "method": "I_GLOBAL_SVD",
+      "status": "complete",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/I_GLOBAL_SVD/metadata.json",
+      "failure_reason": null,
+      "selection_eligible": false
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT",
+      "method": "I_PILOT_L_STUDENT",
+      "status": "complete",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/I_PILOT_L_STUDENT/metadata.json",
+      "failure_reason": null,
+      "selection_eligible": false
+    },
+    {
+      "run_id": "L_PILOT_I_STUDENT",
+      "method": "L_PILOT_I_STUDENT",
+      "status": "complete",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/L_PILOT_I_STUDENT/metadata.json",
+      "failure_reason": null,
+      "selection_eligible": false
+    },
+    {
+      "run_id": "L_PILOT_I_STUDENT_EXPORT",
+      "method": "L_PILOT_I_STUDENT",
+      "status": "complete",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/L_PILOT_I_STUDENT_EXPORT/metadata.json",
+      "failure_reason": null,
+      "selection_eligible": false
+    },
+    {
+      "run_id": "L_UNIFORM_SVD",
+      "method": "L_UNIFORM_SVD",
+      "status": "complete",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/L_UNIFORM_SVD/metadata.json",
+      "failure_reason": null,
+      "selection_eligible": false
+    },
+    {
+      "run_id": "T0_GATE_EXPORT",
+      "method": "T0_GATE",
+      "status": "complete",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/T0_GATE_EXPORT/metadata.json",
+      "failure_reason": null,
+      "selection_eligible": false
+    },
+    {
+      "run_id": "T1_GATE_ORTHO_EXPORT",
+      "method": "T1_GATE_ORTHO",
+      "status": "complete",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/T1_GATE_ORTHO_EXPORT/metadata.json",
+      "failure_reason": null,
+      "selection_eligible": false
+    }
+  ],
+  "stage_B_mandatory_training_jobs": 779,
+  "stage_B_total_updates": 209920,
+  "stage_B_training_only_extrapolation_gpu_hours": [
+    42.610378174516114,
+    46.79463708650114
+  ],
+  "stage_B_training_only_ideal_four_gpu_hours": [
+    10.652594543629029,
+    11.698659271625285
+  ],
+  "extrapolation_excludes": [
+    "generation evaluation",
+    "model/data setup",
+    "conditional rescue trials",
+    "failed attempts",
+    "method cost differences",
+    "scheduler contention",
+    "remaining engineering and validation"
+  ],
+  "provisional_elapsed_time_from_this_snapshot": [
+    {
+      "milestone": "Remaining Stage A checks and corrected queue",
+      "range": "24-48 hours"
+    },
+    {
+      "milestone": "Stage B: all 41 candidates with independent screening seeds",
+      "range": "2-4 days"
+    },
+    {
+      "milestone": "Stages C/D: fresh-seed, rank-four, export and equal-compute comparisons",
+      "range": "4-7 days"
+    },
+    {
+      "milestone": "Stage E plus official evaluations and final audit/report",
+      "range": "1-3 weeks"
+    }
+  ],
+  "uncertainty": "Planning estimates, not guarantees. Assume continued four-GPU access. 7B and generation throughput are not yet calibrated; correctness failures can extend these ranges."
+}

@@ -1,0 +1,171 @@
+{
+  "schema": "v3-pipeline-smoke-audit",
+  "checks": [
+    "contiguous disjoint stream slices",
+    "exact input and supervised token exposure",
+    "common unchanged backbone hash",
+    "final scalar budget",
+    "distinct pilot and student RNG streams",
+    "no pilot adapter loaded by restart student",
+    "standalone ordinary export loaded by separate recovery child process"
+  ],
+  "not_established": [
+    "bitwise interrupted pipeline resume",
+    "exact full-model export output parity",
+    "immediate compression task-loss damage",
+    "primary quality comparison"
+  ],
+  "runs": [
+    {
+      "run_id": "ADALORA_REF_EXPORT",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/ADALORA_REF_EXPORT/metadata.json",
+      "metadata_sha256": "e309526693171cde73983f43c53028e1dde71f075b0ec610315f102acf402aaa",
+      "status": "passed",
+      "updates": 32,
+      "input_tokens": 267916,
+      "supervised_tokens": 199831,
+      "charged_gpu_seconds": 26.477842634078115,
+      "budget_delta": 0,
+      "stage_stream_offsets": [
+        0,
+        25
+      ],
+      "exact_final_scalar_budget": true,
+      "common_export": true,
+      "primary_ready": false
+    },
+    {
+      "run_id": "I_GLOBAL_SVD",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/I_GLOBAL_SVD/metadata.json",
+      "metadata_sha256": "db220285e192e0f47302ce960cf2a540e7cd7a1247c08f2abe18141e970275b2",
+      "status": "passed",
+      "updates": 32,
+      "input_tokens": 267916,
+      "supervised_tokens": 199831,
+      "charged_gpu_seconds": 27.11047942005098,
+      "budget_delta": 0,
+      "stage_stream_offsets": [
+        0,
+        25
+      ],
+      "exact_final_scalar_budget": true,
+      "common_export": false,
+      "primary_ready": false
+    },
+    {
+      "run_id": "I_PILOT_L_STUDENT",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/I_PILOT_L_STUDENT/metadata.json",
+      "metadata_sha256": "6da87bb25f0fc160e5b44f505ddeb68896688db9835e368007938d6c21c21f8f",
+      "status": "passed",
+      "updates": 32,
+      "input_tokens": 267916,
+      "supervised_tokens": 199831,
+      "charged_gpu_seconds": 26.183929117862135,
+      "budget_delta": 0,
+      "stage_stream_offsets": [
+        0,
+        7
+      ],
+      "exact_final_scalar_budget": true,
+      "common_export": false,
+      "primary_ready": false
+    },
+    {
+      "run_id": "L_PILOT_I_STUDENT",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/L_PILOT_I_STUDENT/metadata.json",
+      "metadata_sha256": "cc3d3de9effd52cd695e1787996f37087915e0c239a474675b201e7b18ab3ece",
+      "status": "passed",
+      "updates": 32,
+      "input_tokens": 267916,
+      "supervised_tokens": 199831,
+      "charged_gpu_seconds": 26.999524794053286,
+      "budget_delta": 0,
+      "stage_stream_offsets": [
+        0,
+        7
+      ],
+      "exact_final_scalar_budget": true,
+      "common_export": false,
+      "primary_ready": false
+    },
+    {
+      "run_id": "L_PILOT_I_STUDENT_EXPORT",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/L_PILOT_I_STUDENT_EXPORT/metadata.json",
+      "metadata_sha256": "a20d11302eef9da3d753e1c4a1d33a9a97d6aacf14f66bec9649485c21a5e8c6",
+      "status": "passed",
+      "updates": 32,
+      "input_tokens": 267916,
+      "supervised_tokens": 199831,
+      "charged_gpu_seconds": 27.70405423734337,
+      "budget_delta": -362496,
+      "stage_stream_offsets": [
+        0,
+        7,
+        25
+      ],
+      "exact_final_scalar_budget": false,
+      "common_export": true,
+      "primary_ready": false,
+      "open_issue": "Uniform common export underspends; not equal representation size."
+    },
+    {
+      "run_id": "L_UNIFORM_SVD",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/L_UNIFORM_SVD/metadata.json",
+      "metadata_sha256": "0c3ac53c9a1bddd2eab6d004c9cbe1a7b0402ce5dc4ae3e31af25370d9455633",
+      "status": "passed",
+      "updates": 32,
+      "input_tokens": 267916,
+      "supervised_tokens": 199831,
+      "charged_gpu_seconds": 25.585691032465547,
+      "budget_delta": 0,
+      "stage_stream_offsets": [
+        0,
+        25
+      ],
+      "exact_final_scalar_budget": true,
+      "common_export": false,
+      "primary_ready": false
+    },
+    {
+      "run_id": "T0_GATE_EXPORT",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/T0_GATE_EXPORT/metadata.json",
+      "metadata_sha256": "35e2e43f988e5a5796aa2612efbd85d02e011e7b800d160a33072a5fe9d99ebf",
+      "status": "passed",
+      "updates": 32,
+      "input_tokens": 267916,
+      "supervised_tokens": 199831,
+      "charged_gpu_seconds": 28.977125210687518,
+      "budget_delta": -36864,
+      "stage_stream_offsets": [
+        0,
+        25
+      ],
+      "exact_final_scalar_budget": false,
+      "common_export": true,
+      "primary_ready": false,
+      "open_issue": "Uniform common export underspends; not equal representation size."
+    },
+    {
+      "run_id": "T1_GATE_ORTHO_EXPORT",
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_smoke_20261015/T1_GATE_ORTHO_EXPORT/metadata.json",
+      "metadata_sha256": "c0fb1fe9e1391255da7b92379a9c67f78b0238abac056c71161edd57f3e99f57",
+      "status": "passed",
+      "updates": 32,
+      "input_tokens": 267916,
+      "supervised_tokens": 199831,
+      "charged_gpu_seconds": 30.378845612052828,
+      "budget_delta": -258048,
+      "stage_stream_offsets": [
+        0,
+        25
+      ],
+      "exact_final_scalar_budget": false,
+      "common_export": true,
+      "primary_ready": false,
+      "open_issue": "Uniform common export underspends; not equal representation size."
+    }
+  ],
+  "known_issues": [
+    "Three common uniform-export runs underspend the exact deployment budget; upper-bound checks pass but equal-size fairness is not established."
+  ]
+}

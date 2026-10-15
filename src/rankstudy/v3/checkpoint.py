@@ -54,7 +54,7 @@ def save_checkpoint(path, model, optimizer, extra):
                                          "files": files, "complete": True})
 
 
-def load_checkpoint(path, model, optimizer, device):
+def load_adapter(path, model, device):
     path = Path(path)
     desc = json.loads((path / "manifest.json").read_text())
     for name, digest in desc['files'].items():
@@ -69,6 +69,12 @@ def load_checkpoint(path, model, optimizer, device):
         result = m.load_state_dict(got, strict=False)
         if result.unexpected_keys or any(not key.startswith('base.') for key in result.missing_keys):
             raise ValueError(str(result))
+    return desc
+
+
+def load_checkpoint(path, model, optimizer, device):
+    path=Path(path)
+    load_adapter(path,model,device)
     state = torch.load(path/'training_state.pt', map_location=device, weights_only=True)
     optimizer.load_state_dict(state['optimizer'])
     torch.set_rng_state(state['torch_rng'].cpu())

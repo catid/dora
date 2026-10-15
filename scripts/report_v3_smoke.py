@@ -22,16 +22,21 @@ def main():
                 continue
             before=p.parent/'smoke_before.json'
             prior=json.loads(before.read_text())['group_balanced_nll'] if before.exists() else None
+            children=[json.loads(Path(stage['metadata']).read_text()) for stage in m.get('stages',[])]
+            backend=m.get('backend_requested') or ','.join(sorted({child['backend_requested'] for child in children}))
+            deterministic=m.get('deterministic_algorithms',bool(children) and all(child.get('deterministic_algorithms',False) for child in children))
             rows.append({'run_id':p.parent.name,'method':m['method'],'status':m['status'],
+                         'execution_kind':'pipeline' if children else 'native',
                          'updates':m['updates_finished'],'seed':m['seed'],
-                         'backend':m['backend_requested'],'deterministic':m.get('deterministic_algorithms',False),
+                         'backend':backend,'deterministic':deterministic,
                          'partial_dev_groups':m['config']['dev_limit'],
                          'before_nll':prior,'after_nll':m['dev_tune_endpoint_group_balanced_nll'],
                          'input_tokens':m['input_tokens'],'active_trainable_scalars':m['final_counts']['active_trainable_scalars'],
                          'allocated_trainable_scalars':m['final_counts']['allocated_trainable_scalars'],
                          'P_target':m['P_target'],'budget_delta':m['budget_delta'],
                          'charged_gpu_seconds':m['charged_gpu_seconds'],
-                         'profiled':m['config']['profile'],'original_backbone_unchanged':m['backbone_unchanged'],
+                         'profiled':m['config'].get('profile',False) or any(c['config'].get('profile',False) for c in children),
+                         'original_backbone_unchanged':m['backbone_unchanged'],
                          'path':str(p.parent),'metadata_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),
                          'selection_eligible':False})
     out=Path('reports/smoke_v3.csv')
