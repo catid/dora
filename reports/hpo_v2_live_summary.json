@@ -46,9 +46,27 @@
     "I_RAW_UNCERTAINTY",
     "I_GATE_UNCERTAINTY"
   ],
-  "rows": 48,
-  "complete_rows": 48,
+  "rows": 60,
+  "complete_rows": 60,
   "best_by_method": {
+    "ADALORA_REF": {
+      "run_id": "hpo_ADALORA_REF_lr0.001_s4",
+      "method": "ADALORA_REF",
+      "stage": "hpo",
+      "seed": 1001,
+      "lr": 0.001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "updates": 128,
+      "input_tokens": 1068437,
+      "supervised_tokens": 794312,
+      "elapsed_s": 615.2446238994598,
+      "dev_group_balanced_nll": 0.49343800722272135,
+      "dev_token_weighted_nll": 0.4418016722717448,
+      "status": "complete",
+      "source_revision": "cbd6d3701d583e146fe0f1ce26afcd63e1463d8a",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr0.001_s4"
+    },
     "I_FIXED": {
       "run_id": "hpo_I_FIXED_lr0.0001_s4",
       "method": "I_FIXED",
