@@ -4,7 +4,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 
 | Method | Complete / 4 | Endpoint dev NLL mean ± SD | Range |
 |:--|--:|--:|--:|
-| ADALORA_REF | 2 / 4 | 0.226209 ± 0.003743 | 0.223563–0.228856 |
+| ADALORA_REF | 3 / 4 | 0.227118 ± 0.003079 | 0.223563–0.228935 |
 | I_ACT | 2 / 4 | 0.204720 ± 0.000074 | 0.204668–0.204772 |
 | I_DISP | 4 / 4 | 0.201545 ± 0.001320 | 0.200085–0.203206 |
 | I_FIXED | 3 / 4 | 0.201467 ± 0.000183 | 0.201257–0.201593 |
@@ -33,7 +33,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | L_RAW | 4 / 4 | 0.197382 ± 0.001911 | 0.195467–0.199323 |
 | L_RAW_UNCERTAINTY | 3 / 4 | 0.196731 ± 0.001744 | 0.195428–0.198712 |
 | L_SHUFFLED_SELF_RESTART | 2 / 4 | 0.203968 ± 0.000127 | 0.203878–0.204058 |
-| L_UNIFORM_GATE | 2 / 4 | 0.199326 ± 0.000209 | 0.199179–0.199474 |
+| L_UNIFORM_GATE | 3 / 4 | 0.198471 ± 0.001489 | 0.196760–0.199474 |
 | L_UNIFORM_RESTART | 3 / 4 | 0.199931 ± 0.002712 | 0.198333–0.203062 |
 | L_UNIFORM_SVD | 2 / 4 | 0.196762 ± 0.000174 | 0.196639–0.196885 |
 | L_WIDE | 2 / 4 | 0.196524 ± 0.001970 | 0.195131–0.197916 |
@@ -46,6 +46,6 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T1_GATE | 2 / 4 | 0.201981 ± 0.002177 | 0.200442–0.203520 |
 | T1_GATE_ORTHO | 2 / 4 | 0.202204 ± 0.000401 | 0.201920–0.202487 |
 
-Terminal launcher records: **113**; counts: `{'complete': 109, 'running': 4}`.
+Terminal launcher records: **115**; counts: `{'complete': 111, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
