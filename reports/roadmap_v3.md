@@ -1,10 +1,10 @@
 # Roadmap and provisional ETA
 
-Updated 2026-10-15T13:25:30.592908+00:00.
+Updated 2026-10-15T13:50:39.510217+00:00.
 
 Planning ranges remain anchored to the initial ETA snapshot, 2026-10-15T05:39:35.166627+00:00; refreshing this report does not restart the clock.
 
-The live phase is **B_hpo**. The corrected HPO queue currently has **447/492 complete**, 4 running and 0 failed. No primary screening, confirmation or official benchmark comparison is complete. The 166 quarantined v2 trials remain excluded. All 41 candidates and the complete requested scope remain registered.
+The live phase is **B_deletion_diagnostics**. The corrected HPO queue currently has **492/492 complete**, 0 running and 0 failed. No primary screening, confirmation or official benchmark comparison is complete. The 166 quarantined v2 trials remain excluded. All 41 candidates and the complete requested scope remain registered.
 
 | Completed full-horizon engineering run | Updates | Input tokens | Charged training minutes |
 |---|---:|---:|---:|
@@ -25,7 +25,7 @@ Stage A has now executed all 41 GPU smoke cells and 984 retained synthetic budge
 
 Stage B contains **779 mandatory training jobs**: 492 short searches, 164 full-horizon tuning runs and 123 independent screening runs. Conditional rescue trials are extra. At the two measured native rates, training alone extrapolates to **42.6–46.8 GPU-hours**, or **10.7–11.7 hours** with ideal four-GPU parallelism. This arithmetic excludes evaluation, setup, pipeline overhead differences, rescue trials and remaining engineering. The timing runs used two concurrent GPUs; the live HPO rate is an observed four-job queue measurement.
 
-At the current HPO rate (1.92 completed trials/minute), the remaining short search is estimated at 0.39 hours, near 2026-10-15T13:48:57.612702+00:00. This forecast is arithmetic from launcher completion times and is not a guarantee.
+At the current HPO rate (1.92 completed trials/minute), the remaining short search is estimated at 0.00 hours, near 2026-10-15T13:50:39.528579+00:00. This forecast is arithmetic from launcher completion times and is not a guarantee.
 
 Planning estimates, not guarantees. Assume continued four-GPU access. 7B and generation throughput are not yet calibrated; correctness failures can extend these ranges.
 
