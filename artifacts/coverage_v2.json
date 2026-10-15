@@ -10,8 +10,8 @@
   ],
   "counts": {
     "total": 959,
-    "pending": 899,
-    "complete": 60,
+    "pending": 888,
+    "complete": 71,
     "failed": 0,
     "blocked": 0,
     "not_in_scope": 0
@@ -616,77 +616,77 @@
       "run_id": "hpo_L_RAW_lr1e-06_s0.25",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr1e-06_s1",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr1e-06_s4",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr1e-05_s0.25",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
-      "failure_reason": "running"
+      "status": "complete",
+      "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr1e-05_s1",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr1e-05_s4",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr0.0001_s0.25",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr0.0001_s1",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr0.0001_s4",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr0.001_s0.25",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
       "run_id": "hpo_L_RAW_lr0.001_s1",
       "stage": "B_hpo",
       "method_id": "L_RAW",
-      "status": "pending",
+      "status": "complete",
       "failure_reason": ""
     },
     {
@@ -694,7 +694,7 @@
       "stage": "B_hpo",
       "method_id": "L_RAW",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "tune_L_RAW_1002_a",
@@ -736,21 +736,21 @@
       "stage": "B_hpo",
       "method_id": "L_GATE",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "hpo_L_GATE_lr1e-06_s1",
       "stage": "B_hpo",
       "method_id": "L_GATE",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "hpo_L_GATE_lr1e-06_s4",
       "stage": "B_hpo",
       "method_id": "L_GATE",
       "status": "pending",
-      "failure_reason": ""
+      "failure_reason": "running"
     },
     {
       "run_id": "hpo_L_GATE_lr1e-05_s0.25",

@@ -46,8 +46,8 @@
     "I_RAW_UNCERTAINTY",
     "I_GATE_UNCERTAINTY"
   ],
-  "rows": 60,
-  "complete_rows": 60,
+  "rows": 71,
+  "complete_rows": 71,
   "best_by_method": {
     "ADALORA_REF": {
       "run_id": "hpo_ADALORA_REF_lr0.001_s4",
@@ -120,6 +120,24 @@
       "status": "complete",
       "source_revision": "7e05caf518a9d5149156cceb21301dcaed2b61a5",
       "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr0.001_s4"
+    },
+    "L_RAW": {
+      "run_id": "hpo_L_RAW_lr0.001_s1",
+      "method": "L_RAW",
+      "stage": "hpo",
+      "seed": 1001,
+      "lr": 0.001,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "updates": 128,
+      "input_tokens": 1068437,
+      "supervised_tokens": 794312,
+      "elapsed_s": 589.6636335849762,
+      "dev_group_balanced_nll": 0.21924008523637895,
+      "dev_token_weighted_nll": 0.21839815311496238,
+      "status": "complete",
+      "source_revision": "cbd6e46e9fb432701af2144c11e49ee9281e7359",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.001_s1"
     },
     "L_WIDE": {
       "run_id": "hpo_L_WIDE_lr0.001_s4",
