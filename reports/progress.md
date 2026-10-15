@@ -1,17 +1,37 @@
 # Adaptive-rank study progress
 
-Updated 2026-10-14 UTC.
+Updated 2026-10-15 UTC.
 
-- Environment: pinned PyTorch nightly `2.16.0.dev20261013+cu130`, CUDA 13.0, four healthy RTX PRO 6000 Blackwell Max-Q GPUs.
-- References audited and source revisions recorded.
-- Stage A algebra/allocator/data/frozen-state tests: 20 passed.
-- Corrected v2 data preparation: 20,000 intact training rows, 512 `dev_tune` groups, and 512 disjoint `dev_audit` groups. The training rows span 8,899 connected groups; 10 groups are excluded by the held-out near-overlap filter. The requested row count is met; group count is reported separately.
-- Real GPU smoke: standard L, centered I, T0 triplet, online RAW, and faithful AdaLoRA completed.
-- Faithful AdaLoRA now uses A/B Normal(0, 0.02), zero E, fixed `ranknum + 1e-5`, element-score/uncertainty allocation, and separate reference metadata.
-- All earlier native screens under `/var/tmp/dora-adaptive-rank/runs/hpo_native2`, `/var/tmp/dora-adaptive-rank/runs/hpo_corrected`, `/var/tmp/dora-adaptive-rank/runs/hpo_final`, and `/var/tmp/dora-adaptive-rank/runs/hpo_accepted_final2` are withdrawn from selection because they use the superseded v1 data seal; they remain preserved with the audit in `reports/protocol_invalid.md`.
-- Corrected v2 native HPO is live under `/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001`: 71/348 native trials have terminal metadata and `L_GATE` workers are currently active. The corrected faithful AdaLoRA grid is complete; its best one-seed HPO NLL is 0.493438 (LR 1e-3, scale 4). Completed baseline/online values are `L_WIDE` 0.210417, `L_FIXED` 0.213907, `I_WIDE` 0.215339, `I_FIXED` 0.216248, and provisional `L_RAW` 0.219240 (all values are one-seed HPO screening measurements). The live machine-readable matrix is [`reports/hpo_v2_live.csv`](hpo_v2_live.csv), and the refreshed coverage checkpoint records 71 complete / 888 pending runs.
-- The frozen-matrix Stage A control completed 16 CPU runs across two seeds, both initializations, isotropic/anisotropic inputs, noisy/clean targets, and slot budgets 8/16/32. Its immutable output is [`artifacts/synthetic_controls_v2.json`](../artifacts/synthetic_controls_v2.json); these mechanistic errors are not LLM quality measurements.
-- Before AdaLoRA produced a terminal record, an audit found that the first launcher would permanently freeze masked `E` slots, unlike upstream's post-optimizer update/reactivation behavior. Those in-flight trials were stopped and left as nonterminal evidence; the corrected reference path is now running from commit `d433047`, with the 47 completed baseline records retained.
-- The HPO crossed six bookkeeping-only source commits. [`artifacts/v2_provenance_audit.json`](../artifacts/v2_provenance_audit.json) hashes the native training executable and adapter/data/allocator files at every recorded revision; all common training-file hashes are identical.
-- `scripts/continue_adaptive_v2.sh` is a resumable supervisor that waits for corrected HPO, then launches corrected full-horizon tuning, fresh screening, pipeline HPO, and pipeline tuning. No later stage is counted until its immutable run records exist.
-- Restart, compression/recovery, export, official GSM8K/MATH, 7B, heterogeneous-module, DDP, and report-generation stages remain pending or blocked until the corrected native selection and their implementations are complete.
+The full user protocol remains active; the study is incomplete.
+
+- Actual host: four RTX PRO 6000 Blackwell Max-Q GPUs. Pinned Python 3.12 /
+  PyTorch `2.16.0.dev20261013+cu130` are available in project `.venv`.
+- Corrected data v2 retains 20,000 intact training rows, 512 tune groups and 512
+  sealed audit groups, with exact paired effective-update manifests.
+- v1 results remain withdrawn for question/response mismatches.
+- All 166 terminal v2 HPO records are now quarantined from primary selection.
+  See `protocol_v2_audit.md`; the v2 supervisors and four verified study workers
+  were stopped without deleting evidence. The older 959-job scope was incomplete.
+- `src/rankstudy/v3` has 29 new protocol tests plus four run-plan tests. Tests
+  include original AdaLoRA optimizer-trajectory parity, true displacements,
+  gradients, score accumulation, cost allocation, no momentum drift, compaction,
+  and safe CPU resume. These do not certify the entire study.
+- Eight real Qwen1.5B GPU executions (including one resume) finished under the
+  initial cuDNN smoke policy. All initial representations trained and kept the
+  original backbone hash. Custom allocation physically compacted within budget.
+  Reference AdaLoRA's extra E scalars are explicitly reported.
+- The cuDNN resume diagnostic did NOT produce identical final parameters/masks.
+  First resumed forward loss matched; backward gradients differed. Do not call
+  this exact resume. The receipt is `artifacts/v3_gpu_resume_audit.json`.
+- A deterministic SDPA probe finds cuDNN rejects strict deterministic execution;
+  native Flash SDPA rejects an explicit padding mask. Native EFFICIENT_ATTENTION
+  passes short FP64-oracle forward/gradient checks and bitwise repeat checks.
+  This exception is recorded in `artifacts/sdpa_v3_oracle.json`; deterministic
+  actual-model profiling and resume are still required.
+- v3 large sweeps remain disabled by `artifacts/protocol_execution_gate.json`.
+  No full-horizon method comparison, independent screening/confirmation, official
+  benchmark evaluation, export/equal-compute result, 7B result or winner exists.
+
+Next: deterministic Qwen profile/resume, DDP parity, complete Stage A diagnostics,
+corrected restart/compression runners and tests; only then restart the balanced
+41-method HPO. Preserve all unsuccessful attempts and account for their cost.

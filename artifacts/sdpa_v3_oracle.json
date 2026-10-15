@@ -1,0 +1,103 @@
+{
+  "torch": "2.16.0.dev20261013+cu130",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+  "deterministic_algorithms": true,
+  "policy": "EFFICIENT_ATTENTION for all v3 primary candidates, pending actual-model profiling and exact resume",
+  "exception": "cuDNN SDPA rejects deterministic execution; native flash rejects explicit padding mask. Keep original causal/padding pattern.",
+  "records": [
+    {
+      "backend": "CUDNN_ATTENTION",
+      "padding": false,
+      "passed": false,
+      "error": "No available kernel. Aborting execution.",
+      "warnings": [
+        "Memory efficient kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1387.)",
+        "Memory Efficient attention has been runtime disabled. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/sdp_utils_cpp.h:618.)",
+        "Flash attention kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1389.)",
+        "Flash attention has been runtime disabled. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/sdp_utils_cpp.h:606.)",
+        "cuDNN attention kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1391.)",
+        "cuDNN SDPA is not deterministic. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1077.)"
+      ]
+    },
+    {
+      "backend": "FLASH_ATTENTION",
+      "padding": false,
+      "bitwise_repeat": true,
+      "max_abs_forward_error": 0.008657118298896371,
+      "max_abs_gradient_error": 0.01804085156368096,
+      "relative_l2_gradient_error": 0.0028380177918947485,
+      "passed": true,
+      "warnings": [
+        "Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.\nConsider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)"
+      ]
+    },
+    {
+      "backend": "EFFICIENT_ATTENTION",
+      "padding": false,
+      "bitwise_repeat": true,
+      "max_abs_forward_error": 0.008657118298896371,
+      "max_abs_gradient_error": 0.01804085156368096,
+      "relative_l2_gradient_error": 0.003329897517029403,
+      "passed": true,
+      "warnings": []
+    },
+    {
+      "backend": "MATH",
+      "padding": false,
+      "bitwise_repeat": true,
+      "max_abs_forward_error": 0.007586275261757702,
+      "max_abs_gradient_error": 0.014841842691850182,
+      "relative_l2_gradient_error": 0.0016729152058954533,
+      "passed": true,
+      "warnings": []
+    },
+    {
+      "backend": "CUDNN_ATTENTION",
+      "padding": true,
+      "passed": false,
+      "error": "No available kernel. Aborting execution.",
+      "warnings": [
+        "Memory efficient kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1387.)",
+        "Memory Efficient attention has been runtime disabled. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/sdp_utils_cpp.h:618.)",
+        "Flash attention kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1389.)",
+        "Flash attention has been runtime disabled. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/sdp_utils_cpp.h:606.)",
+        "cuDNN attention kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1391.)",
+        "cuDNN SDPA is not deterministic. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1077.)"
+      ]
+    },
+    {
+      "backend": "FLASH_ATTENTION",
+      "padding": true,
+      "passed": false,
+      "error": "No available kernel. Aborting execution.",
+      "warnings": [
+        "Memory efficient kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1387.)",
+        "Memory Efficient attention has been runtime disabled. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/sdp_utils_cpp.h:618.)",
+        "Flash attention kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1389.)",
+        "Flash Attention does not support non-null attn_mask. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/sdp_utils_cpp.h:279.)",
+        "cuDNN attention kernel not used because: (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1391.)",
+        "cuDNN attention has been runtime disabled. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/sdp_utils.cpp:1065.)"
+      ]
+    },
+    {
+      "backend": "EFFICIENT_ATTENTION",
+      "padding": true,
+      "bitwise_repeat": true,
+      "max_abs_forward_error": 0.009181433845900422,
+      "max_abs_gradient_error": 0.019863680329192945,
+      "relative_l2_gradient_error": 0.003358011202181583,
+      "passed": true,
+      "warnings": []
+    },
+    {
+      "backend": "MATH",
+      "padding": true,
+      "bitwise_repeat": true,
+      "max_abs_forward_error": 0.0077507776954379715,
+      "max_abs_gradient_error": 0.012795144543067849,
+      "relative_l2_gradient_error": 0.0016596696847364836,
+      "passed": true,
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "rankstudy-execution-gate-v1",
+  "v2_primary_selection_allowed": false,
+  "v2_new_training_allowed": false,
+  "v3_large_sweep_allowed": false,
+  "reason": "Protocol v2 audit; complete v3 correctness, GPU, DDP, full-horizon and pipeline gates before HPO",
+  "audit": "reports/protocol_v2_audit.md"
+}

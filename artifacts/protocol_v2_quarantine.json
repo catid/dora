@@ -1,0 +1,1666 @@
+{
+  "time_utc": "2026-10-15T05:02:57.320431+00:00",
+  "note": "Preserved historical measurements, excluded from primary selection. All methods need verified v3 harness and full checkpoint provenance. Corrected data_v2 remains in use.",
+  "runs": [
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr0.0001_s0.25",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "c237dccacadcbf6717a3a07bab4ab0f7da3d51df8876563923f6f50deff2d3a6",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 601.2978103160858
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr0.0001_s1",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "673090559521897c90ac15a023d2a11344230ecbfef3846ddab82cd144f34116",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 614.7686161994934
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr0.0001_s4",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "ab1ccde5794eb3ee252b1acd9a7a157f04940d5da698eefcf65a812aec10d642",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 599.1379430294037
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr0.001_s0.25",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "82629e53a62cbde5ccddf29a14f104ae0b6f49a0364d7ceaa915192a6532f649",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 599.5456812381744
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr0.001_s1",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "90ebae50c45b7cdf5775cba33afaf59c7c980c2c749ca6aa87e398fb0adf8adb",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 601.329906463623
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr0.001_s4",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "0057fee55b390fea458fc390093f3512bb0ad662f232a9235510847a0c4dcc34",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 615.2446238994598
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr1e-05_s0.25",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "3de13122b6d72df18d42d29d3991fdeda9c18d3c3113445fa2dac08b7695a3c9",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 599.9262540340424
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr1e-05_s1",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "c1afb512045970e5ca1d1d02ff2ee196c7e35977f942254899b625c43c5fad57",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 599.1041331291199
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr1e-05_s4",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "086dde400856a808b0d61b4f3c06fea4c2563a63fb6b9eca81efbd5b978eb746",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 599.2523498535156
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr1e-06_s0.25",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "4c6ae3bb358f4417461b7f24b9f52065f8d2bbfb54f5e242c5bd20bdbee7e213",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 615.8742580413818
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr1e-06_s1",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "b5cd24b0e79fea99f8dec03615509d42b24793ccf155f0e2c64b326f45992bca",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 599.3753998279572
+    },
+    {
+      "run_id": "hpo_ADALORA_REF_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_ADALORA_REF_lr1e-06_s4",
+      "method_id": "ADALORA_REF",
+      "metadata_sha256": "6e556f3b1e3eca998282d9d4f48611031fea1eab5aaea3d36b532398ef34e67a",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.0225808620453
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr0.0001_s0.25",
+      "method_id": "I_DISP",
+      "metadata_sha256": "87d09499a26ce4aef0d69e7f36b61cd7896db04f8e13ba88a06043fc170fedf9",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.3457233905792
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr0.0001_s1",
+      "method_id": "I_DISP",
+      "metadata_sha256": "8309c2c6e5a8ec85f31ccd231ff42be866a4fcfab11cac5029adbb331920d265",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 609.5675654411316
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr0.0001_s4",
+      "method_id": "I_DISP",
+      "metadata_sha256": "93035ae82580ad2049305b390d411ccd8efe4405a8b869545a63cedc1fbfbd28",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.7171967029572
+    },
+    {
+      "run_id": "hpo_I_DISP_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr0.001_s0.25",
+      "method_id": "I_DISP",
+      "metadata_sha256": "854bec929fb1a66c8dfdcf20d5285a47f7c6fb48d1c3457f632863bab02e2414",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.8678765296936
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr1e-05_s0.25",
+      "method_id": "I_DISP",
+      "metadata_sha256": "09e7f00fc56aa4b64b658e29e64dc1d992851f2f7f2c89d84c31ea5466837958",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 609.6688027381897
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr1e-05_s1",
+      "method_id": "I_DISP",
+      "metadata_sha256": "fd8466e094c5f9a8a11674e433d61a2793ec12af5278571f42b8746e9308b902",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.7644910812378
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr1e-05_s4",
+      "method_id": "I_DISP",
+      "metadata_sha256": "6464fad0b50e7a3587d8657ffd861ee69345ee59d0536b72c7c3e22898283682",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.9507293701172
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr1e-06_s0.25",
+      "method_id": "I_DISP",
+      "metadata_sha256": "a18f6f61b33bc0331edc73f65d4a3f68e3201a6672513af2ee6c6a9b326fabbd",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.8481075763702
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr1e-06_s1",
+      "method_id": "I_DISP",
+      "metadata_sha256": "71f0798f39a6ca32c1aad4257bf0a1f428ca22fcb61965f025277a21545997b7",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.1263484954834
+    },
+    {
+      "run_id": "hpo_I_DISP_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr1e-06_s4",
+      "method_id": "I_DISP",
+      "metadata_sha256": "d7dbb8f1bf908cb74fec718f3facca736927b96ce558ccea7299638465ecbbfd",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.8835775852203
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr0.0001_s0.25",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "370af36cf3e5990fcc0275f3e6ad4e78dd76410ba870129d2a3a9c882d1ba2b1",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 595.8595440387726
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr0.0001_s1",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "2cbeeec9ce26f366da0591a5a6ba5e6b9a5b07b7b2f6112653794b4d8f5ecd9a",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 609.5655484199524
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr0.0001_s4",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "5ab80fd4e1d71ec5f56dcf1047f90fd83489a596c08d52141a894d60c090e4b4",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 610.2166562080383
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr0.001_s0.25",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "5891350a865b1b914e75ce4c1965d562d0e45955796bd75cf422e2bb9acd1d3f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.4875500202179
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr0.001_s1",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "d2bc8abd6bd3746f690bfe79dd6539d8ff9c0f1b10d41efd84ef3abe064f6ffc",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.4104232788086
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr0.001_s4",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "0abcdd1f9d82272d1bb88a893d9548c32caf3949aecf44d95ae8fff073132526",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.9414300918579
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr1e-05_s0.25",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "910642d6f4218c1e2c70e17d4c84b557727be985a58d82d3be1d107d17a9476f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 609.7638959884644
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr1e-05_s1",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "4a36b267aeb4727e40f84af367a904d059eebf33b2d5222f108f9ead9c01d63a",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.4298102855682
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr1e-05_s4",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "6173bffe65bb467a010de4c1ad3e796d3a5d2ca7f0356b6c895c19c0f52accc3",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.2573666572571
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr1e-06_s0.25",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "1f5e4afe405bd9ea6aa6e3273db0528b74b6325f5287eb2dfc8c10fa61cae984",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.3755013942719
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr1e-06_s1",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "b0458bb52e64f3098b014e2a4ef19b49bdfb60ca9f935a56b945962208c91f04",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.6247856616974
+    },
+    {
+      "run_id": "hpo_I_FIXED_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_FIXED_lr1e-06_s4",
+      "method_id": "I_FIXED",
+      "metadata_sha256": "1df170db4f88329e01a947233a757f1df615b3c53ae851e5d84ad9a4bc799a99",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.415069103241
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr0.0001_s0.25",
+      "method_id": "I_GATE",
+      "metadata_sha256": "1e040c55e381c7eb4f6520fbf202750c51a112211345fa8dcecf75068670bdee",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 597.4687728881836
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr0.0001_s1",
+      "method_id": "I_GATE",
+      "metadata_sha256": "b96256f5ae2b6da576a3d503aa1796d85fde12481e061b76c9573f08f69178c2",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 611.2931590080261
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr0.0001_s4",
+      "method_id": "I_GATE",
+      "metadata_sha256": "b03c2c4067fc85856c5c511f99cfa1f1d121741c9f67047010020980ae1c02a8",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 595.3449304103851
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr0.001_s0.25",
+      "method_id": "I_GATE",
+      "metadata_sha256": "2fe1d4058c169fb777d8470a7ef668933f47bf3476647edec9356247671422bf",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.6214208602905
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr0.001_s1",
+      "method_id": "I_GATE",
+      "metadata_sha256": "13b5058d1d7495bb45f3cb8fb539164cb8bae140d34467f3c90a52e18b5589ed",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.8723793029785
+    },
+    {
+      "run_id": "hpo_I_GATE_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr0.001_s4",
+      "method_id": "I_GATE",
+      "metadata_sha256": "9ec0fa5e164a3ff5c334a20e613e7a8647084c318365a1864415cd974fc5c449",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 611.4718866348267
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr1e-05_s0.25",
+      "method_id": "I_GATE",
+      "metadata_sha256": "f7f5b843ea459fcac63b4f45426e8cfc3473175a511c8840004dbc45e79e29c4",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 610.4441540241241
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr1e-05_s1",
+      "method_id": "I_GATE",
+      "metadata_sha256": "2c708dc4cf9e830a880f1d0b7e38cf7e495cb32e268872767b8044db054eefaa",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.2448992729187
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr1e-05_s4",
+      "method_id": "I_GATE",
+      "metadata_sha256": "8397573039095bd5d10d860380f6cf8b93ed846c19da2cfdfe53f6b6aa8f9590",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 595.8997781276703
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr1e-06_s0.25",
+      "method_id": "I_GATE",
+      "metadata_sha256": "135f4b7ccd988c7402f874714ea82bdaa851d6a9d71efa7282c258744a9b85a7",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.6156187057495
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr1e-06_s1",
+      "method_id": "I_GATE",
+      "metadata_sha256": "dee8cae4c812e717de565a5e28bc6414fcc870d05d5c862e8226e825496a41c7",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.7214374542236
+    },
+    {
+      "run_id": "hpo_I_GATE_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_GATE_lr1e-06_s4",
+      "method_id": "I_GATE",
+      "metadata_sha256": "a1e3fbacf463a8f5b0b423cec007c03f61077f1123e89ef959fe96958ceaa027",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 597.2647240161896
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr0.0001_s0.25",
+      "method_id": "I_RAW",
+      "metadata_sha256": "6857d6a988c708eb1ad97ac96526e854008c6d388d60a918b0fec8f7823728df",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.2408611774445
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr0.0001_s1",
+      "method_id": "I_RAW",
+      "metadata_sha256": "2e34978571a0864fb9e2ce4d0c38995e258385874d723c80788880db1c46b72c",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 609.1897313594818
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr0.0001_s4",
+      "method_id": "I_RAW",
+      "metadata_sha256": "e8142c061f8654becedb885b3c2342bfe5292ea2682089aba1fd48a275e8cbd0",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.2621717453003
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr0.001_s0.25",
+      "method_id": "I_RAW",
+      "metadata_sha256": "bd491a0366f5390645141facc7fbea9eedfab569c63d6d194b7af1cad714bb37",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.7735557556152
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr0.001_s1",
+      "method_id": "I_RAW",
+      "metadata_sha256": "c7e665e34736866bd75c2fd5623a9bbf3667c61411a842fc3615efb7101d7cc7",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.6496806144714
+    },
+    {
+      "run_id": "hpo_I_RAW_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr0.001_s4",
+      "method_id": "I_RAW",
+      "metadata_sha256": "6e39783743844bc56eef3ba3a680aecfa7e2df6f99cef68206530e235c6a8774",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 609.6533377170563
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr1e-05_s0.25",
+      "method_id": "I_RAW",
+      "metadata_sha256": "4248a9c1f657bb2afee67c0d037686bf1f4c1ba17813df72ba7526f20af31201",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 610.4805574417114
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr1e-05_s1",
+      "method_id": "I_RAW",
+      "metadata_sha256": "66d55367549787ddf45559434564442b6d983f019c0086056b5bdaaae3d83826",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.3657908439636
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr1e-05_s4",
+      "method_id": "I_RAW",
+      "metadata_sha256": "5ec26ea61898cd830fff4eeddd53a3275464a6dde6d6a5030caf6ccb63c87300",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.3239822387695
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr1e-06_s0.25",
+      "method_id": "I_RAW",
+      "metadata_sha256": "9773a3e1cca7e8571909f69de6b9d52f8a11927f8761a212edc64f2412881f33",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.0338487625122
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr1e-06_s1",
+      "method_id": "I_RAW",
+      "metadata_sha256": "e15c2453d8f057f055b75a85410342346474ba8d0a36815348371c4a18642e19",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.5454685688019
+    },
+    {
+      "run_id": "hpo_I_RAW_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_RAW_lr1e-06_s4",
+      "method_id": "I_RAW",
+      "metadata_sha256": "22e321e227642d59c984d1a90e9fbf6324664183e67808c7d64cb4415494ce32",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.1825475692749
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr0.0001_s0.25",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "39f7102750276f6970be43730a28e32bf04885d9b58edbd2dff408d322269c5b",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.4455840587616
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr0.0001_s1",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "78965dd1396de51fb16b6e5e2297791fb1afc59e8d2a329d9525502da102b69e",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 611.274327993393
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr0.0001_s4",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "7681ce5aa40ad834cb93e9401b1b5bb86f74f127aedda407b54bb295ba0f862e",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.2726476192474
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr0.001_s0.25",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "6277a23bcd0be6cef4cd503f2eb3a01fb6096218de6241af2241cfb4b50f50f9",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.0832526683807
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr0.001_s1",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "bbe898001ddc8066883ddbc3b8d646f5f945a68ec4b8e2b0e36a9ca0609430f6",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 596.2787275314331
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr0.001_s4",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "a6813cc9f4c8d44cedccc48e852ffddb209fc10d1bd4b5d81c4357de08c5a0e2",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 609.7609755992889
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr1e-05_s0.25",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "01471771dd535d817ad9f8e52bd65aa61f6d282b6f33a73001e86da9b97df468",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 610.8578646183014
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr1e-05_s1",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "f444f2b379d0289834a8c6e1afa3cc6248f8a0a1b9a099596a9d6b52d8a563ad",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.6362280845642
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr1e-05_s4",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "4ea087e19b618bbdf231081be8702965e22c19cb1645cf00a1ed813b9517d803",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.7638592720032
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr1e-06_s0.25",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "47730ecd5da70fc9b939ba6a8ee457e5e58a30f5fbce98cf9a628b5fa2b11d4c",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 594.1285049915314
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr1e-06_s1",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "28e049c31ee919bace97b70894ba2a08e088103b4d674f38af32abc602682a23",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 593.7789957523346
+    },
+    {
+      "run_id": "hpo_I_WIDE_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_WIDE_lr1e-06_s4",
+      "method_id": "I_WIDE",
+      "metadata_sha256": "62061e8bd5ea9d3236ea277449ec0bdf9b43e03590b0ef7e960af626bbd60545",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 595.9101638793945
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr0.0001_s0.25",
+      "method_id": "L_ACT",
+      "metadata_sha256": "ac8ded5be6ee729749872ea648e950602bbf33bf91e442e18e36b1e754824537",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.5024094581604
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr0.0001_s1",
+      "method_id": "L_ACT",
+      "metadata_sha256": "c012106f661aa6a6663bbb0efa1f8a1c95e0a6535f07c771c34719ee196c167b",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.5692477226257
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr0.0001_s4",
+      "method_id": "L_ACT",
+      "metadata_sha256": "98d5a9e4b01d3efc414bc959acee783690daf22f95d87c7158fa089c2625c22f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.4721388816833
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr0.001_s0.25",
+      "method_id": "L_ACT",
+      "metadata_sha256": "9c4c8720c36cf6c5e951e8cf7069823577dc3e154f2bc36ab9c65ad61bd0bb34",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.4043617248535
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr0.001_s1",
+      "method_id": "L_ACT",
+      "metadata_sha256": "e2f9fadba4b874c74d925742ab5fa57fdaa4120cdd148ae223bf28b5fa7994a6",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.5682787895203
+    },
+    {
+      "run_id": "hpo_L_ACT_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr0.001_s4",
+      "method_id": "L_ACT",
+      "metadata_sha256": "12b927ac26dc03ce0f54eab062e74d346ff49df03ec98463b96349078f0bf3b4",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.3762509822845
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr1e-05_s0.25",
+      "method_id": "L_ACT",
+      "metadata_sha256": "a0de36093c9abc8b6164f335b320232f8fbead9d648f47d7c23d239a491bdd6f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.8161540031433
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr1e-05_s1",
+      "method_id": "L_ACT",
+      "metadata_sha256": "f9a59e23fde1cbdb4fb0b8aa40e5c21861790ca9557a04116b5d757ecab86762",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.6353607177734
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr1e-05_s4",
+      "method_id": "L_ACT",
+      "metadata_sha256": "af76a6a730116db7a54f84611d4fe7d68ec03c3f42a1829ab48d5ecd7fcfd324",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.511643409729
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr1e-06_s0.25",
+      "method_id": "L_ACT",
+      "metadata_sha256": "98cf7b98e0f193985b4ffc65ca04d1c41eb19fa74b38e7616663f6b44c871151",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.0420229434967
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr1e-06_s1",
+      "method_id": "L_ACT",
+      "metadata_sha256": "8f17cef2609d3ede597f61dab242b978365c5c8ad198791126069f148ee81dfe",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.1756081581116
+    },
+    {
+      "run_id": "hpo_L_ACT_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_ACT_lr1e-06_s4",
+      "method_id": "L_ACT",
+      "metadata_sha256": "b16debe02b427d18e81ed4cecc2074e7114ccd0d1d4cc95366512a48032d259e",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.4148559570312
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr0.0001_s0.25",
+      "method_id": "L_DISP",
+      "metadata_sha256": "3d379e9a288d49e062f3cf35530808556d9450c80245045c1f64675d04714a25",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.2567706108093
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr0.0001_s1",
+      "method_id": "L_DISP",
+      "metadata_sha256": "bc43113cc2cdab59d1663854a34f41e047f1cd20b37680dc13de07d2667f1d6c",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.9450395107269
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr0.0001_s4",
+      "method_id": "L_DISP",
+      "metadata_sha256": "b8e66128b28c967b8eabfffb6e85d2b26dd00e7b440d059c22b530c3b14891d6",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.4200756549835
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr0.001_s0.25",
+      "method_id": "L_DISP",
+      "metadata_sha256": "636d5cbfa3c7ea0b34fe933e7a9c7c6d2cb3496df40da0ce6f19567ae3edafcd",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.9300162792206
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr0.001_s1",
+      "method_id": "L_DISP",
+      "metadata_sha256": "8543a85c142bb30cd927c24d18491cc6db0adcf50a9cb6a73f8fbf326476675c",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.4151709079742
+    },
+    {
+      "run_id": "hpo_L_DISP_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr0.001_s4",
+      "method_id": "L_DISP",
+      "metadata_sha256": "c581bd3df196303c0a82ccdce7b2ace54559fc51f36f9dd37fbab857ff910fbf",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.1982245445251
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr1e-05_s0.25",
+      "method_id": "L_DISP",
+      "metadata_sha256": "afbef953b807f54f959d608c6d703fb8895840fe8cee7bf13cdc46ee5258d9ab",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.9403190612793
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr1e-05_s1",
+      "method_id": "L_DISP",
+      "metadata_sha256": "0b303ea60728cc4979f88676f1c91fbd9445d7f542be031895692d0d8708da5f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.5225493907928
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr1e-05_s4",
+      "method_id": "L_DISP",
+      "metadata_sha256": "655a2b5c0c4da06df62c25d2fe3f326e6f00ef8a7d512b713f670fcc08b6488e",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.3968608379364
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr1e-06_s0.25",
+      "method_id": "L_DISP",
+      "metadata_sha256": "52bde7477a52eef9185d1c3386e1286dcc2a4173adf2aeac3ddc97041d62621f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.8845927715302
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr1e-06_s1",
+      "method_id": "L_DISP",
+      "metadata_sha256": "09763191b7f34cc9b0d186e9d3d679965a903ab2f89b4d032b93eb2c5b0135b2",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.7282245159149
+    },
+    {
+      "run_id": "hpo_L_DISP_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_DISP_lr1e-06_s4",
+      "method_id": "L_DISP",
+      "metadata_sha256": "a1f834a346e7b70df5c1e8097ca0396f019066b57bb5dd0c18386f89ef222d2d",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.3900196552277
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr0.0001_s0.25",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "d31411b68d2960477aaff6b7545739214656694c2d91cb27104e81928e07917a",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 588.9514904022217
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr0.0001_s1",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "098895a9e8c6f38da0dd254951a2d7af03e608f00fa4dad02c90dd302ebadbea",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.8479108810425
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr0.0001_s4",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "3e3d9b7e534a665709cf0ae2a02c331fc43e44a09d934301576377fac1dafd66",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.6750435829163
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr0.001_s0.25",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "14c7adca39132f2810849eebf45dff023a0e81f84776e3cdc9098b1d2752f9d8",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.3323047161102
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr0.001_s1",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "a89634c17e7e9984b3a10ed53f86096cd2dfa43aaf09a6d2967299f4dfcb8d66",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 588.6934978961945
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr0.001_s4",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "70846be3872b9c9c4f6e9d90c4d1d9f81aef4f655959041836d1f0b8a3c27c96",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.1820116043091
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr1e-05_s0.25",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "255579290859853a82c98dcbd5c381e861c8a488dd281e9bfb61f6bd9e837a2f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.798121213913
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr1e-05_s1",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "77d891757743a83ba632e2a5a02946636a4786ea5a7412c06788393e0d14ea19",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.2911236286163
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr1e-05_s4",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "4d033265f04fe5ffd848027056527a8b9fdfedc6be3e15c8645416f2e53a7cc5",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.745439529419
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr1e-06_s0.25",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "3eefc9eea08184efbcd4fcef323b78e8f5d97cf8e56ca5ffa03987087a7bd01e",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.922285079956
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr1e-06_s1",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "1d24acd83fd28917da9c628106b01665d774b10227a56e8315d36f59f44eb9ba",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.9236421585083
+    },
+    {
+      "run_id": "hpo_L_FIXED_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_FIXED_lr1e-06_s4",
+      "method_id": "L_FIXED",
+      "metadata_sha256": "b700f1b5cd367fb09b2577c5a4c8eef31bcb1f8261bacd8e17dcafa18cf52e19",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 588.6471185684204
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr0.0001_s0.25",
+      "method_id": "L_GATE",
+      "metadata_sha256": "80ed12a61cce075d8ab566a23e7bb57287a3a15a39a106976399b015c3f139a1",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.9532246589661
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr0.0001_s1",
+      "method_id": "L_GATE",
+      "metadata_sha256": "ecce785f0aa18eb357c634f216ff8e18ef5eba108aeda2f8a8b7ad02e2a941d3",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 604.4910490512848
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr0.0001_s4",
+      "method_id": "L_GATE",
+      "metadata_sha256": "dd2eeb5cb10479fadd573a86fdced8dee917064e1b2b2aafd3c1a1bae93e6f66",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.5909223556519
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr0.001_s0.25",
+      "method_id": "L_GATE",
+      "metadata_sha256": "71ec751b617d52018a39617ca06e53fa2d24503465a6cefcfa4a156d4faf2528",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 588.161851644516
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr0.001_s1",
+      "method_id": "L_GATE",
+      "metadata_sha256": "b2fcdf0bfb782261cd7607e969763ab3b27d92c4eba9f906a900e7272027153f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.9418156147003
+    },
+    {
+      "run_id": "hpo_L_GATE_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr0.001_s4",
+      "method_id": "L_GATE",
+      "metadata_sha256": "a08ad54233ddd31fdbf668c4ac88cbefb28788a6d457e302f03ff39246fe3cdb",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.7198762893677
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr1e-05_s0.25",
+      "method_id": "L_GATE",
+      "metadata_sha256": "1f2c6d65d5146016574ce4c4a3be2e8102e0dbac8720aef521108422e0219672",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.5866076946259
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr1e-05_s1",
+      "method_id": "L_GATE",
+      "metadata_sha256": "eab2a88c8f0216df6e774cf82cd622574fc7f5d2c27feef4ffe173009442f222",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.4915056228638
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr1e-05_s4",
+      "method_id": "L_GATE",
+      "metadata_sha256": "939ddf36979fad4ff7009d47b4236cceda6c1c35d7c61580239d37f6a85b2405",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.584300994873
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr1e-06_s0.25",
+      "method_id": "L_GATE",
+      "metadata_sha256": "444dd2876773c452fa8a3ef35edd2fa9db9c582a8679aacc97f0c9b9330f99de",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.7795581817627
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr1e-06_s1",
+      "method_id": "L_GATE",
+      "metadata_sha256": "48500a372143867124969351b4937440e31ba63a838d0937d10c82b30d651f4c",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.390496969223
+    },
+    {
+      "run_id": "hpo_L_GATE_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GATE_lr1e-06_s4",
+      "method_id": "L_GATE",
+      "metadata_sha256": "1e90e0d17ced953958b562cf71b726834ebbf94b50fb9d8ec34bd6180d5a0e8d",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.838214635849
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr0.0001_s0.25",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "54d41a1bbe8cd4f47c486ad4e55067c4fd407b6a82f754d33344016130811d4e",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.2146303653717
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr0.0001_s1",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "8bf659d886890d3fa352677821b16f24dfa0ab204857800f2a334bfde8e00da0",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.1317126750946
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr0.0001_s4",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "7a9be5260a36eca10d47964525f4a36d7de60efda4612aaab8fac8ba749ad9b8",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.8299472332001
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr0.001_s0.25",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "18d6f506c3adad5d6a4f9617aedbadfd59f72af4aa9e0c1c262f6dda3ed5780a",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.8418412208557
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr0.001_s1",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "a312bbfd032a1e7ea5a9c7040880528b22e20221ecaa5d566a76ebd619afd688",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.2634160518646
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr0.001_s4",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "c9b47af964c60f94e190a664473eced038df77829ef9e03d2badb9da9d0c8a76",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.9756350517273
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr1e-05_s0.25",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "89766eb55096cd9c1d78d9dc28c1a3503383e642c857c863ae1c8b9dccacb2c2",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.7564013004303
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr1e-05_s1",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "41a21e421d0c7cf53d5a150ba50086da6f8e73062ae236aeb0466ad0aaff4e4a",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.445464849472
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr1e-05_s4",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "90affed8f8f3453b2ffe6c1840608c138659f230b306e4b9ef0a844b733d9044",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.9591572284698
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr1e-06_s0.25",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "235c6a2afad30d750a4678e05c1af656c4ff235eaf90b3889a1b12ff5a0942f9",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.527327299118
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr1e-06_s1",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "b8375e706370582ee77414edba45b0002ffbec6d36726db1ae69108185aad5ea",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.8504316806793
+    },
+    {
+      "run_id": "hpo_L_GLOBAL_RANDOM_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_GLOBAL_RANDOM_lr1e-06_s4",
+      "method_id": "L_GLOBAL_RANDOM",
+      "metadata_sha256": "1dca00d329d9bda3f70268044d6d2ca6f059bea78fd6f9fe9647c91251d167f6",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.2133762836456
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.0001_s0.25",
+      "method_id": "L_RAW",
+      "metadata_sha256": "993ad64f6dc35f731fd3aa7646b410b7830344f87ed8176a9468307011f597d0",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 588.8982193470001
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.0001_s1",
+      "method_id": "L_RAW",
+      "metadata_sha256": "1fefbadca312c233ce7995e89d3c0751b5bfbe395840beee13700aca1dfb0ecc",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.124214887619
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.0001_s4",
+      "method_id": "L_RAW",
+      "metadata_sha256": "36d8649a4defe29b6aef765f5b83cecf8ed79a62ac760fed2b734a73ce2b4162",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.487964630127
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.001_s0.25",
+      "method_id": "L_RAW",
+      "metadata_sha256": "3e5466d04cc129cc41c0ffaa542af6a0709c6b27d16e3880c3430334c0df5eef",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.0787088871002
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.001_s1",
+      "method_id": "L_RAW",
+      "metadata_sha256": "8554d4bcab19962ed167b923b330eb2db360b90a4a7b63633af9c52722049487",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.6636335849762
+    },
+    {
+      "run_id": "hpo_L_RAW_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr0.001_s4",
+      "method_id": "L_RAW",
+      "metadata_sha256": "c8816db8864d999e97bc8439bbd11a4643650a1c1c799d0ccddb06818c97c01f",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.242422580719
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr1e-05_s0.25",
+      "method_id": "L_RAW",
+      "metadata_sha256": "595119503f6d3aa5c8f4cf5a6506a7b529645bd20001d829a727090e4cf19349",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.2263510227203
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr1e-05_s1",
+      "method_id": "L_RAW",
+      "metadata_sha256": "d53aaa75674bef641d9f291212503e0f58af8e6c63ae309a10a17b2a3e97e809",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.4965498447418
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr1e-05_s4",
+      "method_id": "L_RAW",
+      "metadata_sha256": "44baca57aada5d1190daba7b0094bedcf650a34373f77649ea7c0be80f28f640",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.327828168869
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr1e-06_s0.25",
+      "method_id": "L_RAW",
+      "metadata_sha256": "40623f69a4672ad4e3dff56728814a32ffec45af1a11eeb597a08e53675895b4",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.7602941989899
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr1e-06_s1",
+      "method_id": "L_RAW",
+      "metadata_sha256": "8e688c2f7ed2ad9b07473475da37b7ffdae245848a23d9a835e133942f2114fd",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.2433085441589
+    },
+    {
+      "run_id": "hpo_L_RAW_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_RAW_lr1e-06_s4",
+      "method_id": "L_RAW",
+      "metadata_sha256": "3688d53ada4ef18ff1e5dd36bf80f29cf33c40c088fe2bbc8f27afbd438ba8e2",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.087100982666
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr0.0001_s0.25",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "ac448fbe85ceec3b33933da5f5c20796cf9678533b240f74e4bf388188f26629",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 590.055980682373
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr0.0001_s1",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "677702b82b27c9a01b6125fe814104e97e3da111b87c17d758ae4ce86f8bd508",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.9546163082123
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr0.0001_s4",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "ea1b35340eb7fcea6a7f9f098ac7b5f8ad53e718ec36998ea3c3138ac90a7dfa",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.451464176178
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr0.001_s0.25",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "4d5c99b9e0eae19a04c04450b3fa664b62eb016adca9c48b13c28f0c5283fd10",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.6804578304291
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr0.001_s1",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "25bc13b4e75b47c15a77bdbffcd3866e7597ab4f411dfde45f7d097fe29f2617",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.8835027217865
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr0.001_s4",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "dc41b0d6f25241bdb0fc3743bd1f8750a99a40d245b4f1a440a38e33de2001fd",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.2625463008881
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr1e-05_s0.25",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "c5848dc66e05543da250ec98df62a22e4e2a0dc0e77c2f6e1264863186fabcdb",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.4489076137543
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr1e-05_s1",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "897bc77176f02e3f62633fd692e3f889fe1f15f112f3248569615f96ff644f45",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.6590659618378
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr1e-05_s4",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "774f9db44103a0426ae26f941f9978f9a4f946d873c06a3b81441a22b3c6aff3",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.6665058135986
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr1e-06_s0.25",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "6d9f6828450488f864956507fda409a73324d5bbe8f0fc51e9cb6c7d56499d53",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.8981654644012
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr1e-06_s1",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "b8148909429d2b4e8004acfdf1214f1d3035a8c72d238b351f5f3257eadbc68c",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.2367808818817
+    },
+    {
+      "run_id": "hpo_L_UNIFORM_GATE_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_UNIFORM_GATE_lr1e-06_s4",
+      "method_id": "L_UNIFORM_GATE",
+      "metadata_sha256": "0cdd1a6c1b6f30331ef5f374b87eeea044d1f487252850878d3e4aba6d80bda7",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.8092057704926
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.0001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr0.0001_s0.25",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "d5c21a2fd1e332976a0097b964d16f3f8a113990bde80d2ada0abd4581f973e7",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.0015769004822
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.0001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr0.0001_s1",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "7104c293451ae43060cd64605caf712064aeca41bd70f9c71f0411561ff54fd0",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.9056046009064
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.0001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr0.0001_s4",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "b22f2cc2df830fc1321db81aaaa47e36119be9bdb874541a7468c4c0e71d1e48",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.3555221557617
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.001_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr0.001_s0.25",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "fa80e18373ecfc2bf228a5dbab887c72b6057ef2379e033723af6bb707f51b8a",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.5454850196838
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.001_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr0.001_s1",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "620615f03e32936b3044b66def41176a981d49952b5414c619388f696842fa81",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 588.9828412532806
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr0.001_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr0.001_s4",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "fa7b2d9fe833c4af391db28c8fcecca3cecebd9da6bcae2ae48c073c3a618cb2",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 603.167665719986
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-05_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr1e-05_s0.25",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "06468c1c9b1b35671606a44fcf1c9a521cdd11768acdb1fbf2a36fec201bc446",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 602.5116927623749
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-05_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr1e-05_s1",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "614c9ca0d11c1455cc1f49abffc3bee0f36de1a17103eda46afb391b1841ef88",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.1494786739349
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-05_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr1e-05_s4",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "bdf923f91f3daa2d5494c242d9a3b04642264d06dc0c4937ad641d492cfbf8b6",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 587.1888911724091
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-06_s0.25",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr1e-06_s0.25",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "f75d1782f3e20f6525b8f3ecb3353c2fdf0e5f562cb73a982051faa40045831c",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.0253803730011
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-06_s1",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr1e-06_s1",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "b7c46fbc1703eef3774d754c82e716681ec4f36c30862e1f8b437cb89d16d32e",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 586.2140049934387
+    },
+    {
+      "run_id": "hpo_L_WIDE_lr1e-06_s4",
+      "path": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_L_WIDE_lr1e-06_s4",
+      "method_id": "L_WIDE",
+      "metadata_sha256": "8b17ec3ddc210e20126aaf520c3dd18b100b6e0204efa44062b7419ac9066e85",
+      "measured_status": "complete",
+      "protocol_eligible": false,
+      "reason": "v2_protocol_audit",
+      "elapsed_s": 589.2585918903351
+    }
+  ]
+}

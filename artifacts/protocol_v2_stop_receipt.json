@@ -1,0 +1,64 @@
+{
+  "time_utc": "2026-10-15T05:02:30.543394+00:00",
+  "reason": "protocol audit: score cadence, reference score aggregation and missing final-rank freeze; preserve all records; no further v2 launches",
+  "processes": [
+    {
+      "pid": 3255931,
+      "cmd": "bash scripts/continue_adaptive_v2.sh ",
+      "action": "SIGTERM"
+    },
+    {
+      "pid": 3255327,
+      "cmd": "./.venv-study/bin/python scripts/run_hpo_v2.py --root /var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001 --data-root /var/tmp/dora-adaptive-rank/data_v2 --manifest-root artifacts/manifests_v2 --updates 128 --seed 1001 --gpus 0,1,2,3 --microbatch 2 --resume ",
+      "action": "SIGTERM"
+    },
+    {
+      "pid": 3337611,
+      "cmd": ".venv-study/bin/python scripts/run_one_v2.py --method I_ACT --init I --scale 0.25 --lr 1e-06 --penalty 0.0 --seed 1001 --updates 128 --data-root /var/tmp/dora-adaptive-rank/data_v2 --manifest artifacts/manifests_v2 --out /var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_ACT_lr1e-06_s0.25 --rank 16 --target-rank 8 --microbatch 2 ",
+      "action": "SIGTERM",
+      "run": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_ACT_lr1e-06_s0.25",
+      "previous_launcher_status": {
+        "status": "running",
+        "pid": 3337611,
+        "gpu": "1",
+        "stage": "v2_hpo"
+      }
+    },
+    {
+      "pid": 3337789,
+      "cmd": ".venv-study/bin/python scripts/run_one_v2.py --method I_ACT --init I --scale 1.0 --lr 1e-06 --penalty 0.0 --seed 1001 --updates 128 --data-root /var/tmp/dora-adaptive-rank/data_v2 --manifest artifacts/manifests_v2 --out /var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_ACT_lr1e-06_s1 --rank 16 --target-rank 8 --microbatch 2 ",
+      "action": "SIGTERM",
+      "run": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_ACT_lr1e-06_s1",
+      "previous_launcher_status": {
+        "status": "running",
+        "pid": 3337789,
+        "gpu": "3",
+        "stage": "v2_hpo"
+      }
+    },
+    {
+      "pid": 3334527,
+      "cmd": ".venv-study/bin/python scripts/run_one_v2.py --method I_DISP --init I --scale 1.0 --lr 0.001 --penalty 0.0 --seed 1001 --updates 128 --data-root /var/tmp/dora-adaptive-rank/data_v2 --manifest artifacts/manifests_v2 --out /var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr0.001_s1 --rank 16 --target-rank 8 --microbatch 2 ",
+      "action": "SIGTERM",
+      "run": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr0.001_s1",
+      "previous_launcher_status": {
+        "status": "running",
+        "pid": 3334527,
+        "gpu": "2",
+        "stage": "v2_hpo"
+      }
+    },
+    {
+      "pid": 3336063,
+      "cmd": ".venv-study/bin/python scripts/run_one_v2.py --method I_DISP --init I --scale 4.0 --lr 0.001 --penalty 0.0 --seed 1001 --updates 128 --data-root /var/tmp/dora-adaptive-rank/data_v2 --manifest artifacts/manifests_v2 --out /var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr0.001_s4 --rank 16 --target-rank 8 --microbatch 2 ",
+      "action": "SIGTERM",
+      "run": "/var/tmp/dora-adaptive-rank/runs/hpo_v2_seed1001/hpo_I_DISP_lr0.001_s4",
+      "previous_launcher_status": {
+        "status": "running",
+        "pid": 3336063,
+        "gpu": "0",
+        "stage": "v2_hpo"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "uninterrupted": "/var/tmp/dora-adaptive-rank/runs/v3_smoke_20261015/I_GATE",
+  "resumed": "/var/tmp/dora-adaptive-rank/runs/v3_smoke_20261015/I_GATE_resume6",
+  "checkpoint_tensors_equal": false,
+  "max_abs_tensor_difference": 5.0,
+  "masks_and_slot_ids_equal": false,
+  "endpoint_nll_difference": -0.0003410978242754936,
+  "same_exact_input_tokens": true
+}

@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+echo 'v2 continuation withdrawn by protocol audit; see reports/protocol_v2_audit.md' >&2
+exit 2
+
 # Resumable continuation for the corrected v2 native study.  This script is
 # intentionally a shell supervisor: each Python launcher owns its queue and
 # writes immutable run records, while this process only advances stages after
