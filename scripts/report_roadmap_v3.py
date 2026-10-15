@@ -5,6 +5,8 @@ Timing extrapolations are arithmetic, not a calibrated four-GPU queue forecast.
 This report never treats engineering checks as eligible research trials.
 """
 import json
+import time
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -36,12 +38,56 @@ def main():
         pipelines.append({'run_id': path.parent.name, 'method': raw['method'], 'status': raw['status'],
                           'metadata': str(path), 'failure_reason': raw.get('failure_reason'),
                           'selection_eligible': False})
+
+    # Once the queue is live, derive status and ETA from its immutable
+    # launcher records rather than leaving the original pre-launch wording in
+    # the report.  This is an observed queue forecast, not a completion claim.
+    hpo_root = Path('/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry')
+    hpo_rows = []
+    for path in sorted(hpo_root.glob('*/launcher_status.json')):
+        try:
+            row = json.loads(path.read_text())
+            row['_mtime'] = path.stat().st_mtime
+            hpo_rows.append(row)
+        except (OSError, json.JSONDecodeError):
+            continue
+    hpo_counts = dict(Counter(row.get('status', 'unknown') for row in hpo_rows))
+    completed_times = sorted(row['_mtime'] for row in hpo_rows if row.get('status') == 'complete')
+    hpo_rate = hpo_remaining = hpo_eta = None
+    if len(completed_times) >= 2 and completed_times[-1] > completed_times[0]:
+        hpo_rate = (len(completed_times) - 1) / ((completed_times[-1] - completed_times[0]) / 60.0)
+        remaining = max(0, 492 - len(completed_times))
+        hpo_remaining = remaining / (hpo_rate * 60.0) if hpo_rate else None
+        if hpo_remaining is not None:
+            hpo_eta = datetime.fromtimestamp(time.time() + hpo_remaining * 3600, timezone.utc).isoformat()
+    diagnostic_root = Path('/var/tmp/dora-adaptive-rank/runs/v3_deletion_diagnostics_declared_20261015_final')
+    diagnostic_count = len(list(diagnostic_root.glob('*_s*_summary.json')))
+    tuning_count = len(list(Path('/var/tmp/dora-adaptive-rank/runs/v3_tuning_20261015').glob('*/launcher_status.json')))
+    screening_count = len(list(Path('/var/tmp/dora-adaptive-rank/runs/v3_screening_20261015').glob('*/launcher_status.json')))
+    if hpo_counts.get('complete', 0) < 492:
+        live_phase = 'B_hpo'
+    elif diagnostic_count < 4:
+        live_phase = 'B_deletion_diagnostics'
+    elif tuning_count < 164:
+        live_phase = 'B_tuning'
+    elif screening_count < 123:
+        live_phase = 'B_screening'
+    else:
+        live_phase = 'B_complete'
     estimate = {
         'schema': 'rankstudy-v3-roadmap', 'updated_at': now, 'first_eta_snapshot_at': anchor,
         'scope': 'All required stages retained; no reduced-scope completion claim.',
         'actual_hardware': '4 RTX PRO 6000 Blackwell Max-Q GPUs',
         'full_horizon_timing_evidence': timing,
         'pipeline_engineering_checks': pipelines,
+        'live_phase': live_phase,
+        'hpo_counts': hpo_counts,
+        'hpo_rate_complete_per_minute': hpo_rate,
+        'hpo_remaining_hours_at_observed_rate': hpo_remaining,
+        'hpo_eta_utc_at_observed_rate': hpo_eta,
+        'declared_diagnostics_complete': diagnostic_count,
+        'tuning_launcher_records': tuning_count,
+        'screening_launcher_records': screening_count,
         'stage_B_mandatory_training_jobs': len(stage_b), 'stage_B_total_updates': updates,
         'stage_B_training_only_extrapolation_gpu_hours': [min(gpu_hours), max(gpu_hours)],
         'stage_B_training_only_ideal_four_gpu_hours': [min(ideal_hours), max(ideal_hours)],
@@ -61,9 +107,11 @@ def main():
     lines = [
         '# Roadmap and provisional ETA', '', f"Updated {estimate['updated_at']}.", '',
         f"Planning ranges remain anchored to the initial ETA snapshot, {anchor}; refreshing this report does not restart the clock.", '',
-        'The study remains in correctness validation. No corrected primary HPO, screening, '
-        'confirmation or official benchmark comparison is complete. The 166 quarantined v2 '
-        'trials remain excluded. All 41 candidates and the complete requested scope remain registered.', '',
+        f"The live phase is **{live_phase}**. The corrected HPO queue currently has "
+        f"**{hpo_counts.get('complete', 0)}/492 complete**, {hpo_counts.get('running', 0)} running "
+        f"and {hpo_counts.get('failed', 0)} failed. No primary screening, confirmation or official "
+        'benchmark comparison is complete. The 166 quarantined v2 trials remain excluded. All 41 '
+        'candidates and the complete requested scope remain registered.', '',
         '| Completed full-horizon engineering run | Updates | Input tokens | Charged training minutes |',
         '|---|---:|---:|---:|',
     ]
@@ -77,8 +125,6 @@ def main():
     lines += ['',
         'Stage A has now executed all 41 GPU smoke cells and 984 retained synthetic budgeted runs. '
         'Pipeline resume, common export allocation and same-checkpoint DDP/rebuild checks have receipts. '
-        'Remaining work includes parser/generation validation, shadow deletion/curvature/gauge diagnostics '
-        'and restoration, complete primary instrumentation and the balanced v3 tuning queue. '
         'Strict independent DDP trajectory and four BF16 refactor-parity failures remain disclosed; '
         'five FP32 model export oracles pass. See the validation report for the scope of each check.', '',
         f"Stage B contains **{len(stage_b)} mandatory training jobs**: 492 short searches, "
@@ -86,7 +132,11 @@ def main():
         f"At the two measured native rates, training alone extrapolates to **{min(gpu_hours):.1f}–{max(gpu_hours):.1f} GPU-hours**, "
         f"or **{min(ideal_hours):.1f}–{max(ideal_hours):.1f} hours** with ideal four-GPU parallelism. "
         'This arithmetic excludes evaluation, setup, pipeline overhead differences, rescue trials and remaining engineering. '
-        'The timing runs used two concurrent GPUs; four-job queue throughput still needs calibration.', '',
+        'The timing runs used two concurrent GPUs; the live HPO rate is an observed four-job queue measurement.', '',
+        (f"At the current HPO rate ({hpo_rate:.2f} completed trials/minute), the remaining short search is "
+         f"estimated at {hpo_remaining:.2f} hours, near {hpo_eta}. This forecast is arithmetic from "
+         'launcher completion times and is not a guarantee.') if hpo_rate is not None else
+        'A live HPO rate is not yet available; the queue forecast will be populated after two completed trials.', '',
         estimate['uncertainty'], '',
         'The 3,064-entry plan includes diagnostics, conditional branches and separate evaluation jobs; '
         'it is not a count of unconditional training runs. See `artifacts/coverage_v3.json` for exact coverage '
