@@ -42,12 +42,12 @@ def main():
     out=Path('reports/smoke_v3.csv')
     if rows:
         with out.open('w') as stream:
-            writer=csv.DictWriter(stream,fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+            writer=csv.DictWriter(stream,fieldnames=list(rows[0]),lineterminator='\n'); writer.writeheader(); writer.writerows(rows)
     Path('reports/smoke_v3_summary.json').write_text(json.dumps({'type':'engineering_smoke_not_tournament',
         'partial_dev_only':True,'completed':len(rows),'failed':len(failures),'rows':rows,'failures':failures},indent=2)+'\n')
     if failures:
         with Path('reports/failures_v3.csv').open('w') as stream:
-            writer=csv.DictWriter(stream,fieldnames=list(failures[0])); writer.writeheader(); writer.writerows(failures)
+            writer=csv.DictWriter(stream,fieldnames=list(failures[0]),lineterminator='\n'); writer.writeheader(); writer.writerows(failures)
     print(json.dumps({'completed_smoke_executions':len(rows),'failed_smoke_executions':len(failures),'primary_selection_eligible':0}))
 
 
