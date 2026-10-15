@@ -5,7 +5,7 @@ from torch import nn
 from rankstudy.v3.adapters import AdapterLinear,adapted,inject
 from rankstudy.v3.compression import actual_factors,thin_svd,balanced_factors,prefix_ranks,compress_modules,checkpoint_modules,write_export
 from rankstudy.v3.checkpoint import save_checkpoint,load_adapter
-from rankstudy.v3.pipeline import token_boundary,stage_seed,shuffle_compatible
+from rankstudy.v3.pipeline import token_boundary,stage_seed,shuffle_compatible,export_policy
 
 
 def test_actual_masked_updates_svd_all_representations_and_zero_rank():
@@ -115,3 +115,28 @@ def test_fresh_student_only_uses_pattern_and_compatible_shuffle():
     shuffled=shuffle_compatible(pattern,shapes,4)
     assert sorted([shuffled['a'],shuffled['b']])==[1,3]
     assert sorted([shuffled['c'],shuffled['d']])==[2,4]
+
+
+def test_common_export_global_energy_fills_same_budget_for_nonuniform_sources(tmp_path):
+    """A narrow module must not silently shrink the whole deployment budget."""
+    for init in ['L','I','T0','T1','ADALORA']:
+        model=inject(Targets(),4,init,1.,42,pattern={'q_proj':1,'o_proj':4})
+        with torch.no_grad():
+            for p in model.parameters():
+                if p.requires_grad: p.add_(torch.randn_like(p)*.1)
+        factors,ranks,report=compress_modules(adapted(model),2,policy='global')
+        assert sum(ranks.values())==4
+        assert report['allocation']['spent']==52
+        assert report['allocation']['underspend']==0
+        assert report['allocation']['algorithm']=='equal_cost_exact_global_energy'
+        path=tmp_path/init
+        write_export(path,factors,1.,report,{'test_only':True})
+        import json
+        desc=json.loads((path/'manifest.json').read_text())
+        assert desc['ordinary_factor_scalars']==52
+        assert desc['ordinary_factor_bytes']==208
+    for method in ['L_FIXED','I_GATE','ADALORA_REF','T0_GATE','T1_GATE',
+                   'L_PILOT_I_STUDENT','L_UNIFORM_SVD','L_GLOBAL_SVD']:
+        assert export_policy(method,True)=='global'
+    assert export_policy('L_UNIFORM_SVD')=='uniform'
+    assert export_policy('I_GLOBAL_SVD')=='global'

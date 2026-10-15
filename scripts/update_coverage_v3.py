@@ -6,6 +6,7 @@ Gate receipts must explicitly attest that gate's scope before admission here.
 """
 import argparse
 import collections
+import csv
 import hashlib
 import json
 from pathlib import Path
@@ -14,10 +15,13 @@ from pathlib import Path
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--plan',type=Path,default=Path('artifacts/run_plan_v3.json'))
     ap.add_argument('--root',type=Path,default=Path('/var/tmp/dora-adaptive-rank/runs/v3'))
+    ap.add_argument('--synthetic-root',type=Path,default=Path('/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015'))
     ap.add_argument('--out',type=Path,default=Path('artifacts/coverage_v3.json')); args=ap.parse_args()
     plan=json.loads(args.plan.read_text()); rows=[]
     for run in plan['runs']:
         path=args.root/run['run_id']/'metadata.json'
+        if run['stage']=='A_synthetic':
+            path=args.synthetic_root/run['run_id']/'metadata.json'
         if run['stage']=='A_full_horizon_diagnostic':
             path=Path('/var/tmp/dora-adaptive-rank/runs/v3_full_horizon_checks_20261015')/run['method_id']/'metadata.json'
         status,reason='pending',''
@@ -43,6 +47,9 @@ def main():
                 'v3_completed_smoke_executions':smoke.get('completed',0),'v3_failed_smoke_attempts':smoke.get('failed',0)},
             'note':'No broad gate is inferred from a narrow test. Conditional jobs stay pending until resolved by frozen rules.'}
     args.out.write_text(json.dumps(result,indent=2)+'\n'); print(json.dumps(result['counts']))
+    with Path('reports/coverage_v3.csv').open('w') as stream:
+        writer=csv.DictWriter(stream,fieldnames=list(rows[0]),lineterminator='\n')
+        writer.writeheader();writer.writerows(rows)
 
 
 if __name__=='__main__': main()

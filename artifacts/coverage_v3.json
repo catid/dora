@@ -1,12 +1,12 @@
 {
   "schema": "rankstudy-v3-coverage",
-  "plan_sha256": "345c94088243540f3dd5760a2399f6b803a01c8052d8efa342b7267f37b7d8be",
+  "plan_sha256": "dd6dd84bb50b03d3c3a5a7bbac7163c28af2560c8772cc131dd9a16ccde09f57",
   "counts": {
     "total": 3064,
-    "passed": 2,
+    "passed": 331,
     "failed": 0,
     "blocked": 0,
-    "pending": 3062,
+    "pending": 2733,
     "not_in_scope": 0
   },
   "runs": [
@@ -75,10 +75,10 @@
       "stage": "A_correctness",
       "method_id": null,
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3/A_gate_gpu_all_representations/metadata.json"
     },
     {
       "run_id": "A_gate_ddp_two_rank",
@@ -145,3280 +145,3280 @@
       "stage": "A_synthetic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_FIXED_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_FIXED_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_FIXED_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_FIXED_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_FIXED_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_FIXED_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_FIXED_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_FIXED_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_FIXED_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_FIXED_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_FIXED_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_FIXED_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_FIXED_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_FIXED_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_FIXED_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_FIXED_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_FIXED_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_FIXED_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_FIXED_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_FIXED_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_FIXED_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_FIXED_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_FIXED_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_FIXED_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_FIXED_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_FIXED_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_FIXED_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_FIXED_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_FIXED_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_FIXED_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_FIXED_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_WIDE_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_WIDE_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_WIDE_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_WIDE_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_WIDE_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_WIDE_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_WIDE_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_WIDE_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_WIDE_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_WIDE_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_WIDE_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_WIDE_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_WIDE_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_WIDE_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_WIDE_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_WIDE_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_WIDE_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_WIDE_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_WIDE_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_WIDE_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_WIDE_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_WIDE_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_WIDE_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_WIDE_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_WIDE_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_WIDE_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_WIDE_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_WIDE_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_WIDE_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_WIDE_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_WIDE_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_WIDE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_WIDE_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_ADALORA_REF_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "ADALORA_REF",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_ADALORA_REF_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_ADALORA_REF_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "ADALORA_REF",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_ADALORA_REF_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_ADALORA_REF_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "ADALORA_REF",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_ADALORA_REF_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_ADALORA_REF_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "ADALORA_REF",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_ADALORA_REF_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_ADALORA_REF_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "ADALORA_REF",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_ADALORA_REF_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_ADALORA_REF_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "ADALORA_REF",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_ADALORA_REF_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_ADALORA_REF_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "ADALORA_REF",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_ADALORA_REF_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_ADALORA_REF_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "ADALORA_REF",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_ADALORA_REF_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_DISP_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_DISP_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_DISP_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_DISP_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_DISP_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_DISP_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_DISP_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_DISP_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_DISP_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_DISP_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_DISP_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_DISP_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_DISP_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_DISP_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_DISP_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_DISP_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_ACT_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_ACT_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_ACT_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_ACT_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_ACT_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_ACT_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_ACT_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_ACT_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_ACT_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_ACT_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_ACT_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_ACT_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_ACT_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_ACT_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_ACT_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_ACT_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_GATE_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_GATE_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_GATE_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_GATE_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_GATE_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_GATE_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_GATE_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_GATE_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_GATE_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_GATE_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_GATE_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_GATE_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_GATE_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_GATE_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_GATE_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_GATE_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_RANDOM_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_RANDOM_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_RANDOM_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_RANDOM_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_RANDOM_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_RANDOM_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_RANDOM_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_RANDOM_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_RANDOM_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_RANDOM_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_RANDOM_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_RANDOM_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_RANDOM_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_RANDOM_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_RANDOM_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_RANDOM_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_RAW",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_DISP_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_DISP_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_DISP_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_DISP_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_DISP_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_DISP_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_DISP_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_DISP_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_DISP_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_DISP_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_DISP_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_DISP_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_DISP_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_DISP_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_DISP_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_DISP",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_DISP_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_ACT_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_ACT_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_ACT_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_ACT_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_ACT_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_ACT_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_ACT_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_ACT_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_ACT_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_ACT_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_ACT_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_ACT_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_ACT_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_ACT_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_ACT_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_ACT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_ACT_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_GATE_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_GATE_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_GATE_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_GATE_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_GATE_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_GATE_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_GATE_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_GATE_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_GATE_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_GATE_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_GATE_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_GATE_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_GATE_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_GATE_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_GATE_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_GATE_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_RANDOM_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_RANDOM_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_RANDOM_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_RANDOM_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_RANDOM_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_RANDOM_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_RANDOM_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_RANDOM_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_RANDOM_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_RANDOM_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_RANDOM_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_RANDOM_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_RANDOM_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_RANDOM_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_RANDOM_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_RANDOM",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_RANDOM_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_ORTHO_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_ORTHO_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_ORTHO_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_ORTHO_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_ORTHO_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_ORTHO_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_ORTHO_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_ORTHO_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_ORTHO_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_ORTHO_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_ORTHO_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_ORTHO_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_ORTHO_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_ORTHO_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_FIXED_ORTHO_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_FIXED_ORTHO_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_ORTHO_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_ORTHO_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_ORTHO_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_ORTHO_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_ORTHO_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_ORTHO_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_ORTHO_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_ORTHO_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_ORTHO_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_ORTHO_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_ORTHO_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_ORTHO_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_ORTHO_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_ORTHO_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T0_GATE_ORTHO_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T0_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T0_GATE_ORTHO_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_GATE",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_ORTHO_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_ORTHO_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_ORTHO_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_ORTHO_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_ORTHO_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_ORTHO_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_ORTHO_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_ORTHO_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_ORTHO_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_ORTHO_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_ORTHO_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_ORTHO_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_ORTHO_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_ORTHO_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_FIXED_ORTHO_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_FIXED_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_FIXED_ORTHO_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_ORTHO_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_ORTHO_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_ORTHO_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_ORTHO_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_ORTHO_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_ORTHO_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_ORTHO_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_ORTHO_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_ORTHO_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_ORTHO_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_ORTHO_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_ORTHO_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_ORTHO_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_ORTHO_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_T1_GATE_ORTHO_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "T1_GATE_ORTHO",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_T1_GATE_ORTHO_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_L_STUDENT_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_L_STUDENT_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_L_STUDENT_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_L_STUDENT_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_L_STUDENT_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_L_STUDENT_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_L_STUDENT_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_L_STUDENT_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_L_STUDENT_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_L_STUDENT_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_L_STUDENT_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_L_STUDENT_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_L_STUDENT_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_L_STUDENT_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_L_STUDENT_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_L_STUDENT_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_I_STUDENT_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_I_STUDENT_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_I_STUDENT_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_I_STUDENT_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_I_STUDENT_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_I_STUDENT_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_I_STUDENT_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_I_STUDENT_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_I_STUDENT_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_I_STUDENT_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_I_STUDENT_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_I_STUDENT_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_I_STUDENT_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_I_STUDENT_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_PILOT_I_STUDENT_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_PILOT_I_STUDENT_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_L_STUDENT_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_L_STUDENT_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_L_STUDENT_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_L_STUDENT_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_L_STUDENT_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_L_STUDENT_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_L_STUDENT_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_L_STUDENT_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_L_STUDENT_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_L_STUDENT_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_L_STUDENT_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_L_STUDENT_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_L_STUDENT_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_L_STUDENT_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_L_STUDENT_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_L_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_L_STUDENT_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_I_STUDENT_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_I_STUDENT_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_I_STUDENT_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_I_STUDENT_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_I_STUDENT_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_I_STUDENT_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_I_STUDENT_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_I_STUDENT_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_I_STUDENT_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_I_STUDENT_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_I_STUDENT_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_I_STUDENT_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_I_STUDENT_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_I_STUDENT_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_PILOT_I_STUDENT_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_PILOT_I_STUDENT",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_PILOT_I_STUDENT_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_RESTART_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_RESTART_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_RESTART_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_RESTART_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_RESTART_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_RESTART_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_RESTART_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_RESTART_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_RESTART_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_RESTART_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_RESTART_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_RESTART_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_RESTART_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_RESTART_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_RESTART_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_RESTART_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_SHUFFLED_SELF_RESTART_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_SHUFFLED_SELF_RESTART_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_SHUFFLED_SELF_RESTART_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_SHUFFLED_SELF_RESTART_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_SHUFFLED_SELF_RESTART_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_SHUFFLED_SELF_RESTART_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_SHUFFLED_SELF_RESTART_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_SHUFFLED_SELF_RESTART_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_SHUFFLED_SELF_RESTART_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_SHUFFLED_SELF_RESTART_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_SHUFFLED_SELF_RESTART_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_SHUFFLED_SELF_RESTART_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_SHUFFLED_SELF_RESTART_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_SHUFFLED_SELF_RESTART_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_SHUFFLED_SELF_RESTART_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_SHUFFLED_SELF_RESTART_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_RESTART_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_RESTART_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_RESTART_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_RESTART_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_RESTART_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_RESTART_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_RESTART_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_RESTART_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_RESTART_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_RESTART_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_RESTART_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_RESTART_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_RESTART_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_RESTART_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_RESTART_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_RESTART_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_SHUFFLED_SELF_RESTART_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_SHUFFLED_SELF_RESTART_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_SHUFFLED_SELF_RESTART_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_SHUFFLED_SELF_RESTART_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_SHUFFLED_SELF_RESTART_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_SHUFFLED_SELF_RESTART_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_SHUFFLED_SELF_RESTART_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_SHUFFLED_SELF_RESTART_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_SHUFFLED_SELF_RESTART_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_SHUFFLED_SELF_RESTART_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_SHUFFLED_SELF_RESTART_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_SHUFFLED_SELF_RESTART_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_SHUFFLED_SELF_RESTART_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_SHUFFLED_SELF_RESTART_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_SHUFFLED_SELF_RESTART_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_SHUFFLED_SELF_RESTART",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_SHUFFLED_SELF_RESTART_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_SVD_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_SVD_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_SVD_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_SVD_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_SVD_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_SVD_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_SVD_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_SVD_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_SVD_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_SVD_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_SVD_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_SVD_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_SVD_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_SVD_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_UNIFORM_SVD_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_UNIFORM_SVD_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_SVD_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_SVD_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_SVD_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_SVD_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_SVD_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_SVD_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_SVD_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_SVD_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_SVD_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_SVD_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_SVD_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_SVD_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_SVD_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_SVD_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GLOBAL_SVD_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GLOBAL_SVD_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_SVD_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_SVD_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_SVD_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_SVD_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_SVD_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_SVD_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_SVD_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_SVD_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_SVD_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_SVD_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_SVD_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_SVD_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_SVD_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_SVD_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_UNIFORM_SVD_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_UNIFORM_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_UNIFORM_SVD_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_SVD_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_SVD_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_SVD_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_SVD_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_SVD_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_SVD_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_SVD_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_SVD_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_SVD_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_SVD_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_SVD_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_SVD_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_SVD_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_SVD_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GLOBAL_SVD_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GLOBAL_SVD",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GLOBAL_SVD_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_UNCERTAINTY_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_UNCERTAINTY_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_UNCERTAINTY_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_UNCERTAINTY_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_UNCERTAINTY_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_UNCERTAINTY_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_UNCERTAINTY_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_UNCERTAINTY_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_UNCERTAINTY_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_UNCERTAINTY_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_UNCERTAINTY_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_UNCERTAINTY_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_UNCERTAINTY_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_UNCERTAINTY_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_RAW_UNCERTAINTY_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_RAW_UNCERTAINTY_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_UNCERTAINTY_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_UNCERTAINTY_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_UNCERTAINTY_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_UNCERTAINTY_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_UNCERTAINTY_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_UNCERTAINTY_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_UNCERTAINTY_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_UNCERTAINTY_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_UNCERTAINTY_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_UNCERTAINTY_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_UNCERTAINTY_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_UNCERTAINTY_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_UNCERTAINTY_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "L_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_UNCERTAINTY_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_L_GATE_UNCERTAINTY_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "L_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_L_GATE_UNCERTAINTY_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_UNCERTAINTY_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_UNCERTAINTY_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_UNCERTAINTY_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_UNCERTAINTY_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_UNCERTAINTY_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_UNCERTAINTY_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_UNCERTAINTY_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_UNCERTAINTY_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_UNCERTAINTY_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_UNCERTAINTY_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_UNCERTAINTY_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_UNCERTAINTY_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_UNCERTAINTY_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_UNCERTAINTY_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_RAW_UNCERTAINTY_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_RAW_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_RAW_UNCERTAINTY_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_UNCERTAINTY_901_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_UNCERTAINTY_901_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_UNCERTAINTY_901_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_UNCERTAINTY_901_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_UNCERTAINTY_901_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_UNCERTAINTY_901_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_UNCERTAINTY_901_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_UNCERTAINTY_901_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_UNCERTAINTY_902_isotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_UNCERTAINTY_902_isotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_UNCERTAINTY_902_isotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_UNCERTAINTY_902_isotropic_True/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_UNCERTAINTY_902_anisotropic_False",
       "stage": "A_synthetic",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_UNCERTAINTY_902_anisotropic_False/metadata.json"
     },
     {
       "run_id": "A_syn_I_GATE_UNCERTAINTY_902_anisotropic_True",
       "stage": "A_synthetic",
       "method_id": "I_GATE_UNCERTAINTY",
       "selection_role": null,
-      "status": "pending",
+      "status": "passed",
       "reason": "",
       "conditional": null,
-      "evidence": null
+      "evidence": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015/A_syn_I_GATE_UNCERTAINTY_902_anisotropic_True/metadata.json"
     },
     {
       "run_id": "A_full_horizon_L_FIXED",
@@ -30653,7 +30653,7 @@
   ],
   "separate_historical_accounting": {
     "v2_quarantined_completed_trials": 166,
-    "v3_completed_smoke_executions": 23,
+    "v3_completed_smoke_executions": 73,
     "v3_failed_smoke_attempts": 4
   },
   "note": "No broad gate is inferred from a narrow test. Conditional jobs stay pending until resolved by frozen rules."

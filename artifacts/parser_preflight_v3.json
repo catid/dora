@@ -1,0 +1,11 @@
+{
+  "accessed_at": "2026-10-15T06:16:29.638859+00:00",
+  "candidate": "Math-Verify",
+  "candidate_pypi_version": "0.9.0",
+  "inspected_source_revision": "ba3d3aaff23b3f4cac7a14672b4f6e293d97c98b",
+  "source_url": "https://raw.githubusercontent.com/huggingface/Math-Verify/ba3d3aaff23b3f4cac7a14672b4f6e293d97c98b/src/math_verify/parser.py",
+  "source_sha256": "ea527a5a2403d97109a616bc92b7cc153320d6cecf4f823c070c727f5b77b5d0",
+  "finding": "The expression extraction path imports SymPy parse_expr and calls parse_expr(expr, evaluate=False). evaluate=False does not establish that Python evaluation is avoided. Do not apply this path to model strings under the study protocol.",
+  "status": "not_installed_or_selected",
+  "remaining": "Audit the LaTeX-only backend or construct expressions using a safe grammar before invoking symbolic equivalence; retain subprocess timeouts and public TRAIN parser tests."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "first_pid": 3364017,
+  "duplicate_returncode": 1,
+  "status_after_duplicate": "running",
+  "final_status": "complete",
+  "command": [
+    "/home/catid/dora/.venv/bin/python",
+    "scripts/run_one_v3.py",
+    "--method",
+    "L_FIXED",
+    "--out",
+    "/var/tmp/dora-adaptive-rank/runs/v3_lock_smoke_20261015/L_FIXED",
+    "--updates",
+    "12",
+    "--smoke",
+    "--dev-limit",
+    "16"
+  ],
+  "root": "/var/tmp/dora-adaptive-rank/runs/v3_lock_smoke_20261015",
+  "scope": "live native run lock rejects a duplicate without modifying its running record"
+}

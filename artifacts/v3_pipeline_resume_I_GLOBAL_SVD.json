@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": {
+    "adapter_tensors_bitwise_equal": true,
+    "optimizer_state_bitwise_equal": true,
+    "score_ema_bitwise_equal": true,
+    "rng_state_bitwise_equal": true,
+    "pruning_events_equal": true,
+    "exact_exposure_equal": true
+  },
+  "uninterrupted": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_resume_20261015/I_GLOBAL_SVD_baseline/recovery/attempts/attempt_0000/checkpoint_0007",
+  "resumed": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_resume_20261015/I_GLOBAL_SVD_resumed/recovery/attempts/attempt_0001/checkpoint_0007",
+  "backend": "EFFICIENT_ATTENTION",
+  "endpoint_step": 7,
+  "compaction_exercised": false
+}

@@ -3,6 +3,18 @@
   "v2_primary_selection_allowed": false,
   "v2_new_training_allowed": false,
   "v3_large_sweep_allowed": false,
-  "reason": "Protocol v2 audit; complete v3 correctness, GPU, DDP, full-horizon and pipeline gates before HPO",
-  "audit": "reports/protocol_v2_audit.md"
+  "reason": "Complete generation/parser, shadow diagnostic/restoration, primary instrumentation and balanced HPO queue checks before opening primary execution.",
+  "audit": "reports/protocol_v2_audit.md",
+  "completed_evidence": {
+    "all_41_gpu_smokes": "artifacts/v3_registry_smoke_audit.json",
+    "common_export_budget": "artifacts/v3_common_export_budget_audit.json",
+    "pipeline_checkpoint_resume": "artifacts/v3_pipeline_resume_audit.json",
+    "same_checkpoint_fullmodel_ddp": "artifacts/ddp_v3_fullmodel_common_checkpoint.json",
+    "synthetic_core": "artifacts/synthetic_v3_audit.json"
+  },
+  "numerical_limits": {
+    "independent_ddp_trajectory": "not established; both BF16 and FP32-arithmetic strict trajectory checks failed",
+    "bf16_exact_refactor": "four strict logit parity failures; five FP32-arithmetic export oracles pass; retain measured distortion"
+  },
+  "primary_topology_policy": "independent single-GPU trials; no cross-topology equivalence claim"
 }

@@ -23,6 +23,9 @@ have trained, but smoke endpoints are not a leaderboard or full-horizon screenin
 The [progress report](reports/progress.md) records exactly which validation gates
 have passed. The [roadmap and provisional ETA](reports/roadmap_v3.md) uses measured
 full-horizon timing. Large sweeps remain gated while remaining checks are completed.
+All 41 cells now have completed GPU smoke executions. The [validation report](reports/validation_v3.md)
+preserves successful checks and numerical failures; the [synthetic controls](reports/synthetic_v3.md)
+contain 984 budgeted runs with retained stage checkpoints. These are not final LLM rankings.
 
 The [full v3 run plan](artifacts/run_plan_v3.json) replaces the incomplete 959-run
 plan. It lists training, diagnostic, evaluation, and conditional jobs separately;

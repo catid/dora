@@ -61,7 +61,7 @@ def build_plan(methods):
             for cov in ['isotropic','anisotropic']:
                 for noise in [False,True]:
                     add(f'A_syn_{method}_{seed}_{cov}_{noise}','A_synthetic',method,seed=seed,
-                        budgets=[8,16,32],covariance=cov,noise=noise,teacher_ranks=[0,0,1,1,2,4,8,16],
+                        budgets=[16,32,64],covariance=cov,noise=noise,teacher_ranks=[0,0,1,1,2,4,8,16],
                         oracle_control=True,steps=100,device='cpu')
     for method in ['L_FIXED','I_GATE']:
         add(f'A_full_horizon_{method}','A_full_horizon_diagnostic',method,seed=1001,updates=512,

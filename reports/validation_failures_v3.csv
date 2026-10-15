@@ -1,0 +1,7 @@
+run_id,kind,evidence,failed_checks,primary_training_failure
+L_FIXED,export_bf16,/var/tmp/dora-adaptive-rank/runs/v3_export_reload_20261015/L_FIXED/audit.json,exact_relative_rms,False
+L_PILOT_I_STUDENT,export_bf16,/var/tmp/dora-adaptive-rank/runs/v3_export_reload_20261015/L_PILOT_I_STUDENT/audit.json,"exact_absolute_logits,exact_relative_rms",False
+T0_GATE,export_bf16,/var/tmp/dora-adaptive-rank/runs/v3_export_reload_20261015/T0_GATE/audit.json,"exact_absolute_logits,exact_relative_rms",False
+T1_GATE_ORTHO,export_bf16,/var/tmp/dora-adaptive-rank/runs/v3_export_reload_20261015/T1_GATE_ORTHO/audit.json,"exact_absolute_logits,exact_relative_rms",False
+ddp_v3_fullmodel_fp32_trajectory_failure,independent_ddp_trajectory,artifacts/ddp_v3_fullmodel_fp32_trajectory_failure.json,FP32-arithmetic diagnostic with independently evolving DDP/single-process I_GATE trajectories,False
+ddp_v3_fullmodel_free_trajectory_failure,independent_ddp_trajectory,artifacts/ddp_v3_fullmodel_free_trajectory_failure.json,"real BF16 Qwen I_GATE, free-running DDP and single-process trajectories",False

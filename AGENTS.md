@@ -42,19 +42,32 @@ budgeting study (2026-10-14). This work is isolated in `src/rankstudy`, `tests`,
   Actual-model efficient-SDPA profile and bitwise GPU resume receipts exist.
 - Always preserve failed attempts in distinct run directories. Do not overwrite
   terminal records. Current raw reports: `reports/smoke_v3_summary.json` and
-  `reports/failures_v3.csv`. Full-model DDP, pipeline runners, parser/evaluation,
-  full diagnostic matrix and all primary sweeps/confirmations remain unfinished.
+  `reports/failures_v3.csv`. Primary sweeps/confirmations remain unfinished;
+  current validation scope is recorded in `reports/validation_v3.md`.
 
 ## Pipeline checkpoint and roadmap
 
-- `scripts/run_pipeline_v3.py` has eight completed real-model engineering checks,
-  and the full automated suite passes 71 tests. Both 512-update native timing
-  diagnostics have finished; their old PIDs are no longer live.
-- Do not treat pipeline execution success as primary readiness. Three common
-  uniform-export smoke cases underspend the deployment budget because low-rank
-  source modules have too few singular directions. Resolve and predeclare that
-  allocation policy before equal-export-size comparisons. Preserve these records.
-- Mid-stage pipeline resume, exact full-model export parity/distortion, full-model
-  DDP/rebuild, parser/evaluation, synthetic controls and diagnostic restoration
-  remain open. `artifacts/v3_pipeline_smoke_audit.json` distinguishes passed narrow
-  checks from these open issues. `reports/roadmap_v3.md` contains provisional ETAs.
+- All 41 cells now have complete 32-update GPU smokes; the full suite passes 79
+  tests. Both 512-update native timing diagnostics have finished. Verify handles
+  before assuming any previously launched worker remains live.
+- Common deployment export is frozen to global singular-energy allocation for
+  EVERY family, including train/compress cells at their single 75% event. Native
+  uniform/global cells stay distinct. Four fresh exports meet the exact factor
+  payload budget; the three older uniform underspends remain preserved.
+- Restart-student and compression-recovery checkpoint resumes are bitwise equal
+  to uninterrupted controls. Stage attempts are immutable, process-checked and
+  separately costed. Rejected invocations cannot overwrite another run's metadata.
+- Full-model DDP gradients/scores/masks pass at identical checkpoints through
+  wrapper/optimizer rebuilding. Independent BF16 and FP32-arithmetic trajectory
+  checks FAIL strict tolerances and remain unproven. Keep primary trials on one
+  GPU; do not claim cross-topology trajectory equivalence.
+- Five exact-export FP32 model oracles pass. Four conservative BF16 full-model
+  refactor checks fail despite small NLL shifts; preserve their measured distortion
+  and do not widen thresholds after observing it or label it bitwise equivalence.
+- Retained synthetic core: `/var/tmp/dora-adaptive-rank/runs/v3_synthetic_retained_20261015`,
+  328 jobs / 984 budgeted runs / 1,272 stage checkpoints. Earlier unretained runs
+  under `runs/v3/A_syn_*` are separately charged engineering repeats, not extra
+  independent seeds. Coverage uses the retained root explicitly.
+- Parser/generation, shadow deletion/curvature/gauge/restoration, complete primary
+  instrumentation and the balanced HPO queue remain open. Both v3 runners enforce
+  `protocol_execution_gate.json` for non-smoke calls. Do not bypass it.

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "retained_jobs": 328,
+  "fits": 984,
+  "verified_stage_checkpoints": 1272,
+  "summed_job_wall_seconds": 153.5422788783908,
+  "failures": [],
+  "paired_data_hashes_equal": true,
+  "historical_engineering_cost": [
+    {
+      "root": "/var/tmp/dora-adaptive-rank/runs/v3",
+      "completed_jobs": 328,
+      "summed_job_wall_seconds": 160.03055857587606,
+      "role": "earlier engineering/retention-incomplete executions; charged separately, not extra independent seeds"
+    },
+    {
+      "root": "/var/tmp/dora-adaptive-rank/runs/v3_synthetic_engineering_20261015",
+      "completed_jobs": 24,
+      "summed_job_wall_seconds": 16.317596576642245,
+      "role": "earlier engineering/retention-incomplete executions; charged separately, not extra independent seeds"
+    }
+  ],
+  "missing_stage_A_scope": [
+    "signed deletion/curvature/gauge diagnostics",
+    "joint deletion damage and recovery diagnostics"
+  ],
+  "selection_eligible": false
+}

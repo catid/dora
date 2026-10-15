@@ -3,6 +3,11 @@ import hashlib
 import random
 
 
+def export_policy(method, common_deployment=False):
+    """The common pipeline applies the same operator to all source families."""
+    return 'global' if common_deployment or 'GLOBAL_SVD' in method else 'uniform'
+
+
 def stage_seed(seed,stage):
     return int.from_bytes(hashlib.sha256(f'{seed}/{stage}'.encode()).digest()[:8],'little')%(2**63)
 

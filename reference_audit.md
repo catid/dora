@@ -25,9 +25,30 @@ budget-normalized variant must be separately registered.
 The strict deterministic resume check exposed cuDNN backward nondeterminism.
 The recorded native SDPA exception uses EFFICIENT_ATTENTION for all corrected
 primary candidates after padded/causal FP64-oracle checks; actual-model profiling
-and a 32-update exact GPU resume have now passed. Full-model DDP and the remaining
-pipeline/diagnostic gates are still open. No attention mask is removed for speed.
+and a 32-update exact GPU resume have now passed. No attention mask is removed for speed.
 No full paper reproduction is claimed.
+
+## Current numerical audit additions
+
+Native custom allocation, restart and compression pipelines have now executed in
+all 41 registered cells. The common deployment branch uses a declared global
+singular-energy operator for every source family, while native uniform/global
+compression controls remain distinct. All exports remain relative to unchanged W0.
+This controlled deployment policy is not an upstream AdaLoRA or IniLoRA algorithm.
+
+The exact thin-QR/SVD refactor passes the module reconstruction checks and five
+separate-process FP32 model oracles using promoted copies of the same BF16 weight
+values. Four conservative BF16 full-model refactor tests fail their strict logit
+tolerance, although probe NLL changes are small. Mathematical update equivalence
+does not establish bitwise BF16 forward equality after reassociation/rounding.
+Both the failed checks and measured native-to-export distortion remain reported
+in `reports/export_validation_v3.csv`; thresholds were not widened after outcomes.
+
+Full-model DDP/NCCL matches the single-process oracle at identical checkpoints
+through no_sync accumulation, unequal token counts, score reduction, masking and
+optimizer/DDP rebuild. Independent BF16 and FP32-arithmetic trajectories fail
+strict tolerances. The former is an implementation check, not evidence of identical
+free-running trajectories. Primary comparisons retain single-GPU topology.
 
 ## Historical v2 audit text (retained for provenance, not current validation)
 

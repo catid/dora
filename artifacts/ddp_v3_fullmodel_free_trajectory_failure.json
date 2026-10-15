@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "scope": "real BF16 Qwen I_GATE, free-running DDP and single-process trajectories",
+  "failure_step": 2,
+  "gradient_relative_l2_error": 0.030961304903030396,
+  "required_tolerance": 5e-05,
+  "log": "/var/tmp/dora-adaptive-rank/v3_ddp_fullmodel_20261015.log",
+  "source_sha256": "13c70d961f3eaf3c252ccc83b4bc0c6ee3c04410c3d161b6f476218ad707cc5c",
+  "source_snapshot": "artifacts/source_snapshots/check_llm_ddp_v3_free_trajectory.py",
+  "interpretation": "Cause not yet isolated; no multi-GPU training comparison authorized by this diagnostic."
+}

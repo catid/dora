@@ -19,8 +19,37 @@ custom online slot pruning retains its registered one-slot floor. Equal-cost
 spectral allocation is exact, small heterogeneous cases use exact prefix DP, and
 larger cases are explicitly labeled as a prefix value-per-cost heuristic.
 
-The initial common-export engineering runner uses uniform retained ranks but can
-underspend when a source module has fewer available directions. The corresponding
-smoke runs remain excluded from primary selection and equal-size claims. The final
-common-export allocation policy must be resolved and frozen before the primary
-queue; eight successful pipeline executions do not establish this fairness gate.
+The first common-export engineering runner used uniform retained ranks and
+underspent when source modules had fewer available directions. These smoke records
+remain preserved and excluded from equal-size claims. Before primary execution,
+the common deployment branch is now frozen to **global retained singular-value
+energy** for every family, using the same prefix-feasible allocator and unchanged
+original backbone. This redistributes ordinary ranks across modules instead of
+silently exporting fewer factors. Equal-cost runs must fill the target budget;
+heterogeneous integer underspend must be reported separately. Update numerical
+rank remains distinct from allocated ordinary-factor rank and stored bytes.
+
+In this new common pipeline, native uniform/global train-compress cells each
+compress once at their natural 75% event, using the same common global operator.
+Identical source/recovery branches may be reused physically with full standalone
+accounting. Their native uniform/global comparison retains its distinct policies.
+The common operator was chosen for a specified reconstruction objective and budget
+adherence before primary outcomes; it is not a task-loss oracle or a selected winner.
+
+## Synthetic controls
+
+Before any corrected synthetic comparison, the feasible native budgets are fixed
+at 16, 32 and 64 two-factor slot equivalents across eight 16×16 modules (average
+rank 2, 4 and 8). The earlier plan's budget eight cannot accommodate even one
+trainable triplet per module, so it is replaced rather than silently relaxing the
+floor. Teachers use fixed orthonormal singular vectors, singular values linearly
+spaced from 1 to 0.1 at ranks `[0,0,1,1,2,4,8,16]`, and construction seed 20261014.
+Covariance is identity or a fixed rotated anisotropic transform with singular
+values 3 to 0.3. Each paired data seed supplies 128 training and 512 independent
+development draws per matrix. Training repeats that fixed draw for 100 updates;
+noise standard deviation is 0 or 0.03. Peak LR 0.01, scale 1, primary schedules and
+zero adapter weight decay are shared. Positive custom penalty is 0.001; reference
+penalty is its documented 0.1. These common-config synthetic results are diagnostic
+and do not select LLM configurations or establish tuned superiority. The oracle
+uses the known teacher and covariance to allocate retained singular energy; it
+is explicitly an oracle, not a learned competitor.

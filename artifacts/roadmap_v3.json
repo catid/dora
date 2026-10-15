@@ -1,6 +1,7 @@
 {
   "schema": "rankstudy-v3-roadmap",
-  "updated_at": "2026-10-15T05:39:35.166627+00:00",
+  "updated_at": "2026-10-15T06:13:05.737688+00:00",
+  "first_eta_snapshot_at": "2026-10-15T05:39:35.166627+00:00",
   "scope": "All required stages retained; no reduced-scope completion claim.",
   "actual_hardware": "4 RTX PRO 6000 Blackwell Max-Q GPUs",
   "full_horizon_timing_evidence": [

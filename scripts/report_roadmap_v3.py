@@ -10,6 +10,10 @@ from pathlib import Path
 
 
 def main():
+    prior_path=Path('artifacts/roadmap_v3.json')
+    prior=json.loads(prior_path.read_text()) if prior_path.exists() else {}
+    now=datetime.now(timezone.utc).isoformat()
+    anchor=prior.get('first_eta_snapshot_at',prior.get('updated_at',now))
     plan = json.loads(Path('artifacts/run_plan_v3.json').read_text())
     root = Path('/var/tmp/dora-adaptive-rank/runs/v3_full_horizon_checks_20261015')
     timing = []
@@ -33,7 +37,7 @@ def main():
                           'metadata': str(path), 'failure_reason': raw.get('failure_reason'),
                           'selection_eligible': False})
     estimate = {
-        'schema': 'rankstudy-v3-roadmap', 'updated_at': datetime.now(timezone.utc).isoformat(),
+        'schema': 'rankstudy-v3-roadmap', 'updated_at': now, 'first_eta_snapshot_at': anchor,
         'scope': 'All required stages retained; no reduced-scope completion claim.',
         'actual_hardware': '4 RTX PRO 6000 Blackwell Max-Q GPUs',
         'full_horizon_timing_evidence': timing,
@@ -56,6 +60,7 @@ def main():
     Path('artifacts/roadmap_v3.json').write_text(json.dumps(estimate, indent=2) + '\n')
     lines = [
         '# Roadmap and provisional ETA', '', f"Updated {estimate['updated_at']}.", '',
+        f"Planning ranges remain anchored to the initial ETA snapshot, {anchor}; refreshing this report does not restart the clock.", '',
         'The study remains in correctness validation. No corrected primary HPO, screening, '
         'confirmation or official benchmark comparison is complete. The 166 quarantined v2 '
         'trials remain excluded. All 41 candidates and the complete requested scope remain registered.', '',
@@ -66,13 +71,16 @@ def main():
         lines.append(f"| {row['method']} | {row['updates_finished']} | {row['input_tokens']:,} | {row['charged_gpu_seconds']/60:.2f} |")
     lines += ['', 'These runs used a common untuned configuration and only 16 development groups. '
               'They establish execution and timing, not a method ranking.', '',
-              '| Milestone | Provisional cumulative ETA from this snapshot |', '|---|---|']
+              '| Milestone | Provisional cumulative ETA from initial snapshot |', '|---|---|']
     for row in estimate['provisional_elapsed_time_from_this_snapshot']:
         lines.append(f"| {row['milestone']} | {row['range']} |")
     lines += ['',
-        'Stage A remaining work includes complete GPU pipeline coverage and interruption recovery, '
-        'separate-process export parity/distortion checks, full-model DDP and compaction rebuild, '
-        'parser/evaluation validation, synthetic controls and diagnostic state restoration.', '',
+        'Stage A has now executed all 41 GPU smoke cells and 984 retained synthetic budgeted runs. '
+        'Pipeline resume, common export allocation and same-checkpoint DDP/rebuild checks have receipts. '
+        'Remaining work includes parser/generation validation, shadow deletion/curvature/gauge diagnostics '
+        'and restoration, complete primary instrumentation and the balanced v3 tuning queue. '
+        'Strict independent DDP trajectory and four BF16 refactor-parity failures remain disclosed; '
+        'five FP32 model export oracles pass. See the validation report for the scope of each check.', '',
         f"Stage B contains **{len(stage_b)} mandatory training jobs**: 492 short searches, "
         '164 full-horizon tuning runs and 123 independent screening runs. Conditional rescue trials are extra. '
         f"At the two measured native rates, training alone extrapolates to **{min(gpu_hours):.1f}–{max(gpu_hours):.1f} GPU-hours**, "

@@ -1,6 +1,8 @@
 # Roadmap and provisional ETA
 
-Updated 2026-10-15T05:39:35.166627+00:00.
+Updated 2026-10-15T06:13:05.737688+00:00.
+
+Planning ranges remain anchored to the initial ETA snapshot, 2026-10-15T05:39:35.166627+00:00; refreshing this report does not restart the clock.
 
 The study remains in correctness validation. No corrected primary HPO, screening, confirmation or official benchmark comparison is complete. The 166 quarantined v2 trials remain excluded. All 41 candidates and the complete requested scope remain registered.
 
@@ -11,14 +13,14 @@ The study remains in correctness validation. No corrected primary HPO, screening
 
 These runs used a common untuned configuration and only 16 development groups. They establish execution and timing, not a method ranking.
 
-| Milestone | Provisional cumulative ETA from this snapshot |
+| Milestone | Provisional cumulative ETA from initial snapshot |
 |---|---|
 | Remaining Stage A checks and corrected queue | 24-48 hours |
 | Stage B: all 41 candidates with independent screening seeds | 2-4 days |
 | Stages C/D: fresh-seed, rank-four, export and equal-compute comparisons | 4-7 days |
 | Stage E plus official evaluations and final audit/report | 1-3 weeks |
 
-Stage A remaining work includes complete GPU pipeline coverage and interruption recovery, separate-process export parity/distortion checks, full-model DDP and compaction rebuild, parser/evaluation validation, synthetic controls and diagnostic state restoration.
+Stage A has now executed all 41 GPU smoke cells and 984 retained synthetic budgeted runs. Pipeline resume, common export allocation and same-checkpoint DDP/rebuild checks have receipts. Remaining work includes parser/generation validation, shadow deletion/curvature/gauge diagnostics and restoration, complete primary instrumentation and the balanced v3 tuning queue. Strict independent DDP trajectory and four BF16 refactor-parity failures remain disclosed; five FP32 model export oracles pass. See the validation report for the scope of each check.
 
 Stage B contains **779 mandatory training jobs**: 492 short searches, 164 full-horizon tuning runs and 123 independent screening runs. Conditional rescue trials are extra. At the two measured native rates, training alone extrapolates to **42.6–46.8 GPU-hours**, or **10.7–11.7 hours** with ideal four-GPU parallelism. This arithmetic excludes evaluation, setup, pipeline overhead differences, rescue trials and remaining engineering. The timing runs used two concurrent GPUs; four-job queue throughput still needs calibration.
 

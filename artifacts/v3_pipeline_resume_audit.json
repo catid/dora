@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "method": "I_GLOBAL_SVD",
+      "audit": "artifacts/v3_pipeline_resume_I_GLOBAL_SVD.json",
+      "input_tokens": 267916,
+      "baseline_charge": 27.19930959865451,
+      "resumed_charge": 27.37408831808716,
+      "all_in_cost_complete": true
+    },
+    {
+      "method": "L_PILOT_I_STUDENT",
+      "audit": "artifacts/v3_pipeline_resume_L_PILOT_I_STUDENT.json",
+      "input_tokens": 267916,
+      "baseline_charge": 27.342196630779654,
+      "resumed_charge": 27.70254869107157,
+      "all_in_cost_complete": true
+    }
+  ],
+  "scope": "checkpoint interruption in restart student and compression recovery; no crash-in-flight timing claim"
+}

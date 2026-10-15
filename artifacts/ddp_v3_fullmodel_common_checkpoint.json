@@ -1,0 +1,197 @@
+{
+  "backend": "EFFICIENT_ATTENTION",
+  "independent_trajectory_parity_established": false,
+  "local_microbatches": [
+    1,
+    3
+  ],
+  "no_sync": true,
+  "oracle_policy": "common_checkpoint",
+  "original_backbone_unchanged": true,
+  "records": [
+    {
+      "compacted": false,
+      "global_supervised_tokens": 1248,
+      "gradient_relative_l2_error": 5.684718829002122e-08,
+      "init": "I",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 6.32135197520256e-08,
+      "score": "GATE",
+      "score_relative_l2_error": 0.0,
+      "step": 1
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 775,
+      "gradient_relative_l2_error": 5.713294370934818e-08,
+      "init": "I",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 1.9936123862862587e-09,
+      "score": "GATE",
+      "score_relative_l2_error": 3.9117274752697995e-08,
+      "step": 2
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 1144,
+      "gradient_relative_l2_error": 4.8903487481766206e-08,
+      "init": "I",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 5.820766091346741e-11,
+      "score": "GATE",
+      "score_relative_l2_error": 5.3730829563392035e-08,
+      "step": 3
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 732,
+      "gradient_relative_l2_error": 5.737920005799424e-08,
+      "init": "I",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 2.9103830456733704e-11,
+      "score": "GATE",
+      "score_relative_l2_error": 4.2625980967159194e-08,
+      "step": 4
+    },
+    {
+      "compacted": false,
+      "global_supervised_tokens": 1248,
+      "gradient_relative_l2_error": 5.657286550331264e-08,
+      "init": "L",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 5.7225406635552645e-09,
+      "score": "ACT",
+      "score_relative_l2_error": 0.0,
+      "step": 1
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 775,
+      "gradient_relative_l2_error": 5.794666435576801e-08,
+      "init": "L",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 1.862645149230957e-09,
+      "score": "ACT",
+      "score_relative_l2_error": 6.235480753957745e-08,
+      "step": 2
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 1144,
+      "gradient_relative_l2_error": 5.012215709143675e-08,
+      "init": "L",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 1.862645149230957e-09,
+      "score": "ACT",
+      "score_relative_l2_error": 3.51730982117715e-08,
+      "step": 3
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 732,
+      "gradient_relative_l2_error": 5.594256080598825e-08,
+      "init": "L",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 1.862645149230957e-09,
+      "score": "ACT",
+      "score_relative_l2_error": 5.8255380963601056e-08,
+      "step": 4
+    },
+    {
+      "compacted": false,
+      "global_supervised_tokens": 1248,
+      "gradient_relative_l2_error": 5.295116523029719e-08,
+      "init": "T0",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 2.1827872842550278e-11,
+      "score": "GATE",
+      "score_relative_l2_error": 0.0,
+      "step": 1
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 775,
+      "gradient_relative_l2_error": 4.920566354371658e-08,
+      "init": "T0",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 1.3642420526593924e-10,
+      "score": "GATE",
+      "score_relative_l2_error": 5.253544443917235e-08,
+      "step": 2
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 1144,
+      "gradient_relative_l2_error": 4.696101996159996e-08,
+      "init": "T0",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 5.820766091346741e-11,
+      "score": "GATE",
+      "score_relative_l2_error": 3.868793641004231e-08,
+      "step": 3
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 732,
+      "gradient_relative_l2_error": 5.3312145809059075e-08,
+      "init": "T0",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 4.3655745685100555e-11,
+      "score": "GATE",
+      "score_relative_l2_error": 5.899675059595211e-08,
+      "step": 4
+    },
+    {
+      "compacted": false,
+      "global_supervised_tokens": 1248,
+      "gradient_relative_l2_error": 5.603979502666334e-08,
+      "init": "T1",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 3.532113623805344e-08,
+      "score": "GATE",
+      "score_relative_l2_error": 0.0,
+      "step": 1
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 775,
+      "gradient_relative_l2_error": 5.718304407764663e-08,
+      "init": "T1",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 4.94765117764473e-10,
+      "score": "GATE",
+      "score_relative_l2_error": 5.907176969799366e-08,
+      "step": 2
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 1144,
+      "gradient_relative_l2_error": 4.841016121304165e-08,
+      "init": "T1",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 4.3655745685100555e-11,
+      "score": "GATE",
+      "score_relative_l2_error": 4.412138565612622e-08,
+      "step": 3
+    },
+    {
+      "compacted": true,
+      "global_supervised_tokens": 732,
+      "gradient_relative_l2_error": 5.6272764226150684e-08,
+      "init": "T1",
+      "mask_equal": true,
+      "maximum_parameter_absolute_error": 2.9103830456733704e-11,
+      "score": "GATE",
+      "score_relative_l2_error": 2.460097192624744e-08,
+      "step": 4
+    }
+  ],
+  "scope": "I_GATE, L_ACT, T0_GATE, T1_GATE through optimizer and DDP rebuild; other score families have separate tiny-layer parity",
+  "status": "passed",
+  "tolerances": {
+    "gradient_relative_l2": 5e-05,
+    "parameter_max_absolute": 2e-06,
+    "score_relative_l2": 5e-05
+  },
+  "topology": "2-rank real Qwen1.5B DDP/NCCL versus single-process oracle"
+}

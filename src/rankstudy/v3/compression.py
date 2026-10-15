@@ -173,5 +173,9 @@ def write_export(path,factors,scale,report,source):
     save_file(tensors,str(path/'adapter.safetensors'))
     manifest={'schema':'rankstudy-v3-ordinary-export','complete':True,'modules':modules,
               'files':{'adapter.safetensors':hashlib.sha256((path/'adapter.safetensors').read_bytes()).hexdigest()},
-              'source':source,'unchanged_original_backbone_required':True}
+              'source':source,'unchanged_original_backbone_required':True,
+              'ordinary_factor_scalars':sum(v.numel() for k,v in tensors.items() if k.endswith(('.A','.B'))),
+              'ordinary_factor_bytes':sum(v.numel()*v.element_size() for k,v in tensors.items() if k.endswith(('.A','.B'))),
+              'tensor_payload_bytes':sum(v.numel()*v.element_size() for v in tensors.values()),
+              'safetensors_file_bytes':(path/'adapter.safetensors').stat().st_size}
     json_write(path/'manifest.json',manifest); json_write(path/'compression.json',report)

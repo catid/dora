@@ -7,6 +7,7 @@ Large sweeps remain gated until smoke, resume and reference checks pass.
 from __future__ import annotations
 
 import argparse
+import fcntl
 import hashlib
 import json
 import math
@@ -77,6 +78,7 @@ def lr_at(step,total,peak):
 
 
 def main():
+    global _OWNED_OUTPUT
     ap=argparse.ArgumentParser()
     ap.add_argument('--method',required=True)
     ap.add_argument('--out',type=Path,required=True)
@@ -106,6 +108,10 @@ def main():
     ap.add_argument('--smoke',action='store_true')
     ap.add_argument('--profile',action='store_true')
     args=ap.parse_args()
+    if not args.smoke:
+        gate=json.loads(Path('artifacts/protocol_execution_gate.json').read_text())
+        if not gate.get('v3_large_sweep_allowed'):
+            raise RuntimeError('primary v3 execution gate is closed; engineering runs must be explicitly labeled --smoke')
     if args.dev_limit and not args.smoke:
         raise ValueError('partial development evaluation allowed only in labeled smoke tests')
     if torch.__version__ != '2.16.0.dev20261013+cu130' or not torch.cuda.is_available():
@@ -121,9 +127,11 @@ def main():
     triplet=spec['triplet']
     if (spec['group']=='triplet_ortho' or adalora) and args.penalty<=0:
         raise ValueError('positive declared penalty required')
-    if args.out.exists() and (args.out/'metadata.json').exists() and args.resume is None:
-        raise FileExistsError('immutable run already exists; use another run ID')
     args.out.mkdir(parents=True,exist_ok=True)
+    run_lock=(args.out/'.training.lock').open('a+')
+    fcntl.flock(run_lock.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)
+    if (args.out/'metadata.json').exists() and args.resume is None:
+        raise FileExistsError('immutable run already exists; use another run ID')
     manifest_path=args.manifest_root/f'train_seed{args.seed}.json'
     manifest=json.loads(manifest_path.read_text())
     if args.stream_offset<0:
@@ -153,6 +161,7 @@ def main():
           'progress_units':'optimizer_updates_upstream_reference' if adalora else 'input_tokens',
           'act_sampling':'up to 256 valid tokens per effective batch; shared deterministic seed/ordinal sample'}
     json_write(args.out/'config.json',config); json_write(args.out/'metadata.json',meta)
+    _OWNED_OUTPUT=args.out/'metadata.json'
     setup_start=time.perf_counter()
     model=AutoModelForCausalLM.from_pretrained(args.model,dtype=torch.bfloat16,attn_implementation='sdpa',local_files_only=True).to('cuda')
     model.config.use_cache=False
@@ -340,7 +349,7 @@ if __name__=='__main__':
     except BaseException as exc:
         if '--out' in sys.argv:
             output=Path(sys.argv[sys.argv.index('--out')+1])/'metadata.json'
-            if output.exists():
+            if output.exists() and globals().get('_OWNED_OUTPUT')==output:
                 failed=json.loads(output.read_text())
                 if failed.get('status')=='running':
                     failed.update(status='failed',failure_reason=f'{type(exc).__name__}: {exc}')

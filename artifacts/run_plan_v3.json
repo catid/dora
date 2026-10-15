@@ -280,9 +280,9 @@
       "expected_output": "runs/A_syn_L_FIXED_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -313,9 +313,9 @@
       "expected_output": "runs/A_syn_L_FIXED_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -346,9 +346,9 @@
       "expected_output": "runs/A_syn_L_FIXED_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -379,9 +379,9 @@
       "expected_output": "runs/A_syn_L_FIXED_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -412,9 +412,9 @@
       "expected_output": "runs/A_syn_L_FIXED_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -445,9 +445,9 @@
       "expected_output": "runs/A_syn_L_FIXED_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -478,9 +478,9 @@
       "expected_output": "runs/A_syn_L_FIXED_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -511,9 +511,9 @@
       "expected_output": "runs/A_syn_L_FIXED_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -544,9 +544,9 @@
       "expected_output": "runs/A_syn_I_FIXED_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -577,9 +577,9 @@
       "expected_output": "runs/A_syn_I_FIXED_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -610,9 +610,9 @@
       "expected_output": "runs/A_syn_I_FIXED_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -643,9 +643,9 @@
       "expected_output": "runs/A_syn_I_FIXED_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -676,9 +676,9 @@
       "expected_output": "runs/A_syn_I_FIXED_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -709,9 +709,9 @@
       "expected_output": "runs/A_syn_I_FIXED_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -742,9 +742,9 @@
       "expected_output": "runs/A_syn_I_FIXED_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -775,9 +775,9 @@
       "expected_output": "runs/A_syn_I_FIXED_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -808,9 +808,9 @@
       "expected_output": "runs/A_syn_L_WIDE_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -841,9 +841,9 @@
       "expected_output": "runs/A_syn_L_WIDE_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -874,9 +874,9 @@
       "expected_output": "runs/A_syn_L_WIDE_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -907,9 +907,9 @@
       "expected_output": "runs/A_syn_L_WIDE_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -940,9 +940,9 @@
       "expected_output": "runs/A_syn_L_WIDE_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -973,9 +973,9 @@
       "expected_output": "runs/A_syn_L_WIDE_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -1006,9 +1006,9 @@
       "expected_output": "runs/A_syn_L_WIDE_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -1039,9 +1039,9 @@
       "expected_output": "runs/A_syn_L_WIDE_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -1072,9 +1072,9 @@
       "expected_output": "runs/A_syn_I_WIDE_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -1105,9 +1105,9 @@
       "expected_output": "runs/A_syn_I_WIDE_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -1138,9 +1138,9 @@
       "expected_output": "runs/A_syn_I_WIDE_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -1171,9 +1171,9 @@
       "expected_output": "runs/A_syn_I_WIDE_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -1204,9 +1204,9 @@
       "expected_output": "runs/A_syn_I_WIDE_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -1237,9 +1237,9 @@
       "expected_output": "runs/A_syn_I_WIDE_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -1270,9 +1270,9 @@
       "expected_output": "runs/A_syn_I_WIDE_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -1303,9 +1303,9 @@
       "expected_output": "runs/A_syn_I_WIDE_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -1336,9 +1336,9 @@
       "expected_output": "runs/A_syn_ADALORA_REF_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -1369,9 +1369,9 @@
       "expected_output": "runs/A_syn_ADALORA_REF_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -1402,9 +1402,9 @@
       "expected_output": "runs/A_syn_ADALORA_REF_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -1435,9 +1435,9 @@
       "expected_output": "runs/A_syn_ADALORA_REF_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -1468,9 +1468,9 @@
       "expected_output": "runs/A_syn_ADALORA_REF_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -1501,9 +1501,9 @@
       "expected_output": "runs/A_syn_ADALORA_REF_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -1534,9 +1534,9 @@
       "expected_output": "runs/A_syn_ADALORA_REF_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -1567,9 +1567,9 @@
       "expected_output": "runs/A_syn_ADALORA_REF_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -1600,9 +1600,9 @@
       "expected_output": "runs/A_syn_L_RAW_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -1633,9 +1633,9 @@
       "expected_output": "runs/A_syn_L_RAW_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -1666,9 +1666,9 @@
       "expected_output": "runs/A_syn_L_RAW_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -1699,9 +1699,9 @@
       "expected_output": "runs/A_syn_L_RAW_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -1732,9 +1732,9 @@
       "expected_output": "runs/A_syn_L_RAW_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -1765,9 +1765,9 @@
       "expected_output": "runs/A_syn_L_RAW_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -1798,9 +1798,9 @@
       "expected_output": "runs/A_syn_L_RAW_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -1831,9 +1831,9 @@
       "expected_output": "runs/A_syn_L_RAW_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -1864,9 +1864,9 @@
       "expected_output": "runs/A_syn_L_GATE_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -1897,9 +1897,9 @@
       "expected_output": "runs/A_syn_L_GATE_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -1930,9 +1930,9 @@
       "expected_output": "runs/A_syn_L_GATE_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -1963,9 +1963,9 @@
       "expected_output": "runs/A_syn_L_GATE_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -1996,9 +1996,9 @@
       "expected_output": "runs/A_syn_L_GATE_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -2029,9 +2029,9 @@
       "expected_output": "runs/A_syn_L_GATE_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -2062,9 +2062,9 @@
       "expected_output": "runs/A_syn_L_GATE_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -2095,9 +2095,9 @@
       "expected_output": "runs/A_syn_L_GATE_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -2128,9 +2128,9 @@
       "expected_output": "runs/A_syn_L_DISP_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -2161,9 +2161,9 @@
       "expected_output": "runs/A_syn_L_DISP_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -2194,9 +2194,9 @@
       "expected_output": "runs/A_syn_L_DISP_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -2227,9 +2227,9 @@
       "expected_output": "runs/A_syn_L_DISP_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -2260,9 +2260,9 @@
       "expected_output": "runs/A_syn_L_DISP_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -2293,9 +2293,9 @@
       "expected_output": "runs/A_syn_L_DISP_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -2326,9 +2326,9 @@
       "expected_output": "runs/A_syn_L_DISP_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -2359,9 +2359,9 @@
       "expected_output": "runs/A_syn_L_DISP_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -2392,9 +2392,9 @@
       "expected_output": "runs/A_syn_L_ACT_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -2425,9 +2425,9 @@
       "expected_output": "runs/A_syn_L_ACT_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -2458,9 +2458,9 @@
       "expected_output": "runs/A_syn_L_ACT_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -2491,9 +2491,9 @@
       "expected_output": "runs/A_syn_L_ACT_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -2524,9 +2524,9 @@
       "expected_output": "runs/A_syn_L_ACT_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -2557,9 +2557,9 @@
       "expected_output": "runs/A_syn_L_ACT_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -2590,9 +2590,9 @@
       "expected_output": "runs/A_syn_L_ACT_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -2623,9 +2623,9 @@
       "expected_output": "runs/A_syn_L_ACT_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -2656,9 +2656,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_GATE_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -2689,9 +2689,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_GATE_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -2722,9 +2722,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_GATE_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -2755,9 +2755,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_GATE_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -2788,9 +2788,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_GATE_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -2821,9 +2821,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_GATE_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -2854,9 +2854,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_GATE_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -2887,9 +2887,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_GATE_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -2920,9 +2920,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_RANDOM_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -2953,9 +2953,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_RANDOM_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -2986,9 +2986,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_RANDOM_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -3019,9 +3019,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_RANDOM_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -3052,9 +3052,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_RANDOM_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -3085,9 +3085,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_RANDOM_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -3118,9 +3118,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_RANDOM_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -3151,9 +3151,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_RANDOM_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -3184,9 +3184,9 @@
       "expected_output": "runs/A_syn_I_RAW_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -3217,9 +3217,9 @@
       "expected_output": "runs/A_syn_I_RAW_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -3250,9 +3250,9 @@
       "expected_output": "runs/A_syn_I_RAW_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -3283,9 +3283,9 @@
       "expected_output": "runs/A_syn_I_RAW_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -3316,9 +3316,9 @@
       "expected_output": "runs/A_syn_I_RAW_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -3349,9 +3349,9 @@
       "expected_output": "runs/A_syn_I_RAW_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -3382,9 +3382,9 @@
       "expected_output": "runs/A_syn_I_RAW_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -3415,9 +3415,9 @@
       "expected_output": "runs/A_syn_I_RAW_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -3448,9 +3448,9 @@
       "expected_output": "runs/A_syn_I_GATE_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -3481,9 +3481,9 @@
       "expected_output": "runs/A_syn_I_GATE_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -3514,9 +3514,9 @@
       "expected_output": "runs/A_syn_I_GATE_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -3547,9 +3547,9 @@
       "expected_output": "runs/A_syn_I_GATE_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -3580,9 +3580,9 @@
       "expected_output": "runs/A_syn_I_GATE_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -3613,9 +3613,9 @@
       "expected_output": "runs/A_syn_I_GATE_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -3646,9 +3646,9 @@
       "expected_output": "runs/A_syn_I_GATE_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -3679,9 +3679,9 @@
       "expected_output": "runs/A_syn_I_GATE_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -3712,9 +3712,9 @@
       "expected_output": "runs/A_syn_I_DISP_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -3745,9 +3745,9 @@
       "expected_output": "runs/A_syn_I_DISP_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -3778,9 +3778,9 @@
       "expected_output": "runs/A_syn_I_DISP_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -3811,9 +3811,9 @@
       "expected_output": "runs/A_syn_I_DISP_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -3844,9 +3844,9 @@
       "expected_output": "runs/A_syn_I_DISP_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -3877,9 +3877,9 @@
       "expected_output": "runs/A_syn_I_DISP_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -3910,9 +3910,9 @@
       "expected_output": "runs/A_syn_I_DISP_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -3943,9 +3943,9 @@
       "expected_output": "runs/A_syn_I_DISP_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -3976,9 +3976,9 @@
       "expected_output": "runs/A_syn_I_ACT_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -4009,9 +4009,9 @@
       "expected_output": "runs/A_syn_I_ACT_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -4042,9 +4042,9 @@
       "expected_output": "runs/A_syn_I_ACT_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -4075,9 +4075,9 @@
       "expected_output": "runs/A_syn_I_ACT_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -4108,9 +4108,9 @@
       "expected_output": "runs/A_syn_I_ACT_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -4141,9 +4141,9 @@
       "expected_output": "runs/A_syn_I_ACT_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -4174,9 +4174,9 @@
       "expected_output": "runs/A_syn_I_ACT_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -4207,9 +4207,9 @@
       "expected_output": "runs/A_syn_I_ACT_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -4240,9 +4240,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_GATE_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -4273,9 +4273,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_GATE_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -4306,9 +4306,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_GATE_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -4339,9 +4339,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_GATE_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -4372,9 +4372,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_GATE_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -4405,9 +4405,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_GATE_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -4438,9 +4438,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_GATE_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -4471,9 +4471,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_GATE_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -4504,9 +4504,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_RANDOM_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -4537,9 +4537,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_RANDOM_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -4570,9 +4570,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_RANDOM_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -4603,9 +4603,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_RANDOM_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -4636,9 +4636,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_RANDOM_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -4669,9 +4669,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_RANDOM_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -4702,9 +4702,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_RANDOM_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -4735,9 +4735,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_RANDOM_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -4768,9 +4768,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -4801,9 +4801,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -4834,9 +4834,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -4867,9 +4867,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -4900,9 +4900,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -4933,9 +4933,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -4966,9 +4966,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -4999,9 +4999,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -5032,9 +5032,9 @@
       "expected_output": "runs/A_syn_T0_GATE_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -5065,9 +5065,9 @@
       "expected_output": "runs/A_syn_T0_GATE_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -5098,9 +5098,9 @@
       "expected_output": "runs/A_syn_T0_GATE_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -5131,9 +5131,9 @@
       "expected_output": "runs/A_syn_T0_GATE_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -5164,9 +5164,9 @@
       "expected_output": "runs/A_syn_T0_GATE_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -5197,9 +5197,9 @@
       "expected_output": "runs/A_syn_T0_GATE_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -5230,9 +5230,9 @@
       "expected_output": "runs/A_syn_T0_GATE_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -5263,9 +5263,9 @@
       "expected_output": "runs/A_syn_T0_GATE_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -5296,9 +5296,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_ORTHO_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -5329,9 +5329,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_ORTHO_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -5362,9 +5362,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_ORTHO_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -5395,9 +5395,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_ORTHO_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -5428,9 +5428,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_ORTHO_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -5461,9 +5461,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_ORTHO_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -5494,9 +5494,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_ORTHO_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -5527,9 +5527,9 @@
       "expected_output": "runs/A_syn_T0_FIXED_ORTHO_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -5560,9 +5560,9 @@
       "expected_output": "runs/A_syn_T0_GATE_ORTHO_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -5593,9 +5593,9 @@
       "expected_output": "runs/A_syn_T0_GATE_ORTHO_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -5626,9 +5626,9 @@
       "expected_output": "runs/A_syn_T0_GATE_ORTHO_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -5659,9 +5659,9 @@
       "expected_output": "runs/A_syn_T0_GATE_ORTHO_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -5692,9 +5692,9 @@
       "expected_output": "runs/A_syn_T0_GATE_ORTHO_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -5725,9 +5725,9 @@
       "expected_output": "runs/A_syn_T0_GATE_ORTHO_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -5758,9 +5758,9 @@
       "expected_output": "runs/A_syn_T0_GATE_ORTHO_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -5791,9 +5791,9 @@
       "expected_output": "runs/A_syn_T0_GATE_ORTHO_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -5824,9 +5824,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -5857,9 +5857,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -5890,9 +5890,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -5923,9 +5923,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -5956,9 +5956,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -5989,9 +5989,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -6022,9 +6022,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -6055,9 +6055,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -6088,9 +6088,9 @@
       "expected_output": "runs/A_syn_T1_GATE_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -6121,9 +6121,9 @@
       "expected_output": "runs/A_syn_T1_GATE_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -6154,9 +6154,9 @@
       "expected_output": "runs/A_syn_T1_GATE_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -6187,9 +6187,9 @@
       "expected_output": "runs/A_syn_T1_GATE_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -6220,9 +6220,9 @@
       "expected_output": "runs/A_syn_T1_GATE_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -6253,9 +6253,9 @@
       "expected_output": "runs/A_syn_T1_GATE_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -6286,9 +6286,9 @@
       "expected_output": "runs/A_syn_T1_GATE_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -6319,9 +6319,9 @@
       "expected_output": "runs/A_syn_T1_GATE_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -6352,9 +6352,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_ORTHO_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -6385,9 +6385,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_ORTHO_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -6418,9 +6418,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_ORTHO_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -6451,9 +6451,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_ORTHO_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -6484,9 +6484,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_ORTHO_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -6517,9 +6517,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_ORTHO_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -6550,9 +6550,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_ORTHO_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -6583,9 +6583,9 @@
       "expected_output": "runs/A_syn_T1_FIXED_ORTHO_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -6616,9 +6616,9 @@
       "expected_output": "runs/A_syn_T1_GATE_ORTHO_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -6649,9 +6649,9 @@
       "expected_output": "runs/A_syn_T1_GATE_ORTHO_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -6682,9 +6682,9 @@
       "expected_output": "runs/A_syn_T1_GATE_ORTHO_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -6715,9 +6715,9 @@
       "expected_output": "runs/A_syn_T1_GATE_ORTHO_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -6748,9 +6748,9 @@
       "expected_output": "runs/A_syn_T1_GATE_ORTHO_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -6781,9 +6781,9 @@
       "expected_output": "runs/A_syn_T1_GATE_ORTHO_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -6814,9 +6814,9 @@
       "expected_output": "runs/A_syn_T1_GATE_ORTHO_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -6847,9 +6847,9 @@
       "expected_output": "runs/A_syn_T1_GATE_ORTHO_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -6880,9 +6880,9 @@
       "expected_output": "runs/A_syn_L_PILOT_L_STUDENT_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -6913,9 +6913,9 @@
       "expected_output": "runs/A_syn_L_PILOT_L_STUDENT_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -6946,9 +6946,9 @@
       "expected_output": "runs/A_syn_L_PILOT_L_STUDENT_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -6979,9 +6979,9 @@
       "expected_output": "runs/A_syn_L_PILOT_L_STUDENT_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -7012,9 +7012,9 @@
       "expected_output": "runs/A_syn_L_PILOT_L_STUDENT_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -7045,9 +7045,9 @@
       "expected_output": "runs/A_syn_L_PILOT_L_STUDENT_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -7078,9 +7078,9 @@
       "expected_output": "runs/A_syn_L_PILOT_L_STUDENT_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -7111,9 +7111,9 @@
       "expected_output": "runs/A_syn_L_PILOT_L_STUDENT_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -7144,9 +7144,9 @@
       "expected_output": "runs/A_syn_L_PILOT_I_STUDENT_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -7177,9 +7177,9 @@
       "expected_output": "runs/A_syn_L_PILOT_I_STUDENT_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -7210,9 +7210,9 @@
       "expected_output": "runs/A_syn_L_PILOT_I_STUDENT_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -7243,9 +7243,9 @@
       "expected_output": "runs/A_syn_L_PILOT_I_STUDENT_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -7276,9 +7276,9 @@
       "expected_output": "runs/A_syn_L_PILOT_I_STUDENT_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -7309,9 +7309,9 @@
       "expected_output": "runs/A_syn_L_PILOT_I_STUDENT_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -7342,9 +7342,9 @@
       "expected_output": "runs/A_syn_L_PILOT_I_STUDENT_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -7375,9 +7375,9 @@
       "expected_output": "runs/A_syn_L_PILOT_I_STUDENT_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -7408,9 +7408,9 @@
       "expected_output": "runs/A_syn_I_PILOT_L_STUDENT_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -7441,9 +7441,9 @@
       "expected_output": "runs/A_syn_I_PILOT_L_STUDENT_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -7474,9 +7474,9 @@
       "expected_output": "runs/A_syn_I_PILOT_L_STUDENT_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -7507,9 +7507,9 @@
       "expected_output": "runs/A_syn_I_PILOT_L_STUDENT_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -7540,9 +7540,9 @@
       "expected_output": "runs/A_syn_I_PILOT_L_STUDENT_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -7573,9 +7573,9 @@
       "expected_output": "runs/A_syn_I_PILOT_L_STUDENT_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -7606,9 +7606,9 @@
       "expected_output": "runs/A_syn_I_PILOT_L_STUDENT_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -7639,9 +7639,9 @@
       "expected_output": "runs/A_syn_I_PILOT_L_STUDENT_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -7672,9 +7672,9 @@
       "expected_output": "runs/A_syn_I_PILOT_I_STUDENT_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -7705,9 +7705,9 @@
       "expected_output": "runs/A_syn_I_PILOT_I_STUDENT_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -7738,9 +7738,9 @@
       "expected_output": "runs/A_syn_I_PILOT_I_STUDENT_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -7771,9 +7771,9 @@
       "expected_output": "runs/A_syn_I_PILOT_I_STUDENT_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -7804,9 +7804,9 @@
       "expected_output": "runs/A_syn_I_PILOT_I_STUDENT_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -7837,9 +7837,9 @@
       "expected_output": "runs/A_syn_I_PILOT_I_STUDENT_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -7870,9 +7870,9 @@
       "expected_output": "runs/A_syn_I_PILOT_I_STUDENT_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -7903,9 +7903,9 @@
       "expected_output": "runs/A_syn_I_PILOT_I_STUDENT_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -7936,9 +7936,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_RESTART_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -7969,9 +7969,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_RESTART_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -8002,9 +8002,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_RESTART_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -8035,9 +8035,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_RESTART_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -8068,9 +8068,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_RESTART_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -8101,9 +8101,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_RESTART_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -8134,9 +8134,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_RESTART_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -8167,9 +8167,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_RESTART_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -8200,9 +8200,9 @@
       "expected_output": "runs/A_syn_L_SHUFFLED_SELF_RESTART_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -8233,9 +8233,9 @@
       "expected_output": "runs/A_syn_L_SHUFFLED_SELF_RESTART_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -8266,9 +8266,9 @@
       "expected_output": "runs/A_syn_L_SHUFFLED_SELF_RESTART_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -8299,9 +8299,9 @@
       "expected_output": "runs/A_syn_L_SHUFFLED_SELF_RESTART_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -8332,9 +8332,9 @@
       "expected_output": "runs/A_syn_L_SHUFFLED_SELF_RESTART_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -8365,9 +8365,9 @@
       "expected_output": "runs/A_syn_L_SHUFFLED_SELF_RESTART_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -8398,9 +8398,9 @@
       "expected_output": "runs/A_syn_L_SHUFFLED_SELF_RESTART_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -8431,9 +8431,9 @@
       "expected_output": "runs/A_syn_L_SHUFFLED_SELF_RESTART_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -8464,9 +8464,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_RESTART_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -8497,9 +8497,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_RESTART_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -8530,9 +8530,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_RESTART_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -8563,9 +8563,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_RESTART_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -8596,9 +8596,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_RESTART_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -8629,9 +8629,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_RESTART_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -8662,9 +8662,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_RESTART_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -8695,9 +8695,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_RESTART_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -8728,9 +8728,9 @@
       "expected_output": "runs/A_syn_I_SHUFFLED_SELF_RESTART_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -8761,9 +8761,9 @@
       "expected_output": "runs/A_syn_I_SHUFFLED_SELF_RESTART_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -8794,9 +8794,9 @@
       "expected_output": "runs/A_syn_I_SHUFFLED_SELF_RESTART_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -8827,9 +8827,9 @@
       "expected_output": "runs/A_syn_I_SHUFFLED_SELF_RESTART_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -8860,9 +8860,9 @@
       "expected_output": "runs/A_syn_I_SHUFFLED_SELF_RESTART_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -8893,9 +8893,9 @@
       "expected_output": "runs/A_syn_I_SHUFFLED_SELF_RESTART_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -8926,9 +8926,9 @@
       "expected_output": "runs/A_syn_I_SHUFFLED_SELF_RESTART_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -8959,9 +8959,9 @@
       "expected_output": "runs/A_syn_I_SHUFFLED_SELF_RESTART_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -8992,9 +8992,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_SVD_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -9025,9 +9025,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_SVD_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -9058,9 +9058,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_SVD_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -9091,9 +9091,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_SVD_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -9124,9 +9124,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_SVD_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -9157,9 +9157,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_SVD_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -9190,9 +9190,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_SVD_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -9223,9 +9223,9 @@
       "expected_output": "runs/A_syn_L_UNIFORM_SVD_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -9256,9 +9256,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_SVD_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -9289,9 +9289,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_SVD_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -9322,9 +9322,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_SVD_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -9355,9 +9355,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_SVD_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -9388,9 +9388,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_SVD_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -9421,9 +9421,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_SVD_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -9454,9 +9454,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_SVD_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -9487,9 +9487,9 @@
       "expected_output": "runs/A_syn_L_GLOBAL_SVD_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -9520,9 +9520,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_SVD_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -9553,9 +9553,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_SVD_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -9586,9 +9586,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_SVD_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -9619,9 +9619,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_SVD_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -9652,9 +9652,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_SVD_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -9685,9 +9685,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_SVD_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -9718,9 +9718,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_SVD_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -9751,9 +9751,9 @@
       "expected_output": "runs/A_syn_I_UNIFORM_SVD_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -9784,9 +9784,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_SVD_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -9817,9 +9817,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_SVD_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -9850,9 +9850,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_SVD_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -9883,9 +9883,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_SVD_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -9916,9 +9916,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_SVD_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -9949,9 +9949,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_SVD_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -9982,9 +9982,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_SVD_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -10015,9 +10015,9 @@
       "expected_output": "runs/A_syn_I_GLOBAL_SVD_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -10048,9 +10048,9 @@
       "expected_output": "runs/A_syn_L_RAW_UNCERTAINTY_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -10081,9 +10081,9 @@
       "expected_output": "runs/A_syn_L_RAW_UNCERTAINTY_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -10114,9 +10114,9 @@
       "expected_output": "runs/A_syn_L_RAW_UNCERTAINTY_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -10147,9 +10147,9 @@
       "expected_output": "runs/A_syn_L_RAW_UNCERTAINTY_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -10180,9 +10180,9 @@
       "expected_output": "runs/A_syn_L_RAW_UNCERTAINTY_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -10213,9 +10213,9 @@
       "expected_output": "runs/A_syn_L_RAW_UNCERTAINTY_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -10246,9 +10246,9 @@
       "expected_output": "runs/A_syn_L_RAW_UNCERTAINTY_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -10279,9 +10279,9 @@
       "expected_output": "runs/A_syn_L_RAW_UNCERTAINTY_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -10312,9 +10312,9 @@
       "expected_output": "runs/A_syn_L_GATE_UNCERTAINTY_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -10345,9 +10345,9 @@
       "expected_output": "runs/A_syn_L_GATE_UNCERTAINTY_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -10378,9 +10378,9 @@
       "expected_output": "runs/A_syn_L_GATE_UNCERTAINTY_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -10411,9 +10411,9 @@
       "expected_output": "runs/A_syn_L_GATE_UNCERTAINTY_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -10444,9 +10444,9 @@
       "expected_output": "runs/A_syn_L_GATE_UNCERTAINTY_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -10477,9 +10477,9 @@
       "expected_output": "runs/A_syn_L_GATE_UNCERTAINTY_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -10510,9 +10510,9 @@
       "expected_output": "runs/A_syn_L_GATE_UNCERTAINTY_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -10543,9 +10543,9 @@
       "expected_output": "runs/A_syn_L_GATE_UNCERTAINTY_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -10576,9 +10576,9 @@
       "expected_output": "runs/A_syn_I_RAW_UNCERTAINTY_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -10609,9 +10609,9 @@
       "expected_output": "runs/A_syn_I_RAW_UNCERTAINTY_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -10642,9 +10642,9 @@
       "expected_output": "runs/A_syn_I_RAW_UNCERTAINTY_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -10675,9 +10675,9 @@
       "expected_output": "runs/A_syn_I_RAW_UNCERTAINTY_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -10708,9 +10708,9 @@
       "expected_output": "runs/A_syn_I_RAW_UNCERTAINTY_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -10741,9 +10741,9 @@
       "expected_output": "runs/A_syn_I_RAW_UNCERTAINTY_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -10774,9 +10774,9 @@
       "expected_output": "runs/A_syn_I_RAW_UNCERTAINTY_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -10807,9 +10807,9 @@
       "expected_output": "runs/A_syn_I_RAW_UNCERTAINTY_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -10840,9 +10840,9 @@
       "expected_output": "runs/A_syn_I_GATE_UNCERTAINTY_901_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -10873,9 +10873,9 @@
       "expected_output": "runs/A_syn_I_GATE_UNCERTAINTY_901_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -10906,9 +10906,9 @@
       "expected_output": "runs/A_syn_I_GATE_UNCERTAINTY_901_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -10939,9 +10939,9 @@
       "expected_output": "runs/A_syn_I_GATE_UNCERTAINTY_901_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,
@@ -10972,9 +10972,9 @@
       "expected_output": "runs/A_syn_I_GATE_UNCERTAINTY_902_isotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": false,
@@ -11005,9 +11005,9 @@
       "expected_output": "runs/A_syn_I_GATE_UNCERTAINTY_902_isotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "isotropic",
       "noise": true,
@@ -11038,9 +11038,9 @@
       "expected_output": "runs/A_syn_I_GATE_UNCERTAINTY_902_anisotropic_False/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": false,
@@ -11071,9 +11071,9 @@
       "expected_output": "runs/A_syn_I_GATE_UNCERTAINTY_902_anisotropic_True/metadata.json",
       "status": "pending",
       "budgets": [
-        8,
         16,
-        32
+        32,
+        64
       ],
       "covariance": "anisotropic",
       "noise": true,

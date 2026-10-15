@@ -6,6 +6,7 @@ sealed stream. No pilot weights enter a restart student. No backbone is merged.
 """
 from __future__ import annotations
 import argparse
+import fcntl
 import hashlib
 import json
 import os
@@ -19,10 +20,12 @@ import torch
 import yaml
 from rankstudy.v3.checkpoint import json_write
 from rankstudy.v3.compression import checkpoint_modules,compress_modules,write_export
-from rankstudy.v3.pipeline import token_boundary,stage_seed,shuffle_compatible
+from rankstudy.v3.pipeline import token_boundary,stage_seed,shuffle_compatible,export_policy
+from rankstudy.v3.stage_execution import run_stage,attempt_costs,PlannedInterruption,complete_checkpoint
 
 
 def main():
+    global _OWNED_OUTPUT
     ap=argparse.ArgumentParser()
     ap.add_argument('--method',required=True); ap.add_argument('--out',type=Path,required=True)
     ap.add_argument('--seed',type=int,default=1001); ap.add_argument('--updates',type=int,default=128)
@@ -37,7 +40,13 @@ def main():
     ap.add_argument('--smoke',action='store_true'); ap.add_argument('--dev-limit',type=int,default=0)
     ap.add_argument('--deployment-export',action='store_true')
     ap.add_argument('--resume',action='store_true')
+    ap.add_argument('--interrupt-stage',choices=['pilot','student','source','recovery'])
+    ap.add_argument('--interrupt-after',type=int,default=4)
     a=ap.parse_args()
+    if not a.smoke:
+        gate=json.loads(Path('artifacts/protocol_execution_gate.json').read_text())
+        if not gate.get('v3_large_sweep_allowed'):
+            raise RuntimeError('primary v3 execution gate is closed; use --smoke only for declared engineering checks')
     specs={m['id']:m for m in yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']}
     spec=specs[a.method]
     restart=spec['group'] in {'restart','restart_control'}
@@ -45,16 +54,24 @@ def main():
     if not (restart or compress or a.deployment_export):
         raise ValueError('native non-pipelines must use run_one_v3.py')
     if a.dev_limit and not a.smoke: raise ValueError('partial dev is smoke-only')
+    if a.interrupt_stage and not a.smoke: raise ValueError('planned interruption is smoke-only')
     torch.set_num_threads(1)
-    config={k:str(v) if isinstance(v,Path) else v for k,v in vars(a).items() if k!='resume'}
+    config={k:str(v) if isinstance(v,Path) else v for k,v in vars(a).items()
+            if k not in {'resume','interrupt_stage','interrupt_after'}}
+    config['common_export_policy']='global_singular_energy' if a.deployment_export else None
     config_hash=hashlib.sha256(json.dumps(config,sort_keys=True).encode()).hexdigest()
+    a.out.mkdir(parents=True,exist_ok=True)
+    parent_lock=(a.out/'.pipeline.lock').open('a+')
+    fcntl.flock(parent_lock.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)
+    old=None
     if (a.out/'config.json').exists():
         if not a.resume or json.loads((a.out/'config.json').read_text())!=config:
             raise ValueError('immutable pipeline exists or resume configuration changed')
         old=json.loads((a.out/'metadata.json').read_text())
         if old['status']=='complete':
             print(json.dumps({'already_complete':str(a.out)})); return
-    a.out.mkdir(parents=True,exist_ok=True)
+        history=a.out/'parent_attempts';history.mkdir(exist_ok=True)
+        json_write(history/f'{len(list(history.glob("*.json"))):04d}.json',old)
     json_write(a.out/'config.json',config)
     manifest_path=a.manifest_root/f'train_seed{a.seed}.json'
     manifest=json.loads(manifest_path.read_text()); updates=manifest['updates'][:a.updates]
@@ -68,7 +85,10 @@ def main():
           'source_hashes':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in
               [Path(__file__),Path('scripts/run_one_v3.py'),*Path('src/rankstudy/v3').rglob('*.py')]},
           'standalone_pilot_charge':True,'physical_pilot_cache_savings_s':0.,'deployment_export':a.deployment_export}
+    if old and old['source_hashes']!=meta['source_hashes']:
+        raise ValueError('pipeline source changed; use a new run ID or an explicitly audited migration')
     json_write(a.out/'metadata.json',meta)
+    _OWNED_OUTPUT=a.out/'metadata.json'
     start=time.perf_counter(); stages=[]; transition_s=0.
 
     def stage(name,method,length,offset=0,stop=None,adapter_seed=None,pattern=None,initial=None,penalty=0.,final=False):
@@ -85,34 +105,22 @@ def main():
         if a.smoke: cmd+=['--smoke','--dev-limit',str(a.dev_limit)]
         if not final: cmd+=['--skip-eval']
         executed=length if stop is None else stop
-        end=out/f'checkpoint_{executed:04d}'
-        valid=False
-        if (out/'command.json').exists():
-            if json.loads((out/'command.json').read_text())!=cmd: raise ValueError('stage command changed')
-            md=json.loads((out/'metadata.json').read_text()) if (out/'metadata.json').exists() else {}
-            valid=(md.get('status') in {'complete','interrupted_checkpoint'} and (end/'manifest.json').exists())
-            # Never restart a still-live child after losing observation.
-            launch=json.loads((out/'launcher.json').read_text()) if (out/'launcher.json').exists() else {}
-            pid=launch.get('pid')
-            if pid and Path(f'/proc/{pid}/cmdline').exists() and str(out).encode() in Path(f'/proc/{pid}/cmdline').read_bytes():
-                raise RuntimeError('pipeline child is still live')
-        if not valid:
-            out.mkdir(exist_ok=True)
-            json_write(out/'command.json',cmd)
-            with (out/'stdout.log').open('a') as log:
-                proc=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT)
-                json_write(out/'launcher.json',{'pid':proc.pid,'command':cmd,'status':'running'})
-                code=proc.wait()
-            json_write(out/'launcher.json',{'pid':proc.pid,'command':cmd,'status':'complete' if code==0 else 'failed','returncode':code})
-            if code: raise RuntimeError(f'{name} failed; see {out}/stdout.log')
-        md=json.loads((out/'metadata.json').read_text())
+        end,md,execution=run_stage(out,cmd,executed,resume=a.resume,
+                                  interrupt_after=a.interrupt_after if a.interrupt_stage==name else None)
+        costs=attempt_costs(execution['attempts'])
         if stages and md['original_backbone_sha256']!=stages[0]['original_backbone_sha256']:
             raise ValueError('pipeline stages used different original backbones')
-        stages.append({'name':name,'metadata':str(out/'metadata.json'),'checkpoint':str(end),
+        stages.append({'name':name,'metadata':str(Path(execution['selected_attempt'])/'metadata.json'),'checkpoint':str(end),
                        'original_backbone_sha256':md['original_backbone_sha256'],
                        'input_tokens':md['input_tokens'],'supervised_tokens':md['supervised_tokens'],
-                       'charged_gpu_seconds':md['charged_gpu_seconds'],'setup_s':md['setup_s'],'evaluation_s':md['evaluation_s'],
-                       'cached_physical_execution':valid})
+                       'charged_gpu_seconds':sum(c['observed_training_gpu_seconds'] for c in costs),
+                       'logical_trajectory_gpu_seconds':md['charged_gpu_seconds'],
+                       'setup_s':sum(c['setup_s'] for c in costs),'evaluation_s':sum(c['evaluation_s'] for c in costs),
+                       'attempt_costs':costs,'process_wall_s':sum(c['process_wall_s'] or 0. for c in costs),
+                       'all_in_cost_complete':all(c['process_wall_s'] is not None for c in costs),
+                       'cached_physical_execution':execution['cached_physical_execution']})
+        meta['stages']=stages
+        json_write(a.out/'metadata.json',meta)
         return end,md
 
     if restart:
@@ -140,14 +148,32 @@ def main():
 
     if compress or a.deployment_export:
         begin=time.perf_counter()
-        source_modules=checkpoint_modules(source,sm['target_shapes'])
-        policy='global' if compress and 'GLOBAL_SVD' in a.method else 'uniform'
-        factors,pattern,receipt=compress_modules(source_modules,a.target_rank,a.scale,policy)
+        # One common deployment operator for every source family, including
+        # train/compress methods at their natural 75% event (never a second SVD).
+        # Native uniform/global compression cells remain distinct outside this
+        # new common pipeline. Identical common branches can be physically reused.
+        policy=export_policy(a.method,a.deployment_export)
         export=a.out/'ordinary_export'
-        if not export.exists():
+        if export.exists():
+            if not complete_checkpoint(export): raise ValueError('incomplete existing export; preserve and audit it')
+            desc=json.loads((export/'manifest.json').read_text())
+            if desc['source']['checkpoint']!=str(source): raise ValueError('cached export has another source')
+            receipt=json.loads((export/'compression.json').read_text())
+            if receipt['policy']!=policy or receipt['export_scale']!=a.scale: raise ValueError('cached export policy changed')
+            transition_s=json.loads((export/'transition_accounting.json').read_text())['transition_s']
+            meta['physical_transition_cache_savings_s']=transition_s
+        else:
+            source_modules=checkpoint_modules(source,sm['target_shapes'])
+            factors,pattern,receipt=compress_modules(source_modules,a.target_rank,a.scale,policy)
+            if a.deployment_export and receipt['allocation']['underspend']:
+                # Never silently call a smaller equal-cost export size-matched.
+                costs={m.base.in_features+m.base.out_features for m in source_modules.values()}
+                if len(costs)==1:
+                    raise ValueError('common equal-cost export cannot fill its declared budget')
             write_export(export,factors,a.scale,receipt,{'checkpoint':str(source),'original_backbone_sha256':sm['original_backbone_sha256'],
                          'model':a.model,'target_shapes':sm['target_shapes']})
-        transition_s+=time.perf_counter()-begin
+            transition_s=time.perf_counter()-begin
+            json_write(export/'transition_accounting.json',{'transition_s':transition_s})
         final,fm=stage('recovery','L_FIXED',a.updates-source_end,offset=source_end,
                        adapter_seed=stage_seed(a.seed,'recovery'),initial=export,final=True)
         meta.update(export_boundary=cut_receipt,compression_policy=policy,export=str(export),
@@ -163,6 +189,8 @@ def main():
                 charged_gpu_seconds=sum(s['charged_gpu_seconds'] for s in stages)+transition_s,
                 transition_s=transition_s,setup_s=sum(s['setup_s'] for s in stages),
                 evaluation_s=sum(s['evaluation_s'] for s in stages),wall_s=time.perf_counter()-start,
+                standalone_stage_process_wall_s=sum(s['process_wall_s'] for s in stages),
+                all_in_cost_complete=all(s['all_in_cost_complete'] for s in stages),
                 original_backbone_sha256=fm['original_backbone_sha256'],backbone_unchanged=fm['backbone_unchanged'],
                 dev_tune_endpoint_group_balanced_nll=fm['dev_tune_endpoint_group_balanced_nll'],
                 dev_tune_endpoint_token_weighted_nll=fm['dev_tune_endpoint_token_weighted_nll'])
@@ -175,8 +203,9 @@ if __name__=='__main__':
     except BaseException as exc:
         if '--out' in sys.argv:
             path=Path(sys.argv[sys.argv.index('--out')+1])/'metadata.json'
-            if path.exists():
+            if path.exists() and globals().get('_OWNED_OUTPUT')==path:
                 md=json.loads(path.read_text())
                 if md.get('status')=='running':
-                    md.update(status='failed',failure_reason=f'{type(exc).__name__}: {exc}');json_write(path,md)
+                    md.update(status='interrupted_checkpoint' if isinstance(exc,PlannedInterruption) else 'failed',
+                              failure_reason=f'{type(exc).__name__}: {exc}');json_write(path,md)
         raise

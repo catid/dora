@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "scope": "FP32-arithmetic diagnostic with independently evolving DDP/single-process I_GATE trajectories",
+  "failure_step": 2,
+  "gradient_relative_l2_error": 4.396460553834913e-06,
+  "maximum_parameter_absolute_difference": 1.5166675439104438e-05,
+  "required_parameter_tolerance": 2e-06,
+  "log": "/var/tmp/dora-adaptive-rank/v3_ddp_fp32_trajectory_20261015.log",
+  "interpretation": "Same-checkpoint gradient parity passes separately; free-trajectory parity is not established even with FP32 arithmetic. Do not claim DDP trajectory equivalence or attribute all discrepancy solely to BF16."
+}

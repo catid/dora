@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "method": "L_FIXED",
+      "parameter_count": 1376256,
+      "factor_bytes": 5505024,
+      "tensor_payload_bytes": 5509504,
+      "safetensors_file_bytes": 5537448,
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_global_export_20261015/L_FIXED/metadata.json"
+    },
+    {
+      "method": "L_PILOT_I_STUDENT",
+      "parameter_count": 1376256,
+      "factor_bytes": 5505024,
+      "tensor_payload_bytes": 5509504,
+      "safetensors_file_bytes": 5537560,
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_global_export_20261015/L_PILOT_I_STUDENT/metadata.json"
+    },
+    {
+      "method": "T0_GATE",
+      "parameter_count": 1376256,
+      "factor_bytes": 5505024,
+      "tensor_payload_bytes": 5509504,
+      "safetensors_file_bytes": 5537520,
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_global_export_20261015/T0_GATE/metadata.json"
+    },
+    {
+      "method": "T1_GATE_ORTHO",
+      "parameter_count": 1376256,
+      "factor_bytes": 5505024,
+      "tensor_payload_bytes": 5509504,
+      "safetensors_file_bytes": 5537552,
+      "metadata": "/var/tmp/dora-adaptive-rank/runs/v3_pipeline_global_export_20261015/T1_GATE_ORTHO/metadata.json"
+    }
+  ],
+  "note": "Factor payload sizes match; safetensors header and source metadata sizes are separately reported."
+}
