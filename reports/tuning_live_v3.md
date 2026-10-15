@@ -26,7 +26,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | L_FIXED | 4 / 4 | 0.198818 ± 0.002594 | 0.196423–0.201388 |
 | L_GATE | 3 / 4 | 0.198008 ± 0.001854 | 0.195926–0.199482 |
 | L_GATE_UNCERTAINTY | 4 / 4 | 0.197353 ± 0.001927 | 0.195420–0.199256 |
-| L_GLOBAL_RANDOM | 3 / 4 | 0.197442 ± 0.002001 | 0.195996–0.199725 |
+| L_GLOBAL_RANDOM | 4 / 4 | 0.197939 ± 0.001912 | 0.195996–0.199725 |
 | L_GLOBAL_SVD | 4 / 4 | 0.197339 ± 0.000585 | 0.196809–0.197992 |
 | L_PILOT_I_STUDENT | 3 / 4 | 0.203320 ± 0.000563 | 0.202697–0.203792 |
 | L_PILOT_L_STUDENT | 4 / 4 | 0.200152 ± 0.002576 | 0.197741–0.202441 |
@@ -46,6 +46,6 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T1_GATE | 4 / 4 | 0.201913 ± 0.001267 | 0.200442–0.203520 |
 | T1_GATE_ORTHO | 4 / 4 | 0.202105 ± 0.001196 | 0.200577–0.203438 |
 
-Terminal launcher records: **152**; counts: `{'complete': 148, 'running': 4}`.
+Terminal launcher records: **153**; counts: `{'complete': 149, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
