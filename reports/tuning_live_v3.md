@@ -16,7 +16,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | I_PILOT_L_STUDENT | 2 / 4 | 0.200306 ± 0.002896 | 0.198258–0.202354 |
 | I_RAW | 3 / 4 | 0.201626 ± 0.001754 | 0.200026–0.203501 |
 | I_RAW_UNCERTAINTY | 3 / 4 | 0.201518 ± 0.000780 | 0.200862–0.202381 |
-| I_SHUFFLED_SELF_RESTART | 0 / 4 | pending | pending |
+| I_SHUFFLED_SELF_RESTART | 1 / 4 | 0.203446 ± 0.000000 | 0.203446–0.203446 |
 | I_UNIFORM_GATE | 3 / 4 | 0.202288 ± 0.000566 | 0.201852–0.202927 |
 | I_UNIFORM_RESTART | 4 / 4 | 0.207202 ± 0.005036 | 0.202699–0.212034 |
 | I_UNIFORM_SVD | 1 / 4 | 0.202631 ± 0.000000 | 0.202631–0.202631 |
@@ -26,15 +26,15 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | L_FIXED | 3 / 4 | 0.199507 ± 0.002692 | 0.196423–0.201388 |
 | L_GATE | 3 / 4 | 0.198008 ± 0.001854 | 0.195926–0.199482 |
 | L_GATE_UNCERTAINTY | 3 / 4 | 0.197806 ± 0.002083 | 0.195420–0.199256 |
-| L_GLOBAL_RANDOM | 2 / 4 | 0.196301 ± 0.000431 | 0.195996–0.196605 |
+| L_GLOBAL_RANDOM | 3 / 4 | 0.197442 ± 0.002001 | 0.195996–0.199725 |
 | L_GLOBAL_SVD | 4 / 4 | 0.197339 ± 0.000585 | 0.196809–0.197992 |
 | L_PILOT_I_STUDENT | 1 / 4 | 0.202697 ± 0.000000 | 0.202697–0.202697 |
 | L_PILOT_L_STUDENT | 2 / 4 | 0.202379 ± 0.000089 | 0.202316–0.202441 |
 | L_RAW | 3 / 4 | 0.197828 ± 0.002069 | 0.195467–0.199323 |
 | L_RAW_UNCERTAINTY | 2 / 4 | 0.195740 ± 0.000441 | 0.195428–0.196052 |
 | L_SHUFFLED_SELF_RESTART | 2 / 4 | 0.203968 ± 0.000127 | 0.203878–0.204058 |
-| L_UNIFORM_GATE | 1 / 4 | 0.199474 ± 0.000000 | 0.199474–0.199474 |
-| L_UNIFORM_RESTART | 2 / 4 | 0.200698 ± 0.003344 | 0.198333–0.203062 |
+| L_UNIFORM_GATE | 2 / 4 | 0.199326 ± 0.000209 | 0.199179–0.199474 |
+| L_UNIFORM_RESTART | 3 / 4 | 0.199931 ± 0.002712 | 0.198333–0.203062 |
 | L_UNIFORM_SVD | 2 / 4 | 0.196762 ± 0.000174 | 0.196639–0.196885 |
 | L_WIDE | 2 / 4 | 0.196524 ± 0.001970 | 0.195131–0.197916 |
 | T0_FIXED | 2 / 4 | 0.238738 ± 0.000448 | 0.238421–0.239055 |
@@ -46,6 +46,6 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T1_GATE | 2 / 4 | 0.201981 ± 0.002177 | 0.200442–0.203520 |
 | T1_GATE_ORTHO | 2 / 4 | 0.202204 ± 0.000401 | 0.201920–0.202487 |
 
-Terminal launcher records: **107**; counts: `{'complete': 103, 'running': 4}`.
+Terminal launcher records: **111**; counts: `{'complete': 107, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
