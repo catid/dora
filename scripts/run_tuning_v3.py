@@ -41,7 +41,10 @@ def main():
             for seed in map(int,args.seeds.split(',')):
                 out=args.out_root/f"{spec['id']}_c{cfg['trial_index']:02d}_s{seed}"
                 if args.resume and (out/'metadata.json').exists(): continue
-                out.mkdir(parents=True,exist_ok=True);jobs.append({'method':spec['id'],'lr':cfg['lr'],'scale':cfg['scale'],'penalty':cfg.get('penalty',0.),'trial_index':cfg['trial_index'],'seed':seed,'out':str(out),'pipeline':spec['group'] in {'restart','restart_control','compress'}})
+                out.mkdir(parents=True,exist_ok=True)
+                tuning_cfg={'method':spec['id'],'lr':cfg['lr'],'scale':cfg['scale'],'penalty':cfg.get('penalty',0.),'trial_index':cfg['trial_index'],'seed':seed,'hpo_score':item['hpo_score']}
+                (out/'tuning_config.json').write_text(json.dumps(tuning_cfg,indent=2)+'\n')
+                jobs.append({**tuning_cfg,'out':str(out),'pipeline':spec['group'] in {'restart','restart_control','compress'}})
     rng=random.Random(20261016);rng.shuffle(jobs);gpus=[x.strip() for x in args.gpus.split(',') if x.strip()];free=list(gpus);active={};i=0
     def launch(job,gpu):
         out=Path(job['out']); cmd=[sys.executable,'scripts/run_pipeline_v3.py' if job['pipeline'] else 'scripts/run_one_v3.py','--method',job['method'],'--out',str(out),'--updates',str(args.updates),'--seed',str(job['seed']),'--lr',str(job['lr']),'--scale',str(job['scale']),'--penalty',str(job['penalty']),'--model',args.model,'--data-root',str(args.data_root),'--manifest-root',str(args.manifest_root)]
