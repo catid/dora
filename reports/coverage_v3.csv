@@ -532,7 +532,7 @@ B_screen_L_ACT_s2001,B_screen,L_ACT,,pending,,,
 B_screen_L_ACT_s2002,B_screen,L_ACT,,pending,,,
 B_screen_L_ACT_s2003,B_screen,L_ACT,,pending,,,
 B_hpo_L_UNIFORM_GATE_c00,B_hpo,L_UNIFORM_GATE,,pending,,,
-B_hpo_L_UNIFORM_GATE_c01,B_hpo,L_UNIFORM_GATE,,pending,,,
+B_hpo_L_UNIFORM_GATE_c01,B_hpo,L_UNIFORM_GATE,,pending,terminal receipt pending; inspect live PID separately,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_UNIFORM_GATE_c01/metadata.json
 B_hpo_L_UNIFORM_GATE_c02,B_hpo,L_UNIFORM_GATE,,pending,,,
 B_hpo_L_UNIFORM_GATE_c03,B_hpo,L_UNIFORM_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_UNIFORM_GATE_c03/metadata.json
 B_hpo_L_UNIFORM_GATE_c04,B_hpo,L_UNIFORM_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_UNIFORM_GATE_c04/metadata.json
@@ -594,9 +594,9 @@ B_tune_I_RAW_c1_s1003,B_tuning,I_RAW,,pending,,,
 B_screen_I_RAW_s2001,B_screen,I_RAW,,pending,,,
 B_screen_I_RAW_s2002,B_screen,I_RAW,,pending,,,
 B_screen_I_RAW_s2003,B_screen,I_RAW,,pending,,,
-B_hpo_I_GATE_c00,B_hpo,I_GATE,,pending,terminal receipt pending; inspect live PID separately,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_c00/metadata.json
+B_hpo_I_GATE_c00,B_hpo,I_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_c00/metadata.json
 B_hpo_I_GATE_c01,B_hpo,I_GATE,,pending,,,
-B_hpo_I_GATE_c02,B_hpo,I_GATE,,pending,,,
+B_hpo_I_GATE_c02,B_hpo,I_GATE,,pending,terminal receipt pending; inspect live PID separately,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_c02/metadata.json
 B_hpo_I_GATE_c03,B_hpo,I_GATE,,pending,,,
 B_hpo_I_GATE_c04,B_hpo,I_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_c04/metadata.json
 B_hpo_I_GATE_c05,B_hpo,I_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_c05/metadata.json
@@ -605,7 +605,7 @@ B_hpo_I_GATE_c07,B_hpo,I_GATE,,pending,,,
 B_hpo_I_GATE_c08,B_hpo,I_GATE,,pending,,,
 B_hpo_I_GATE_c09,B_hpo,I_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_c09/metadata.json
 B_hpo_I_GATE_c10,B_hpo,I_GATE,,pending,,,
-B_hpo_I_GATE_c11,B_hpo,I_GATE,,pending,,,
+B_hpo_I_GATE_c11,B_hpo,I_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GATE_c11/metadata.json
 B_rescue_I_GATE_1,B_rescue,I_GATE,,pending,,best_valid_lr_is_boundary_or_all_failed,
 B_rescue_I_GATE_2,B_rescue,I_GATE,,pending,,best_valid_lr_is_boundary_or_all_failed,
 B_tune_I_GATE_c0_s1002,B_tuning,I_GATE,,pending,,,
@@ -636,7 +636,7 @@ B_tune_I_DISP_c1_s1003,B_tuning,I_DISP,,pending,,,
 B_screen_I_DISP_s2001,B_screen,I_DISP,,pending,,,
 B_screen_I_DISP_s2002,B_screen,I_DISP,,pending,,,
 B_screen_I_DISP_s2003,B_screen,I_DISP,,pending,,,
-B_hpo_I_ACT_c00,B_hpo,I_ACT,,pending,,,
+B_hpo_I_ACT_c00,B_hpo,I_ACT,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_ACT_c00/metadata.json
 B_hpo_I_ACT_c01,B_hpo,I_ACT,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_ACT_c01/metadata.json
 B_hpo_I_ACT_c02,B_hpo,I_ACT,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_ACT_c02/metadata.json
 B_hpo_I_ACT_c03,B_hpo,I_ACT,,pending,,,
@@ -701,7 +701,7 @@ B_screen_I_GLOBAL_RANDOM_s2002,B_screen,I_GLOBAL_RANDOM,,pending,,,
 B_screen_I_GLOBAL_RANDOM_s2003,B_screen,I_GLOBAL_RANDOM,,pending,,,
 B_hpo_T0_FIXED_c00,B_hpo,T0_FIXED,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T0_FIXED_c00/metadata.json
 B_hpo_T0_FIXED_c01,B_hpo,T0_FIXED,,pending,,,
-B_hpo_T0_FIXED_c02,B_hpo,T0_FIXED,,pending,terminal receipt pending; inspect live PID separately,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T0_FIXED_c02/metadata.json
+B_hpo_T0_FIXED_c02,B_hpo,T0_FIXED,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T0_FIXED_c02/metadata.json
 B_hpo_T0_FIXED_c03,B_hpo,T0_FIXED,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T0_FIXED_c03/metadata.json
 B_hpo_T0_FIXED_c04,B_hpo,T0_FIXED,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T0_FIXED_c04/metadata.json
 B_hpo_T0_FIXED_c05,B_hpo,T0_FIXED,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T0_FIXED_c05/metadata.json
@@ -804,7 +804,7 @@ B_tune_T1_FIXED_c1_s1003,B_tuning,T1_FIXED,,pending,,,
 B_screen_T1_FIXED_s2001,B_screen,T1_FIXED,,pending,,,
 B_screen_T1_FIXED_s2002,B_screen,T1_FIXED,,pending,,,
 B_screen_T1_FIXED_s2003,B_screen,T1_FIXED,,pending,,,
-B_hpo_T1_GATE_c00,B_hpo,T1_GATE,,pending,,,
+B_hpo_T1_GATE_c00,B_hpo,T1_GATE,,pending,terminal receipt pending; inspect live PID separately,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T1_GATE_c00/metadata.json
 B_hpo_T1_GATE_c01,B_hpo,T1_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T1_GATE_c01/metadata.json
 B_hpo_T1_GATE_c02,B_hpo,T1_GATE,,pending,,,
 B_hpo_T1_GATE_c03,B_hpo,T1_GATE,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/T1_GATE_c03/metadata.json
@@ -890,8 +890,8 @@ B_screen_L_PILOT_L_STUDENT_s2002,B_screen,L_PILOT_L_STUDENT,,pending,,,
 B_screen_L_PILOT_L_STUDENT_s2003,B_screen,L_PILOT_L_STUDENT,,pending,,,
 B_hpo_L_PILOT_I_STUDENT_c00,B_hpo,L_PILOT_I_STUDENT,,pending,,,
 B_hpo_L_PILOT_I_STUDENT_c01,B_hpo,L_PILOT_I_STUDENT,,pending,,,
-B_hpo_L_PILOT_I_STUDENT_c02,B_hpo,L_PILOT_I_STUDENT,,pending,terminal receipt pending; inspect live PID separately,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_PILOT_I_STUDENT_c02/metadata.json
-B_hpo_L_PILOT_I_STUDENT_c03,B_hpo,L_PILOT_I_STUDENT,,pending,terminal receipt pending; inspect live PID separately,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_PILOT_I_STUDENT_c03/metadata.json
+B_hpo_L_PILOT_I_STUDENT_c02,B_hpo,L_PILOT_I_STUDENT,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_PILOT_I_STUDENT_c02/metadata.json
+B_hpo_L_PILOT_I_STUDENT_c03,B_hpo,L_PILOT_I_STUDENT,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_PILOT_I_STUDENT_c03/metadata.json
 B_hpo_L_PILOT_I_STUDENT_c04,B_hpo,L_PILOT_I_STUDENT,,pending,,,
 B_hpo_L_PILOT_I_STUDENT_c05,B_hpo,L_PILOT_I_STUDENT,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_PILOT_I_STUDENT_c05/metadata.json
 B_hpo_L_PILOT_I_STUDENT_c06,B_hpo,L_PILOT_I_STUDENT,,pending,,,
@@ -1014,7 +1014,7 @@ B_tune_I_UNIFORM_RESTART_c1_s1003,B_tuning,I_UNIFORM_RESTART,,pending,,,
 B_screen_I_UNIFORM_RESTART_s2001,B_screen,I_UNIFORM_RESTART,,pending,,,
 B_screen_I_UNIFORM_RESTART_s2002,B_screen,I_UNIFORM_RESTART,,pending,,,
 B_screen_I_UNIFORM_RESTART_s2003,B_screen,I_UNIFORM_RESTART,,pending,,,
-B_hpo_I_SHUFFLED_SELF_RESTART_c00,B_hpo,I_SHUFFLED_SELF_RESTART,,pending,,,
+B_hpo_I_SHUFFLED_SELF_RESTART_c00,B_hpo,I_SHUFFLED_SELF_RESTART,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_SHUFFLED_SELF_RESTART_c00/metadata.json
 B_hpo_I_SHUFFLED_SELF_RESTART_c01,B_hpo,I_SHUFFLED_SELF_RESTART,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_SHUFFLED_SELF_RESTART_c01/metadata.json
 B_hpo_I_SHUFFLED_SELF_RESTART_c02,B_hpo,I_SHUFFLED_SELF_RESTART,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_SHUFFLED_SELF_RESTART_c02/metadata.json
 B_hpo_I_SHUFFLED_SELF_RESTART_c03,B_hpo,I_SHUFFLED_SELF_RESTART,,pending,,,
@@ -1038,7 +1038,7 @@ B_screen_I_SHUFFLED_SELF_RESTART_s2003,B_screen,I_SHUFFLED_SELF_RESTART,,pending
 B_hpo_L_UNIFORM_SVD_c00,B_hpo,L_UNIFORM_SVD,,pending,,,
 B_hpo_L_UNIFORM_SVD_c01,B_hpo,L_UNIFORM_SVD,,pending,,,
 B_hpo_L_UNIFORM_SVD_c02,B_hpo,L_UNIFORM_SVD,,pending,,,
-B_hpo_L_UNIFORM_SVD_c03,B_hpo,L_UNIFORM_SVD,,pending,,,
+B_hpo_L_UNIFORM_SVD_c03,B_hpo,L_UNIFORM_SVD,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/L_UNIFORM_SVD_c03/metadata.json
 B_hpo_L_UNIFORM_SVD_c04,B_hpo,L_UNIFORM_SVD,,pending,,,
 B_hpo_L_UNIFORM_SVD_c05,B_hpo,L_UNIFORM_SVD,,pending,,,
 B_hpo_L_UNIFORM_SVD_c06,B_hpo,L_UNIFORM_SVD,,pending,,,
@@ -1108,7 +1108,7 @@ B_hpo_I_GLOBAL_SVD_c06,B_hpo,I_GLOBAL_SVD,,passed,,,/var/tmp/dora-adaptive-rank/
 B_hpo_I_GLOBAL_SVD_c07,B_hpo,I_GLOBAL_SVD,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GLOBAL_SVD_c07/metadata.json
 B_hpo_I_GLOBAL_SVD_c08,B_hpo,I_GLOBAL_SVD,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GLOBAL_SVD_c08/metadata.json
 B_hpo_I_GLOBAL_SVD_c09,B_hpo,I_GLOBAL_SVD,,pending,,,
-B_hpo_I_GLOBAL_SVD_c10,B_hpo,I_GLOBAL_SVD,,pending,,,
+B_hpo_I_GLOBAL_SVD_c10,B_hpo,I_GLOBAL_SVD,,pending,terminal receipt pending; inspect live PID separately,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GLOBAL_SVD_c10/metadata.json
 B_hpo_I_GLOBAL_SVD_c11,B_hpo,I_GLOBAL_SVD,,passed,,,/var/tmp/dora-adaptive-rank/runs/v3_hpo_20261015_retry/I_GLOBAL_SVD_c11/metadata.json
 B_rescue_I_GLOBAL_SVD_1,B_rescue,I_GLOBAL_SVD,,pending,,best_valid_lr_is_boundary_or_all_failed,
 B_rescue_I_GLOBAL_SVD_2,B_rescue,I_GLOBAL_SVD,,pending,,best_valid_lr_is_boundary_or_all_failed,

@@ -5,10 +5,10 @@ This is a progress report over the corrected 492-trial short search. It is descr
 | Method | Complete / 12 | Endpoint dev NLL mean ± SD | Range |
 |:--|--:|--:|--:|
 | ADALORA_REF | 3 / 12 | 0.518754 ± 0.000175 | 0.518552–0.518859 |
-| I_ACT | 8 / 12 | 0.306835 ± 0.098345 | 0.222588–0.489668 |
+| I_ACT | 9 / 12 | 0.329680 ± 0.114717 | 0.222588–0.512445 |
 | I_DISP | 7 / 12 | 0.303470 ± 0.096604 | 0.216372–0.478609 |
 | I_FIXED | 4 / 12 | 0.340662 ± 0.139711 | 0.221909–0.493353 |
-| I_GATE | 3 / 12 | 0.255488 ± 0.046164 | 0.218244–0.307137 |
+| I_GATE | 5 / 12 | 0.328135 ± 0.116432 | 0.218244–0.509153 |
 | I_GATE_UNCERTAINTY | 6 / 12 | 0.297643 ± 0.117097 | 0.218104–0.509365 |
 | I_GLOBAL_RANDOM | 5 / 12 | 0.340218 ± 0.105668 | 0.232720–0.512914 |
 | I_GLOBAL_SVD | 6 / 12 | 0.284525 ± 0.077784 | 0.219286–0.418750 |
@@ -16,7 +16,7 @@ This is a progress report over the corrected 492-trial short search. It is descr
 | I_PILOT_L_STUDENT | 8 / 12 | 0.420747 ± 0.128706 | 0.217858–0.518761 |
 | I_RAW | 8 / 12 | 0.354444 ± 0.119387 | 0.217045–0.509301 |
 | I_RAW_UNCERTAINTY | 4 / 12 | 0.296590 ± 0.086522 | 0.217094–0.386112 |
-| I_SHUFFLED_SELF_RESTART | 7 / 12 | 0.317017 ± 0.111377 | 0.220009–0.499176 |
+| I_SHUFFLED_SELF_RESTART | 8 / 12 | 0.341701 ± 0.124528 | 0.220009–0.514490 |
 | I_UNIFORM_GATE | 7 / 12 | 0.331978 ± 0.100279 | 0.215199–0.485629 |
 | I_UNIFORM_RESTART | 8 / 12 | 0.367174 ± 0.107916 | 0.225239–0.514304 |
 | I_UNIFORM_SVD | 4 / 12 | 0.250734 ± 0.039546 | 0.219311–0.302080 |
@@ -28,16 +28,16 @@ This is a progress report over the corrected 492-trial short search. It is descr
 | L_GATE_UNCERTAINTY | 4 / 12 | 0.441889 ± 0.153382 | 0.211817–0.518862 |
 | L_GLOBAL_RANDOM | 3 / 12 | 0.336049 ± 0.158482 | 0.231752–0.518422 |
 | L_GLOBAL_SVD | 3 / 12 | 0.381410 ± 0.113273 | 0.283405–0.505426 |
-| L_PILOT_I_STUDENT | 2 / 12 | 0.235002 ± 0.024522 | 0.217662–0.252341 |
+| L_PILOT_I_STUDENT | 4 / 12 | 0.333333 ± 0.115349 | 0.217662–0.449528 |
 | L_PILOT_L_STUDENT | 5 / 12 | 0.457405 ± 0.089120 | 0.317666–0.519003 |
 | L_RAW | 6 / 12 | 0.322825 ± 0.133430 | 0.212390–0.508495 |
 | L_RAW_UNCERTAINTY | 5 / 12 | 0.445972 ± 0.132266 | 0.211821–0.518997 |
 | L_SHUFFLED_SELF_RESTART | 5 / 12 | 0.480690 ± 0.074945 | 0.347447–0.518885 |
 | L_UNIFORM_GATE | 7 / 12 | 0.349011 ± 0.128371 | 0.219916–0.518360 |
 | L_UNIFORM_RESTART | 6 / 12 | 0.475074 ± 0.068965 | 0.345725–0.518914 |
-| L_UNIFORM_SVD | 1 / 12 | 0.283383 ± 0.000000 | 0.283383–0.283383 |
+| L_UNIFORM_SVD | 2 / 12 | 0.400438 ± 0.165540 | 0.283383–0.517493 |
 | L_WIDE | 2 / 12 | 0.373215 ± 0.204818 | 0.228387–0.518044 |
-| T0_FIXED | 7 / 12 | 0.436588 ± 0.108476 | 0.281537–0.518773 |
+| T0_FIXED | 8 / 12 | 0.446795 ± 0.104497 | 0.281537–0.518773 |
 | T0_FIXED_ORTHO | 6 / 12 | 0.477851 ± 0.091180 | 0.291930–0.518770 |
 | T0_GATE | 5 / 12 | 0.421054 ± 0.102714 | 0.268250–0.514341 |
 | T0_GATE_ORTHO | 6 / 12 | 0.359382 ± 0.104907 | 0.268198–0.514410 |
@@ -46,6 +46,6 @@ This is a progress report over the corrected 492-trial short search. It is descr
 | T1_GATE | 4 / 12 | 0.344225 ± 0.128124 | 0.228371–0.477914 |
 | T1_GATE_ORTHO | 3 / 12 | 0.266597 ± 0.084710 | 0.216708–0.364405 |
 
-Terminal launcher records: **217**; counts: `{'complete': 213, 'running': 4}`.
+Terminal launcher records: **225**; counts: `{'complete': 221, 'running': 4}`.
 
 The endpoint is development loss from the short horizon, not a final quality result.
