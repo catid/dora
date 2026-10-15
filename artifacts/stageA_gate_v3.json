@@ -1,0 +1,31 @@
+{
+  "schema": "rankstudy-v3-stageA-gate",
+  "status": "passed",
+  "primary_execution_allowed": true,
+  "selection_eligible": false,
+  "tests": {
+    "pytest": "artifacts/tests_v3_stageA_gate_20261015.xml",
+    "count": 86
+  },
+  "deletion_records": [
+    "artifacts/deletion_diagnostics_v3/I_GATE_p0.2.json",
+    "artifacts/deletion_diagnostics_v3/I_GATE_p0.5.json",
+    "artifacts/deletion_diagnostics_v3/I_GATE_p0.75.json",
+    "artifacts/deletion_diagnostics_v3/L_GATE_p0.2.json",
+    "artifacts/deletion_diagnostics_v3/L_GATE_p0.5.json",
+    "artifacts/deletion_diagnostics_v3/L_GATE_p0.75.json"
+  ],
+  "mechanism": "artifacts/mechanism_diagnostics_v3.json",
+  "generation_preflight": "artifacts/generation_preflight_v3.json",
+  "instrumentation_smokes": [
+    "/var/tmp/dora-adaptive-rank/runs/v3_instrumentation_smokes_20261015/ADALORA_REF/metadata.json",
+    "/var/tmp/dora-adaptive-rank/runs/v3_instrumentation_smokes_20261015/I_ACT/metadata.json",
+    "/var/tmp/dora-adaptive-rank/runs/v3_instrumentation_smokes_20261015/L_GATE/metadata.json",
+    "/var/tmp/dora-adaptive-rank/runs/v3_instrumentation_smokes_20261015/T1_GATE_ORTHO/metadata.json"
+  ],
+  "limitations": [
+    "DDP free-running trajectory equivalence remains unproven; primary topology is single GPU.",
+    "BF16 full-model export strict logit parity failures remain disclosed; FP32 arithmetic oracles pass.",
+    "Official and dev_audit evaluation remains sealed."
+  ]
+}

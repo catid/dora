@@ -69,5 +69,8 @@ def test_rejected_invocation_does_not_corrupt_an_existing_running_record(tmp_pat
     env=os.environ.copy();env['CUDA_VISIBLE_DEVICES']=''
     result=subprocess.run([sys.executable,script,'--method','L_FIXED','--out',str(out)],env=env,capture_output=True,text=True)
     assert result.returncode!=0
-    assert 'gate is closed' in result.stderr
+    # The gate may be open after Stage A admission. The safety invariant is
+    # that an invalid invocation is rejected before touching another process's
+    # terminal/running record; the exact rejection reason is runner-specific.
+    assert result.stderr
     assert record.read_bytes()==original

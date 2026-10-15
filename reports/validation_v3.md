@@ -9,6 +9,9 @@
 | Conservative BF16 export parity fails for four cases | Update reconstruction and FP32 checks pass, but BF16 rounding changes full-model logits; raw distortion remains reported, not relabeled exact numerical equality. |
 | DDP matches at identical checkpoints | Four real-model cases × four updates pass through no_sync accumulation, unequal token counts, pruning and DDP/optimizer rebuild. |
 | Independent DDP trajectories do not meet strict tolerances | BF16 gradient and FP32 parameter checks failed at update two; free-trajectory equivalence remains unproven. Primary runs stay on one GPU. |
+| Shadow score/deletion diagnostics complete | L_GATE and I_GATE were replayed at exact 20/50/75% token progress. RAW/GATE/DISP/ACT scores were compared with signed single-slot damage and joint top/bottom groups; all six records restored adapter tensors and RNG state. |
+| Mechanism probes complete | Signed first-order, finite-difference curvature, interacting deletion, and gauge-rescaling probes pass on deterministic L/I toy adapters; they remain shadow diagnostics. |
+| Primary instrumentation complete | Native receipts record clipping frequency, effective update norm, parameter norm, score overhead, and peak memory. |
 
 ## Export checks
 
@@ -29,6 +32,10 @@ The presealed 64-example training probe is used in every case. FP32 rows promote
 
 All thresholds and failed records remain preserved. Passing the FP32 oracle does not erase the BF16 failure. DDP comparisons at identical states do not prove independent trajectories remain identical. Neither diagnostic establishes a quality winner.
 
-Primary tuning, independent screening, confirmation, equal-compute/export quality comparisons, 7B and official benchmark evaluations remain pending. Generation/parser validation and shadow deletion/curvature/gauge/restoration work remain open.
+The v3 Stage A gate is passed (`artifacts/stageA_gate_v3.json`) and the balanced
+492-trial HPO queue is running. Independent screening, confirmation,
+equal-compute/export quality comparisons, 7B, and official benchmark evaluations
+remain pending. Generation/parser work is currently only a public TRAIN preflight;
+it is not an official quality result.
 
 Commands: `scripts/check_export_v3.py`, `scripts/check_llm_ddp_v3.py`, `scripts/smoke_registry_v3.py`; exact invocations are stored with each raw run.

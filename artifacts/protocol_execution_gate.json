@@ -2,8 +2,9 @@
   "schema": "rankstudy-execution-gate-v1",
   "v2_primary_selection_allowed": false,
   "v2_new_training_allowed": false,
-  "v3_large_sweep_allowed": false,
-  "reason": "Complete generation/parser, shadow diagnostic/restoration, primary instrumentation and balanced HPO queue checks before opening primary execution.",
+  "v3_large_sweep_allowed": true,
+  "reason": "Stage A gate passed: generation/parser preflight, exact-progress shadow deletion/restoration, mechanism diagnostics, instrumentation smokes, and 86-test suite.",
+  "stageA_gate_receipt": "artifacts/stageA_gate_v3.json",
   "audit": "reports/protocol_v2_audit.md",
   "completed_evidence": {
     "all_41_gpu_smokes": "artifacts/v3_registry_smoke_audit.json",

@@ -1,0 +1,71 @@
+{
+  "schema": "rankstudy-v3-mechanism-diagnostics",
+  "status": "complete",
+  "selection_eligible": false,
+  "results": [
+    {
+      "init": "L",
+      "seed": 2903,
+      "base_loss": 1.4302680492401123,
+      "signed_first_order_deletion": [
+        -0.0028112793806940317,
+        -0.003615396562963724,
+        -0.018048731610178947,
+        -0.005978490225970745
+      ],
+      "actual_single_deletion": [
+        -0.0019767284393310547,
+        6.854534149169922e-05,
+        -0.015642166137695312,
+        -0.005513668060302734
+      ],
+      "curvature_proxy": [
+        0.0,
+        0.00476837158203125,
+        0.0035762786865234375,
+        -0.002384185791015625
+      ],
+      "pair_deletion_01": -0.0019075870513916016,
+      "pair_interaction_01": 5.960464477539062e-07,
+      "gauge_forward_abs_delta": 0.0,
+      "adapter_digest_before": "d3d7c025bd9e3b98e555f69c31c58547652b2dc6997b284c2e0777ec9bab5e92",
+      "adapter_digest_after_probe": "d3d7c025bd9e3b98e555f69c31c58547652b2dc6997b284c2e0777ec9bab5e92",
+      "rng_digest_before": "634920d55845bad196bc76f0c1846b5f3d64e05069129a2da70135e806c0aa40",
+      "restoration_verified": true,
+      "restoration_expected": true,
+      "status": "passed"
+    },
+    {
+      "init": "I",
+      "seed": 2904,
+      "base_loss": 1.276328206062317,
+      "signed_first_order_deletion": [
+        -0.009618123061954975,
+        -0.13371743261814117,
+        -0.013844967819750309,
+        -0.3946206271648407
+      ],
+      "actual_single_deletion": [
+        0.012671470642089844,
+        0.011518597602844238,
+        0.08870065212249756,
+        -0.16433024406433105
+      ],
+      "curvature_proxy": [
+        0.04410743713378906,
+        0.2884864807128906,
+        0.20623207092285156,
+        0.4589557647705078
+      ],
+      "pair_deletion_01": 0.035189032554626465,
+      "pair_interaction_01": 0.010998964309692383,
+      "gauge_forward_abs_delta": 0.0,
+      "adapter_digest_before": "dbca47754126e1542c6df94b46fac75d3b5bef75911e1c11d5d71f7b4cf1cc2d",
+      "adapter_digest_after_probe": "dbca47754126e1542c6df94b46fac75d3b5bef75911e1c11d5d71f7b4cf1cc2d",
+      "rng_digest_before": "6043ea2c4a42c6ecd6f24c46680bbcba72fc989c3e317bbbb745ec0dae4e27bf",
+      "restoration_verified": true,
+      "restoration_expected": true,
+      "status": "passed"
+    }
+  ]
+}

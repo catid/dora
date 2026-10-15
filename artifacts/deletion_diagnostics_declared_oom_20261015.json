@@ -1,0 +1,38 @@
+{
+  "schema": "rankstudy-v3-failure-receipt",
+  "selection_eligible": false,
+  "records": [
+    {
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_deletion_diagnostics_declared_20261015/I_GATE_s2901.log",
+      "sha256": "8f9bec70b2de876d02edaff53f01616616095d6ead8e29eaedfa9ee38db7f32c",
+      "status": "failed_attempt",
+      "reason": "CUDA OOM from two same-GPU diagnostics launched concurrently with the live HPO queue",
+      "error_class": "torch.OutOfMemoryError",
+      "method_seed": "I_GATE_s2901"
+    },
+    {
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_deletion_diagnostics_declared_20261015/I_GATE_s2902.log",
+      "sha256": "6ce508d84de10859181a65b8a229033b4b1a18d51db575e7ed0439f6da6485ad",
+      "status": "failed_attempt",
+      "reason": "CUDA OOM from two same-GPU diagnostics launched concurrently with the live HPO queue",
+      "error_class": "torch.OutOfMemoryError",
+      "method_seed": "I_GATE_s2902"
+    },
+    {
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_deletion_diagnostics_declared_20261015/L_GATE_s2901.log",
+      "sha256": "69851a3ad396914ca81ae388aee16e83e5e748b33e639e6b6e871ba5693a01c1",
+      "status": "failed_attempt",
+      "reason": "CUDA OOM from two same-GPU diagnostics launched concurrently with the live HPO queue",
+      "error_class": "torch.OutOfMemoryError",
+      "method_seed": "L_GATE_s2901"
+    },
+    {
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_deletion_diagnostics_declared_20261015/L_GATE_s2902.log",
+      "sha256": "4752ef5aee99bbc71cc329ce75b992cb42e05e0ce6ede06087de9f67252f671d",
+      "status": "failed_attempt",
+      "reason": "CUDA OOM from two same-GPU diagnostics launched concurrently with the live HPO queue",
+      "error_class": "torch.OutOfMemoryError",
+      "method_seed": "L_GATE_s2902"
+    }
+  ]
+}

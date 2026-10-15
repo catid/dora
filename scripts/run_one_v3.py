@@ -229,6 +229,8 @@ def main():
             for key,value in extra['reference_state'].items():
                 setattr(ref,key,value)
     meta['setup_s']=time.perf_counter()-setup_start
+    # Peak-memory receipts describe the training phase, excluding model load.
+    torch.cuda.reset_peak_memory_stats()
     json_write(args.out/'metadata.json',meta)
     backend=getattr(SDPBackend,args.backend)
     completed=start_step
@@ -275,6 +277,7 @@ def main():
                 if p.grad is not None: p.grad.div_(ns)
             task_grad_norm=float(torch.stack([p.grad.float().square().sum() for p in params if p.grad is not None]).sum().sqrt())
             budget,event,freeze=schedule.at(step+1,tokens+nt)
+            score_start=time.perf_counter()
             if tracking:
                 if spec['allocator']=='global_random':
                     scores={name:torch.tensor([random.Random(f'{args.seed}/{name}/{int(i)}').random() for i in m.slot_ids],device='cuda') for name,m in mods.items()}
@@ -289,6 +292,7 @@ def main():
                     for name,m in mods.items():
                         m.set_mask(torch.tensor([(name,int(i)) in keep for i in m.slot_ids],device='cuda'),opt)
                     events.append({'step':step+1,'input_tokens':tokens+nt,**receipt,'rank_map':counts(model)['rank_map']})
+            score_s=time.perf_counter()-score_start
             reg=torch.zeros((),device='cuda')
             if triplet and args.penalty:
                 reg=args.penalty*torch.stack([m.penalty() for m in mods.values()]).mean()
@@ -297,7 +301,11 @@ def main():
             if reg.requires_grad: reg.backward()
             for m in mods.values(): m.freeze_pruned(opt)
             grad_norm=float(torch.nn.utils.clip_grad_norm_(params,1.,error_if_nonfinite=True))
+            before_step=[p.detach().float().clone() for p in params]
             opt.step()
+            effective_update_norm=float(torch.stack([(p.detach().float()-old).square().sum()
+                                                      for p,old in zip(params,before_step)]).sum().sqrt())
+            parameter_norm=float(torch.stack([p.detach().float().square().sum() for p in params]).sum().sqrt())
             if adalora: reference_after_step(model,ref,step+1)
             if custom_online and freeze:
                 opt=compact(model,opt); compacted=True
@@ -308,7 +316,9 @@ def main():
             row={'step':step+1,'input_tokens':nt,'supervised_tokens':ns,'input_tokens_total':tokens,
                  'task_loss':loss_sum/ns,'regularizer':float(reg.detach()),'task_gradient_norm':task_grad_norm,
                  'total_gradient_norm':grad_norm,'clipped':grad_norm>1.,'lr':lr_at(step,args.updates,args.lr),
-                 'step_s':duration,'charged_s':charged,'score_updates':ema.updates,'compacted':compacted,**counts(model)}
+                 'effective_update_norm':effective_update_norm,'parameter_norm':parameter_norm,
+                 'score_overhead_s':score_s,'step_s':duration,'charged_s':charged,
+                 'score_updates':ema.updates,'compacted':compacted,**counts(model)}
             with (args.out/'metrics.jsonl').open('a') as stream: stream.write(json.dumps(row)+'\n')
             print(json.dumps({k:v for k,v in row.items() if k!='rank_map'}),flush=True)
             if (step+1)%args.checkpoint_every==0 or freeze or step+1==args.updates or step+1==args.stop_after:
@@ -336,6 +346,10 @@ def main():
     meta.update({'status':'complete' if finished else 'interrupted_checkpoint','updates_finished':completed,
                  'input_tokens':tokens,'supervised_tokens':supervised,'charged_gpu_seconds':charged,
                  'evaluation_s':eval_s,'peak_memory_bytes':torch.cuda.max_memory_allocated(),
+                 'clipped_updates':sum(1 for line in (args.out/'metrics.jsonl').read_text().splitlines()
+                                       if json.loads(line).get('clipped')),
+                 'score_overhead_s':sum(json.loads(line).get('score_overhead_s',0.)
+                                        for line in (args.out/'metrics.jsonl').read_text().splitlines()),
                  'final_counts':final,'dev_tune_endpoint_group_balanced_nll':dev_metrics['group_balanced_nll'],
                  'dev_tune_endpoint_token_weighted_nll':dev_metrics['token_weighted_nll'],
                  'backbone_unchanged':True,'budget_delta':final['active_trainable_scalars']-target_cost})

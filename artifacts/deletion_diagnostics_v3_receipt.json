@@ -1,0 +1,49 @@
+{
+  "schema": "rankstudy-v3-deletion-diagnostics",
+  "status": "complete",
+  "selection_eligible": false,
+  "records": [
+    {
+      "path": "artifacts/deletion_diagnostics_v3/I_GATE_p0.2.json",
+      "sha256": "7eec2afa7d7ea40ae65ba396d7378a7502f9686852e5ea83a8f9fabce901a6d6",
+      "method": "I_GATE",
+      "progress": 0.2,
+      "restoration_verified": true
+    },
+    {
+      "path": "artifacts/deletion_diagnostics_v3/I_GATE_p0.5.json",
+      "sha256": "1a188429c182a9f5d5dedc468b019ca8550af58c47dff35bdb7701d429a04ba6",
+      "method": "I_GATE",
+      "progress": 0.5,
+      "restoration_verified": true
+    },
+    {
+      "path": "artifacts/deletion_diagnostics_v3/I_GATE_p0.75.json",
+      "sha256": "49a0cca91519971514cd336f24175838532e0a3d5133f7d937b00229b29e01eb",
+      "method": "I_GATE",
+      "progress": 0.75,
+      "restoration_verified": true
+    },
+    {
+      "path": "artifacts/deletion_diagnostics_v3/L_GATE_p0.2.json",
+      "sha256": "c8a07bafc6881cdabfdb89ef717101f828017c80824ee8e0d8a61d6916cd3530",
+      "method": "L_GATE",
+      "progress": 0.2,
+      "restoration_verified": true
+    },
+    {
+      "path": "artifacts/deletion_diagnostics_v3/L_GATE_p0.5.json",
+      "sha256": "f08b06a554beeb00d4bb448c6d33fac90b065c37e955bf4a1c105f7fcdd6b530",
+      "method": "L_GATE",
+      "progress": 0.5,
+      "restoration_verified": true
+    },
+    {
+      "path": "artifacts/deletion_diagnostics_v3/L_GATE_p0.75.json",
+      "sha256": "28b5b1feab594e5e8ae7697deae1652465e9cf0da6622f1bd21e378909e22297",
+      "method": "L_GATE",
+      "progress": 0.75,
+      "restoration_verified": true
+    }
+  ]
+}

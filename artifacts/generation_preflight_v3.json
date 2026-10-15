@@ -1,0 +1,22 @@
+{
+  "schema": "rankstudy-v3-generation-preflight",
+  "status": "complete",
+  "selection_eligible": false,
+  "dataset": "GSM8K public TRAIN",
+  "protocol": {
+    "greedy": true,
+    "max_new_tokens": 64,
+    "official_default_max_new_tokens": 2048,
+    "parser_timeout_s": 0.25
+  },
+  "summary": {
+    "correct": 0,
+    "parser_failures": 15,
+    "timeouts": 0,
+    "truncated": 14,
+    "generation_errors": 0
+  },
+  "input_sha256": "ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d",
+  "raw_output_sha256": "3f906a48469b964de7b72352b2320ba5e21c6bf2bd96be448a907728319d4221",
+  "note": "Parser/generation preflight only; no dev_audit or official test data opened."
+}

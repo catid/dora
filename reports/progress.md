@@ -28,6 +28,19 @@ Completed evidence:
   Adam state, score state, RNG and exposure bit for bit. Attempts are stored
   separately; completed history is not double-charged, and repeated/failed work
   remains visible. Evidence: `artifacts/v3_pipeline_resume_audit.json`.
+- **Stage A gate passed.** Exact token-progress deletion diagnostics cover both
+  `L_GATE` and `I_GATE` at 20/50/75%, with six restoration-verified receipts.
+  Signed toy deletion, curvature, interaction, and gauge probes are recorded
+  separately. Evidence: `artifacts/stageA_gate_v3.json`,
+  `artifacts/deletion_diagnostics_v3_receipt.json`, and
+  `artifacts/mechanism_diagnostics_v3.json`.
+- The greedy generation/parser runner completed a public GSM8K TRAIN preflight
+  with zero generation errors and zero parser timeouts. The 64-token smoke is
+  intentionally not a quality result; official and audit answers remain sealed.
+  Evidence: `artifacts/generation_preflight_v3.json`.
+- Native receipts now include clipping counts, effective update norms, parameter
+  norms, score overhead, and peak memory. Fixed, ACT, triplet-regularized, and
+  faithful AdaLoRA 32-update smokes completed successfully.
 - **328 retained synthetic jobs / 984 budgeted runs** completed across all 41
   methods, two data seeds, isotropic/anisotropic inputs, noisy/clean targets and
   three feasible budgets. All 1,272 stage checkpoints passed payload verification.
@@ -58,15 +71,24 @@ Current declared coverage is **331 passed / 2,733 pending** out of 3,064 entries
 separately. All primary HPO, independent screening, confirmation, export/equal-compute
 quality comparisons, 7B and heterogeneous-module studies remain pending.
 
-Next: finish parser/generation validation, shadow deletion/curvature/gauge and
-state-restoration diagnostics, primary metric instrumentation and the balanced
-v3 HPO queue. Both runners enforce the closed primary-execution gate; smoke labels
-must never be used to select configurations or bypass the required validation.
+Next: finish the balanced 492-trial v3 short HPO, select two configurations per
+cell using `dev_tune`, then run the 164 full-horizon tuning trials and 123 fresh
+screening trials. Confirmation, export/compute, 7B, heterogeneous-module, and
+official evaluation stages follow. Smoke labels remain ineligible for selection.
 
 The v1 question/response mismatch and all 166 quarantined v2 HPO trials remain
 preserved and excluded. No v2 supervisors should be restarted. Preserve unrelated
 DoRA/NoRA files; local commits are allowed, publishing/pushing is not.
 
-The [roadmap](roadmap_v3.md) retains its original ETA anchor: provisional 2–4 days
-to corrected Stage B screening and 1–3 weeks to the complete study with continued
-four-GPU access. Generation and 7B throughput remain uncalibrated.
+The first eight v3 HPO trials completed at 97--127 GPU-seconds each with all four
+GPUs occupied. The 492-trial short HPO is currently estimated at 3--5 wall hours;
+Stage B through independent screening at 12--18 wall hours after HPO, excluding
+rescues and failure tails. The complete study remains approximately 1--3 weeks
+with continued four-GPU access; 7B and official generation throughput remain
+uncalibrated.
+
+The registered second diagnostic seed pair (`2901`, `2902`) is still pending. A
+first concurrent launch put two diagnostics on each of two GPUs and failed with
+CUDA OOM before scoring; those four attempts are preserved in
+`artifacts/deletion_diagnostics_declared_oom_20261015.json` and will be rerun
+sequentially after HPO releases a device.
