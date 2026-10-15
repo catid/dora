@@ -44,8 +44,8 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T1_FIXED | 4 / 4 | 0.206370 ± 0.004957 | 0.201027–0.210913 |
 | T1_FIXED_ORTHO | 3 / 4 | 0.208053 ± 0.004310 | 0.203081–0.210727 |
 | T1_GATE | 2 / 4 | 0.201981 ± 0.002177 | 0.200442–0.203520 |
-| T1_GATE_ORTHO | 3 / 4 | 0.202615 ± 0.000767 | 0.201920–0.203438 |
+| T1_GATE_ORTHO | 4 / 4 | 0.202105 ± 0.001196 | 0.200577–0.203438 |
 
-Terminal launcher records: **129**; counts: `{'complete': 125, 'running': 4}`.
+Terminal launcher records: **130**; counts: `{'complete': 126, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
