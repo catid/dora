@@ -28,7 +28,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | L_GATE_UNCERTAINTY | 4 / 4 | 0.197353 ± 0.001927 | 0.195420–0.199256 |
 | L_GLOBAL_RANDOM | 3 / 4 | 0.197442 ± 0.002001 | 0.195996–0.199725 |
 | L_GLOBAL_SVD | 4 / 4 | 0.197339 ± 0.000585 | 0.196809–0.197992 |
-| L_PILOT_I_STUDENT | 2 / 4 | 0.203244 ± 0.000774 | 0.202697–0.203792 |
+| L_PILOT_I_STUDENT | 3 / 4 | 0.203320 ± 0.000563 | 0.202697–0.203792 |
 | L_PILOT_L_STUDENT | 4 / 4 | 0.200152 ± 0.002576 | 0.197741–0.202441 |
 | L_RAW | 4 / 4 | 0.197382 ± 0.001911 | 0.195467–0.199323 |
 | L_RAW_UNCERTAINTY | 3 / 4 | 0.196731 ± 0.001744 | 0.195428–0.198712 |
@@ -42,10 +42,10 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T0_GATE | 3 / 4 | 0.232549 ± 0.001632 | 0.231010–0.234259 |
 | T0_GATE_ORTHO | 4 / 4 | 0.232276 ± 0.001484 | 0.231088–0.234349 |
 | T1_FIXED | 4 / 4 | 0.206370 ± 0.004957 | 0.201027–0.210913 |
-| T1_FIXED_ORTHO | 3 / 4 | 0.208053 ± 0.004310 | 0.203081–0.210727 |
-| T1_GATE | 3 / 4 | 0.201992 ± 0.001539 | 0.200442–0.203520 |
+| T1_FIXED_ORTHO | 4 / 4 | 0.206300 ± 0.004968 | 0.201039–0.210727 |
+| T1_GATE | 4 / 4 | 0.201913 ± 0.001267 | 0.200442–0.203520 |
 | T1_GATE_ORTHO | 4 / 4 | 0.202105 ± 0.001196 | 0.200577–0.203438 |
 
-Terminal launcher records: **146**; counts: `{'complete': 142, 'running': 4}`.
+Terminal launcher records: **149**; counts: `{'complete': 145, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
