@@ -30,8 +30,8 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | L_GLOBAL_SVD | 4 / 4 | 0.197339 ± 0.000585 | 0.196809–0.197992 |
 | L_PILOT_I_STUDENT | 1 / 4 | 0.202697 ± 0.000000 | 0.202697–0.202697 |
 | L_PILOT_L_STUDENT | 2 / 4 | 0.202379 ± 0.000089 | 0.202316–0.202441 |
-| L_RAW | 3 / 4 | 0.197828 ± 0.002069 | 0.195467–0.199323 |
-| L_RAW_UNCERTAINTY | 2 / 4 | 0.195740 ± 0.000441 | 0.195428–0.196052 |
+| L_RAW | 4 / 4 | 0.197382 ± 0.001911 | 0.195467–0.199323 |
+| L_RAW_UNCERTAINTY | 3 / 4 | 0.196731 ± 0.001744 | 0.195428–0.198712 |
 | L_SHUFFLED_SELF_RESTART | 2 / 4 | 0.203968 ± 0.000127 | 0.203878–0.204058 |
 | L_UNIFORM_GATE | 2 / 4 | 0.199326 ± 0.000209 | 0.199179–0.199474 |
 | L_UNIFORM_RESTART | 3 / 4 | 0.199931 ± 0.002712 | 0.198333–0.203062 |
@@ -46,6 +46,6 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T1_GATE | 2 / 4 | 0.201981 ± 0.002177 | 0.200442–0.203520 |
 | T1_GATE_ORTHO | 2 / 4 | 0.202204 ± 0.000401 | 0.201920–0.202487 |
 
-Terminal launcher records: **111**; counts: `{'complete': 107, 'running': 4}`.
+Terminal launcher records: **113**; counts: `{'complete': 109, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
