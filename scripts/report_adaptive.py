@@ -22,14 +22,24 @@ def rows(root: Path) -> list[dict]:
     for d in sorted(root.iterdir()):
         if not d.is_dir():
             continue
-        c, m, s = d / "config.json", d / "metadata.json", d / "launcher_status.json"
-        if not c.exists():
+        config_paths = (d / "config.json", d / "tuning_config.json", d / "hpo_config.json")
+        c = next((path for path in config_paths if path.exists()), None)
+        m, s = d / "metadata.json", d / "launcher_status.json"
+        if c is None and not m.exists():
             continue
-        cfg = json.loads(c.read_text())
+        cfg = json.loads(c.read_text()) if c is not None else {}
         md = json.loads(m.read_text()) if m.exists() else {}
         st = json.loads(s.read_text()) if s.exists() else {}
         out.append({**cfg, **md, "run_dir": str(d), "launcher_status": st.get("status", "pending")})
     return out
+
+
+def endpoint_nll(row: dict):
+    """Use the preregistered group-balanced endpoint, with legacy fallback."""
+    value = row.get("dev_tune_endpoint_group_balanced_nll")
+    if value is None:
+        value = row.get("dev_tune_endpoint_nll")
+    return value
 
 
 def mean_sd(values: list[float]) -> tuple[float, float]:
@@ -62,29 +72,31 @@ def main() -> None:
 
     # Select the frozen configuration using the mean endpoint loss over the
     # two tuning seeds.  This is the same rule used by run_screen_native.py.
-    cfg_groups: dict[str, dict[tuple[float, float], list[dict]]] = defaultdict(lambda: defaultdict(list))
+    cfg_groups: dict[str, dict[tuple[float, float, float], list[dict]]] = defaultdict(lambda: defaultdict(list))
     for row in tuning:
-        if row.get("status") == "complete" and row.get("dev_tune_endpoint_nll") is not None:
-            cfg_groups[row["method"]][(float(row["lr"]), float(row["scale"]))].append(row)
+        value = endpoint_nll(row)
+        if row.get("status") == "complete" and value is not None:
+            cfg_groups[row["method"]][(float(row["lr"]), float(row["scale"]), float(row.get("penalty", 0.0)))].append(row)
     selected = []
     for method, groups in sorted(cfg_groups.items()):
         candidates = []
-        for (lr, scale), rs in groups.items():
+        for (lr, scale, penalty), rs in groups.items():
             if not {1002, 1003}.issubset({int(r.get("seed")) for r in rs}):
                 continue
-            mu, sd = mean_sd([float(r["dev_tune_endpoint_nll"]) for r in rs])
-            candidates.append({"method": method, "lr": lr, "scale": scale, "tuning_n": len(rs), "tuning_mean_nll": mu, "tuning_sd_nll": sd})
+            mu, sd = mean_sd([float(endpoint_nll(r)) for r in rs])
+            candidates.append({"method": method, "lr": lr, "scale": scale, "penalty": penalty,
+                               "tuning_n": len(rs), "tuning_mean_nll": mu, "tuning_sd_nll": sd})
         if candidates:
-            selected.append(sorted(candidates, key=lambda x: (x["tuning_mean_nll"], x["lr"], x["scale"]))[0])
+            selected.append(sorted(candidates, key=lambda x: (x["tuning_mean_nll"], x["lr"], x["scale"], x["penalty"]))[0])
     write_csv(args.out_dir / "tuning_selection.csv", selected)
 
     screen_groups: dict[str, list[dict]] = defaultdict(list)
     for row in screening:
-        if row.get("status") == "complete" and row.get("dev_tune_endpoint_nll") is not None:
+        if row.get("status") == "complete" and endpoint_nll(row) is not None:
             screen_groups[row["method"]].append(row)
     summary = []
     for method, rs in sorted(screen_groups.items()):
-        vals = [float(r["dev_tune_endpoint_nll"]) for r in rs]
+        vals = [float(endpoint_nll(r)) for r in rs]
         mu, sd = mean_sd(vals)
         summary.append({"method": method, "n": len(vals), "mean_dev_tune_nll": mu, "sd_dev_tune_nll": sd, "median_dev_tune_nll": sorted(vals)[len(vals)//2], "min_dev_tune_nll": min(vals), "max_dev_tune_nll": max(vals), "seeds": ",".join(str(r.get("seed")) for r in sorted(rs, key=lambda r: int(r.get("seed", 0))))})
     write_csv(args.out_dir / "screening_summary.csv", summary)
