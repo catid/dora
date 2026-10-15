@@ -71,9 +71,13 @@ Current declared coverage is **331 passed / 2,733 pending** out of 3,064 entries
 separately. All primary HPO, independent screening, confirmation, export/equal-compute
 quality comparisons, 7B and heterogeneous-module studies remain pending.
 
-Next: finish the balanced 492-trial v3 short HPO, select two configurations per
-cell using `dev_tune`, then run the 164 full-horizon tuning trials and 123 fresh
-screening trials. Confirmation, export/compute, 7B, heterogeneous-module, and
+The corrected balanced 492-trial v3 short HPO is now **492/492 complete** with no
+failures. Full-horizon tuning is active: launcher receipts currently show
+**57/164 complete, four running, and zero failed**. The guarded continuation
+watcher holds the four required deletion diagnostics until tuning has released
+the GPUs, then launches the 123 fresh screening trials. No tuning or screening
+value is being presented as a final method result before the diagnostic gate and
+selection freeze. Confirmation, export/compute, 7B, heterogeneous-module, and
 official evaluation stages follow. Smoke labels remain ineligible for selection.
 
 The v1 question/response mismatch and all 166 quarantined v2 HPO trials remain
@@ -91,4 +95,5 @@ The registered second diagnostic seed pair (`2901`, `2902`) is still pending. A
 first concurrent launch put two diagnostics on each of two GPUs and failed with
 CUDA OOM before scoring; those four attempts are preserved in
 `artifacts/deletion_diagnostics_declared_oom_20261015.json` and will be rerun
-sequentially after HPO releases a device.
+sequentially after tuning releases a device. The live queue and ETA are recorded
+in `artifacts/roadmap_v3.json` and `reports/roadmap_v3.md`.
