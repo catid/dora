@@ -24,8 +24,9 @@ budget-normalized variant must be separately registered.
 
 The strict deterministic resume check exposed cuDNN backward nondeterminism.
 The recorded native SDPA exception uses EFFICIENT_ATTENTION for all corrected
-primary candidates after padded/causal FP64-oracle checks; actual-model profile
-and resume remain validation gates. No attention mask is removed for speed.
+primary candidates after padded/causal FP64-oracle checks; actual-model profiling
+and a 32-update exact GPU resume have now passed. Full-model DDP and the remaining
+pipeline/diagnostic gates are still open. No attention mask is removed for speed.
 No full paper reproduction is claimed.
 
 ## Historical v2 audit text (retained for provenance, not current validation)
@@ -59,3 +60,10 @@ remain pre-optimizer, monotonic, persistent-mask methods under the registered
 protocol. An earlier launcher version zeroed AdaLoRA `E` before every forward;
 it produced no terminal AdaLoRA records and was withdrawn before corrected
 AdaLoRA HPO restarted.
+
+Reference budget interpretation: the nonzero-E slot count measures retained task
+components, not the total tensors that Adam/orthogonality still update. V3 reports
+both counts. The reference keeps all allocated outer factors and their optimizer
+state; its final active-slot scalar count exceeds the custom target by E scalars,
+and its allocated trainable count remains at initial width. Neither equal memory
+nor strict equality of optimizer-trainable parameters is claimed from slot counts.

@@ -26,3 +26,21 @@ budgeting study (2026-10-14). This work is isolated in `src/rankstudy`, `tests`,
   fallback tracker. `artifacts/run_plan.json` and `coverage.json` cover execution.
 - At continuation, read `reports/progress.md` and the task tracker first; confirm
   live process/session handles before restarting jobs.
+
+## 2026-10-15 protocol correction
+
+- v2 HPO is quarantined; do not restart its supervisors or select from its results.
+  Evidence: `reports/protocol_v2_audit.md` and `artifacts/protocol_v2_quarantine.json`.
+- Corrected implementation: `src/rankstudy/v3`, `scripts/run_one_v3.py`.
+  Use project `.venv` with the existing pinned nightly build.
+- Current complete-scope plan/coverage are `artifacts/run_plan_v3.json` and
+  `artifacts/coverage_v3.json`; older 959-run files are superseded, not full scope.
+- `artifacts/protocol_execution_gate.json` keeps large sweeps closed until all
+  relevant gates are verified. Engineering smoke results never select HPO configs.
+- Native EFFICIENT_ATTENTION is the recorded SDPA exception: cuDNN rejects strict
+  determinism and native Flash rejects explicit padding masks. Preserve the masks.
+  Actual-model efficient-SDPA profile and bitwise GPU resume receipts exist.
+- Always preserve failed attempts in distinct run directories. Do not overwrite
+  terminal records. Current raw reports: `reports/smoke_v3_summary.json` and
+  `reports/failures_v3.csv`. Full-model DDP, pipeline runners, parser/evaluation,
+  full diagnostic matrix and all primary sweeps/confirmations remain unfinished.

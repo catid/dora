@@ -35,7 +35,9 @@ from rankstudy.v3.scoring import SlotEMA, token_subsample
 def numerator(logits, labels):
     pred, labels = logits[:, :-1].float(), labels[:, 1:]
     count = labels.ne(-100).sum()
-    loss = torch.nn.functional.cross_entropy(pred.transpose(1,2),labels,ignore_index=-100,reduction='sum')
+    # Flatten token rows: nightly's NLLLoss2d CUDA reduction rejects strict
+    # determinism; the ordinary 2D classifier reduction is deterministic.
+    loss = torch.nn.functional.cross_entropy(pred.reshape(-1,pred.shape[-1]),labels.reshape(-1),ignore_index=-100,reduction='sum')
     return loss, count
 
 
@@ -306,4 +308,14 @@ def main():
 
 
 if __name__=='__main__':
-    main()
+    try:
+        main()
+    except BaseException as exc:
+        if '--out' in sys.argv:
+            output=Path(sys.argv[sys.argv.index('--out')+1])/'metadata.json'
+            if output.exists():
+                failed=json.loads(output.read_text())
+                if failed.get('status')=='running':
+                    failed.update(status='failed',failure_reason=f'{type(exc).__name__}: {exc}')
+                    json_write(output,failed)
+        raise

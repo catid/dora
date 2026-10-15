@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "topology": "torchrun 2-rank DDP/NCCL",
+  "torch": "2.16.0.dev20261013+cu130",
+  "records": [
+    {
+      "init": "L",
+      "score": "GATE",
+      "max_abs_gradient_error": 2.7755575615628914e-17,
+      "max_abs_score_error": 6.938893903907228e-18,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "L",
+      "score": "RAW",
+      "max_abs_gradient_error": 2.7755575615628914e-17,
+      "max_abs_score_error": 1.734723475976807e-18,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "L",
+      "score": "DISP",
+      "max_abs_gradient_error": 2.7755575615628914e-17,
+      "max_abs_score_error": 8.673617379884035e-19,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "L",
+      "score": "ACT",
+      "max_abs_gradient_error": 2.7755575615628914e-17,
+      "max_abs_score_error": 8.673617379884035e-19,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "I",
+      "score": "GATE",
+      "max_abs_gradient_error": 1.1102230246251565e-16,
+      "max_abs_score_error": 1.3877787807814457e-17,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "I",
+      "score": "RAW",
+      "max_abs_gradient_error": 1.1102230246251565e-16,
+      "max_abs_score_error": 2.7755575615628914e-17,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "I",
+      "score": "DISP",
+      "max_abs_gradient_error": 1.1102230246251565e-16,
+      "max_abs_score_error": 3.469446951953614e-18,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "I",
+      "score": "ACT",
+      "max_abs_gradient_error": 1.1102230246251565e-16,
+      "max_abs_score_error": 1.1102230246251565e-16,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "T0",
+      "score": "GATE",
+      "max_abs_gradient_error": 6.938893903907228e-18,
+      "max_abs_score_error": 1.734723475976807e-18,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    },
+    {
+      "init": "T1",
+      "score": "GATE",
+      "max_abs_gradient_error": 5.551115123125783e-17,
+      "max_abs_score_error": 6.938893903907228e-18,
+      "mask_equal": true,
+      "global_supervised_tokens": 42
+    }
+  ],
+  "limitation": "Tiny-layer parity; full-LLM DDP and wrapper rebuild tests remain pending."
+}

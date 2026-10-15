@@ -12,6 +12,7 @@ from rankstudy.v3.scoring import SlotEMA, token_subsample
 from rankstudy.v3.reference import reference_allocator, reference_after_step, reference_penalty
 from rankstudy.v3.vendor.adalora.adalora import SVDLinear, RankAllocator, compute_orth_regu
 from rankstudy.v3.checkpoint import save_checkpoint, load_checkpoint
+from scripts.run_one_v3 import numerator
 
 
 def layer(init, score="none", rank=3, dtype=torch.float64):
@@ -270,3 +271,16 @@ def test_safe_checkpoint_resume_matches_optimizer_rng_masks_and_scores(tmp_path)
     for name,v in restored.state_dict().items():
         torch.testing.assert_close(v,expected[name],rtol=0,atol=0)
     torch.testing.assert_close(e.value('x'),ema.value('x'),rtol=0,atol=0)
+
+
+def test_loss_flattening_preserves_masking_shift_and_batch_mean():
+    torch.manual_seed(33)
+    logits=torch.randn(3,7,11,dtype=torch.float64,requires_grad=True)
+    labels=torch.randint(11,(3,7)); labels[:,0:3]=-100; labels[1,5:]=-100
+    total,count=numerator(logits,labels)
+    manual=sum(-logits[i,j-1].float().log_softmax(-1)[labels[i,j]] for i in range(3) for j in range(1,7) if labels[i,j]!=-100)
+    assert count==sum(int(labels[i,j]!=-100) for i in range(3) for j in range(1,7))
+    torch.testing.assert_close(total,manual)
+    ga=torch.autograd.grad(total/count,logits,retain_graph=True)[0]
+    gb=torch.autograd.grad(manual/count,logits)[0]
+    torch.testing.assert_close(ga,gb)

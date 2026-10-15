@@ -43,6 +43,10 @@ def test_trial_design_fixed_before_results_and_reference_quota():
     ref=trial_design('ADALORA_REF')
     canonical=[t for t in ref if t['canonical_reference_replacement']]
     assert len(canonical)==1 and canonical[0]['lr']==8e-4 and canonical[0]['scale']==1. and canonical[0]['penalty']==.1
+    original={(lr,s) for lr in [1e-6,1e-5,1e-4,1e-3] for s in [.25,1.,4.]}
+    actual={(t['lr'],t['scale']) for t in ref}
+    assert original-actual=={(1e-3,1.)}
+    assert actual-original=={(8e-4,1.)}
 
 
 def test_dependency_graph_is_acyclic_and_selection_precedes_large_models():

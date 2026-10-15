@@ -56,6 +56,7 @@
   "counts_by_stage": {
     "A_correctness": 13,
     "A_synthetic": 328,
+    "A_full_horizon_diagnostic": 2,
     "B_hpo": 492,
     "B_rescue": 82,
     "B_tuning": 164,
@@ -11091,6 +11092,52 @@
       "device": "cpu"
     },
     {
+      "run_id": "A_full_horizon_L_FIXED",
+      "stage": "A_full_horizon_diagnostic",
+      "method_id": "L_FIXED",
+      "selection_role": null,
+      "seed": 1001,
+      "updates": 512,
+      "depends_on": [],
+      "exposure_manifest": "artifacts/manifests_v3/A_full_horizon_diagnostic/seed1001.json",
+      "token_cap": {
+        "mode": "exact_sealed_manifest",
+        "updates": 512,
+        "nominal_input_tokens_per_update": 8192,
+        "maximum_overshoot_per_update": 2047
+      },
+      "expected_output": "runs/A_full_horizon_L_FIXED/metadata.json",
+      "status": "pending",
+      "lr": 0.0001,
+      "scale": 1.0,
+      "selection_eligible": false,
+      "partial_dev_groups": 16,
+      "purpose": "full-horizon allocation/recovery and throughput validation"
+    },
+    {
+      "run_id": "A_full_horizon_I_GATE",
+      "stage": "A_full_horizon_diagnostic",
+      "method_id": "I_GATE",
+      "selection_role": null,
+      "seed": 1001,
+      "updates": 512,
+      "depends_on": [],
+      "exposure_manifest": "artifacts/manifests_v3/A_full_horizon_diagnostic/seed1001.json",
+      "token_cap": {
+        "mode": "exact_sealed_manifest",
+        "updates": 512,
+        "nominal_input_tokens_per_update": 8192,
+        "maximum_overshoot_per_update": 2047
+      },
+      "expected_output": "runs/A_full_horizon_I_GATE/metadata.json",
+      "status": "pending",
+      "lr": 0.0001,
+      "scale": 1.0,
+      "selection_eligible": false,
+      "partial_dev_groups": 16,
+      "purpose": "full-horizon allocation/recovery and throughput validation"
+    },
+    {
       "run_id": "B_hpo_L_FIXED_c00",
       "stage": "B_hpo",
       "method_id": "L_FIXED",
@@ -14948,7 +14995,7 @@
       "trial_index": 11,
       "trial_config": {
         "trial": 11,
-        "lr": 0.0008,
+        "lr": 0.001,
         "scale": 4.0,
         "penalty": 1.0,
         "canonical_reference_replacement": false
@@ -50295,7 +50342,7 @@
       "trial_index": 11,
       "trial_config": {
         "trial": 11,
-        "lr": 0.0008,
+        "lr": 0.001,
         "scale": 4.0,
         "penalty": 1.0,
         "canonical_reference_replacement": false

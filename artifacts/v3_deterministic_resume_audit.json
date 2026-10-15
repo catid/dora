@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": {
+    "adapter_tensors_bitwise_equal": true,
+    "optimizer_state_bitwise_equal": true,
+    "score_ema_bitwise_equal": true,
+    "rng_state_bitwise_equal": true,
+    "pruning_events_equal": true,
+    "exact_exposure_equal": true
+  },
+  "uninterrupted": "/var/tmp/dora-adaptive-rank/runs/v3_deterministic_smoke_r2_20261015/I_GATE/checkpoint_0032",
+  "resumed": "/var/tmp/dora-adaptive-rank/runs/v3_deterministic_smoke_r2_20261015/I_GATE_resume16/checkpoint_0032",
+  "backend": "EFFICIENT_ATTENTION",
+  "endpoint_step": 32,
+  "compaction_exercised": true
+}

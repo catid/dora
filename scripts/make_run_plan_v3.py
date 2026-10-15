@@ -30,14 +30,15 @@ def trial_design(method):
     trials=[]
     for i,lr in enumerate([1e-6,1e-5,1e-4,1e-3]):
         for j,scale in enumerate([.25,1.,4.]):
+            trial_lr=lr
             penalty=([1e-4,1e-3,1e-2][(i+j)%3] if method.endswith('_ORTHO')
                      else [.01,.1,1.][(i+j)%3] if method=='ADALORA_REF' else 0.)
             canonical=False
             # Documented original MNLI optimizer LR/alpha/penalty. Rank and
             # token horizon stay the study's: this is not a paper reproduction.
             if method=='ADALORA_REF' and i==3 and j==1:
-                lr,penalty,canonical=8e-4,.1,True
-            trials.append({'trial':len(trials),'lr':lr,'scale':scale,'penalty':penalty,
+                trial_lr,penalty,canonical=8e-4,.1,True
+            trials.append({'trial':len(trials),'lr':trial_lr,'scale':scale,'penalty':penalty,
                            'canonical_reference_replacement':canonical})
     return trials
 
@@ -62,6 +63,10 @@ def build_plan(methods):
                     add(f'A_syn_{method}_{seed}_{cov}_{noise}','A_synthetic',method,seed=seed,
                         budgets=[8,16,32],covariance=cov,noise=noise,teacher_ranks=[0,0,1,1,2,4,8,16],
                         oracle_control=True,steps=100,device='cpu')
+    for method in ['L_FIXED','I_GATE']:
+        add(f'A_full_horizon_{method}','A_full_horizon_diagnostic',method,seed=1001,updates=512,
+            lr=1e-4,scale=1.,selection_eligible=False,partial_dev_groups=16,
+            purpose='full-horizon allocation/recovery and throughput validation')
     gates=[r['run_id'] for r in rows if r['stage']=='A_correctness']
     def tournament(prefix,entries,horizon,search_seed,tune_seeds,report_seeds,rank=8,model='1.5B',targets='q_o'):
         terminals=[]
