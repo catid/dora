@@ -35,7 +35,7 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | L_SHUFFLED_SELF_RESTART | 4 / 4 | 0.201236 ± 0.003156 | 0.198462–0.204058 |
 | L_UNIFORM_GATE | 4 / 4 | 0.197798 ± 0.001813 | 0.195782–0.199474 |
 | L_UNIFORM_RESTART | 4 / 4 | 0.200849 ± 0.002877 | 0.198333–0.203604 |
-| L_UNIFORM_SVD | 3 / 4 | 0.197056 ± 0.000524 | 0.196639–0.197644 |
+| L_UNIFORM_SVD | 4 / 4 | 0.197294 ± 0.000640 | 0.196639–0.198007 |
 | L_WIDE | 4 / 4 | 0.196446 ± 0.001615 | 0.194969–0.197916 |
 | T0_FIXED | 4 / 4 | 0.237381 ± 0.001696 | 0.235296–0.239055 |
 | T0_FIXED_ORTHO | 4 / 4 | 0.237437 ± 0.001656 | 0.235379–0.239128 |
@@ -46,6 +46,6 @@ This report is descriptive only. All rows remain selection-ineligible until the 
 | T1_GATE | 4 / 4 | 0.201913 ± 0.001267 | 0.200442–0.203520 |
 | T1_GATE_ORTHO | 4 / 4 | 0.202105 ± 0.001196 | 0.200577–0.203438 |
 
-Terminal launcher records: **157**; counts: `{'complete': 153, 'running': 4}`.
+Terminal launcher records: **158**; counts: `{'complete': 154, 'running': 4}`.
 
 Endpoint development NLL is not a final method-quality result.
