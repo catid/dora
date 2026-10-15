@@ -5,18 +5,17 @@
   "expected_methods": 41,
   "expected_trials": 492,
   "launcher_counts": {
-    "complete": 250,
+    "complete": 268,
     "running": 4
   },
-  "complete_records_with_metadata": 250,
+  "complete_records_with_metadata": 268,
   "complete_input_token_counts": {
-    "1068437": 250
+    "1068437": 268
   },
   "duplicate_trials": {},
   "missing_trials_by_method": {
     "L_FIXED": [
       0,
-      4,
       5,
       6,
       8,
@@ -63,9 +62,7 @@
     "L_RAW": [
       0,
       1,
-      2,
       3,
-      6,
       8
     ],
     "L_GATE": [
@@ -91,7 +88,6 @@
       1,
       2,
       3,
-      4,
       5,
       7,
       8,
@@ -100,7 +96,6 @@
     "L_UNIFORM_GATE": [
       0,
       2,
-      5,
       11
     ],
     "L_GLOBAL_RANDOM": [
@@ -109,7 +104,6 @@
       4,
       5,
       6,
-      7,
       10,
       11
     ],
@@ -179,10 +173,8 @@
       6
     ],
     "T1_FIXED": [
-      0,
       2,
       4,
-      7,
       8,
       11
     ],
@@ -190,20 +182,17 @@
       4,
       6,
       7,
-      8,
       9,
       11
     ],
     "T1_FIXED_ORTHO": [
       6,
-      7,
       8,
       9,
       11
     ],
     "T1_GATE_ORTHO": [
       0,
-      1,
       2,
       3,
       5,
@@ -213,7 +202,6 @@
     ],
     "L_PILOT_L_STUDENT": [
       2,
-      3,
       5,
       8,
       9,
@@ -224,7 +212,6 @@
       0,
       1,
       4,
-      6,
       9,
       10,
       11
@@ -258,7 +245,6 @@
     ],
     "I_UNIFORM_RESTART": [
       3,
-      7,
       9
     ],
     "I_SHUFFLED_SELF_RESTART": [
@@ -286,11 +272,9 @@
     ],
     "I_UNIFORM_SVD": [
       1,
-      2,
       3,
       5,
-      7,
-      11
+      7
     ],
     "I_GLOBAL_SVD": [
       0,
@@ -314,7 +298,6 @@
       6,
       7,
       8,
-      9,
       10
     ],
     "I_RAW_UNCERTAINTY": [
@@ -328,7 +311,6 @@
     ],
     "I_GATE_UNCERTAINTY": [
       1,
-      2,
       3,
       4,
       6,
@@ -596,6 +578,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 110.02231141366065
+    },
+    {
+      "run_id": "I_GATE_UNCERTAINTY_c02",
+      "method": "I_GATE_UNCERTAINTY",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.12706261500716
     },
     {
       "run_id": "I_GATE_UNCERTAINTY_c05",
@@ -1032,10 +1024,10 @@
       "method": "I_RAW_UNCERTAINTY",
       "trial_index": 6,
       "seed": 1001,
-      "launcher_status": "running",
-      "metadata_status": "running",
-      "input_tokens": null,
-      "charged_gpu_seconds": null
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.22804881352931
     },
     {
       "run_id": "I_RAW_UNCERTAINTY_c08",
@@ -1192,10 +1184,10 @@
       "method": "I_SHUFFLED_SELF_RESTART",
       "trial_index": 3,
       "seed": 1001,
-      "launcher_status": "running",
-      "metadata_status": "running",
-      "input_tokens": null,
-      "charged_gpu_seconds": null
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.58056636247784
     },
     {
       "run_id": "I_SHUFFLED_SELF_RESTART_c05",
@@ -1378,6 +1370,16 @@
       "charged_gpu_seconds": 106.59285619854927
     },
     {
+      "run_id": "I_UNIFORM_RESTART_c07",
+      "method": "I_UNIFORM_RESTART",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 108.42242200300097
+    },
+    {
       "run_id": "I_UNIFORM_RESTART_c08",
       "method": "I_UNIFORM_RESTART",
       "trial_index": 8,
@@ -1412,10 +1414,20 @@
       "method": "I_UNIFORM_SVD",
       "trial_index": 0,
       "seed": 1001,
-      "launcher_status": "running",
-      "metadata_status": "running",
-      "input_tokens": null,
-      "charged_gpu_seconds": null
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.96058414364234
+    },
+    {
+      "run_id": "I_UNIFORM_SVD_c02",
+      "method": "I_UNIFORM_SVD",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.24211817746982
     },
     {
       "run_id": "I_UNIFORM_SVD_c04",
@@ -1466,6 +1478,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 103.98537233099341
+    },
+    {
+      "run_id": "I_UNIFORM_SVD_c11",
+      "method": "I_UNIFORM_SVD",
+      "trial_index": 11,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 103.32026928244159
     },
     {
       "run_id": "I_WIDE_c00",
@@ -1558,6 +1580,16 @@
       "charged_gpu_seconds": 111.3184437812306
     },
     {
+      "run_id": "L_ACT_c04",
+      "method": "L_ACT",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "running",
+      "metadata_status": null,
+      "input_tokens": null,
+      "charged_gpu_seconds": null
+    },
+    {
       "run_id": "L_ACT_c06",
       "method": "L_ACT",
       "trial_index": 6,
@@ -1648,6 +1680,16 @@
       "charged_gpu_seconds": 99.90002395631745
     },
     {
+      "run_id": "L_FIXED_c04",
+      "method": "L_FIXED",
+      "trial_index": 4,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.19982742005959
+    },
+    {
       "run_id": "L_FIXED_c07",
       "method": "L_FIXED",
       "trial_index": 7,
@@ -1696,6 +1738,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 102.49893465684727
+    },
+    {
+      "run_id": "L_GATE_UNCERTAINTY_c09",
+      "method": "L_GATE_UNCERTAINTY",
+      "trial_index": 9,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 102.02772835129872
     },
     {
       "run_id": "L_GATE_UNCERTAINTY_c11",
@@ -1786,6 +1838,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 99.88145805662498
+    },
+    {
+      "run_id": "L_GLOBAL_RANDOM_c07",
+      "method": "L_GLOBAL_RANDOM",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.62503022700548
     },
     {
       "run_id": "L_GLOBAL_RANDOM_c08",
@@ -1888,6 +1950,16 @@
       "charged_gpu_seconds": 103.75371889630333
     },
     {
+      "run_id": "L_PILOT_I_STUDENT_c06",
+      "method": "L_PILOT_I_STUDENT",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 105.68017114605755
+    },
+    {
       "run_id": "L_PILOT_I_STUDENT_c07",
       "method": "L_PILOT_I_STUDENT",
       "trial_index": 7,
@@ -1926,6 +1998,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 98.89467910397798
+    },
+    {
+      "run_id": "L_PILOT_L_STUDENT_c03",
+      "method": "L_PILOT_L_STUDENT",
+      "trial_index": 3,
+      "seed": 1001,
+      "launcher_status": "running",
+      "metadata_status": "running",
+      "input_tokens": null,
+      "charged_gpu_seconds": null
     },
     {
       "run_id": "L_PILOT_L_STUDENT_c04",
@@ -2018,6 +2100,16 @@
       "charged_gpu_seconds": 97.86820136383176
     },
     {
+      "run_id": "L_RAW_c02",
+      "method": "L_RAW",
+      "trial_index": 2,
+      "seed": 1001,
+      "launcher_status": "running",
+      "metadata_status": "running",
+      "input_tokens": null,
+      "charged_gpu_seconds": null
+    },
+    {
       "run_id": "L_RAW_c04",
       "method": "L_RAW",
       "trial_index": 4,
@@ -2036,6 +2128,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 100.95607880642638
+    },
+    {
+      "run_id": "L_RAW_c06",
+      "method": "L_RAW",
+      "trial_index": 6,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 98.56715894350782
     },
     {
       "run_id": "L_RAW_c07",
@@ -2156,6 +2258,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 99.7510501658544
+    },
+    {
+      "run_id": "L_UNIFORM_GATE_c05",
+      "method": "L_UNIFORM_GATE",
+      "trial_index": 5,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 99.21658965339884
     },
     {
       "run_id": "L_UNIFORM_GATE_c06",
@@ -2708,6 +2820,16 @@
       "charged_gpu_seconds": 117.43428522953764
     },
     {
+      "run_id": "T1_FIXED_ORTHO_c07",
+      "method": "T1_FIXED_ORTHO",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "running",
+      "metadata_status": "running",
+      "input_tokens": null,
+      "charged_gpu_seconds": null
+    },
+    {
       "run_id": "T1_FIXED_ORTHO_c10",
       "method": "T1_FIXED_ORTHO",
       "trial_index": 10,
@@ -2716,6 +2838,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 115.37702369410545
+    },
+    {
+      "run_id": "T1_FIXED_c00",
+      "method": "T1_FIXED",
+      "trial_index": 0,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 113.62614579638466
     },
     {
       "run_id": "T1_FIXED_c01",
@@ -2758,6 +2890,16 @@
       "charged_gpu_seconds": 112.00718312710524
     },
     {
+      "run_id": "T1_FIXED_c07",
+      "method": "T1_FIXED",
+      "trial_index": 7,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 113.37995567824692
+    },
+    {
       "run_id": "T1_FIXED_c09",
       "method": "T1_FIXED",
       "trial_index": 9,
@@ -2778,14 +2920,24 @@
       "charged_gpu_seconds": 114.29819460399449
     },
     {
+      "run_id": "T1_GATE_ORTHO_c01",
+      "method": "T1_GATE_ORTHO",
+      "trial_index": 1,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 119.1696298387833
+    },
+    {
       "run_id": "T1_GATE_ORTHO_c04",
       "method": "T1_GATE_ORTHO",
       "trial_index": 4,
       "seed": 1001,
-      "launcher_status": "running",
-      "metadata_status": "running",
-      "input_tokens": null,
-      "charged_gpu_seconds": null
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 120.0550725562498
     },
     {
       "run_id": "T1_GATE_ORTHO_c08",
@@ -2866,6 +3018,16 @@
       "metadata_status": "complete",
       "input_tokens": 1068437,
       "charged_gpu_seconds": 115.3084019436501
+    },
+    {
+      "run_id": "T1_GATE_c08",
+      "method": "T1_GATE",
+      "trial_index": 8,
+      "seed": 1001,
+      "launcher_status": "complete",
+      "metadata_status": "complete",
+      "input_tokens": 1068437,
+      "charged_gpu_seconds": 115.08436362072825
     },
     {
       "run_id": "T1_GATE_c10",
