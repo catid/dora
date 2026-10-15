@@ -1,6 +1,6 @@
 {
   "schema": "rankstudy-v3-roadmap",
-  "updated_at": "2026-10-15T17:46:11.215294+00:00",
+  "updated_at": "2026-10-15T17:49:09.227193+00:00",
   "first_eta_snapshot_at": "2026-10-15T05:39:35.166627+00:00",
   "scope": "All required stages retained; no reduced-scope completion claim.",
   "actual_hardware": "4 RTX PRO 6000 Blackwell Max-Q GPUs",
@@ -114,22 +114,22 @@
   },
   "hpo_rate_complete_per_minute": 1.9180769313749262,
   "hpo_remaining_hours_at_observed_rate": 0.0,
-  "hpo_eta_utc_at_observed_rate": "2026-10-15T17:46:11.231688+00:00",
+  "hpo_eta_utc_at_observed_rate": "2026-10-15T17:49:09.243743+00:00",
   "declared_diagnostics_complete": 0,
   "tuning_queue": {
     "expected": 164,
-    "records": 130,
+    "records": 132,
     "counts": {
-      "complete": 126,
+      "complete": 128,
       "running": 4
     },
-    "complete": 126,
+    "complete": 128,
     "running": 4,
     "failed": 0,
-    "remaining": 38,
-    "rate_complete_per_hour": 32.58615020087782,
-    "eta_hours_at_observed_rate": 1.1661395950656468,
-    "eta_utc_at_observed_rate": "2026-10-15T18:56:09.337075+00:00"
+    "remaining": 36,
+    "rate_complete_per_hour": 32.74000884156223,
+    "eta_hours_at_observed_rate": 1.099572091571928,
+    "eta_utc_at_observed_rate": "2026-10-15T18:55:07.706189+00:00"
   },
   "screening_queue": {
     "expected": 123,
@@ -143,7 +143,7 @@
     "eta_hours_at_observed_rate": null,
     "eta_utc_at_observed_rate": null
   },
-  "tuning_launcher_records": 130,
+  "tuning_launcher_records": 132,
   "screening_launcher_records": 0,
   "stage_B_mandatory_training_jobs": 779,
   "stage_B_total_updates": 209920,
