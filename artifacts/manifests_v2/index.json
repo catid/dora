@@ -268,6 +268,41 @@
       "updates": 512,
       "input_tokens": 4271888,
       "supervised_tokens": 3181701
+    },
+    "6101": {
+      "path": "/var/tmp/dora-adaptive-rank/manifests_calibration_20261016/train_seed6101.json",
+      "sha256": "919b77f0ab5335b92d4635b402bcf55ffcf4d6e1052e9b01a484be062034160c",
+      "updates": 512,
+      "input_tokens": 4278974,
+      "supervised_tokens": 3187961
+    },
+    "6102": {
+      "path": "/var/tmp/dora-adaptive-rank/manifests_calibration_20261016/train_seed6102.json",
+      "sha256": "1686f06ec8c750e1b5d373135fc25dc0e45614769fad9f37b531f0b56c782849",
+      "updates": 512,
+      "input_tokens": 4280825,
+      "supervised_tokens": 3190355
+    },
+    "6103": {
+      "path": "/var/tmp/dora-adaptive-rank/manifests_calibration_20261016/train_seed6103.json",
+      "sha256": "3ad15052c68b6157db32336e028cac6e4e34a21af60981b0ab4c079b626e9089",
+      "updates": 512,
+      "input_tokens": 4279790,
+      "supervised_tokens": 3187882
+    },
+    "6104": {
+      "path": "/var/tmp/dora-adaptive-rank/manifests_calibration_20261016/train_seed6104.json",
+      "sha256": "2497c8f4362988201ecd954f7b561a726dcb3f945f0d9969acb2a1ddea85a62c",
+      "updates": 512,
+      "input_tokens": 4276256,
+      "supervised_tokens": 3184708
+    },
+    "6105": {
+      "path": "/var/tmp/dora-adaptive-rank/manifests_calibration_20261016/train_seed6105.json",
+      "sha256": "00a8614ea5380b7070f9a76147938dac5472ab37f49ea44f7674cbc454cce667",
+      "updates": 512,
+      "input_tokens": 4282216,
+      "supervised_tokens": 3188205
     }
   }
 }

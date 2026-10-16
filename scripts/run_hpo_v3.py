@@ -46,6 +46,7 @@ def main():
     ap.add_argument('--max-rank',type=int,default=16); ap.add_argument('--model',default='/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B')
     ap.add_argument('--data-root',type=Path,default=Path('/var/tmp/dora-adaptive-rank/data_v2'))
     ap.add_argument('--manifest-root',type=Path,default=Path('artifacts/manifests_v2')); ap.add_argument('--resume',action='store_true')
+    ap.add_argument('--targets',nargs='+',default=['q_proj','o_proj'])
     ap.add_argument('--method-ids',default='',help='Optional comma-separated registered subset; default is all methods.')
     args=ap.parse_args(); args.root.mkdir(parents=True,exist_ok=True)
     lock=(args.root/'.queue.lock').open('a+'); fcntl.flock(lock.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -65,7 +66,7 @@ def main():
     plan_path=args.root/'plan.json'
     plan={'schema':'rankstudy-v3-hpo-queue','method_count':len(methods),'trial_count':len(jobs),
           'methods':[m['id'] for m in methods],'updates':args.updates,'search_seed':args.seed,
-          'target_rank':args.target_rank,'max_rank':args.max_rank,
+          'target_rank':args.target_rank,'max_rank':args.max_rank,'targets':args.targets,
           'trial_design':'lr={1e-6,1e-5,1e-4,1e-3} x scale={.25,1,4}; balanced declared penalty cycle',
           'selection_eligible':False,'jobs':jobs}
     if plan_path.exists():
@@ -88,7 +89,8 @@ def main():
              '--method',job['method'],'--out',str(out),'--updates',str(job['updates']),'--seed',str(job['seed']),
              '--lr',str(job['lr']),'--scale',str(job['scale']),'--target-rank',str(job['target_rank']),
              '--max-rank',str(job['max_rank']),'--model',args.model,'--data-root',str(args.data_root),
-             '--manifest-root',str(args.manifest_root),'--penalty',str(job['penalty'])]
+             '--manifest-root',str(args.manifest_root),'--penalty',str(job['penalty']),
+             '--targets',*args.targets]
         env=os.environ.copy(); env.update({'CUDA_VISIBLE_DEVICES':gpu,'PYTHONPATH':str(Path.cwd()/'src'),
              'OMP_NUM_THREADS':'1','MKL_NUM_THREADS':'1','HF_HOME':os.environ.get('HF_HOME','/var/tmp/dora-adaptive-rank/hf')})
         log=(out/'stdout.log').open('w'); proc=subprocess.Popen(cmd,env=env,stdout=log,stderr=subprocess.STDOUT)

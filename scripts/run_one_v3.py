@@ -104,6 +104,10 @@ def main():
     ap.add_argument('--checkpoint-every',type=int,default=16)
     ap.add_argument('--resume',type=Path)
     ap.add_argument('--stop-after',type=int)
+    ap.add_argument('--max-charged-s',type=float,
+                    help='Optional hard cap on charged training/allocator/checkpoint seconds. '
+                         'The current update is checkpointed and the stage stops at the first '
+                         'update that reaches the cap.')
     ap.add_argument('--dev-limit',type=int,default=0,help='Smoke only; never select from partial dev')
     ap.add_argument('--smoke',action='store_true')
     ap.add_argument('--profile',action='store_true')
@@ -154,6 +158,8 @@ def main():
     invariant_keys=['method','model','data_root','seed','adapter_seed','stream_offset','pattern','initial_adapter','updates','lr','scale','penalty','target_rank','max_rank','targets','microbatch','backend']
     resume_invariants={k:config[k] for k in invariant_keys}
     digest=hashlib.sha256(json.dumps(config,sort_keys=True).encode()).hexdigest()
+    if args.max_charged_s is not None and args.max_charged_s <= 0:
+        raise ValueError('--max-charged-s must be positive')
     meta={'status':'running','protocol':'adaptive-rank-v3','method':args.method,'config':config,
           'config_sha256':digest,'source_revision_at_start':revision,'source_hashes':source_hashes,
           'manifest_sha256':hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
@@ -241,6 +247,7 @@ def main():
     json_write(args.out/'metadata.json',meta)
     backend=getattr(SDPBackend,args.backend)
     completed=start_step
+    budget_exhausted=False
     with sdpa_kernel(backend):
         if args.smoke and not args.resume and not args.skip_eval:
             before=evaluate(model,dev,tokenizer.pad_token_id,'cuda')
@@ -352,7 +359,9 @@ def main():
                  'score_updates':ema.updates,'compacted':compacted,**counts(model)}
             with (args.out/'metrics.jsonl').open('a') as stream: stream.write(json.dumps(row)+'\n')
             print(json.dumps({k:v for k,v in row.items() if k!='rank_map'}),flush=True)
-            if (step+1)%args.checkpoint_every==0 or freeze or step+1==args.updates or step+1==args.stop_after:
+            budget_reached = args.max_charged_s is not None and charged >= args.max_charged_s
+            if ((step+1)%args.checkpoint_every==0 or freeze or step+1==args.updates
+                    or step+1==args.stop_after or budget_reached):
                 ck_start=time.perf_counter()
                 reference_state={key:getattr(ref,key) for key in ['ipt','exp_avg_ipt','exp_avg_unc','rank_pattern']} if ref else {}
                 ck_path=args.out/f'checkpoint_{step+1:04d}'
@@ -364,6 +373,13 @@ def main():
                 ck_elapsed=time.perf_counter()-ck_start
                 charged+=ck_elapsed
                 json_write(ck_path/'accounting.json',{'checkpoint_write_s':ck_elapsed})
+            # Check after every update, rather than only at checkpoint
+            # intervals, so a time-capped run overshoots by at most one
+            # optimizer update.  The just-completed update always has a
+            # complete checkpoint before the stage is allowed to stop.
+            if budget_reached:
+                budget_exhausted=True
+                break
         eval_start=time.perf_counter()
         dev_metrics=(evaluate(model,dev,tokenizer.pad_token_id,'cuda') if not args.skip_eval else
                      {'group_balanced_nll':None,'token_weighted_nll':None,'groups':[]})
@@ -376,6 +392,7 @@ def main():
         raise RuntimeError('endpoint budget violated')
     meta.update({'status':'complete' if finished else 'interrupted_checkpoint','updates_finished':completed,
                  'input_tokens':tokens,'supervised_tokens':supervised,'charged_gpu_seconds':charged,
+                 'max_charged_s':args.max_charged_s,'budget_exhausted':budget_exhausted,
                  'evaluation_s':eval_s,'peak_memory_bytes':torch.cuda.max_memory_allocated(),
                  'clipped_updates':sum(1 for line in (args.out/'metrics.jsonl').read_text().splitlines()
                                        if json.loads(line).get('clipped')),

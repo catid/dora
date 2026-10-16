@@ -49,7 +49,8 @@ def owned_live_process(launch):
         return False
 
 
-def run_stage(root, command, endpoint, resume=False, interrupt_after=None):
+def run_stage(root, command, endpoint, resume=False, interrupt_after=None,
+              allow_incomplete=False):
     """Run/resume in a new attempt directory; never overwrite failed evidence.
 
     Parent logical charging comes from the completed checkpoint trajectory.
@@ -118,6 +119,18 @@ def run_stage(root, command, endpoint, resume=False, interrupt_after=None):
     if md.get('updates_finished')!=endpoint:
         if interrupt_after is not None and md['status']=='interrupted_checkpoint':
             raise PlannedInterruption(f'checkpoint interruption at {attempt}')
+        if allow_incomplete and md.get('status') == 'interrupted_checkpoint':
+            # A time-capped stage is an intentional terminal outcome. Return
+            # its last complete checkpoint so the pipeline can classify the
+            # candidate as infeasible without discarding the receipt.
+            partial = latest_checkpoint(dirs + [attempt], int(md.get('updates_finished', 0)))
+            if partial is None:
+                raise RuntimeError('budget-capped stage has no complete checkpoint')
+            result={'cached_physical_execution':False,'attempts':attempts,
+                    'selected_attempt':str(attempt),'incomplete_budget':True}
+            json_write(root/'partial_completion.json',{'checkpoint':str(partial),
+                       'metadata':str(attempt/'metadata.json'),**result})
+            return partial,md,result
         raise RuntimeError('stage did not reach its intended endpoint')
     end=attempt/f'checkpoint_{endpoint:04d}'
     # Evaluation-only resume may use a previously written final checkpoint.
