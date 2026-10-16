@@ -369,3 +369,23 @@ methods:
   penalty: 0.0
   pipeline: native
   adalora: false
+- id: I_ADALORA_SVD
+  group: hybrid
+  init: T1
+  allocator: adalora_hybrid
+  score: ADALORA_HYBRID
+  triplet: true
+  penalty: 0.0
+  pipeline: native
+  adalora: false
+  rank_normalized: false
+- id: I_ADALORA_SVD_NORM
+  group: hybrid
+  init: T1
+  allocator: adalora_hybrid
+  score: ADALORA_HYBRID
+  triplet: true
+  penalty: 0.0
+  pipeline: native
+  adalora: false
+  rank_normalized: true

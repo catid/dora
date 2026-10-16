@@ -123,7 +123,9 @@ def main():
     spec=specs[args.method]
     if spec['group'] in {'restart','restart_control','compress'}:
         raise NotImplementedError('use the audited multi-stage runner; never substitute native training')
-    adalora=spec['adalora']; custom_online=spec['allocator']!='none' and not adalora
+    adalora=spec['adalora']
+    hybrid=spec['allocator']=='adalora_hybrid'
+    custom_online=spec['allocator']!='none' and not adalora
     triplet=spec['triplet']
     if (spec['group']=='triplet_ortho' or adalora) and args.penalty<=0:
         raise ValueError('positive declared penalty required')
@@ -188,7 +190,8 @@ def main():
     # For reference s is the nominal multiplier; record alpha and offset exactly.
     alpha=args.scale*args.max_rank if adalora else args.scale
     adapter_seed=args.seed if args.adapter_seed is None else args.adapter_seed
-    inject(model,rank,spec['init'],alpha,adapter_seed,spec['score'],tuple(args.targets),pattern)
+    inject(model,rank,spec['init'],alpha,adapter_seed,spec['score'],tuple(args.targets),pattern,
+           reactivation=hybrid, rank_normalized=bool(spec.get('rank_normalized',False)))
     if args.initial_adapter and not args.resume:
         load_adapter(args.initial_adapter,model,'cuda')
         if any(float(m.scale)!=alpha for m in adapted(model).values()):
@@ -200,10 +203,14 @@ def main():
     meta.update({'target_shapes':target_shapes,'P_target':target_cost,'initial_counts':counts(model),
                  'initialization_seed':adapter_seed,'stream_offset':args.stream_offset,'parent_run':args.parent_run,
                  'original_backbone_sha256':original_hash,'actual_multiplier':float(next(iter(mods.values())).multiplier),
-                 'reference_alpha':alpha if adalora else None})
+                 'reference_alpha':alpha if adalora else None,
+                 'hybrid_allocator_order':('pre_optimizer_score_post_optimizer_mask' if hybrid else None),
+                 'hybrid_rank_floor':1 if hybrid else None})
     params=[p for p in model.parameters() if p.requires_grad]
     opt=torch.optim.AdamW(params,lr=args.lr,betas=(.9,.999),eps=1e-8,weight_decay=0.,fused=True)
-    ema=SlotEMA(uncertainty='UNCERTAINTY' in args.method)
+    # AdaLoRA-style hybrids use the same uncertainty product as the reference;
+    # ordinary registered uncertainty cells retain their explicit suffix.
+    ema=SlotEMA(uncertainty=('UNCERTAINTY' in args.method) or hybrid)
     ref=reference_allocator(model,args.max_rank,args.target_rank,args.updates) if adalora else None
     start_step,tokens,supervised,charged,compacted=0,0,0,0.,False
     events=[]
@@ -278,6 +285,8 @@ def main():
             task_grad_norm=float(torch.stack([p.grad.float().square().sum() for p in params if p.grad is not None]).sum().sqrt())
             budget,event,freeze=schedule.at(step+1,tokens+nt)
             score_start=time.perf_counter()
+            pending_keep = None
+            pending_receipt = None
             if tracking:
                 if spec['allocator']=='global_random':
                     scores={name:torch.tensor([random.Random(f'{args.seed}/{name}/{int(i)}').random() for i in m.slot_ids],device='cuda') for name,m in mods.items()}
@@ -285,13 +294,28 @@ def main():
                     scores={name:m.task_score(ns) for name,m in mods.items()}
                 ema.update(scores)
                 if event:
+                    # Custom allocators prune monotonically.  The hybrid
+                    # deliberately exposes dormant slots so the AdaLoRA-like
+                    # uncertainty score can reactivate a component later.
                     cells=[Candidate(name,int(sid),m.slot_cost,float(q))
-                           for name,m in mods.items() for sid,q,active in zip(m.slot_ids,ema.value(name),m.mask) if active]
+                           for name,m in mods.items() for sid,q,active in zip(m.slot_ids,ema.value(name),m.mask)
+                           if hybrid or active]
                     allocator=uniform_allocate if spec['allocator']=='uniform_gate' else allocate
-                    keep,receipt=allocator(cells,budget,floor=1)
-                    for name,m in mods.items():
-                        m.set_mask(torch.tensor([(name,int(i)) in keep for i in m.slot_ids],device='cuda'),opt)
-                    events.append({'step':step+1,'input_tokens':tokens+nt,**receipt,'rank_map':counts(model)['rank_map']})
+                    # The centered hybrid uses the study-wide one-slot floor.
+                    # This also prevents the optional rank-normalized scale
+                    # from becoming singular for a zero-rank module.
+                    floor=1
+                    keep,receipt=allocator(cells,budget,floor=floor)
+                    if hybrid:
+                        # AdaLoRA applies its mask after the optimizer update;
+                        # keep that ordering so a newly dormant amplitude is
+                        # exactly zero and its just-computed score is charged
+                        # to the preceding effective batch.
+                        pending_keep, pending_receipt = keep, receipt
+                    else:
+                        for name,m in mods.items():
+                            m.set_mask(torch.tensor([(name,int(i)) in keep for i in m.slot_ids],device='cuda'),opt)
+                        events.append({'step':step+1,'input_tokens':tokens+nt,**receipt,'rank_map':counts(model)['rank_map']})
             score_s=time.perf_counter()-score_start
             reg=torch.zeros((),device='cuda')
             if triplet and args.penalty:
@@ -299,7 +323,8 @@ def main():
             elif adalora:
                 reg=reference_penalty(model,args.penalty)
             if reg.requires_grad: reg.backward()
-            for m in mods.values(): m.freeze_pruned(opt)
+            if not hybrid:
+                for m in mods.values(): m.freeze_pruned(opt)
             grad_norm=float(torch.nn.utils.clip_grad_norm_(params,1.,error_if_nonfinite=True))
             before_step=[p.detach().float().clone() for p in params]
             opt.step()
@@ -307,7 +332,13 @@ def main():
                                                       for p,old in zip(params,before_step)]).sum().sqrt())
             parameter_norm=float(torch.stack([p.detach().float().square().sum() for p in params]).sum().sqrt())
             if adalora: reference_after_step(model,ref,step+1)
-            if custom_online and freeze:
+            if pending_keep is not None:
+                for name,m in mods.items():
+                    m.set_mask(torch.tensor([(name,int(i)) in pending_keep for i in m.slot_ids],device='cuda'),opt)
+                events.append({'step':step+1,'input_tokens':tokens+nt,**pending_receipt,
+                               'rank_map':counts(model)['rank_map'],
+                               'allocator_order':'post_optimizer_hybrid'})
+            if custom_online and freeze and not hybrid:
                 opt=compact(model,opt); compacted=True
                 assert counts(model)['active_trainable_scalars']<=target_cost
             tokens+=nt; supervised+=ns

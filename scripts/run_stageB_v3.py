@@ -39,7 +39,8 @@ def verify_hpo_integrity(root):
     # Keep this check independent of the report writer: it validates the
     # immutable launcher/config/metadata records that selection consumes.
     import yaml
-    method_ids = [row['id'] for row in yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']]
+    method_ids = [row['id'] for row in yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']
+                  if row.get('group') != 'hybrid']
     seen = {method: [] for method in method_ids}
     issues = []
     completed_token_counts = []
@@ -51,7 +52,12 @@ def verify_hpo_integrity(root):
             issues.append(f'{path.parent.name}: missing hpo_config.json'); continue
         config = json.loads(config_path.read_text())
         method, trial, seed = config.get('method'), config.get('trial_index'), config.get('seed')
-        if method not in seen: issues.append(f'{path.parent.name}: unknown method {method}'); continue
+        if method not in seen:
+            # A separately registered exploratory queue may share the same
+            # directory root; its records are not part of the 41-cell gate.
+            if method in {'I_ADALORA_SVD', 'I_ADALORA_SVD_NORM'}:
+                continue
+            issues.append(f'{path.parent.name}: unknown method {method}'); continue
         if seed != 1001 or trial not in range(12):
             issues.append(f'{path.parent.name}: seed/trial mismatch ({seed}, {trial})')
         seen[method].append(trial)

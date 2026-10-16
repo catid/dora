@@ -654,3 +654,129 @@ The best geometry is task-specific: `up_anchor`, scale 1 and LR 0.001 on SciFact
 ![Corrected pure-LoRA IniLoRA-alpha/NoRA compatibility sweep; bars show means and whiskers show sample SD](results/2026-10-13-pure-lora-inilora-nora/compatibility_comparison.png)
 
 The [corrected table](results/2026-10-13-pure-lora-inilora-nora/compatibility_table.md), [machine-readable summary](results/2026-10-13-pure-lora-inilora-nora/compatibility_summary.json), and [aggregate script](results/2026-10-13-pure-lora-inilora-nora/aggregate_compatibility.py) retain the selected settings, checksums, and raw artifact roots. The implementation is in [inilora_nora_variants.py](experiments/inilora_nora_variants.py), with [focused backend tests](experiments/test_inilora_nora_variants.py) and task runners for [retrieval](experiments/pure_lora_variant_retrieval.py), [extraction](experiments/pure_lora_variant_extraction.py), and [Aircraft](experiments/pure_lora_variant_aircraft.py). All registered pilot fits completed: 40 SciFact, 80 NFCorpus, 40 ViGGO, and 80 Aircraft, followed by all 12 selected final fits.
+
+<!-- ADAPTIVE_NATIVE_RESULTS_START -->
+## Measured native adaptive-rank screening
+
+Values are endpoint `dev_tune` NLL from the frozen native 1.5B q/o protocol. The table uses only complete screening runs; mean and SD are over independent screening seeds. Lower is better. HPO and tuning selection remain separate from this screening table.
+
+| Method | Seeds | Endpoint dev NLL (mean ± SD) |
+|:--|--:|--:|
+| ADALORA_REF | 3 | 0.223450 ± 0.000302 |
+| I_ACT | 3 | 0.204772 ± 0.000387 |
+| I_DISP | 3 | 0.201405 ± 0.000794 |
+| I_FIXED | 3 | 0.202200 ± 0.000393 |
+| I_GATE | 3 | 0.200815 ± 0.000980 |
+| I_GATE_UNCERTAINTY | 3 | 0.200774 ± 0.000681 |
+| I_GLOBAL_RANDOM | 3 | 0.202927 ± 0.000272 |
+| I_GLOBAL_SVD | 3 | 0.202809 ± 0.000605 |
+| I_PILOT_I_STUDENT | 3 | 0.203943 ± 0.001052 |
+| I_PILOT_L_STUDENT | 3 | 0.198342 ± 0.000503 |
+| I_RAW | 3 | 0.201356 ± 0.000813 |
+| I_RAW_UNCERTAINTY | 3 | 0.201466 ± 0.001266 |
+| I_SHUFFLED_SELF_RESTART | 3 | 0.203097 ± 0.000643 |
+| I_UNIFORM_GATE | 3 | 0.201915 ± 0.000894 |
+| I_UNIFORM_RESTART | 3 | 0.204548 ± 0.000534 |
+| I_UNIFORM_SVD | 3 | 0.202823 ± 0.000478 |
+| I_WIDE | 3 | 0.198987 ± 0.000443 |
+| L_ACT | 3 | 0.196292 ± 0.000345 |
+| L_DISP | 3 | 0.195771 ± 0.000286 |
+| L_FIXED | 3 | 0.197034 ± 0.000118 |
+| L_GATE | 3 | 0.195671 ± 0.000314 |
+| L_GATE_UNCERTAINTY | 3 | 0.195757 ± 0.000532 |
+| L_GLOBAL_RANDOM | 3 | 0.196399 ± 0.000162 |
+| L_GLOBAL_SVD | 3 | 0.197013 ± 0.000128 |
+| L_PILOT_I_STUDENT | 3 | 0.203920 ± 0.000275 |
+| L_PILOT_L_STUDENT | 3 | 0.198101 ± 0.000245 |
+| L_RAW | 3 | 0.195804 ± 0.000284 |
+| L_RAW_UNCERTAINTY | 3 | 0.195788 ± 0.000154 |
+| L_SHUFFLED_SELF_RESTART | 3 | 0.199021 ± 0.000939 |
+| L_UNIFORM_GATE | 3 | 0.196126 ± 0.000408 |
+| L_UNIFORM_RESTART | 3 | 0.198854 ± 0.000447 |
+| L_UNIFORM_SVD | 3 | 0.196988 ± 0.000206 |
+| L_WIDE | 3 | 0.195114 ± 0.000365 |
+| T0_FIXED | 3 | 0.236279 ± 0.000580 |
+| T0_FIXED_ORTHO | 3 | 0.236210 ± 0.000637 |
+| T0_GATE | 3 | 0.231063 ± 0.001173 |
+| T0_GATE_ORTHO | 3 | 0.231280 ± 0.001026 |
+| T1_FIXED | 3 | 0.202255 ± 0.000570 |
+| T1_FIXED_ORTHO | 3 | 0.202256 ± 0.000499 |
+| T1_GATE | 3 | 0.201388 ± 0.000713 |
+| T1_GATE_ORTHO | 3 | 0.201100 ± 0.000580 |
+
+Complete screening seed runs represented: **123**.
+
+![Native screening endpoint NLL](reports/figures/screening_endpoint_nll.png)
+
+<!-- ADAPTIVE_NATIVE_RESULTS_END -->
+
+## Fresh Stage-C representative confirmation
+
+These are five new paired seeds (`3001`–`3005`) selected only from the two-seed
+`dev_tune` table. They are endpoint group-balanced development NLLs on the same
+1.5B q/o protocol, not GSM8K or MATH-500 test results. Restart and compression
+rows include their charged pilot/source and recovery phases. The complete
+machine-readable rows are in [confirmation.csv](reports/confirmation.csv), the
+summary is [confirmation_summary.csv](reports/confirmation_summary.csv), and
+the receipt audit is [confirmation_audit_v3.json](artifacts/confirmation_audit_v3.json).
+
+| Representative role | Method | Seeds | Endpoint dev NLL (mean ± SD) | Mean charged GPU seconds |
+|:--|:--|--:|--:|--:|
+| Fixed standard LoRA | `L_FIXED` | 5 | 0.19701 ± 0.00049 | 399.8 |
+| Fixed IniLoRA-alpha | `I_FIXED` | 5 | 0.20250 ± 0.00056 | 423.4 |
+| Faithful AdaLoRA | `ADALORA_REF` | 5 | 0.22325 ± 0.00061 | 411.1 |
+| Best standard online | `L_GATE` | 5 | **0.19619 ± 0.00013** | 402.7 |
+| Best IniLoRA online | `I_DISP` | 5 | 0.20143 ± 0.00056 | 422.4 |
+| T0 centered triplet | `T0_GATE` | 5 | 0.23078 ± 0.00070 | 460.1 |
+| T1 centered triplet | `T1_GATE` | 5 | 0.20143 ± 0.00067 | 464.2 |
+| IniLoRA pilot → LoRA student | `I_PILOT_L_STUDENT` | 5 | 0.19820 ± 0.00051 | 402.0 |
+| IniLoRA pilot → IniLoRA student | `I_PILOT_I_STUDENT` | 5 | 0.20412 ± 0.00083 | 429.1 |
+| Standard train/compress/recover | `L_UNIFORM_SVD` | 5 | 0.19716 ± 0.00028 | 390.5 |
+| IniLoRA train/compress/recover | `I_UNIFORM_SVD` | 5 | 0.20336 ± 0.00070 | 416.6 |
+
+The table is a confirmation-stage development result, not a universal ranking.
+Faithful AdaLoRA has 448 additional active amplitude scalars and dormant factor
+storage; triplets underspend by 2,625 scalars because of their extra amplitude
+per slot. Those representation differences are retained in the audit rather
+than relabeled as exact budget equality.
+
+![Stage-C representative confirmation endpoint NLL](reports/figures/confirmation_endpoint_nll.png)
+
+## Exploratory IniLoRA-alpha × AdaLoRA-SVD hybrid
+
+The direct hybrid uses the centered `T1` triplet representation: both outer
+factors start with independent `N(0, 0.5²)` entries, the initial amplitude is
+one, and the initial product is subtracted so the adapter starts function
+preserving. Its allocator uses AdaLoRA-style per-component sensitivity,
+0.85 smoothing and uncertainty weighting, with post-update mask application
+and dormant amplitude reactivation. `I_ADALORA_SVD_NORM` additionally divides
+the fixed multiplier by the active rank. Both variants received 12 HPO trials,
+two full-horizon tuning seeds and five fresh screening seeds. These are
+exploratory runs and are excluded from the 41-cell primary tournament.
+
+| Method | Seeds | Endpoint dev NLL (mean ± SD) |
+|:--|--:|--:|
+| `I_ADALORA_SVD` | 5 | **0.20174 ± 0.00017** |
+| `T1_GATE` control | 5 | 0.20143 ± 0.00067 |
+| `I_FIXED` control | 5 | 0.20250 ± 0.00056 |
+| `I_UNIFORM_SVD` control | 5 | 0.20336 ± 0.00070 |
+| `I_ADALORA_SVD_NORM` | 5 | 0.20398 ± 0.00041 |
+| `L_GATE` reference | 5 | 0.19619 ± 0.00013 |
+
+The fixed hybrid improves over fixed IniLoRA-alpha by 0.00076 NLL and over
+IniLoRA train/compress/recover by 0.00162 on paired seeds. It remains 0.00032
+worse than `T1_GATE` and 0.00556 worse than `L_GATE`; the rank-normalized
+variant is worse than the fixed hybrid. This supports a modest interaction
+within the IniLoRA/triplet family, not the claim that the combination is the
+best practical method. Raw rows, HPO choices and retry/failure receipts are in
+[hybrid_summary.json](reports/hybrid_summary.json) and
+[hybrid_comparison.csv](reports/hybrid_comparison.csv).
+
+![IniLoRA-alpha × AdaLoRA-SVD hybrid comparison](reports/figures/hybrid_comparison.png)
+
+The separate rank-4 confirmation keeps the same q/o modules and three fresh
+seeds. `L_GATE` remains first at 0.19554 ± 0.00023, while `I_FIXED` reaches
+0.20152 ± 0.00062 and `ADALORA_REF` 0.22691 ± 0.00038. The complete rank-4
+summary is [rank4_summary.csv](reports/rank4_summary.csv); its initial
+missing-manifest failures and repaired retry are recorded in
+[coverage_hybrid.json](artifacts/coverage_hybrid.json).

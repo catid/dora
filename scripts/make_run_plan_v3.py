@@ -25,6 +25,10 @@ ROLES = {
     'COMPRESS_I': ['I_UNIFORM_SVD','I_GLOBAL_SVD'],
 }
 
+# These methods are intentionally registered for a separate exploratory
+# study.  The preregistered primary plan remains the 41-cell tournament.
+EXPLORATORY_METHODS = {'I_ADALORA_SVD', 'I_ADALORA_SVD_NORM'}
+
 
 def trial_design(method):
     trials=[]
@@ -44,6 +48,7 @@ def trial_design(method):
 
 
 def build_plan(methods):
+    methods=[m for m in methods if m not in EXPLORATORY_METHODS]
     rows=[]
     def add(rid,stage,method=None,role=None,seed=None,updates=0,deps=(),**extra):
         if method is not None and method not in methods: raise ValueError(method)
@@ -166,7 +171,8 @@ def build_plan(methods):
 
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument('--out',type=Path,default=Path('artifacts/run_plan_v3.json')); args=parser.parse_args()
-    methods=[m['id'] for m in yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']]
+    methods=[m['id'] for m in yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']
+             if m.get('group') != 'hybrid']
     plan=build_plan(methods)
     args.out.write_text(json.dumps(plan,indent=2)+'\n')
     print(json.dumps({'total':len(plan['runs']),'stages':plan['counts_by_stage']}))

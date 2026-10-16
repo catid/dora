@@ -80,6 +80,32 @@ def test_displacement_retains_sub_ulp_steps():
     assert m.branch(torch.ones(2, 5)).abs().sum() > 0
 
 
+def test_adalora_hybrid_centered_reactivation_and_export():
+    torch.manual_seed(117)
+    m = AdapterLinear(nn.Linear(5, 4, bias=False), 3, "T1", 1.7, 42,
+                      "ADALORA_HYBRID", reactivation=True).double()
+    x = torch.randn(6, 5, dtype=torch.float64)
+    with torch.no_grad():
+        m.dP.add_(torch.randn_like(m.dP) * .1)
+        m.dQ.add_(torch.randn_like(m.dQ) * .1)
+        m.dlambda.add_(torch.randn_like(m.dlambda) * .1)
+    m.set_mask(torch.tensor([True, False, True]))
+    q = x @ m.Q0.T + x @ m.dQ.T
+    p = m.P0 + m.dP
+    lam = m.lambda0 + m.dlambda
+    direct = (lam * q) @ p.T - (m.lambda0 * m.mask * (x @ m.Q0.T)) @ m.P0.T
+    torch.testing.assert_close(m.branch(x), direct * m.scale, atol=1e-12, rtol=1e-12)
+    c, d = m.thin_factors()
+    torch.testing.assert_close(m.branch(x), (x @ d.T) @ c.T, atol=1e-12, rtol=1e-12)
+    # Dormant amplitudes remain differentiable, which is what permits a later
+    # AdaLoRA-style reactivation; the initial correction remains deleted.
+    m.zero_grad()
+    m(x).sum().backward()
+    assert m.dlambda.grad[1].abs() > 0
+    m.set_mask(torch.tensor([True, True, True]))
+    assert m.dlambda[1] == -m.lambda0[1]
+
+
 @pytest.mark.parametrize("init", ["L", "I", "T0", "T1"])
 def test_gate_grad_accumulation_matches_dense_deletion_and_microbatches(init):
     torch.manual_seed(28)

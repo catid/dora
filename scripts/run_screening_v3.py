@@ -29,8 +29,14 @@ def frozen_configs(tuning_root, methods):
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--tuning-root',type=Path,required=True);ap.add_argument('--out-root',type=Path,required=True);ap.add_argument('--gpus',default='0,1,2,3');ap.add_argument('--seeds',default='2001,2002,2003');ap.add_argument('--updates',type=int,default=512);ap.add_argument('--model',default='/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B');ap.add_argument('--data-root',type=Path,default=Path('/var/tmp/dora-adaptive-rank/data_v2'));ap.add_argument('--manifest-root',type=Path,default=Path('artifacts/manifests_v2'));args=ap.parse_args();args.out_root.mkdir(parents=True,exist_ok=True)
-    methods=yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']; frozen=frozen_configs(args.tuning_root,methods)
+    ap=argparse.ArgumentParser();ap.add_argument('--tuning-root',type=Path,required=True);ap.add_argument('--out-root',type=Path,required=True);ap.add_argument('--gpus',default='0,1,2,3');ap.add_argument('--seeds',default='2001,2002,2003');ap.add_argument('--updates',type=int,default=512);ap.add_argument('--model',default='/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B');ap.add_argument('--data-root',type=Path,default=Path('/var/tmp/dora-adaptive-rank/data_v2'));ap.add_argument('--manifest-root',type=Path,default=Path('artifacts/manifests_v2'));ap.add_argument('--method-ids',default='',help='Optional comma-separated registered subset; default is all methods.');args=ap.parse_args();args.out_root.mkdir(parents=True,exist_ok=True)
+    methods=yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']
+    if args.method_ids:
+        wanted=set(x.strip() for x in args.method_ids.split(',') if x.strip()); methods=[m for m in methods if m['id'] in wanted]
+        if len(methods)!=len(wanted): raise ValueError(f'unknown method id in --method-ids: {sorted(wanted-{m["id"] for m in methods})}')
+    else:
+        methods=[m for m in methods if m.get('group')!='hybrid']
+    frozen=frozen_configs(args.tuning_root,methods)
     if len(frozen)!=len(methods): raise RuntimeError(f'cannot freeze all 41 methods; got {len(frozen)}')
     (args.out_root/'frozen_configs.json').write_text(json.dumps(frozen,indent=2)+'\n')
     jobs=[]

@@ -1,6 +1,20 @@
 # Adaptive-rank study progress
 
-Updated 2026-10-15 UTC. The full study remains active and incomplete.
+Updated 2026-10-16 UTC. The full study remains active and incomplete.
+
+## Live refresh
+
+The earlier Stage-B status below is superseded by the completed receipts now on
+disk: all 492 HPO trials, all 164 full-horizon tuning runs, all 123 screening
+runs, and all four declared deletion diagnostics are complete with zero launcher
+failures. Stage C's 55 representative confirmation runs are also complete with
+five seeds each and zero failures; the receipt audit is
+`artifacts/confirmation_audit_v3.json`. The confirmation report is
+`reports/confirmation_summary.csv`. Matched Stage-C controls have just started
+under `/var/tmp/dora-adaptive-rank/runs/v3_controls_20261016`; their 90 declared
+runs are still pending/running and are not included in the representative
+summary. Export/equal-compute, rank-4, 7B, heterogeneous-module, and official
+evaluation stages remain pending.
 
 The actual host has four RTX PRO 6000 Blackwell Max-Q GPUs. Project `.venv` uses
 Python 3.12 and pinned PyTorch `2.16.0.dev20261013+cu130`. Corrected data v2 retains
@@ -97,3 +111,18 @@ CUDA OOM before scoring; those four attempts are preserved in
 `artifacts/deletion_diagnostics_declared_oom_20261015.json` and will be rerun
 sequentially after tuning releases a device. The live queue and ETA are recorded
 in `artifacts/roadmap_v3.json` and `reports/roadmap_v3.md`.
+# Live update 2026-10-16 — hybrid and rank-4 follow-ups
+
+The 90 matched Stage-C control jobs are complete with zero failures. The
+repaired rank-4 follow-up completed 132/132 HPO, 44/44 tuning and 33/33
+screening jobs; its original 132 missing-manifest failures are retained under
+the non-retry root. The exploratory IniLoRA-alpha × AdaLoRA-SVD hybrid also
+completed 24/24 HPO, 8/8 tuning and 10/10 screening jobs after the same
+manifest repair. Five-seed endpoint means are 0.201743 ± 0.000168 for fixed
+scale and 0.203984 ± 0.000409 for active-rank normalization. The fixed hybrid
+is below `I_FIXED` and `I_UNIFORM_SVD`, slightly above `T1_GATE`, and well
+above `L_GATE`; it is not a practical overall winner in this screen.
+
+Raw hybrid coverage and setup failures are in `artifacts/coverage_hybrid.json`
+and `reports/hybrid_execution.md`. The older status paragraphs below retain
+their historical snapshots and should not be read as current queue counts.

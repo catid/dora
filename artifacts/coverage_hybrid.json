@@ -1,0 +1,77 @@
+{
+  "schema": "hybrid-execution-coverage-v1",
+  "stages": [
+    {
+      "root": "hybrid_hpo_initial",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016",
+      "declared_receipts": 24,
+      "status_counts": {
+        "failed": 24
+      }
+    },
+    {
+      "root": "hybrid_hpo_retry",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry",
+      "declared_receipts": 24,
+      "status_counts": {
+        "complete": 24
+      }
+    },
+    {
+      "root": "hybrid_tuning",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016",
+      "declared_receipts": 8,
+      "status_counts": {
+        "complete": 8
+      }
+    },
+    {
+      "root": "hybrid_screening",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_20261016",
+      "declared_receipts": 6,
+      "status_counts": {
+        "complete": 6
+      }
+    },
+    {
+      "root": "hybrid_screening_extra",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_extra_20261016",
+      "declared_receipts": 4,
+      "status_counts": {
+        "complete": 4
+      }
+    },
+    {
+      "root": "rank4_hpo_initial",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_rank4_hpo_20261016",
+      "declared_receipts": 132,
+      "status_counts": {
+        "failed": 132
+      }
+    },
+    {
+      "root": "rank4_hpo_retry",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_rank4_hpo_20261016_retry",
+      "declared_receipts": 132,
+      "status_counts": {
+        "complete": 132
+      }
+    },
+    {
+      "root": "rank4_tuning_retry",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_rank4_tuning_20261016_retry",
+      "declared_receipts": 44,
+      "status_counts": {
+        "complete": 44
+      }
+    },
+    {
+      "root": "rank4_screening_retry",
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_rank4_screening_20261016_retry",
+      "declared_receipts": 33,
+      "status_counts": {
+        "complete": 33
+      }
+    }
+  ]
+}

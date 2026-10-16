@@ -1,0 +1,456 @@
+{
+  "hpo": [
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.5186377555364743,
+      "lr": 1e-06,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c00"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.5157294536475092,
+      "lr": 1e-06,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c01"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.5035155340447091,
+      "lr": 1e-06,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c02"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.5095149407570716,
+      "lr": 1e-05,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c03"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.48020807502325624,
+      "lr": 1e-05,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c04"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.3935766648501158,
+      "lr": 1e-05,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c05"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.429522685270058,
+      "lr": 0.0001,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c06"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.31645202486834023,
+      "lr": 0.0001,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c07"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.25212212996848393,
+      "lr": 0.0001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c08"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.26177986915718066,
+      "lr": 0.001,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c09"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.22939361210592324,
+      "lr": 0.001,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c10"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4201,
+      "nll": 0.2189484722839552,
+      "lr": 0.001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_NORM_c11"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.5101546789810527,
+      "lr": 1e-06,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c00"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.4806630953680724,
+      "lr": 1e-06,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c01"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.3890706298989244,
+      "lr": 1e-06,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c02"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.43434687081025913,
+      "lr": 1e-05,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c03"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.3125069148663897,
+      "lr": 1e-05,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c04"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.24265456235298188,
+      "lr": 1e-05,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c05"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.2706332304805983,
+      "lr": 0.0001,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c06"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.22789945701515535,
+      "lr": 0.0001,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c07"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.2173215833172435,
+      "lr": 0.0001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c08"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.2199839889181021,
+      "lr": 0.001,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c09"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.22757600387194543,
+      "lr": 0.001,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c10"
+    },
+    {
+      "stage": "hpo",
+      "method": "I_ADALORA_SVD",
+      "seed": 4201,
+      "nll": 0.36743239483621437,
+      "lr": 0.001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_hpo_20261016_retry/I_ADALORA_SVD_c11"
+    }
+  ],
+  "tuning": [
+    {
+      "stage": "tuning",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4202,
+      "nll": 0.2046449466906779,
+      "lr": 0.001,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016/I_ADALORA_SVD_NORM_c10_s4202"
+    },
+    {
+      "stage": "tuning",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4203,
+      "nll": 0.2050696146216069,
+      "lr": 0.001,
+      "scale": 1.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016/I_ADALORA_SVD_NORM_c10_s4203"
+    },
+    {
+      "stage": "tuning",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4202,
+      "nll": 0.20281343761234893,
+      "lr": 0.001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016/I_ADALORA_SVD_NORM_c11_s4202"
+    },
+    {
+      "stage": "tuning",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 4203,
+      "nll": 0.20312985756390844,
+      "lr": 0.001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016/I_ADALORA_SVD_NORM_c11_s4203"
+    },
+    {
+      "stage": "tuning",
+      "method": "I_ADALORA_SVD",
+      "seed": 4202,
+      "nll": 0.20379604472691426,
+      "lr": 0.0001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016/I_ADALORA_SVD_c08_s4202"
+    },
+    {
+      "stage": "tuning",
+      "method": "I_ADALORA_SVD",
+      "seed": 4203,
+      "nll": 0.20328756549861282,
+      "lr": 0.0001,
+      "scale": 4.0,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016/I_ADALORA_SVD_c08_s4203"
+    },
+    {
+      "stage": "tuning",
+      "method": "I_ADALORA_SVD",
+      "seed": 4202,
+      "nll": 0.20135694464624976,
+      "lr": 0.001,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016/I_ADALORA_SVD_c09_s4202"
+    },
+    {
+      "stage": "tuning",
+      "method": "I_ADALORA_SVD",
+      "seed": 4203,
+      "nll": 0.2018346203803958,
+      "lr": 0.001,
+      "scale": 0.25,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_tuning_20261016/I_ADALORA_SVD_c09_s4203"
+    }
+  ],
+  "screening": [
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 3001,
+      "nll": 0.20447757044894388,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_20261016/I_ADALORA_SVD_NORM_s3001"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 3002,
+      "nll": 0.2043104265067086,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_20261016/I_ADALORA_SVD_NORM_s3002"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 3003,
+      "nll": 0.20377080355319777,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_20261016/I_ADALORA_SVD_NORM_s3003"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD",
+      "seed": 3001,
+      "nll": 0.20178763944932143,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_20261016/I_ADALORA_SVD_s3001"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD",
+      "seed": 3002,
+      "nll": 0.2015428238264576,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_20261016/I_ADALORA_SVD_s3002"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD",
+      "seed": 3003,
+      "nll": 0.20185652204600046,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_20261016/I_ADALORA_SVD_s3003"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 3004,
+      "nll": 0.20347021444467828,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_extra_20261016/I_ADALORA_SVD_NORM_s3004"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD_NORM",
+      "seed": 3005,
+      "nll": 0.20389280479503213,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_extra_20261016/I_ADALORA_SVD_NORM_s3005"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD",
+      "seed": 3004,
+      "nll": 0.2015961921424605,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_extra_20261016/I_ADALORA_SVD_s3004"
+    },
+    {
+      "stage": "screening",
+      "method": "I_ADALORA_SVD",
+      "seed": 3005,
+      "nll": 0.20193290093084215,
+      "lr": null,
+      "scale": null,
+      "penalty": 0.0,
+      "path": "/var/tmp/dora-adaptive-rank/runs/v3_hybrid_screening_extra_20261016/I_ADALORA_SVD_s3005"
+    }
+  ],
+  "summary": [
+    {
+      "method": "I_ADALORA_SVD",
+      "hpo_trials": 12,
+      "hpo_best_nll": 0.2173215833172435,
+      "hpo_best_lr": 0.0001,
+      "hpo_best_scale": 4.0,
+      "hpo_best_penalty": 0.0,
+      "tuning_runs": 4,
+      "tuning_mean_nll": 0.20256879381304316,
+      "screening_runs": 5,
+      "screening_mean_nll": 0.20174321567901643,
+      "screening_sd_nll": 0.0001677536242535397
+    },
+    {
+      "method": "I_ADALORA_SVD_NORM",
+      "hpo_trials": 12,
+      "hpo_best_nll": 0.2189484722839552,
+      "hpo_best_lr": 0.001,
+      "hpo_best_scale": 4.0,
+      "hpo_best_penalty": 0.0,
+      "tuning_runs": 4,
+      "tuning_mean_nll": 0.20391446412213554,
+      "screening_runs": 5,
+      "screening_mean_nll": 0.20398436394971214,
+      "screening_sd_nll": 0.0004086288894740446
+    }
+  ]
+}

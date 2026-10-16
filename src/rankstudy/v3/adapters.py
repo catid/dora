@@ -15,13 +15,16 @@ from torch import nn
 
 
 class AdapterLinear(nn.Module):
-    def __init__(self, base, rank, init="L", scale=1., seed=0, score="none"):
+    def __init__(self, base, rank, init="L", scale=1., seed=0, score="none",
+                 reactivation=False, rank_normalized=False):
         super().__init__()
         if rank < 0 or scale <= 0 or init not in {"L", "I", "T0", "T1", "ADALORA"}:
             raise ValueError("invalid adapter configuration")
         self.base = base
         self.base.requires_grad_(False)
         self.init, self.score = init, score
+        self.reactivation = bool(reactivation)
+        self.rank_normalized = bool(rank_normalized)
         self.register_buffer("scale", torch.tensor(float(scale), dtype=torch.float64))
         self.register_buffer("mask", torch.ones(rank, dtype=torch.bool))
         self.register_buffer("slot_ids", torch.arange(rank))
@@ -66,6 +69,8 @@ class AdapterLinear(nn.Module):
     def multiplier(self):
         if self.init == "ADALORA":
             return self.scale / (self.ranknum + 1e-5)
+        if self.rank_normalized:
+            return self.scale / (self.mask.sum().to(self.scale.dtype) + 1e-5)
         return self.scale
 
     @property
@@ -110,9 +115,20 @@ class AdapterLinear(nn.Module):
                 y = (u * m) @ self.B0.T + ((a + u) * m) @ self.V.T
             elif self.init in {"T0", "T1"}:
                 q, u = x @ self.Q0.T, x @ self.dQ.T
-                # Group the seven expansion terms into two low-rank products.
-                y = ((self.lambda0 * u + self.dlambda * (q + u)) * m) @ self.P0.T
-                y = y + (((self.lambda0 + self.dlambda) * (q + u)) * m) @ self.dP.T
+                # The reactivating hybrid keeps dormant amplitudes trainable,
+                # like AdaLoRA's dormant E coordinates.  Its current triplet
+                # is therefore not hard-masked; newly pruned amplitudes are
+                # set to zero in set_mask(), while the initial correction is
+                # always masked so deletion removes the complete centered
+                # component.
+                if self.reactivation:
+                    p, lam = self.P0 + self.dP, self.lambda0 + self.dlambda
+                    y = (lam * (q + u)) @ p.T
+                    y = y - ((self.lambda0 * m * q) @ self.P0.T)
+                else:
+                    # Group the seven expansion terms into two low-rank products.
+                    y = ((self.lambda0 * u + self.dlambda * (q + u)) * m) @ self.P0.T
+                    y = y + (((self.lambda0 + self.dlambda) * (q + u)) * m) @ self.dP.T
             else:
                 # Reference masks E in-place at events. No hidden persistent mask.
                 y = ((x @ self.lora_A.T) * self.lora_E[:, 0]) @ self.lora_B.T
@@ -156,6 +172,22 @@ class AdapterLinear(nn.Module):
                 if not self._act_count:
                     raise RuntimeError("no valid ACT samples")
                 return self._act_sum / self._act_count
+            if self.score == "ADALORA_HYBRID":
+                if self.init not in {"T0", "T1"}:
+                    raise ValueError("hybrid score requires a centered triplet")
+                # AdaLoRA's element sensitivity, reduced to one component:
+                # mean |factor * factor-gradient| for P and Q plus the
+                # amplitude contribution.  P0/Q0 are fixed origins, but the
+                # gradients of dP/dQ are exactly the gradients of the current
+                # factors, so using the full factors is intentional.
+                p, q = self.P0 + self.dP, self.Q0 + self.dQ
+                gp, gq = self.dP.grad, self.dQ.grad
+                gl = self.dlambda.grad
+                if gp is None or gq is None or gl is None:
+                    raise RuntimeError("missing centered-triplet hybrid gradients")
+                lam = self.lambda0 + self.dlambda
+                return ((p * gp).abs().mean(0) + (q * gq).abs().mean(1)
+                        + (lam * gl).abs())
             if self.score in {"RAW", "DISP"}:
                 a, b = self.factors()
                 ga, gb = (self.A.grad, self.B.grad) if self.init == "L" else (self.U.grad, self.V.grad)
@@ -183,18 +215,25 @@ class AdapterLinear(nn.Module):
         mask = mask.to(device=self.mask.device, dtype=torch.bool)
         if mask.shape != self.mask.shape:
             raise ValueError("mask shape mismatch")
-        if self.init != "ADALORA" and bool((mask & ~self.mask).any()):
+        if self.init != "ADALORA" and not self.reactivation and bool((mask & ~self.mask).any()):
             raise ValueError("custom pruning must be monotonic")
         self.mask.copy_(mask)
         if self.init == "ADALORA":
             self.lora_E[~mask] = 0
+        elif self.reactivation:
+            # A centered T1 component has lambda0=1.  Set newly inactive
+            # current amplitudes to zero, while retaining all dormant factor
+            # and optimizer state so a later AdaLoRA-style reactivation can
+            # train the amplitude back up.
+            if hasattr(self, "lambda0"):
+                self.dlambda[~mask] = -self.lambda0[~mask]
         elif optimizer is not None:
             # Clear moments BEFORE step at an allocation event.
             self.freeze_pruned(optimizer)
 
     @torch.no_grad()
     def freeze_pruned(self, optimizer):
-        if self.init == "ADALORA":
+        if self.init == "ADALORA" or self.reactivation:
             return
         for name, p in self.named_parameters(recurse=False):
             shape = [1] * p.ndim
@@ -218,9 +257,15 @@ class AdapterLinear(nn.Module):
         elif self.init in {"T0", "T1"}:
             # Cancellation-free factors for the same grouped seven-term expansion.
             q = self.Q0 + self.dQ
-            c = torch.cat((self.P0[:, m], self.dP[:, m]), 1)
-            d = torch.cat(((self.lambda0[:, None]*self.dQ + self.dlambda[:, None]*q)[m],
-                           ((self.lambda0 + self.dlambda)[:, None]*q)[m]), 0)
+            if self.reactivation:
+                # Actual update = P diag(lambda) Q - P0 diag(mask*lambda0) Q0.
+                c = torch.cat((self.P0 + self.dP, self.P0), 1)
+                d = torch.cat(((self.lambda0 + self.dlambda)[:, None] * q,
+                               -(self.lambda0 * m)[:, None] * self.Q0), 0)
+            else:
+                c = torch.cat((self.P0[:, m], self.dP[:, m]), 1)
+                d = torch.cat(((self.lambda0[:, None]*self.dQ + self.dlambda[:, None]*q)[m],
+                               ((self.lambda0 + self.dlambda)[:, None]*q)[m]), 0)
         else:
             c, d = self.lora_B, self.lora_E * self.lora_A
         return c * self.multiplier.to(c.dtype), d
@@ -230,7 +275,8 @@ def adapted(model):
     return {name: m for name, m in model.named_modules() if isinstance(m, AdapterLinear)}
 
 
-def inject(model, rank, init, scale, seed, score="none", targets=("q_proj", "o_proj"), pattern=None):
+def inject(model, rank, init, scale, seed, score="none", targets=("q_proj", "o_proj"), pattern=None,
+           reactivation=False, rank_normalized=False):
     model.requires_grad_(False)
     targets_found = [(name, m) for name, m in model.named_modules()
                      if isinstance(m, nn.Linear) and name.split(".")[-1] in targets]
@@ -241,7 +287,8 @@ def inject(model, rank, init, scale, seed, score="none", targets=("q_proj", "o_p
         owner = model.get_submodule(parent) if parent else model
         stable = int.from_bytes(hashlib.sha256(name.encode()).digest()[:8], "little")
         r = rank if pattern is None else pattern[name]
-        layer = AdapterLinear(base, r, init, scale, (seed + stable) % (2**63), score).to(base.weight.device)
+        layer = AdapterLinear(base, r, init, scale, (seed + stable) % (2**63), score,
+                              reactivation=reactivation, rank_normalized=rank_normalized).to(base.weight.device)
         setattr(owner, attr, layer)
     return model
 

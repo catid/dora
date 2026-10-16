@@ -1,0 +1,3 @@
+method,hpo_trials,hpo_best_nll,hpo_best_lr,hpo_best_scale,hpo_best_penalty,tuning_runs,tuning_mean_nll,screening_runs,screening_mean_nll,screening_sd_nll
+I_ADALORA_SVD,12,0.2173215833172435,0.0001,4.0,0.0,4,0.20256879381304316,5,0.20174321567901643,0.0001677536242535397
+I_ADALORA_SVD_NORM,12,0.2189484722839552,0.001,4.0,0.0,4,0.20391446412213554,5,0.20398436394971214,0.0004086288894740446

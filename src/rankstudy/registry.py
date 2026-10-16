@@ -1,11 +1,11 @@
-"""Declarative 41-cell method registry."""
+"""Declarative 41-cell primary registry plus opt-in exploratory hybrids."""
 from __future__ import annotations
 from dataclasses import dataclass,asdict
 import itertools,yaml
 
 @dataclass(frozen=True)
 class Method:
- id:str; group:str; init:str; allocator:str='none'; score:str='none'; triplet:bool=False; penalty:float=0.0; pipeline:str='native'; adalora:bool=False
+ id:str; group:str; init:str; allocator:str='none'; score:str='none'; triplet:bool=False; penalty:float=0.0; pipeline:str='native'; adalora:bool=False; rank_normalized:bool=False
 
 def build_registry():
  out=[Method('L_FIXED','fixed','L'),Method('I_FIXED','fixed','I'),Method('L_WIDE','wide','L'),Method('I_WIDE','wide','I'),Method('ADALORA_REF','reference','ADALORA','adalora','ADALORA',False,0.0,'native',True)]
@@ -22,8 +22,14 @@ def build_registry():
   for pol in ('UNIFORM_SVD','GLOBAL_SVD'): out.append(Method(f'{init}_{pol}','compress',init,pipeline='compress'))
  for init in ('L','I'):
   for score in ('RAW','GATE'): out.append(Method(f'{init}_{score}_UNCERTAINTY','online_uncertainty',init,'monotonic',score))
+ # Exploratory IniLoRA-alpha x AdaLoRA-SVD hybrid. The centered T1
+ # representation supplies nonzero IniLoRA-style outer factors and the
+ # allocator supplies AdaLoRA-style uncertainty-weighted reactivation.
+ out += [Method('I_ADALORA_SVD','hybrid','T1','adalora_hybrid','ADALORA_HYBRID',True),
+         Method('I_ADALORA_SVD_NORM','hybrid','T1','adalora_hybrid','ADALORA_HYBRID',True,
+                rank_normalized=True)]
  # The registry above intentionally includes all required leaf controls.
- assert len(out)==41, len(out)
+ assert len(out)==43, len(out)
  return out
 
 def write_yaml(path):

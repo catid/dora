@@ -46,11 +46,20 @@ def main():
     ap.add_argument('--max-rank',type=int,default=16); ap.add_argument('--model',default='/var/tmp/dora-adaptive-rank/models/Qwen2.5-Math-1.5B')
     ap.add_argument('--data-root',type=Path,default=Path('/var/tmp/dora-adaptive-rank/data_v2'))
     ap.add_argument('--manifest-root',type=Path,default=Path('artifacts/manifests_v2')); ap.add_argument('--resume',action='store_true')
+    ap.add_argument('--method-ids',default='',help='Optional comma-separated registered subset; default is all methods.')
     args=ap.parse_args(); args.root.mkdir(parents=True,exist_ok=True)
     lock=(args.root/'.queue.lock').open('a+'); fcntl.flock(lock.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)
     gate=json.loads(Path('artifacts/protocol_execution_gate.json').read_text())
     if not gate.get('v3_large_sweep_allowed'): raise RuntimeError('v3 primary execution gate is closed')
     methods=yaml.safe_load(Path('configs/methods.yaml').read_text())['methods']
+    if args.method_ids:
+        wanted=set(x.strip() for x in args.method_ids.split(',') if x.strip())
+        methods=[m for m in methods if m['id'] in wanted]
+        if len(methods)!=len(wanted): raise ValueError(f'unknown method id in --method-ids: {sorted(wanted-{m["id"] for m in methods})}')
+    else:
+        # Exploratory hybrids are opt-in and never silently enlarge the
+        # preregistered 41-cell primary tournament.
+        methods=[m for m in methods if m.get('group')!='hybrid']
     jobs=make_jobs(args.root,methods,args.updates,args.seed,args.target_rank,args.max_rank)
     rng=random.Random(20261015); rng.shuffle(jobs)
     plan_path=args.root/'plan.json'
